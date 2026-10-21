@@ -1,0 +1,16 @@
+# 客戶原始說明書 PDF／壓縮版（在 Google Drive，太大不進版控）
+*.pdf
+*.zip
+網頁用壓縮版/
+241009-TP-50PSI-說明書.jpg
+
+# 2026-10-09 官網全站封存內容（670MB）與執行記錄，只保留腳本與報告
+migration-2026-10-09/content/
+migration-2026-10-09/*.jsonl
+migration-2026-10-09/run.log
+migration-2026-10-09/failed_references_pre_base.json
+
+# 系統
+Thumbs.db
+desktop.ini
+__pycache__/

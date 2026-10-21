@@ -1,0 +1,35 @@
+[
+  {
+    "url": "https://aquaskyplus.com/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:50:51.202489+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": true,
+    "source_references": [
+      {
+        "source_url": "https://aquaskyplus.com/ar/sel_tools",
+        "original_ref": "font-awesome/css/font-awesome.min.css"
+      },
+      {
+        "source_url": "https://aquaskyplus.com/en/sel_tools",
+        "original_ref": "font-awesome/css/font-awesome.min.css"
+      },
+      {
+        "source_url": "https://aquaskyplus.com/es/sel_tools",
+        "original_ref": "font-awesome/css/font-awesome.min.css"
+      },
+      {
+        "source_url": "https://aquaskyplus.com/fr/sel_tools",
+        "original_ref": "font-awesome/css/font-awesome.min.css"
+      },
+      {
+        "source_url": "https://aquaskyplus.com/ru/sel_tools",
+        "original_ref": "font-awesome/css/font-awesome.min.css"
+      },
+      {
+        "source_url": "https://aquaskyplus.com/zh/sel_tools",
+        "original_ref": "font-awesome/css/font-awesome.min.css"
+      }
+    ]
+  }
+]

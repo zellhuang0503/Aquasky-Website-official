@@ -1,0 +1,53 @@
+{
+  "generated_at_utc": "2026-10-09T08:53:40.783561+00:00",
+  "sitemap_url_count": 791,
+  "sitemap_saved_count": 791,
+  "sitemap_missing_urls": [],
+  "inventory_url_count": 797,
+  "inventory_saved_count": 797,
+  "inventory_missing_urls": [],
+  "inventory_only_urls": [
+    "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/ish-2025-189",
+    "https://aquaskyplus.com/ar/news-detail/INDUSTRY/reshaping-potable-water-systems-ar",
+    "https://aquaskyplus.com/en/news-detail/INDUSTRY/reshaping-potable-water-systems-eng",
+    "https://aquaskyplus.com/es/news-detail/INDUSTRY/reshaping-potable-water-systems-es",
+    "https://aquaskyplus.com/fr/news-detail/INDUSTRY/reshaping-potable-water-systems-fr",
+    "https://aquaskyplus.com/ru/news-detail/INDUSTRY/reshaping-potable-water-systems-ru",
+    "https://aquaskyplus.com/zh/news-detail/INDUSTRY/reshaping-potable-water-systems-ch"
+  ],
+  "sitemap_only_urls": [
+    "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/ish-2025-aquasky-189"
+  ],
+  "referenced_same_site_url_count": 1368,
+  "referenced_saved_count": 1367,
+  "referenced_not_saved_count": 1,
+  "referenced_failed_url_count": 1,
+  "referenced_pending_url_count": 0,
+  "successful_url_count": 3248,
+  "failed_attempt_count": 446,
+  "failed_unique_url_count": 394,
+  "failed_still_referenced_url_count": 1,
+  "failed_no_longer_referenced_url_count": 393,
+  "failure_statuses": {
+    "404": 446
+  },
+  "content_types": {
+    "text/html": 813,
+    "application/xml": 1,
+    "application/javascript": 2,
+    "image/jpeg": 870,
+    "image/png": 1069,
+    "text/css": 70,
+    "text/javascript": 49,
+    "image/webp": 113,
+    "font/ttf": 17,
+    "image/gif": 10,
+    "application/pdf": 173,
+    "application/vnd.ms-fontobject": 16,
+    "image/svg+xml": 15,
+    "font/woff": 15,
+    "font/woff2": 15
+  },
+  "stored_bytes": 690935703,
+  "integrity_issues": []
+}

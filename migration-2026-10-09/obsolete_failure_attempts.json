@@ -1,0 +1,3562 @@
+[
+  {
+    "url": "https://aquaskyplus.com/en/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:04:18.144038+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:04:19.308855+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:04:20.490636+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:04:21.611066+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:04:22.946609+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:04:24.128560+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:16:16.451999+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:16:17.660114+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:16:18.721541+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:16:20.130033+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:16:21.252057+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:16:22.426785+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:16:23.641177+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:16:25.086652+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:16:26.308883+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:16:32.840763+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:16:34.041671+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:16:35.390462+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:16:36.566201+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:16:37.806608+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:16:38.884275+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:16:40.038097+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:16:41.099016+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:16:42.277088+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:16:46.270426+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:16:47.470749+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:16:48.615334+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:16:49.705266+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:16:50.818467+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:16:52.180777+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:16:53.335322+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:16:54.438448+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:16:55.716627+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:16:56.861311+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:17:00.718185+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:17:01.877585+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:17:03.214131+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:17:04.384323+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:17:05.608253+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:17:06.824084+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:17:07.974701+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:17:09.215816+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:17:10.554217+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:17:11.844989+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:17:16.028051+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:17:17.277987+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:17:18.450613+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:17:19.568726+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:17:20.809705+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:17:21.978169+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:17:23.131607+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:17:24.529470+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:17:25.734752+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:17:26.913691+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:17:30.595156+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:17:31.849625+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:17:33.142156+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:17:34.216665+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:17:35.435453+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:17:36.667165+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:17:37.998436+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:17:39.227592+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:17:40.368060+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/css/animation.css",
+    "retrieved_at": "2026-10-09T08:17:45.375229+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:17:46.625307+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/css/style.css",
+    "retrieved_at": "2026-10-09T08:17:47.766242+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/images/logo.png",
+    "retrieved_at": "2026-10-09T08:17:49.056920+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:17:50.261426+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:17:51.413071+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:17:52.648393+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:17:53.937735+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/css/animation.css",
+    "retrieved_at": "2026-10-09T08:18:48.244061+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:18:49.407561+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/css/style.css",
+    "retrieved_at": "2026-10-09T08:18:50.484077+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/images/logo.png",
+    "retrieved_at": "2026-10-09T08:18:51.697311+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:18:52.940982+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:18:54.128486+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:18:55.286688+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:18:56.490152+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:20:59.010238+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:20:59.750395+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:21:00.513383+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:21:01.212293+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:21:01.937174+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/font-awesome/css/font-awesome.min.css",
+    "retrieved_at": "2026-10-09T08:21:03.185981+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:21:04.137133+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:21:04.937461+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:21:05.658161+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:21:06.397168+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:21:07.172479+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:21:07.888729+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:21:08.636093+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:21:09.348652+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:21:10.087403+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:21:10.817395+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:21:11.551829+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:21:12.295122+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:21:13.248055+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:21:13.970234+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:21:14.670132+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:21:15.677677+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:21:16.365480+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:21:17.162675+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:21:17.874736+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:21:18.611250+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:21:19.348026+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:21:20.077404+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:21:20.771495+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:21:21.864728+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:21:22.561297+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:21:23.306093+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:21:24.065192+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:21:24.784449+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:21:25.510584+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:21:26.696310+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:21:27.434567+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:21:28.626212+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:21:29.328113+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:21:30.088993+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:21:30.830598+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:21:31.537600+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:21:32.824895+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:21:33.565397+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:21:34.301897+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/css/animation.css",
+    "retrieved_at": "2026-10-09T08:21:34.999353+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:21:35.725474+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/css/style.css",
+    "retrieved_at": "2026-10-09T08:21:36.454048+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/images/logo.png",
+    "retrieved_at": "2026-10-09T08:21:37.177649+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:21:38.123388+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:21:38.828556+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:21:39.577169+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/css/animation.css",
+    "retrieved_at": "2026-10-09T08:25:25.323259+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:25:26.523132+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/css/style.css",
+    "retrieved_at": "2026-10-09T08:25:27.596122+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/images/logo.png",
+    "retrieved_at": "2026-10-09T08:25:28.800013+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:25:30.145831+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:25:31.371260+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:25:32.646679+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:25:33.806564+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/css/animation.css",
+    "retrieved_at": "2026-10-09T08:25:47.217809+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:25:48.428205+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/css/style.css",
+    "retrieved_at": "2026-10-09T08:25:49.621602+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/images/logo.png",
+    "retrieved_at": "2026-10-09T08:25:50.888777+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:25:52.070502+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:25:53.410592+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:25:54.534571+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/news-detail/EXHIBITIONS/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:25:55.700930+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:26:24.922516+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/css/animation.css",
+    "retrieved_at": "2026-10-09T08:26:28.904667+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:26:30.100345+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/css/style.css",
+    "retrieved_at": "2026-10-09T08:26:31.296486+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/images/logo.png",
+    "retrieved_at": "2026-10-09T08:26:32.556373+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:26:33.847035+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:26:36.081989+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:26:37.407358+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/INDUSTRY/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:26:38.525811+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:26:52.692694+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/css/animation.css",
+    "retrieved_at": "2026-10-09T08:26:53.864900+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:26:55.039417+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/css/style.css",
+    "retrieved_at": "2026-10-09T08:26:56.270157+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/images/logo.png",
+    "retrieved_at": "2026-10-09T08:26:57.491274+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:26:58.603878+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:26:59.804884+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:27:01.024726+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/news-detail/EXHIBITIONS/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:27:02.181524+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:27:29.413827+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/css/animation.css",
+    "retrieved_at": "2026-10-09T08:27:32.156519+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:27:33.306081+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/css/style.css",
+    "retrieved_at": "2026-10-09T08:27:34.369876+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/images/logo.png",
+    "retrieved_at": "2026-10-09T08:27:35.556226+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:27:36.670910+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:27:37.863108+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:27:39.114977+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:27:40.313854+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:27:55.268334+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/css/animation.css",
+    "retrieved_at": "2026-10-09T08:27:56.475529+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:27:57.831680+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/css/style.css",
+    "retrieved_at": "2026-10-09T08:27:59.035075+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/images/logo.png",
+    "retrieved_at": "2026-10-09T08:28:00.244786+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:28:01.467973+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:28:02.666991+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:28:03.953094+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/news-detail/EXHIBITIONS/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:28:05.208924+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:28:33.079175+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/css/animation.css",
+    "retrieved_at": "2026-10-09T08:28:35.687134+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:28:36.912697+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/css/style.css",
+    "retrieved_at": "2026-10-09T08:28:38.115084+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/images/logo.png",
+    "retrieved_at": "2026-10-09T08:28:39.256455+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:28:40.611308+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:28:41.802853+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:28:43.008089+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:28:44.120511+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:28:59.579446+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/css/animation.css",
+    "retrieved_at": "2026-10-09T08:29:00.680467+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:29:01.932931+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/css/style.css",
+    "retrieved_at": "2026-10-09T08:29:03.151222+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/images/logo.png",
+    "retrieved_at": "2026-10-09T08:29:04.388092+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:29:05.539768+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:29:06.746131+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:29:07.917054+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/news-detail/EXHIBITIONS/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:29:09.284082+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/css/animation.css",
+    "retrieved_at": "2026-10-09T08:29:37.801213+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:29:38.966112+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/css/style.css",
+    "retrieved_at": "2026-10-09T08:29:40.345510+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/images/logo.png",
+    "retrieved_at": "2026-10-09T08:29:41.072679+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:29:42.260491+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:29:43.500062+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:29:44.572248+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:29:46.047643+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/css/animation.css",
+    "retrieved_at": "2026-10-09T08:29:58.779832+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:30:00.084598+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/css/style.css",
+    "retrieved_at": "2026-10-09T08:30:01.336447+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/images/logo.png",
+    "retrieved_at": "2026-10-09T08:30:02.623753+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:30:03.887818+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:30:05.093861+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:30:06.402758+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/news-detail/EXHIBITIONS/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:30:07.640287+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/css/animation.css",
+    "retrieved_at": "2026-10-09T08:30:39.373361+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:30:40.582673+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/css/style.css",
+    "retrieved_at": "2026-10-09T08:30:41.807908+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/images/logo.png",
+    "retrieved_at": "2026-10-09T08:30:43.063720+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:30:44.260109+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:30:45.446056+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:30:46.653536+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:30:47.906614+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/videos-detail/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:30:49.061919+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/css/animation.css",
+    "retrieved_at": "2026-10-09T08:30:50.236737+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:30:51.491602+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/css/style.css",
+    "retrieved_at": "2026-10-09T08:30:52.711172+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/images/logo.png",
+    "retrieved_at": "2026-10-09T08:30:53.930824+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:30:55.108635+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:30:56.250378+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:30:57.427334+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:30:58.665649+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/zh/videos-detail/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:30:59.897016+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:31:01.096743+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/css/animation.css",
+    "retrieved_at": "2026-10-09T08:31:02.314504+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:31:03.490211+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/css/style.css",
+    "retrieved_at": "2026-10-09T08:31:04.752864+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/images/logo.png",
+    "retrieved_at": "2026-10-09T08:31:06.055771+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:31:07.236295+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:31:08.421909+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:31:09.666377+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:31:10.899978+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/videos-detail/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:31:12.156009+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:31:13.275223+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/css/animation.css",
+    "retrieved_at": "2026-10-09T08:31:14.523464+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:31:15.744304+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/css/style.css",
+    "retrieved_at": "2026-10-09T08:31:16.966002+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/images/logo.png",
+    "retrieved_at": "2026-10-09T08:31:18.134722+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:31:19.294010+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:31:20.497141+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:31:21.674720+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:31:22.976946+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/fr/videos-detail/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:31:24.075895+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/images/pd-title-line-02.png",
+    "retrieved_at": "2026-10-09T08:31:25.284410+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/css/animation.css",
+    "retrieved_at": "2026-10-09T08:31:26.477871+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:31:27.570768+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/css/style.css",
+    "retrieved_at": "2026-10-09T08:31:28.774839+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/images/logo.png",
+    "retrieved_at": "2026-10-09T08:31:29.945267+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:31:31.257199+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:31:32.558363+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:31:33.888446+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:31:35.142773+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ru/videos-detail/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:31:36.386677+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/css/animation.css",
+    "retrieved_at": "2026-10-09T08:31:37.603540+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:31:38.789866+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/css/style.css",
+    "retrieved_at": "2026-10-09T08:31:39.969372+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/images/logo.png",
+    "retrieved_at": "2026-10-09T08:31:41.224895+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:31:42.355531+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:31:43.507240+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:31:44.681600+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:31:45.809304+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/ar/videos-detail/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:31:46.986387+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_5_6_20260310141307.pdf",
+    "retrieved_at": "2026-10-09T08:31:48.191212+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:31:57.240099+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/css/animation.css",
+    "retrieved_at": "2026-10-09T08:31:58.395349+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:31:59.666378+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/images/logo.png",
+    "retrieved_at": "2026-10-09T08:32:00.767203+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:32:02.011460+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:32:03.230319+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:32:04.455990+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:32:05.529020+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pumplus/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:32:06.617886+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_6_8_20260310153831.pdf",
+    "retrieved_at": "2026-10-09T08:32:07.822257+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_7_9_20260310154858.pdf",
+    "retrieved_at": "2026-10-09T08:32:09.809349+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_8_10_20260310161251.pdf",
+    "retrieved_at": "2026-10-09T08:32:11.396015+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_9_11_20260310163233.pdf",
+    "retrieved_at": "2026-10-09T08:32:13.364416+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_10_5_20260227125808.pdf",
+    "retrieved_at": "2026-10-09T08:32:15.736561+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_11_12_20260310165215.pdf",
+    "retrieved_at": "2026-10-09T08:32:18.344751+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_12_13_20260311085909.pdf",
+    "retrieved_at": "2026-10-09T08:32:21.595540+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_13_14_20260311091046.pdf",
+    "retrieved_at": "2026-10-09T08:32:23.538184+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_14_15_20260311094022.pdf",
+    "retrieved_at": "2026-10-09T08:32:25.966410+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_15_17_20260311101506.pdf",
+    "retrieved_at": "2026-10-09T08:32:27.883269+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_16_18_20260311102633.pdf",
+    "retrieved_at": "2026-10-09T08:32:30.343091+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_17_20_20260311105620.pdf",
+    "retrieved_at": "2026-10-09T08:32:32.849266+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_18_21_20260311110841.pdf",
+    "retrieved_at": "2026-10-09T08:32:34.811132+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_19_25_20260311132206.pdf",
+    "retrieved_at": "2026-10-09T08:32:37.427442+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_20_26_20260311133515.pdf",
+    "retrieved_at": "2026-10-09T08:32:40.109799+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_21_27_20260311134930.pdf",
+    "retrieved_at": "2026-10-09T08:32:43.941378+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_22_28_20260311140103.pdf",
+    "retrieved_at": "2026-10-09T08:32:45.923700+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_23_29_20260311141408.pdf",
+    "retrieved_at": "2026-10-09T08:32:49.235843+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_44_16_20260311095244.pdf",
+    "retrieved_at": "2026-10-09T08:32:51.392612+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_45_23_20260311113946.pdf",
+    "retrieved_at": "2026-10-09T08:32:53.391792+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_100_30_20260311142423.pdf",
+    "retrieved_at": "2026-10-09T08:32:55.740001+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_102_19_20260311104010.pdf",
+    "retrieved_at": "2026-10-09T08:32:58.264378+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_121_7_20260310150258.pdf",
+    "retrieved_at": "2026-10-09T08:33:00.357255+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_122_22_20260311112602.pdf",
+    "retrieved_at": "2026-10-09T08:33:02.768643+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_123_24_20260311115109.pdf",
+    "retrieved_at": "2026-10-09T08:33:05.553306+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_24_31_20260407143733.pdf",
+    "retrieved_at": "2026-10-09T08:33:07.482696+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:33:09.472850+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/css/animation.css",
+    "retrieved_at": "2026-10-09T08:33:10.918899+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:33:12.341101+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/images/logo.png",
+    "retrieved_at": "2026-10-09T08:33:13.463471+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:33:14.580196+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:33:15.805032+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:33:16.910968+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:33:18.171864+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/ro-plus/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:33:19.378565+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_25_32_20260413164520.pdf",
+    "retrieved_at": "2026-10-09T08:33:20.516310+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_26_33_20260415115034.pdf",
+    "retrieved_at": "2026-10-09T08:33:22.927601+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_27_34_20260415131153.pdf",
+    "retrieved_at": "2026-10-09T08:33:25.505741+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_28_35_20260415132457.pdf",
+    "retrieved_at": "2026-10-09T08:33:27.909282+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_29_45_20260526145849.pdf",
+    "retrieved_at": "2026-10-09T08:33:30.399440+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_30_46_20260526152606.pdf",
+    "retrieved_at": "2026-10-09T08:33:32.812444+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_32_47_20260526154409.pdf",
+    "retrieved_at": "2026-10-09T08:33:35.046570+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_33_48_20260526162014.pdf",
+    "retrieved_at": "2026-10-09T08:33:37.095480+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_101_44_20260526143321.pdf",
+    "retrieved_at": "2026-10-09T08:33:39.167744+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_34_37_20260522112515.pdf",
+    "retrieved_at": "2026-10-09T08:33:41.605061+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:33:44.061729+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/css/animation.css",
+    "retrieved_at": "2026-10-09T08:33:45.233582+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:33:46.367684+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/images/logo.png",
+    "retrieved_at": "2026-10-09T08:33:47.723504+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:33:49.245120+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:33:50.516870+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:33:51.667896+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:35:04.786795+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/thermal-plus/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:35:06.054930+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_35_38_20260522140929.pdf",
+    "retrieved_at": "2026-10-09T08:35:07.149739+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_37_41_20260522144943.pdf",
+    "retrieved_at": "2026-10-09T08:35:09.175008+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_38_42_20260522151557.pdf",
+    "retrieved_at": "2026-10-09T08:35:11.061524+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_81_36_20260521140126.pdf",
+    "retrieved_at": "2026-10-09T08:35:13.569048+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_83_39_20260522142337.pdf",
+    "retrieved_at": "2026-10-09T08:35:16.067922+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_84_40_20260522143552.pdf",
+    "retrieved_at": "2026-10-09T08:35:18.143495+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_125_43_20260522153322.pdf",
+    "retrieved_at": "2026-10-09T08:35:20.597899+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_39_74_20260827132158.pdf",
+    "retrieved_at": "2026-10-09T08:35:22.497692+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:35:23.789120+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/css/animation.css",
+    "retrieved_at": "2026-10-09T08:35:24.972782+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:35:26.148443+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/images/logo.png",
+    "retrieved_at": "2026-10-09T08:35:26.910655+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:35:28.156693+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:35:29.332053+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:35:30.475063+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:35:31.697184+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/hydro-plus/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:35:32.905822+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_40_75_20260827132338.pdf",
+    "retrieved_at": "2026-10-09T08:35:34.117103+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_41_77_20260827134947.pdf",
+    "retrieved_at": "2026-10-09T08:35:36.641055+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_90_73_20260827095844.pdf",
+    "retrieved_at": "2026-10-09T08:35:37.800275+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_91_76_20260827132645.pdf",
+    "retrieved_at": "2026-10-09T08:35:38.543363+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_92_78_20260827141232.pdf",
+    "retrieved_at": "2026-10-09T08:35:39.763960+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_93_79_20260827143240.pdf",
+    "retrieved_at": "2026-10-09T08:35:41.638110+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_94_80_20260827144445.pdf",
+    "retrieved_at": "2026-10-09T08:35:42.846271+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_95_81_20260827145849.pdf",
+    "retrieved_at": "2026-10-09T08:35:43.587948+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_96_82_20260827153242.pdf",
+    "retrieved_at": "2026-10-09T08:35:44.725089+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_97_83_20260827154605.pdf",
+    "retrieved_at": "2026-10-09T08:35:45.921580+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_98_84_20260827160049.pdf",
+    "retrieved_at": "2026-10-09T08:35:47.190214+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_99_85_20260827161926.pdf",
+    "retrieved_at": "2026-10-09T08:35:47.909762+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_46_51_20260528083259.pdf",
+    "retrieved_at": "2026-10-09T08:35:49.146999+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:35:50.660554+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/css/animation.css",
+    "retrieved_at": "2026-10-09T08:35:51.848290+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:35:52.611950+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/images/logo.png",
+    "retrieved_at": "2026-10-09T08:35:53.768810+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:35:55.079070+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:35:56.293361+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:35:57.484679+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:35:58.657652+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:35:59.937852+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_48_52_20260528084253.pdf",
+    "retrieved_at": "2026-10-09T08:36:00.998505+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_49_53_20260528085344.pdf",
+    "retrieved_at": "2026-10-09T08:36:02.947904+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_50_54_20260528090404.pdf",
+    "retrieved_at": "2026-10-09T08:36:04.849239+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_51_55_20260528102819.pdf",
+    "retrieved_at": "2026-10-09T08:36:07.052741+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_52_56_20260528104140.pdf",
+    "retrieved_at": "2026-10-09T08:36:09.384168+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_53_57_20260528105557.pdf",
+    "retrieved_at": "2026-10-09T08:36:11.911619+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_107_88_20260828104917.pdf",
+    "retrieved_at": "2026-10-09T08:38:14.424547+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_108_87_20260828103443.pdf",
+    "retrieved_at": "2026-10-09T08:38:15.509414+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_109_89_20260828155000.pdf",
+    "retrieved_at": "2026-10-09T08:38:16.663945+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_110_90_20260828160220.pdf",
+    "retrieved_at": "2026-10-09T08:38:17.804085+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_111_92_20260828161918.pdf",
+    "retrieved_at": "2026-10-09T08:38:18.966180+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_112_93_20260828164013.pdf",
+    "retrieved_at": "2026-10-09T08:38:20.105582+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_119_86_20260828101412.pdf",
+    "retrieved_at": "2026-10-09T08:38:21.202887+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_124_65_20260811123514.pdf",
+    "retrieved_at": "2026-10-09T08:38:22.412753+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_126_50_20260527164205.pdf",
+    "retrieved_at": "2026-10-09T08:38:23.674412+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_127_49_20260527161507.pdf",
+    "retrieved_at": "2026-10-09T08:38:24.820710+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_128_91_20260828161103.pdf",
+    "retrieved_at": "2026-10-09T08:38:25.914271+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_129_94_20260828165846.pdf",
+    "retrieved_at": "2026-10-09T08:38:26.996972+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_54_58_20260528110801.pdf",
+    "retrieved_at": "2026-10-09T08:38:27.602661+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_55_59_20260528111933.pdf",
+    "retrieved_at": "2026-10-09T08:38:28.327677+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_56_60_20260528113304.pdf",
+    "retrieved_at": "2026-10-09T08:38:29.556999+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_57_61_20260528114845.pdf",
+    "retrieved_at": "2026-10-09T08:38:30.822315+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_58_62_20260528131033.pdf",
+    "retrieved_at": "2026-10-09T08:38:31.536823+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_59_63_20260528132349.pdf",
+    "retrieved_at": "2026-10-09T08:38:32.719885+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_60_64_20260528134108.pdf",
+    "retrieved_at": "2026-10-09T08:38:33.430885+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_66_66_20260811154018.pdf",
+    "retrieved_at": "2026-10-09T08:38:34.628583+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_68_67_20260811155047.pdf",
+    "retrieved_at": "2026-10-09T08:38:35.704089+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_69_68_20260811160147.pdf",
+    "retrieved_at": "2026-10-09T08:38:36.463929+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_70_69_20260811161112.pdf",
+    "retrieved_at": "2026-10-09T08:38:37.622998+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_71_70_20260811162016.pdf",
+    "retrieved_at": "2026-10-09T08:38:38.754573+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_72_71_20260811164739.pdf",
+    "retrieved_at": "2026-10-09T08:38:39.945639+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/pdownload/P_73_72_20260811165253.pdf",
+    "retrieved_at": "2026-10-09T08:38:41.100903+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:38:55.889091+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/css/animation.css",
+    "retrieved_at": "2026-10-09T08:38:57.132396+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:38:58.294448+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/images/logo.png",
+    "retrieved_at": "2026-10-09T08:38:59.472053+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:39:00.662278+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:39:01.822256+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:39:03.018678+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:39:04.147885+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/solar-plus/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:39:05.419589+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:39:06.584363+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/css/animation.css",
+    "retrieved_at": "2026-10-09T08:39:07.668069+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:39:08.867957+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/images/logo.png",
+    "retrieved_at": "2026-10-09T08:39:10.081188+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:39:11.260841+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:39:12.469762+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:39:13.638776+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:39:14.922695+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/products-det/premium-plus/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:39:16.006739+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/css/a-hover.css",
+    "retrieved_at": "2026-10-09T08:39:18.377792+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/css/animation.css",
+    "retrieved_at": "2026-10-09T08:39:19.535819+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:39:20.663648+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/images/logo.png",
+    "retrieved_at": "2026-10-09T08:39:21.841432+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/images/products-line.png",
+    "retrieved_at": "2026-10-09T08:39:23.069539+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:39:24.140284+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:39:25.311613+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/js/wow/css/libs/animate.css",
+    "retrieved_at": "2026-10-09T08:39:26.382215+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/en/accessories-det/js/wow/dist/wow.min.js",
+    "retrieved_at": "2026-10-09T08:39:27.592972+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/css/animation.css",
+    "retrieved_at": "2026-10-09T08:39:40.195238+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/css/bootstrap-grid.min.css",
+    "retrieved_at": "2026-10-09T08:39:41.485492+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/css/bootstrap.css",
+    "retrieved_at": "2026-10-09T08:39:42.552123+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/css/style.css",
+    "retrieved_at": "2026-10-09T08:39:43.666423+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/images/logo.png",
+    "retrieved_at": "2026-10-09T08:39:44.788316+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/images/pd-title-line-01.png",
+    "retrieved_at": "2026-10-09T08:39:45.865795+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/js/bootstrap.min.js",
+    "retrieved_at": "2026-10-09T08:39:46.940490+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/js/jquery-1.11.3.min.js",
+    "retrieved_at": "2026-10-09T08:39:48.015094+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/download/js/jquery.cookie.js",
+    "retrieved_at": "2026-10-09T08:39:49.188452+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  }
+]
