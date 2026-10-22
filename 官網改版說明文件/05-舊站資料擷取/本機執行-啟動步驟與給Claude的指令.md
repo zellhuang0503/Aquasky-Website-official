@@ -1,4 +1,4 @@
-# 本機執行：啟動步驤與給 Claude Code 的指令
+# 本機執行：啟動步驟與給 Claude Code 的指令
 
 適用：黃老闆在辦公室電腦（E 槽）執行階段 A 與階段 B。雲端 Claude 連不到 aquaskyplus.com，所以這兩段要在本機跑。
 
