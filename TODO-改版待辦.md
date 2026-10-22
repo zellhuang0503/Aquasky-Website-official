@@ -9,6 +9,7 @@
 - [ ] **B 進行中快照**：本週用 `archive_public.py --max-items 4000` 再抓一次到 `migration-2026-10-2X`，`diff_archives.py` 比對 10/9 版，看工程師改了哪些頁（預期 LQCOL-PLUS 新頁）。
 - [ ] **C 最終版快照**：客戶確認「本輪完成」後 1–2 天內再抓一次＝搬遷內容基準；寫 ARCHIVE_REPORT、異動清單交客戶窗口核對。觸發點：客戶回覆確認日期（待定）。
 - [ ] **D 結構化抽取**：C 之後寫 `extract/` 解析器，產出 products.json、articles/*.md、assets_manifest.csv、routes.csv、i18n_map.json；先每頁型抽一頁驗證再全跑。
+- [ ] **E 向客戶要 EDM／手冊 PDF 最新原檔**（黃老闆 10/22 決定：不以網站壓縮版為準，直接向客戶要全部 EDM）；向工程師要資料庫匯出對照還欠什麼。清單見 05-舊站資料擷取/2026-10-22-向客戶與工程師索取的資料清單.md。
 - [ ] **E 補公開抓不到的**：GSC 網頁報表（帶參數舊網址）、產品圖原檔、詢價表單收件信箱、後台公開網址清單最新版。
 - 限制：雲端 Claude 工作區連不到 aquaskyplus.com（代理 403），抓取要在黃老闆電腦上跑（本機 Claude Code 或手動跑附錄指令）。
 
