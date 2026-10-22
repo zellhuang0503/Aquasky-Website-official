@@ -31,3 +31,19 @@
   - 已加成正式成員的人**不用踢掉**：左上角工作區名稱 → 管理成員（slack.com/admin）→ 該成員列的「⋯」→「變更帳號類型」→ 單一頻道訪客 → 指定頻道。改完就不占付費席次，多付的部分依比例退成餘額。只能在桌面版操作，手機 App 不行。
   - [ ] 決定頻道名稱與成員：例如 `#aquasky-官網`，成員＝梵亞＋Claude App＋客戶訪客。
 - [ ] 啟用前先走一次完整流程給客戶看：一次換檔＋一次文案修改（講話重點第三節的承諾）。
+
+## AEO／AI 回答月測（Cloudflare 雲端自動檢核）
+
+- [ ] **10/8 完整月測失敗，至今沒人處理**（2026-10-22 查核）。72 筆只取得 1 筆、71 筆失敗或待處理；10/9 抽查 OpenAI 與 Claude 回「模型服務錯誤」。之後的 10/13 月報定稿、人工複核都沒做，監測專案最後一筆 commit 停在 9/24。
+  - 取數本身是自動的（`aquasky-monitor` Worker，每 5 分鐘 cron，結果存 D1 與私人儀表板，不進 Git），所以不是「忘了跑」，是「跑了但壞了、沒人看」。
+  - **2026-10-22 08:30 已登入儀表板查明原因（兩個問題疊加）：**
+    1. **OpenRouter 餘額用完**：10/1 起五個走 OpenRouter 的模型（OpenAI、Google、Claude、Grok、DeepSeek）全回 HTTP 402 Payment Required；Perplexity 走自己的金鑰，正常。10/1 重點複查就已 18 答 6 失敗。
+    2. **程式 bug：失敗的請求不釋放 US$2 預留**。供應商回錯誤時沒有費用回報，`reported_usd` 留 NULL，預算公式就一直算 `reserved_usd` 2 美元。10 筆 402 失敗卡住 US$20，加上實際花費 US$3.32，10 月預算 25 美元被記成 23.32，10/8 剩下 66 筆全被 `budget_blocked`。
+    - 今天 09:00 的重點複查也會被同一個門檻整輪擋掉（23.32 + 2 > 25）。
+  - [x] OpenRouter 帳號已重建（2026-10-22 上午，Zell）。推測原帳號未收到費用或被砍，才會全回 402。
+  - [ ] **今天（10/22）下午：把新的 OpenRouter 金鑰放上 Worker**。用 `scripts/set-aiqa-secrets.py --config <config.ini 路徑>` 從 stdin 寫入 `OPENROUTER_API_KEY`，金鑰不進 Git、不貼命令列。放上去後用一題 × 六模型做小量驗收，標成「上線驗收」。
+  - [ ] **修 bug**：`monitor/src/aiqa-runner.mjs` 第 57–64 行，供應商回錯誤且無費用回報時，把該筆 attempt 的 `reported_usd` 設 0 釋放預留；部署 Worker。
+  - [ ] **清掉已卡住的 US$20**：對 D1 `aiqa_attempts` 把 10 月 `reported_usd IS NULL` 且對應 item 為 failed/402 的 10 筆設 `reported_usd=0`。
+  - [ ] 修好後補跑一輪完整 72 筆（依文件 40：中斷不自動補跑數週，要人工決定），並重新做人工複核與 10 月月報。
+  - [ ] 11 月預排：11/12 完整月測、11/17 定稿、11/19 月會。這次要在 11/13 看一眼有沒有跑成。
+  - 監測專案位置：C:\Users\zellh\Coding Projects\aquasky-edge-aeo-cloudflare（節奏見 docs/40、雲端實作見 docs/41）。
