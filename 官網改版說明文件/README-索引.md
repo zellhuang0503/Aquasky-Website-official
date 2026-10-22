@@ -37,6 +37,12 @@
 | 39-每月客戶回顧與改善行動、40-AI十二問每月固定檢核節奏 | 月度檢核節奏 | Cloudflare 專案 docs |
 | AQUASKY_AIQA_客戶會議簡報_20260924.html／逐頁講稿.md | AI 問答監測簡報 | Aquasky-AIQA-Monitor/presentations/20260924 |
 
+## 05-舊站資料擷取｜舊站內容怎麼抓、怎麼比對、怎麼轉成新站資料
+| 檔案 | 用途 | 原始位置 |
+| --- | --- | --- |
+| 2026-10-22-舊站資料擷取-現況分析與執行方案.md | 10/22 會議後的擷取方案：10/9 封存現況、公開抓取拿不到的、A 保全→B 進行中快照→C 最終版快照→D 結構化抽取→E 補資料；附本機執行指令 | 本資料夾（原檔） |
+| （腳本）../migration-2026-10-09/diff_archives.py | 兩次封存比對：新增、消失、文字有變、只有標記變 | ../migration-2026-10-09 |
+
 ## 其他相關專案（未複製）
 - `E:\CascadeProjects\Aquasky Edge AEO On Cloudflare Project`：現行 Cloudflare Worker、監測腳本、所有 docs 原檔
 - `E:\CascadeProjects\Aquasky-AIQA-Monitor`：AI 問答監測程式
