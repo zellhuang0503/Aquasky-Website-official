@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://aquaskyplus.com/LQCOL-PLUS",
+    "retrieved_at": "2026-10-22T09:22:35.622479+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/cdn-cgi/l/email-protection",
+    "retrieved_at": "2026-10-22T09:27:26.301932+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/certification",
+    "retrieved_at": "2026-10-22T09:27:30.061753+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/es/images/about/about-gb-03.jpg",
+    "retrieved_at": "2026-10-22T09:46:13.459068+00:00",
+    "error": "[WinError 10054] 遠端主機已強制關閉一個現存的連線。",
+    "currently_referenced": false,
+    "source_references": []
+  },
+  {
+    "url": "https://aquaskyplus.com/sizing.php",
+    "retrieved_at": "2026-10-22T10:08:41.755980+00:00",
+    "http_status": 404,
+    "error": "HTTP error",
+    "currently_referenced": false,
+    "source_references": []
+  }
+]
