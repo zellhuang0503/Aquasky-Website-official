@@ -19,13 +19,22 @@
 - [ ] **LQCOL-PLUS 六語系翻譯：梵亞出 AI 初稿**（黃老闆 10/23 決定，不向客戶要譯文）。步驟：① 從 10/22 封存各語系既有頁面抽術語表（附來源頁）→ ② AI 翻六語系，規格／數字／認證／型號／單位列禁譯清單，翻完程式比對一致 → ③ 附英文對照送客戶各語系審稿人 → ④ 客戶改完回傳＝定稿。阿拉伯文另驗 RTL 版面。
   - [x] ① 2026-10-23 完成：27 頁六語系文字在 `translation/sources/`；術語表 `translation/glossary/`（201 條，附來源頁，舊站自相矛盾的譯法另列 inconsistencies.md）。
   - [x] ② 2026-10-23 完成：`translation/lqcol-plus/LQCOL-PLUS.{zh,es,fr,ru,ar}.md`，75 區塊 × 5 語系，每區塊附英文；`do-not-translate.md` 禁譯清單；`check_lqcol.py` 375 區塊全數通過。標題與 meta 沿用舊站既有在地化版本未重翻。
-  - [ ] ③ 送審：把五個 .md（或轉成表格）附 do-not-translate.md 給客戶各語系審稿人。審稿人只改譯文行；回傳後再跑一次 `check_lqcol.py`。
-  - [ ] 向客戶要：每個語系的審稿人。西／法／俄／阿若無人能看，先決定「AI 譯稿照上並標示」或「先保留英文」。
+  - [ ] ③ 送審：**審稿人＝Tiffany，只審中文（附英文原文）**（黃老闆 10/23：客戶人少，不必各語系找人）。把 `LQCOL-PLUS.zh.md`＋`do-not-translate.md` 給 Tiffany，只改 ZH 行；回傳後再跑一次 `check_lqcol.py`。
+  - [ ] 西／法／俄／阿：AI 初稿先放著，上線前黃老闆決定「照上並標示 AI 譯稿」或「先保留英文」。
   - [ ] 要問客戶：英文標題寫「Chilled Water Expansion Vessel／HVAC」，內文全是資料中心液冷，各語系標題要不要跟著改。
   - [ ] 新站上線前要修：英文頁下載連結錯字「Brchure」；規格表型號空格不一致（`LQC- 3`、`LQC - 8`、`LQC -12`）統一成 `LQC-3`。
 - [ ] **E 補公開抓不到的**：GSC 網頁報表（帶參數舊網址）、產品圖原檔、詢價表單收件信箱、後台公開網址清單最新版。
 - 限制：雲端 Claude 工作區連不到 aquaskyplus.com（代理 403），抓取要在黃老闆電腦上跑（本機 Claude Code 或手動跑附錄指令）。10/22 已用本機 Claude Code 跑過一輪，流程可行。
 - 新站要修的既有問題（從 10/22 快照發現）：sitemap 是手動維護、內容改了也不更新 → 新站自動產生；hreflang 全指首頁；非英文使用者在系列頁走不到任何規格。
+
+## 新站開發（技術棧 2026-09-24 定案，10/23 確認還沒動工）
+
+- 技術棧：**Astro + TypeScript + Markdown／JSON 內容檔 + Cloudflare Workers Static Assets**（不是 Pages、不做全站 SSR、不用 CMS）。表單／選型工具若需後端另設小型 Worker API。依據：官網改版說明文件/02-作業模式與整體規劃/2026-09-24-AQUASKY官網改版與AI維護整體規劃.md §1、§7、§12。
+- 程式碼放哪：本 repo 新開 `site/` 子目錄（規劃 §7.3 的目錄結構），跟 translation/、路由清冊同一個 repo。Cloudflare 用 Workers Builds 從 GitHub 建置，root 指到 site/。
+- 現成範本：`E:\CascadeProjects\RSG\rsg-site`（Astro 7 + wrangler 4 + assets.directory=./dist + run_worker_first + D1 + Turnstile），wrangler.jsonc 可照抄。
+- [ ] **第 2 階段「代表頁試作」**（規劃 §12）：首頁、LQCOL-PLUS 系列頁、一個產品明細頁、一篇文章；zh／en／ar 三種版型（ar 驗 RTL）；Cloudflare 預覽可開、URL 與舊站一致、schema 一致、走完一次「改內容檔→預覽→審→發布」。工作天估 3–5。
+- [ ] 待決：Cloudflare 帳戶放客戶名下還是梵亞名下（規劃 §8.4，合約事）。定案前先用梵亞帳戶做預覽。
+- [ ] 切換時要逐項解除舊 AEO Worker（`Aquasky Edge AEO On Cloudflare Project/worker/wrangler.toml`，掛在 aquaskyplus.com 六語系路由）的 HTML 注入（規劃 §13）。
 
 ## 搬站前：原始碼與資料調查
 
@@ -69,4 +78,4 @@
   - [ ] **清掉已卡住的 US$20**：對 D1 `aiqa_attempts` 把 10 月 `reported_usd IS NULL` 且對應 item 為 failed/402 的 10 筆設 `reported_usd=0`。
   - [ ] 修好後補跑一輪完整 72 筆（依文件 40：中斷不自動補跑數週，要人工決定），並重新做人工複核與 10 月月報。
   - [ ] 11 月預排：11/12 完整月測、11/17 定稿、11/19 月會。這次要在 11/13 看一眼有沒有跑成。
-  - 監測專案位置：C:\Users\zellh\Coding Projects\aquasky-edge-aeo-cloudflare（節奏見 docs/40、雲端實作見 docs/41）。
+  - 監測專案位置：`E:\CascadeProjects\Aquasky Edge AEO On Cloudflare Project`（節奏見 docs/40、雲端實作見 docs/41）。（10/23 更正：原本寫的 C 槽路徑不存在。）
