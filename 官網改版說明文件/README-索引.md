@@ -45,6 +45,8 @@
 | 2026-10-22-向客戶與工程師索取的資料清單.md | 階段 E：EDM／手冊 PDF 原檔、新系列資料、資料庫匯出、上傳資料夾、導向規則；附「封存已有 vs 還要要」對照表 | 本資料夾（原檔） |
 | （報告）../migration-2026-10-22/RUN_REPORT.md | 10/22 階段 A＋B 執行報告：封存重核與 zip、選型公式（在前端 JS）、產品只有英文、種子清單 2,597、10/22 快照 2,629 URL 與 10/9 比對結果（LQCOL-PLUS 擴寫、88 頁新增認證） | ../migration-2026-10-22 |
 | （腳本）../migration-2026-10-09/build_seed_urls.py | 從封存 HTML 解析頁面連結建種子清單（10/9 漏抓的根本原因），順便輸出 form／iframe 清單 | ../migration-2026-10-09 |
+| （腳本）../migration-2026-10-09/extract_i18n_text.py | 從封存抽選定頁面的六語系文字對照檔到 ../translation/sources/，供術語表與翻譯用 | ../migration-2026-10-09 |
+| （工作區）../translation/ | 六語系翻譯：sources 對照檔、glossary 術語表、lqcol-plus 譯稿 | ../translation |
 | （腳本）../migration-2026-10-09/diff_archives.py | 兩次封存比對：新增、消失、文字有變、只有標記變 | ../migration-2026-10-09 |
 
 ## 其他相關專案（未複製）
