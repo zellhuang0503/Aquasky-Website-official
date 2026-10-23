@@ -5,7 +5,8 @@
 ## 搬站前：舊站資料擷取（方案見 官網改版說明文件/05-舊站資料擷取/，執行結果見 migration-2026-10-22/RUN_REPORT.md）
 
 - [x] **A1 重核 10/9 封存**：2026-10-22 完成，`integrity_issues` 為空，3,248 個 URL 全部雜湊相符。
-- [ ] **A2 zip 備份搬到 Google Drive**：zip 已做好（`E:\CascadeProjects\aquaskyplus-archive-2026-10-09.zip`，650 MB，SHA-256 `7653c618…9e26`），但還在 E 槽同一顆硬碟，**不算異地備份**。待黃老闆指定 Drive 資料夾，搬過去後重算 SHA-256 核對。
+- [x] **A2 zip 備份搬到 Google Drive**：2026-10-22 晚間已上傳到 `G:\我的雲端硬碟\梵亞\AQUASKY-AEO\`（`aquaskyplus-archive-2026-10-09.zip` ＋ `.sha256.json`）。10/23 用 Drive 連接器核對雲端檔案大小 681,081,554 bytes 與本機一致。原封存在 E 槽、zip 在 E 槽與 Drive，共三份。
+  - [ ] 收尾：等 Google Drive 桌面版同步完成後，在本機對 G 槽那份算一次 SHA-256，應為 `7653c618…9e26`；一致就結案。
 - [x] **A3 選型工具公式**：2026-10-22 確認三類公式全在前端 inline JS（`sel_unit_ps`／`sel_unit_vsd`／`sel_unit_thermal`），已抄錄在 RUN_REPORT §A3。**不必向工程師要公式。** 伺服器端只做「容積 → 型號」查表與 PDF，可用產品規格表自建。
   - [ ] **Thermal 的 PSI 分支公式疑似舊站 bug**（`(P+0.1)×0.65`，與同頁 Bar 分支 `P−0.2` 及 VSD 的 `(P+1.5)×0.65` 都不一致），要客戶或工程師確認哪一條才對。
 - [x] **A4 產品明細語系**：確認只有英文 90 頁，其他語系系列頁連明細連結都沒有；hreflang 全指首頁（既有 SEO 錯誤，新站要修）。
