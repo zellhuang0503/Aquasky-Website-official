@@ -1,0 +1,201 @@
+# 非英文頁面上仍是英文的短字串
+
+舊站沒翻的字；新站翻譯時要補。括號內是出現該情況的語系：頁數。
+
+- [h2] About LIQUID - COLD SYSTEM EXPANSION TANK - LQCOL PLUS（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h2] Applications（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h2] Key Features & Advantages（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h2] SOLUTION（fr:1）
+- [h2] SPECIFICATIONS（es:1）
+- [h3] Q1: Why is the LQCOL PLUS expansion tank essential for AI data center liquid cooling?（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h3] Q2: Is the tank compatible with 25% Propylene Glycol (PG25) or pure water?（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h3] Q3: What is the difference between the All-Stainless Steel and Coated Carbon Steel models?（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h3] Q4: Why is factory high-purity Nitrogen (N₂) pre-charge superior to compressed air?（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h3] Q5: How does the expansion tank prevent pump cavitation in secondary loops?（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h3] Q6: Can the factory pre-charge pressure be adjusted for specific system requirements?（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h3] Q7: How does the tank protect precision server cold plates from blockage or leakage?（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] Deutsch（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] Italiano（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] Latviešu valoda（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] Lietuvių kalba（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] Nederlands（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] ภาษาไทย（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] にほんご（ar:1, es:1, fr:1, ru:1, zh:1）
+- [h4] 한국어（ar:1, es:1, fr:1, ru:1, zh:1）
+- [caption] COLD ROLLED CARBON STEEL（ar:1, es:1, fr:1, ru:1, zh:1）
+- [caption] STAINLESS STEEL（ar:1, es:1, fr:1, ru:1, zh:1）
+- [th] Bar（ar:3, es:4, fr:3, ru:3, zh:4）
+- [th] Model Number（ar:1, es:1, fr:1, ru:1, zh:1）
+- [th] PSI（ar:3, es:4, fr:3, ru:3, zh:4）
+- [th] Shipping Volume（ar:1, es:1, fr:1, ru:1, zh:1）
+- [th] Total Tank Volume（ar:1, es:1, fr:1, ru:1, zh:1）
+- [th] °C（ar:1, es:2, fr:1, ru:1, zh:2）
+- [th] °F（es:1, zh:1）
+- [td] 1" NPT/BSP（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] 150PSI / 10bar（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] 3/4" G/NPT/BSP（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] 30 PSI / 2 Bar（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] 304 Stainless Steel Connector（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Box Length（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Cm（ar:1, es:2, fr:2, ru:2, zh:1）
+- [td] Cold Rolled Carbon Steel / Stainless Steel（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Cold Rolled Carbon Steel: 90°C / 194°F（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] CUF（ar:1, es:2, fr:2, ru:1, zh:2）
+- [td] Diameter（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Diaphragm（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Factory Pre-charge（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Gal（ar:1, es:2, fr:2, ru:1, zh:1）
+- [td] Height（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Inch（ar:1, es:2, fr:2, ru:1, zh:1）
+- [td] Kg（ar:1, es:2, fr:2, ru:1, zh:1）
+- [td] Lbs（ar:1, es:2, fr:2, ru:1, zh:1）
+- [td] Max. Working Pressure（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Max. Working Temperature（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Shell（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Stainless Steel: 120°C / 248°F（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] System Connection（ar:1, es:1, fr:1, ru:1, zh:1）
+- [td] Triple Grade Paint（ar:1, es:1, fr:1, ru:1, zh:1）
+- [li] CERTIFICATION（fr:26）
+- [li] CONTACT（fr:26）
+- [li] Customizable Nitrogen (N₂) Pre-charge（ar:1, es:1, fr:1, ru:1, zh:1）
+- [li] English（ar:26, es:26, fr:26, ru:26, zh:26）
+- [li] Español（ar:26, es:26, fr:26, ru:26, zh:26）
+- [li] Français（ar:26, es:26, fr:26, ru:26, zh:26）
+- [li] GIGA-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] HYDRO-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] LQCOL-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] MEGA-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] Premium Shell Materials All-Stainless Steel（ar:1, es:1, fr:1, ru:1, zh:1）
+- [li] Premium Shell Materials Coated Carbon Steel（ar:1, es:1, fr:1, ru:1, zh:1）
+- [li] PREMIUM-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] PUMPLUS（ar:26, es:26, fr:26, ru:26）
+- [li] RO-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] SOLAR-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] SUPREME-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] THERMAL-PLUS（ar:26, es:26, fr:26, ru:26）
+- [li] «Previous（ar:1, es:1, fr:1, ru:1, zh:1）
+- [li] »Next（ar:1, es:1, fr:1, ru:1, zh:1）
+- [li] русский язык（ar:26, es:26, fr:26, ru:26, zh:26）
+- [li] اَلْعَرَبِيَّةُ（ar:26, es:26, fr:26, ru:26, zh:26）
+- [li] 中文（ar:26, es:26, fr:26, ru:26, zh:26）
+- [a] America（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Australia（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Bundesrepublik Deutschland（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Canada（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Estado Libre Asociado de Puerto Rico（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Estados Unidos Mexicanos（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] India（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Ireland（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Koninkrijk België（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Königreich Belgien（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Latvijas Republika（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Lietuvos Respublika（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] LQCOL PLUS – LQC Product Brchure（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] LQCOL PLUS – User Manual（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Nederland（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] New Zealand（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Philippines（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Reino de España（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Repubblica Italiana（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] República de Guatemala（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] República de Honduras（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] República de Panamá（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] República Dominicana（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] République française（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Singapore（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] United Kingdom（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Беларусь（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] русский（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] Україна（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] العربية السعودية（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] جمهوريّة مصرالعربيّة‎（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] دولة الإمارات العربية المتحدة‎（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] مملكة البحرين（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] ประเทศไทย（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] 中國大陸（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] 日本国（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] 澳門‎（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] 臺灣（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] 香港‎（ar:1, es:1, fr:1, ru:1, zh:1）
+- [a] 대한민국（ar:1, es:1, fr:1, ru:1, zh:1）
+- [label] Website（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] *The suggested pre-charge is 0.8 Bar.（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] All-Stainless Steel（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] BOOSTER SYSTEM SETTINGS（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Click here to Submit（ar:3, es:3, fr:3, ru:3, zh:3）
+- [other] Coated Carbon Steel（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Customizable Nitrogen (N₂)（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] EPDM Rubber（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] FINDIND WATER FLOW（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] FINDING AF（ar:2, es:2, fr:2, ru:2, zh:2）
+- [other] Need detailed explanation？contact us!（ar:3, es:3, fr:3, ru:3, zh:3）
+- [other] Nitrogen (N₂) Pre-charge（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Patented Leak Safe（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Pre-charge（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Premium Shell Materials（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Print Technical File（ar:3, es:3, fr:3, ru:3, zh:3）
+- [other] PROPER TANK SIZE（ar:3, es:3, fr:3, ru:3, zh:3）
+- [other] SELECT UNIT（ar:3, es:3, fr:3, ru:3, zh:3）
+- [other] Steel Connector.（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Technology with（ar:1, es:1, fr:1, ru:1, zh:1）
+- [other] Welded 304 Stainless（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] *The suggested pre-charge is 11.7 PSI.（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Acceptance Factor（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] April 03 2018（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] April 17 2019（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] AQUASKY ENTERPRISE CORP（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Aquasky online selection tools｜Pressure Tank, Pumplus｜ Aquasky（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Aquasky PumPlus Series｜pump tank, pressure tank,RO tank, water storage tank（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] AQUASKY｜Ro-plus, Pumplus, Thermal-Plus, Hydro-Plus｜Pressure Tank, RO Tank（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Bar 1.0~14.0（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Bar 2.0~16.0（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Cut-in pressure（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Cut-out pressure（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] December 23 2020（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Email: [email protected]（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Expansion Tank（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Facebook LinkedIn（ar:26, es:26, fr:26, ru:26, zh:26）
+- [p] Factory: No. 36, Ln. 212, Sec. 1, Hemu Rd., Shengang Dist., Taichung City 429, Taiwan（ar:26, es:26, fr:26, ru:26）
+- [p] Fax: 886-4-2561-6332（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] June 07 2019（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] L（ar:2, es:2, fr:2, ru:2, zh:2）
+- [p] L 1~100（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] L, or above（ar:3, es:3, fr:3, ru:3, zh:3）
+- [p] L/min（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] LIQUID-COLD SYSTEM EXPANSION TANK - LQCOL PLUS（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Litre per Minute（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] March 20 2018（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Max Working（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] min 1~4（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Minimum Run Time（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] more....（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] N2 Filling Test｜Pressure Tank, Pump tank, Energy Saving｜Aquasky（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] No. 36, Ln. 212, Sec 1, Hemu Rd.,（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Operating Pressure（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] OUT>IN（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Pressure Switch（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Pressure Tank（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] PSI 14.5~203.0（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] PSI 29.0.0~232.0（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] ROT 4 Pressure Tank ｜Standard Reverse Osmosis Tank｜Water storage tank｜Aquasky（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Safety Relief Valve（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Set Pressure（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Shengang Dist., Taichung City 429, Taiwan.（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] System（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] TEL 886-4-2562-6368 / FAX 886-4-2561-6332（ar:26, es:26, fr:26, ru:26）
+- [p] Tel: 886-4-2562-6368（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Temperature（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Thermal（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Total Water Needed（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Total Water Volume（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] VSD(VFD)（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Water flow（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] Web: www.aquaskyplus.com（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] • 304 SS Connector: 3/4″ G/NPT/BSP connection prevents rust at system joints.（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] • Hyperscaler Infrastructure: Built for zero single point of failure (ZSPOF) standards.（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] 傳真: 886-4-2561-6332（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] 地址: 台中市神岡區和睦路一段212巷36號（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] 溢康企業股份有限公司（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] 網站: www.aquaskyplus.com（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] 電子郵件: [email protected]（ar:1, es:1, fr:1, ru:1, zh:1）
+- [p] 電話: 886-4-2562-6368（ar:1, es:1, fr:1, ru:1, zh:1）
