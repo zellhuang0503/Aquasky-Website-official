@@ -1,0 +1,29 @@
+{
+  "name": "aquasky-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AQUASKY 溢康企業 aquaskyplus.com 新官網（Astro 靜態站，Cloudflare Workers Static Assets）",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "assets:copy": "node scripts/copy-archive-assets.mjs",
+    "verify": "node scripts/verify-dist.mjs",
+    "cf:preview": "wrangler dev --ip 127.0.0.1 --port 8788",
+    "cf:deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.135.0"
+  }
+}

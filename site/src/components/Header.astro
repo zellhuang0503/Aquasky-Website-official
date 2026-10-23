@@ -1,0 +1,91 @@
+---
+// 頂部選單。下拉用 <details>，不靠 JavaScript 也能開；手機版整個選單收在「選單」按鈕裡。
+import brand from '../data/brand.json';
+import nav from '../data/nav.json';
+import { type Lang, href, t, languages } from '../lib/i18n';
+
+interface Props { lang: Lang; /** 語系後路徑，語言切換時保留同一頁 */ path: string }
+const { lang, path } = Astro.props;
+const d = t(lang);
+const label = (key: string) => (d.nav as Record<string, string>)[key] ?? key;
+type Child = { key: string; path: string };
+type Item = { key: string; path?: string; children?: Child[]; groups?: { key: string; children: Child[] }[] };
+const items = nav.items as Item[];
+const current = Astro.url.pathname.replace(/\.html$/, '');
+const isCurrent = (p: string) => current === href(lang, p);
+---
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href={href(lang)}>
+      <img src={brand.logo} alt={`${brand.brand} ${lang === 'zh' ? brand.legalName.zh : ''}`.trim()} width="180" height="44" />
+    </a>
+    <button class="nav-button" type="button" aria-expanded="false" aria-controls="main-nav" hidden>{d.nav.menu}</button>
+    <nav class="main-nav" id="main-nav" aria-label={d.nav.menu}>
+        <ul class="nav-list">
+          {items.map((item) =>
+            item.children || item.groups ? (
+              <li class="nav-item">
+                <details class="dropdown">
+                  <summary>{label(item.key)}</summary>
+                  <ul class="dropdown-menu">
+                    {item.path && <li><a href={href(lang, item.path)} aria-current={isCurrent(item.path) ? 'page' : undefined}>{label(item.key)}</a></li>}
+                    {item.children?.map((c) => <li><a href={href(lang, c.path)} aria-current={isCurrent(c.path) ? 'page' : undefined}>{label(c.key)}</a></li>)}
+                    {item.groups?.map((g) => (
+                      <li class="dropdown-group">
+                        <span class="dropdown-group-label">{label(g.key)}</span>
+                        <ul>
+                          {g.children.map((c) => <li><a href={href(lang, c.path)} aria-current={isCurrent(c.path) ? 'page' : undefined}>{label(c.key)}</a></li>)}
+                        </ul>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </li>
+            ) : (
+              <li class="nav-item"><a class="nav-link" href={href(lang, item.path)} aria-current={isCurrent(item.path ?? '') ? 'page' : undefined}>{label(item.key)}</a></li>
+            )
+          )}
+          <li class="nav-item">
+            <details class="dropdown lang-menu">
+              <summary>{d.nav.language}</summary>
+              <ul class="dropdown-menu">
+                {languages.map((l) =>
+                  l.live ? (
+                    <li><a href={href(l.code, path)} hreflang={l.htmlLang} lang={l.htmlLang} aria-current={l.code === lang ? 'true' : undefined}>{l.label}</a></li>
+                  ) : (
+                    <li><span class="lang-pending" lang={l.htmlLang} title={d.common.languageNotLive}>{l.label}</span></li>
+                  )
+                )}
+              </ul>
+            </details>
+          </li>
+        </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  // 手機版「選單」按鈕。沒有 JS 時按鈕維持 hidden，選單直接展開在頁首下方。
+  const navButton = document.querySelector<HTMLButtonElement>('.nav-button');
+  const mainNav = document.getElementById('main-nav');
+  if (navButton && mainNav) {
+    navButton.hidden = false;
+    navButton.addEventListener('click', () => {
+      const open = navButton.getAttribute('aria-expanded') !== 'true';
+      navButton.setAttribute('aria-expanded', String(open));
+      mainNav.classList.toggle('is-open', open);
+    });
+  }
+  // 同一時間只開一個下拉；點外面關閉。沒有 JS 時 <details> 仍可正常開關。
+  const dropdowns = Array.from(document.querySelectorAll<HTMLDetailsElement>('.site-header details.dropdown'));
+  for (const dd of dropdowns) {
+    dd.addEventListener('toggle', () => {
+      if (dd.open) for (const other of dropdowns) if (other !== dd) other.open = false;
+    });
+  }
+  document.addEventListener('click', (e) => {
+    if (!(e.target as Element).closest('.site-header details.dropdown')) for (const dd of dropdowns) dd.open = false;
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') for (const dd of dropdowns) if (dd.open) { dd.open = false; dd.querySelector('summary')?.focus(); }
+  });
+</script>

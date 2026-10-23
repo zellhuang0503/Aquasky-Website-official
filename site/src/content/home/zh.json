@@ -1,0 +1,32 @@
+{
+  "_note": "首頁中文。title／description 與認證說明沿用 2026-10-22 封存的舊站 zh 首頁（translation/sources/home.md）。",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商",
+    "description": "溢康企業 (AQUASKY) 創立於 1998 年，為全球領先的隔膜式壓力桶製造商。提供通過 NSF 認證、100% 氮氣充填的泵浦增壓罐、RO 儲水桶與熱膨脹罐。"
+  },
+  "h1": "全球隔膜壓力桶與水處理設備專業製造商",
+  "companyName": "溢康企業股份有限公司",
+  "productLineHeading": "產品系列",
+  "selectionTools": {
+    "heading": "壓力桶選擇工具",
+    "cta": "使用壓力桶選擇工具",
+    "image": "/images/selection-tools_zh.png",
+    "alt": "AQUASKY 線上壓力桶選擇工具"
+  },
+  "slidesAlt": "AQUASKY 溢康企業工廠與壓力桶生產",
+  "certifications": {
+    "heading": "認證與技術",
+    "items": [
+      { "icon": "/images/home-service/s2-img-01.png", "label": "歐盟壓力容器安全認證" },
+      { "icon": "/images/home-service/s2-img-02.png", "label": "ISO 9001 製造品質管理認證" },
+      { "icon": "/images/home-service/s2-img-03.png", "label": "無鉛認證" },
+      { "icon": "/images/home-service/s2-img-04.png", "label": "UPC 美國管道安全認證" },
+      { "icon": "/images/home-service/s2-img-05.png", "label": "NSF 飲用水標準認證" },
+      { "icon": "/images/home-service/N2.png", "label": "氮氣充填" },
+      { "icon": "/images/home-service/unnamed2.png", "label": "KC 韓國安全認證" },
+      { "icon": "/images/home-service/s2-img-08.png", "label": "防鏽護盾" }
+    ]
+  }
+}

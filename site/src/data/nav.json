@@ -1,0 +1,69 @@
+{
+  "_note": "主選單結構，六語系共用。path 是語系後面的路徑（/en + path）。label 的文字在 src/i18n/<lang>.json 的 nav 下，用 key 查。舊站 zh 多出的「關於溢康」父層與「ESG產品」先不收。",
+  "items": [
+    {
+      "key": "company",
+      "children": [
+        { "key": "about", "path": "/about" },
+        { "key": "feature", "path": "/feature" },
+        { "key": "certification", "path": "/certification" },
+        { "key": "selectionTools", "path": "/sel_tools" }
+      ]
+    },
+    {
+      "key": "products",
+      "path": "/products",
+      "groups": [
+        {
+          "key": "residential",
+          "children": [
+            { "key": "PUMPLUS", "path": "/PUMPLUS" },
+            { "key": "RO-PLUS", "path": "/RO-PLUS" },
+            { "key": "THERMAL-PLUS", "path": "/THERMAL-PLUS" },
+            { "key": "HYDRO-PLUS", "path": "/HYDRO-PLUS" },
+            { "key": "PREMIUM-PLUS", "path": "/PREMIUM-PLUS" }
+          ]
+        },
+        {
+          "key": "commercial",
+          "children": [
+            { "key": "LQCOL-PLUS", "path": "/LQCOL-PLUS" },
+            { "key": "MEGA-PLUS", "path": "/MEGA-PLUS" },
+            { "key": "SOLAR-PLUS", "path": "/SOLAR-PLUS" },
+            { "key": "SUPREME-PLUS", "path": "/supreme" },
+            { "key": "DL-TANK", "path": "/dl-ce" },
+            { "key": "ASME-TANK", "path": "/asme-ht" },
+            { "key": "GIGA-PLUS", "path": "/GIGA-PLUS" },
+            { "key": "ACCESSORIES-PLUS", "path": "/accessories" }
+          ]
+        }
+      ]
+    },
+    { "key": "selectionTools", "path": "/sel_tools" },
+    {
+      "key": "news",
+      "children": [
+        { "key": "exhibitions", "path": "/news/EXHIBITIONS" },
+        { "key": "industry", "path": "/news/INDUSTRY" }
+      ]
+    },
+    { "key": "videos", "path": "/videos" },
+    { "key": "download", "path": "/downloadpage" },
+    { "key": "faq", "path": "/FAQ" },
+    { "key": "contact", "path": "/contact" }
+  ],
+  "productLine": [
+    { "key": "PUMPLUS", "path": "/PUMPLUS", "image": "/images/pdg-01.png", "thumb": "/images/products_line/pdg-plus2.webp" },
+    { "key": "MEGA-PLUS", "path": "/MEGA-PLUS", "image": "/images/pdg-mega-2022.png", "thumb": "/images/products_line/pdg-mega2-2022.webp" },
+    { "key": "THERMAL-PLUS", "path": "/THERMAL-PLUS", "image": "/images/pdg-03.png", "thumb": "/images/products_line/pdg-thermal2.webp" },
+    { "key": "RO-PLUS", "path": "/RO-PLUS", "image": "/images/pdg-04.png", "thumb": "/images/products_line/pdg-rot2.webp" },
+    { "key": "HYDRO-PLUS", "path": "/HYDRO-PLUS", "image": "/images/pdg-05.png", "thumb": "/images/products_line/pdg-hydro2.webp" },
+    { "key": "SOLAR-PLUS", "path": "/SOLAR-PLUS", "image": "/images/pdg-06.png", "thumb": "/images/products_line/pdg-solar2.webp" },
+    { "key": "PREMIUM-PLUS", "path": "/PREMIUM-PLUS", "image": "/images/pdg-premiumplus2.png", "thumb": "/images/products_line/pdg-premiumplus.webp" },
+    { "key": "LQCOL-PLUS", "path": "/LQCOL-PLUS", "image": "/images/products/LQCOLPLUS/LQCOLPLUS_pdlline2.png", "thumb": "/images/products_line/LQCOLPLUS_pdlline1.webp" },
+    { "key": "GIGA-PLUS", "path": "/GIGA-PLUS", "image": "/images/products/GIGAPLUS/WEB_PRODUCT_LINE_GIGAPLUS_B.png", "thumb": "/images/products_line/WEB_PRODUCT_LINE_GIGAPLUS.webp" },
+    { "key": "DL-TANK", "path": "/dl-ce", "image": "/images/Elbi_2022.png", "thumb": "/images/products_line/Elbi_B2022.webp", "also": { "key": "ASME-TANK", "path": "/asme-ht" } },
+    { "key": "SUPREME-PLUS", "path": "/supreme", "image": "/images/SupremePlus_2023A.png", "thumb": "/images/products_line/SupremePlus_2023B.webp" },
+    { "key": "ACCESSORIES-PLUS", "path": "/accessories", "image": "/images/products/accessories/accessories6.png", "thumb": "/images/products_line/accessories3.webp" }
+  ]
+}

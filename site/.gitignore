@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.dev.vars
+*.log
+# 從封存複製進來的舊站圖片與 PDF（用 npm run assets:copy 重新產生；封存內容不進版控）
+public/images/
+public/uploads/
+public/upfile/

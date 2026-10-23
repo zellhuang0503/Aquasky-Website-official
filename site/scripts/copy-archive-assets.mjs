@@ -1,0 +1,92 @@
+// 從 ../migration-2026-10-22 封存把新站需要的舊站圖片／PDF 複製到 public/，路徑照舊站網址保留。
+// 只讀封存檔，不連網。用法（在 site/ 目錄）：node scripts/copy-archive-assets.mjs [--archive ../migration-2026-10-22]
+import { readFileSync, mkdirSync, copyFileSync, existsSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const args = process.argv.slice(2);
+const archive = resolve(here, '..', args[args.indexOf('--archive') + 1] || '../migration-2026-10-22');
+const publicDir = resolve(here, '..', 'public');
+const ORIGIN = 'https://aquaskyplus.com';
+
+/** [舊站路徑, public 內目標路徑（省略＝相同）] */
+const ASSETS = [
+  // 共用
+  ['/images/logo.png'],
+  ['/images/aquasky-text.png'],
+  ['/upfile/Images/footer-logo-200.png'],
+  // 首頁輪播
+  ['/upfile/Images/S_0089_2022.jpg'],
+  ['/upfile/Images/banner201906.jpg'],
+  ['/upfile/Images/s0010.jpg'],
+  ['/upfile/Images/S_0109_2022.jpg'],
+  ['/upfile/Images/S_0104_2022.jpg'],
+  ['/upfile/Images/S_0182_2022.jpg'],
+  // 首頁產品線
+  ['/images/pdg-01.png'],
+  ['/images/pdg-mega-2022.png'],
+  ['/images/pdg-03.png'],
+  ['/images/pdg-04.png'],
+  ['/images/pdg-05.png'],
+  ['/images/pdg-06.png'],
+  ['/images/pdg-premiumplus2.png'],
+  ['/images/products/LQCOLPLUS/LQCOLPLUS_pdlline2.png'],
+  ['/images/products/GIGAPLUS/WEB_PRODUCT_LINE_GIGAPLUS_B.png'],
+  ['/images/Elbi_2022.png'],
+  ['/images/SupremePlus_2023A.png'],
+  ['/images/products/accessories/accessories6.png'],
+  ['/images/selection%20tools_en.png', '/images/selection-tools_en.png'],
+  ['/images/selection%20tools_zh.png', '/images/selection-tools_zh.png'],
+  // 首頁認證圖示
+  ['/images/home-service/s2-img-01.png'],
+  ['/images/home-service/s2-img-02.png'],
+  ['/images/home-service/s2-img-03.png'],
+  ['/images/home-service/s2-img-04.png'],
+  ['/images/home-service/s2-img-05.png'],
+  ['/images/home-service/N2.png'],
+  ['/images/home-service/unnamed2.png'],
+  ['/images/home-service/s2-img-08.png'],
+  // 系列頁產品線（webp 小圖）
+  ['/images/products_line/pdg-plus2.webp'],
+  ['/images/products_line/pdg-mega2-2022.webp'],
+  ['/images/products_line/pdg-thermal2.webp'],
+  ['/images/products_line/pdg-rot2.webp'],
+  ['/images/products_line/pdg-hydro2.webp'],
+  ['/images/products_line/pdg-solar2.webp'],
+  ['/images/products_line/pdg-premiumplus.webp'],
+  ['/images/products_line/LQCOLPLUS_pdlline1.webp'],
+  ['/images/products_line/WEB_PRODUCT_LINE_GIGAPLUS.webp'],
+  ['/images/products_line/Elbi_B2022.webp'],
+  ['/images/products_line/SupremePlus_2023B.webp'],
+  ['/images/products_line/accessories3.webp'],
+  // LQCOL-PLUS
+  ['/images/products/LQCOLPLUS/LQCOLPLUS_logo.png'],
+  ['/images/products/LQCOLPLUS/SET1.png'],
+  ['/uploads/series/lqcol-plus/lqc_structure.png'],
+  ['/uploads/series/lqcol-plus/20261020_222802_5e8f42ca9a.png'],
+  ['/uploads/series/pdf/SERIES_lqcol-plus_1_20261020_222652.jpg'],
+  ['/uploads/series/pdf/SERIES_lqcol-plus_1_20261020_222652.pdf'],
+  ['/uploads/series/pdf/SERIES_lqcol-plus_2_20261020_222359.jpg'],
+  ['/uploads/series/pdf/SERIES_lqcol-plus_2_20261020_222359.pdf'],
+];
+
+const index = new Map();
+for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\n')) {
+  if (!line.trim()) continue;
+  const row = JSON.parse(line);
+  index.set(row.url, row);
+}
+
+let copied = 0, missing = [];
+for (const [src, dest = src] of ASSETS) {
+  const row = index.get(ORIGIN + src);
+  if (!row) { missing.push(src); continue; }
+  const target = join(publicDir, decodeURIComponent(dest));
+  mkdirSync(dirname(target), { recursive: true });
+  copyFileSync(join(archive, row.relative_path), target);
+  copied++;
+}
+console.log(`copied ${copied} files from ${archive} -> ${publicDir}`);
+if (missing.length) console.log('not in archive (skipped):\n  ' + missing.join('\n  '));
+if (!existsSync(join(publicDir, 'images', 'logo.png'))) process.exit(1);

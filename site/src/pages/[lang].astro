@@ -1,0 +1,11 @@
+---
+// 語系首頁：/en、/zh（其他語系在 brand.json 改 live: true 並補內容後自動產生）
+import HomePage from '../components/HomePage.astro';
+import { type Lang, liveLangs } from '../lib/i18n';
+
+export function getStaticPaths() {
+  return liveLangs.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+---
+<HomePage lang={lang} />

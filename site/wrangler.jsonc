@@ -1,0 +1,15 @@
+// Cloudflare Workers 設定：把 Astro 產出的 dist/ 當靜態網站部署（Workers Static Assets）。
+// 純靜態，沒有 Worker 程式；日後要加表單 API 或舊 .php?query 轉址時，再加 "main" 與 run_worker_first。
+// 用 Workers Builds（從 GitHub 建置）時：根目錄 site、組建命令 npm run build、部署命令 npx wrangler deploy。
+// 正式網域 aquaskyplus.com 先不掛（舊站與 aquasky-edge-aeo Worker 還在線上）；
+// 預覽用 <name>.<account>.workers.dev，切換時再加 routes 並逐項解除舊 AEO Worker 的路由。
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aquasky-site",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

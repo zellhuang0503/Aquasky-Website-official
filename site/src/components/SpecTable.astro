@@ -1,0 +1,56 @@
+---
+// 規格表。單位列（Liter、Gal、Cm…）照禁譯清單不翻。手機版可左右捲動，型號欄固定。
+interface Row {
+  model: string; volumeL: number; volumeGal: number; diameterCm: number; diameterIn: number;
+  heightCm: number; heightIn: number; boxLengthCm: number; boxLengthIn: number; boxWidthCm: number; boxWidthIn: number;
+  boxHeightCm: number; boxHeightIn: number; netWeightKg: number; netWeightLb: number; grossWeightKg: number; grossWeightLb: number;
+  shippingVolumeCuf: number; connection: string;
+}
+interface Props {
+  caption: string;
+  columns: Record<'model' | 'volume' | 'diameter' | 'height' | 'boxLength' | 'boxWidth' | 'boxHeight' | 'netWeight' | 'grossWeight' | 'shippingVolume' | 'connection', string>;
+  rows: Row[];
+}
+const { caption, columns: c, rows } = Astro.props;
+const f1 = (n: number) => n.toFixed(1);
+const f2 = (n: number) => n.toFixed(2);
+const pairs: [string, string, string][] = [
+  ['volume', 'Liter', 'Gal'], ['diameter', 'Cm', 'Inch'], ['height', 'Cm', 'Inch'],
+  ['boxLength', 'Cm', 'Inch'], ['boxWidth', 'Cm', 'Inch'], ['boxHeight', 'Cm', 'Inch'],
+  ['netWeight', 'Kg', 'Lbs'], ['grossWeight', 'Kg', 'Lbs'],
+];
+---
+<div class="table-scroll" role="region" aria-label={caption} tabindex="0">
+  <table class="spec-table">
+    <caption>{caption}</caption>
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2" class="sticky-col">{c.model}</th>
+        {pairs.map(([key]) => <th scope="colgroup" colspan="2">{c[key as keyof typeof c]}</th>)}
+        <th scope="col">{c.shippingVolume}</th>
+        <th scope="col" rowspan="2">{c.connection}</th>
+      </tr>
+      <tr>
+        {pairs.map(([, a, b]) => (<Fragment><th scope="col" lang="en">{a}</th><th scope="col" lang="en">{b}</th></Fragment>))}
+        <th scope="col" lang="en">CUF</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((r) => (
+        <tr>
+          <th scope="row" class="sticky-col">{r.model}</th>
+          <td>{r.volumeL}</td><td>{f1(r.volumeGal)}</td>
+          <td>{f1(r.diameterCm)}</td><td>{f1(r.diameterIn)}</td>
+          <td>{f1(r.heightCm)}</td><td>{f1(r.heightIn)}</td>
+          <td>{f1(r.boxLengthCm)}</td><td>{f1(r.boxLengthIn)}</td>
+          <td>{f1(r.boxWidthCm)}</td><td>{f1(r.boxWidthIn)}</td>
+          <td>{f1(r.boxHeightCm)}</td><td>{f1(r.boxHeightIn)}</td>
+          <td>{f1(r.netWeightKg)}</td><td>{f1(r.netWeightLb)}</td>
+          <td>{f1(r.grossWeightKg)}</td><td>{f1(r.grossWeightLb)}</td>
+          <td>{f2(r.shippingVolumeCuf)}</td>
+          <td class="nowrap">{r.connection}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

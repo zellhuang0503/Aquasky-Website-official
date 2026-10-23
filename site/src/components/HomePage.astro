@@ -1,0 +1,61 @@
+---
+// 首頁內容。/（英文）與 /en、/zh 共用；文字在 src/content/home/<lang>.json。
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProductLine from './ProductLine.astro';
+import brand from '../data/brand.json';
+import { type Lang, href, t, format } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const entry = await getEntry('home', lang);
+if (!entry) throw new Error(`missing src/content/home/${lang}.json`);
+const c = entry.data;
+const d = t(lang);
+const slides = [
+  '/upfile/Images/S_0089_2022.jpg',
+  '/upfile/Images/banner201906.jpg',
+  '/upfile/Images/s0010.jpg',
+  '/upfile/Images/S_0109_2022.jpg',
+  '/upfile/Images/S_0104_2022.jpg',
+  '/upfile/Images/S_0182_2022.jpg',
+];
+---
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path="">
+  <section class="home-hero">
+    <div class="wrap home-hero-text">
+      <img class="home-wordmark" src="/images/aquasky-text.png" alt="" width="460" height="80" />
+      <h1><span class="visually-hidden">{brand.brand} · </span>{c.h1}</h1>
+      <p class="home-company">{c.companyName}</p>
+      <p class="home-founded">{format(d.common.foundedIn, { year: brand.founded })}</p>
+    </div>
+    <div class="slides" role="region" aria-label={c.slidesAlt} tabindex="0">
+      {slides.map((src, i) => (
+        <img src={src} alt={i === 0 ? c.slidesAlt : ''} loading={i === 0 ? 'eager' : 'lazy'} decoding="async" fetchpriority={i === 0 ? 'high' : undefined} />
+      ))}
+    </div>
+  </section>
+
+  <div class="wrap">
+    <ProductLine lang={lang} heading={c.productLineHeading} />
+
+    <section class="home-tools" aria-labelledby="tools-title">
+      <h2 class="section-title" id="tools-title">{c.selectionTools.heading}</h2>
+      <a href={href(lang, '/sel_tools')} class="tools-card">
+        <img src={c.selectionTools.image} alt={c.selectionTools.alt} loading="lazy" />
+        <span class="button">{c.selectionTools.cta}</span>
+      </a>
+    </section>
+  </div>
+
+  <section class="home-certs" aria-labelledby="certs-title">
+    <div class="wrap">
+      <h2 class="section-title section-title--light" id="certs-title">{c.certifications.heading}</h2>
+      <ul class="cert-grid">
+        {c.certifications.items.map((item) => (
+          <li><img src={item.icon} alt="" loading="lazy" /><span>{item.label}</span></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

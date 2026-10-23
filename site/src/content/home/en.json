@@ -1,0 +1,32 @@
+{
+  "_note": "Home page, English. title/description verbatim from the 2026-10-22 archive (translation/sources/home.md). The old site showed the certification icons without English captions; the captions below are new (translated from the existing zh captions) and need client review.",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "AQUASKY - Global Diaphragm Pressure Tank & Water Treatment Manufacturer",
+    "description": "Founded in 1998, AQUASKY is a global leader in diaphragm pressure tank manufacturing. We provide NSF-certified, 100% N2 filled pump, RO, and thermal expansion tanks."
+  },
+  "h1": "Global Diaphragm Pressure Tank & Water Treatment Manufacturer",
+  "companyName": "AQUASKY Enterprise Corp.",
+  "productLineHeading": "PRODUCT LINE",
+  "selectionTools": {
+    "heading": "SELECTION TOOLS",
+    "cta": "CHECK ON SELECTION TOOL",
+    "image": "/images/selection-tools_en.png",
+    "alt": "AQUASKY online pressure tank selection tools"
+  },
+  "slidesAlt": "AQUASKY factory and pressure tank production",
+  "certifications": {
+    "heading": "Certifications & Technology",
+    "items": [
+      { "icon": "/images/home-service/s2-img-01.png", "label": "EU Pressure Equipment Safety Certification" },
+      { "icon": "/images/home-service/s2-img-02.png", "label": "ISO 9001 Quality Management" },
+      { "icon": "/images/home-service/s2-img-03.png", "label": "Lead-Free Certification" },
+      { "icon": "/images/home-service/s2-img-04.png", "label": "UPC Plumbing Safety Certification" },
+      { "icon": "/images/home-service/s2-img-05.png", "label": "NSF Drinking Water Standard" },
+      { "icon": "/images/home-service/N2.png", "label": "Nitrogen Pre-charged" },
+      { "icon": "/images/home-service/unnamed2.png", "label": "KC Korea Safety Certification" },
+      { "icon": "/images/home-service/s2-img-08.png", "label": "Anti-Rust Shield" }
+    ]
+  }
+}

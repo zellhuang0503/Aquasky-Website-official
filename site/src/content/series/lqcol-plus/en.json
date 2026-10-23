@@ -1,0 +1,172 @@
+{
+  "_note": "LQCOL-PLUS English text, verbatim from the 2026-10-22 archive (translation/sources/LQCOL-PLUS.md). Spec numbers live in src/data/products/lqcol-plus.json.",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "LQCOL-Plus Liquid Cold Expansion Tank | Chilled Water Expansion Vessel | AQUASKY",
+    "description": "AQUASKY LQCOL-Plus is optimized for chilled water and liquid cooling systems, accommodating water volume changes in commercial HVAC and refrigeration loops."
+  },
+  "h1": "LIQUID COLD SYSTEM EXPANSION TANK",
+  "about": {
+    "heading": "About LIQUID - COLD SYSTEM EXPANSION TANK - LQCOL PLUS",
+    "body": "The LQCOL PLUS Liquid-Cold System Expansion Tank is designed specifically for liquid cooling systems and secondary loops (CDU) in data centers. It effectively absorbs coolant volume changes caused by severe temperature fluctuations during high-density AI and HPC computing workloads. By dynamic expansion accommodation and pressure compensation, it prevents excessive pressure spikes, protects quick disconnects (QDs) and cold plates, and safeguards critical server components from leaks."
+  },
+  "features": {
+    "heading": "Key Features & Advantages",
+    "groups": [
+      {
+        "label": "Premium Shell Materials",
+        "items": [
+          {
+            "lead": "All-Stainless Steel",
+            "text": "SUS304 shell with electropolishing to ensure zero corrosion and pure fluid quality."
+          },
+          {
+            "lead": "Coated Carbon Steel",
+            "text": "Heavy-duty carbon steel with Triple-Grade Paint for superior exterior durability."
+          },
+          {
+            "lead": "304 SS Connector",
+            "text": "3/4″ G/NPT/BSP connection prevents rust at system joints."
+          }
+        ]
+      },
+      {
+        "label": "EPDM Rubber",
+        "items": [
+          {
+            "lead": "100% PG25 Compatibility",
+            "text": "No rubber swelling, plasticizer leaching, or fluid contamination."
+          },
+          {
+            "lead": "High Temp & Low Permeability",
+            "text": "Supports up to 90°C (194°F) continuous operation and prevents vapor locks."
+          }
+        ]
+      },
+      {
+        "label": "Nitrogen (N₂) Pre-charge",
+        "items": [
+          {
+            "lead": "Stable N₂ Cushion (2 bar / 30 psi)",
+            "text": "Prevents pressure drift caused by ambient temperature changes."
+          },
+          {
+            "lead": "10+ Year Maintenance-Free",
+            "text": "Oxygen-free chamber stops interior oxidation for a long service life."
+          }
+        ]
+      }
+    ]
+  },
+  "structure": {
+    "alt": "LQCOL PLUS structure diagram",
+    "labels": [
+      "Patented Leak Safe Technology with Welded 304 Stainless Steel Connector.",
+      "Premium Shell Materials: Coated Carbon Steel",
+      "Premium Shell Materials: All-Stainless Steel",
+      "EPDM Rubber",
+      "Customizable Nitrogen (N₂) Pre-charge",
+      "Patented Air Valve Structure Cover with O-ring Seal Cap."
+    ]
+  },
+  "applications": {
+    "heading": "Applications",
+    "alt": "LQCOL PLUS applications",
+    "items": [
+      {
+        "lead": "AI & HPC Data Centers",
+        "text": "High-density server racks (>100 kW TDP) requiring extreme liquid cooling reliability."
+      },
+      {
+        "lead": "CDU Secondary Loops",
+        "text": "Closed-loop pressure compensation between CDUs and server cold plates."
+      },
+      {
+        "lead": "Direct-to-Chip & Immersion Cooling",
+        "text": "Precision cooling loops needing zero micro-leakage and pure coolant flow."
+      },
+      {
+        "lead": "",
+        "text": "Tailored for both In-Rack and In-Row CDUs, offering ultra-compact designs (0.5L / 1L / 3L) for space-constrained server racks and high-volume tanks (24L / 60L / 100L+) for rack-level and row-level cooling."
+      },
+      {
+        "lead": "Hyperscaler Infrastructure",
+        "text": "Built for zero single point of failure (ZSPOF) standards."
+      }
+    ]
+  },
+  "specs": {
+    "heading": "Product Specifications",
+    "tableTitle": "LIQUID-COLD SYSTEM EXPANSION TANK - LQCOL PLUS",
+    "captionCarbon": "COLD ROLLED CARBON STEEL",
+    "captionStainless": "STAINLESS STEEL",
+    "columns": {
+      "model": "Model Number",
+      "volume": "Total Tank Volume",
+      "diameter": "Diameter",
+      "height": "Height",
+      "boxLength": "Box Length",
+      "boxWidth": "Box Width",
+      "boxHeight": "Box Height",
+      "netWeight": "N.W.",
+      "grossWeight": "G.W.",
+      "shippingVolume": "Shipping Volume",
+      "connection": "Connection"
+    },
+    "props": {
+      "shell": "Shell",
+      "shellValue": "Cold Rolled Carbon Steel / Stainless Steel",
+      "systemConnection": "System Connection",
+      "systemConnectionValue": "304 Stainless Steel Connector",
+      "coating": "Coating",
+      "coatingValue": "Triple Grade Paint",
+      "diaphragm": "Diaphragm",
+      "diaphragmValue": "EPDM Rubber",
+      "factoryPrecharge": "Factory Pre-charge",
+      "maxWorkingTemp": "Max. Working Temperature",
+      "maxWorkingTempCarbon": "Cold Rolled Carbon Steel: 90°C / 194°F",
+      "maxWorkingTempStainless": "Stainless Steel: 120°C / 248°F",
+      "maxWorkingPressure": "Max. Working Pressure"
+    }
+  },
+  "faq": {
+    "heading": "FAQ",
+    "items": [
+      {
+        "q": "Why is the LQCOL PLUS expansion tank essential for AI data center liquid cooling?",
+        "a": "As high-power AI servers surge past 100 kW/rack, severe temperature swings cause coolant to expand and contract. The LQCOL PLUS absorbs coolant expansion, prevents pressure spikes, eliminates pump cavitation, and safeguards quick disconnects and cold plates from leaks."
+      },
+      {
+        "q": "Is the tank compatible with 25% Propylene Glycol (PG25) or pure water?",
+        "a": "Yes. Our peroxide-cured EPDM diaphragm is specially formulated for 25% Propylene Glycol (PG25) and deionized water. It resists rubber swelling, hardening, and plasticizer leaching, ensuring long-term fluid purity and conductivity."
+      },
+      {
+        "q": "What is the difference between the All-Stainless Steel and Coated Carbon Steel models?",
+        "a": "The All-Stainless Steel (SUS304/316L) model is built for high-purity fluid loops with electropolished inner walls. The Carbon Steel model features a heavy-duty cold rolled carbon steel shell with a Triple-Grade Protective Coating for outstanding exterior corrosion resistance. Both feature a 304 SS connector."
+      },
+      {
+        "q": "Why is factory high-purity Nitrogen (N₂) pre-charge superior to compressed air?",
+        "a": "The factory 2 bar (30 psi) 99.9% dry nitrogen charge eliminates internal moisture and oxygen. This stops internal oxidation and prevents pressure drift caused by ambient temperature changes, enabling a 10+ year maintenance-free lifespan."
+      },
+      {
+        "q": "How does the expansion tank prevent pump cavitation in secondary loops?",
+        "a": "When coolant contracts due to sudden server load drops, a localized vacuum can occur. The tank provides continuous dynamic positive pressure, keeping pump inlet pressure stable to eliminate vapor bubble collapse, reducing pump noise and impeller wear."
+      },
+      {
+        "q": "Can the factory pre-charge pressure be adjusted for specific system requirements?",
+        "a": "Yes. While factory pre-charged to 2 bar (30 PSI) with high-purity nitrogen, the pre-charge pressure can be fine-tuned via the top air valve prior to installation to match your loop’s minimum operating pressure requirement."
+      },
+      {
+        "q": "How does the tank protect precision server cold plates from blockage or leakage?",
+        "a": "The electropolished stainless steel body or triple-coated shell prevents corrosion particles, while the EPDM diaphragm leaves zero chemical residues. This stops particle buildup in cold plate micro-channels and absorbs pressure spikes that cause QD leaks."
+      }
+    ]
+  },
+  "downloads": {
+    "heading": "DOWNLOAD",
+    "brochure": "LQCOL PLUS – LQC Product Brochure",
+    "manual": "LQCOL PLUS – User Manual"
+  },
+  "productLineHeading": "Product Line"
+}

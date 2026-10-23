@@ -1,0 +1,75 @@
+---
+// 每頁的 <head>：title、description、canonical、hreflang、Open Graph、JSON-LD。
+// Organization／WebSite 來自 src/data/brand.json，全站一份。
+import brand from '../data/brand.json';
+import { type Lang, langInfo, liveLangs, pick, stage } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** 語系後面的路徑，例如 /LQCOL-PLUS；首頁為 '' */
+  path: string;
+  image?: string;
+  jsonLd?: Record<string, unknown>[];
+  breadcrumbs?: { name: string; path: string }[];
+  /** 404 等不該被收錄的頁 */
+  noindex?: boolean;
+}
+const { lang, title, description, path, image = brand.logo, jsonLd = [], breadcrumbs = [], noindex = false } = Astro.props;
+
+const site = brand.url;
+const canonical = `${site}/${lang}${path}`;
+// hreflang 只列這一版真的有建置的語系（舊站全指首頁是錯的，這裡逐頁對應）
+const alternates = liveLangs.map((code) => ({ hreflang: langInfo(code).htmlLang, href: `${site}/${code}${path}` }));
+const xDefault = `${site}/en${path}`;
+const ogLocale = { en: 'en_US', zh: 'zh_TW', es: 'es_ES', fr: 'fr_FR', ru: 'ru_RU', ar: 'ar_AR' }[lang];
+
+const organization = {
+  '@type': 'Organization',
+  '@id': `${site}/#organization`,
+  name: brand.brand,
+  legalName: pick(brand.legalName, lang),
+  alternateName: [brand.legalName.en, brand.legalName.zh, '溢康企業'],
+  url: site,
+  logo: `${site}${brand.logo}`,
+  foundingDate: brand.founded,
+  telephone: `+${brand.tel}`,
+  faxNumber: `+${brand.fax}`,
+  address: { '@type': 'PostalAddress', ...brand.address.postal },
+  sameAs: brand.sameAs,
+};
+const website = {
+  '@type': 'WebSite',
+  '@id': `${site}/#website`,
+  url: `${site}/`,
+  name: brand.brand,
+  inLanguage: liveLangs.map((c) => langInfo(c).htmlLang),
+  publisher: { '@id': `${site}/#organization` },
+};
+const breadcrumbList = breadcrumbs.length
+  ? {
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: `${site}/${lang}${b.path}` })),
+    }
+  : null;
+const graph = { '@context': 'https://schema.org', '@graph': [organization, website, ...(breadcrumbList ? [breadcrumbList] : []), ...jsonLd] };
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+{!noindex && (
+  <Fragment>
+    <link rel="canonical" href={canonical} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+    <link rel="alternate" hreflang="x-default" href={xDefault} />
+  </Fragment>
+)}
+{(stage === 'preview' || noindex) && <meta name="robots" content="noindex, nofollow" />}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={brand.brand} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={`${site}${image}`} />
+<meta property="og:locale" content={ogLocale} />
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />

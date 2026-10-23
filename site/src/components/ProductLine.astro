@@ -1,0 +1,26 @@
+---
+// 產品系列格狀清單。首頁用大圖，系列頁底部用小圖（variant="compact"）。
+import nav from '../data/nav.json';
+import { type Lang, href, t } from '../lib/i18n';
+interface Props { lang: Lang; heading: string; variant?: 'large' | 'compact'; headingLevel?: 'h2' | 'h3' }
+const { lang, heading, variant = 'large', headingLevel = 'h2' } = Astro.props;
+const d = t(lang);
+const label = (key: string) => (d.nav as Record<string, string>)[key] ?? key;
+const H = headingLevel;
+const current = Astro.url.pathname.replace(/\.html$/, '');
+---
+<section class={`product-line product-line--${variant}`} aria-labelledby={`pl-${variant}`}>
+  <H class="section-title" id={`pl-${variant}`}>{heading}</H>
+  <ul class="product-grid">
+    {nav.productLine.map((p) => (
+      <li class="product-card" data-current={current === href(lang, p.path) ? 'true' : undefined}>
+        <a href={href(lang, p.path)} class="product-card-link">
+          <img src={variant === 'large' ? p.image : p.thumb} alt="" loading="lazy" decoding="async" />
+          <span class="product-card-name">{label(p.key)}</span>
+          {lang !== 'en' && label(p.key) !== p.key && <span class="product-card-series" lang="en">{p.key.replace(/-TANK$/, ' TANK').replace('DL TANK', 'LARGE SIZE DL TANK')}</span>}
+        </a>
+        {p.also && <a class="product-card-also" href={href(lang, p.also.path)}>{label(p.also.key)}</a>}
+      </li>
+    ))}
+  </ul>
+</section>
