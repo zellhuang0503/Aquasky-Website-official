@@ -37,15 +37,15 @@
 | 項目 | 值 |
 | --- | --- |
 | 檔名 | `aquaskyplus-archive-2026-10-09.zip` |
-| 目前位置 | `E:\CascadeProjects\aquaskyplus-archive-2026-10-09.zip` |
+| 位置 | **異地備份：**`G:\我的雲端硬碟\梵亞\AQUASKY-AEO\aquaskyplus-archive-2026-10-09.zip`（Google Drive，2026-10-22 上傳）<br>本機原檔：`E:\CascadeProjects\aquaskyplus-archive-2026-10-09.zip` |
 | 大小 | 681,081,554 bytes（約 650 MB） |
 | **SHA-256** | **`7653c6181e84109c98c80de2726e2fdb94a473c1d593698fe25a3a2f9c7b9e26`** |
 | 內含檔案 | 3,268 個（整個 `migration-2026-10-09` 資料夾，含 content／jsonl／run.log／報告／腳本） |
 | 完整性 | CRC 全數通過（`zipfile.testzip()` 回 `None`） |
 
-雜湊也另存為 `E:\CascadeProjects\aquaskyplus-archive-2026-10-09.sha256.json`。
+雜湊也另存為 `aquaskyplus-archive-2026-10-09.sha256.json`，與 zip 放同一層，Drive 與 E 槽各一份。
 
-> ⚠️ **待黃老闆指定 Google Drive 路徑後搬移。** 目前仍只在 E 槽（和原封存同一顆硬碟），**嚴格說還不算「第二份」**，硬碟掛掉兩份一起沒。建議放 `G:\我的雲端硬碟\梵亞\客戶\溢康企業\舊站封存\`；指定後我可以搬，或您直接拖過去再核對上面的 SHA-256。
+> ✅ **2026-10-23 異地備份已完成並核對。** zip 已在 `G:\我的雲端硬碟\梵亞\AQUASKY-AEO\`（Google Drive 同步資料夾）。在本機對 G 槽那一份重算 SHA-256，與上表的值**完全相符**，檔案大小 681,081,554 bytes 亦相同，搬移無損。E 槽原檔保留，目前共三份：原始 `migration-2026-10-09` 資料夾、E 槽 zip、Drive zip。
 
 ### A3 選型工具的計算邏輯在哪裡 ✅
 
@@ -293,13 +293,13 @@ CSS／JS／圖片「變少」不是內容消失，原因見下一節第 ③ 點�
 | `.gitignore` | 改成 `migration-*/` 通用規則，以後每個快照自動排除 |
 
 不進 Git（依指示）：`migration-2026-10-22/content/`（619 MB）、`*.jsonl`、`run.log`。
-不在 Git 倉庫內：`E:\CascadeProjects\aquaskyplus-archive-2026-10-09.zip` 與 `.sha256.json`。
+不在 Git 倉庫內：`G:\我的雲端硬碟\梵亞\AQUASKY-AEO\aquaskyplus-archive-2026-10-09.zip`（異地備份）、`E:\CascadeProjects\aquaskyplus-archive-2026-10-09.zip`（本機原檔），以及兩處同名的 `.sha256.json`。
 
 ---
 
 ## 4. 要黃老闆決定或處理的
 
-1. **zip 搬到 Google Drive 哪個資料夾。** 現在還在 E 槽，和原封存同一顆硬碟，等於還沒有異地備份。這是階段 A 唯一沒收尾的事。
+1. ~~zip 搬到 Google Drive 哪個資料夾。~~ **2026-10-23 已結案**——放在 `G:\我的雲端硬碟\梵亞\AQUASKY-AEO\`，G 槽副本重算 SHA-256 與原值相符。階段 A 全數收尾完成。
 2. **向客戶確認認證清單。** 88 個產品頁新增認證區塊、APT-1.3 少一項 WaterMark——要逐系列確認正確性與有效期。
 3. **向客戶要 LQCOL-PLUS 六語系翻譯。** 工程師放的是英文本文，六個語系都一樣。
 4. **「本輪完成」的確認。** 從證據看工程師還在做（下載專區還沒掛 LQCOL PDF、沒有 LQCOL／GIGA 明細頁、sitemap 沒更新）。階段 C 的最終版快照要等客戶窗口回一句確認再跑。
