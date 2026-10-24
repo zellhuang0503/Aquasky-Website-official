@@ -147,9 +147,11 @@ for (const page of PAGES) {
     const archived = archivedPage(page.code, page.classic.path);
     if (archived) {
       const block = archived.replace(/<!--[\s\S]*?-->/g, '').match(/<div id="ImgAutoResponsive"[^>]*>([\s\S]*?)<\/div>/)?.[1] ?? '';
-      const expectDm = (block.match(/<img/g) || []).length;
-      const gotDm = (html.match(/<div id="ImgAutoResponsive"[\s\S]*?<\/div>/)?.[0].match(/<img/g) || []).length;
-      if (expectDm !== gotDm) fail(`${where}: DM images on page ${gotDm}, archived old page has ${expectDm}`);
+      // 正規化後逐字比結構：<p …>、</p>、&nbsp;、<img src>；舊站 img 的尺寸與 class 由其 JS 改掉，所以只留 src
+      const norm = (s) => s.replace(/<img[^>]*src="([^"]+)"[^>]*>/g, (_m, src) => `<img ${src.startsWith('/') ? src : '/' + src}>`)
+        .replace(/<p[^>]*>/g, '<p>').replace(/\s+/g, '').trim();
+      const gotBlock = html.match(/<div id="ImgAutoResponsive"[^>]*>([\s\S]*?)<\/div>/)?.[1] ?? '';
+      if (norm(block) !== norm(gotBlock)) fail(`${where}: DM block structure differs from archived page\n    old: ${norm(block).slice(0, 160)}\n    new: ${norm(gotBlock).slice(0, 160)}`);
     }
   }
   console.log(`✓ ${where}  ${title?.slice(0, 70)}`);

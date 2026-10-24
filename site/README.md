@@ -11,7 +11,7 @@
 | `/en/LQCOL-PLUS` | `src/pages/[lang]/LQCOL-PLUS.astro` | 舊站英文原文 |
 | `/zh/LQCOL-PLUS` | 同上 | **AI 初稿**，頁面上有黃色提示，待 Tiffany 審 |
 | `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[series].astro`（經典模板） | 舊站英文原文＋型號清單 |
-| 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive 滿版） |
+| 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
 
 還沒搬：supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（結構各不同，要個別做）、products、about、feature、certification、sel_tools、news、videos、downloadpage、FAQ、contact，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
 
@@ -87,6 +87,8 @@ npm run check           # 型別與模板檢查
 - 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。
 - 舊站 HYDRO-PLUS 頁 HTML 少關一個 div，造成頁尾內縮露出深藍底；新站不照抄這個錯。
 - 經典系列頁舊站的型號 `.pd_item_margin` 包裝、每列欄數（PUMPLUS 橫式 col-md-4）、MEGA 標題圖外面多出的 `<p>` 間距，都照舊站逐頁存在資料檔（`titleBlock`、`colClass`、`itemWrapper`）。
+- 不做 WOW.js 進場動畫（舊站首頁字標、認證圖示、系列頁標題區有 fadeInDown／fadeInRight）。靜止版面相同，只差動畫；少一支 JS，也避免載入時版面位移。黃老闆要一樣再加。
+- 首頁多一個看不見的 h2「認證與技術」（給螢幕閱讀器與大綱用），舊站沒有。
 - 預覽版頁頂有黃色 PREVIEW 條，正式版沒有。
 
 已還原成跟舊站一樣、不再是差異的：產品列區塊在深色區內（白字白框）；首頁米色底、公司名 44pt、字標原尺寸、輪播一次一張；選單結構（SELECTION TOOLS 只在下拉裡、ACCESSORIES 是 PRODUCTS 直屬、zh 多 ESG產品）、選單 padding、logo 尺寸；結構圖標示照舊站斷行、無冒號；規格表數字照舊站原字串（`14` 不是 `14.0`）；中文選單、認證說明、頁尾地址一字不差；正文粗體（`**…**` 記號）。

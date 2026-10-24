@@ -61,31 +61,27 @@ const breadcrumbs = [
 <Base lang={lang} title={c.seo.title} description={c.seo.description} path={product.path} image={product.titleImage?.src} jsonLd={[productGroup]} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={['/css/bootstrap-grid.min.css']} headStyle={product.legacyCss}>
   <div class="h1-custom-style"><h1>{c.h1}</h1></div>
   {product.preBanner && (
-    <div style={`background-color:${product.preBanner.bg};`}><img src={product.preBanner.image.src} class={product.preBanner.image.class} alt={`${product.series} ${seriesLabel}`} /></div>
+    <div style={`background-color:${product.preBanner.bg};`}><img src={product.preBanner.image.src} class={product.preBanner.image.class} alt={product.preBanner.image.alt || `${product.series} ${seriesLabel}`} /></div>
   )}
   <div id="pd-container-01" class="container-fluid">
     <div class="container">
       {product.titleBlock.spacerBefore && <Fragment set:html={product.titleBlock.spacerBefore} />}
       {product.titleBlock.present && (
         <div class="pd-aquasky-text">
-          {product.titleImage && <div class="h1-1"><img src={product.titleImage.src} class={product.titleImage.class} alt={`${product.series} ${seriesLabel}`} /></div>}
+          {product.titleImage && <div class="h1-1"><img src={product.titleImage.src} class={product.titleImage.class} alt={product.titleImage.alt || `${product.series} ${seriesLabel}`} /></div>}
         </div>
       )}
       {product.titleBlock.spacerAfter && <Fragment set:html={product.titleBlock.spacerAfter} />}
       {product.heroBlocks.map((b) => (
-        <div class={b.class}>{b.image && <img src={b.image.src} class={b.image.class} alt={`${product.series} ${seriesLabel}`} />}</div>
+        <div class={b.class}>{b.image && <img src={b.image.src} class={b.image.class} alt={b.image.alt || `${product.series} ${seriesLabel}`} />}</div>
       ))}
       <h2 class="h2_2hline lang_rtl">{c.about.heading}</h2>
       <div class="pd-about-text txt-align-justify lang_rtl">{c.about.body}</div>
-      {c.edmImages.length > 0 && (
+      {c.edmHtml && (
         <Fragment>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
-          <div id="ImgAutoResponsive" class="lang_rtl">
-            {c.edmImages.map((e) => (
-              <p style="text-align: center;"><img src={e.src} alt={e.alt} class="img-responsive center-block" loading="lazy" /></p>
-            ))}
-          </div>
+          <div id="ImgAutoResponsive" class="lang_rtl" set:html={c.edmHtml} />
         </Fragment>
       )}
     </div>

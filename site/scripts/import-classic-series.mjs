@@ -56,7 +56,7 @@ function parse(lang, s) {
   if (start < 0 || end < 0) throw new Error(`${lang}${s.path}: main block not found`);
   const main = h.slice(start, end).replace(/\s+/g, ' ');
   const h1 = text(main.match(/<h1>([\s\S]*?)<\/h1>/)?.[1] ?? '');
-  const titleImg = main.match(/pd-aquasky-text[^>]*>\s*<h1[^>]*>\s*<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"/);
+  const titleImg = main.match(/pd-aquasky-text[^>]*>\s*<h1[^>]*>\s*<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"(?:[^>]*alt="([^"]*)")?/);
   // 舊站有沒有 .pd-aquasky-text 外框（PREMIUM-PLUS 整段被註解掉＝沒有）；MEGA-PLUS 把它包在 <p> 裡、後面再一個 <p>&nbsp;</p>，
   // 瀏覽器會各多出一個空段落的間距，照抄這些純間距標籤（只允許 <p>、</p>、&nbsp;）
   const titleStart = main.indexOf('<div class="pd-aquasky-text');
@@ -73,12 +73,12 @@ function parse(lang, s) {
   const aboutHeading = text(main.match(/<h2 class="h2_2hline lang_rtl">([\s\S]*?)<\/h2>/)?.[1] ?? '');
   // 標題圖之後、介紹文之前的大圖區塊：<div class="pd-aquasky-<系列>">（可能是空的 div，背景在 CSS）
   const headSeg = main.slice(0, main.indexOf('<h2 class="h2_2hline lang_rtl">'));
-  const heroBlocks = [...headSeg.matchAll(/<div class="([^"]+)">\s*(?:<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"[^>]*>)?\s*<\/div>/g)]
+  const heroBlocks = [...headSeg.matchAll(/<div class="([^"]+)">\s*(?:<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"(?:[^>]*alt="([^"]*)")?[^>]*>)?\s*<\/div>/g)]
     .filter((m) => !m[1].startsWith('pd-aquasky-text') && !m[1].startsWith('container'))
-    .map((m) => ({ class: m[1], image: m[2] ? { src: abs(m[2]), class: m[3] } : null }));
+    .map((m) => ({ class: m[1], image: m[2] ? { src: abs(m[2]), class: m[3], alt: unescape(m[4] ?? '') } : null }));
   // PREMIUM-PLUS：h1 色條與 #pd-container-01 之間有一條滿版橫幅圖
-  const pre = main.slice(0, main.indexOf('id="pd-container-01"')).match(/<div style="background-color:(#[0-9A-Fa-f]{3,6});">\s*<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"[^>]*>\s*<\/div>/);
-  const preBanner = pre ? { bg: pre[1], image: { src: abs(pre[2]), class: pre[3] } } : null;
+  const pre = main.slice(0, main.indexOf('id="pd-container-01"')).match(/<div style="background-color:(#[0-9A-Fa-f]{3,6});">\s*<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"(?:[^>]*alt="([^"]*)")?[^>]*>\s*<\/div>/);
+  const preBanner = pre ? { bg: pre[1], image: { src: abs(pre[2]), class: pre[3], alt: unescape(pre[4] ?? '') } } : null;
   const aboutRaw = main.match(/pd-about-text[^>]*>([\s\S]*?)<\/div>/)?.[1] ?? '';
   if (/<(?!br\b)[a-z]/i.test(aboutRaw)) throw new Error(`${lang}${s.path}: about text contains tags, extend the importer: ${aboutRaw.slice(0, 120)}`);
   const about = unescape(aboutRaw.replace(/<br\s*\/?>/gi, '\n')).replace(/[ \t]+/g, ' ').trim();
@@ -111,7 +111,18 @@ function parse(lang, s) {
     return { src: abs(src), ...(size ? { width: Number(size[1]), height: Number(size[2]) } : {}) };
   });
   if (/ImgAutoResponsive/.test(main) && !edm.length) throw new Error(`${lang}${s.path}: ImgAutoResponsive present but no img parsed`);
-  return { row, title, description, legacyCss, cssAssets, h1, heroBlocks, preBanner, hasTitleBlock, spacerBefore, spacerAfter, titleImage: titleImg ? { src: abs(titleImg[1]), class: titleImg[2] } : null, aboutHeading, about, groups, edm };
+  // 整個 DM 區塊照舊站結構保存（段落、空段落、&nbsp; 都留），只做舊站 JS 做的事：拿掉 img 的尺寸、加 img-responsive center-block。
+  // 只允許 <p>、</p>、&nbsp;、<img>，其他標籤出現就停下來檢查。
+  const edmHtml = dmBlock.trim()
+    .replace(/<img([^>]*)>/g, (_m, attrs) => {
+      const src = abs(attrs.match(/src="([^"]+)"/)[1]);
+      return `<img src="${src}" alt="" class="img-responsive center-block" loading="lazy">`;
+    })
+    .replace(/\s+/g, ' ').trim();
+  if (edmHtml && !/^((<p( style="text-align: ?center;")?>|<\/p>|&nbsp;|<img src="[^"]+" alt="" class="img-responsive center-block" loading="lazy">|\s)+)$/.test(edmHtml)) {
+    throw new Error(`${lang}${s.path}: unexpected markup inside #ImgAutoResponsive: ${edmHtml.slice(0, 200)}`);
+  }
+  return { row, title, description, legacyCss, cssAssets, h1, heroBlocks, preBanner, hasTitleBlock, spacerBefore, spacerAfter, titleImage: titleImg ? { src: abs(titleImg[1]), class: titleImg[2], alt: unescape(titleImg[3] ?? '') } : null, aboutHeading, about, groups, edm, edmHtml };
 }
 
 let written = 0;
@@ -161,6 +172,7 @@ for (const s of SERIES) {
     showModels: p.groups.length > 0,
     groupHeadings: p.groups.map((g) => g.heading),
     edmImages: p.edm.map((e, i) => ({ ...e, alt: `${s.key} DM ${i + 1}` })),
+    edmHtml: p.edmHtml,
   });
   const outputs = [
     [`src/data/products/${s.id}.json`, product],

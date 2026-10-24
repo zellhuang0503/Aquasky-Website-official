@@ -21,7 +21,8 @@
       "class": "ROT-ALL-IMG",
       "image": {
         "src": "/images/products/premiumplus/ROT-ALL.png",
-        "class": "img-responsive center-block"
+        "class": "img-responsive center-block",
+        "alt": ""
       }
     }
   ],
@@ -29,7 +30,8 @@
     "bg": "#F7F7F7",
     "image": {
       "src": "/images/products/Premium-PLUS_20221228-01.jpg",
-      "class": "img-responsive center-block"
+      "class": "img-responsive center-block",
+      "alt": ""
     }
   },
   "groups": [

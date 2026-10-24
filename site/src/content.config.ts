@@ -62,6 +62,8 @@ const classic = z.object({
   groupHeadings: z.array(z.string()),
   // width/height 是舊站寫在 style 的原值（有的頁沒有）；頁面一律用 img-responsive，不輸出尺寸（同舊站 JS 的行為）
   edmImages: z.array(z.object({ src: z.string().startsWith('/'), width: z.number().int().positive().optional(), height: z.number().int().positive().optional(), alt: z.string() })),
+  // DM 區塊的 HTML 照舊站結構（含空段落），只允許 p、&nbsp;、img 三種東西
+  edmHtml: z.string().regex(/^((<p( style="text-align: ?center;")?>|<\/p>|&nbsp;|<img src="\/[^"]+" alt="" class="img-responsive center-block" loading="lazy">|\s)*)$/),
 });
 
 const series = defineCollection({
@@ -98,7 +100,7 @@ const lqcolRow = z.object({
   connection: z.string().min(1),
 });
 const sitePath = z.string().regex(/^\/[^\s]*$/);
-const img = z.object({ src: sitePath, class: z.string() });
+const img = z.object({ src: sitePath, class: z.string(), alt: z.string().optional() });
 const productBase = { id: z.string().min(1), series: z.string().min(1), path: sitePath, legacyCss: z.string(), assets: z.array(z.string()).optional() };
 const lqcolProduct = z.object({
   ...productBase,

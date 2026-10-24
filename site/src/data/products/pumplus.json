@@ -17,7 +17,8 @@
   },
   "titleImage": {
     "src": "/images/products/PRODUCT_PUMPLUS_200209_txt2.png",
-    "class": "img-responsive pull-right"
+    "class": "img-responsive pull-right",
+    "alt": "PUMPLUS Pressure Tank"
   },
   "heroBlocks": [],
   "preBanner": null,

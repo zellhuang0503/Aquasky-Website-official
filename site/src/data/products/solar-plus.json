@@ -17,14 +17,16 @@
   },
   "titleImage": {
     "src": "/images/products/solar/solar_logo.png",
-    "class": "img-responsive"
+    "class": "img-responsive",
+    "alt": "About SOLAR-PLUS Pressure Tank"
   },
   "heroBlocks": [
     {
       "class": "pd-aquasky-SOLAR",
       "image": {
         "src": "/images/products/solar/SOLAR-G.png",
-        "class": "img-responsive center-block"
+        "class": "img-responsive center-block",
+        "alt": "About SOLAR-PLUS Pressure Tank"
       }
     }
   ],

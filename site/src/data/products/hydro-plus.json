@@ -17,7 +17,8 @@
   },
   "titleImage": {
     "src": "/images/products/HYDRO_logo.png",
-    "class": "img-responsive center-block"
+    "class": "img-responsive center-block",
+    "alt": "Hydro-Plus Hydronic Heating Tanks"
   },
   "heroBlocks": [
     {

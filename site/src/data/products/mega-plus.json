@@ -17,7 +17,8 @@
   },
   "titleImage": {
     "src": "/images/products/mega/mega_logo.png",
-    "class": "img-responsive"
+    "class": "img-responsive",
+    "alt": "About MEGA-PLUS [16 Bar] Pressure Tank"
   },
   "heroBlocks": [],
   "preBanner": null,
