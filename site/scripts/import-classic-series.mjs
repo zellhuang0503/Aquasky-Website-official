@@ -24,7 +24,6 @@ const SERIES = [
   { id: 'mega-plus', path: '/MEGA-PLUS', key: 'MEGA-PLUS' },
   { id: 'solar-plus', path: '/SOLAR-PLUS', key: 'SOLAR-PLUS' },
 ];
-const LANGS = ['en', 'zh'];
 
 const index = new Map();
 for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\n')) {
@@ -58,6 +57,19 @@ function parse(lang, s) {
   const main = h.slice(start, end).replace(/\s+/g, ' ');
   const h1 = text(main.match(/<h1>([\s\S]*?)<\/h1>/)?.[1] ?? '');
   const titleImg = main.match(/pd-aquasky-text[^>]*>\s*<h1[^>]*>\s*<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"/);
+  // 舊站有沒有 .pd-aquasky-text 外框（PREMIUM-PLUS 整段被註解掉＝沒有）；MEGA-PLUS 把它包在 <p> 裡、後面再一個 <p>&nbsp;</p>，
+  // 瀏覽器會各多出一個空段落的間距，照抄這些純間距標籤（只允許 <p>、</p>、&nbsp;）
+  const titleStart = main.indexOf('<div class="pd-aquasky-text');
+  const hasTitleBlock = titleStart >= 0;
+  let spacerBefore = '', spacerAfter = '';
+  if (hasTitleBlock) {
+    const before = main.slice(Math.max(0, titleStart - 80), titleStart).match(/((?:<p>\s*)+)$/);
+    spacerBefore = before ? before[1].trim() : '';
+    const titleEnd = main.indexOf('</h1>', titleStart);
+    const closeDiv = main.indexOf('</div>', titleEnd) + '</div>'.length;
+    const after = main.slice(closeDiv, closeDiv + 200).match(/^((?:\s*(?:<\/p>|<p>&nbsp;<\/p>|<p>\s*<\/p>))+)/);
+    spacerAfter = after ? after[1].replace(/\s+/g, ' ').trim() : '';
+  }
   const aboutHeading = text(main.match(/<h2 class="h2_2hline lang_rtl">([\s\S]*?)<\/h2>/)?.[1] ?? '');
   // 標題圖之後、介紹文之前的大圖區塊：<div class="pd-aquasky-<系列>">（可能是空的 div，背景在 CSS）
   const headSeg = main.slice(0, main.indexOf('<h2 class="h2_2hline lang_rtl">'));
@@ -80,16 +92,26 @@ function parse(lang, s) {
     const headings = [...chunks[i - 1].matchAll(/<h2 class="h2_2hline h2_2hline_margin2?">([\s\S]*?)<\/h2>/g)];
     const heading = text(headings.at(-1)?.[1] ?? '');
     const rowClass = rowClasses[i - 1];
+    const colClass = chunks[i].match(/^\s*<div class="(col-[^"]+)">/)?.[1] ?? 'col-6 col-md-3';
+    const itemWrapper = /^\s*<div class="col-[^"]+">\s*<div class="pd_item_margin">/.test(chunks[i]);
     const models = [...chunks[i].matchAll(/<a href="([^"]+)">\s*<img[^>]+src="([^"]+)"[^>]*>\s*<p class="page_pd_name_p1">([^<]*)<\/p>\s*<h3 class="page_pd_name_p2">([^<]*)<\/h3>/g)].map((m) => {
       const volumeText = text(m[3]);
       const nums = volumeText.match(/Liter\s*([\d.]+)\s*\/\s*Gal\s*([\d.]+)/);
       return { model: text(m[4]), volumeText, volumeL: nums ? Number(nums[1]) : null, volumeGal: nums ? Number(nums[2]) : null, image: abs(m[2]), detailPath: m[1].replace(/^\/en/, '') };
     });
     if (!models.length) throw new Error(`${lang}${s.path}: model row ${i} parsed 0 models`);
-    groups.push({ heading, rowClass, models });
+    groups.push({ heading, rowClass, colClass, itemWrapper, models });
   }
-  const edm = [...main.matchAll(/<img[^>]+src="([^"]+)"[^>]*style="width:\s*(\d+)px;\s*height:\s*(\d+)px/g)].map((m) => ({ src: abs(m[1]), width: Number(m[2]), height: Number(m[3]) }));
-  return { row, title, description, legacyCss, cssAssets, h1, heroBlocks, preBanner, titleImage: titleImg ? { src: abs(titleImg[1]), class: titleImg[2] } : null, aboutHeading, about, groups, edm };
+  // DM 圖：#ImgAutoResponsive 裡所有 <img>（舊站有的帶 width/height 寫在 style，有的只有 img-responsive；舊站的 JS 會把尺寸清掉、一律 img-responsive）
+  const dmBlock = main.match(/<div id="ImgAutoResponsive"[^>]*>([\s\S]*?)<\/div>/)?.[1] ?? '';
+  const edm = [...dmBlock.matchAll(/<img([^>]+)>/g)].map((m) => {
+    const attrs = m[1];
+    const src = attrs.match(/src="([^"]+)"/)?.[1];
+    const size = attrs.match(/style="width:\s*(\d+)px;\s*height:\s*(\d+)px/);
+    return { src: abs(src), ...(size ? { width: Number(size[1]), height: Number(size[2]) } : {}) };
+  });
+  if (/ImgAutoResponsive/.test(main) && !edm.length) throw new Error(`${lang}${s.path}: ImgAutoResponsive present but no img parsed`);
+  return { row, title, description, legacyCss, cssAssets, h1, heroBlocks, preBanner, hasTitleBlock, spacerBefore, spacerAfter, titleImage: titleImg ? { src: abs(titleImg[1]), class: titleImg[2] } : null, aboutHeading, about, groups, edm };
 }
 
 let written = 0;
@@ -111,10 +133,19 @@ for (const s of SERIES) {
     template: 'classic',
     source: { url: `${ORIGIN}/en${s.path}`, archive: 'migration-2026-10-22', retrieved: en.row.retrieved_at.slice(0, 10) },
     legacyCss: en.legacyCss,
+    titleBlock: { present: en.hasTitleBlock, spacerBefore: en.spacerBefore, spacerAfter: en.spacerAfter },
     titleImage: en.titleImage,
     heroBlocks: en.heroBlocks,
     preBanner: en.preBanner,
-    groups: en.groups.map((g, i) => ({ key: `g${i + 1}`, rowClass: g.rowClass, models: g.models })),
+    groups: en.groups.map((g, i) => ({ key: `g${i + 1}`, rowClass: g.rowClass, colClass: g.colClass, itemWrapper: g.itemWrapper, models: g.models })),
+    // 舊站資料疑點（照原樣保留，不改）：公升換加侖對不上的型號自動列出，要請客戶確認
+    dataQuestions: en.groups.flatMap((g) => g.models).filter((m) => m.volumeL !== null && m.volumeGal !== null).flatMap((m) => {
+      const expected = m.volumeL * 0.2641721;
+      const off = Math.abs(m.volumeGal - expected);
+      return off > Math.max(0.06, expected * 0.08)
+        ? [`${m.model} 舊站寫「${m.volumeText}」，${m.volumeL} L 換算約 ${expected.toFixed(2)} gal，要請客戶確認。`]
+        : [];
+    }),
     assets: [...assets],
   };
   const content = (lang, p) => ({

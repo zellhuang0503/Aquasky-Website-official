@@ -60,7 +60,8 @@ const classic = z.object({
   about: z.object({ heading: z.string().min(3), body: z.string().min(50) }),
   showModels: z.boolean(),
   groupHeadings: z.array(z.string()),
-  edmImages: z.array(z.object({ src: z.string().startsWith('/'), width: z.number().int().positive(), height: z.number().int().positive(), alt: z.string() })),
+  // width/height 是舊站寫在 style 的原值（有的頁沒有）；頁面一律用 img-responsive，不輸出尺寸（同舊站 JS 的行為）
+  edmImages: z.array(z.object({ src: z.string().startsWith('/'), width: z.number().int().positive().optional(), height: z.number().int().positive().optional(), alt: z.string() })),
 });
 
 const series = defineCollection({
@@ -119,16 +120,18 @@ const lqcolProduct = z.object({
 const classicProduct = z.object({
   ...productBase,
   template: z.literal('classic'),
+  titleBlock: z.object({ present: z.boolean(), spacerBefore: z.string().regex(/^(<p>\s*)*$/), spacerAfter: z.string().regex(/^(\s*(<\/p>|<p>&nbsp;<\/p>|<p>\s*<\/p>))*$/) }),
   titleImage: img.nullable(),
   heroBlocks: z.array(z.object({ class: z.string(), image: img.nullable() })),
   preBanner: z.object({ bg: z.string().regex(/^#[0-9A-Fa-f]{3,6}$/), image: img }).nullable(),
   groups: z.array(z.object({
-    key: z.string(), rowClass: z.string().startsWith('row page_pd_item'),
+    key: z.string(), rowClass: z.string().startsWith('row page_pd_item'), colClass: z.string().startsWith('col-'), itemWrapper: z.boolean(),
     models: z.array(z.object({
       model: z.string().min(1), volumeText: z.string(), volumeL: z.number().nullable(), volumeGal: z.number().nullable(),
       image: sitePath, detailPath: sitePath,
     })).min(1),
   })).min(1),
+  dataQuestions: z.array(z.string()),
 });
 const products = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/data/products' }),

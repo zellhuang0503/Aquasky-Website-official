@@ -1,5 +1,5 @@
 {
-  "_note": "舊站 /zh/PREMIUM-PLUS 已上線的中文文字，照抄。舊站中文頁沒有型號清單，先照原樣（黃老闆 2026-10-24）。",
+  "_note": "舊站 /zh/PREMIUM-PLUS 已上線的中文文字，照抄。舊站中文頁沒有型號清單、改放 DM 圖，先照原樣（黃老闆 2026-10-24）。",
   "template": "classic",
   "lang": "zh",
   "status": "approved-legacy",
@@ -14,5 +14,14 @@
   },
   "showModels": false,
   "groupHeadings": [],
-  "edmImages": []
+  "edmImages": [
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/AQUASKY_Premium-Plus-DM-CH_230414-web-1.jpg",
+      "alt": "PREMIUM-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/AQUASKY_Premium-Plus-DM-CH_230414-web-2.jpg",
+      "alt": "PREMIUM-PLUS DM 2"
+    }
+  ]
 }

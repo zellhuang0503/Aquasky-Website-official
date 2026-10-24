@@ -10,6 +10,11 @@
     "retrieved": "2026-10-22"
   },
   "legacyCss": ".h1-custom-style { width: 100%; text-align: center; background-color: #102F5E; color: #FFF; padding:10px 10px;}\n.h1-custom-style h1 { margin-top: 0; margin-bottom: 0; font-size: 24px;}\n#pd-container-01 { background:url(/images/products/HYDRO_20240515.jpg) top center no-repeat #102f5e; background-size: 100% auto;}\n#pd-container-02 { background-color:#fdf9ee; padding:50px 15px;}\n.pd-aquasky-text {padding:6% 10px 50% 10px;width:55%;margin:0 auto;}\n.pd-aquasky-HYDRO {padding:80% 50px 20px 50px; max-width:900px; margin:0 auto;}\n.pd-about-text {padding:30px 10px 20px 10px; color:#FFF;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top:50px;}\n#pd-more-info img {margin:10px auto;}\n.pd-more-info-link { text-align:center; margin:60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border:1px sloid #FFF; font-size:18px; padding:15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}\n.pds-img-style-01 {padding:20px 20px 0 20px;}\n.pds-txt-style-01 { min-height:180px; text-align:center; padding:10px 20px;}\n.pds-txt-style-01 p {font-size:12px;}\n.pds-font-style-01 {font-weight:bold;}\n.pd-spacing-01 { padding-top:30px; padding-bottom:30px;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:28px; font-weight:bold;padding-left:10px; padding-right:10px;}\n.page_pd_item {margin-top:35px;}\n.page_pd_item div {margin-bottom:15px;}\n.page_pd_item img {margin-bottom:15px;}\n.page_pd_item a {color:#FFF;}\n.page_pd_item a:hover {color:#CCC;text-decoration:none;}\n@media (max-width: 1800px){ .pd-aquasky-HYDRO {padding:70% 50px 20px 50px; max-width:900px; margin:0 auto;}\n}\n@media (max-width: 1600px){ .pd-aquasky-HYDRO {padding:60% 50px 20px 50px; max-width:900px; margin:0 auto;}\n}\n@media (max-width: 1400px){ .pd-aquasky-HYDRO {padding:45% 50px 20px 50px; max-width:900px; margin:0 auto;}\n}\n@media (max-width: 1200px){ .pd-aquasky-HYDRO {padding:35% 50px 20px 50px; max-width:900px; margin:0 auto;}\n}\n@media (max-width: 767px) { .owl-theme .owl-controls .owl-buttons .owl-prev{ display:none;}\n.owl-theme .owl-controls .owl-buttons .owl-next{ display:none;}\n}\n@media (max-width: 380px) { #pd-container-01 {}\n#pd-more-info {}\n#pd-more-info img {}\n}",
+  "titleBlock": {
+    "present": true,
+    "spacerBefore": "",
+    "spacerAfter": ""
+  },
   "titleImage": {
     "src": "/images/products/HYDRO_logo.png",
     "class": "img-responsive center-block"
@@ -25,6 +30,8 @@
     {
       "key": "g1",
       "rowClass": "row page_pd_item align-items-end",
+      "colClass": "col-6 col-md-3",
+      "itemWrapper": true,
       "models": [
         {
           "model": "HP-3",
@@ -133,6 +140,7 @@
       ]
     }
   ],
+  "dataQuestions": [],
   "assets": [
     "/images/products/HYDRO_20240515.jpg",
     "/images/products/HYDRO_logo.png",
@@ -148,6 +156,8 @@
     "/upfile/Images/HYDRO/260106_HP-120.jpg",
     "/upfile/Images/HYDRO/260106_HP-130.jpg",
     "/upfile/Images/HYDRO/260106_HP-160.jpg",
-    "/upfile/Images/HYDRO/260106_HP-200.jpg"
+    "/upfile/Images/HYDRO/260106_HP-200.jpg",
+    "/upfile/Images/HYDRO/AQUASKY_HydroPlus-DM_CH_230414-web-1.jpg",
+    "/upfile/Images/HYDRO/AQUASKY_HydroPlus-DM_CH_230414-web-2.jpg"
   ]
 }

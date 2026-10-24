@@ -13,7 +13,8 @@ const ORIGIN = 'https://aquaskyplus.com';
 /** [舊站路徑, public 內目標路徑（省略＝相同）] */
 const ASSETS = [
   // 舊站 CSS（照抄沿用；這幾個會進 Git，其他圖片不進）
-  ['/css/bootstrap.min.css'],
+  ['/css/bootstrap.min.css'],       // 舊站首頁用
+  ['/css/bootstrap.css'],           // 舊站內頁用（客製：.container／.container-fluid padding 0）
   ['/css/style.css'],
   ['/css/series_content.css'],
   ['/css/a-hover.css'],

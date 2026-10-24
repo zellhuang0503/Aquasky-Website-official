@@ -74,7 +74,7 @@ const breadcrumbs = [
   { name: d.nav['LQCOL-PLUS'], path: product.path },
 ];
 ---
-<Base lang={lang} title={c.seo.title} description={c.seo.description} path={product.path} image={product.images.hero} jsonLd={[productGroup, faqPage]} breadcrumbs={breadcrumbs} headStyle={product.legacyCss}>
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={product.path} image={product.images.hero} jsonLd={[productGroup, faqPage]} breadcrumbs={breadcrumbs} bootstrap="full" headStyle={product.legacyCss}>
   <div class="h1-custom-style">
     <h1>{c.h1}</h1>
     {c.status === 'draft-ai' && <div class="draft-note" role="note">{lang === 'zh' ? '本頁中文為 AI 初稿，尚待審稿。' : 'Draft translation, pending review.'}</div>}

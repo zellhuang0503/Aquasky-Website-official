@@ -11,7 +11,7 @@
 | `/en/LQCOL-PLUS` | `src/pages/[lang]/LQCOL-PLUS.astro` | 舊站英文原文 |
 | `/zh/LQCOL-PLUS` | 同上 | **AI 初稿**，頁面上有黃色提示，待 Tiffany 審 |
 | `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[series].astro`（經典模板） | 舊站英文原文＋型號清單 |
-| 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，PUMPLUS／RO／THERMAL／MEGA 放舊站的 DM 大圖 |
+| 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive 滿版） |
 
 還沒搬：supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（結構各不同，要個別做）、products、about、feature、certification、sel_tools、news、videos、downloadpage、FAQ、contact，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
 
@@ -47,6 +47,8 @@ npm run check           # 型別與模板檢查
 | 首頁文字 | `src/content/home/en.json`、`zh.json` |
 | LQCOL-PLUS 文字 | `src/content/series/lqcol-plus/en.json`、`zh.json` |
 | LQCOL-PLUS 型號與規格數字 | `src/data/products/lqcol-plus.json`（兩個語系、JSON-LD 共用這一份） |
+| 7 個經典系列的型號清單、圖片、頁面樣式、資料疑點 | `src/data/products/<id>.json`（`dataQuestions` 自動列出公升換加侖對不上的型號） |
+| 首頁頁面樣式與輪播設定 | `src/data/home.json` |
 
 內容檔有 schema（`src/content.config.ts`），欄位少了或型別錯，`npm run build` 會直接失敗。schema 只驗格式，不驗事實。
 
@@ -64,7 +66,7 @@ npm run check           # 型別與模板檢查
 
 ## 版型原則（黃老闆 2026-10-24 指示：跟舊站盡量一樣，不改編排）
 
-- 直接沿用舊站的 CSS：`public/css/bootstrap.min.css`、`style.css`、`series_content.css`、`a-hover.css`、`all.min.css`（Font Awesome）。這幾個檔從封存複製後**進 Git**，不要改；新站自己的補充只放 `src/styles/site.css`。
+- 直接沿用舊站的 CSS：`public/css/bootstrap.min.css`（舊站首頁用）、`bootstrap.css`（舊站內頁用的客製版，`.container` padding 0，Base 的 `bootstrap="full"`）、`bootstrap-grid.min.css`（經典系列頁）、`style.css`、`series_content.css`、`a-hover.css`、`all.min.css`（Font Awesome）。這幾個檔從封存複製後**進 Git**，不要改；新站自己的補充只放 `src/styles/site.css`。
 - HTML 結構與 class 名稱照舊站同一頁抄（navbar-default、#home-container-01…、series-sec、sf-stage、h2_2hline、btn-link）。搬新頁時先開舊站同頁對照。
 - 舊站靠 jQuery＋bootstrap.js 的行為（漢堡選單、下拉、輪播一次一張每 3 秒換）改成 `Header.astro`／`HomePage.astro` 裡各 20 行純 JS，外觀不變。首頁專用樣式（米色底、44pt 公司名）在 `src/data/home.json` 的 legacyCss。
 - 結構圖的線與標示座標存在 `src/data/products/lqcol-plus.json` 的 `structureFigure`，照舊站百分比座標；手機版同舊站改成編號圖＋清單。
@@ -82,6 +84,9 @@ npm run check           # 型別與模板檢查
 - 中文 LQCOL-PLUS 頁是 AI 初稿，頁頂多一條黃色「AI 初稿」提示；審過後拿掉。
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁），中文頁同樣連英文明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
+- 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。
+- 舊站 HYDRO-PLUS 頁 HTML 少關一個 div，造成頁尾內縮露出深藍底；新站不照抄這個錯。
+- 經典系列頁舊站的型號 `.pd_item_margin` 包裝、每列欄數（PUMPLUS 橫式 col-md-4）、MEGA 標題圖外面多出的 `<p>` 間距，都照舊站逐頁存在資料檔（`titleBlock`、`colClass`、`itemWrapper`）。
 - 預覽版頁頂有黃色 PREVIEW 條，正式版沒有。
 
 已還原成跟舊站一樣、不再是差異的：產品列區塊在深色區內（白字白框）；首頁米色底、公司名 44pt、字標原尺寸、輪播一次一張；選單結構（SELECTION TOOLS 只在下拉裡、ACCESSORIES 是 PRODUCTS 直屬、zh 多 ESG產品）、選單 padding、logo 尺寸；結構圖標示照舊站斷行、無冒號；規格表數字照舊站原字串（`14` 不是 `14.0`）；中文選單、認證說明、頁尾地址一字不差；正文粗體（`**…**` 記號）。

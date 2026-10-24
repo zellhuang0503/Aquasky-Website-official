@@ -5,7 +5,7 @@ import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProductLine from './ProductLine.astro';
 import { brand } from '../lib/data';
-import home from '../data/home.json';
+import { home } from '../lib/data';
 import { type Lang, href, format, t, pick } from '../lib/i18n';
 
 interface Props { lang: Lang }
@@ -29,7 +29,7 @@ const lines = (s: string) => s.split('\n');
     <div class="container">
       <div class="h_aquasky-text">
         <h1 class="ima_h_tag"><img src="/images/aquasky-text.png" class="img-responsive center-block" alt={`${pick(brand.legalName, lang)} - ${c.h1}`} /></h1>
-        {lang !== 'en' && <p class="company_lang_txt"><strong>{c.companyName}</strong></p>}
+        <p class="company_lang_txt"><strong>{lang === 'en' ? '' : c.companyName}</strong></p>
       </div>
       <div class="h_title_line_01">{format(d.common.foundedIn, { year: brand.founded })}</div>
       <div class="h_about">

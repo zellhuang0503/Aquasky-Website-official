@@ -14,6 +14,20 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = join(root, 'dist');
 const product = JSON.parse(readFileSync(join(root, 'src/data/products/lqcol-plus.json'), 'utf8'));
 const stage = process.env.SITE_STAGE === 'production' ? 'production' : 'preview';
+// 封存的舊站頁（只讀）：拿來比 DM 張數等「新站自己的資料檔比不出來」的東西
+const archiveDir = join(root, '..', 'migration-2026-10-22');
+let archiveIndex = null;
+function archivedPage(code, path) {
+  if (!existsSync(join(archiveDir, 'success.jsonl'))) return null;
+  if (!archiveIndex) {
+    archiveIndex = new Map();
+    for (const line of readFileSync(join(archiveDir, 'success.jsonl'), 'utf8').split('\n')) {
+      if (line.trim()) { const r = JSON.parse(line); archiveIndex.set(r.url, r.relative_path); }
+    }
+  }
+  const rel = archiveIndex.get(`https://aquaskyplus.com/${code}${path}`);
+  return rel ? readFileSync(join(archiveDir, rel), 'utf8') : null;
+}
 
 import { readdirSync } from 'node:fs';
 const LANGS = [['en', 'en'], ['zh', 'zh-Hant']];
@@ -123,8 +137,20 @@ for (const page of PAGES) {
     if (!html.includes('class="pd-about-text')) fail(`${where}: about text block missing`);
     const group = graph.find((n) => n['@type'] === 'ProductGroup');
     if (!group) fail(`${where}: ProductGroup missing`);
-    else if ((group.hasVariant || []).length !== models.length) fail(`${where}: JSON-LD variants ${(group.hasVariant || []).length} != ${models.length}`);
+    else {
+      // 頁面有型號清單才輸出 hasVariant（zh 沒有清單就不標）
+      const expectVariants = content.showModels ? models.length : 0;
+      if ((group.hasVariant || []).length !== expectVariants) fail(`${where}: JSON-LD variants ${(group.hasVariant || []).length} != ${expectVariants}`);
+    }
     for (const e of content.edmImages || []) if (!html.includes(`src="${e.src}"`)) fail(`${where}: DM image ${e.src} not on page`);
+    // DM 張數要等於封存裡同一頁 #ImgAutoResponsive 的 <img> 數（不能只比內容檔自己）
+    const archived = archivedPage(page.code, page.classic.path);
+    if (archived) {
+      const block = archived.replace(/<!--[\s\S]*?-->/g, '').match(/<div id="ImgAutoResponsive"[^>]*>([\s\S]*?)<\/div>/)?.[1] ?? '';
+      const expectDm = (block.match(/<img/g) || []).length;
+      const gotDm = (html.match(/<div id="ImgAutoResponsive"[\s\S]*?<\/div>/)?.[0].match(/<img/g) || []).length;
+      if (expectDm !== gotDm) fail(`${where}: DM images on page ${gotDm}, archived old page has ${expectDm}`);
+    }
   }
   console.log(`✓ ${where}  ${title?.slice(0, 70)}`);
 }

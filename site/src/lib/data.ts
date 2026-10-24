@@ -3,6 +3,7 @@
 import { z } from 'astro/zod';
 import brandJson from '../data/brand.json';
 import navJson from '../data/nav.json';
+import homeJson from '../data/home.json';
 
 const lang = z.enum(['en', 'zh', 'es', 'fr', 'ru', 'ar']);
 const localized = z.object({ en: z.string().min(1), zh: z.string().min(1) });
@@ -44,6 +45,13 @@ const navSchema = z.object({
   })).min(1),
 });
 
+const homeSchema = z.object({
+  _note: z.string().optional(),
+  legacyCss: z.string().min(1),
+  carousel: z.object({ singleItem: z.literal(true), autoPlayMs: z.number().int().min(1000) }),
+});
+
 export const brand = brandSchema.parse(brandJson);
+export const home = homeSchema.parse(homeJson);
 export const nav = navSchema.parse(navJson);
 export type NavItem = (typeof nav)['items'][number];

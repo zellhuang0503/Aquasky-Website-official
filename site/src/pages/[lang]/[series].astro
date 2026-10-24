@@ -41,7 +41,8 @@ const productGroup = {
   manufacturer: { '@id': `${site}/#organization` },
   productGroupID: product.series,
   variesBy: ['https://schema.org/size'],
-  hasVariant: allModels.map((m) => ({
+  // 頁面上沒有型號清單的語系（舊站 zh）不輸出 hasVariant，結構化資料只標頁面看得到的東西
+  ...(c.showModels ? { hasVariant: allModels.map((m) => ({
     '@type': 'Product',
     name: `${brand.brand} ${product.series} ${m.model}`,
     sku: m.model,
@@ -49,7 +50,7 @@ const productGroup = {
     image: `${site}${m.image}`,
     ...(m.volumeL !== null ? { size: `${m.volumeL} L` } : {}),
     url: `${site}/en${m.detailPath}`,
-  })),
+  })) } : {}),
 };
 const breadcrumbs = [
   { name: d.common.breadcrumbHome, path: '' },
@@ -57,16 +58,20 @@ const breadcrumbs = [
   { name: seriesLabel, path: product.path },
 ];
 ---
-<Base lang={lang} title={c.seo.title} description={c.seo.description} path={product.path} image={product.titleImage?.src} jsonLd={[productGroup]} breadcrumbs={breadcrumbs} extraCss={['/css/bootstrap-grid.min.css']} headStyle={product.legacyCss}>
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={product.path} image={product.titleImage?.src} jsonLd={[productGroup]} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={['/css/bootstrap-grid.min.css']} headStyle={product.legacyCss}>
   <div class="h1-custom-style"><h1>{c.h1}</h1></div>
   {product.preBanner && (
     <div style={`background-color:${product.preBanner.bg};`}><img src={product.preBanner.image.src} class={product.preBanner.image.class} alt={`${product.series} ${seriesLabel}`} /></div>
   )}
   <div id="pd-container-01" class="container-fluid">
     <div class="container">
-      <div class="pd-aquasky-text">
-        {product.titleImage && <div class="h1-1"><img src={product.titleImage.src} class={product.titleImage.class} alt={`${product.series} ${seriesLabel}`} /></div>}
-      </div>
+      {product.titleBlock.spacerBefore && <Fragment set:html={product.titleBlock.spacerBefore} />}
+      {product.titleBlock.present && (
+        <div class="pd-aquasky-text">
+          {product.titleImage && <div class="h1-1"><img src={product.titleImage.src} class={product.titleImage.class} alt={`${product.series} ${seriesLabel}`} /></div>}
+        </div>
+      )}
+      {product.titleBlock.spacerAfter && <Fragment set:html={product.titleBlock.spacerAfter} />}
       {product.heroBlocks.map((b) => (
         <div class={b.class}>{b.image && <img src={b.image.src} class={b.image.class} alt={`${product.series} ${seriesLabel}`} />}</div>
       ))}
@@ -78,7 +83,7 @@ const breadcrumbs = [
           <p>&nbsp;</p>
           <div id="ImgAutoResponsive" class="lang_rtl">
             {c.edmImages.map((e) => (
-              <p style="text-align: center;"><img src={e.src} alt={e.alt} width={e.width} height={e.height} style={`width:${e.width}px;height:auto;max-width:100%;`} loading="lazy" /></p>
+              <p style="text-align: center;"><img src={e.src} alt={e.alt} class="img-responsive center-block" loading="lazy" /></p>
             ))}
           </div>
         </Fragment>
@@ -89,14 +94,22 @@ const breadcrumbs = [
         <h2 class={`h2_2hline ${i === 0 ? 'h2_2hline_margin2' : 'h2_2hline_margin'}`}>{c.groupHeadings[i] ?? g.key}</h2>
         <div class={g.rowClass}>
           {g.models.map((m) => (
-            <div class="col-6 col-md-3">
-              <div class="pd_item_margin">
+            <div class={g.colClass}>
+              {g.itemWrapper ? (
+                <div class="pd_item_margin">
+                  <a href={`/en${m.detailPath}`}>
+                    <img src={m.image} loading="lazy" class="img-responsive center-block" alt={`${m.model} ${m.volumeText}`} />
+                    <p class="page_pd_name_p1">{m.volumeText}</p>
+                    <h3 class="page_pd_name_p2">{m.model}</h3>
+                  </a>
+                </div>
+              ) : (
                 <a href={`/en${m.detailPath}`}>
                   <img src={m.image} loading="lazy" class="img-responsive center-block" alt={`${m.model} ${m.volumeText}`} />
                   <p class="page_pd_name_p1">{m.volumeText}</p>
                   <h3 class="page_pd_name_p2">{m.model}</h3>
                 </a>
-              </div>
+              )}
             </div>
           ))}
         </div>

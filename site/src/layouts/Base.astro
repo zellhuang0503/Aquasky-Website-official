@@ -22,6 +22,8 @@ interface Props {
   extraCss?: string[];
   /** 舊站寫在頁面 <style> 裡的頁面專用樣式，照抄 */
   headStyle?: string;
+  /** 舊站首頁載 bootstrap.min.css（min）；內頁載客製過的 bootstrap.css（full，.container padding 0） */
+  bootstrap?: 'min' | 'full';
 }
 const props = Astro.props;
 const info = langInfo(props.lang);
@@ -34,7 +36,7 @@ const d = t(props.lang);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#006da7" />
     <link rel="icon" href={brand.logo} type="image/png" />
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href={props.bootstrap === 'full' ? '/css/bootstrap.css' : '/css/bootstrap.min.css'} rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
     <link href="/css/series_content.css" rel="stylesheet" />
     <link href="/css/a-hover.css" rel="stylesheet" />
