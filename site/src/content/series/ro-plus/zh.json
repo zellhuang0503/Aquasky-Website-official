@@ -1,0 +1,31 @@
+{
+  "_note": "舊站 /zh/RO-PLUS 已上線的中文文字，照抄。舊站中文頁沒有型號清單、改放 DM 圖，先照原樣（黃老闆 2026-10-24）。",
+  "template": "classic",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "RO-Plus 逆滲透純水儲水桶 | 食品級 RO 壓力桶 | AQUASKY 溢康企業",
+    "description": "AQUASKY RO-Plus 裝載優質食品級隔膜，專為家用及商用逆滲透純水系統設計。通過 NSF 認證，配備不鏽鋼接頭，提供 3 年保固。"
+  },
+  "h1": "RO-Plus 逆滲透純水儲水桶 | 食品級 RO 壓力桶 | AQUASKY 溢康企業",
+  "about": {
+    "heading": "RO-PLUS 逆滲透儲水桶：行業標準的無縫接頭技術和FDA認證材料",
+    "body": "溢康於18年前發明了無縫接頭技術並應用在預壓儲水桶的不鏽鋼接頭上，是飲用儲水桶的行業標準。 聚丙烯內襯和丁基隔膜採用 FDA食品級材料製成，可防止水與金屬桶壁接觸，確保存取乾淨、更新鮮、口感更好的水。 丁基橡膠由獨特的成分和化合物製成，與市場上的其他儲水桶相比具有最佳的氣密性, 並且內部預存的氮氣壓力更能確保壓力輸出穩定且安全。 內部 O 形環的黃銅蓋可確保通風口不會漏氣。在使用壽命期間無需維護。 所有 RO-PLUS 儲水桶均依照ISO 9001:2008 生產製造， 也皆取得RO儲水桶的最高標準NSF及市場上最安全壓力容器的IAPMO 和 CE 認證。"
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/ROT/AQUASKY_ROT-PLUS-DM-CH_251127printed-1.png",
+      "width": 849,
+      "height": 1198,
+      "alt": "RO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/ROT/AQUASKY_ROT-PLUS-DM-CH_251127printed-2.png",
+      "width": 849,
+      "height": 1198,
+      "alt": "RO-PLUS DM 2"
+    }
+  ]
+}

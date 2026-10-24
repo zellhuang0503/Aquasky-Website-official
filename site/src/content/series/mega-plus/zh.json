@@ -1,0 +1,31 @@
+{
+  "_note": "舊站 /zh/MEGA-PLUS 已上線的中文文字，照抄。舊站中文頁沒有型號清單、改放 DM 圖，先照原樣（黃老闆 2026-10-24）。",
+  "template": "classic",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Mega-Plus 16-Bar 高壓隔膜壓力桶 | 商用高樓加壓與市政供水增壓罐 | AQUASKY 溢康企業",
+    "description": "AQUASKY Mega-Plus 是一款工作壓力達 16-bar 的性能隔膜壓力桶，專為高層建築加壓、市政二次供水及商用重型增壓系統設計，安全耐用。"
+  },
+  "h1": "Mega-Plus 16-Bar 高壓隔膜壓力桶 | 商用高樓加壓與市政供水增壓罐 | AQUASKY 溢康企業",
+  "about": {
+    "heading": "MEGA-PLUS (16 bar) – 高壓泵浦壓力桶",
+    "body": "MEGA-PLUS (16 bar) 高壓泵浦壓力桶是加壓水系統的重要組成元素之一，可以維持系統水壓在設定的安全標準值中。水儲存放於桶內隔膜和塑膠內襯之間，加壓氣體區的氣體使隔膜形成動能達到供水循環。 此過程可減少泵浦需要啟動的次數，使系統壓力維持在設定水平內。 隔膜的張力設計維持系統內的水壓穩定輸出。確保高壓用水, 如消防或高樓輸送的穩定及安全。 MEGA-PLUS (16 bar) 和PUMPLUS 壓力桶相似，但主要差異在於提供壓力桶較高的承受壓力，一般壓力桶最大工作壓力是10 bar，MEGA-PLUS最高工作壓力可以達到16 bar。適用於高樓大廈建築或水遠程的輸送，因為水往更高樓層輸送需要更大壓力，使用MEGA-PLUS壓力桶它耐壓性高，桶身厚度較一般厚，可以確保水穩定輸送到高樓層，為高層建築和遠距離壓力支持提供高壓水解決方案。 確保供水系統高效運行，無需維護即可節能。"
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/MEGA/AQUASKY_MEGA-Plus-DM-CH_251229printed-1.png",
+      "width": 849,
+      "height": 1198,
+      "alt": "MEGA-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/MEGA/AQUASKY_MEGA-Plus-DM-CH_251229printed-2.png",
+      "width": 849,
+      "height": 1198,
+      "alt": "MEGA-PLUS DM 2"
+    }
+  ]
+}

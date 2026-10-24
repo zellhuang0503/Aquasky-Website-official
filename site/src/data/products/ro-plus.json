@@ -1,0 +1,119 @@
+{
+  "_note": "語系無關的產品資料，從 2026-10-22 封存的 /en/RO-PLUS 抄出；型號清單與圖片未經客戶重新核對。legacyCss 是舊頁的 <style>，照抄只改成絕對路徑。改型號只改這裡。",
+  "id": "ro-plus",
+  "series": "RO-PLUS",
+  "path": "/RO-PLUS",
+  "template": "classic",
+  "source": {
+    "url": "https://aquaskyplus.com/en/RO-PLUS",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-custom-style { width: 100%; text-align: center; background-color: #0173B1; color: #FFF; padding:10px 10px;}\n.h1-custom-style h1 { margin-top: 0; margin-bottom: 0; font-size: 24px;}\n#pd-container-01 { background:url(/images/products/pumplus-bg-1B.jpg) top center no-repeat; background-size: 100% auto; background-color:#0074b1;}\n#pd-container-02 { background-color:#fdf9ee; padding:50px 15px;}\n.pd-aquasky-text {padding:200px 20px 35% 20px;}\n.pd-about-text {padding:30px 10px 20px 10px; color:#FFF;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top:50px;}\n#pd-more-info img {margin:10px auto;}\n.pd-more-info-link { text-align:center; margin:60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border:1px sloid #FFF; font-size:18px; padding:15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}\n.pds-img-style-01 {padding:20px 20px 0 20px;}\n.pds-txt-style-01 { min-height:180px; text-align:center; padding:10px 20px;}\n.pds-txt-style-01 p {font-size:12px;}\n.pds-font-style-01 {font-weight:bold;}\n.pd-spacing-01 { padding-top:30px; padding-bottom:30px;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:28px; font-weight:bold;padding-left:10px; padding-right:10px;}\n.page_pd_item {margin-top:35px;}\n.page_pd_item div {margin-bottom:15px;}\n.page_pd_item img {margin-bottom:15px;}\n.page_pd_item a {color:#FFF;}\n.page_pd_item a:hover {color:#CCC;text-decoration:none;}\n.pd_item_margin img {margin-top:10px;margin-bottom:10px;max-height:374px;}\n@media (max-width: 1800px){ .pd-aquasky-text {padding:200px 20px 30% 20px;}\n}\n@media (max-width: 1600px){ .pd-aquasky-text {padding:200px 20px 25% 20px;}\n}\n@media (max-width: 1400px){ .pd-aquasky-text {padding:200px 20px 20% 20px;}\n}\n@media (max-width: 900px){ .pd-aquasky-text {padding:200px 20px 10% 20px;}\n}\n@media (max-width: 767px) { .owl-theme .owl-controls .owl-buttons .owl-prev{ display:none;}\n.owl-theme .owl-controls .owl-buttons .owl-next{ display:none;}\n}\n@media (max-width: 600px){ .pd-aquasky-text {padding:150px 20px 10% 20px;}\n}\n@media (max-width: 380px) { #pd-container-01 {}\n#pd-more-info {}\n.pd-aquasky-text {padding:100px 20px 50px 20px;}\n#pd-more-info img {}\n}",
+  "titleImage": null,
+  "heroBlocks": [],
+  "preBanner": null,
+  "groups": [
+    {
+      "key": "g1",
+      "rowClass": "row page_pd_item",
+      "models": [
+        {
+          "model": "ROT-1",
+          "volumeText": "Liter 3 / Gal 0.5",
+          "volumeL": 3,
+          "volumeGal": 0.5,
+          "image": "/upfile/Images/ROT/pd-ROT-1.jpg",
+          "detailPath": "/products-det/ro-plus/ROT-1"
+        },
+        {
+          "model": "ROT-2",
+          "volumeText": "Liter 8.0 / Gal 2.0",
+          "volumeL": 8,
+          "volumeGal": 2,
+          "image": "/upfile/Images/ROT/pd-ROT-2.jpg",
+          "detailPath": "/products-det/ro-plus/ROT-2"
+        },
+        {
+          "model": "ROT-3",
+          "volumeText": "Liter 12 / Gal 3.2",
+          "volumeL": 12,
+          "volumeGal": 3.2,
+          "image": "/upfile/Images/ROT/pd-ROT-3.jpg",
+          "detailPath": "/products-det/ro-plus/ROT-3"
+        },
+        {
+          "model": "ROT-4",
+          "volumeText": "Liter 18 / Gal 4.5",
+          "volumeL": 18,
+          "volumeGal": 4.5,
+          "image": "/upfile/Images/ROT/pd-ROT-4.jpg",
+          "detailPath": "/products-det/ro-plus/ROT-4"
+        },
+        {
+          "model": "ROT-6",
+          "volumeText": "Liter 24 / Gal 6.0",
+          "volumeL": 24,
+          "volumeGal": 6,
+          "image": "/upfile/Images/ROT/pd-ROT-6.jpg",
+          "detailPath": "/products-det/ro-plus/ROT-6"
+        },
+        {
+          "model": "ROT-10",
+          "volumeText": "Liter 40 / Gal 10",
+          "volumeL": 40,
+          "volumeGal": 10,
+          "image": "/upfile/Images/ROT/20251021_ROT-10-500x714.png",
+          "detailPath": "/products-det/ro-plus/ROT-10"
+        },
+        {
+          "model": "ROT-14",
+          "volumeText": "Liter 60 / Gal 14",
+          "volumeL": 60,
+          "volumeGal": 14,
+          "image": "/upfile/Images/ROT/pd-ROT-14.jpg",
+          "detailPath": "/products-det/ro-plus/ROT-14"
+        },
+        {
+          "model": "ROT-20",
+          "volumeText": "Liter 80 / Gal 20",
+          "volumeL": 80,
+          "volumeGal": 20,
+          "image": "/upfile/Images/ROT/20250923_aquasky_rot-20.png",
+          "detailPath": "/products-det/ro-plus/ROT-20"
+        },
+        {
+          "model": "ROT-34",
+          "volumeText": "Liter 130 / Gal 34",
+          "volumeL": 130,
+          "volumeGal": 34,
+          "image": "/upfile/Images/ROT/ROT-34-500x714.png",
+          "detailPath": "/products-det/ro-plus/ROT-34"
+        },
+        {
+          "model": "ROT-44",
+          "volumeText": "Liter 160 / Gal 44",
+          "volumeL": 160,
+          "volumeGal": 44,
+          "image": "/upfile/Images/ROT/251009_ROT-44.png",
+          "detailPath": "/products-det/ro-plus/ROT-44"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    "/images/products/pumplus-bg-1B.jpg",
+    "/upfile/Images/ROT/pd-ROT-1.jpg",
+    "/upfile/Images/ROT/pd-ROT-2.jpg",
+    "/upfile/Images/ROT/pd-ROT-3.jpg",
+    "/upfile/Images/ROT/pd-ROT-4.jpg",
+    "/upfile/Images/ROT/pd-ROT-6.jpg",
+    "/upfile/Images/ROT/20251021_ROT-10-500x714.png",
+    "/upfile/Images/ROT/pd-ROT-14.jpg",
+    "/upfile/Images/ROT/20250923_aquasky_rot-20.png",
+    "/upfile/Images/ROT/ROT-34-500x714.png",
+    "/upfile/Images/ROT/251009_ROT-44.png",
+    "/upfile/Images/ROT/AQUASKY_ROT-PLUS-DM-CH_251127printed-1.png",
+    "/upfile/Images/ROT/AQUASKY_ROT-PLUS-DM-CH_251127printed-2.png"
+  ]
+}

@@ -35,7 +35,12 @@
 - [ ] **第 2 階段「代表頁試作」**（規劃 §12）：首頁、LQCOL-PLUS 系列頁、一個產品明細頁、一篇文章；zh／en／ar 三種版型（ar 驗 RTL）；Cloudflare 預覽可開、URL 與舊站一致、schema 一致、走完一次「改內容檔→預覽→審→發布」。工作天估 3–5。
   - [x] 2026-10-23：`site/` 建好（Astro 7.4 + Workers Static Assets）。首頁與 LQCOL-PLUS 系列頁 en／zh 共 5 個網址，`wrangler dev` 實測 `/`、`/en`、`/zh`、`/en/LQCOL-PLUS`、`/zh/LQCOL-PLUS` 都回 200、網址與舊站相同；`npm run verify` 驗規格數字＝資料檔（故意改錯一格會被抓到）；`astro check` 0 錯誤；桌面與手機寬度看過。說明見 site/README.md，AI 規則見 site/AGENTS.md。
   - [x] 2026-10-24：依黃老闆指示把版型改回**跟舊站一樣**（沿用舊站 bootstrap／style.css／series_content.css，HTML 結構照抄；首頁藍底字標＋輪播、系列頁深咖啡底）。桌面與手機並排比對過，選單行為同舊站。
-  - [ ] 還沒做：一個產品明細頁、一篇文章、ar 版型（RTL）；部署到 Cloudflare 預覽網址（帳戶歸屬未定）；走一次「改內容檔→預覽→審→發布」。
+  - [x] 2026-10-24：7 個經典模板系列頁 en／zh 做完（PUMPLUS、RO、THERMAL、HYDRO、PREMIUM、MEGA、SOLAR，共 14 頁；加首頁與 LQCOL 共 19 頁），`import-classic-series.mjs` 直接從封存解析，版型與舊站逐頁比對過。中文頁照舊站沒型號清單、放 DM 大圖。
+  - [ ] **開發順序（黃老闆 10/24）：先把所有頁面的 en＋zh 做完給客戶確認，客戶 OK 後才做 es／fr／ru／ar。**
+  - [ ] 還沒搬的頁：supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（各有各的結構）；products、about、feature、certification、sel_tools（含三個計算器）、news 列表與明細、videos、downloadpage、FAQ、contact；90 頁英文產品明細 `/en/products-det/...`；accessories-det。
+  - [ ] **圖片瘦身（全部頁面做完之後再做，黃老闆 10/24）**：系列頁底圖 1–3 MB（LQCOLPLUS_bg.png 3.1 MB、首頁 hbg-01-11.jpg 1.1 MB）、中文系列頁 DM 圖每張 1–1.7 MB，以前就拖累 PageSpeed。做法候選：壓縮／轉 WebP、responsive srcset、lazy、底圖改 CSS 漸層＋小圖。先照原樣，不要在搬頁時動。
+  - [ ] 還沒做：ar 版型（RTL）；部署到 Cloudflare 預覽網址（帳戶歸屬未定）；走一次「改內容檔→預覽→審→發布」。
+  - [ ] 審查流程：每做完一頁用 `.claude/agents/aquasky-site-reviewer.md` 審（10/24 建；本 session 建的要重開 session 才會被 Agent 工具認得，過渡期用 general-purpose agent 讀該檔執行）。
   - [ ] 2026-10-24 已擬 LINE 訊息向 Tiffany 要三樣：所有 Banner 原圖、所有下載 PDF 原檔、Selection Tools 最終版 Excel（草稿在 官網改版說明文件/05-舊站資料擷取/2026-10-24-LINE給Tiffany-索取Banner-PDF-選型Excel.md）。黃老闆傳出後改成「等回覆」。收件用 Drive 資料夾已開：`梵亞/AQUASKY-AEO/溢康提供素材-20261024/`（三個子資料夾），Tiffany 要求存取權時記得給「編輯者」。
   - [ ] 要決定：舊站圖片／PDF 正式部署時放哪（現在從本機封存複製，不進 Git；Workers Builds 在雲端拿不到封存）。選項：放 R2，或把需要的圖片 commit 進 site/public（LQCOL 用到的約 10 MB，主要是 8 MB 的使用手冊 PDF）。
   - [ ] 問客戶：LQCOL 規格表三個疑點（LQC-3 重量／外箱比 LQC-8 大、LQC-60SS 加侖數 14 對不上 60 L、內文說有 0.5L／1L／100L+ 但表上沒有）。已記在 site/src/data/products/lqcol-plus.json 的 dataQuestions。

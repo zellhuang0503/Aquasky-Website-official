@@ -1,0 +1,123 @@
+{
+  "_note": "語系無關的產品資料，從 2026-10-22 封存的 /en/PREMIUM-PLUS 抄出；型號清單與圖片未經客戶重新核對。legacyCss 是舊頁的 <style>，照抄只改成絕對路徑。改型號只改這裡。",
+  "id": "premium-plus",
+  "series": "PREMIUM-PLUS",
+  "path": "/PREMIUM-PLUS",
+  "template": "classic",
+  "source": {
+    "url": "https://aquaskyplus.com/en/PREMIUM-PLUS",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-custom-style { width: 100%; text-align: center; background-color: #666465; color: #FFF; padding:10px 10px;}\n.h1-custom-style h1 { margin-top: 0; margin-bottom: 0; font-size: 24px;}\n#pd-container-01 { background-color:#666464;}\n#pd-container-02 { background-color:#fdf9ee; padding:50px 15px;}\n.pd-aquasky-text {padding:20px 10px 20px 10px; text-align:right;width:100%;}\n.pd-about-text {padding:30px 10px 20px 10px; color:#FFF;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top:50px;}\n#pd-more-info img {margin:10px auto;}\n.pd-more-info-link { text-align:center; margin:60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border:1px sloid #FFF; font-size:18px; padding:15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}\n.pds-img-style-01 {padding:20px 20px 0 20px;}\n.pds-txt-style-01 { min-height:180px; text-align:center; padding:10px 20px;}\n.pds-txt-style-01 p {font-size:12px;}\n.pds-font-style-01 {font-weight:bold;}\n.pd-spacing-01 { padding-top:30px; padding-bottom:30px;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:22px; font-weight:bold;padding-left:5px; padding-right:5px;}\n.page_pd_item {margin-top:35px;}\n.page_pd_item div {margin-bottom:15px;}\n.page_pd_item img {margin-bottom:15px;}\n.page_pd_item a {color:#FFF;}\n.page_pd_item a:hover {color:#CCC;text-decoration:none;}\n.pd_item_margin img {margin-top:10px;margin-bottom:10px;max-height:374px;}\n.ROT-ALL-IMG { padding-top:8%; padding-bottom:8%;}\n@media (max-width: 767px) { .owl-theme .owl-controls .owl-buttons .owl-prev{ display:none;}\n.owl-theme .owl-controls .owl-buttons .owl-next{ display:none;}\n}\n@media (max-width: 380px) { #pd-container-01 {}\n#pd-more-info {}\n.pd-aquasky-text {padding-bottom:100px;}\n#pd-more-info img {}\n}",
+  "titleImage": null,
+  "heroBlocks": [
+    {
+      "class": "ROT-ALL-IMG",
+      "image": {
+        "src": "/images/products/premiumplus/ROT-ALL.png",
+        "class": "img-responsive center-block"
+      }
+    }
+  ],
+  "preBanner": {
+    "bg": "#F7F7F7",
+    "image": {
+      "src": "/images/products/Premium-PLUS_20221228-01.jpg",
+      "class": "img-responsive center-block"
+    }
+  },
+  "groups": [
+    {
+      "key": "g1",
+      "rowClass": "row page_pd_item align-items-end",
+      "models": [
+        {
+          "model": "APT-8SS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/APT-8SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/APT-8SS"
+        },
+        {
+          "model": "ROT-6SS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/ROT-6SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/ROT-6SS"
+        },
+        {
+          "model": "ROT-4SS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/ROT-4SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/ROT-4SS"
+        },
+        {
+          "model": "APT-18SS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/APT-18SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/APT-18SS"
+        },
+        {
+          "model": "APT-24SS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/APT-24SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/APT-24SS"
+        },
+        {
+          "model": "APT-60SS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/APT-60SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/APT-60SS"
+        },
+        {
+          "model": "APT-18HSS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/APT-18HSS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/APT-18HSS"
+        },
+        {
+          "model": "APT-24HSS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/APT-24HSS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/APT-24HSS"
+        },
+        {
+          "model": "APT-60HSS",
+          "volumeText": "",
+          "volumeL": null,
+          "volumeGal": null,
+          "image": "/upfile/Images/PREMIUM-PLUS/APT-60HSS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+          "detailPath": "/products-det/premium-plus/APT-60HSS"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    "/images/products/premiumplus/ROT-ALL.png",
+    "/images/products/Premium-PLUS_20221228-01.jpg",
+    "/upfile/Images/PREMIUM-PLUS/APT-8SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/ROT-6SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/ROT-4SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/APT-18SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/APT-24SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/APT-60SS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/APT-18HSS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/APT-24HSS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg",
+    "/upfile/Images/PREMIUM-PLUS/APT-60HSS%20%E5%B7%A5%E7%A8%8B%E5%9C%96(%E5%AE%A2%E6%88%B6%E7%89%88).jpg"
+  ]
+}

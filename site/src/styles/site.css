@@ -34,13 +34,7 @@
 .company_lang_txt { color: #fff; text-align: center; font-size: 18px; margin: 10px 0 0; }
 .ca_txt { color: #333; }
 
-/* 系列頁：舊站把這些寫在頁面 <style>，照抄 */
-.h1-custom-style { width: 100%; text-align: center; background-color: #251b19; color: #FFF; padding: 10px; }
-.h1-custom-style h1 { margin: 0; font-size: 24px; }
-#pd-container-01 { background: url(/images/products/LQCOLPLUS/LQCOLPLUS_bg.png) top center no-repeat #251b19; background-size: 100% auto; }
-.pd-aquasky-text { padding: 6% 10px 5% 10px; width: 55%; margin: 0 auto; }
-.pd-aquasky-LQCOL-all { padding-top: 5%; padding-bottom: 8%; width: 100%; max-width: 750px; margin: 0 auto; }
-@media (max-width: 767px) { .pd-aquasky-text { width: 80%; } }
+/* 系列頁專用樣式（h1 色條、底圖、標題圖寬度）在各自的 src/data/products/<id>.json 的 legacyCss，由頁面以 headStyle 輸出；這裡不放，免得互相蓋到 */
 /* 結構圖標示：舊站用 <br> 手動斷行＋nowrap；新站文字來自內容檔沒有斷行，改成限寬自動換行 */
 .series-figure .sf-label { white-space: normal; max-width: 21%; }
 .series-figure .sf-label.sf-center { max-width: 26%; }

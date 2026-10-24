@@ -1,0 +1,20 @@
+{
+  "_note": "English text verbatim from the 2026-10-22 archive of /en/SOLAR-PLUS.",
+  "template": "classic",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Solar-Plus High-Temperature Solar Expansion Tank | Thermal Protected Vessel | AQUASKY",
+    "description": "AQUASKY Solar-Plus is designed with high-temperature resistant diaphragms to absorb fluid expansion in active solar thermal heating systems. Max 10-bar protection."
+  },
+  "h1": "SOLAR PLUS EXPANSION TANK",
+  "about": {
+    "heading": "About SOLAR-PLUS Pressure Tank",
+    "body": "Like every closed system in which a liquid's temperature changes, a solar installation also needs an expansion vessel. The Solar-plus expansion vessel plays an important role in this regard when it comes to maintaining pressure. The pressure must not rise too high when the circulation in the collector stops, but also not too low when the outside temperature is below the freezing point. The medium in a solar installation is mostly a mixture of water and glycol, having a high coefficient of expansion. Solar-Plus Expansion Tank can anticipate such temperature fluctuations and maintains the system pressure in a sitting range."
+  },
+  "showModels": true,
+  "groupHeadings": [
+    "SOLAR-PLUS Product Line"
+  ],
+  "edmImages": []
+}

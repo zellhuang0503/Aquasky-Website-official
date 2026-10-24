@@ -26,6 +26,8 @@ npm run check
 
 三個都過才算完成。verify 失敗時不要改 verify 讓它通過，要找原因。
 
+然後用 Agent 工具呼叫專案審查官 `aquasky-site-reviewer`（`../.claude/agents/aquasky-site-reviewer.md`），告訴它這次審哪些路徑。報告寫「要先修 N 項」就修完再審一次；「可以交付」才 commit、才回報做完。新的檢查條件加進那個 agent 檔，不要只放在對話裡。
+
 ## 加一個新語系
 
 1. `src/i18n/<lang>.json`（複製 en.json 改）。

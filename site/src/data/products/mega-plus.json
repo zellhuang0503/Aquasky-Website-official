@@ -1,0 +1,177 @@
+{
+  "_note": "語系無關的產品資料，從 2026-10-22 封存的 /en/MEGA-PLUS 抄出；型號清單與圖片未經客戶重新核對。legacyCss 是舊頁的 <style>，照抄只改成絕對路徑。改型號只改這裡。",
+  "id": "mega-plus",
+  "series": "MEGA-PLUS",
+  "path": "/MEGA-PLUS",
+  "template": "classic",
+  "source": {
+    "url": "https://aquaskyplus.com/en/MEGA-PLUS",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-custom-style { width: 100%; text-align: center; background-color: #152C3C; color: #FFF; padding:10px 10px;}\n.h1-custom-style h1 { margin-top: 0; margin-bottom: 0; font-size: 24px;}\n#pd-container-01 { background: url(/images/products/mega/mega_bg.jpg) top center no-repeat; -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; background-color: #152c3d;}\n#pd-container-02 { background-color: #fdf9ee; padding: 50px 15px;}\n.pd-aquasky-text { padding: 250px 10px 50px 10px;}\n.pd-about-text { padding: 30px 10px 20px 10px; color: #FFF;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top: 50px;}\n#pd-more-info img { margin: 10px auto;}\n.pd-more-info-link { text-align: center; margin: 60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border: 1px sloid #FFF; font-size: 18px; padding: 15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}\n.pds-img-style-01 { padding: 20px 20px 0 20px;}\n.pds-txt-style-01 { min-height: 180px; text-align: center; padding: 10px 20px;}\n.pds-txt-style-01 p { font-size: 12px;}\n.pds-font-style-01 { font-weight: bold;}\n.pd-spacing-01 { padding-top: 30px; padding-bottom: 30px;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:28px; font-weight:bold;padding-left:10px; padding-right:10px;}\n.page_pd_item {margin-top:35px;}\n.page_pd_item div {margin-bottom:15px;}\n.page_pd_item img {margin-bottom:15px;}\n.page_pd_item a {color:#FFF;}\n.page_pd_item a:hover {color:#CCC;text-decoration:none;}\n.pd_item_margin img {margin-top:10px;margin-bottom:10px;max-height:374px;}\n@media (max-width: 767px) { .owl-theme .owl-controls .owl-buttons .owl-prev { display: none;}\n.owl-theme .owl-controls .owl-buttons .owl-next { display: none;}\n.pd-aquasky-text { padding: 100px 60px 50px 60px;}\n}\n@media (max-width: 380px) { #pd-container-01 {}\n#pd-more-info {}\n.pd-aquasky-text { padding: 100px 60px 50px 60px;}\n#pd-more-info img {}\n}",
+  "titleImage": {
+    "src": "/images/products/mega/mega_logo.png",
+    "class": "img-responsive"
+  },
+  "heroBlocks": [],
+  "preBanner": null,
+  "groups": [
+    {
+      "key": "g1",
+      "rowClass": "row page_pd_item",
+      "models": [
+        {
+          "model": "MEGA-2",
+          "volumeText": "Liter 2 / Gal 0.5",
+          "volumeL": 2,
+          "volumeGal": 0.5,
+          "image": "/upfile/Images/MEGA/20251202_MEGA-2(1).jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-2"
+        },
+        {
+          "model": "MEGA-3",
+          "volumeText": "Liter 3 / Gal 0.8",
+          "volumeL": 3,
+          "volumeGal": 0.8,
+          "image": "/upfile/Images/MEGA/MEGA-3.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-3"
+        },
+        {
+          "model": "MEGA-8",
+          "volumeText": "Liter 8 / Gal 2.0",
+          "volumeL": 8,
+          "volumeGal": 2,
+          "image": "/upfile/Images/MEGA/pd-mega-8-b.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-8"
+        },
+        {
+          "model": "MEGA-24",
+          "volumeText": "Liter 24 / Gal 6.0",
+          "volumeL": 24,
+          "volumeGal": 6,
+          "image": "/upfile/Images/MEGA/pd-mega-24-b.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-24"
+        },
+        {
+          "model": "MEGA-18",
+          "volumeText": "Liter 18 / Gal 4.5",
+          "volumeL": 18,
+          "volumeGal": 4.5,
+          "image": "/upfile/Images/MEGA/pd-mega-18-b.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-18"
+        },
+        {
+          "model": "MEGA-40",
+          "volumeText": "Liter 40 / Gal 10",
+          "volumeL": 40,
+          "volumeGal": 10,
+          "image": "/upfile/Images/MEGA/251226_MEGA-40(%E7%98%A6%E7%89%88).JPG",
+          "detailPath": "/products-det/mega-plus/MEGA-40"
+        },
+        {
+          "model": "MEGA-60",
+          "volumeText": "Liter 60 / Gal 14",
+          "volumeL": 60,
+          "volumeGal": 14,
+          "image": "/upfile/Images/MEGA/pd-mega-60-b.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-60"
+        },
+        {
+          "model": "MEGA-80",
+          "volumeText": "Liter 80 / Gal 20",
+          "volumeL": 80,
+          "volumeGal": 20,
+          "image": "/upfile/Images/MEGA/20251009_aquasky_MEGA-80-834x1200.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-80"
+        },
+        {
+          "model": "MEGA-100",
+          "volumeText": "Liter 100 / Gal 28",
+          "volumeL": 100,
+          "volumeGal": 28,
+          "image": "/upfile/Images/MEGA/20251021_MEGA-100-834x1200pixl.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-100"
+        },
+        {
+          "model": "MEGA-120",
+          "volumeText": "Liter 120 / Gal 32",
+          "volumeL": 120,
+          "volumeGal": 32,
+          "image": "/upfile/Images/MEGA/20251021_MEGA-120-834x1200.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-120"
+        },
+        {
+          "model": "MEGA-130",
+          "volumeText": "Liter 130 / Gal 34",
+          "volumeL": 130,
+          "volumeGal": 34,
+          "image": "/upfile/Images/MEGA/pd-mega-130-b.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-130"
+        },
+        {
+          "model": "MEGA-160",
+          "volumeText": "Liter 160 / Gal 44",
+          "volumeL": 160,
+          "volumeGal": 44,
+          "image": "/upfile/Images/MEGA/pd-mega-160-b.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-160"
+        },
+        {
+          "model": "MEGA-200",
+          "volumeText": "Liter 200 / Gal 53",
+          "volumeL": 200,
+          "volumeGal": 53,
+          "image": "/upfile/Images/MEGA/251121-MEGA-200.png",
+          "detailPath": "/products-det/mega-plus/MEGA-200"
+        },
+        {
+          "model": "MEGA-240",
+          "volumeText": "Liter 240 / Gal 62",
+          "volumeL": 240,
+          "volumeGal": 62,
+          "image": "/upfile/Images/MEGA/20251009_aquasky_MEGA-240-834x1200.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-240"
+        },
+        {
+          "model": "MEGA-300",
+          "volumeText": "Liter 300 / Gal 81",
+          "volumeL": 300,
+          "volumeGal": 81,
+          "image": "/upfile/Images/MEGA/20251009_aquasky_MEGA-300-834x1200.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-300"
+        },
+        {
+          "model": "MEGA-450",
+          "volumeText": "Liter 450 / Gal 120",
+          "volumeL": 450,
+          "volumeGal": 120,
+          "image": "/upfile/Images/MEGA/pd-mega-450-b.jpg",
+          "detailPath": "/products-det/mega-plus/MEGA-450"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    "/images/products/mega/mega_bg.jpg",
+    "/images/products/mega/mega_logo.png",
+    "/upfile/Images/MEGA/20251202_MEGA-2(1).jpg",
+    "/upfile/Images/MEGA/MEGA-3.jpg",
+    "/upfile/Images/MEGA/pd-mega-8-b.jpg",
+    "/upfile/Images/MEGA/pd-mega-24-b.jpg",
+    "/upfile/Images/MEGA/pd-mega-18-b.jpg",
+    "/upfile/Images/MEGA/251226_MEGA-40(%E7%98%A6%E7%89%88).JPG",
+    "/upfile/Images/MEGA/pd-mega-60-b.jpg",
+    "/upfile/Images/MEGA/20251009_aquasky_MEGA-80-834x1200.jpg",
+    "/upfile/Images/MEGA/20251021_MEGA-100-834x1200pixl.jpg",
+    "/upfile/Images/MEGA/20251021_MEGA-120-834x1200.jpg",
+    "/upfile/Images/MEGA/pd-mega-130-b.jpg",
+    "/upfile/Images/MEGA/pd-mega-160-b.jpg",
+    "/upfile/Images/MEGA/251121-MEGA-200.png",
+    "/upfile/Images/MEGA/20251009_aquasky_MEGA-240-834x1200.jpg",
+    "/upfile/Images/MEGA/20251009_aquasky_MEGA-300-834x1200.jpg",
+    "/upfile/Images/MEGA/pd-mega-450-b.jpg",
+    "/upfile/Images/MEGA/AQUASKY_MEGA-Plus-DM-CH_251229printed-1.png",
+    "/upfile/Images/MEGA/AQUASKY_MEGA-Plus-DM-CH_251229printed-2.png"
+  ]
+}

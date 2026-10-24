@@ -1,0 +1,273 @@
+{
+  "_note": "語系無關的產品資料，從 2026-10-22 封存的 /en/PUMPLUS 抄出；型號清單與圖片未經客戶重新核對。legacyCss 是舊頁的 <style>，照抄只改成絕對路徑。改型號只改這裡。",
+  "id": "pumplus",
+  "series": "PUMPLUS",
+  "path": "/PUMPLUS",
+  "template": "classic",
+  "source": {
+    "url": "https://aquaskyplus.com/en/PUMPLUS",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-custom-style { width: 100%; text-align: center; background-color: #62C2EC; color: #FFF; padding:10px 10px;}\n.h1-custom-style h1 { margin-top: 0; margin-bottom: 0; font-size: 24px;}\n#pd-container-01 { background:url(/images/products/pumplus-bg2-v1.jpg) top center no-repeat; background-size: 100% auto; background-color:#6ac4eb;}\n#pd-container-02 { background-color:#fdf9ee; padding:50px 15px;}\n.pd-aquasky-text {padding:100px 10px 350px 10px; text-align:right;width:100%;}\n.pd-about-text {padding:30px 10px 20px 10px; color:#FFF;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:28px; font-weight:bold;padding-left:10px; padding-right:10px;}\n.page_pd_item {margin-top:35px;}\n.page_pd_item div {margin-bottom:15px;}\n.page_pd_item img {margin-bottom:15px;}\n.page_pd_item a {color:#FFF;}\n.page_pd_item a:hover {color:#CCC;text-decoration:none;}\n.pd_item_margin img {margin-top:10px;margin-bottom:10px;max-height:374px;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top:50px;}\n#pd-more-info img {margin:10px auto;}\n.pd-more-info-link { text-align:center; margin:60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border:1px sloid #FFF; font-size:18px; padding:15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}\n.pds-img-style-01 {padding:20px 20px 0 20px;}\n.pds-txt-style-01 { min-height:180px; text-align:center; padding:10px 20px;}\n.pds-txt-style-01 p {font-size:12px;}\n.pds-font-style-01 {font-weight:bold;}\n.pd-spacing-01 { padding-top:30px; padding-bottom:30px;}\n@media (max-width: 767px) { .owl-theme .owl-controls .owl-buttons .owl-prev{ display:none;}\n.owl-theme .owl-controls .owl-buttons .owl-next{ display:none;}\n}\n@media (max-width: 480px) { .pd-aquasky-text {padding-bottom:220px;}\n}\n@media (max-width: 380px) { #pd-container-01 {}\n#pd-more-info {}\n.pd-aquasky-text {padding-bottom:160px;}\n#pd-more-info img {}\n}",
+  "titleImage": {
+    "src": "/images/products/PRODUCT_PUMPLUS_200209_txt2.png",
+    "class": "img-responsive pull-right"
+  },
+  "heroBlocks": [],
+  "preBanner": null,
+  "groups": [
+    {
+      "key": "g1",
+      "rowClass": "row page_pd_item",
+      "models": [
+        {
+          "model": "APT-1.3",
+          "volumeText": "Liter 1.3 / Gal 0.35",
+          "volumeL": 1.3,
+          "volumeGal": 0.35,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-1_3.jpg",
+          "detailPath": "/products-det/pumplus/APT-1.3"
+        },
+        {
+          "model": "APT-2",
+          "volumeText": "Liter 2 / Gal 0.5",
+          "volumeL": 2,
+          "volumeGal": 0.5,
+          "image": "/upfile/Images/PUMPLUS/20250919_APT-2(1).png",
+          "detailPath": "/products-det/pumplus/APT-2"
+        },
+        {
+          "model": "APT-3",
+          "volumeText": "Liter 3 / Gal 0.5",
+          "volumeL": 3,
+          "volumeGal": 0.5,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-3.jpg",
+          "detailPath": "/products-det/pumplus/APT-3"
+        },
+        {
+          "model": "APT-8",
+          "volumeText": "Liter 8 / Gal 2.0",
+          "volumeL": 8,
+          "volumeGal": 2,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-8.jpg",
+          "detailPath": "/products-det/pumplus/APT-8"
+        },
+        {
+          "model": "APT-12",
+          "volumeText": "Liter 12 / Gal 3.2",
+          "volumeL": 12,
+          "volumeGal": 3.2,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-12.jpg",
+          "detailPath": "/products-det/pumplus/APT-12"
+        },
+        {
+          "model": "APT-18",
+          "volumeText": "Liter 18 / Gal 4.5",
+          "volumeL": 18,
+          "volumeGal": 4.5,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-18.jpg",
+          "detailPath": "/products-det/pumplus/APT-18"
+        },
+        {
+          "model": "APT-24",
+          "volumeText": "Liter 24 / Gal 6.0",
+          "volumeL": 24,
+          "volumeGal": 6,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-24.jpg",
+          "detailPath": "/products-det/pumplus/APT-24"
+        },
+        {
+          "model": "APT-40",
+          "volumeText": "Liter 40 / Gal 10",
+          "volumeL": 40,
+          "volumeGal": 10,
+          "image": "/upfile/Images/PUMPLUS/20240311_aquaky_apt40_500x714.png",
+          "detailPath": "/products-det/pumplus/APT-40"
+        },
+        {
+          "model": "APT-60",
+          "volumeText": "Liter 60 / Gal 14",
+          "volumeL": 60,
+          "volumeGal": 14,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-60.jpg",
+          "detailPath": "/products-det/pumplus/APT-60"
+        },
+        {
+          "model": "APT-80",
+          "volumeText": "Liter 80 / Gal 20",
+          "volumeL": 80,
+          "volumeGal": 20,
+          "image": "/upfile/Images/PUMPLUS/apt-80-webSite_20210914_500x714.jpg",
+          "detailPath": "/products-det/pumplus/APT-80"
+        },
+        {
+          "model": "APT-100",
+          "volumeText": "Liter 100 / Gal 28",
+          "volumeL": 100,
+          "volumeGal": 28,
+          "image": "/upfile/Images/PUMPLUS/20251021_APT-100%20re-500x714.jpg",
+          "detailPath": "/products-det/pumplus/APT-100"
+        },
+        {
+          "model": "APT-120",
+          "volumeText": "Liter 120 / Gal 32",
+          "volumeL": 120,
+          "volumeGal": 32,
+          "image": "/upfile/Images/PUMPLUS/20251021_APT-120-500x714-1.jpg",
+          "detailPath": "/products-det/pumplus/APT-120"
+        },
+        {
+          "model": "APT-130",
+          "volumeText": "Liter 130 / Gal 34",
+          "volumeL": 130,
+          "volumeGal": 34,
+          "image": "/upfile/Images/PUMPLUS/APT-130%20B%20%E6%96%B0%E5%A1%91%E8%86%A0%E5%BA%95%E5%BA%A7.jpg",
+          "detailPath": "/products-det/pumplus/APT-130"
+        },
+        {
+          "model": "APT-160",
+          "volumeText": "Liter 160 / Gal 44",
+          "volumeL": 160,
+          "volumeGal": 44,
+          "image": "/upfile/Images/PUMPLUS/APT-160%20B%20%E6%96%B0%E5%A1%91%E8%86%A0%E5%BA%95%E5%BA%A7.jpg",
+          "detailPath": "/products-det/pumplus/APT-160"
+        },
+        {
+          "model": "APT-200",
+          "volumeText": "Liter 200 / Gal 53",
+          "volumeL": 200,
+          "volumeGal": 53,
+          "image": "/upfile/Images/PUMPLUS/APT-200.png",
+          "detailPath": "/products-det/pumplus/APT-200"
+        },
+        {
+          "model": "APT-240",
+          "volumeText": "Liter 240 / Gal 62",
+          "volumeL": 240,
+          "volumeGal": 62,
+          "image": "/upfile/Images/PUMPLUS/20250923_aquasky_APT-240.png",
+          "detailPath": "/products-det/pumplus/APT-240"
+        },
+        {
+          "model": "APT-300",
+          "volumeText": "Liter 300 / Gal 81",
+          "volumeL": 300,
+          "volumeGal": 81,
+          "image": "/upfile/Images/PUMPLUS/20250923_aquasky_APT-300.png",
+          "detailPath": "/products-det/pumplus/APT-300"
+        },
+        {
+          "model": "APT-325",
+          "volumeText": "Liter 325 / Gal 86",
+          "volumeL": 325,
+          "volumeGal": 86,
+          "image": "/upfile/Images/PUMPLUS/20250919_APT-325_500x714.png",
+          "detailPath": "/products-det/pumplus/APT-325"
+        },
+        {
+          "model": "APT-450",
+          "volumeText": "Liter 450 / Gal 120",
+          "volumeL": 450,
+          "volumeGal": 120,
+          "image": "/upfile/Images/PUMPLUS/pd-apt-450.jpg",
+          "detailPath": "/products-det/pumplus/APT-450"
+        },
+        {
+          "model": "APT-500",
+          "volumeText": "Liter 500 / Gal 132",
+          "volumeL": 500,
+          "volumeGal": 132,
+          "image": "/upfile/Images/PUMPLUS/20250919_APT-500_500x714.png",
+          "detailPath": "/products-det/pumplus/APT-500"
+        }
+      ]
+    },
+    {
+      "key": "g2",
+      "rowClass": "row page_pd_item",
+      "models": [
+        {
+          "model": "APT-18H",
+          "volumeText": "Liter 18 / Gal 4.5",
+          "volumeL": 18,
+          "volumeGal": 4.5,
+          "image": "/upfile/Images/PUMPLUS/PD-APT-18H.jpg",
+          "detailPath": "/products-det/pumplus/APT-18H"
+        },
+        {
+          "model": "APT-24H",
+          "volumeText": "Liter 24 / Gal 6.0",
+          "volumeL": 24,
+          "volumeGal": 6,
+          "image": "/upfile/Images/PUMPLUS/PD-APT-24H.jpg",
+          "detailPath": "/products-det/pumplus/APT-24H"
+        },
+        {
+          "model": "APT-40H",
+          "volumeText": "Liter 40 / Gal 10",
+          "volumeL": 40,
+          "volumeGal": 10,
+          "image": "/upfile/Images/PUMPLUS/20240311_aquasky_apt40H.png",
+          "detailPath": "/products-det/pumplus/APT-40H"
+        },
+        {
+          "model": "APT-60H",
+          "volumeText": "Liter 60 / Gal 14",
+          "volumeL": 60,
+          "volumeGal": 14,
+          "image": "/upfile/Images/PUMPLUS/20240318_aquasky_APT-60H-BLUE%201.png",
+          "detailPath": "/products-det/pumplus/APT-60H"
+        },
+        {
+          "model": "APT-80H",
+          "volumeText": "Liter 80 / Gal 20",
+          "volumeL": 80,
+          "volumeGal": 20,
+          "image": "/upfile/Images/PUMPLUS/20240318_aquasky_APT-80H%20BLUE.png",
+          "detailPath": "/products-det/pumplus/APT-80H"
+        },
+        {
+          "model": "APT-100H",
+          "volumeText": "Liter 100 / Gal 28",
+          "volumeL": 100,
+          "volumeGal": 28,
+          "image": "/upfile/Images/PUMPLUS/20240318_aquasky_APT-100H%20BLUE.png",
+          "detailPath": "/products-det/pumplus/APT-100H"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    "/images/products/pumplus-bg2-v1.jpg",
+    "/images/products/PRODUCT_PUMPLUS_200209_txt2.png",
+    "/upfile/Images/PUMPLUS/pd-apt-1_3.jpg",
+    "/upfile/Images/PUMPLUS/20250919_APT-2(1).png",
+    "/upfile/Images/PUMPLUS/pd-apt-3.jpg",
+    "/upfile/Images/PUMPLUS/pd-apt-8.jpg",
+    "/upfile/Images/PUMPLUS/pd-apt-12.jpg",
+    "/upfile/Images/PUMPLUS/pd-apt-18.jpg",
+    "/upfile/Images/PUMPLUS/pd-apt-24.jpg",
+    "/upfile/Images/PUMPLUS/20240311_aquaky_apt40_500x714.png",
+    "/upfile/Images/PUMPLUS/pd-apt-60.jpg",
+    "/upfile/Images/PUMPLUS/apt-80-webSite_20210914_500x714.jpg",
+    "/upfile/Images/PUMPLUS/20251021_APT-100%20re-500x714.jpg",
+    "/upfile/Images/PUMPLUS/20251021_APT-120-500x714-1.jpg",
+    "/upfile/Images/PUMPLUS/APT-130%20B%20%E6%96%B0%E5%A1%91%E8%86%A0%E5%BA%95%E5%BA%A7.jpg",
+    "/upfile/Images/PUMPLUS/APT-160%20B%20%E6%96%B0%E5%A1%91%E8%86%A0%E5%BA%95%E5%BA%A7.jpg",
+    "/upfile/Images/PUMPLUS/APT-200.png",
+    "/upfile/Images/PUMPLUS/20250923_aquasky_APT-240.png",
+    "/upfile/Images/PUMPLUS/20250923_aquasky_APT-300.png",
+    "/upfile/Images/PUMPLUS/20250919_APT-325_500x714.png",
+    "/upfile/Images/PUMPLUS/pd-apt-450.jpg",
+    "/upfile/Images/PUMPLUS/20250919_APT-500_500x714.png",
+    "/upfile/Images/PUMPLUS/PD-APT-18H.jpg",
+    "/upfile/Images/PUMPLUS/PD-APT-24H.jpg",
+    "/upfile/Images/PUMPLUS/20240311_aquasky_apt40H.png",
+    "/upfile/Images/PUMPLUS/20240318_aquasky_APT-60H-BLUE%201.png",
+    "/upfile/Images/PUMPLUS/20240318_aquasky_APT-80H%20BLUE.png",
+    "/upfile/Images/PUMPLUS/20240318_aquasky_APT-100H%20BLUE.png",
+    "/upfile/Images/PUMPLUS/AQUASKY_PUMPLUS-DM-Blue-CH_251204print-%E5%9C%96%E7%89%87-0.jpg",
+    "/upfile/Images/PUMPLUS/AQUASKY_PUMPLUS-DM-Blue-CH_251204print-2.jpg"
+  ]
+}

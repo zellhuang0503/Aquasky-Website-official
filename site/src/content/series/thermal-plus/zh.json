@@ -1,0 +1,31 @@
+{
+  "_note": "舊站 /zh/THERMAL-PLUS 已上線的中文文字，照抄。舊站中文頁沒有型號清單、改放 DM 圖，先照原樣（黃老闆 2026-10-24）。",
+  "template": "classic",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Thermal-Plus 熱水器熱膨脹罐 | 閉路加熱系統壓力保護罐 | AQUASKY 溢康企業",
+    "description": "AQUASKY Thermal-Plus 熱膨脹罐專為吸收閉路熱水加熱系統中因水溫上升產生的膨脹水量而設計，能有效保護管路與熱水器。最大壓力 10bar，5 年保固。"
+  },
+  "h1": "Thermal-Plus 熱水器熱膨脹罐 | 閉路加熱系統壓力保護罐 | AQUASKY 溢康企業",
+  "about": {
+    "heading": "Thermal-Plus 密閉式膨脹水箱：確保水壓穩定的理想選擇",
+    "body": "Thermal-Plus 密閉式膨脹水箱, 可以用於冰水或熱水系統中, 其中特殊的蓄壓設計可以吸收因為溫度變化所產生的水體積, 讓系統中的水壓穩定並維持在一個安全區間. Thermal-Plus 密閉式膨脹水箱製造與設計採用美國NSF標準及CE歐盟壓力容器認證標準, 可使用於商場, 公共設施或家用系統中."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/AQUASKY_ThermalPlus-DM-CH_251229printed-1.png",
+      "width": 849,
+      "height": 1198,
+      "alt": "THERMAL-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/AQUASKY_ThermalPlus-DM-CH_251229printed-2.png",
+      "width": 849,
+      "height": 1198,
+      "alt": "THERMAL-PLUS DM 2"
+    }
+  ]
+}

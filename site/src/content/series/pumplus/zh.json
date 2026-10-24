@@ -1,0 +1,31 @@
+{
+  "_note": "舊站 /zh/PUMPLUS 已上線的中文文字，照抄。舊站中文頁沒有型號清單、改放 DM 圖，先照原樣（黃老闆 2026-10-24）。",
+  "template": "classic",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "PumPlus 泵浦增壓壓力桶 | 隔膜式水井壓力罐 | AQUASKY 溢康企業",
+    "description": "AQUASKY PumPlus 是一款專為水泵增壓系統與井水系統設計的節能、免維護隔膜式壓力桶。通過 NSF/ANSI 372 無鉛認證，最大工作壓力 10bar。"
+  },
+  "h1": "PumPlus 泵浦增壓壓力桶 | 隔膜式水井壓力罐 | AQUASKY 溢康企業",
+  "about": {
+    "heading": "PUMPLUS – 泵浦壓力桶",
+    "body": "PumPlus 泵浦壓力桶是加壓水系統內相當重要的元素之一，可以維持系統水壓在設定的標準值中。水儲存放於桶內隔膜和塑膠內襯之間，加壓氮氣區的氮氣使隔膜形成動能達到供水循環。 此過程可減少泵浦需要啟動的次數，使系統壓力維持在安全節能設定內。 隔膜的內含張力設計維持系統內的水壓穩定輸出。確保家中用水家電得以正常運行；沐浴時,水流量穩定輸出,不會忽大忽小。 PumPlus 泵浦壓力桶是一種節能裝置，無需維護，搭配正確尺寸的泵浦即可延長系統壽命，達到零維護費用目標，降低耗材成本，以符合您最有效益的需求。我們提供的壓力桶尺寸從1.3L到450L等多樣化選擇, 同時也提供給您最值得信賴的客製化服務。"
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/PUMPLUS/AQUASKY_PUMPLUS-DM-Blue-CH_251204print-%E5%9C%96%E7%89%87-0.jpg",
+      "width": 849,
+      "height": 1195,
+      "alt": "PUMPLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/PUMPLUS/AQUASKY_PUMPLUS-DM-Blue-CH_251204print-2.jpg",
+      "width": 849,
+      "height": 1195,
+      "alt": "PUMPLUS DM 2"
+    }
+  ]
+}

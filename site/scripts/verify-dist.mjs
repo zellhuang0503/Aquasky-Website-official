@@ -15,12 +15,18 @@ const dist = join(root, 'dist');
 const product = JSON.parse(readFileSync(join(root, 'src/data/products/lqcol-plus.json'), 'utf8'));
 const stage = process.env.SITE_STAGE === 'production' ? 'production' : 'preview';
 
+import { readdirSync } from 'node:fs';
+const LANGS = [['en', 'en'], ['zh', 'zh-Hant']];
+const products = readdirSync(join(root, 'src/data/products')).filter((f) => f.endsWith('.json'))
+  .map((f) => JSON.parse(readFileSync(join(root, 'src/data/products', f), 'utf8')));
 const PAGES = [
   { url: '/', file: 'index.html', lang: 'en' },
   { url: '/en', file: 'en.html', lang: 'en' },
   { url: '/zh', file: 'zh.html', lang: 'zh-Hant' },
-  { url: '/en/LQCOL-PLUS', file: 'en/LQCOL-PLUS.html', lang: 'en', series: true },
-  { url: '/zh/LQCOL-PLUS', file: 'zh/LQCOL-PLUS.html', lang: 'zh-Hant', series: true },
+  ...products.flatMap((p) => LANGS.map(([code, htmlLang]) => ({
+    url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code,
+    series: p.template === 'lqcol', classic: p.template === 'classic' ? p : null,
+  }))),
 ];
 const built = new Set(PAGES.map((p) => p.url));
 let problems = 0;
@@ -105,6 +111,20 @@ for (const page of PAGES) {
     for (const k of ['factoryPrecharge', 'maxWorkingPressure']) {
       if (!html.includes(product.specs.common[k])) fail(`${where}: ${k} "${product.specs.common[k]}" not on page`);
     }
+  }
+  if (page.classic) {
+    // 經典系列頁：en 的型號數＝資料檔；zh 沒型號清單但要有介紹文；ProductGroup 的型號數＝資料檔
+    const models = page.classic.groups.flatMap((g) => g.models);
+    const h3s = [...html.matchAll(/<h3 class="page_pd_name_p2">([^<]*)<\/h3>/g)].map((m) => decode(m[1]));
+    const content = JSON.parse(readFileSync(join(root, `src/content/series/${page.classic.id}/${page.code}.json`), 'utf8'));
+    if (content.showModels) {
+      if (h3s.join() !== models.map((m) => m.model).join()) fail(`${where}: model list on page ${h3s.length} != data ${models.length}`);
+    } else if (h3s.length) fail(`${where}: content says no model grid but page has ${h3s.length}`);
+    if (!html.includes('class="pd-about-text')) fail(`${where}: about text block missing`);
+    const group = graph.find((n) => n['@type'] === 'ProductGroup');
+    if (!group) fail(`${where}: ProductGroup missing`);
+    else if ((group.hasVariant || []).length !== models.length) fail(`${where}: JSON-LD variants ${(group.hasVariant || []).length} != ${models.length}`);
+    for (const e of content.edmImages || []) if (!html.includes(`src="${e.src}"`)) fail(`${where}: DM image ${e.src} not on page`);
   }
   console.log(`✓ ${where}  ${title?.slice(0, 70)}`);
 }

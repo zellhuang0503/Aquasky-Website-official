@@ -1,5 +1,6 @@
 {
   "_note": "LQCOL-PLUS English text, verbatim from the 2026-10-22 archive (translation/sources/LQCOL-PLUS.md). Spec numbers live in src/data/products/lqcol-plus.json.",
+  "template": "lqcol",
   "lang": "en",
   "status": "approved-legacy",
   "seo": {

@@ -114,6 +114,7 @@ function textFor(lang) {
     _note: lang === 'zh'
       ? 'LQCOL-PLUS 中文文字。來源：translation/lqcol-plus/LQCOL-PLUS.zh.md（梵亞 AI 初稿，待 Tiffany 審）。數字、型號、單位不要改，規格數字在 src/data/products/lqcol-plus.json。'
       : 'LQCOL-PLUS English text, verbatim from the 2026-10-22 archive (translation/sources/LQCOL-PLUS.md). Spec numbers live in src/data/products/lqcol-plus.json.',
+    template: 'lqcol',
     lang,
     status: lang === 'zh' ? 'draft-ai' : 'approved-legacy',
     seo: { title: b('B01'), description: b('B02') },

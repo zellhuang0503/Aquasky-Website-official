@@ -18,6 +18,10 @@ interface Props {
   noindex?: boolean;
   /** 系列頁等會在頁首下方自己放 h1 的頁面 */
   bodyClass?: string;
+  /** 這一頁額外要載的舊站 CSS（例如經典系列頁的 /css/bootstrap-grid.min.css） */
+  extraCss?: string[];
+  /** 舊站寫在頁面 <style> 裡的頁面專用樣式，照抄 */
+  headStyle?: string;
 }
 const props = Astro.props;
 const info = langInfo(props.lang);
@@ -34,6 +38,8 @@ const d = t(props.lang);
     <link href="/css/style.css" rel="stylesheet" />
     <link href="/css/series_content.css" rel="stylesheet" />
     <link href="/css/a-hover.css" rel="stylesheet" />
+    {props.extraCss?.map((href) => <link href={href} rel="stylesheet" />)}
+    {props.headStyle && <style is:inline set:html={props.headStyle} />}
     <Seo {...props} />
     {stage === 'production' && (
       <Fragment>

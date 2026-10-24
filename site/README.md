@@ -10,8 +10,19 @@
 | `/en`、`/zh` | `src/pages/[lang].astro` | 舊站文字；英文認證說明是新補的，待審 |
 | `/en/LQCOL-PLUS` | `src/pages/[lang]/LQCOL-PLUS.astro` | 舊站英文原文 |
 | `/zh/LQCOL-PLUS` | 同上 | **AI 初稿**，頁面上有黃色提示，待 Tiffany 審 |
+| `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[series].astro`（經典模板） | 舊站英文原文＋型號清單 |
+| 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，PUMPLUS／RO／THERMAL／MEGA 放舊站的 DM 大圖 |
 
-其他選單項目（PUMPLUS、about…）還沒搬，點了會到 404。`npm run verify` 會列出這些連結。
+還沒搬：supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（結構各不同，要個別做）、products、about、feature、certification、sel_tools、news、videos、downloadpage、FAQ、contact，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
+
+## 兩種系列頁模板
+
+| 模板 | 頁 | 資料從哪來 |
+| --- | --- | --- |
+| `lqcol` | LQCOL-PLUS | `scripts/import-lqcol.mjs`（從 translation/ 匯入） |
+| `classic` | PUMPLUS、RO-PLUS、THERMAL-PLUS、HYDRO-PLUS、PREMIUM-PLUS、MEGA-PLUS、SOLAR-PLUS | `scripts/import-classic-series.mjs`（直接解析封存的 en／zh 頁面：h1、介紹文、型號清單、DM 圖、頁面 `<style>`） |
+
+每個系列頁自己的樣式（h1 色條顏色、底圖、標題圖位置）照舊站頁面的 `<style>` 抄在 `src/data/products/<id>.json` 的 `legacyCss`，由頁面以 `headStyle` 輸出；共用的 `src/styles/site.css` 不放任何系列專用規則，免得互相蓋到。匯入腳本只跑一次，之後改內容直接改 JSON；要重跑加 `--force`。
 
 ## 指令（在 site/ 目錄）
 
@@ -65,5 +76,7 @@ npm run check           # 型別與模板檢查
 - 結構圖標示由內容檔產生，沒有舊站的手動斷行，改成限寬自動換行。
 - 原生輸出 JSON-LD：Organization、WebSite、BreadcrumbList、ProductGroup（9 個型號）、FAQPage。舊站靠 AEO Worker 從外面注入。
 - 系列頁底部「Product Line」標題舊站是白字在白底（看不到），新站改品牌藍。
+- 經典系列頁舊站有兩個 `<h1>`（色條一個、標題圖又包一個）；新站標題圖改用 `<div class="h1-1">`，每頁只剩一個 h1。
+- 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁），中文頁同樣連英文明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 預覽版頁頂有黃色 PREVIEW 條，正式版沒有。

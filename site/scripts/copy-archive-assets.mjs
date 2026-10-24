@@ -17,6 +17,7 @@ const ASSETS = [
   ['/css/style.css'],
   ['/css/series_content.css'],
   ['/css/a-hover.css'],
+  ['/css/bootstrap-grid.min.css'],   // 經典系列頁用的 Bootstrap 4 grid（col-6 col-md-3）
   ['/css/all.min.css'],
   ['/webfonts/fa-solid-900.woff2'],
   ['/webfonts/fa-regular-400.woff2'],
@@ -99,6 +100,15 @@ const ASSETS = [
   ['/uploads/series/pdf/SERIES_lqcol-plus_2_20261020_222359.jpg'],
   ['/uploads/series/pdf/SERIES_lqcol-plus_2_20261020_222359.pdf'],
 ];
+
+// 各產品資料檔自己列的資源（import-classic-series.mjs 產生的 assets 陣列）也一起複製
+import { readdirSync } from 'node:fs';
+const productsDir = resolve(here, '..', 'src', 'data', 'products');
+for (const f of readdirSync(productsDir)) {
+  if (!f.endsWith('.json')) continue;
+  const data = JSON.parse(readFileSync(join(productsDir, f), 'utf8'));
+  for (const a of data.assets ?? []) ASSETS.push([a]);
+}
 
 const index = new Map();
 for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\n')) {

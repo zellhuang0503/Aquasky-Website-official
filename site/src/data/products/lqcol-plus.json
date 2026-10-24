@@ -386,5 +386,7 @@
         "top": "96.927%"
       }
     ]
-  }
+  },
+  "legacyCss": ".h1-custom-style { width:100%; text-align:center; background-color:#251b19; color:#FFF; padding:10px;}\n.h1-custom-style h1 { margin:0; font-size:24px;}\n#pd-container-01 { background:url(/images/products/LQCOLPLUS/LQCOLPLUS_bg.png) top center no-repeat #251b19; background-size:100% auto;}\n.pd-aquasky-text { padding:6% 10px 5% 10px; width:55%; margin:0 auto;}\n.pd-aquasky-LQCOL-all { padding-top:5%; padding-bottom:8%; width:100%; max-width:750px; margin:0 auto;}\n@media (max-width: 767px){ .pd-aquasky-text { width:80%;}}",
+  "_legacyCssNote": "舊站 /en/LQCOL-PLUS 頁面 <style> 照抄，只把相對路徑改絕對。"
 }

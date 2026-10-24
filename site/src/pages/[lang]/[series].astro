@@ -1,0 +1,119 @@
+---
+// 經典模板系列頁（PUMPLUS、RO-PLUS、THERMAL-PLUS、HYDRO-PLUS、PREMIUM-PLUS、MEGA-PLUS、SOLAR-PLUS）。
+// 網址 /en/<舊路徑>、/zh/<舊路徑>。HTML 結構照舊站：h1 色條 → #pd-container-01（底圖＋標題圖＋介紹文＋型號清單）→ 產品列。
+// 每頁的 <style> 照舊站抄（product JSON 的 legacyCss），所以顏色、底圖、間距都跟舊站一樣。
+// LQCOL-PLUS 有自己的檔（LQCOL-PLUS.astro），Astro 的靜態路由優先，不會撞到這裡。
+import { getEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ProductLine from '../../components/ProductLine.astro';
+import brand from '../../data/brand.json';
+import { type Lang, liveLangs, t } from '../../lib/i18n';
+
+type Model = { model: string; volumeText: string; volumeL: number | null; volumeGal: number | null; image: string; detailPath: string };
+type Product = {
+  id: string; series: string; path: string; template: string; legacyCss: string;
+  titleImage: { src: string; class: string } | null;
+  heroBlocks: { class: string; image: { src: string; class: string } | null }[];
+  preBanner: { bg: string; image: { src: string; class: string } } | null;
+  groups: { key: string; rowClass: string; models: Model[] }[];
+};
+
+export function getStaticPaths() {
+  const files = import.meta.glob<{ default: Product }>('../../data/products/*.json', { eager: true });
+  const products = Object.values(files).map((f) => f.default).filter((p) => p.template === 'classic');
+  return products.flatMap((product) => liveLangs.map((lang) => ({ params: { lang, series: product.path.slice(1) }, props: { product } })));
+}
+const lang = Astro.params.lang as Lang;
+const { product } = Astro.props as { product: Product };
+const entry = await getEntry('series', `${product.id}/${lang}`);
+if (!entry || entry.data.template !== 'classic') throw new Error(`missing classic content src/content/series/${product.id}/${lang}.json`);
+const c = entry.data;
+const d = t(lang);
+const site = brand.url;
+const pageUrl = `${site}/${lang}${product.path}`;
+const navKey = product.series as keyof typeof d.nav;
+const seriesLabel = (d.nav as Record<string, string>)[navKey] ?? product.series;
+const allModels = product.groups.flatMap((g) => g.models);
+
+const productGroup = {
+  '@type': 'ProductGroup',
+  '@id': `${pageUrl}#series`,
+  name: `${brand.brand} ${product.series}`,
+  description: c.about.body,
+  url: pageUrl,
+  ...(product.titleImage ? { image: `${site}${product.titleImage.src}` } : {}),
+  brand: { '@type': 'Brand', name: brand.brand },
+  manufacturer: { '@id': `${site}/#organization` },
+  productGroupID: product.series,
+  variesBy: ['https://schema.org/size'],
+  hasVariant: allModels.map((m) => ({
+    '@type': 'Product',
+    name: `${brand.brand} ${product.series} ${m.model}`,
+    sku: m.model,
+    model: m.model,
+    image: `${site}${m.image}`,
+    ...(m.volumeL !== null ? { size: `${m.volumeL} L` } : {}),
+    url: `${site}/en${m.detailPath}`,
+  })),
+};
+const breadcrumbs = [
+  { name: d.common.breadcrumbHome, path: '' },
+  { name: d.nav.products, path: '/products' },
+  { name: seriesLabel, path: product.path },
+];
+---
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={product.path} image={product.titleImage?.src} jsonLd={[productGroup]} breadcrumbs={breadcrumbs} extraCss={['/css/bootstrap-grid.min.css']} headStyle={product.legacyCss}>
+  <div class="h1-custom-style"><h1>{c.h1}</h1></div>
+  {product.preBanner && (
+    <div style={`background-color:${product.preBanner.bg};`}><img src={product.preBanner.image.src} class={product.preBanner.image.class} alt={`${product.series} ${seriesLabel}`} /></div>
+  )}
+  <div id="pd-container-01" class="container-fluid">
+    <div class="container">
+      <div class="pd-aquasky-text">
+        {product.titleImage && <div class="h1-1"><img src={product.titleImage.src} class={product.titleImage.class} alt={`${product.series} ${seriesLabel}`} /></div>}
+      </div>
+      {product.heroBlocks.map((b) => (
+        <div class={b.class}>{b.image && <img src={b.image.src} class={b.image.class} alt={`${product.series} ${seriesLabel}`} />}</div>
+      ))}
+      <h2 class="h2_2hline lang_rtl">{c.about.heading}</h2>
+      <div class="pd-about-text txt-align-justify lang_rtl">{c.about.body}</div>
+      {c.edmImages.length > 0 && (
+        <Fragment>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <div id="ImgAutoResponsive" class="lang_rtl">
+            {c.edmImages.map((e) => (
+              <p style="text-align: center;"><img src={e.src} alt={e.alt} width={e.width} height={e.height} style={`width:${e.width}px;height:auto;max-width:100%;`} loading="lazy" /></p>
+            ))}
+          </div>
+        </Fragment>
+      )}
+    </div>
+    {c.showModels && product.groups.map((g, i) => (
+      <div class="container">
+        <h2 class={`h2_2hline ${i === 0 ? 'h2_2hline_margin2' : 'h2_2hline_margin'}`}>{c.groupHeadings[i] ?? g.key}</h2>
+        <div class={g.rowClass}>
+          {g.models.map((m) => (
+            <div class="col-6 col-md-3">
+              <div class="pd_item_margin">
+                <a href={`/en${m.detailPath}`}>
+                  <img src={m.image} loading="lazy" class="img-responsive center-block" alt={`${m.model} ${m.volumeText}`} />
+                  <p class="page_pd_name_p1">{m.volumeText}</p>
+                  <h3 class="page_pd_name_p2">{m.model}</h3>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div id="pd-more-info" class="container">
+    <h2 class="h2_2hline h2_2hline_margin lang_rtl">{d.common.productLine}</h2>
+    <div id="other_pd_line" class="container">
+      <ProductLine lang={lang} variant="series" />
+      <div class="pd-spacing-01"></div>
+    </div>
+  </div>
+</Base>
