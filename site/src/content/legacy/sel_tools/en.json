@@ -1,0 +1,33 @@
+{
+  "_note": "Old /en/sel_tools page body copied verbatim (incl. its product line). Edit bodyHtml to change text.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Online Pressure Tank Sizing Calculator: Size Your Water Tank | AQUASKY",
+    "description": "Use AQUASKY's interactive online selection tool to calculate the exact pressure tank size needed for your water pump, RO filtration, or heating expansion system."
+  },
+  "h1": "SELECTION TOOLS",
+  "hasVisibleH1": true,
+  "legacyJsonLd": [
+    {
+      "@type": "WebPage",
+      "@id": "https://aquaskyplus.com/en/sel_tools#webpage",
+      "url": "https://aquaskyplus.com/en/sel_tools",
+      "name": "Online Pressure Tank Sizing Calculator: Size Your Water Tank | AQUASKY",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://aquaskyplus.com/en/sel_tools#app",
+      "name": "AQUASKY Tank Sizing Calculator",
+      "url": "https://aquaskyplus.com/en/sel_tools",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+  ],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<h1 id=\"about-top-title\" class=\"h1-1\">SELECTION TOOLS</h1>\n\t<div id=\"select_tools\" class=\"container\">\n    \t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"st_txt_style1\">\n            \t<p class=\"lang_rtl\" style=\"text-align:justify;\">Years of experience and excellent customer service, Aquasky has full of experience in sizing your system. Our design engineers, retailers and technicians the support they may need when calculating formulas and evaluating technical data. A tool makes it difficult to simple. This tool is a quick and precise tool in order to find the best solution when it comes to sizing Aquasky Plus products. Easy Click in pressure information comes the excellent size pressure tank showing for your system.</p>\n            </div>\n\t\t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\"></div>\n            \t<div class=\"col-sm-4\">\n                \t<div class=\"step_style-1\"><p>System</p></div>\n                </div>\n                <div class=\"col-sm-4\"></div>\n            </div>\n            <div class=\"service_spacing-2\"></div>\n\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/en/sel_unit_ps\"><p>Pressure Switch</p></a></p></div>\n                </div>\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/en/sel_unit_vsd\"><p>VSD(VFD)</p></a></p></div>\n                </div>\n                <div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/en/sel_unit_thermal\"><p>Thermal<br>Expansion Tank</p></a></p></div>\n                </div>\n            </div>\n\n        <div class=\"service_spacing-2\"></div>\n\t</div>\n</div>"
+}

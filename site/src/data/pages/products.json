@@ -1,0 +1,32 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/products/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/products 與 /zh/products。",
+  "id": "products",
+  "path": "/products",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/products",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".pd_line_banner { max-height: 461px; background-color: #fdf9ee; position:relative; display: flex; justify-content: center; align-items: center;}\n.pd_line_banner_txt { position: absolute; z-index: 5; color: #FFF; font-size: 3.5rem;}\n#products-line-01 { background-color: #fdf9ee; color: #666666; font-size: 15px;}\n.h2-1 { font-size: 36px; font-weight: 700; border-bottom: 1px solid #FFF; padding-bottom: 20px;}\n.h3-2 { font-size: 22px;}\n.pd_description { text-align: justify;}\n.pd_line_max_w { width: 420px;}\n.pd_more_btn { padding-top: 15px; text-align:left;}\n.more_link { color: #00abeb;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top:50px;}\n#pd-more-info img {margin:10px auto;}\n.pd-more-info-link { text-align:center; margin:60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border:1px sloid #FFF; font-size:18px; padding:15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}",
+  "extraCss": [
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "assets": [
+    "/images/products/pd_ling_bg.jpg",
+    "/images/pdg-01.png",
+    "/images/pdg-mega-2022.png",
+    "/images/pdg-03.png",
+    "/images/pdg-04.png",
+    "/images/pdg-05.png",
+    "/images/pdg-06.png",
+    "/images/pdg-premiumplus2.png",
+    "/images/products/LQCOLPLUS/LQCOLPLUS_pdlline2.png",
+    "/images/products/GIGAPLUS/WEB_PRODUCT_LINE_GIGAPLUS.png",
+    "/images/Elbi_2022.png",
+    "/images/SupremePlus_2023A.png",
+    "/images/products/accessories/accessories3.jpg"
+  ],
+  "dataQuestions": []
+}

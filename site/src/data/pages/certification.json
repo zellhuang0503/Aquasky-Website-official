@@ -1,0 +1,52 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/certification/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/certification 與 /zh/certification。",
+  "id": "certification",
+  "path": "/certification",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/certification",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-1 {margin:0;padding:0;}\n@font-face { font-family: 'Nirmala UI Semilight'; src:url(/\"/fonts/NirmalaS.ttf\");}\n.fontfamily_C1 { font-family: 'Nirmala UI Semilight';}\n#cerfitication-container { background:#002D49;}\n#about-top-title { background:#0086CF;}\n#cf_map { position:relative;}\n#cf_Americas { position:absolute; display:inline-block; color:#FFF; font-weight:bold; top:40%; left:5%;}\n#cf_Africa { position:absolute; display:inline-block; color:#FFF; font-weight:bold; top:70%; left:46%;}\n#cf_Europe { position:absolute; display:inline-block; color:#FFF; font-weight:bold; top:35%; left:52%;}\n#cf_Asia { position:absolute; display:inline-block; color:#FFF; font-weight:bold; top:35%; right:20%;}\n#cf_Oceania { position:absolute; display:inline-block; color:#FFF; font-weight:bold; bottom:16%; right:5%;}\n.cf_link_area { width:100%; min-height:500px; background:url(/images/CERTIFICATION/img_bg.jpg) no-repeat top center; background-size: cover;}\n.cf_link_icon_txt { text-align:center; font-size:13px; color:#FFF; padding-top:10px; padding-bottom:20px; min-height:60px;}\n.cf_link a { color:#FFF; font-size:18px; text-decoration:none;}\n.cf_link a:hover { color:#CCC; text-decoration:none;}\n.cf_txt { font-size:20px;}\n.cf_class_bg { background:url(/images/CERTIFICATION/cf_line.png) center no-repeat; margin:20px 10px 30px 10px;}\n.cf_class_txt { font-size:46px; font-weight:bold; padding:10px 20px; color:#FFF; display:inline-block; background:#002D49; margin:0;}\n.cf_area_c {}\n.cf_name { color:#0086CF; font-size:25px; font-weight:bold; padding:20px 0; margin:0;}\n.cf_content { color:#FFF; text-align:justify; font-size:18px;}\n.pd-btn-info-link { text-align:right; margin:40px 0 40px 0;}\n.btn-link { color: #008ecf; border-color:#008ecf; border:1px sloid #008ecf; font-size:18px; padding:10px 20px; border-radius: 30px; min-width:200px;}\n.btn-link:focus, .btn-link.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-link:hover { color: #333; background-color: #e6e6e6; border-color: #adadad; text-decoration:none;}\n.cf_img { margin-left:10px; margin-right:10px; padding:10px; background:#FFF;}\n@media (max-width: 640px) { #cf_Europe { position:absolute; display:inline-block; color:#FFF; font-weight:bold; top:25%; left:52%;}\n#cf_Asia { position:absolute; display:inline-block; color:#FFF; font-weight:bold; top:40%; right:20%;}\n}",
+  "extraCss": [
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "assets": [
+    "/images/CERTIFICATION/icon/img_01.png",
+    "/images/CERTIFICATION/icon/img_02.png",
+    "/images/CERTIFICATION/icon/img_03.png",
+    "/images/CERTIFICATION/icon/img_04.png",
+    "/images/CERTIFICATION/icon/img_05.png",
+    "/images/CERTIFICATION/icon/img_06.png",
+    "/images/CERTIFICATION/icon/img_07.png",
+    "/images/CERTIFICATION/icon/img_08.png",
+    "/images/CERTIFICATION/icon/img_09_2025.png",
+    "/upfile/Images/CERTIFICATION/CE.png",
+    "/upfile/Images/CERTIFICATION/ce_b.png",
+    "/upfile/Images/CERTIFICATION/NSF58.png",
+    "/upfile/Images/CERTIFICATION/nsf_b.png",
+    "/upfile/Images/CERTIFICATION/NSF61-20210207.png",
+    "/upfile/Images/CERTIFICATION/nsf61_b.png",
+    "/upfile/Images/CERTIFICATION/20241209_EUROCERT-IOS9001.png",
+    "/upfile/Images/CERTIFICATION/eurocert_b.png",
+    "/upfile/Images/CERTIFICATION/UPC.png",
+    "/upfile/Images/CERTIFICATION/upc_b.png",
+    "/upfile/Images/CERTIFICATION/%E9%9F%93%E6%96%87%E8%AA%8D%E8%AD%89.png",
+    "/upfile/Images/CERTIFICATION/kc_b.png",
+    "/upfile/Images/CERTIFICATION/20251205_Aquasky%20ACS%20p1.jpg",
+    "/upfile/Images/CERTIFICATION/acs_b.png",
+    "/upfile/Images/CERTIFICATION/20260715_AQUASKY_WRAS_CERTIFICATION.jpg",
+    "/upfile/Images/CERTIFICATION/wars_b.png",
+    "/upfile/Images/CERTIFICATION/20251127_WaterMark-1.jpg",
+    "/upfile/Images/CERTIFICATION/2025-WaterMark%20LF(1).png",
+    "/upfile/Images/CERTIFICATION/20220802Singapore%20PSB%20certification.jpg",
+    "/upfile/Images/CERTIFICATION/20231030_Listing%20Category%20_%20NSF%20372%20International.jpg",
+    "/upfile/Images/CERTIFICATION/20231102_AQUASKY_icon_bl-NSF_large.png",
+    "/images/CERTIFICATION/img_bg.jpg",
+    "/images/CERTIFICATION/cf_line.png",
+    "/upfile/Images/CERTIFICATION/Under%20Process.png"
+  ],
+  "dataQuestions": []
+}

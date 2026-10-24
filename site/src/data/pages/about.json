@@ -1,0 +1,20 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/about/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/about 與 /zh/about。",
+  "id": "about",
+  "path": "/about",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/about",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-1 {margin:0;padding:0;}\n.about_img_02 {text-align: center; color: #1eb9ee; font-size: 4rem;font-weight: bold;}",
+  "extraCss": [
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "assets": [
+    "/images/about/about-t-01.png"
+  ],
+  "dataQuestions": []
+}

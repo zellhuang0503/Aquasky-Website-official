@@ -1,0 +1,33 @@
+{
+  "_note": "舊站 /zh/sel_tools 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。",
+  "template": "legacy",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "線上壓力桶規格挑選計算工具：為您的水泵增壓系統選擇容量 | AQUASKY",
+    "description": "使用溢康企業 (AQUASKY) 線上互動選型工具，輸入參數即可精確計算出您的水泵、逆滲透系統或熱膨脹系統所需的壓力桶型號與容量。"
+  },
+  "h1": "壓力桶選擇工具",
+  "hasVisibleH1": true,
+  "legacyJsonLd": [
+    {
+      "@type": "WebPage",
+      "@id": "https://aquaskyplus.com/zh/sel_tools#webpage",
+      "url": "https://aquaskyplus.com/zh/sel_tools",
+      "name": "線上壓力桶規格挑選計算工具：為您的水泵增壓系統選擇容量 | AQUASKY",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://aquaskyplus.com/zh/sel_tools#app",
+      "name": "AQUASKY Tank Sizing Calculator",
+      "url": "https://aquaskyplus.com/zh/sel_tools",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+  ],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<h1 id=\"about-top-title\" class=\"h1-1\">壓力桶選擇工具</h1>\n\t<div id=\"select_tools\" class=\"container\">\n    \t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"st_txt_style1\">\n            \t<p class=\"lang_rtl\" style=\"text-align:justify;\">溢康擁有多年來良好的客戶服務經驗，對於系統尺寸設計具有豐富的經驗。我們結合設計工程師、零售商和技術人員,將依照您的需求,用計算公式和評估技術數據,提供給您最適合的壓力桶尺寸。這個工具不但使複雜變得簡單,且可以讓您快速又準確地找到我們(AQUASKY PLUS)產品系列裡,您最合適的壓力桶尺寸。透過簡單的壓力資料點擊，這個工具可以為您的系統顯示最適合的壓力桶尺寸</p>\n            </div>\n\t\t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\"></div>\n            \t<div class=\"col-sm-4\">\n                \t<div class=\"step_style-1\"><p>System</p></div>\n                </div>\n                <div class=\"col-sm-4\"></div>\n            </div>\n            <div class=\"service_spacing-2\"></div>\n\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/zh/sel_unit_ps\"><p>Pressure Switch</p></a></p></div>\n                </div>\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/zh/sel_unit_vsd\"><p>VSD(VFD)</p></a></p></div>\n                </div>\n                <div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/zh/sel_unit_thermal\"><p>Thermal<br>Expansion Tank</p></a></p></div>\n                </div>\n            </div>\n\n        <div class=\"service_spacing-2\"></div>\n\t</div>\n</div>"
+}

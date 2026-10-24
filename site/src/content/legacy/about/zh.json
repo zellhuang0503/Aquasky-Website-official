@@ -1,0 +1,24 @@
+{
+  "_note": "舊站 /zh/about 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。",
+  "template": "legacy",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "關於 AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商",
+    "description": "認識創立於 1998 年的溢康企業 (AQUASKY)。了解我們的企業使命、品質堅持，以及作為全球隔膜式壓力桶領先製造商的發展歷程。"
+  },
+  "h1": "公司簡介",
+  "hasVisibleH1": true,
+  "legacyJsonLd": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://aquaskyplus.com/zh/about#webpage",
+      "url": "https://aquaskyplus.com/zh/about",
+      "name": "關於 AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    }
+  ],
+  "bodyHtml": "<div id=\"about-container-01\" class=\"container-fluid lang_rtl\">\n<h1 id=\"about-top-title\" class=\"h1-1\">公司簡介</h1>\n<div class=\"container-fluid about_white_bg about_spacing_1\">\n\t<div class=\"container\">\n        <div class=\"about_img_01\"><img src=\"/images/about/about-t-01.png\" class=\"img-responsive center-block\" alt=\"Aquasky Enterprise Corp.,\"></div>\n        <div class=\"about_t_line_01\">創立於 1998 年</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        溢康企業股份有限公司 (AQUASKY) 創立於 1998 年，最初只是在台中的一個小型水五金加工廠，然而現今已發展成為全球領先的隔膜式壓力桶製造商。溢康企業股份有限公司提供全方位的壓力桶製造解決方案，以提供最優質的壓力桶支援國際經銷商，提供壓力桶給住宅用水, 汙水處理、熱水器、空調、太陽能熱水器以及商業加壓泵浦系統等服務市場。<br>我們的目標是為客戶提供最優質、可靠的壓力桶，並以具有競爭力的價格，提供穩定的供貨、最快的客製化設計選項和準時的交貨。讓全世界都能享有好的用水體驗.        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s1\"></a>\n<div id=\"about-container-02\" class=\"container-fluid lang_rtl\">\n  <div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">合作夥伴</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        在溢康，每天我們都積極努力地為客戶提供服務。我們的業務經理非常專業且用心地去了解如何幫助客戶，使客戶的業務更加成功。 身為您的合作夥伴，我們攜手合作致力於成本控管與流程妥善的運作。        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s2\"></a>\n<div id=\"about-container-03\" class=\"container-fluid lang_rtl\">\n<div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">高品質</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        我們的大量生產使用自動化生產機械和測試設備。 每一位員工都經過培訓且經驗豐富。我們大部分的生產工作都在內部進行，這限制了來自其他製造商的品質問題。每個壓力桶都經過100％的壓力安全測試，以確保最好的產品出廠。        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s3\"></a>\n<div id=\"about-container-04\" class=\"container-fluid lang_rtl\">\n<div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">具有競爭力的價格</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        我們的高產量且不斷增長，使我們能夠就碳鋼、丁基橡膠和不銹鋼等原材料取得更優惠的價格。 此外，更大的產量也使我們有理由購買更先進、高效且具有成本效益的生產機械。這使我們能夠吸收過去兩年間許多大型物料價格的上漲。        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s4\"></a>\n<div id=\"about-container-05\" class=\"container-fluid lang_rtl\">\n<div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">客製化服務</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        溢康的業務團隊像客戶一樣行事，為客戶尋找解決方案，預測挑戰並積極尋求解決辦法。我們依靠團隊合作和努力不懈來維持我們的合作夥伴關係。我們做正確的事情。我們傾聽客戶，坦誠溝通，並履行承諾。我們希望讓我們的客戶都能輕鬆愉快地與溢康合作。 希望成為客戶公司的業務延伸。        </div>\n    </div>\n</div>\n</div>"
+}

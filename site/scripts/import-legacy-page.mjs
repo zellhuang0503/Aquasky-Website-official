@@ -15,7 +15,7 @@ const archive = resolve(root, '..', 'migration-2026-10-22');
 const args = process.argv.slice(2);
 const force = args.includes('--force');
 const ORIGIN = 'https://aquaskyplus.com';
-const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories'];
+const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories', '/products', '/about', '/feature', '/certification', '/FAQ', '/contact', '/downloadpage', '/videos', '/sel_tools'];
 const paths = args.filter((a) => a.startsWith('/'));
 const PAGES = (paths.length ? paths : DEFAULT).map((p) => ({ path: p, id: p.slice(1).toLowerCase() }));
 
@@ -37,9 +37,12 @@ function parse(lang, p) {
   const description = unescape(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '');
   // 舊站 <head> 自己寫的 JSON-LD（Product），原樣搬過來；@context 拿掉，由 Seo.astro 的 @graph 統一給
   const headHtml = html.slice(0, html.indexOf('<body'));
-  const legacyJsonLd = [...headHtml.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((m) => {
-    const obj = JSON.parse(m[1]);
-    if (Array.isArray(obj)) throw new Error(`${lang}${p.path}: JSON-LD array not handled`);
+  // 有的頁是單一物件（Product），有的是 @graph；攤平後，Organization／WebSite／BreadcrumbList 由新站統一產生，舊的不重複帶
+  const legacyJsonLd = [...headHtml.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((m) => {
+    const parsed = JSON.parse(m[1]);
+    const items = Array.isArray(parsed) ? parsed : parsed['@graph'] ? parsed['@graph'] : [parsed];
+    return items.filter((o) => !['Organization', 'WebSite', 'BreadcrumbList'].includes(o['@type']));
+  }).map((obj) => {
     delete obj['@context'];
     // 舊站把 BreadcrumbList 塞在 Product.breadcrumb 裡：schema.org 的 Product 沒有這個屬性（那是 WebPage 的），Google 不會讀；
     // 而且舊站的名稱跟選單對不上（zh 的「Home」是英文、「專用配件」vs 選單「安裝配件」）。新站只留 Seo.astro 頂層那份（用選單字樣）。
@@ -51,12 +54,25 @@ function parse(lang, p) {
     .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\.nav\s*>\s*li\s*>\s*a\s*\{[^}]*\}/g, '')
     .replace(/url\((['"]?)(?!\/|https?:|data:)/g, 'url($1/').replace(/\s+/g, ' ').replace(/\s*}\s*/g, '}\n').trim();
   const extraCss = [...html.matchAll(/<link[^>]+href="([^"]+\.css)(?:\?[^"]*)?"/g)].map((m) => absUrl(m[1]))
-    .filter((h) => !['/css/bootstrap.css', '/css/bootstrap.min.css', '/css/style.css', '/css/animation.css', '/js/wow/css/libs/animate.css', '/css/a-hover.css'].includes(h));
+    .filter((h) => !['/css/bootstrap.css', '/css/bootstrap.min.css', '/css/style.css', '/css/animation.css', '/js/wow/css/libs/animate.css', '/css/a-hover.css'].includes(h))
+    .filter((h) => { const ok = index.has(ORIGIN + h); if (!ok) console.log(`note: ${lang}${p.path} links ${h} but the old site has no such file; skipped`); return ok; });
   // 主體
   let body = html.slice(html.indexOf('</header>') + '</header>'.length, html.indexOf('<footer'));
   body = body.replace(/<!--[\s\S]*?-->/g, '');
-  if (/<script|<iframe|<form|<object|<embed/i.test(body)) throw new Error(`${lang}${p.path}: body has script/iframe/form — handle by hand`);
+  if (/<script|<iframe|<object|<embed/i.test(body)) throw new Error(`${lang}${p.path}: body has script/iframe — handle by hand`);
+  if (/<form/i.test(body) && p.id !== 'contact') throw new Error(`${lang}${p.path}: unexpected <form>`);
   body = body.replace(/<div id="return-to-top"[\s\S]*$/, '');
+  if (p.id === 'contact') {
+    // 聯絡表單：舊站靠 PHP 驗證碼（recode.php）與 csrf 送到後端，新站是靜態站，先把這些拿掉、action 改 #；
+    // 送出功能上線前另接 Worker API（整體規劃 §7.2：表單 Worker＋Turnstile）。表單外觀保留。
+    const before = body;
+    body = body
+      .replace(/<div class="col-xs-6 col-sm-4">\s*<input[^>]*chk_code[^>]*>\s*<\/div>\s*<div class="col-xs-6 col-sm-8">[\s\S]*?<\/div>/, '')
+      .replace(/<input type="hidden" name="csrf"[^>]*>/, '')
+      .replace(/<div style="position:absolute;left:-9999px;top:-9999px;"[\s\S]*?<\/div>\s*(?=<\/form>)/, '')
+      .replace(/<form([^>]*)action="[^"]*"/, '<form$1action="#" data-todo="form-not-wired"');
+    if (before === body || /chk_code|csrf|recode\.php|onclick/.test(body)) throw new Error(`${lang}${p.path}: contact form cleanup did not apply`);
+  }
   const h1s = [...body.matchAll(/<h1([^>]*)>([\s\S]*?)<\/h1>/g)];
   const h1 = h1s.map((m) => text(m[2])).find((t) => t) ?? '';
   // 只留第一個有字的 h1；其他 h1（包標題圖的）改成 div

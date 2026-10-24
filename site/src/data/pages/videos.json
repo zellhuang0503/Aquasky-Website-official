@@ -1,0 +1,21 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/videos/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/videos 與 /zh/videos。",
+  "id": "videos",
+  "path": "/videos",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/videos",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": "#news-container { background-color:#f4f2f0;}\n.news-txt h2 { color:#002d49; font-weight:bold; text-align:center;}\n.news-txt p { color:#0088d1; font-size:18px; line-height:30px;}\n.news-txt-b { font-weight:bold; text-align:center;}\n.page_spacing { padding-top:50px; padding-bottom:50px;}\n.page_spacing-2 { padding-top:30px; padding-bottom:30px;}\n.news-h4 { color:#1eb9ee; font-weight:bold; font-style:italic;}\n.news-item { padding:30px 0 0 0;}\n.news-item-more { border-bottom:2px solid #53c7ee; padding:5px 0 5px 0;}\n.news-time-style-1 { color:#666; font-size:18px; font-style:italic;}\n.news-img-border { border-bottom:8px solid #0086cd;}\n.news-title-style { padding:30px 0 0 0; color:#0088d1; font-weight:bold; font-size:18px;}\n.news-text{ font-size:16px;}\n.news-right-list { padding:30px 0 30px 0;}\n.news-right-list-title { color:#0088d1; font-weight:bold; font-size:18px; font-style:italic;}",
+  "extraCss": [],
+  "assets": [
+    "/upfile/Images/videos/20201203-AQ.jpg",
+    "/upfile/Images/news/The_Shield_Coating_Tank.jpg",
+    "/upfile/Images/news/N2.png",
+    "/upfile/Images/videos/vDOU0571.jpg",
+    "/upfile/Images/videos/vDOU0837.jpg"
+  ],
+  "dataQuestions": []
+}

@@ -154,7 +154,8 @@ const legacy = defineCollection({
     legacyJsonLd: z.array(z.object({ '@type': z.string() }).passthrough()),
     // 主體 HTML：不准有 script／iframe／form／事件屬性；相對路徑都已改絕對
     bodyHtml: z.string().min(200)
-      .refine((s) => !/<(script|iframe|form|object|embed)/i.test(s), 'bodyHtml 不能有 script/iframe/form')
+      .refine((s) => !/<(script|iframe|object|embed)\b/i.test(s), 'bodyHtml 不能有 script/iframe')
+      .refine((s) => !/<form\b(?![^>]*action="#")/i.test(s), '表單只能 action="#"（新站是靜態站，送出要另接 Worker API）')
       .refine((s) => !/\son\w+=/i.test(s), 'bodyHtml 不能有 on* 事件屬性')
       .refine((s) => !/(src|href)="(?!\/|https?:|#|mailto:|tel:)/.test(s), 'bodyHtml 的 src/href 必須是絕對路徑'),
   }),

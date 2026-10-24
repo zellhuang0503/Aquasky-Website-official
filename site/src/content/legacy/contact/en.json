@@ -1,0 +1,24 @@
+{
+  "_note": "Old /en/contact page body copied verbatim (incl. its product line). Edit bodyHtml to change text. The old page had no h1; the page adds a visually-hidden h1 = title.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Contact AQUASKY: Request Quote & Technical Support for Pressure Tanks",
+    "description": "Get in touch with AQUASKY. Contact our Taiwan factory for pricing quotes, OEM/ODM manufacturing partnerships, distribution rights, and technical tank support."
+  },
+  "h1": "Contact AQUASKY: Request Quote & Technical Support for Pressure Tanks",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://aquaskyplus.com/en/contact#webpage",
+      "url": "https://aquaskyplus.com/en/contact",
+      "name": "Contact AQUASKY: Request Quote & Technical Support for Pressure Tanks",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    }
+  ],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">CONTACT</div>\n<div class=\"service_spacing-2\"></div>\n\n\t<div class=\"container service_spacing\">\n    \t<div class=\"row\">\n        \t<div class=\"col-md-6\">\n     \t\t\t<h2 class=\"contact-font-1\">CONTACT INFO</h2>\n                <div class=\"service_spacing-2\"></div>\n                <p class=\"contact-font-2\">AQUASKY ENTERPRISE CORP<br>\nPressure Tank</p>\n<p class=\"contact-font-3\">\nTel: 886-4-2562-6368<br>\n\nFax: 886-4-2561-6332<br>\n\nWeb: www.aquaskyplus.com<br>\n\nEmail: <a href=\"/cdn-cgi/l/email-protection\" class=\"__cf_email__\" data-cfemail=\"97f1e5f6f9fce0f6f9f0d7f6e6e2f6e4fceeb9f4f8fab9e3e0\">[email&#160;protected]</a><br>\n\nNo. 36, Ln. 212, Sec 1, Hemu Rd.,<br>\nShengang Dist., Taichung City 429, Taiwan.<br>\n</p>\n<br>\n<p class=\"contact-font-2\">溢康企業股份有限公司</p>\n<p class=\"contact-font-3\">\n電話: 886-4-2562-6368<br>\n\n傳真: 886-4-2561-6332<br>\n\n網站: www.aquaskyplus.com<br>\n\n電子郵件: <a href=\"/cdn-cgi/l/email-protection\" class=\"__cf_email__\" data-cfemail=\"4c2a3e2d22273b2d222b0c2d3d392d3f2735622f232162383b\">[email&#160;protected]</a><br>\n\n地址: 台中市神岡區和睦路一段212巷36號\n</p>\n\t\t\t</div>\n            <div class=\"col-md-6\">\n            \t<h2 class=\"contact-font-1 lang_rtl\">CONTACT FORM</h2>\n                  <div class=\"contact-btn\">\n\n   <form id=\"fchk1\" name=\"form1\" method=\"post\" action=\"#\" data-todo=\"form-not-wired\">\n   <div class=\"row\">\n   \t<div class=\"col-xs-12\"><input name=\"txt1\" id=\"txt1\" type=\"text\" maxlength=\"100\" class=\"form-control lang_rtl\" placeholder=\"*NAME\" value=\"\" required=\"\"></div>\n    <div class=\"col-xs-12\"><input name=\"txt2\" id=\"txt2\" type=\"email\" maxlength=\"255\" class=\"form-control lang_rtl\" placeholder=\"*E-MAIL\" value=\"\" required=\"\"></div>\n    <div class=\"col-xs-12\"><input name=\"txt3\" id=\"txt3\" type=\"text\" maxlength=\"50\" class=\"form-control lang_rtl\" placeholder=\"PHONE\" value=\"\"></div>\n    <div class=\"col-xs-12\"><textarea name=\"t-area\" id=\"t-area\" cols=\"45\" rows=\"5\" maxlength=\"5000\" class=\"form-control lang_rtl\" placeholder=\"*MESSAGE\" required=\"\"></textarea></div>\n\n\t<div class=\"col-xs-12\"><button type=\"submit\" id=\"send-btn\" class=\"btn btn-bg-color lang_rtl\">SEND</button>\n\n\t</div>\n  </div>\n\n  </form>\n  </div>\n            </div>\n        </div>\n    </div>\n\n<div class=\"service_spacing\"></div>\n</div>"
+}

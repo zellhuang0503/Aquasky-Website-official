@@ -1,0 +1,30 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/faq/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/FAQ 與 /zh/FAQ。",
+  "id": "faq",
+  "path": "/FAQ",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/FAQ",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": "#news-container { background-color:#f4f2f0;}\n.news-txt h2 { color:#002d49; font-weight:bold; text-align:center;}\n.news-h2 { color:#008ecf; font-weight:bold;}\n.news-h3 { color:#008ecf; font-weight:bold; font-style:italic;}\n.news-h4 { color:#1eb9ee; font-weight:bold; font-style:italic;}\n.news-line { padding:10px 5px 20px 5px; border-bottom:3px solid #008ecf;}\n.news-line2 { padding:10px 5px 20px 5px; border-bottom:3px dotted #008ecf;}\n.news-title { color:#008ecf; font-size:20px; font-weight:bold; font-style:italic; padding:20px 5px;}\n.news-title-img { float:left; display:block;}\n.news-title-txt { float:left; display:block;}\n.news-content { margin-left:10%; padding:20px; background:#e2dddb; font-size:15px;}\n.news-content .table > thead > tr > th, .news-content .table > tbody > tr > th, .news-content .table > tfoot > tr > th, .news-content .table > thead > tr > td, .news-content .table > tbody > tr > td, .news-content .table > tfoot > tr > td { border-top: 1px solid #000;}\n.news-content .table>thead>tr>th { border-bottom: 2px solid #000;}\n.page_spacing { padding-top:50px; padding-bottom:50px;}\n.page_spacing-2 { padding-top:30px; padding-bottom:30px;}\n.page_spacing-3 { padding-top:20px; padding-bottom:20px;}\n.news-item { padding:30px 0 0 0;}\n.news-item-more { border-bottom:2px solid #53c7ee; padding:5px 0 5px 0;}\n.news-time-style-1 { color:#666; font-size:18px; font-style:italic;}\n.news-img-border { border-bottom:8px solid #0086cd;}\n.news-title-style { padding:0 0 0 0; color:#0088d1; font-weight:bold; font-size:18px; word-wrap: break-word; word-break: break-all;}\n.news-text{ font-size:16px;}\n.news-right-list { padding:30px 0 30px 0;}\n.news-right-list-title { color:#0088d1; font-weight:bold; font-size:18px; font-style:italic;}",
+  "extraCss": [],
+  "assets": [
+    "/images/FAQ/FAQ-01.png",
+    "/images/FAQ/FAQ-08.png",
+    "/images/FAQ/FAQ-02.png",
+    "/images/FAQ/FAQ-09.png",
+    "/images/FAQ/FAQ-03.png",
+    "/images/FAQ/FAQ-10.png",
+    "/images/FAQ/FAQ-04.png",
+    "/images/FAQ/FAQ-11.png",
+    "/images/FAQ/FAQ-05.png",
+    "/images/FAQ/FAQ-12.png",
+    "/images/FAQ/FAQ-06.png",
+    "/images/FAQ/FAQ-13.png",
+    "/images/FAQ/FAQ-07.png",
+    "/images/FAQ/FAQ-14.png"
+  ],
+  "dataQuestions": []
+}

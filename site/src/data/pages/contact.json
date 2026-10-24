@@ -1,0 +1,15 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/contact/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/contact 與 /zh/contact。",
+  "id": "contact",
+  "path": "/contact",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/contact",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".contact-btn .col-sm-6 ,.contact-btn .col-xs-6 , .contact-btn .col-xs-12 {padding-left:0;padding-right:0;}\n.form-control {}\n#service-container { background-color:#f4f2f0;}\n.service-txt h2 { color:#002d49; font-weight:bold; text-align:center;}\n.service-txt p { color:#0088d1; font-size:18px; line-height:30px;}\n.service-txt-b { font-weight:bold; text-align:center;}\n.service_spacing { padding-top:50px; padding-bottom:50px;}\n.service_spacing-2 { padding-top:20px; padding-bottom:20px;}\n.contact-font-1 { color:#00b9ef; font-weight:bold;}\n.contact-font-2 { color:#0086ce; font-weight:bold; font-size:18px;}\n.contact-font-3 { color:#0086ce; font-size:15px; line-height:25px;}\n.contact-btn input, #t-area { margin:10px 10px 10px 0; background-color:#00b9ef; color:#FFF; border-radius: 0px;}\n#send-btn { background-color:#00b9ef; padding-left:30px; padding-right:30px; color:#FFF; margin-top:5px;}\n.form-control { color:#FFF;}\n.form-control::-moz-placeholder { color: #FFF; opacity: 1;}\n.form-control:-ms-input-placeholder { color: #FFF;}\n.form-control::-webkit-input-placeholder { color: #FFF;}\n.btn-bg-color { background-image: -webkit-gradient(linear, center top, center bottom, from(#00a6ea), to(#0075c1)); background-image: -webkit-linear-gradient(top, #00a6ea, #0075c1); background-image: -moz-linear-gradient(top, #00a6ea, #0075c1); background-image: -o-linear-gradient(top, #00a6ea, #0075c1); background-image: -ms-linear-gradient(top, #00a6ea, #0075c1); background-image: linear-gradient(to bottom, #00a6ea, #0075c1);}\n#rwd-recode {margin:10px;}\n.error {color:#C00;}",
+  "extraCss": [],
+  "assets": [],
+  "dataQuestions": []
+}

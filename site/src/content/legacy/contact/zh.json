@@ -1,0 +1,24 @@
+{
+  "_note": "舊站 /zh/contact 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。",
+  "template": "legacy",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "聯絡 AQUASKY 溢康企業：取得壓力桶詢價與 OEM/ODM 合作諮詢",
+    "description": "與溢康企業 (AQUASKY) 取得聯絡。歡迎向我們的台灣工廠索取經銷報價、諮詢 OEM/ODM 合作、全球代工或壓力桶技術支援。"
+  },
+  "h1": "聯絡 AQUASKY 溢康企業：取得壓力桶詢價與 OEM/ODM 合作諮詢",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://aquaskyplus.com/zh/contact#webpage",
+      "url": "https://aquaskyplus.com/zh/contact",
+      "name": "聯絡 AQUASKY 溢康企業：取得壓力桶詢價與 OEM/ODM 合作諮詢",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    }
+  ],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">聯絡我們</div>\n<div class=\"service_spacing-2\"></div>\n\n\t<div class=\"container service_spacing\">\n    \t<div class=\"row\">\n        \t<div class=\"col-md-6\">\n     \t\t\t<h2 class=\"contact-font-1\">聯絡方式</h2>\n                <div class=\"service_spacing-2\"></div>\n                <p class=\"contact-font-2\">AQUASKY ENTERPRISE CORP<br>\nPressure Tank</p>\n<p class=\"contact-font-3\">\nTel: 886-4-2562-6368<br>\n\nFax: 886-4-2561-6332<br>\n\nWeb: www.aquaskyplus.com<br>\n\nEmail: <a href=\"/cdn-cgi/l/email-protection\" class=\"__cf_email__\" data-cfemail=\"e7819586898c90868980a786969286948c9ec984888ac99390\">[email&#160;protected]</a><br>\n\nNo. 36, Ln. 212, Sec 1, Hemu Rd.,<br>\nShengang Dist., Taichung City 429, Taiwan.<br>\n</p>\n<br>\n<p class=\"contact-font-2\">溢康企業股份有限公司</p>\n<p class=\"contact-font-3\">\n電話: 886-4-2562-6368<br>\n\n傳真: 886-4-2561-6332<br>\n\n網站: www.aquaskyplus.com<br>\n\n電子郵件: <a href=\"/cdn-cgi/l/email-protection\" class=\"__cf_email__\" data-cfemail=\"543226353a3f23353a331435252135273f2d7a373b397a2023\">[email&#160;protected]</a><br>\n\n地址: 台中市神岡區和睦路一段212巷36號\n</p>\n\t\t\t</div>\n            <div class=\"col-md-6\">\n            \t<h2 class=\"contact-font-1 lang_rtl\">聯絡表單</h2>\n                  <div class=\"contact-btn\">\n\n   <form id=\"fchk1\" name=\"form1\" method=\"post\" action=\"#\" data-todo=\"form-not-wired\">\n   <div class=\"row\">\n   \t<div class=\"col-xs-12\"><input name=\"txt1\" id=\"txt1\" type=\"text\" maxlength=\"100\" class=\"form-control lang_rtl\" placeholder=\"*姓名\" value=\"\" required=\"\"></div>\n    <div class=\"col-xs-12\"><input name=\"txt2\" id=\"txt2\" type=\"email\" maxlength=\"255\" class=\"form-control lang_rtl\" placeholder=\"*電子郵件\" value=\"\" required=\"\"></div>\n    <div class=\"col-xs-12\"><input name=\"txt3\" id=\"txt3\" type=\"text\" maxlength=\"50\" class=\"form-control lang_rtl\" placeholder=\"電話\" value=\"\"></div>\n    <div class=\"col-xs-12\"><textarea name=\"t-area\" id=\"t-area\" cols=\"45\" rows=\"5\" maxlength=\"5000\" class=\"form-control lang_rtl\" placeholder=\"*留言內容\" required=\"\"></textarea></div>\n\n\t<div class=\"col-xs-12\"><button type=\"submit\" id=\"send-btn\" class=\"btn btn-bg-color lang_rtl\">送出</button>\n\n\t</div>\n  </div>\n\n  </form>\n  </div>\n            </div>\n        </div>\n    </div>\n\n<div class=\"service_spacing\"></div>\n</div>"
+}
