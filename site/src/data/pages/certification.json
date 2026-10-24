@@ -13,6 +13,7 @@
     "/js/owl/owl.carousel.css",
     "/js/owl/owl.theme.css"
   ],
+  "bootstrap": "full",
   "assets": [
     "/images/CERTIFICATION/icon/img_01.png",
     "/images/CERTIFICATION/icon/img_02.png",

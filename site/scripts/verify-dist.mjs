@@ -91,8 +91,8 @@ for (const page of PAGES) {
     if (!existsSync(file)) fail(`${where}: missing asset ${m[1]}`);
   }
   // 內部頁面連結
-  for (const m of html.matchAll(/<a[^>]+href="(\/[^"#?]*)"/g)) {
-    const target = m[1];
+  for (const m of html.matchAll(/<a[^>]+href="(\/[^"#]*)"/g)) {
+    const target = m[1];   // 含 query（例如舊站 /certification_page.php?sid=4）也列進尚未搬遷
     if (/\.(png|jpe?g|webp|pdf)$/.test(target)) continue;
     if (built.has(target)) continue;
     pending.set(target, (pending.get(target) || 0) + 1);
@@ -160,14 +160,24 @@ for (const page of PAGES) {
       if (norm(block) !== norm(gotBlock)) fail(`${where}: DM block structure differs from archived page\n    old: ${norm(block).slice(0, 160)}\n    new: ${norm(gotBlock).slice(0, 160)}`);
     }
   }
+  if (/\/cdn-cgi\/|__cf_email__/.test(html)) fail(`${where}: Cloudflare email obfuscation left in page`);
+  if (page.legacy && page.legacy.id === 'faq') {
+    const faq = graph.find((n) => n['@type'] === 'FAQPage');
+    const onPage = (html.match(/<div class="news-title">/g) || []).length;
+    if (!faq) fail(`${where}: FAQPage missing`);
+    else if ((faq.mainEntity || []).length !== onPage) fail(`${where}: FAQPage has ${(faq.mainEntity || []).length} questions, page shows ${onPage}`);
+  }
   if (page.legacy) {
     // 照抄型：<main> 的純文字要跟封存舊頁 </header>…<footer 之間的純文字一字不差
     const archived = archivedPage(page.code, page.legacy.path);
     if (!archived) fail(`${where}: archived page not found for text comparison`);
     else {
       // aria-hidden 區塊（舊站聯絡表單的蜜罐欄位）不算內容；新站匯入時已拿掉
-      const plain = (s) => decode(s.replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<div[^>]*aria-hidden="true"[\s\S]*?<\/div>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
-      const oldText = plain(archived.slice(archived.indexOf('</header>') + 9, archived.indexOf('<footer')));
+      const plain = (s) => decode(s.replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<script[\s\S]*?<\/script>/g, '').replace(/<div[^>]*aria-hidden="true"[\s\S]*?<\/div>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
+      const decodeCf = (hex) => { const k = parseInt(hex.slice(0, 2), 16); let o = ''; for (let i = 2; i < hex.length; i += 2) o += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16) ^ k); return o; };
+      const oldBody = archived.slice(archived.indexOf('</header>') + 9, archived.indexOf('<footer'))
+        .replace(/<a[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/a>/g, (_m, h) => decodeCf(h));   // 舊站 CF email 混淆，比對前先還原
+      const oldText = plain(oldBody);
       const mainHtml = html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1] ?? '';
       const content = JSON.parse(readFileSync(join(root, `src/content/legacy/${page.legacy.id}/${page.code}.json`), 'utf8'));
       let newText = plain(mainHtml);

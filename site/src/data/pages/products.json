@@ -13,6 +13,7 @@
     "/js/owl/owl.carousel.css",
     "/js/owl/owl.theme.css"
   ],
+  "bootstrap": "min",
   "assets": [
     "/images/products/pd_ling_bg.jpg",
     "/images/pdg-01.png",

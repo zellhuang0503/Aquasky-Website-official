@@ -23,7 +23,7 @@
 | --- | --- | --- |
 | `lqcol` | LQCOL-PLUS | `scripts/import-lqcol.mjs`（從 translation/ 匯入） |
 | `classic` | PUMPLUS、RO-PLUS、THERMAL-PLUS、HYDRO-PLUS、PREMIUM-PLUS、MEGA-PLUS、SOLAR-PLUS | `scripts/import-classic-series.mjs`（直接解析封存的 en／zh 頁面：h1、介紹文、型號清單、DM 圖、頁面 `<style>`） |
-| `legacy` | supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（結構各不同、數量少） | `scripts/import-legacy-page.mjs`：舊頁 `</header>`…`<footer` 整段抄進 `src/content/legacy/<id>/<lang>.json` 的 `bodyHtml`（相對路徑改絕對、去 wow 動畫 class、第二個 h1 改 div、#ImgAutoResponsive 的圖照舊站 JS 改 img-responsive）；頁面樣式在 `src/data/pages/<id>.json`。schema 禁止 script／iframe／form／on* 屬性。改文字直接改 bodyHtml |
+| `legacy` | supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（結構各不同、數量少） | `scripts/import-legacy-page.mjs`：舊頁 `</header>`…`<footer` 整段抄進 `src/content/legacy/<id>/<lang>.json` 的 `bodyHtml`（相對路徑改絕對、去 wow 動畫 class、第二個 h1 改 div、#ImgAutoResponsive 的圖照舊站 JS 改 img-responsive）；頁面樣式在 `src/data/pages/<id>.json`。schema 禁止 script／iframe／on* 屬性，表單只允許 action="#"。改文字直接改 bodyHtml |
 
 每個系列頁自己的樣式（h1 色條顏色、底圖、標題圖位置）照舊站頁面的 `<style>` 抄在 `src/data/products/<id>.json` 的 `legacyCss`，由頁面以 `headStyle` 輸出；共用的 `src/styles/site.css` 不放任何系列專用規則，免得互相蓋到。匯入腳本只跑一次，之後改內容直接改 JSON；要重跑加 `--force`。
 
@@ -90,6 +90,10 @@ npm run check           # 型別與模板檢查
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁），中文頁同樣連英文明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。
+- 聯絡頁 email：舊站經 Cloudflare 混淆（/cdn-cgi/l/email-protection）再靠 JS 還原；新站匯入時直接解碼成純文字（同舊站還原後的樣子）。
+- feature 頁六個說明面板的切換，舊站是 jQuery；新站在 LegacyPage 裡用 10 行純 JS 做同樣的事。
+- FAQ 頁的 FAQPage 結構化資料，舊站是 AEO Worker 注入的；新站改從頁面 29 題直接產生，verify 比題數。
+- 照抄頁載哪個 bootstrap 照舊站（products 與首頁是 min，其他是客製 full）；series_content.css 只有 LQCOL 載。
 - 聯絡表單：舊站用 PHP 驗證碼圖與 csrf；新站是靜態站，先拿掉驗證碼那一列與隱藏欄位、action 改 `#`（按送出不會送）。上線前另做 Worker API＋Turnstile（整體規劃 §7.2）。
 - 下載頁有 6 張國旗圖檔名是非英文（例如 Україна.jpg），封存裡是百分比編碼，複製腳本兩種寫法都認；`--fetch-missing` 可從線上舊站補封存沒有的檔。
 - 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。

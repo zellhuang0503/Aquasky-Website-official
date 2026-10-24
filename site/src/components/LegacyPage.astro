@@ -4,6 +4,7 @@ import { getEntry } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { type Lang, t } from '../lib/i18n';
+import { nav } from '../lib/data';
 
 interface Props { lang: Lang; page: CollectionEntry<'pages'>['data'] }
 const { lang, page } = Astro.props;
@@ -11,16 +12,31 @@ const entry = await getEntry('legacy', `${page.id}/${lang}`);
 if (!entry) throw new Error(`missing src/content/legacy/${page.id}/${lang}.json`);
 const c = entry.data;
 const d = t(lang);
-const navKey: Record<string, string> = { supreme: 'SUPREME-PLUS', 'dl-ce': 'DL-TANK', 'asme-ht': 'ASME-TANK', 'giga-plus': 'GIGA-PLUS', accessories: 'ACCESSORIES-PLUS' };
-const label = (d.nav as Record<string, string>)[navKey[page.id] ?? ''] ?? c.h1;
-const breadcrumbs = [
-  { name: d.common.breadcrumbHome, path: '' },
-  { name: d.nav.products, path: '/products' },
-  { name: label, path: page.path },
-];
+// 麵包屑：從選單找這個路徑在哪。PRODUCTS 底下的系列頁 → 首頁›產品系列›X；其他頁 → 首頁›該頁選單字樣；products 本身 → 首頁›產品系列
+const labelOf = (key: string) => (d.nav as Record<string, string>)[key] ?? key;
+let crumb: { name: string; path: string }[] = [];
+for (const item of nav.items) {
+  if (!crumb.length && item.path === page.path) crumb = [{ name: labelOf(item.key), path: page.path }];
+  for (const c2 of item.children ?? []) if (!crumb.length && c2.path === page.path) crumb = item.key === 'products' ? [{ name: labelOf('products'), path: '/products' }, { name: labelOf(c2.key), path: page.path }] : [{ name: labelOf(c2.key), path: page.path }];
+  for (const g of item.groups ?? []) for (const c3 of g.children) if (!crumb.length && c3.path === page.path) crumb = [{ name: labelOf('products'), path: '/products' }, { name: labelOf(c3.key), path: page.path }];
+}
+if (!crumb.length) crumb = [{ name: c.h1, path: page.path }];
+const breadcrumbs = [{ name: d.common.breadcrumbHome, path: '' }, ...crumb];
 const image = page.assets.find((a) => /\.(png|jpe?g|webp)$/i.test(a));
 ---
-<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={page.extraCss} headStyle={page.legacyCss}>
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap={page.bootstrap} extraCss={page.extraCss} headStyle={page.legacyCss}>
   {!c.hasVisibleH1 && <h1 class="visually-hidden">{c.h1}</h1>}
   <Fragment set:html={c.bodyHtml} />
+  {page.id === 'feature' && (
+    <script is:inline>
+      // 舊站 feature 頁的 jQuery：點 .feature_obj 時把六個說明面板全部藏起來，只顯示 obj_id_name 指到的那個（hover 覆蓋圖是 CSS）
+      document.querySelectorAll('.feature_obj').forEach(function (el) {
+        el.addEventListener('click', function () {
+          document.querySelectorAll('.obj_ev_item').forEach(function (p) { p.style.display = 'none'; });
+          var target = document.getElementById(el.getAttribute('obj_id_name'));
+          if (target) target.style.display = 'block';
+        });
+      });
+    </script>
+  )}
 </Base>

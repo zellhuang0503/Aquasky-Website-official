@@ -13,6 +13,7 @@
     "/js/owl/owl.carousel.css",
     "/js/owl/owl.theme.css"
   ],
+  "bootstrap": "full",
   "assets": [
     "/js/owl/owl.carousel.css",
     "/js/owl/owl.theme.css"

@@ -157,6 +157,7 @@ const legacy = defineCollection({
       .refine((s) => !/<(script|iframe|object|embed)\b/i.test(s), 'bodyHtml 不能有 script/iframe')
       .refine((s) => !/<form\b(?![^>]*action="#")/i.test(s), '表單只能 action="#"（新站是靜態站，送出要另接 Worker API）')
       .refine((s) => !/\son\w+=/i.test(s), 'bodyHtml 不能有 on* 事件屬性')
+      .refine((s) => !/cdn-cgi|__cf_email__/.test(s), 'bodyHtml 不能留 Cloudflare email 混淆')
       .refine((s) => !/(src|href)="(?!\/|https?:|#|mailto:|tel:)/.test(s), 'bodyHtml 的 src/href 必須是絕對路徑'),
   }),
 });
@@ -168,6 +169,8 @@ const pages = defineCollection({
     template: z.literal('legacy'),
     legacyCss: z.string(),
     extraCss: z.array(sitePath),
+    // 舊站首頁／products 載 bootstrap.min.css，其他內頁載客製 bootstrap.css
+    bootstrap: z.enum(['min', 'full']).default('full'),
     assets: z.array(z.string()),
     dataQuestions: z.array(z.string()),
   }),

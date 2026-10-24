@@ -28,6 +28,9 @@ for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\
 const unescape = (s) => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/&rsquo;/g, '’').replace(/&ndash;/g, '–');
 const text = (s) => unescape(s.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
 // 相對路徑改絕對：舊站的 ../images/x 與 images/x 都在站根，一律變 /images/x；src 裡的換行（舊站打錯）去掉
+// Cloudflare 的 email 混淆：<a href="/cdn-cgi/l/email-protection" data-cfemail="97f1…">[email protected]</a>
+// 舊站靠 CF 的 email-decode.min.js 還原成純文字；新站在匯入時直接解碼成純文字（舊站還原後也是純文字，不是 mailto）
+export const decodeCfEmail = (hex) => { const k = parseInt(hex.slice(0, 2), 16); let out = ''; for (let i = 2; i < hex.length; i += 2) out += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16) ^ k); return out; };
 const absUrl = (u) => { u = u.replace(/[\r\n\t]+/g, ''); return /^(\/|https?:|#|mailto:|tel:|data:)/.test(u) ? u : '/' + u.replace(/^(\.\.\/)+/, ''); };
 
 function parse(lang, p) {
@@ -42,7 +45,8 @@ function parse(lang, p) {
   const legacyJsonLd = [...headHtml.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((m) => {
     const parsed = JSON.parse(m[1]);
     const items = Array.isArray(parsed) ? parsed : parsed['@graph'] ? parsed['@graph'] : [parsed];
-    return items.filter((o) => !['Organization', 'WebSite', 'BreadcrumbList'].includes(o['@type']));
+    // Organization 的子類（Corporation…）也算，新站的 Organization 只有一個
+    return items.filter((o) => !['Organization', 'Corporation', 'LocalBusiness', 'WebSite', 'BreadcrumbList'].includes(o['@type']));
   }).map((obj) => {
     delete obj['@context'];
     // 舊站把 BreadcrumbList 塞在 Product.breadcrumb 裡：schema.org 的 Product 沒有這個屬性（那是 WebPage 的），Google 不會讀；
@@ -63,6 +67,9 @@ function parse(lang, p) {
   if (/<script|<iframe|<object|<embed/i.test(body)) throw new Error(`${lang}${p.path}: body has script/iframe — handle by hand`);
   if (/<form/i.test(body) && p.id !== 'contact') throw new Error(`${lang}${p.path}: unexpected <form>`);
   body = body.replace(/<div id="return-to-top"[\s\S]*$/, '');
+  body = body.replace(/<a[^>]*href="\/cdn-cgi\/l\/email-protection"[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/a>/g, (_m, hex) => decodeCfEmail(hex))
+             .replace(/<span[^>]*class="__cf_email__"[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/span>/g, (_m, hex) => decodeCfEmail(hex));
+  if (/cdn-cgi|__cf_email__|data-cfemail/.test(body)) throw new Error(`${lang}${p.path}: Cloudflare email obfuscation left in body`);
   if (p.id === 'contact') {
     // 聯絡表單：舊站靠 PHP 驗證碼（recode.php）與 csrf 送到後端，新站是靜態站，先把這些拿掉、action 改 #；
     // 送出功能上線前另接 Worker API（整體規劃 §7.2：表單 Worker＋Turnstile）。表單外觀保留。
@@ -104,7 +111,17 @@ function parse(lang, p) {
   for (const m of body.matchAll(/(?:src|href)="(\/[^"]+\.(?:png|jpe?g|webp|gif|svg|pdf))"/gi)) assets.add(m[1]);
   for (const m of (body + legacyCss).matchAll(/url\(['"]?(\/[^'")]+)['"]?\)/g)) assets.add(m[1]);
   for (const c of extraCss) assets.add(c);
-  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd };
+  // 舊站首頁與 products 頁載 bootstrap.min.css，其他內頁載客製的 bootstrap.css（.container padding 0）
+  const bootstrap = /css\/bootstrap\.min\.css/.test(html) ? 'min' : 'full';
+  // FAQ：舊站的 FAQPage 結構化資料是 AEO Worker 從外面注入的，新站改成直接從頁面問答產生（題數＝頁面題數）
+  if (p.id === 'faq') {
+    const qa = [];
+    const re = /<div class="news-title">[\s\S]*?<div class="col-xs-10 col-md-10">([\s\S]*?)<\/div>[\s\S]*?<div class="news-content">([\s\S]*?)<\/div>\s*<\/div>/g;
+    for (const m of body.matchAll(re)) qa.push({ '@type': 'Question', name: text(m[1]), acceptedAnswer: { '@type': 'Answer', text: text(m[2]) } });
+    if (qa.length < 20) throw new Error(`${lang}${p.path}: only ${qa.length} FAQ pairs parsed`);
+    legacyJsonLd.push({ '@type': 'FAQPage', '@id': `${ORIGIN}/${lang}${p.path}#faqpage`, mainEntity: qa });
+  }
+  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd, bootstrap };
 }
 
 // 舊站資料疑點（頁面照原樣，不改；要請客戶確認）。2026-10-24 審查官列出。
@@ -129,6 +146,7 @@ for (const p of PAGES) {
     source: { url: `${ORIGIN}/en${p.path}`, archive: 'migration-2026-10-22', retrieved: en.row.retrieved_at.slice(0, 10) },
     legacyCss: en.legacyCss,
     extraCss: en.extraCss,
+    bootstrap: en.bootstrap,
     assets: [...new Set([...en.assets, ...zh.assets])],
     dataQuestions: DATA_QUESTIONS[p.id] ?? [],
   };
