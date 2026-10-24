@@ -1,5 +1,5 @@
 {
-  "_note": "Home page, English. title/description verbatim from the 2026-10-22 archive (translation/sources/home.md). The old site showed the certification icons without English captions; the captions below are new (translated from the existing zh captions) and need client review.",
+  "_note": "Home page, English. title/description verbatim from the 2026-10-22 archive. The old en home shows the certification icons WITHOUT captions, so label is empty here; draftLabel holds a proposed English caption (translated from zh) that is NOT rendered until the client approves it.",
   "lang": "en",
   "status": "approved-legacy",
   "seo": {
@@ -19,14 +19,46 @@
   "certifications": {
     "heading": "Certifications & Technology",
     "items": [
-      { "icon": "/images/home-service/s2-img-01.png", "label": "EU Pressure Equipment Safety Certification" },
-      { "icon": "/images/home-service/s2-img-02.png", "label": "ISO 9001 Quality Management" },
-      { "icon": "/images/home-service/s2-img-03.png", "label": "Lead-Free Certification" },
-      { "icon": "/images/home-service/s2-img-04.png", "label": "UPC Plumbing Safety Certification" },
-      { "icon": "/images/home-service/s2-img-05.png", "label": "NSF Drinking Water Standard" },
-      { "icon": "/images/home-service/N2.png", "label": "Nitrogen Pre-charged" },
-      { "icon": "/images/home-service/unnamed2.png", "label": "KC Korea Safety Certification" },
-      { "icon": "/images/home-service/s2-img-08.png", "label": "Anti-Rust Shield" }
+      {
+        "icon": "/images/home-service/s2-img-01.png",
+        "label": "",
+        "draftLabel": "EU Pressure Equipment Safety Certification"
+      },
+      {
+        "icon": "/images/home-service/s2-img-02.png",
+        "label": "",
+        "draftLabel": "ISO 9001 Quality Management"
+      },
+      {
+        "icon": "/images/home-service/s2-img-03.png",
+        "label": "",
+        "draftLabel": "Lead-Free Certification"
+      },
+      {
+        "icon": "/images/home-service/s2-img-04.png",
+        "label": "",
+        "draftLabel": "UPC Plumbing Safety Certification"
+      },
+      {
+        "icon": "/images/home-service/s2-img-05.png",
+        "label": "",
+        "draftLabel": "NSF Drinking Water Standard"
+      },
+      {
+        "icon": "/images/home-service/N2.png",
+        "label": "",
+        "draftLabel": "Nitrogen Pre-charged"
+      },
+      {
+        "icon": "/images/home-service/unnamed2.png",
+        "label": "",
+        "draftLabel": "KC Korea Safety Certification"
+      },
+      {
+        "icon": "/images/home-service/s2-img-08.png",
+        "label": "",
+        "draftLabel": "Anti-Rust Shield"
+      }
     ]
   }
 }

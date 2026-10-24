@@ -1,5 +1,5 @@
 {
-  "_note": "首頁中文。title／description 與認證說明沿用 2026-10-22 封存的舊站 zh 首頁（translation/sources/home.md）。",
+  "_note": "首頁中文。title／description 與認證說明一字不差沿用 2026-10-22 封存的舊站 zh 首頁（translation/sources/home.md）；\n 是舊站的 <br>。",
   "lang": "zh",
   "status": "approved-legacy",
   "seo": {
@@ -19,14 +19,38 @@
   "certifications": {
     "heading": "認證與技術",
     "items": [
-      { "icon": "/images/home-service/s2-img-01.png", "label": "歐盟壓力容器安全認證" },
-      { "icon": "/images/home-service/s2-img-02.png", "label": "ISO 9001 製造品質管理認證" },
-      { "icon": "/images/home-service/s2-img-03.png", "label": "無鉛認證" },
-      { "icon": "/images/home-service/s2-img-04.png", "label": "UPC 美國管道安全認證" },
-      { "icon": "/images/home-service/s2-img-05.png", "label": "NSF 飲用水標準認證" },
-      { "icon": "/images/home-service/N2.png", "label": "氮氣充填" },
-      { "icon": "/images/home-service/unnamed2.png", "label": "KC 韓國安全認證" },
-      { "icon": "/images/home-service/s2-img-08.png", "label": "防鏽護盾" }
+      {
+        "icon": "/images/home-service/s2-img-01.png",
+        "label": "歐盟壓力容器\n安全認證"
+      },
+      {
+        "icon": "/images/home-service/s2-img-02.png",
+        "label": "ISO 9001\n製造品質管理認證"
+      },
+      {
+        "icon": "/images/home-service/s2-img-03.png",
+        "label": "無鉛認證"
+      },
+      {
+        "icon": "/images/home-service/s2-img-04.png",
+        "label": "UPC美國管道\n安全認證"
+      },
+      {
+        "icon": "/images/home-service/s2-img-05.png",
+        "label": "NSF飲用水\n標準認證"
+      },
+      {
+        "icon": "/images/home-service/N2.png",
+        "label": "氮氣充填"
+      },
+      {
+        "icon": "/images/home-service/unnamed2.png",
+        "label": "KC韓國安全認證"
+      },
+      {
+        "icon": "/images/home-service/s2-img-08.png",
+        "label": "防鏽護盾"
+      }
     ]
   }
 }

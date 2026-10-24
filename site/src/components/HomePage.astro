@@ -1,10 +1,11 @@
 ---
 // 首頁：區塊順序與 class 照舊站 /en：#home-container-01（藍底字標＋輪播）→ #home-container-02（產品系列）
-// → 米色底 SELECTION TOOLS → #home-container-04（認證圖示）→ footer。文字在 src/content/home/<lang>.json。
+// → 米色底 SELECTION TOOLS → #home-container-04（認證圖示）→ footer。文字在 src/content/home/<lang>.json，頁面樣式在 src/data/home.json。
 import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProductLine from './ProductLine.astro';
-import brand from '../data/brand.json';
+import { brand } from '../lib/data';
+import home from '../data/home.json';
 import { type Lang, href, format, t, pick } from '../lib/i18n';
 
 interface Props { lang: Lang }
@@ -21,19 +22,20 @@ const slides = [
   '/upfile/Images/S_0104_2022.jpg',
   '/upfile/Images/S_0182_2022.jpg',
 ];
+const lines = (s: string) => s.split('\n');
 ---
-<Base lang={lang} title={c.seo.title} description={c.seo.description} path="">
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path="" headStyle={home.legacyCss}>
   <div id="home-container-01" class="container-fluid">
     <div class="container">
       <div class="h_aquasky-text">
-        <h1 class="ima_h_tag"><img src="/images/aquasky-text.png" class="img-responsive center-block" alt={`${pick(brand.legalName, lang)} - ${c.h1}`} width="460" height="80" /></h1>
+        <h1 class="ima_h_tag"><img src="/images/aquasky-text.png" class="img-responsive center-block" alt={`${pick(brand.legalName, lang)} - ${c.h1}`} /></h1>
         {lang !== 'en' && <p class="company_lang_txt"><strong>{c.companyName}</strong></p>}
       </div>
       <div class="h_title_line_01">{format(d.common.foundedIn, { year: brand.founded })}</div>
       <div class="h_about">
-        <div id="bg-slider" role="region" aria-label={c.slidesAlt}>
+        <div id="bg-slider" class="owl-carousel owl-theme" role="region" aria-label={c.slidesAlt} data-autoplay={home.carousel.autoPlayMs}>
           {slides.map((src, i) => (
-            <div class="item"><img src={src} alt={i === 0 ? c.slidesAlt : ''} loading={i < 2 ? 'eager' : 'lazy'} decoding="async" /></div>
+            <div class="item"><img src={src} alt={i === 0 ? c.slidesAlt : ''} loading={i === 0 ? 'eager' : 'lazy'} decoding="async" /></div>
           ))}
         </div>
       </div>
@@ -67,7 +69,7 @@ const slides = [
           {row.map((item) => (
             <div class="col-xs-6 col-sm-3">
               <img src={item.icon} class="img-responsive center-block" alt="" loading="lazy" />
-              <p class="ca_txt">{item.label}</p>
+              <p class="ca_txt">{lines(item.label).map((line, i) => (<Fragment>{i > 0 && <br />}{line}</Fragment>))}</p>
             </div>
           ))}
         </div>
@@ -77,13 +79,13 @@ const slides = [
   </div>
 </Base>
 <script>
-  // 輪播：每 4 秒往前捲一張（桌面一次看 2 張，手機 1 張），到底回頭。不想動就停在第一張也沒差。
+  // 輪播：照舊站 owl 設定，一次一張、每 3 秒往前一張，到底回頭。偏好減少動態的使用者就停在第一張。
   const slider = document.getElementById('bg-slider');
-  const items = slider ? Array.from(slider.children) as HTMLElement[] : [];
+  const items = slider ? (Array.from(slider.children) as HTMLElement[]) : [];
+  const every = Number(slider?.dataset.autoplay || 3000);
   if (slider && items.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     let index = 0;
-    const perView = () => (matchMedia('(max-width: 767px)').matches ? 1 : 2);
     const render = () => items.forEach((el) => { el.style.transform = `translateX(-${index * 100}%)`; });
-    setInterval(() => { index = (index + 1) % (items.length - perView() + 1); render(); }, 4000);
+    setInterval(() => { index = (index + 1) % items.length; render(); }, every);
   }
 </script>

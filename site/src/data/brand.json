@@ -1,8 +1,14 @@
 {
   "_note": "品牌與公司事實，單一來源。頁面正文、頁尾與 JSON-LD 都從這裡讀。改這裡＝全站一起改。",
   "brand": "AQUASKY",
-  "legalName": { "en": "AQUASKY Enterprise Corp.", "zh": "溢康企業股份有限公司" },
-  "shortName": { "en": "AQUASKY", "zh": "AQUASKY 溢康企業" },
+  "legalName": {
+    "en": "AQUASKY Enterprise Corp.",
+    "zh": "溢康企業股份有限公司"
+  },
+  "shortName": {
+    "en": "AQUASKY",
+    "zh": "AQUASKY 溢康企業"
+  },
   "tagline": {
     "en": "Global Diaphragm Pressure Tank & Water Treatment Manufacturer",
     "zh": "全球隔膜壓力桶與水處理設備專業製造商"
@@ -13,7 +19,7 @@
   "footerLogo": "/upfile/Images/footer-logo-200.png",
   "address": {
     "en": "Factory: No. 36, Ln. 212, Sec. 1, Hemu Rd., Shengang Dist., Taichung City 429, Taiwan",
-    "zh": "總廠地址：429 台中市神岡區和睦路一段 212 巷 36 號",
+    "zh": "總廠地址:429台中市神岡區和睦路一段212巷36號",
     "postal": {
       "streetAddress": "No. 36, Ln. 212, Sec. 1, Hemu Rd.",
       "addressLocality": "Shengang Dist., Taichung City",
@@ -29,11 +35,47 @@
   ],
   "ga4": "G-TJ6TEMQRJE",
   "languages": [
-    { "code": "en", "label": "English", "htmlLang": "en", "dir": "ltr", "live": true },
-    { "code": "zh", "label": "中文", "htmlLang": "zh-Hant", "dir": "ltr", "live": true },
-    { "code": "es", "label": "Español", "htmlLang": "es", "dir": "ltr", "live": false },
-    { "code": "fr", "label": "Français", "htmlLang": "fr", "dir": "ltr", "live": false },
-    { "code": "ru", "label": "русский язык", "htmlLang": "ru", "dir": "ltr", "live": false },
-    { "code": "ar", "label": "اَلْعَرَبِيَّةُ", "htmlLang": "ar", "dir": "rtl", "live": false }
+    {
+      "code": "en",
+      "label": "English",
+      "htmlLang": "en",
+      "dir": "ltr",
+      "live": true
+    },
+    {
+      "code": "zh",
+      "label": "中文",
+      "htmlLang": "zh-Hant",
+      "dir": "ltr",
+      "live": true
+    },
+    {
+      "code": "es",
+      "label": "Español",
+      "htmlLang": "es",
+      "dir": "ltr",
+      "live": false
+    },
+    {
+      "code": "fr",
+      "label": "Français",
+      "htmlLang": "fr",
+      "dir": "ltr",
+      "live": false
+    },
+    {
+      "code": "ru",
+      "label": "русский язык",
+      "htmlLang": "ru",
+      "dir": "ltr",
+      "live": false
+    },
+    {
+      "code": "ar",
+      "label": "اَلْعَرَبِيَّةُ",
+      "htmlLang": "ar",
+      "dir": "rtl",
+      "live": false
+    }
   ]
 }

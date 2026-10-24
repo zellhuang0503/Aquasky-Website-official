@@ -66,17 +66,22 @@ npm run check           # 型別與模板檢查
 
 - 直接沿用舊站的 CSS：`public/css/bootstrap.min.css`、`style.css`、`series_content.css`、`a-hover.css`、`all.min.css`（Font Awesome）。這幾個檔從封存複製後**進 Git**，不要改；新站自己的補充只放 `src/styles/site.css`。
 - HTML 結構與 class 名稱照舊站同一頁抄（navbar-default、#home-container-01…、series-sec、sf-stage、h2_2hline、btn-link）。搬新頁時先開舊站同頁對照。
-- 舊站靠 jQuery＋bootstrap.js 的行為（漢堡選單、下拉、輪播）改成 `Header.astro`／`HomePage.astro` 裡各 20 行純 JS，外觀不變。
+- 舊站靠 jQuery＋bootstrap.js 的行為（漢堡選單、下拉、輪播一次一張每 3 秒換）改成 `Header.astro`／`HomePage.astro` 裡各 20 行純 JS，外觀不變。首頁專用樣式（米色底、44pt 公司名）在 `src/data/home.json` 的 legacyCss。
 - 結構圖的線與標示座標存在 `src/data/products/lqcol-plus.json` 的 `structureFigure`，照舊站百分比座標；手機版同舊站改成編號圖＋清單。
 
 ## 跟舊站不一樣的地方（刻意的）
 
+審查官（`.claude/agents/aquasky-site-reviewer.md`）B1 項以這份清單為準：不在清單上的差異都算不通過。
+
 - hreflang 逐頁對應（舊站全部指首頁，是 SEO 錯誤）。
 - 型號統一寫 `LQC-3`（舊站 `LQC- 3`、`LQC -12` 空格亂）；下載連結「Brchure」錯字改成「Brochure」。
-- 結構圖標示由內容檔產生，沒有舊站的手動斷行，改成限寬自動換行。
-- 原生輸出 JSON-LD：Organization、WebSite、BreadcrumbList、ProductGroup（9 個型號）、FAQPage。舊站靠 AEO Worker 從外面注入。
-- 系列頁底部「Product Line」標題舊站是白字在白底（看不到），新站改品牌藍。
-- 經典系列頁舊站有兩個 `<h1>`（色條一個、標題圖又包一個）；新站標題圖改用 `<div class="h1-1">`，每頁只剩一個 h1。
+- 原生輸出 JSON-LD：Organization、WebSite、BreadcrumbList、ProductGroup、FAQPage。舊站靠 AEO Worker 從外面注入。
+- 每頁只有一個 `<h1>`：首頁 h1 是字標圖（同舊站）；系列頁舊站有兩個 h1（色條一個、標題圖又包一個），新站標題圖改用 `<div class="h1-1">`。
+- 語言選單裡還沒上線的語系（es／fr／ru／ar）是灰字不能點，舊站是連結。等那些語系做好再開。
+- 英文首頁認證圖示下面舊站沒有文字，新站也不顯示；建議的英文說明放在 `src/content/home/en.json` 的 `draftLabel`，客戶審過才會改成 `label` 顯示。
+- 中文 LQCOL-PLUS 頁是 AI 初稿，頁頂多一條黃色「AI 初稿」提示；審過後拿掉。
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁），中文頁同樣連英文明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 預覽版頁頂有黃色 PREVIEW 條，正式版沒有。
+
+已還原成跟舊站一樣、不再是差異的：產品列區塊在深色區內（白字白框）；首頁米色底、公司名 44pt、字標原尺寸、輪播一次一張；選單結構（SELECTION TOOLS 只在下拉裡、ACCESSORIES 是 PRODUCTS 直屬、zh 多 ESG產品）、選單 padding、logo 尺寸；結構圖標示照舊站斷行、無冒號；規格表數字照舊站原字串（`14` 不是 `14.0`）；中文選單、認證說明、頁尾地址一字不差；正文粗體（`**…**` 記號）。

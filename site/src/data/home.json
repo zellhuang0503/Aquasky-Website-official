@@ -1,0 +1,5 @@
+{
+  "_note": "首頁的頁面專用樣式，照舊站 /en 與 /zh 頁面 <style> 抄（兩個語系相同）。輪播設定照舊站 owl：一次一張、每 3 秒自動換。",
+  "legacyCss": "#bg-slider .item img{ display:block; width:100%; min-height:200px;}\n#home-container-02-bg,#home-container-02,#home-container-04-bg,#home-container-04 { background-color:#fdf9ee;}\n.company_lang_txt { font-size:44pt; text-align:center; color:#FFF; padding-top:20px; padding-bottom:20px;}\n@media (max-width: 767px) { .company_lang_txt { font-size:30pt;} }\n@media (max-width: 480px) { .company_lang_txt { font-size:20pt;} }",
+  "carousel": { "singleItem": true, "autoPlayMs": 3000 }
+}

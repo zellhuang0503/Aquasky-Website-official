@@ -1,17 +1,15 @@
 ---
 // 頁首：照舊站的 Bootstrap 3 navbar 結構（navbar-default → container → navbar-header + nav.navbar-collapse）。
-// 舊站靠 jQuery + bootstrap.js 開關；這裡用下面 30 行純 JS 做同樣的事（.open／.in class）。
-import brand from '../data/brand.json';
-import nav from '../data/nav.json';
+// 下拉順序照舊站：PRODUCTS 連結 → 分隔線 → RESIDENTIAL／COMMERCIAL 子選單 → ACCESSORIES-PLUS → SELECTION TOOLS（zh 再多一個 ESG產品）。
+// 舊站靠 jQuery + bootstrap.js 開關；這裡用下面的純 JS 做同樣的事（.open／.in class），一次只開一個。
+import { brand, nav } from '../lib/data';
 import { type Lang, href, t, languages } from '../lib/i18n';
 
 interface Props { lang: Lang; /** 語系後路徑，語言切換時保留同一頁 */ path: string }
 const { lang, path } = Astro.props;
 const d = t(lang);
 const label = (key: string) => (d.nav as Record<string, string>)[key] ?? key;
-type Child = { key: string; path: string };
-type Item = { key: string; path?: string; children?: Child[]; groups?: { key: string; children: Child[] }[] };
-const items = nav.items as Item[];
+const forLang = <T extends { langs?: string[] }>(x: T) => !x.langs || x.langs.includes(lang);
 const current = Astro.url.pathname.replace(/\.html$/, '');
 const active = (p?: string) => (p !== undefined && current === href(lang, p) ? 'active' : undefined);
 ---
@@ -22,30 +20,36 @@ const active = (p?: string) => (p !== undefined && current === href(lang, p) ? '
         <span class="sr-only">{d.nav.menu}</span>
         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
       </button>
-      <a href={href(lang)} class="navbar-brand"><img src={brand.logo} alt={brand.brand} class="img-responsive" width="180" height="78" /></a>
+      <a href={href(lang)} class="navbar-brand"><img src={brand.logo} alt={brand.brand} class="img-responsive" /></a>
     </div>
     <nav class="collapse navbar-collapse navbar-right bs-navbar-collapse" id="main-nav" role="navigation" aria-label={d.nav.menu}>
       <ul class="nav navbar-nav">
-        {items.map((item) =>
+        {nav.items.map((item) =>
           item.children || item.groups ? (
             <li class={['dropdown', active(item.path)].filter(Boolean).join(' ')}>
               <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{label(item.key)} <b class="caret"></b></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                {item.path && <li class={active(item.path)}><a href={href(lang, item.path)}><i class="fas fa-chevron-right" aria-hidden="true"></i> {label(item.key)}</a></li>}
+                {item.path && (
+                  <li class={active(item.path)}><a href={href(lang, item.path)}><i class="fas fa-chevron-right" aria-hidden="true"></i> {label(item.key)}</a></li>
+                )}
                 {item.path && item.groups && <li role="separator" class="divider"></li>}
-                {item.children?.map((c) => <li class={active(c.path)}><a href={href(lang, c.path)}><i class="fas fa-chevron-right" aria-hidden="true"></i> {label(c.key)}</a></li>)}
                 {item.groups?.map((g) => (
                   <li class="dropdown dropdown-submenu">
                     <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-chevron-right" aria-hidden="true"></i> {label(g.key)}</a>
                     <ul class="dropdown-menu dropdown-menu-left">
-                      {g.children.map((c) => <li class={active(c.path)}><a href={href(lang, c.path)}><i class="fas fa-chevron-right" aria-hidden="true"></i> {label(c.key)}</a></li>)}
+                      {g.children.filter(forLang).map((c) => (
+                        <li class={active(c.path)}><a href={href(lang, c.path)}><i class="fas fa-chevron-right" aria-hidden="true"></i> {label(c.key)}</a></li>
+                      ))}
                     </ul>
                   </li>
+                ))}
+                {item.children?.filter(forLang).map((c) => (
+                  <li class={active(c.path)}><a href={href(lang, c.path)}><i class="fas fa-chevron-right" aria-hidden="true"></i> {label(c.key)}</a></li>
                 ))}
               </ul>
             </li>
           ) : (
-            <li class={active(item.path)}><a href={href(lang, item.path)}>{label(item.key)}</a></li>
+            <li class={active(item.path)}><a href={href(lang, item.path!)}>{label(item.key)}</a></li>
           )
         )}
         <li class="dropdown">
@@ -66,7 +70,7 @@ const active = (p?: string) => (p !== undefined && current === href(lang, p) ? '
   </div>
 </header>
 <script>
-  // 取代 bootstrap.js：漢堡鈕切 .in；下拉切 .open；點外面或 Esc 關閉。
+  // 取代 bootstrap.js：漢堡鈕切 .in；下拉切 .open；滑到別的選單、點外面或 Esc 都關掉其他的，一次只開一個。
   const toggle = document.querySelector<HTMLButtonElement>('.navbar-toggle');
   const collapse = document.getElementById('main-nav');
   toggle?.addEventListener('click', () => {
@@ -90,6 +94,9 @@ const active = (p?: string) => (p !== undefined && current === href(lang, p) ? '
       li.classList.toggle('open', open);
       a.setAttribute('aria-expanded', String(open));
     });
+  });
+  document.querySelectorAll<HTMLElement>('.navbar .nav > li.dropdown').forEach((li) => {
+    li.addEventListener('mouseenter', () => closeAll(li));
   });
   document.addEventListener('click', (e) => { if (!(e.target as Element).closest('.navbar .dropdown')) closeAll(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });

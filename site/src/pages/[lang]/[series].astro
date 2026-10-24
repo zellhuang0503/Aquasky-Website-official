@@ -6,21 +6,16 @@
 import { getEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProductLine from '../../components/ProductLine.astro';
-import brand from '../../data/brand.json';
+import { brand } from '../../lib/data';
 import { type Lang, liveLangs, t } from '../../lib/i18n';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
-type Model = { model: string; volumeText: string; volumeL: number | null; volumeGal: number | null; image: string; detailPath: string };
-type Product = {
-  id: string; series: string; path: string; template: string; legacyCss: string;
-  titleImage: { src: string; class: string } | null;
-  heroBlocks: { class: string; image: { src: string; class: string } | null }[];
-  preBanner: { bg: string; image: { src: string; class: string } } | null;
-  groups: { key: string; rowClass: string; models: Model[] }[];
-};
+type Product = Extract<CollectionEntry<'products'>['data'], { template: 'classic' }>;
 
-export function getStaticPaths() {
-  const files = import.meta.glob<{ default: Product }>('../../data/products/*.json', { eager: true });
-  const products = Object.values(files).map((f) => f.default).filter((p) => p.template === 'classic');
+export async function getStaticPaths() {
+  const all = await getCollection('products');
+  const products = all.map((e) => e.data).filter((p): p is Product => p.template === 'classic');
   return products.flatMap((product) => liveLangs.map((lang) => ({ params: { lang, series: product.path.slice(1) }, props: { product } })));
 }
 const lang = Astro.params.lang as Lang;
@@ -107,13 +102,13 @@ const breadcrumbs = [
         </div>
       </div>
     ))}
-  </div>
 
-  <div id="pd-more-info" class="container">
-    <h2 class="h2_2hline h2_2hline_margin lang_rtl">{d.common.productLine}</h2>
-    <div id="other_pd_line" class="container">
-      <ProductLine lang={lang} variant="series" />
-      <div class="pd-spacing-01"></div>
+    <div id="pd-more-info" class="container">
+      <h2 class="h2_2hline h2_2hline_margin lang_rtl">{d.common.productLine}</h2>
+      <div id="other_pd_line" class="container">
+        <ProductLine lang={lang} variant="series" />
+        <div class="pd-spacing-01"></div>
+      </div>
     </div>
   </div>
 </Base>

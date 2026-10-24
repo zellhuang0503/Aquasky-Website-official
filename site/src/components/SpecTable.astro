@@ -1,10 +1,10 @@
 ---
 // 規格表：照舊站 table.series-spec 的欄位結構（第一列群組標題、第二列單位）。單位列不翻（禁譯清單）。
 interface Row {
-  model: string; volumeL: number; volumeGal: number; diameterCm: number; diameterIn: number;
-  heightCm: number; heightIn: number; boxLengthCm: number; boxLengthIn: number; boxWidthCm: number; boxWidthIn: number;
-  boxHeightCm: number; boxHeightIn: number; netWeightKg: number; netWeightLb: number; grossWeightKg: number; grossWeightLb: number;
-  shippingVolumeCuf: number; connection: string;
+  model: string; volumeL: string; volumeGal: string; diameterCm: string; diameterIn: string;
+  heightCm: string; heightIn: string; boxLengthCm: string; boxLengthIn: string; boxWidthCm: string; boxWidthIn: string;
+  boxHeightCm: string; boxHeightIn: string; netWeightKg: string; netWeightLb: string; grossWeightKg: string; grossWeightLb: string;
+  shippingVolumeCuf: string; connection: string;
 }
 interface Props {
   caption: string;
@@ -12,8 +12,7 @@ interface Props {
   rows: Row[];
 }
 const { caption, columns: c, rows } = Astro.props;
-const f1 = (n: number) => n.toFixed(1);
-const f2 = (n: number) => n.toFixed(2);
+// 數字照舊站原字串顯示（資料檔就是字串），不重新格式化
 const pairs: [keyof typeof c, string, string][] = [
   ['volume', 'Liter', 'Gal'], ['diameter', 'Cm', 'Inch'], ['height', 'Cm', 'Inch'],
   ['boxLength', 'Cm', 'Inch'], ['boxWidth', 'Cm', 'Inch'], ['boxHeight', 'Cm', 'Inch'],
@@ -38,15 +37,15 @@ const pairs: [keyof typeof c, string, string][] = [
     {rows.map((r) => (
       <tr>
         <td>{r.model}</td>
-        <td>{r.volumeL}</td><td>{f1(r.volumeGal)}</td>
-        <td>{f1(r.diameterCm)}</td><td>{f1(r.diameterIn)}</td>
-        <td>{f1(r.heightCm)}</td><td>{f1(r.heightIn)}</td>
-        <td>{f1(r.boxLengthCm)}</td><td>{f1(r.boxLengthIn)}</td>
-        <td>{f1(r.boxWidthCm)}</td><td>{f1(r.boxWidthIn)}</td>
-        <td>{f1(r.boxHeightCm)}</td><td>{f1(r.boxHeightIn)}</td>
-        <td>{f1(r.netWeightKg)}</td><td>{f1(r.netWeightLb)}</td>
-        <td>{f1(r.grossWeightKg)}</td><td>{f1(r.grossWeightLb)}</td>
-        <td>{f2(r.shippingVolumeCuf)}</td>
+        <td>{r.volumeL}</td><td>{r.volumeGal}</td>
+        <td>{r.diameterCm}</td><td>{r.diameterIn}</td>
+        <td>{r.heightCm}</td><td>{r.heightIn}</td>
+        <td>{r.boxLengthCm}</td><td>{r.boxLengthIn}</td>
+        <td>{r.boxWidthCm}</td><td>{r.boxWidthIn}</td>
+        <td>{r.boxHeightCm}</td><td>{r.boxHeightIn}</td>
+        <td>{r.netWeightKg}</td><td>{r.netWeightLb}</td>
+        <td>{r.grossWeightKg}</td><td>{r.grossWeightLb}</td>
+        <td>{r.shippingVolumeCuf}</td>
         <td>{r.connection}</td>
       </tr>
     ))}

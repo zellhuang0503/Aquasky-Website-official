@@ -1,6 +1,6 @@
 ---
 // 頁尾：照舊站 <footer><div class="container"><div id="footer-content">…。中文版多一行公司名（舊站 zh 也有）。
-import brand from '../data/brand.json';
+import { brand } from '../lib/data';
 import { type Lang, t, pick } from '../lib/i18n';
 interface Props { lang: Lang }
 const { lang } = Astro.props;

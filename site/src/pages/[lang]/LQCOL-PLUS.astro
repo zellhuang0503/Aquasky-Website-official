@@ -5,9 +5,9 @@ import { getEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProductLine from '../../components/ProductLine.astro';
 import SpecTable from '../../components/SpecTable.astro';
-import product from '../../data/products/lqcol-plus.json';
-import brand from '../../data/brand.json';
+import { brand } from '../../lib/data';
 import { type Lang, liveLangs, t } from '../../lib/i18n';
+import { bold, br } from '../../lib/text';
 
 export function getStaticPaths() {
   return liveLangs.map((lang) => ({ params: { lang } }));
@@ -16,6 +16,9 @@ const lang = Astro.params.lang as Lang;
 const entry = await getEntry('series', `lqcol-plus/${lang}`);
 if (!entry || entry.data.template !== 'lqcol') throw new Error(`missing lqcol content src/content/series/lqcol-plus/${lang}.json`);
 const c = entry.data;
+const productEntry = await getEntry('products', 'lqcol-plus');
+if (!productEntry || productEntry.data.template !== 'lqcol') throw new Error('missing src/data/products/lqcol-plus.json');
+const product = productEntry.data;
 const d = t(lang);
 const site = brand.url;
 const pageUrl = `${site}/${lang}${product.path}`;
@@ -23,7 +26,6 @@ const s = c.specs;
 const fig = product.structureFigure;
 const colon = lang === 'zh' ? '：' : ': ';
 const answerPrefix = lang === 'zh' ? 'A：' : 'A:';
-const mb = (bytes: number) => `${(bytes / 1024 / 1024).toFixed(1)} MB`;
 const downloads = product.downloads.map((dl) => ({ ...dl, title: dl.key === 'brochure' ? c.downloads.brochure : c.downloads.manual }));
 
 // JSON-LD：ProductGroup（系列）＋每個型號一個 Product；FAQPage。數字全部從 product JSON 來，跟表格同一份。
@@ -35,7 +37,7 @@ const productGroup = {
   '@type': 'ProductGroup',
   '@id': `${pageUrl}#series`,
   name: `${brand.brand} ${product.series}`,
-  description: c.about.body,
+  description: c.about.body.replace(/\*\*/g, ''),
   url: pageUrl,
   image: `${site}${product.images.hero}`,
   brand: { '@type': 'Brand', name: brand.brand },
@@ -49,11 +51,11 @@ const productGroup = {
     model: m.model,
     material: m.material,
     size: `${m.volumeL} L`,
-    weight: { '@type': 'QuantitativeValue', value: m.netWeightKg, unitCode: 'KGM' },
+    weight: { '@type': 'QuantitativeValue', value: Number(m.netWeightKg), unitCode: 'KGM' },
     additionalProperty: [
-      { '@type': 'PropertyValue', name: s.columns.volume, value: m.volumeL, unitCode: 'LTR' },
-      { '@type': 'PropertyValue', name: s.columns.diameter, value: m.diameterCm, unitCode: 'CMT' },
-      { '@type': 'PropertyValue', name: s.columns.height, value: m.heightCm, unitCode: 'CMT' },
+      { '@type': 'PropertyValue', name: s.columns.volume, value: Number(m.volumeL), unitCode: 'LTR' },
+      { '@type': 'PropertyValue', name: s.columns.diameter, value: Number(m.diameterCm), unitCode: 'CMT' },
+      { '@type': 'PropertyValue', name: s.columns.height, value: Number(m.heightCm), unitCode: 'CMT' },
       { '@type': 'PropertyValue', name: s.columns.connection, value: m.connection },
       { '@type': 'PropertyValue', name: s.props.factoryPrecharge, value: product.specs.common.factoryPrecharge },
       { '@type': 'PropertyValue', name: s.props.maxWorkingPressure, value: product.specs.common.maxWorkingPressure },
@@ -64,7 +66,7 @@ const productGroup = {
 const faqPage = {
   '@type': 'FAQPage',
   '@id': `${pageUrl}#faq`,
-  mainEntity: c.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  mainEntity: c.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/\*\*/g, '') } })),
 };
 const breadcrumbs = [
   { name: d.common.breadcrumbHome, path: '' },
@@ -85,7 +87,7 @@ const breadcrumbs = [
 
       <section class="series-sec lang_rtl">
         <h2 class="series-title">{c.about.heading}</h2>
-        <div class="series-content"><p>{c.about.body}</p></div>
+        <div class="series-content"><p set:html={bold(c.about.body)} /></div>
       </section>
 
       <section class="series-sec lang_rtl">
@@ -96,7 +98,7 @@ const breadcrumbs = [
               <div class="series-feat-item">
                 <div class="series-feat-tag">{g.label}</div>
                 <div class="series-feat-box">
-                  {g.items.map((it) => <p>• {it.lead && <Fragment><strong>{it.lead}</strong>{colon}</Fragment>}{it.text}</p>)}
+                  {g.items.map((it) => <p>• {it.lead && <Fragment><strong>{it.lead}</strong>{colon}</Fragment>}<Fragment set:html={bold(it.text)} /></p>)}
                 </div>
               </div>
             ))}
@@ -118,7 +120,7 @@ const breadcrumbs = [
                 ))}
               </svg>
               {c.structure.labels.map((text, i) => (
-                <div class={`sf-label${fig.labels[i].center ? ' sf-center' : ''}`} style={`left:${fig.labels[i].left};top:${fig.labels[i].top};`}>{text}</div>
+                <div class={`sf-label${fig.labels[i].center ? ' sf-center' : ''}`} style={`left:${fig.labels[i].left};top:${fig.labels[i].top};`} set:html={br(text)} />
               ))}
             </div>
             <div class="sf-mobile">
@@ -126,7 +128,7 @@ const breadcrumbs = [
                 <img src={product.images.structure} alt={c.structure.alt} loading="lazy" />
                 {fig.mobileMarkers.map((m, i) => <span class="sf-marker" style={`left:${m.left};top:${m.top};`}>{i + 1}</span>)}
               </div>
-              <ol class="sf-list">{c.structure.labels.map((text) => <li>{text}</li>)}</ol>
+              <ol class="sf-list">{c.structure.labels.map((text) => <li>{text.replace(/\n/g, ' ')}</li>)}</ol>
             </div>
           </div>
         </div>
@@ -139,7 +141,7 @@ const breadcrumbs = [
           <div class="series-app-box">
             {[c.applications.items.slice(0, 3), c.applications.items.slice(3)].map((col) => (
               <div class="series-app-col">
-                {col.map((it) => <p><strong>• {it.lead}{it.lead && (lang === 'zh' ? '：' : ':')}</strong> {it.text}</p>)}
+                {col.map((it) => <p><strong>• {it.lead}{it.lead && !it.lead.endsWith(',') && (lang === 'zh' ? '：' : ':')}</strong> {it.text}</p>)}
               </div>
             ))}
           </div>
@@ -174,7 +176,7 @@ const breadcrumbs = [
         {c.faq.items.map((f, i) => (
           <div class="series-faq-item">
             <h3>{`Q${i + 1}${colon}${f.q}`}</h3>
-            <div class="series-content"><p><strong>{answerPrefix}</strong> {f.a}</p></div>
+            <div class="series-content"><p><strong>{answerPrefix}</strong> <Fragment set:html={bold(f.a)} /></p></div>
           </div>
         ))}
       </section>
@@ -185,20 +187,19 @@ const breadcrumbs = [
           {downloads.map((dl) => (
             <div class="series-dl-item">
               <a class="series-dl-title" href={dl.pdf} target="_blank" rel="noopener">{dl.title}</a>
-              <span class="series-dl-meta">PDF · {mb(dl.sizeBytes)}</span>
               <a href={dl.pdf} target="_blank" rel="noopener"><img src={dl.cover} alt={dl.title} loading="lazy" /></a>
             </div>
           ))}
         </div>
       </section>
     </div>
-  </div>
 
-  <div id="pd-more-info" class="container">
-    <h2 class="h2_2hline h2_2hline_margin lang_rtl">{c.productLineHeading}</h2>
-    <div id="other_pd_line" class="container">
-      <ProductLine lang={lang} variant="series" />
-      <div class="pd-spacing-01"></div>
+    <div id="pd-more-info" class="container">
+      <h2 class="h2_2hline h2_2hline_margin lang_rtl">{c.productLineHeading}</h2>
+      <div id="other_pd_line" class="container">
+        <ProductLine lang={lang} variant="series" />
+        <div class="pd-spacing-01"></div>
+      </div>
     </div>
   </div>
 </Base>

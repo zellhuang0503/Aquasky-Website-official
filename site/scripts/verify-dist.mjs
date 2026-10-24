@@ -95,7 +95,7 @@ for (const page of PAGES) {
           r.shippingVolumeCuf, r.connection];
         want.forEach((w, ci) => {
           const got = cells[ci];
-          const ok = typeof w === 'number' ? Number(got) === w : got === w;
+          const ok = got === String(w);   // 字串逐字比（"14" 與 "14.0" 不同）
           if (!ok) fail(`${where}: ${r.model} column ${ci + 1} shows "${got}", data is "${w}"`);
         });
       });

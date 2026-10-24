@@ -1,12 +1,16 @@
 ---
 // 產品系列清單：照舊站 row/col-md-6 兩欄 + .pd-btn-info-link 圓角按鈕。
 // 首頁 variant="home"（大圖、btn-link）；系列頁底部 variant="series"（webp 小圖、btn-link2）。
-import nav from '../data/nav.json';
+// 按鈕文字先查 i18n 的 productLine（舊站 zh 的 ASME 按鈕是兩行、縮小 padding），沒有才用 nav 的字。
+import { nav } from '../lib/data';
 import { type Lang, href, t } from '../lib/i18n';
 interface Props { lang: Lang; variant?: 'home' | 'series' }
 const { lang, variant = 'home' } = Astro.props;
-const d = t(lang);
-const label = (key: string) => (d.nav as Record<string, string>)[key] ?? key;
+const d = t(lang) as ReturnType<typeof t> & { productLine?: Record<string, string> };
+const label = (key: string) => d.productLine?.[key] ?? (d.nav as Record<string, string>)[key] ?? key;
+const lines = (key: string) => label(key).split('\n');
+const btnStyle = (key: string, stacked: boolean) =>
+  [stacked ? 'margin-bottom:5px;' : '', lines(key).length > 1 ? 'padding-top:2px;padding-bottom:2px;' : ''].join('') || undefined;
 const btn = variant === 'home' ? 'btn btn-link' : 'btn btn-link2';
 const list = nav.productLine;
 const rows: typeof list[] = [];
@@ -16,10 +20,19 @@ for (let i = 0; i < list.length; i += 2) rows.push(list.slice(i, i + 2));
   <div class="row padding_top_40">
     {row.map((p) => (
       <div class="col-lg-6 col-md-6 col-sm-6">
-        <img src={variant === 'home' ? p.image : p.thumb} class="img-responsive center-block" alt={label(p.key)} loading="lazy" />
+        <img src={variant === 'home' ? p.image : p.thumb} class="img-responsive center-block" alt={label(p.key).replace('\n', '')} loading="lazy" />
         <div class="pd-btn-info-link" style={p.also ? 'word-break: break-all;' : undefined}>
-          <a href={href(lang, p.path)} class={btn} style={p.also ? 'margin-bottom:5px;' : undefined}>{label(p.key)}</a>
-          {p.also && <a href={href(lang, p.also.path)} class={btn} style="margin-bottom:5px;">{label(p.also.key)}</a>}
+          <a href={href(lang, p.path)} class={btn} style={btnStyle(p.key, !!p.also)}>
+            {lines(p.key).map((line, i) => (<Fragment>{i > 0 && <br />}{line}</Fragment>))}
+          </a>
+          {p.also && (
+            <Fragment>
+              {' '}
+              <a href={href(lang, p.also.path)} class={btn} style={btnStyle(p.also.key, true)}>
+                {lines(p.also.key).map((line, i) => (<Fragment>{i > 0 && <br />}{line}</Fragment>))}
+              </a>
+            </Fragment>
+          )}
         </div>
       </div>
     ))}

@@ -27,7 +27,8 @@ let i = 0;
 while (i < tds.length && /^LQC/.test(tds[i])) {
   const r = tds.slice(i, i + COLS);
   if (r.length < COLS) throw new Error(`spec row at td#${i} is short`);
-  const n = (k) => Number(r[k]);
+  // 數字以舊站原字串保存（例如 "14.0" 與 "14" 不同），頁面照字串顯示；要算數時再 Number()
+  const n = (k) => { if (!/^\d+(\.\d+)?$/.test(r[k])) throw new Error(`${r[0]} cell ${k} not numeric: ${r[k]}`); return r[k]; };
   rows.push({
     model: normModel(r[0]),
     modelOnOldSite: r[0],
@@ -44,9 +45,6 @@ while (i < tds.length && /^LQC/.test(tds[i])) {
   });
   i += COLS;
 }
-for (const row of rows) for (const [k, v] of Object.entries(row)) {
-  if (typeof v === 'number' && Number.isNaN(v)) throw new Error(`${row.model}.${k} is not a number`);
-}
 const carbon = rows.filter((r) => !r.model.endsWith('SS'));
 const stainless = rows.filter((r) => r.model.endsWith('SS'));
 if (carbon.length !== 5 || stainless.length !== 4) throw new Error(`expected 5+4 models, got ${carbon.length}+${stainless.length}`);
@@ -56,6 +54,7 @@ const product = {
   id: 'lqcol-plus',
   series: 'LQCOL-PLUS',
   path: '/LQCOL-PLUS',
+  template: 'lqcol',
   source: { url: 'https://aquaskyplus.com/en/LQCOL-PLUS', archive: 'migration-2026-10-22', retrieved: '2026-10-22' },
   images: {
     logo: '/images/products/LQCOLPLUS/LQCOLPLUS_logo.png',
@@ -76,6 +75,37 @@ const product = {
       maxWorkingTempCarbon: '90°C / 194°F',
       maxWorkingTempStainless: '120°C / 248°F',
     },
+  },
+  _legacyCssNote: '舊站 /en/LQCOL-PLUS 頁面 <style> 照抄，只把相對路徑改絕對。',
+  legacyCss: [
+    '.h1-custom-style { width:100%; text-align:center; background-color:#251b19; color:#FFF; padding:10px;}',
+    '.h1-custom-style h1 { margin:0; font-size:24px;}',
+    '#pd-container-01 { background:url(/images/products/LQCOLPLUS/LQCOLPLUS_bg.png) top center no-repeat #251b19; background-size:100% auto;}',
+    '.pd-aquasky-text { padding:6% 10px 5% 10px; width:55%; margin:0 auto;}',
+    '.pd-aquasky-LQCOL-all { padding-top:5%; padding-bottom:8%; width:100%; max-width:750px; margin:0 auto;}',
+    '@media (max-width: 767px){ .pd-aquasky-text { width:80%;}}',
+  ].join('\n'),
+  structureFigure: {
+    _note: '結構圖的線與標示位置，照抄舊站 /en/LQCOL-PLUS 的 sf-stage（百分比座標，六個標示順序＝content 的 structure.labels）。',
+    stagePaddingTop: '47.396%', font: '1.6667cqw',
+    img: { left: '20.375%', top: '12.02%', width: '59.285%' },
+    viewBox: '0 25 960 455',
+    lines: [
+      { points: '218.4,79.6 218.4,94.5 340.5,94.5', dots: [[218.4, 79.6], [340.5, 94.5]] },
+      { points: '135.6,298.3 135.6,356.4 243.3,356.4', dots: [[135.6, 298.3], [243.3, 356.4]] },
+      { points: '785.6,85.2 707.4,85.2 707.4,139.7', dots: [[785.6, 85.2], [707.4, 139.7]] },
+      { points: '792.4,207 792.4,265 684.8,265', dots: [[792.4, 207], [684.8, 265]] },
+      { points: '808.5,408.2 808.5,310.3 684.8,310.3', dots: [[808.5, 408.2], [684.8, 310.3]] },
+      { points: '118.1,445.4 439,445.4 439,408.3', dots: [[118.1, 445.4], [439, 408.3]] },
+    ],
+    labels: [
+      { left: '6.573%', top: '2.044%' }, { left: '3.896%', top: '50.264%' }, { left: '80.385%', top: '3.429%' },
+      { left: '81.073%', top: '34.22%' }, { left: '84.063%', top: '88%', center: true }, { left: '6.573%', top: '94.22%' },
+    ],
+    mobileMarkers: [
+      { left: '25.459%', top: '4.368%' }, { left: '8.381%', top: '81.618%' }, { left: '89.925%', top: '17.7%' },
+      { left: '85.954%', top: '54.659%' }, { left: '85.954%', top: '68.021%' }, { left: '42.766%', top: '96.927%' },
+    ],
   },
   dataQuestions: [
     'LQC-3 的淨重 4.1 kg、外箱 31×31×24 cm 都比 LQC-8（1.9 kg、21×21×32 cm）大，疑似舊站資料錯誤，要請客戶確認。',
@@ -105,11 +135,26 @@ const splitLead = (s) => {
   // 「• All-Stainless Steel: SUS304 shell…」→ { lead, text }；中文用全形冒號
   const t = stripBullet(s);
   const m = t.match(/^(.+?)[:：]\s*(.*)$/);
-  return m ? { lead: m[1].trim(), text: m[2].trim() } : { lead: '', text: t };
+  if (m) return { lead: m[1].trim(), text: m[2].trim() };
+  // 舊站 Applications 第 4 條沒有冒號，粗體到第一個逗號為止（"Tailored for both In-Rack and In-Row CDUs,"）
+  const c = t.match(/^(.+?,)\s*(.*)$/);
+  return c ? { lead: c[1].trim(), text: c[2].trim() } : { lead: '', text: t };
 };
 
+// 舊站正文裡有 <strong> 的字，用 **…** 標起來，頁面會轉成 <strong>
+const BOLD = {
+  en: { B05: ['LQCOL PLUS'], B09: ['Triple-Grade Paint'], B62: ['Triple-Grade Protective Coating'], B64: ['10+ year maintenance-free'] },
+  zh: { B05: ['LQCOL PLUS'], B09: ['三層防護塗裝'], B62: ['三層防護塗層'], B64: ['10 年以上免維護'] },
+};
 function textFor(lang) {
-  const b = (id) => need(id, lang);
+  const b = (id) => {
+    let v = need(id, lang);
+    for (const phrase of BOLD[lang]?.[id] ?? []) {
+      if (!v.includes(phrase)) throw new Error(`${lang} ${id}: bold phrase not found: ${phrase}`);
+      v = v.replace(phrase, `**${phrase}**`);
+    }
+    return v;
+  };
   return {
     _note: lang === 'zh'
       ? 'LQCOL-PLUS 中文文字。來源：translation/lqcol-plus/LQCOL-PLUS.zh.md（梵亞 AI 初稿，待 Tiffany 審）。數字、型號、單位不要改，規格數字在 src/data/products/lqcol-plus.json。'
@@ -130,14 +175,10 @@ function textFor(lang) {
     },
     structure: {
       alt: lang === 'zh' ? 'LQCOL PLUS 結構圖' : 'LQCOL PLUS structure diagram',
-      labels: [
-        b('B17'),
-        `${b('B07')}：${b('B18')}`.replace('：', lang === 'zh' ? '：' : ': '),
-        `${b('B07')}：${b('B19')}`.replace('：', lang === 'zh' ? '：' : ': '),
-        b('B11'),
-        b('B20'),
-        b('B21'),
-      ],
+      // \n＝舊站的 <br>；舊站英文的斷行位置照抄，中文自行斷在相近處
+      labels: lang === 'en'
+        ? ['Patented Leak Safe\nTechnology with\nWelded 304 Stainless\nSteel Connector.', `${b('B07')}\n${b('B18')}`, `${b('B07')}\n${b('B19')}`, b('B11'), 'Customizable Nitrogen (N₂)\nPre-charge', b('B21')]
+        : ['專利防漏技術，\n搭配焊接式 304 不鏽鋼接頭。', `${b('B07')}\n${b('B18')}`, `${b('B07')}\n${b('B19')}`, b('B11'), '可客製的氮氣（N₂）\n預充', '專利氣閥結構護蓋，\n附 O-ring 密封蓋。'],
     },
     applications: {
       heading: b('B22'),

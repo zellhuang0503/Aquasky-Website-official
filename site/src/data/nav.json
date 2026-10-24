@@ -1,5 +1,5 @@
 {
-  "_note": "主選單結構，六語系共用。path 是語系後面的路徑（/en + path）。label 的文字在 src/i18n/<lang>.json 的 nav 下，用 key 查。舊站 zh 多出的「關於溢康」父層與「ESG產品」先不收。",
+  "_note": "主選單結構，照舊站 2026-10-22 封存的 en 頁：COMPANY（含 SELECTION TOOLS）、PRODUCTS（PRODUCTS 連結、分隔線、RESIDENTIAL、COMMERCIAL、ACCESSORIES-PLUS、SELECTION TOOLS）、NEWS、VIDEOS、DOWNLOAD、FAQ、CONTACT、LANGUAGE。path 是語系後面的路徑。label 文字在 src/i18n/<lang>.json 的 nav 下。langs 只在列出的語系出現（舊站 zh 多一個「ESG產品」連到 SOLAR-PLUS）。",
   "items": [
     {
       "key": "company",
@@ -33,13 +33,16 @@
             { "key": "SUPREME-PLUS", "path": "/supreme" },
             { "key": "DL-TANK", "path": "/dl-ce" },
             { "key": "ASME-TANK", "path": "/asme-ht" },
-            { "key": "GIGA-PLUS", "path": "/GIGA-PLUS" },
-            { "key": "ACCESSORIES-PLUS", "path": "/accessories" }
+            { "key": "GIGA-PLUS", "path": "/GIGA-PLUS" }
           ]
         }
+      ],
+      "children": [
+        { "key": "ACCESSORIES-PLUS", "path": "/accessories" },
+        { "key": "selectionTools", "path": "/sel_tools" },
+        { "key": "esg", "path": "/SOLAR-PLUS", "langs": ["zh"] }
       ]
     },
-    { "key": "selectionTools", "path": "/sel_tools" },
     {
       "key": "news",
       "children": [

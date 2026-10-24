@@ -10,7 +10,7 @@
   "h1": "LIQUID COLD SYSTEM EXPANSION TANK",
   "about": {
     "heading": "About LIQUID - COLD SYSTEM EXPANSION TANK - LQCOL PLUS",
-    "body": "The LQCOL PLUS Liquid-Cold System Expansion Tank is designed specifically for liquid cooling systems and secondary loops (CDU) in data centers. It effectively absorbs coolant volume changes caused by severe temperature fluctuations during high-density AI and HPC computing workloads. By dynamic expansion accommodation and pressure compensation, it prevents excessive pressure spikes, protects quick disconnects (QDs) and cold plates, and safeguards critical server components from leaks."
+    "body": "The **LQCOL PLUS** Liquid-Cold System Expansion Tank is designed specifically for liquid cooling systems and secondary loops (CDU) in data centers. It effectively absorbs coolant volume changes caused by severe temperature fluctuations during high-density AI and HPC computing workloads. By dynamic expansion accommodation and pressure compensation, it prevents excessive pressure spikes, protects quick disconnects (QDs) and cold plates, and safeguards critical server components from leaks."
   },
   "features": {
     "heading": "Key Features & Advantages",
@@ -24,7 +24,7 @@
           },
           {
             "lead": "Coated Carbon Steel",
-            "text": "Heavy-duty carbon steel with Triple-Grade Paint for superior exterior durability."
+            "text": "Heavy-duty carbon steel with **Triple-Grade Paint** for superior exterior durability."
           },
           {
             "lead": "304 SS Connector",
@@ -63,11 +63,11 @@
   "structure": {
     "alt": "LQCOL PLUS structure diagram",
     "labels": [
-      "Patented Leak Safe Technology with Welded 304 Stainless Steel Connector.",
-      "Premium Shell Materials: Coated Carbon Steel",
-      "Premium Shell Materials: All-Stainless Steel",
+      "Patented Leak Safe\nTechnology with\nWelded 304 Stainless\nSteel Connector.",
+      "Premium Shell Materials\nCoated Carbon Steel",
+      "Premium Shell Materials\nAll-Stainless Steel",
       "EPDM Rubber",
-      "Customizable Nitrogen (N₂) Pre-charge",
+      "Customizable Nitrogen (N₂)\nPre-charge",
       "Patented Air Valve Structure Cover with O-ring Seal Cap."
     ]
   },
@@ -88,8 +88,8 @@
         "text": "Precision cooling loops needing zero micro-leakage and pure coolant flow."
       },
       {
-        "lead": "",
-        "text": "Tailored for both In-Rack and In-Row CDUs, offering ultra-compact designs (0.5L / 1L / 3L) for space-constrained server racks and high-volume tanks (24L / 60L / 100L+) for rack-level and row-level cooling."
+        "lead": "Tailored for both In-Rack and In-Row CDUs,",
+        "text": "offering ultra-compact designs (0.5L / 1L / 3L) for space-constrained server racks and high-volume tanks (24L / 60L / 100L+) for rack-level and row-level cooling."
       },
       {
         "lead": "Hyperscaler Infrastructure",
@@ -144,11 +144,11 @@
       },
       {
         "q": "What is the difference between the All-Stainless Steel and Coated Carbon Steel models?",
-        "a": "The All-Stainless Steel (SUS304/316L) model is built for high-purity fluid loops with electropolished inner walls. The Carbon Steel model features a heavy-duty cold rolled carbon steel shell with a Triple-Grade Protective Coating for outstanding exterior corrosion resistance. Both feature a 304 SS connector."
+        "a": "The All-Stainless Steel (SUS304/316L) model is built for high-purity fluid loops with electropolished inner walls. The Carbon Steel model features a heavy-duty cold rolled carbon steel shell with a **Triple-Grade Protective Coating** for outstanding exterior corrosion resistance. Both feature a 304 SS connector."
       },
       {
         "q": "Why is factory high-purity Nitrogen (N₂) pre-charge superior to compressed air?",
-        "a": "The factory 2 bar (30 psi) 99.9% dry nitrogen charge eliminates internal moisture and oxygen. This stops internal oxidation and prevents pressure drift caused by ambient temperature changes, enabling a 10+ year maintenance-free lifespan."
+        "a": "The factory 2 bar (30 psi) 99.9% dry nitrogen charge eliminates internal moisture and oxygen. This stops internal oxidation and prevents pressure drift caused by ambient temperature changes, enabling a **10+ year maintenance-free** lifespan."
       },
       {
         "q": "How does the expansion tank prevent pump cavitation in secondary loops?",

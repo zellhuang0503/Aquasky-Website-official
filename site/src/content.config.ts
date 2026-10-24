@@ -81,9 +81,58 @@ const home = defineCollection({
     slidesAlt: z.string(),
     certifications: z.object({
       heading: z.string(),
-      items: z.array(z.object({ icon: z.string(), label: z.string() })).length(8),
+      // label 可空（舊站 en 首頁圖示沒有說明文字）；draftLabel 是待客戶審的建議文字，不會輸出
+      items: z.array(z.object({ icon: z.string(), label: z.string(), draftLabel: z.string().optional() })).length(8),
     }),
   }),
 });
 
-export const collections = { series, home };
+// 產品資料（src/data/products/*.json）：規格數字的唯一事實來源，也要過 schema。
+const numStr = z.string().regex(/^\d+(\.\d+)?$/, '數字以舊站原字串保存');
+const lqcolRow = z.object({
+  model: z.string().regex(/^LQC-\d+(SS)?$/), modelOnOldSite: z.string(),
+  volumeL: numStr, volumeGal: numStr, diameterCm: numStr, diameterIn: numStr, heightCm: numStr, heightIn: numStr,
+  boxLengthCm: numStr, boxLengthIn: numStr, boxWidthCm: numStr, boxWidthIn: numStr, boxHeightCm: numStr, boxHeightIn: numStr,
+  netWeightKg: numStr, netWeightLb: numStr, grossWeightKg: numStr, grossWeightLb: numStr, shippingVolumeCuf: numStr,
+  connection: z.string().min(1),
+});
+const sitePath = z.string().regex(/^\/[^\s]*$/);
+const img = z.object({ src: sitePath, class: z.string() });
+const productBase = { id: z.string().min(1), series: z.string().min(1), path: sitePath, legacyCss: z.string(), assets: z.array(z.string()).optional() };
+const lqcolProduct = z.object({
+  ...productBase,
+  template: z.literal('lqcol'),
+  images: z.object({ logo: sitePath, hero: sitePath, structure: sitePath, applications: sitePath }),
+  downloads: z.array(z.object({ key: z.enum(['brochure', 'manual']), pdf: sitePath, cover: sitePath, sizeBytes: z.number().int().positive() })).length(2),
+  specs: z.object({
+    carbonSteel: z.array(lqcolRow).min(1), stainlessSteel: z.array(lqcolRow).min(1),
+    common: z.object({ factoryPrecharge: z.string(), maxWorkingPressure: z.string(), maxWorkingTempCarbon: z.string(), maxWorkingTempStainless: z.string() }),
+  }),
+  structureFigure: z.object({
+    stagePaddingTop: z.string(), font: z.string(), img: z.object({ left: z.string(), top: z.string(), width: z.string() }), viewBox: z.string(),
+    lines: z.array(z.object({ points: z.string(), dots: z.array(z.tuple([z.number(), z.number()])) })).length(6),
+    labels: z.array(z.object({ left: z.string(), top: z.string(), center: z.boolean().optional() })).length(6),
+    mobileMarkers: z.array(z.object({ left: z.string(), top: z.string() })).length(6),
+  }),
+  dataQuestions: z.array(z.string()),
+});
+const classicProduct = z.object({
+  ...productBase,
+  template: z.literal('classic'),
+  titleImage: img.nullable(),
+  heroBlocks: z.array(z.object({ class: z.string(), image: img.nullable() })),
+  preBanner: z.object({ bg: z.string().regex(/^#[0-9A-Fa-f]{3,6}$/), image: img }).nullable(),
+  groups: z.array(z.object({
+    key: z.string(), rowClass: z.string().startsWith('row page_pd_item'),
+    models: z.array(z.object({
+      model: z.string().min(1), volumeText: z.string(), volumeL: z.number().nullable(), volumeGal: z.number().nullable(),
+      image: sitePath, detailPath: sitePath,
+    })).min(1),
+  })).min(1),
+});
+const products = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/data/products' }),
+  schema: z.discriminatedUnion('template', [lqcolProduct, classicProduct]),
+});
+
+export const collections = { series, home, products };

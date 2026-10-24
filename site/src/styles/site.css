@@ -1,14 +1,16 @@
 /* 新站自己的補充樣式。版型主體沿用舊站的 /css/bootstrap.min.css、/css/style.css、/css/series_content.css（照抄，不改）。
-   這裡只放：舊站靠 jQuery／Bootstrap JS 才有的行為改成純 CSS、預覽標示、無障礙小修。 */
+   這裡只放：舊站每頁都內嵌的那一行選單 padding、舊站靠 jQuery／Bootstrap JS 才有的行為改成純 CSS、預覽標示、無障礙小修。
+   系列頁與首頁專用的樣式在各自的資料檔（legacyCss），由頁面以 headStyle 輸出，不放這裡。 */
 
-/* 舊站 nav 外層 hidden-lg 是歷史殘留，這裡不用；桌面寬度選單一律顯示 */
+/* 舊站每一頁 <style> 都有這一行 */
+.nav > li > a { padding-left: 15px; padding-right: 15px; }
+
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip-link { position: absolute; left: -999px; top: 0; background: #005d9c; color: #fff; padding: 8px 12px; z-index: 2000; }
 .skip-link:focus { left: 8px; }
 .preview-banner { background: #ffd34d; color: #3b2a00; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .08em; padding: 2px 0; }
 
 /* 下拉：沒有 Bootstrap JS，改用 .open class（小段 JS）＋桌面 hover */
-.navbar-nav > li.dropdown > a .caret { margin-left: 2px; }
 @media (min-width: 1201px) {
   .navbar-nav > li.dropdown:hover > .dropdown-menu { display: block; }
   .navbar-nav > li.dropdown:hover > a { color: #fff; background-color: #1eb9ee; }
@@ -24,27 +26,13 @@
   .lang-pending { color: #aaa; }
 }
 
-/* 首頁輪播：舊站用 owl-carousel 一次顯示 2 張；這裡用純 CSS 捲動列＋小段 JS 自動切換 */
-#bg-slider { display: flex; overflow: hidden; gap: 0; }
-#bg-slider .item { flex: 0 0 50%; transition: transform .6s ease; }
-#bg-slider .item img { width: 100%; height: auto; display: block; }
-@media (max-width: 767px) { #bg-slider .item { flex-basis: 100%; } }
+/* 首頁輪播：舊站 owl-carousel singleItem，一次一張；這裡用純 CSS 軌道＋小段 JS 自動切換 */
+#bg-slider { display: flex; overflow: hidden; }
+#bg-slider .item { flex: 0 0 100%; transition: transform .6s ease; }
 
-/* 首頁 h1 是字標圖（照舊站）；中文公司名放在圖下 */
-.company_lang_txt { color: #fff; text-align: center; font-size: 18px; margin: 10px 0 0; }
-.ca_txt { color: #333; }
-
-/* 系列頁專用樣式（h1 色條、底圖、標題圖寬度）在各自的 src/data/products/<id>.json 的 legacyCss，由頁面以 headStyle 輸出；這裡不放，免得互相蓋到 */
-/* 結構圖標示：舊站用 <br> 手動斷行＋nowrap；新站文字來自內容檔沒有斷行，改成限寬自動換行 */
-.series-figure .sf-label { white-space: normal; max-width: 21%; }
-.series-figure .sf-label.sf-center { max-width: 26%; }
+/* 系列頁 */
 .draft-note { display: inline-block; margin: 8px auto 0; background: #fff6d6; color: #6a4f00; border: 1px solid #f1d98a; padding: 2px 10px; border-radius: 6px; font-size: 13px; font-weight: normal; }
-.series-dl-item .series-dl-meta { display: block; color: #cfc8c5; font-size: 13px; margin-top: 4px; }
 .series-content .series-spec th[scope] { font-weight: normal; }
-/* 舊站 h2.h2_2hline 用白字，在白底的產品列會看不到；舊站這一段其實在深色區內，新站同樣放在 #pd-container-01 之後的白底，改用品牌藍 */
-#pd-more-info .h2_2hline { color: #0086cd; }
-#pd-more-info .h2_2hline:before, #pd-more-info .h2_2hline:after { border-bottom-color: #0086cd; }
-#pd-more-info .btn-link2 { color: #008ecf; border-color: #008ecf; }
 
 /* 404 */
 .notfound { text-align: center; padding: 64px 16px; }
