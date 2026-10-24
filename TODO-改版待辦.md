@@ -12,7 +12,7 @@
 - [x] **A4 產品明細語系**：確認只有英文 90 頁，其他語系系列頁連明細連結都沒有；hreflang 全指首頁（既有 SEO 錯誤，新站要修）。
 - [x] **A5 種子清單**：`build_seed_urls.py` 產出 2,597 筆，挖出 10/9 漏掉的 205 個網址（含 18 頁選型計算器、11 個仍回 200 的舊 `.php` 網址、106 個列表分頁）。**階段 C 一定要沿用這套做法。**
 - [x] **B 進行中快照**：2026-10-22 完成，`migration-2026-10-22/` 2,629 個 URL，無完整性問題。比對 10/9：文字真正有變 96 頁＝LQCOL-PLUS 六個系列頁擴寫＋88 個英文產品頁新增「Certification Conformity」區塊（APT-1.3 反而少一項 WaterMark）。「消失」的 855 筆全是 10/9 的重複副本，沒有頁面消失。
-- [ ] **C 最終版快照**：等客戶窗口回「本輪完成」再跑。從 10/22 證據看工程師還沒做完：下載專區還沒掛 LQCOL PDF、LQCOL／GIGA 沒有產品明細頁、sitemap 一個位元組都沒變。指令見 RUN_REPORT §5；**基準改用 `migration-2026-10-22`，不要再用 10/9**。
+- [ ] **C 最終版快照**：**種子清單要補 `/images/products/ROT-txt-01.png`**（RO-PLUS 頁頂的文字圖，10/09 與 10/22 兩次都漏抓，10/24 先從線上站手動存到 site/public）。等客戶窗口回「本輪完成」再跑。從 10/22 證據看工程師還沒做完：下載專區還沒掛 LQCOL PDF、LQCOL／GIGA 沒有產品明細頁、sitemap 一個位元組都沒變。指令見 RUN_REPORT §5；**基準改用 `migration-2026-10-22`，不要再用 10/9**。
 - [ ] **D 結構化抽取**：C 之後寫 `extract/` 解析器，產出 products.json、articles/*.md、assets_manifest.csv、routes.csv、i18n_map.json；先每頁型抽一頁驗證再全跑。routes.csv 要納入 11 個舊 `.php` 網址與 `/LQCOL-PLUS`、`/certification` 兩個寫錯的無語系連結（都要 301）。
 - [ ] **E 向客戶要 EDM／手冊 PDF 最新原檔**（黃老闆 10/22 決定：不以網站壓縮版為準，直接向客戶要全部 EDM）；向工程師要資料庫匯出對照還欠什麼。清單見 05-舊站資料擷取/2026-10-22-向客戶與工程師索取的資料清單.md。
 - [ ] **E 向客戶確認認證清單**：88 個產品頁 10/22 新增的認證區塊要逐系列確認正確性與有效期；APT-1.3 被拿掉 WaterMark 要問原因。
@@ -39,6 +39,7 @@
   - [ ] 2026-10-24 已擬 LINE 訊息向 Tiffany 要三樣：所有 Banner 原圖、所有下載 PDF 原檔、Selection Tools 最終版 Excel（草稿在 官網改版說明文件/05-舊站資料擷取/2026-10-24-LINE給Tiffany-索取Banner-PDF-選型Excel.md）。黃老闆傳出後改成「等回覆」。收件用 Drive 資料夾已開：`梵亞/AQUASKY-AEO/溢康提供素材-20261024/`（三個子資料夾），Tiffany 要求存取權時記得給「編輯者」。
   - [ ] 要決定：舊站圖片／PDF 正式部署時放哪（現在從本機封存複製，不進 Git；Workers Builds 在雲端拿不到封存）。選項：放 R2，或把需要的圖片 commit 進 site/public（LQCOL 用到的約 10 MB，主要是 8 MB 的使用手冊 PDF）。
   - [ ] 問客戶：LQCOL 規格表三個疑點（LQC-3 重量／外箱比 LQC-8 大、LQC-60SS 加侖數 14 對不上 60 L、內文說有 0.5L／1L／100L+ 但表上沒有）。已記在 site/src/data/products/lqcol-plus.json 的 dataQuestions。
+  - [x] 2026-10-24 盤點各系列獨立 logo 檔：8 個系列有（Thermal、HYDRO、MEGA、SOLAR、SUPREME、ELBI＝dl-ce 與 asme-ht 共用、GIGA webp、LQCOL），PUMPLUS／RO／PREMIUM 用文字或標題圖，accessories 沒有獨立 logo。全部已列入 assets:copy。首頁產品系列 12 張圖本身就含 logo，顯示正常（黃老闆截到的空白是圖還沒載完）。
   - [ ] 英文首頁認證圖示的說明文字是新補的（舊站英文版沒有），從中文說明翻過來，要 Tiffany 一起看。
 - [ ] 待決：Cloudflare 帳戶放客戶名下還是梵亞名下（規劃 §8.4，合約事）。定案前先用梵亞帳戶做預覽。
 - [ ] 切換時要逐項解除舊 AEO Worker（`Aquasky Edge AEO On Cloudflare Project/worker/wrangler.toml`，掛在 aquaskyplus.com 六語系路由）的 HTML 注入（規劃 §13）。

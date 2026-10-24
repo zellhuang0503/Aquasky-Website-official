@@ -78,6 +78,17 @@ const ASSETS = [
   ['/images/products_line/Elbi_B2022.webp'],
   ['/images/products_line/SupremePlus_2023B.webp'],
   ['/images/products_line/accessories3.webp'],
+  // 各系列頁最上方的獨立 logo／標題圖（2026-10-24 盤點：8 個系列有 logo 檔，PUMPLUS／RO／PREMIUM 用文字圖，accessories 沒有）
+  ['/images/products/PRODUCT_PUMPLUS_200209_txt2.png'],      // PUMPLUS（文字圖）
+  // RO-PLUS 的文字圖 /images/products/ROT-txt-01.png 兩次封存都漏抓（階段 C 要補進種子清單）；2026-10-24 先從線上站直接存到 public/images/products/
+  ['/images/products/Thermal/thermal_logo.png'],
+  ['/images/products/HYDRO_logo.png'],
+  ['/images/products/Premium-PLUS_20221228-01.jpg'],         // PREMIUM-PLUS（標題圖）
+  ['/images/products/mega/mega_logo.png'],
+  ['/images/products/solar/solar_logo.png'],
+  ['/images/products/supreme/supreme_logo.png'],
+  ['/images/products/ELBI/ELBI_logo.png'],                   // dl-ce 與 asme-ht 共用
+  ['/images/products/GIGAPLUS/webp/WEB_PRODUCT_GIGAPLUS_202512_logo.webp'],
   // LQCOL-PLUS
   ['/images/products/LQCOLPLUS/LQCOLPLUS_logo.png'],
   ['/images/products/LQCOLPLUS/SET1.png'],
