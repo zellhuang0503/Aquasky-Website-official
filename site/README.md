@@ -14,7 +14,7 @@
 | 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
 | `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、sel_tools | 同上（照抄模板） | 同上。contact 表單外觀保留但 action="#"、拿掉 PHP 驗證碼與隱藏欄位，送出功能上線前接 Worker API；sel_tools 只是入口頁，三個計算器另做 |
-| `/en/products-det/<series>/<model>` 90 頁、`/en/accessories-det/<item>` 6 頁（舊站只有英文版；中文系列頁也連到英文明細） | `src/pages/[lang]/products-det/[series]/[model].astro`、`[lang]/accessories-det/[item].astro` → `LegacyPage.astro`（照抄模板，`langs: ['en']`） | 主體照抄，verify 逐字比。匯入時拿掉 Google 翻譯殘留的 `<font>` 包裝（一頁 6 萬多個、沒有視覺效果，APT-3 從 57 KB 變 15 KB）；配件頁「<<back」改連 `/en/accessories`；YouTube iframe 保留；hreflang 只列 en；麵包屑 首頁›產品系列›該系列›型號 |
+| `/en/products-det/<series>/<model>` 90 頁、`/en/accessories-det/<item>` 6 頁（舊站只有英文版；中文系列頁照舊站沒有型號清單，不連明細） | `src/pages/[lang]/products-det/[series]/[model].astro`、`[lang]/accessories-det/[item].astro` → `LegacyPage.astro`（照抄模板，`langs: ['en']`） | 主體照抄，verify 逐字比。匯入時拿掉 Google 翻譯殘留的 `<font>` 包裝（90 頁合計 6 萬多個、單頁最多約 1,100 個；APT-3 從 57 KB 變 15 KB）；配件頁「<<back」改連 `/en/accessories`；YouTube iframe 保留；hreflang 只列 en；麵包屑 首頁›產品系列›該系列›型號 |
 | `/download/english` … 14 個語系子頁（網址沒有語系前綴） | `src/pages/download/[language].astro` → `LegacyPage.astro`（照抄模板，`neutral: true`） | 舊站這些頁一律英文介面、沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站英文介面、canonical 指自己、不輸出 hreflang、語言選單回各語系首頁。83 個 EDM PDF（66 MB）與封面圖由 copy 腳本複製 |
 | `/en/news/EXHIBITIONS`、`/en/news/INDUSTRY`、`/en/news/<CAT>/pageN`（zh 同） | `src/pages/[lang]/news/[category].astro`、`[category]/[page].astro` → `NewsList.astro` | 舊站列表照抄：每頁 5 篇、右欄固定幾篇「熱門文章」、分頁列全頁碼；en 6＋33 頁、zh 1＋10 頁 |
 | `/en/news-detail/<CAT>/<slug>`（237 篇：en 187、zh 50） | `src/pages/[lang]/news-detail/[category]/[slug].astro` → `NewsDetail.astro` | 正文整段照抄（`src/content/news/<lang>/<CAT>/<slug>.json`），verify 逐字比。每篇只有一個語系，沒有對應翻譯 |
@@ -102,7 +102,7 @@ npm run check           # 型別與模板檢查
 - 語言選單裡還沒上線的語系（es／fr／ru／ar）是灰字不能點，舊站是連結。等那些語系做好再開。
 - 英文首頁認證圖示下面舊站沒有文字，新站也不顯示；建議的英文說明放在 `src/content/home/en.json` 的 `draftLabel`，客戶審過才會改成 `label` 顯示。
 - 中文 LQCOL-PLUS 頁是 AI 初稿，頁頂多一條黃色「AI 初稿」提示；審過後拿掉。
-- 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁），中文頁同樣連英文明細。
+- 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁）；中文系列頁照舊站沒有型號清單，不連明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。
 - 聯絡頁 email：舊站經 Cloudflare 混淆（/cdn-cgi/l/email-protection）再靠 JS 還原；新站匯入時直接解碼成純文字（同舊站還原後的樣子）。
@@ -114,7 +114,7 @@ npm run check           # 型別與模板檢查
 - 照抄頁載哪個 bootstrap 照舊站（products 與首頁是 min，其他是客製 full）；series_content.css 只有 LQCOL 載。
 - 新聞：hreflang 只列真的有這一頁的語系（明細只有自己；列表第 N 頁要兩個語系都有 N 頁才互列），語言選單切到沒有這頁的語系時回該語系首頁（舊站語言選單一律回首頁）。列表封面圖補 alt＝標題（舊站沒有）。CollectionPage 每頁指自己的網址（舊站每頁都指第 1 頁）；NewsArticle 原樣搬並補 publisher。列表與明細各補一個看不見的 h1（列表＝標題帶字樣、明細＝文章標題）。
 - 新聞正文裡 YouTube 的 iframe 保留（schema 只准 youtube／youtube-nocookie）；正文裡連到舊站 `.php` 的連結照舊（約 130 處），切換時要改。
-- 英文產品明細（90 頁）：匯入時拿掉 `<font dir="auto" style="vertical-align: inherit;">` 層層包裝（Google 翻譯殘留；唯一的視覺影響是規格表每列矮 2px，APT-3 整頁 5846 vs 舊站 5862，肉眼看不出），verify 比對時兩邊都先去掉；配件明細的「<<back」從 `accessories.php?lang=en` 改成 `/en/accessories`；頁內「Price Inquiry」「Contact us」連 `/en/sel_tools`、`/en/contact`（舊站是相對路徑，同一處）。舊站這些頁 head 沒有 JSON-LD（AEO Worker 注入的不搬），新站只有全站的 Organization／WebSite／BreadcrumbList。
+- 英文產品明細（90 頁）：匯入時拿掉 `<font dir="auto" style="vertical-align: inherit;">` 層層包裝（Google 翻譯殘留，90 頁合計 6 萬多個；唯一的視覺影響是規格表每列矮 2px，APT-3 整頁 5846 vs 舊站 5862，肉眼看不出），verify 比對時兩邊都先去掉；配件明細的「<<back」從 `accessories.php?lang=en` 改成 `/en/accessories`；頁內「Price Inquiry」「Contact us」連 `/en/sel_tools`、`/en/contact`（舊站是相對路徑，同一處）。68 頁正文裡的 YouTube iframe（width=560）在手機會撐寬整頁（舊站同），site.css 讓它不超過欄寬。舊站這些頁 head 沒有 JSON-LD（AEO Worker 注入的不搬），新站只有全站的 Organization／WebSite／BreadcrumbList。
 - 影片明細的 JSON-LD：舊站 zh 影片的 `@id`／`mainEntityOfPage` 還寫 `videos-detail.php?sid=…`，匯入時改成新站乾淨網址；Article 補 publisher。
 - 下載子頁（/download/<language>）：舊站線上版的選單語言會跟著 cookie 走（看過中文頁再開就變中文選單），封存版是英文；新站固定英文介面。這些頁舊站沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站 canonical 指自己、不輸出 hreflang（14 頁各是一種型錄語言，不是網站語系）。麵包屑：首頁›DOWNLOAD›EDM English。
 - 新聞明細手機版：8 篇正文有固定寬度的表格或 iframe，舊站會把整頁撐寬（390 寬變 515～815）；新站在 site.css 讓 `#news-container #ImgAutoResponsive` 橫向捲、iframe max-width 100%，桌機版面不變。

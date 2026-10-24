@@ -79,7 +79,7 @@ function parse(lang, p) {
   // 主體
   let body = html.slice(html.indexOf('</header>') + '</header>'.length, html.indexOf('<footer'));
   body = body.replace(/<!--[\s\S]*?-->/g, '');
-  // 產品明細頁有 Google 翻譯殘留的 <font dir="auto" style="vertical-align: inherit;"> 層層包裝（一頁 6 萬多個），沒有視覺效果，拿掉
+  // 產品明細頁有 Google 翻譯殘留的 <font dir="auto" style="vertical-align: inherit;"> 層層包裝（90 頁合計 6 萬多個，單頁最多約 1,100 個），拿掉；唯一視覺影響是規格表每列矮 2px
   body = body.replace(/<\/?font\b[^>]*>/g, '');
   // 配件明細的「<<back」連舊站 PHP 網址，改成新站同一頁
   body = body.replace(/href="accessories\.php\?lang=en"/g, 'href="/en/accessories"');

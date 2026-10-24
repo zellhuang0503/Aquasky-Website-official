@@ -38,6 +38,8 @@
    新站讓正文在自己的框裡橫向捲、影片最多跟框一樣寬。桌機 1140 寬放得下，版面不變。 */
 #news-container #ImgAutoResponsive { overflow-x: auto; }
 #news-container #ImgAutoResponsive iframe { max-width: 100%; }
+/* 英文產品明細 68 頁正文裡的 YouTube iframe（width=560）同樣會在手機撐寬整頁；桌機 560 < 欄寬不受影響 */
+.pd-text-2 iframe { max-width: 100%; }
 
 /* 404 */
 .notfound { text-align: center; padding: 64px 16px; }
