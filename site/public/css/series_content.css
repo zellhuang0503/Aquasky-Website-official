@@ -1,0 +1,111 @@
+/* 系列產品頁內容樣式
+   前台（series_content.php）與後台 TinyMCE 編輯區（body_class: series-content）共用 */
+
+/* ---- 版面（前台）---- */
+.series-wrap { color:#e9e4e2; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.series-sec { padding:40px 0; }
+.series-title { display:flex; align-items:center; gap:18px; margin:0 0 28px; color:#fff; font-size:26px; font-weight:600; text-align:center; }
+.series-title::before, .series-title::after { content:""; flex:1; height:1px; background:rgba(255,255,255,.55); }
+
+/* ---- 區塊內容（TinyMCE 產生的 HTML）---- */
+.series-content { color:#e9e4e2; font-size:18px; line-height:1.65; overflow-x:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.series-content p { margin:0 0 14px; }
+.series-content strong { color:#fff; }
+.series-content a { color:#5fc4c0; }
+.series-content img { max-width:100%; height:auto; }
+.series-content h2, .series-content h3, .series-content h4 { color:#fff; }
+
+/* 表格（規格表等） */
+.series-content table { width:100%; border-collapse:collapse; color:#fff; font-size:15px; background:rgba(80,80,80,.45); margin:0 0 20px; }
+.series-content th, .series-content td { padding:9px 8px; border-bottom:1px solid rgba(255,255,255,.7); text-align:left; font-weight:normal; vertical-align:middle; }
+.series-content table caption { caption-side:top; text-align:center; color:#fff; font-size:20px; padding:12px 0; border-top:1px solid #fff; border-bottom:1px solid #fff; }
+/* 規格表（比照設計稿第 5 頁：灰色漸層底框內，總標題 + 兩張表上下相連）*/
+.series-content .series-spec-box { background:linear-gradient(175deg, #686667 0%, #4a4342 50%, #3a3633 100%); padding:20px 21px 16px; margin:0 0 20px; overflow-x:auto; }
+.series-content .series-spec-box > * { min-width:1040px; }
+.series-content .series-spec { table-layout:fixed; min-width:1040px; margin:0; background:none; font-size:14px; line-height:1.3; font-family:Arial, Helvetica, sans-serif; }
+.series-content .series-spec th, .series-content .series-spec td { padding:6px 8px; border-bottom-width:1px; }
+.series-content .series-spec td { white-space:nowrap; }
+.series-content .series-spec caption { font-size:18px; line-height:1.3; padding:11px 0; border-top:0; font-family:Arial, Helvetica, sans-serif; }
+/* 欄寬（第一列表頭決定）：型號 8.2%、雙欄群組各 9.1%、單欄（Shipping）7.5%、Connection 11.4% */
+.series-content .series-spec thead tr:first-child th { width:7.5%; }
+.series-content .series-spec thead tr:first-child th[colspan="2"] { width:9.1%; }
+.series-content .series-spec thead tr:first-child th[rowspan]:first-child { width:8.2%; }
+.series-content .series-spec thead tr:first-child th[rowspan]:last-child { width:11.4%; }
+.series-content .series-spec tbody tr:last-child td { border-bottom:3px solid #fff; }
+.series-content .series-spec:last-of-type tbody tr:last-child td { border-bottom-width:1px; }
+.series-content .series-spec-head { text-align:center; color:#fff; font-size:18px; line-height:1.3; padding:11px 0; margin:0; border-top:2px solid #fff; border-bottom:2px solid #fff; font-family:Arial, Helvetica, sans-serif; }
+/* 規格屬性表（比照設計稿第 6 頁：深色底框留內距，線不貼框邊；第一列上方也有線）*/
+.series-content .series-prop { border-collapse:separate; border-spacing:0; padding:24px 27px 17px; font-size:18px; line-height:1.3; background:rgba(55,51,49,.95); margin-top:30px; }
+.series-content .series-prop td { padding:8px 13px; border-bottom:1px solid rgba(255,255,255,.85); }
+.series-content .series-prop tr:first-child td { border-top:1px solid rgba(255,255,255,.85); }
+.series-content .series-prop td:first-child:not(:only-child) { width:40.4%; }   /* rowspan 下一列只剩一格（第 2 欄），不套寬度 */
+
+/* 三欄特點卡片（比照設計稿第 2 頁：深色標籤在卡片上方、與卡片分開；半透明灰卡片、白字）*/
+.series-content .series-feat { display:flex; flex-wrap:wrap; gap:32px; }
+.series-content .series-feat-item { flex:1 1 280px; display:flex; flex-direction:column; align-items:center; }
+.series-content .series-feat-tag { box-sizing:border-box; width:78%; background:rgba(38,38,38,.75); color:#6cbfbd; font-weight:700; font-size:21px; line-height:1.3; padding:12px 14px; border-radius:7px; margin:0 0 10px; text-align:center;
+	font-family:Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.series-content .series-feat-box { box-sizing:border-box; width:100%; flex:1; background:rgba(208,206,206,.31); border-radius:28px; padding:27px 28px 10px; font-size:18px; line-height:1.35; color:#fff; }
+.series-content .series-feat-box p { margin:0 0 1.2em; }
+
+/* 標註清單 */
+.series-content .series-callouts { list-style:none; padding:0; margin:20px 0 0; display:flex; flex-wrap:wrap; gap:10px 26px; justify-content:center; }
+.series-content .series-callouts li { color:#5fc4c0; font-weight:600; font-size:16px; }
+.series-content .series-callouts li::before { content:"\25CF  "; color:#fff; }
+
+/* 應用說明（比照設計稿第 4 頁：插圖約 52% 置中；半透明灰框、兩欄）*/
+.series-content .series-app-img { width:52.5%; }
+.series-content .series-app-box { background:rgba(208,206,206,.37); padding:16px 18px 6px; display:flex; gap:34px; font-size:16px; line-height:1.4; color:#fff; }
+.series-content .series-app-col { flex:1 1 0; min-width:0; }
+.series-content .series-app-box p { margin:0 0 1.7em; }
+.series-content .series-app-box strong { color:#6cbfbd; }
+
+/* ---- FAQ ---- */
+.series-faq-item { background:#5f5553; border:1px solid #7a706e; border-radius:12px; padding:16px 22px; margin-bottom:28px; font-size:17px; line-height:1.55; color:#e9e4e2; }
+.series-faq-item h3 { color:#5fc4c0; font-size:19px; font-weight:700; text-align:center; margin:0 0 6px; }
+.series-faq-item p { margin:0; }
+.series-faq-item strong { color:#fff; }
+
+/* ---- Downloads ---- */
+.series-dl { display:flex; flex-wrap:wrap; justify-content:space-around; gap:30px; text-align:center; }
+.series-dl-item { flex:1 1 260px; }
+.series-dl-item a.series-dl-title { color:#fff; font-family:Arial, Helvetica, sans-serif; font-size:22px; font-weight:700; text-decoration:underline; }
+.series-dl-item a.series-dl-title:hover { color:#5fc4c0; }
+.series-dl-item img { max-width:155px; margin:16px auto 0; display:block; box-shadow:0 2px 8px rgba(0,0,0,.4); }
+
+@media (max-width: 767px) {
+	.series-title { font-size:21px; gap:10px; }
+	.series-content { font-size:16px; }
+	.series-content .series-feat-box, .series-content .series-app-box, .series-faq-item { font-size:15px; }
+	.series-content .series-app-box { flex-direction:column; gap:0; }
+	.series-content .series-app-img { width:100%; }
+	.series-content .series-prop { font-size:15px; padding:14px 12px 10px; }
+	.series-content .series-prop td { padding:8px 8px; }
+	.series-dl-item a.series-dl-title { font-size:18px; }
+}
+
+/* ===== 標註圖（[figure:xxx]，見 include/function/series_figures.php）===== */
+.series-figure { margin:10px 0 20px; }
+/* 桌機：舞台依設計稿比例等比縮放；文字字級以容器寬度（cqw）縮放 */
+.series-figure .sf-stage { position:relative; width:100%; height:0; container-type:inline-size; }
+.series-figure .sf-img { position:absolute; height:auto; max-width:none; }
+.series-figure .sf-lines { position:absolute; left:0; top:0; width:100%; height:100%; overflow:visible; pointer-events:none; }
+.series-figure .sf-lines polyline { fill:none; stroke:#fff; stroke-width:1.5; }
+.series-figure .sf-lines circle { fill:#fff; }
+.series-figure .sf-label { position:absolute; margin:0; white-space:nowrap; color:#6cbfbd; font-weight:700; line-height:1.17;
+	font-family:Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:16px; font-size:var(--sf-font, 16px); }
+.series-figure .sf-label.sf-center { transform:translateX(-50%); text-align:center; }
+.series-figure .sf-label strong { color:inherit; }
+/* 手機版預設隱藏 */
+.series-figure .sf-mobile { display:none; }
+.series-figure .sf-mimg { position:relative; }
+.series-figure .sf-mimg img { display:block; width:100%; height:auto; }
+.series-figure .sf-marker { position:absolute; transform:translate(-50%, -50%); width:24px; height:24px; line-height:20px; border-radius:50%;
+	background:#6cbfbd; border:2px solid #fff; color:#1d1513; font-size:12px; font-weight:700; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.5); }
+.series-figure .sf-list { margin:16px 0 0; padding-left:26px; color:#6cbfbd; font-weight:700; font-size:16px; line-height:1.5; }
+.series-figure .sf-list li { margin-bottom:6px; }
+
+@media (max-width: 767px) {
+	.series-figure .sf-stage { display:none; }
+	.series-figure .sf-mobile { display:block; }
+}

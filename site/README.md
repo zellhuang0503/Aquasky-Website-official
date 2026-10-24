@@ -51,10 +51,19 @@ npm run check           # 型別與模板檢查
 
 列在 `src/data/products/lqcol-plus.json` 的 `dataQuestions`：LQC-3 重量與外箱比 LQC-8 大、LQC-60SS 的加侖數、內文提到的 0.5L／1L／100L+ 機型規格表沒有。
 
+## 版型原則（黃老闆 2026-10-24 指示：跟舊站盡量一樣，不改編排）
+
+- 直接沿用舊站的 CSS：`public/css/bootstrap.min.css`、`style.css`、`series_content.css`、`a-hover.css`、`all.min.css`（Font Awesome）。這幾個檔從封存複製後**進 Git**，不要改；新站自己的補充只放 `src/styles/site.css`。
+- HTML 結構與 class 名稱照舊站同一頁抄（navbar-default、#home-container-01…、series-sec、sf-stage、h2_2hline、btn-link）。搬新頁時先開舊站同頁對照。
+- 舊站靠 jQuery＋bootstrap.js 的行為（漢堡選單、下拉、輪播）改成 `Header.astro`／`HomePage.astro` 裡各 20 行純 JS，外觀不變。
+- 結構圖的線與標示座標存在 `src/data/products/lqcol-plus.json` 的 `structureFigure`，照舊站百分比座標；手機版同舊站改成編號圖＋清單。
+
 ## 跟舊站不一樣的地方（刻意的）
 
 - hreflang 逐頁對應（舊站全部指首頁，是 SEO 錯誤）。
 - 型號統一寫 `LQC-3`（舊站 `LQC- 3`、`LQC -12` 空格亂）；下載連結「Brchure」錯字改成「Brochure」。
-- 結構圖的六個標示改成圖下編號清單（舊站是疊在圖上的絕對定位文字，手機會亂）。
+- 結構圖標示由內容檔產生，沒有舊站的手動斷行，改成限寬自動換行。
 - 原生輸出 JSON-LD：Organization、WebSite、BreadcrumbList、ProductGroup（9 個型號）、FAQPage。舊站靠 AEO Worker 從外面注入。
+- 系列頁底部「Product Line」標題舊站是白字在白底（看不到），新站改品牌藍。
+- 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 預覽版頁頂有黃色 PREVIEW 條，正式版沒有。

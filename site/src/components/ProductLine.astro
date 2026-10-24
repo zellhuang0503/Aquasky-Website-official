@@ -1,26 +1,27 @@
 ---
-// 產品系列格狀清單。首頁用大圖，系列頁底部用小圖（variant="compact"）。
+// 產品系列清單：照舊站 row/col-md-6 兩欄 + .pd-btn-info-link 圓角按鈕。
+// 首頁 variant="home"（大圖、btn-link）；系列頁底部 variant="series"（webp 小圖、btn-link2）。
 import nav from '../data/nav.json';
 import { type Lang, href, t } from '../lib/i18n';
-interface Props { lang: Lang; heading: string; variant?: 'large' | 'compact'; headingLevel?: 'h2' | 'h3' }
-const { lang, heading, variant = 'large', headingLevel = 'h2' } = Astro.props;
+interface Props { lang: Lang; variant?: 'home' | 'series' }
+const { lang, variant = 'home' } = Astro.props;
 const d = t(lang);
 const label = (key: string) => (d.nav as Record<string, string>)[key] ?? key;
-const H = headingLevel;
-const current = Astro.url.pathname.replace(/\.html$/, '');
+const btn = variant === 'home' ? 'btn btn-link' : 'btn btn-link2';
+const list = nav.productLine;
+const rows: typeof list[] = [];
+for (let i = 0; i < list.length; i += 2) rows.push(list.slice(i, i + 2));
 ---
-<section class={`product-line product-line--${variant}`} aria-labelledby={`pl-${variant}`}>
-  <H class="section-title" id={`pl-${variant}`}>{heading}</H>
-  <ul class="product-grid">
-    {nav.productLine.map((p) => (
-      <li class="product-card" data-current={current === href(lang, p.path) ? 'true' : undefined}>
-        <a href={href(lang, p.path)} class="product-card-link">
-          <img src={variant === 'large' ? p.image : p.thumb} alt="" loading="lazy" decoding="async" />
-          <span class="product-card-name">{label(p.key)}</span>
-          {lang !== 'en' && label(p.key) !== p.key && <span class="product-card-series" lang="en">{p.key.replace(/-TANK$/, ' TANK').replace('DL TANK', 'LARGE SIZE DL TANK')}</span>}
-        </a>
-        {p.also && <a class="product-card-also" href={href(lang, p.also.path)}>{label(p.also.key)}</a>}
-      </li>
+{rows.map((row) => (
+  <div class="row padding_top_40">
+    {row.map((p) => (
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <img src={variant === 'home' ? p.image : p.thumb} class="img-responsive center-block" alt={label(p.key)} loading="lazy" />
+        <div class="pd-btn-info-link" style={p.also ? 'word-break: break-all;' : undefined}>
+          <a href={href(lang, p.path)} class={btn} style={p.also ? 'margin-bottom:5px;' : undefined}>{label(p.key)}</a>
+          {p.also && <a href={href(lang, p.also.path)} class={btn} style="margin-bottom:5px;">{label(p.also.key)}</a>}
+        </div>
+      </div>
     ))}
-  </ul>
-</section>
+  </div>
+))}

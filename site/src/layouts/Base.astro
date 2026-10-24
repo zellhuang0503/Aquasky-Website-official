@@ -1,5 +1,6 @@
 ---
-import '../styles/global.css';
+// 版型外框。CSS 順序照舊站：bootstrap → style.css → series_content.css → a-hover.css，最後才是新站補充的 site.css。
+import '../styles/site.css';
 import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -15,6 +16,8 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
   breadcrumbs?: { name: string; path: string }[];
   noindex?: boolean;
+  /** 系列頁等會在頁首下方自己放 h1 的頁面 */
+  bodyClass?: string;
 }
 const props = Astro.props;
 const info = langInfo(props.lang);
@@ -26,8 +29,11 @@ const d = t(props.lang);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#006da7" />
-    <script is:inline>document.documentElement.classList.add('js')</script>
     <link rel="icon" href={brand.logo} type="image/png" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/series_content.css" rel="stylesheet" />
+    <link href="/css/a-hover.css" rel="stylesheet" />
     <Seo {...props} />
     {stage === 'production' && (
       <Fragment>
@@ -42,7 +48,7 @@ const d = t(props.lang);
       </Fragment>
     )}
   </head>
-  <body>
+  <body class={props.bodyClass}>
     <a class="skip-link" href="#main">{d.common.skipToContent}</a>
     {stage === 'preview' && <div class="preview-banner" role="note">PREVIEW · {new Date().toISOString().slice(0, 10)}</div>}
     <Header lang={props.lang} path={props.path} />

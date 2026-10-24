@@ -1,10 +1,11 @@
 ---
-// 首頁內容。/（英文）與 /en、/zh 共用；文字在 src/content/home/<lang>.json。
+// 首頁：區塊順序與 class 照舊站 /en：#home-container-01（藍底字標＋輪播）→ #home-container-02（產品系列）
+// → 米色底 SELECTION TOOLS → #home-container-04（認證圖示）→ footer。文字在 src/content/home/<lang>.json。
 import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProductLine from './ProductLine.astro';
 import brand from '../data/brand.json';
-import { type Lang, href, t, format } from '../lib/i18n';
+import { type Lang, href, format, t, pick } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -22,40 +23,67 @@ const slides = [
 ];
 ---
 <Base lang={lang} title={c.seo.title} description={c.seo.description} path="">
-  <section class="home-hero">
-    <div class="wrap home-hero-text">
-      <img class="home-wordmark" src="/images/aquasky-text.png" alt="" width="460" height="80" />
-      <h1><span class="visually-hidden">{brand.brand} · </span>{c.h1}</h1>
-      <p class="home-company">{c.companyName}</p>
-      <p class="home-founded">{format(d.common.foundedIn, { year: brand.founded })}</p>
+  <div id="home-container-01" class="container-fluid">
+    <div class="container">
+      <div class="h_aquasky-text">
+        <h1 class="ima_h_tag"><img src="/images/aquasky-text.png" class="img-responsive center-block" alt={`${pick(brand.legalName, lang)} - ${c.h1}`} width="460" height="80" /></h1>
+        {lang !== 'en' && <p class="company_lang_txt"><strong>{c.companyName}</strong></p>}
+      </div>
+      <div class="h_title_line_01">{format(d.common.foundedIn, { year: brand.founded })}</div>
+      <div class="h_about">
+        <div id="bg-slider" role="region" aria-label={c.slidesAlt}>
+          {slides.map((src, i) => (
+            <div class="item"><img src={src} alt={i === 0 ? c.slidesAlt : ''} loading={i < 2 ? 'eager' : 'lazy'} decoding="async" /></div>
+          ))}
+        </div>
+      </div>
     </div>
-    <div class="slides" role="region" aria-label={c.slidesAlt} tabindex="0">
-      {slides.map((src, i) => (
-        <img src={src} alt={i === 0 ? c.slidesAlt : ''} loading={i === 0 ? 'eager' : 'lazy'} decoding="async" fetchpriority={i === 0 ? 'high' : undefined} />
-      ))}
-    </div>
-  </section>
-
-  <div class="wrap">
-    <ProductLine lang={lang} heading={c.productLineHeading} />
-
-    <section class="home-tools" aria-labelledby="tools-title">
-      <h2 class="section-title" id="tools-title">{c.selectionTools.heading}</h2>
-      <a href={href(lang, '/sel_tools')} class="tools-card">
-        <img src={c.selectionTools.image} alt={c.selectionTools.alt} loading="lazy" />
-        <span class="button">{c.selectionTools.cta}</span>
-      </a>
-    </section>
   </div>
 
-  <section class="home-certs" aria-labelledby="certs-title">
-    <div class="wrap">
-      <h2 class="section-title section-title--light" id="certs-title">{c.certifications.heading}</h2>
-      <ul class="cert-grid">
-        {c.certifications.items.map((item) => (
-          <li><img src={item.icon} alt="" loading="lazy" /><span>{item.label}</span></li>
-        ))}
-      </ul>
+  <div id="home-container-02-bg" class="container-fluid">
+    <div id="home-container-02" class="container">
+      <div class="pd_title_line">{c.productLineHeading}</div>
+      <ProductLine lang={lang} variant="home" />
     </div>
-  </section>
+  </div>
+
+  <div style="background-color:#fef9ee;">
+    <div class="container">
+      <p>&nbsp;</p>
+      <div class="pd_title_line">{c.selectionTools.heading}</div>
+      <p>&nbsp;</p>
+      <img src={c.selectionTools.image} class="img-responsive center-block hvr-grow" alt={c.selectionTools.alt} loading="lazy" />
+      <p>&nbsp;</p>
+      <div class="pd-btn-info-link"><a href={href(lang, '/sel_tools')} class="btn btn-link">{c.selectionTools.cta}</a></div>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+
+  <div id="home-container-04-bg" class="container-fluid">
+    <div id="home-container-04" class="container">
+      <h2 class="visually-hidden">{c.certifications.heading}</h2>
+      {[c.certifications.items.slice(0, 4), c.certifications.items.slice(4, 8)].map((row) => (
+        <div class="row">
+          {row.map((item) => (
+            <div class="col-xs-6 col-sm-3">
+              <img src={item.icon} class="img-responsive center-block" alt="" loading="lazy" />
+              <p class="ca_txt">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      ))}
+      <div class="clearfix"></div>
+    </div>
+  </div>
 </Base>
+<script>
+  // 輪播：每 4 秒往前捲一張（桌面一次看 2 張，手機 1 張），到底回頭。不想動就停在第一張也沒差。
+  const slider = document.getElementById('bg-slider');
+  const items = slider ? Array.from(slider.children) as HTMLElement[] : [];
+  if (slider && items.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let index = 0;
+    const perView = () => (matchMedia('(max-width: 767px)').matches ? 1 : 2);
+    const render = () => items.forEach((el) => { el.style.transform = `translateX(-${index * 100}%)`; });
+    setInterval(() => { index = (index + 1) % (items.length - perView() + 1); render(); }, 4000);
+  }
+</script>

@@ -74,7 +74,7 @@ for (const page of PAGES) {
 
   if (page.series) {
     // 規格表數字＝產品 JSON
-    const tbodies = [...html.matchAll(/<table class="spec-table"[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/g)].map((m) => m[1]);
+    const tbodies = [...html.matchAll(/<table class="series-spec"[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/g)].map((m) => m[1]);
     const expectRows = [product.specs.carbonSteel, product.specs.stainlessSteel];
     if (tbodies.length !== 2) fail(`${where}: expected 2 spec tables, got ${tbodies.length}`);
     tbodies.forEach((tb, ti) => {

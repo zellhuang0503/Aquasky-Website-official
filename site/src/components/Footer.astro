@@ -1,23 +1,24 @@
 ---
+// 頁尾：照舊站 <footer><div class="container"><div id="footer-content">…。中文版多一行公司名（舊站 zh 也有）。
 import brand from '../data/brand.json';
 import { type Lang, t, pick } from '../lib/i18n';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const d = t(lang);
-const year = new Date().getFullYear();
 ---
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <img src={brand.footerLogo} alt={brand.brand} width="200" height="60" loading="lazy" />
-    <p class="footer-name">{pick(brand.legalName, lang)}</p>
-    <address>
+<footer>
+  <div class="container">
+    <div id="footer-content">
+      <p><img alt={brand.brand} class="img-responsive center-block" src={brand.footerLogo} width="200" height="60" loading="lazy" /></p>
+      <p>www.aquaskyplus.com</p>
+      {lang !== 'en' && <p>{pick(brand.legalName, lang)}</p>}
       <p>{pick(brand.address, lang)}</p>
-      <p>{d.common.tel} <a href={`tel:+${brand.tel.replace(/-/g, '')}`}>{brand.tel}</a> / {d.common.fax} {brand.fax}</p>
-    </address>
-    <p class="footer-social">
-      <a href={brand.sameAs[0]} rel="noopener" target="_blank">Facebook</a>
-      <a href={brand.sameAs[1]} rel="noopener" target="_blank">LinkedIn</a>
-    </p>
-    <p class="footer-copy">© {year} {brand.brand}</p>
+      <p>{d.common.tel} {brand.tel} / {d.common.fax} {brand.fax}</p>
+      <p>
+        <a href={brand.sameAs[0]} style="color:#FFF;" target="_blank" rel="noopener">Facebook</a>
+        {' '}
+        <a href={brand.sameAs[1]} style="color:#FFF;" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
   </div>
 </footer>

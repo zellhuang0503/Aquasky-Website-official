@@ -12,6 +12,24 @@ const ORIGIN = 'https://aquaskyplus.com';
 
 /** [舊站路徑, public 內目標路徑（省略＝相同）] */
 const ASSETS = [
+  // 舊站 CSS（照抄沿用；這幾個會進 Git，其他圖片不進）
+  ['/css/bootstrap.min.css'],
+  ['/css/style.css'],
+  ['/css/series_content.css'],
+  ['/css/a-hover.css'],
+  ['/css/all.min.css'],
+  ['/webfonts/fa-solid-900.woff2'],
+  ['/webfonts/fa-regular-400.woff2'],
+  ['/fonts/segoeui.ttf'],
+  // 舊 CSS 用到的背景圖
+  ['/images/header-bg.jpg'],
+  ['/images/hbg-01-11.jpg'],
+  ['/images/hbg-01-2.jpg'],
+  ['/images/hbg-02.jpg'],
+  ['/images/title-line-01.png'],
+  ['/images/pd-title-line-01.png'],
+  ['/images/footer-bg.jpg'],
+  ['/images/products/LQCOLPLUS/LQCOLPLUS_bg.png'],
   // 共用
   ['/images/logo.png'],
   ['/images/aquasky-text.png'],

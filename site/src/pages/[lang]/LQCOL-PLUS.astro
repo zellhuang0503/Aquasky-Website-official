@@ -1,6 +1,6 @@
 ---
-// LQCOL-PLUS 系列頁：/en/LQCOL-PLUS、/zh/LQCOL-PLUS（網址與舊站相同）。
-// 文字：src/content/series/lqcol-plus/<lang>.json；數字：src/data/products/lqcol-plus.json。
+// LQCOL-PLUS 系列頁：/en/LQCOL-PLUS、/zh/LQCOL-PLUS。HTML 結構與 class 照舊站同頁（h1 條 → #pd-container-01 深底
+// → series-sec 區塊 → #pd-more-info 產品列 → footer）。文字：src/content/series/lqcol-plus/<lang>.json；數字：src/data/products/lqcol-plus.json。
 import { getEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProductLine from '../../components/ProductLine.astro';
@@ -20,6 +20,9 @@ const d = t(lang);
 const site = brand.url;
 const pageUrl = `${site}/${lang}${product.path}`;
 const s = c.specs;
+const fig = product.structureFigure;
+const colon = lang === 'zh' ? '：' : ': ';
+const answerPrefix = lang === 'zh' ? 'A：' : 'A:';
 const mb = (bytes: number) => `${(bytes / 1024 / 1024).toFixed(1)} MB`;
 const downloads = product.downloads.map((dl) => ({ ...dl, title: dl.key === 'brochure' ? c.downloads.brochure : c.downloads.manual }));
 
@@ -70,106 +73,132 @@ const breadcrumbs = [
 ];
 ---
 <Base lang={lang} title={c.seo.title} description={c.seo.description} path={product.path} image={product.images.hero} jsonLd={[productGroup, faqPage]} breadcrumbs={breadcrumbs}>
-  <nav class="wrap breadcrumbs" aria-label="breadcrumb">
-    <ol>
-      {breadcrumbs.map((b, i) => (
-        <li>{i < breadcrumbs.length - 1 ? <a href={`/${lang}${b.path}`}>{b.name}</a> : <span aria-current="page">{b.name}</span>}</li>
-      ))}
-    </ol>
-  </nav>
+  <div class="h1-custom-style">
+    <h1>{c.h1}</h1>
+    {c.status === 'draft-ai' && <div class="draft-note" role="note">{lang === 'zh' ? '本頁中文為 AI 初稿，尚待審稿。' : 'Draft translation, pending review.'}</div>}
+  </div>
 
-  <section class="series-hero">
-    <div class="wrap series-hero-inner">
-      <div class="series-hero-text">
-        <img class="series-logo" src={product.images.logo} alt={product.series} width="320" height="90" />
-        <h1>{c.h1}</h1>
-        {c.status === 'draft-ai' && <p class="draft-note" role="note">{lang === 'zh' ? '本頁中文為 AI 初稿，尚待審稿。' : 'Draft translation, pending review.'}</p>}
-      </div>
-      <img class="series-hero-img" src={product.images.hero} alt={`${brand.brand} ${product.series}`} loading="eager" fetchpriority="high" />
-    </div>
-  </section>
+  <div id="pd-container-01" class="container-fluid">
+    <div class="container series-wrap">
+      <div class="pd-aquasky-text"><img src={product.images.logo} class="img-responsive center-block" alt={product.series} /></div>
+      <div class="pd-aquasky-LQCOL-all"><img src={product.images.hero} class="img-responsive center-block" alt={`${product.series} ${c.h1}`} /></div>
 
-  <div class="wrap series-body">
-    <section class="series-sec" aria-labelledby="about">
-      <h2 id="about">{c.about.heading}</h2>
-      <p class="lead">{c.about.body}</p>
-    </section>
+      <section class="series-sec lang_rtl">
+        <h2 class="series-title">{c.about.heading}</h2>
+        <div class="series-content"><p>{c.about.body}</p></div>
+      </section>
 
-    <section class="series-sec" aria-labelledby="features">
-      <h2 id="features">{c.features.heading}</h2>
-      <div class="feature-groups">
-        {c.features.groups.map((g) => (
-          <div class="feature-group">
-            <h3 class="feature-tag">{g.label}</h3>
-            <ul>
-              {g.items.map((it) => <li>{it.lead && <strong>{it.lead}</strong>}{it.lead && (lang === 'zh' ? '：' : ': ')}{it.text}</li>)}
-            </ul>
+      <section class="series-sec lang_rtl">
+        <h2 class="series-title">{c.features.heading}</h2>
+        <div class="series-content">
+          <div class="series-feat">
+            {c.features.groups.map((g) => (
+              <div class="series-feat-item">
+                <div class="series-feat-tag">{g.label}</div>
+                <div class="series-feat-box">
+                  {g.items.map((it) => <p>• {it.lead && <Fragment><strong>{it.lead}</strong>{colon}</Fragment>}{it.text}</p>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="series-sec lang_rtl">
+        <div class="series-content">
+          <div class="series-figure" data-figure="lqc-structure">
+            <div class="sf-stage" style={`padding-top:${fig.stagePaddingTop};--sf-font:${fig.font};`}>
+              <img class="sf-img" src={product.images.structure} alt={c.structure.alt} loading="lazy" style={`left:${fig.img.left};top:${fig.img.top};width:${fig.img.width};`} />
+              <svg class="sf-lines" viewBox={fig.viewBox} preserveAspectRatio="none" aria-hidden="true">
+                {fig.lines.map((l) => (
+                  <Fragment>
+                    <polyline points={l.points} />
+                    {l.dots.map(([cx, cy]) => <circle cx={cx} cy={cy} r="3.2" />)}
+                  </Fragment>
+                ))}
+              </svg>
+              {c.structure.labels.map((text, i) => (
+                <div class={`sf-label${fig.labels[i].center ? ' sf-center' : ''}`} style={`left:${fig.labels[i].left};top:${fig.labels[i].top};`}>{text}</div>
+              ))}
+            </div>
+            <div class="sf-mobile">
+              <div class="sf-mimg">
+                <img src={product.images.structure} alt={c.structure.alt} loading="lazy" />
+                {fig.mobileMarkers.map((m, i) => <span class="sf-marker" style={`left:${m.left};top:${m.top};`}>{i + 1}</span>)}
+              </div>
+              <ol class="sf-list">{c.structure.labels.map((text) => <li>{text}</li>)}</ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="series-sec lang_rtl">
+        <h2 class="series-title">{c.applications.heading}</h2>
+        <div class="series-content">
+          <p style="text-align: center;"><img src={product.images.applications} alt={c.applications.alt} width="653" height="223" loading="lazy" /></p>
+          <div class="series-app-box">
+            {[c.applications.items.slice(0, 3), c.applications.items.slice(3)].map((col) => (
+              <div class="series-app-col">
+                {col.map((it) => <p><strong>• {it.lead}{it.lead && (lang === 'zh' ? '：' : ':')}</strong> {it.text}</p>)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="series-sec lang_rtl">
+        <h2 class="series-title">{s.heading}</h2>
+        <div class="series-content">
+          <div class="series-spec-box">
+            <p class="series-spec-head">{s.tableTitle}</p>
+            <SpecTable caption={s.captionCarbon} columns={s.columns} rows={product.specs.carbonSteel} />
+            <SpecTable caption={s.captionStainless} columns={s.columns} rows={product.specs.stainlessSteel} />
+          </div>
+          <table class="series-prop">
+            <tbody>
+              <tr><td>{s.props.shell}</td><td>{s.props.shellValue}</td></tr>
+              <tr><td>{s.props.systemConnection}</td><td>{s.props.systemConnectionValue}</td></tr>
+              <tr><td>{s.props.coating}</td><td>{s.props.coatingValue}</td></tr>
+              <tr><td>{s.props.diaphragm}</td><td>{s.props.diaphragmValue}</td></tr>
+              <tr><td>{s.props.factoryPrecharge}</td><td>{product.specs.common.factoryPrecharge}</td></tr>
+              <tr><td rowspan="2">{s.props.maxWorkingTemp}</td><td>{s.props.maxWorkingTempCarbon}</td></tr>
+              <tr><td>{s.props.maxWorkingTempStainless}</td></tr>
+              <tr><td>{s.props.maxWorkingPressure}</td><td>{product.specs.common.maxWorkingPressure}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="series-sec lang_rtl">
+        <h2 class="series-title">{c.faq.heading}</h2>
+        {c.faq.items.map((f, i) => (
+          <div class="series-faq-item">
+            <h3>{`Q${i + 1}${colon}${f.q}`}</h3>
+            <div class="series-content"><p><strong>{answerPrefix}</strong> {f.a}</p></div>
           </div>
         ))}
-      </div>
-      <figure class="structure">
-        <img src={product.images.structure} alt={c.structure.alt} loading="lazy" />
-        <figcaption>
-          <ol class="structure-legend">
-            {c.structure.labels.map((l) => <li>{l}</li>)}
-          </ol>
-        </figcaption>
-      </figure>
-    </section>
+      </section>
 
-    <section class="series-sec" aria-labelledby="applications">
-      <h2 id="applications">{c.applications.heading}</h2>
-      <img class="app-img" src={product.images.applications} alt={c.applications.alt} loading="lazy" />
-      <ul class="app-list">
-        {c.applications.items.map((it) => <li>{it.lead && <strong>{it.lead}</strong>}{it.lead && (lang === 'zh' ? '：' : ': ')}{it.text}</li>)}
-      </ul>
-    </section>
+      <section class="series-sec">
+        <h2 class="series-title">{c.downloads.heading}</h2>
+        <div class="series-dl">
+          {downloads.map((dl) => (
+            <div class="series-dl-item">
+              <a class="series-dl-title" href={dl.pdf} target="_blank" rel="noopener">{dl.title}</a>
+              <span class="series-dl-meta">PDF · {mb(dl.sizeBytes)}</span>
+              <a href={dl.pdf} target="_blank" rel="noopener"><img src={dl.cover} alt={dl.title} loading="lazy" /></a>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
 
-    <section class="series-sec" aria-labelledby="specs">
-      <h2 id="specs">{s.heading}</h2>
-      <p class="spec-title">{s.tableTitle}</p>
-      <SpecTable caption={s.captionCarbon} columns={s.columns} rows={product.specs.carbonSteel} />
-      <SpecTable caption={s.captionStainless} columns={s.columns} rows={product.specs.stainlessSteel} />
-      <table class="prop-table">
-        <tbody>
-          <tr><th scope="row">{s.props.shell}</th><td>{s.props.shellValue}</td></tr>
-          <tr><th scope="row">{s.props.systemConnection}</th><td>{s.props.systemConnectionValue}</td></tr>
-          <tr><th scope="row">{s.props.coating}</th><td>{s.props.coatingValue}</td></tr>
-          <tr><th scope="row">{s.props.diaphragm}</th><td>{s.props.diaphragmValue}</td></tr>
-          <tr><th scope="row">{s.props.factoryPrecharge}</th><td>{product.specs.common.factoryPrecharge}</td></tr>
-          <tr><th scope="row">{s.props.maxWorkingTemp}</th><td>{s.props.maxWorkingTempCarbon}<br />{s.props.maxWorkingTempStainless}</td></tr>
-          <tr><th scope="row">{s.props.maxWorkingPressure}</th><td>{product.specs.common.maxWorkingPressure}</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="series-sec" aria-labelledby="faq">
-      <h2 id="faq">{c.faq.heading}</h2>
-      <div class="faq-list">
-        {c.faq.items.map((f, i) => (
-          <details class="faq-item" open={i === 0}>
-            <summary><h3>{`Q${i + 1}. ${f.q}`}</h3></summary>
-            <p>{f.a}</p>
-          </details>
-        ))}
-      </div>
-    </section>
-
-    <section class="series-sec" aria-labelledby="download">
-      <h2 id="download">{c.downloads.heading}</h2>
-      <ul class="download-list">
-        {downloads.map((dl) => (
-          <li>
-            <a href={dl.pdf} class="download-card" type="application/pdf">
-              <img src={dl.cover} alt="" loading="lazy" />
-              <span class="download-title">{dl.title}</span>
-              <span class="download-meta">PDF · {mb(dl.sizeBytes)}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <ProductLine lang={lang} heading={c.productLineHeading} variant="compact" />
+  <div id="pd-more-info" class="container">
+    <h2 class="h2_2hline h2_2hline_margin lang_rtl">{c.productLineHeading}</h2>
+    <div id="other_pd_line" class="container">
+      <ProductLine lang={lang} variant="series" />
+      <div class="pd-spacing-01"></div>
+    </div>
   </div>
 </Base>
