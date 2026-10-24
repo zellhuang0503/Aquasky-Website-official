@@ -148,11 +148,13 @@ for (const p of PAGES) {
   const zh = p.neutral ? en : parse('zh', p);
   if (en.legacyCss !== zh.legacyCss) console.log(`note: ${p.path} en/zh page <style> differ; using en`);
   const page = {
-    _note: `照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en${p.path} 與 /zh${p.path}。`,
+    _note: p.neutral
+      ? `照抄型頁面（網址沒有語系前綴，舊站一律英文介面，只有一份）。主體 HTML 在 src/content/legacy/${p.id}/en.json 的 bodyHtml。來源：2026-10-22 封存 ${p.path}。`
+      : `照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en${p.path} 與 /zh${p.path}。`,
     id: p.id,
     path: p.path,
     template: 'legacy',
-    source: { url: `${ORIGIN}/en${p.path}`, archive: 'migration-2026-10-22', retrieved: en.row.retrieved_at.slice(0, 10) },
+    source: { url: p.neutral ? `${ORIGIN}${p.path}` : `${ORIGIN}/en${p.path}`, archive: 'migration-2026-10-22', retrieved: en.row.retrieved_at.slice(0, 10) },
     legacyCss: en.legacyCss,
     extraCss: en.extraCss,
     bootstrap: en.bootstrap,
@@ -163,7 +165,7 @@ for (const p of PAGES) {
   const content = (lang, d) => ({
     _note: lang === 'zh'
       ? `舊站 /zh${p.path} 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。${d.hasH1 ? '' : '舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。'}`
-      : `Old /en${p.path} page body copied verbatim (incl. its product line). Edit bodyHtml to change text.${d.hasH1 ? '' : ' The old page had no h1; the page adds a visually-hidden h1 = title.'}`,
+      : `Old ${p.neutral ? '' : '/en'}${p.path} page body copied verbatim${p.neutral ? ' (no language prefix on the old site; English UI only)' : ' (incl. its product line)'}. Edit bodyHtml to change text.${d.hasH1 ? '' : ' The old page had no h1; the page adds a visually-hidden h1 = title.'}`,
     template: 'legacy',
     lang,
     status: 'approved-legacy',

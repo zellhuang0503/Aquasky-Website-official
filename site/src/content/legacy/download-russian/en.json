@@ -1,5 +1,5 @@
 {
-  "_note": "Old /en/download/russian page body copied verbatim (incl. its product line). Edit bodyHtml to change text.",
+  "_note": "Old /download/russian page body copied verbatim (no language prefix on the old site; English UI only). Edit bodyHtml to change text.",
   "template": "legacy",
   "lang": "en",
   "status": "approved-legacy",

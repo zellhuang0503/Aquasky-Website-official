@@ -1,10 +1,10 @@
 {
-  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/download-italian/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/download/italian 與 /zh/download/italian。",
+  "_note": "照抄型頁面（網址沒有語系前綴，舊站一律英文介面，只有一份）。主體 HTML 在 src/content/legacy/download-italian/en.json 的 bodyHtml。來源：2026-10-22 封存 /download/italian。",
   "id": "download-italian",
   "path": "/download/italian",
   "template": "legacy",
   "source": {
-    "url": "https://aquaskyplus.com/en/download/italian",
+    "url": "https://aquaskyplus.com/download/italian",
     "archive": "migration-2026-10-22",
     "retrieved": "2026-10-22"
   },

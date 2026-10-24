@@ -14,12 +14,12 @@
 | 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
 | `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、sel_tools | 同上（照抄模板） | 同上。contact 表單外觀保留但 action="#"、拿掉 PHP 驗證碼與隱藏欄位，送出功能上線前接 Worker API；sel_tools 只是入口頁，三個計算器另做 |
-| `/download/english` … 14 個語系子頁（網址沒有語系前綴） | `src/pages/download/[language].astro` → `LegacyPage.astro`（照抄模板，`neutral: true`） | 舊站這些頁一律英文介面、沒有 canonical／hreflang；新站英文介面、canonical 指自己、不輸出 hreflang、語言選單回各語系首頁。83 個 EDM PDF（66 MB）與封面圖由 copy 腳本複製 |
+| `/download/english` … 14 個語系子頁（網址沒有語系前綴） | `src/pages/download/[language].astro` → `LegacyPage.astro`（照抄模板，`neutral: true`） | 舊站這些頁一律英文介面、沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站英文介面、canonical 指自己、不輸出 hreflang、語言選單回各語系首頁。83 個 EDM PDF（66 MB）與封面圖由 copy 腳本複製 |
 | `/en/news/EXHIBITIONS`、`/en/news/INDUSTRY`、`/en/news/<CAT>/pageN`（zh 同） | `src/pages/[lang]/news/[category].astro`、`[category]/[page].astro` → `NewsList.astro` | 舊站列表照抄：每頁 5 篇、右欄固定幾篇「熱門文章」、分頁列全頁碼；en 6＋33 頁、zh 1＋10 頁 |
 | `/en/news-detail/<CAT>/<slug>`（237 篇：en 187、zh 50） | `src/pages/[lang]/news-detail/[category]/[slug].astro` → `NewsDetail.astro` | 正文整段照抄（`src/content/news/<lang>/<CAT>/<slug>.json`），verify 逐字比。每篇只有一個語系，沒有對應翻譯 |
 | `/en/videos`、`/en/videos/page2`、`page3`（zh 同）；`/en/videos-detail/<slug>` 11 篇（zh 11 篇，slug 不同） | `src/pages/[lang]/videos.astro`、`videos/[page].astro`、`videos-detail/[slug].astro` → 同新聞的 `NewsList`／`NewsDetail`（`kind: videos`） | 版型與新聞完全相同（CSS 同一份）；明細 JSON-LD 是舊站的 Article＋VideoObject；返回鈕用 `videos_back` |
 
-還沒搬：下載專區各語系子頁（/download/…）、選型工具三個計算器、配件明細 6 頁，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
+還沒搬：選型工具三個計算器、配件明細 6 頁，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
 
 ## 三種系列頁模板
 
@@ -81,6 +81,7 @@ npm run check           # 型別與模板檢查
 ## 版型原則（黃老闆 2026-10-24 指示：跟舊站盡量一樣，不改編排）
 
 - 新聞：136 篇 meta description 超過 220 字、2 篇中文不到 40 字（`2025-aquasky-173`、`apt-40-aquasky-155`）；zh 展覽訊息只有 1 篇、右欄「熱門文章」只有 1 篇。全部照舊站，要不要整理由客戶決定。
+- 下載子頁的 meta description 照舊站，最長 2927 字（french），italian 1259、spanish 1250；要不要縮短由客戶決定。
 - 新聞正文裡舊站本來就壞的連結，原樣保留：`en/INDUSTRY/introduction-to-premium-plus-series-tank-of-aquasky-aquasky-176` 的 `mailto:frankwang@aquasky`（舊站混淆碼就少 `.com.tw`，畫面文字是完整信箱）與 `href="http://Commercial%20and%20Business…"`；另一篇 `href="http://https://aquaskyplus.com/sizing.php"`。切換時連同 `.php` 連結一起改。
 - 直接沿用舊站的 CSS：`public/css/bootstrap.min.css`（舊站首頁用）、`bootstrap.css`（舊站內頁用的客製版，`.container` padding 0，Base 的 `bootstrap="full"`）、`bootstrap-grid.min.css`（經典系列頁）、`style.css`、`series_content.css`、`a-hover.css`、`all.min.css`（Font Awesome）。這幾個檔從封存複製後**進 Git**，不要改；新站自己的補充只放 `src/styles/site.css`。
 - HTML 結構與 class 名稱照舊站同一頁抄（navbar-default、#home-container-01…、series-sec、sf-stage、h2_2hline、btn-link）。搬新頁時先開舊站同頁對照。
@@ -111,7 +112,7 @@ npm run check           # 型別與模板檢查
 - 新聞：hreflang 只列真的有這一頁的語系（明細只有自己；列表第 N 頁要兩個語系都有 N 頁才互列），語言選單切到沒有這頁的語系時回該語系首頁（舊站語言選單一律回首頁）。列表封面圖補 alt＝標題（舊站沒有）。CollectionPage 每頁指自己的網址（舊站每頁都指第 1 頁）；NewsArticle 原樣搬並補 publisher。列表與明細各補一個看不見的 h1（列表＝標題帶字樣、明細＝文章標題）。
 - 新聞正文裡 YouTube 的 iframe 保留（schema 只准 youtube／youtube-nocookie）；正文裡連到舊站 `.php` 的連結照舊（約 130 處），切換時要改。
 - 影片明細的 JSON-LD：舊站 zh 影片的 `@id`／`mainEntityOfPage` 還寫 `videos-detail.php?sid=…`，匯入時改成新站乾淨網址；Article 補 publisher。
-- 下載子頁（/download/<language>）：舊站線上版的選單語言會跟著 cookie 走（看過中文頁再開就變中文選單），封存版是英文；新站固定英文介面。這些頁舊站沒有 canonical／hreflang，新站 canonical 指自己、不輸出 hreflang（14 頁各是一種型錄語言，不是網站語系）。麵包屑：首頁›DOWNLOAD›EDM English。
+- 下載子頁（/download/<language>）：舊站線上版的選單語言會跟著 cookie 走（看過中文頁再開就變中文選單），封存版是英文；新站固定英文介面。這些頁舊站沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站 canonical 指自己、不輸出 hreflang（14 頁各是一種型錄語言，不是網站語系）。麵包屑：首頁›DOWNLOAD›EDM English。
 - 新聞明細手機版：8 篇正文有固定寬度的表格或 iframe，舊站會把整頁撐寬（390 寬變 515～815）；新站在 site.css 讓 `#news-container #ImgAutoResponsive` 橫向捲、iframe max-width 100%，桌機版面不變。
 - 新聞 meta description 長短不一（13～1235 字）照舊站，不改；列在「已知的資料問題」。
 - 聯絡表單：舊站用 PHP 驗證碼圖與 csrf；新站是靜態站，先拿掉驗證碼那一列與隱藏欄位、action 改 `#`（按送出不會送）。上線前另做 Worker API＋Turnstile（整體規劃 §7.2）。
