@@ -17,12 +17,22 @@ Tiffany 您好，我是梵亞黃志宏。
 3️⃣ Selection Tools 最終版的 Excel 程式
 　就是網站「壓力桶選擇工具」背後的計算 Excel。新站要重做這個工具，需要用最終版核對公式，也請附幾組您們平常用來驗算的案例（輸入什麼、應該算出什麼）。
 
-檔案比較多的話，用 Google Drive 分享資料夾給我就好（zell.huang@gmail.com），或是壓縮後用 LINE 傳也可以。檔名維持原本的就行，不用特別整理。
+所有檔案請都用 Google Drive 給我，兩種方式都可以：
+
+📁 方式一：直接傳到我開好的資料夾
+https://drive.google.com/drive/folders/18MHhEeH8riO_dqlAQXfZsQukR-9CG3kM
+裡面已經分好三個子資料夾（1-Banner原圖、2-下載PDF原檔、3-SelectionTools-Excel），放進對應的就好。第一次點開會看到「要求存取權」，按一下就好，我收到通知馬上開給您。
+
+📁 方式二：用您自己的 Google Drive 開資料夾，分享給我
+zell.huang@gmail.com
+
+檔名維持原本的就行，不用特別整理。
 
 如果有些檔案要跟工程師或其他同事調，請不用急，先把手邊有的傳給我，其餘的到了再補。謝謝您！
 
 ## 備註（不用貼給 Tiffany）
 
+- Drive 資料夾 2026-10-24 由 Claude 建在 `我的雲端硬碟/梵亞/AQUASKY-AEO/溢康提供素材-20261024/`（id `18MHhEeH8riO_dqlAQXfZsQukR-9CG3kM`），目前**只有黃老闆有權限**。Tiffany 按「要求存取權」後，黃老闆會收到 Gmail 通知，點「共用」給她**編輯者**權限她才能上傳。若想省這一步：在 Drive 對資料夾按右鍵 →「共用」→ 一般存取權改成「知道連結的任何人」＋「編輯者」（缺點：拿到連結的人都能改，收完檔案記得改回「限制」）。
 - 這三項對應待辦的「E 向客戶要 EDM／手冊 PDF 最新原檔」與「選型工具驗證案例」。索取清單完整版在同資料夾 `2026-10-22-向客戶與工程師索取的資料清單.md`。
 - 選型工具 Excel 拿到後，要跟 RUN_REPORT §A3 抄錄的前端 JS 公式對一次，特別是 Thermal 的 PSI 分支（疑似舊站 bug）。
 - 網站現有的 PDF 已封存 175 份（migration-2026-10-22），缺的只是「最新版」與「原始檔」，Tiffany 給不齊也不會卡住開發。
