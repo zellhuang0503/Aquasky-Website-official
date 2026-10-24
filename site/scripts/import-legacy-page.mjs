@@ -19,8 +19,13 @@ const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories',
 // 下載專區各語系子頁：網址沒有語系前綴（/download/english），舊站一律英文介面，只匯一份（內容檔 en.json）
 const DOWNLOAD_LANGS = ['arabic', 'chinese', 'dutch', 'english', 'french', 'german', 'italian', 'japanese', 'korean', 'latvian', 'lithuanian', 'russian', 'spanish', 'thai'];
 const paths = args.filter((a) => a.startsWith('/'));
-const toPage = (p) => p.startsWith('/download/') ? { path: p, id: p.slice(1).replace('/', '-').toLowerCase(), neutral: true } : { path: p, id: p.slice(1).toLowerCase() };
-const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`)]).map(toPage);
+// 英文產品明細（/products-det/<series>/<model>，90 頁）與配件明細（/accessories-det/<item>，6 頁）：舊站只有英文版；從封存索引自動找
+const toPage = (p) => {
+  if (p.startsWith('/download/')) return { path: p, id: p.slice(1).replace('/', '-').toLowerCase(), neutral: true, langs: ['en'] };
+  // id 不能有「.」（APT-1.3）：Astro 內容集合的 id 會把點吃掉，找不到檔；網址本身不變
+  if (/^\/(products-det|accessories-det)\//.test(p)) return { path: p, id: p.slice(1).replace(/[/.]/g, '-').toLowerCase(), langs: ['en'] };
+  return { path: p, id: p.slice(1).toLowerCase(), langs: ['en', 'zh'] };
+};
 
 const index = new Map();
 for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\n')) {
@@ -28,6 +33,8 @@ for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\
   const row = JSON.parse(line);
   index.set(row.url, row);
 }
+const DETAIL_PATHS = [...index.keys()].filter((u) => /^https:\/\/aquaskyplus\.com\/en\/(products-det|accessories-det)\//.test(u)).map((u) => u.replace(`${ORIGIN}/en`, '')).sort();
+const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`), ...DETAIL_PATHS]).map(toPage);
 // HTML 實體還原成純文字（JSON-LD 的字串不能留 &deg; 這種實體，Google 會當字面文字）
 const NAMED = { amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', ndash: '–', mdash: '—', deg: '°', hellip: '…', copy: '©', reg: '®', trade: '™', times: '×', middot: '·', bull: '•', apos: "'" };
 const unescape = (s) => s
@@ -72,7 +79,14 @@ function parse(lang, p) {
   // 主體
   let body = html.slice(html.indexOf('</header>') + '</header>'.length, html.indexOf('<footer'));
   body = body.replace(/<!--[\s\S]*?-->/g, '');
-  if (/<script|<iframe|<object|<embed/i.test(body)) throw new Error(`${lang}${p.path}: body has script/iframe — handle by hand`);
+  // 產品明細頁有 Google 翻譯殘留的 <font dir="auto" style="vertical-align: inherit;"> 層層包裝（一頁 6 萬多個），沒有視覺效果，拿掉
+  body = body.replace(/<\/?font\b[^>]*>/g, '');
+  // 配件明細的「<<back」連舊站 PHP 網址，改成新站同一頁
+  body = body.replace(/href="accessories\.php\?lang=en"/g, 'href="/en/accessories"');
+  if (/<script|<object|<embed/i.test(body)) throw new Error(`${lang}${p.path}: body has script — handle by hand`);
+  for (const m of body.matchAll(/<iframe[^>]*src="([^"]+)"/g)) {
+    if (!/^https:\/\/www\.youtube(-nocookie)?\.com\/embed\//.test(m[1])) throw new Error(`${lang}${p.path}: iframe not YouTube: ${m[1]}`);
+  }
   if (/<form/i.test(body) && p.id !== 'contact') throw new Error(`${lang}${p.path}: unexpected <form>`);
   body = body.replace(/<div id="return-to-top"[\s\S]*$/, '');
   body = body.replace(/<a[^>]*href="\/cdn-cgi\/l\/email-protection"[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/a>/g, (_m, hex) => decodeCfEmail(hex))
@@ -130,7 +144,14 @@ function parse(lang, p) {
     legacyJsonLd.push({ '@type': 'FAQPage', '@id': `${ORIGIN}/${lang}${p.path}#faqpage`, mainEntity: qa });
   }
   const subtitle = text(body.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] ?? '') || undefined;
-  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd, bootstrap, subtitle };
+  // 產品明細：主圖 alt 的加侖數（Liter 3 / Gal 0.5）跟規格表的加侖數（3 liters / 0.8 gallons）不一致就列成資料疑點
+  const autoQuestions = [];
+  if (p.path.startsWith('/products-det/')) {
+    const altGal = body.match(/alt="[^"]*Gal\s*([\d.]+)/)?.[1];
+    const tableGal = body.match(/([\d.]+)\s*gallons?/i)?.[1];
+    if (altGal && tableGal && Number(altGal) !== Number(tableGal)) autoQuestions.push(`主圖 alt 寫 Gal ${altGal}，規格表寫 ${tableGal} gallons；系列頁型號清單也用 alt 的數字。`);
+  }
+  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd, bootstrap, subtitle, autoQuestions };
 }
 
 // 舊站資料疑點（頁面照原樣，不改；要請客戶確認）。2026-10-24 審查官列出。
@@ -145,12 +166,14 @@ const DATA_QUESTIONS = {
 let written = 0;
 for (const p of PAGES) {
   const en = parse('en', p);
-  const zh = p.neutral ? en : parse('zh', p);
+  const zh = p.langs.includes('zh') ? parse('zh', p) : en;
   if (en.legacyCss !== zh.legacyCss) console.log(`note: ${p.path} en/zh page <style> differ; using en`);
   const page = {
     _note: p.neutral
       ? `照抄型頁面（網址沒有語系前綴，舊站一律英文介面，只有一份）。主體 HTML 在 src/content/legacy/${p.id}/en.json 的 bodyHtml。來源：2026-10-22 封存 ${p.path}。`
-      : `照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en${p.path} 與 /zh${p.path}。`,
+      : p.langs.includes('zh')
+        ? `照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en${p.path} 與 /zh${p.path}。`
+        : `照抄型頁面（舊站只有英文版）。主體 HTML 在 src/content/legacy/${p.id}/en.json 的 bodyHtml。來源：2026-10-22 封存 /en${p.path}。`,
     id: p.id,
     path: p.path,
     template: 'legacy',
@@ -159,8 +182,9 @@ for (const p of PAGES) {
     extraCss: en.extraCss,
     bootstrap: en.bootstrap,
     neutral: !!p.neutral,
+    langs: p.langs,
     assets: [...new Set([...en.assets, ...zh.assets])],
-    dataQuestions: DATA_QUESTIONS[p.id] ?? [],
+    dataQuestions: [...(DATA_QUESTIONS[p.id] ?? []), ...en.autoQuestions],
   };
   const content = (lang, d) => ({
     _note: lang === 'zh'
@@ -176,7 +200,7 @@ for (const p of PAGES) {
     legacyJsonLd: d.legacyJsonLd,
     bodyHtml: d.body,
   });
-  const files = [[`src/data/pages/${p.id}.json`, page], [`src/content/legacy/${p.id}/en.json`, content('en', en)], ...(p.neutral ? [] : [[`src/content/legacy/${p.id}/zh.json`, content('zh', zh)]])];
+  const files = [[`src/data/pages/${p.id}.json`, page], [`src/content/legacy/${p.id}/en.json`, content('en', en)], ...(p.langs.includes('zh') ? [[`src/content/legacy/${p.id}/zh.json`, content('zh', zh)]] : [])];
   for (const [rel, data] of files) {
     const target = resolve(root, rel);
     if (existsSync(target) && !force) { console.log(`skip (exists): ${rel}`); continue; }
@@ -184,6 +208,6 @@ for (const p of PAGES) {
     writeFileSync(target, JSON.stringify(data, null, 2) + '\n', 'utf8');
     written++;
   }
-  console.log(`${p.id}: en body ${en.body.length} chars, zh ${zh.body.length}, h1 "${en.h1.slice(0, 40)}", assets ${page.assets.length}, extraCss ${page.extraCss.join(',') || '-'}`);
+  if (!p.path.startsWith('/products-det/')) console.log(`${p.id}: en body ${en.body.length} chars, zh ${zh.body.length}, h1 "${en.h1.slice(0, 40)}", assets ${page.assets.length}, extraCss ${page.extraCss.join(',') || '-'}`);
 }
 console.log(`wrote ${written} files`);

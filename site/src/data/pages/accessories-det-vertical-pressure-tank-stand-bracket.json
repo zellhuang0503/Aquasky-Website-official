@@ -1,0 +1,23 @@
+{
+  "_note": "照抄型頁面（舊站只有英文版）。主體 HTML 在 src/content/legacy/accessories-det-vertical-pressure-tank-stand-bracket/en.json 的 bodyHtml。來源：2026-10-22 封存 /en/accessories-det/Vertical-Pressure-Tank-Stand-Bracket。",
+  "id": "accessories-det-vertical-pressure-tank-stand-bracket",
+  "path": "/accessories-det/Vertical-Pressure-Tank-Stand-Bracket",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/accessories-det/Vertical-Pressure-Tank-Stand-Bracket",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".p_det_bgcolor { background:#13171A;}\n.page_spacing { padding-top:2%; padding-bottom:3%;}\n.page_back {text-align:right;color:#FFF;margin:10px;}\n.page_back a {color:#FFF;}\n.page_content1 {color:#FFF;}\n.pd-table-style h2 {margin-top:5px;margin-bottom:5px;}\n.page_content1 table {border-color:#FFF;font-size:22px;}\n.pd-table-style tr {border-bottom:1px solid #FFF;}\n.pd-table-style tr:nth-child(even){ border-bottom:0px;}\n.pd-table-style:nth-child(odd) td[rowspan]{ border-bottom:1px solid #FFF; padding:25px 0;}\n.pd-table-style:nth-child(even) td[rowspan]{ border-bottom:1px solid #FFF; padding:25px 0;}\n.pd-table-style tr:last-child {border-bottom:2px solid #FFF;}\n.pd-table-style tr:last-child td {padding:25px 0;}\n.pd-table-style tr:first-child td {padding:10px 0 25px 0;}\n.pd-table-style strong { font-weight:normal;}\n.accessories-table { border-bottom:2px solid #FFF; padding:25px 0;}\n.accessories-table td { padding:20px 0; border-bottom:1px solid #FFF;}\n.page_pd_name {font-size:48px; font-weight:bold;border-bottom:2px solid #FFF;margin-bottom:16px;}\n.page_pd_name_none {font-size:48px; font-weight:bold;margin-bottom:16px;}\n.page_pd_img {padding-top:15px;padding-bottom:20px;}\n.page_pd_det_img {padding:30px 15px;}\n.page_pd_content3 { color:#FFF; padding:0 15px 15px 15px; font-size:18px; line-height:30px;}\n.page_pd_line {margin:25px 15px;color:#FFF;text-align:center; background:url(/images/products-line.png) repeat-x center;}\n.page_pd_line span { background-color:#13171A;padding:20px;fonr-size:18px;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:28px; font-weight:bold;padding-left:10px; padding-right:10px;}\n.page_pd_other div {margin-top:15px;margin-bottom:15px;}\n.page_pd_other img {margin-bottom:15px;}\n.page_pd_other a {color:#FFF;}\n.page_pd_other a:hover {color:#CCC;text-decoration:none;}\n#pd-slider { margin:10px auto 10px auto;}\n#pd-slider .item{ margin:15px; padding:10px;}\n#pd-slider .item img{ display: block; width: 100%; height: auto;}\n#pd-slider p{ color:#FFF;}\nh1 {margin-top:10px;padding-bottom:10px;}",
+  "extraCss": [],
+  "bootstrap": "full",
+  "neutral": false,
+  "langs": [
+    "en"
+  ],
+  "assets": [
+    "/upfile/Images/ACCESSORIES/Vertical%20Pressure%20Tank%20Stand.jpg",
+    "/images/products-line.png"
+  ],
+  "dataQuestions": []
+}

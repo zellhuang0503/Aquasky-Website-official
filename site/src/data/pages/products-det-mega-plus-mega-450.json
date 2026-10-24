@@ -1,0 +1,31 @@
+{
+  "_note": "照抄型頁面（舊站只有英文版）。主體 HTML 在 src/content/legacy/products-det-mega-plus-mega-450/en.json 的 bodyHtml。來源：2026-10-22 封存 /en/products-det/mega-plus/MEGA-450。",
+  "id": "products-det-mega-plus-mega-450",
+  "path": "/products-det/mega-plus/MEGA-450",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/products-det/mega-plus/MEGA-450",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1_color { color:#FFF;}\n.h3_color { color:#FFF;}\n.pd-main-img img { border-radius:10px; box-shadow: 5px 5px 5px 0px rgba(168, 168, 168, 0.5); margin-bottom:20px;}\n.pd_section_1 { background-color:#00A6E4; padding:20px 0;}\n.pd-text-weigth { font-weight:bold;}\n.pd-text-1 { text-align:justify; padding:20px 0; font-size:18px;}\n.pd-text-2 { text-align:justify; padding:0 0 20px 0; margin-bottom:20px; font-size:18px;}\n.btn_price1 { font-size:18px; background-color:#EDDAA0; margin:10px 20px 10px 0; padding:10px 30px;}\n.btn_contact1 { font-size:18px; background-color:#FFF; margin:10px 20px 10px 0; padding:10px 30px;}\n.pd_section_2 { background-color:#E3F5FF; padding: 20px;}\n.pd-title_1 { padding-bottom:20px; color:#0BA4E8; font-size:25px;}\n.pd-ul-box-1 { border-radius:10px; background-color:#FFF; padding:20px 20px 20px 20px; font-size:18px; box-shadow: 5px 5px 5px 0px rgba(168, 168, 168, 0.5); margin-bottom:20px;}\n.pd-ul-box-1 ul { padding-left:15px;}\n.pd-ul-box-title-1 { font-size:18px;}\n.pd-box-1 { border:1px solid #FFF; background-color:#FFF; border-radius:10px; padding:15px 20px 10px 20px; margin-bottom:20px; box-shadow: 5px 5px 5px 0px rgba(168, 168, 168, 0.5);}\n.pd-box-text1 { font-size:16px; font-weight:bold; padding:5px 0;}\n.pd-box-text2 { font-size:16px; padding:5px 0;}\n.pd-box-2 { box-shadow: 5px 5px 5px; border:1px solid #FFF; background-color:#FFF; border-radius:10px; padding:10px 15px 5px 55px; margin-bottom:20px; box-shadow: 5px 5px 5px 0px rgba(168, 168, 168, 0.5);}\n.pd-box-2-text1 { font-size:16px; font-weight:bold; padding:5px 0;}\n.pd-box-2-text2 { font-size:16px; padding:5px 0;}\n.pd-left-0 { padding-left:0;}\n.btn_spacing { margin-bottom:20px;}\n.pd-Specifications-img img { border-radius:10px; box-shadow: 5px 5px 5px 0px rgba(168, 168, 168, 0.5); margin-bottom:20px;}\n.p_det_bgcolor { background:#112c4a;}\n.page_spacing { padding-top:3%; padding-bottom:3%;}\n.page_back {text-align:right;color:#FFF;margin:10px;}\n.page_back a {color:#FFF;}\n.page_content1 {color:#FFF;}\n.pd-table-style h2 {margin-top:5px;margin-bottom:5px;}\n.page_content1 table {border-color:#FFF;font-size:22px;}\n.pd-table-style tr {border-bottom:1px solid #666;}\n.pd-table-style tr td {font-size:16px;padding:10px;}\n.pd-table-style tr td:last-child {text-align:right;}\n.pd-table-style tr:first-child {background-color:#FFF;border-bottom:0px;}\n.pd-table-style tr:first-child td {padding:15px 10px 15px 10px;font-size:18px;font-weight:bold;}\n.page_pd_name {font-size:48px; font-weight:bold;border-bottom:2px solid #FFF;margin-bottom:16px;}\n.page_pd_name_none {font-size:48px; font-weight:bold;margin-bottom:16px;}\n.page_pd_img {padding-top:15px;padding-bottom:20px;}\n.page_pd_det_img {padding:30px 15px;}\n.page_pd_content3 { color:#FFF; padding:0 15px 15px 15px; font-size:18px; line-height:30px;}\n.page_pd_line {margin:25px 15px;color:#FFF;text-align:center; background:url(/images/products-line.png) repeat-x center;}\n.page_pd_line span { background-color:#112c4a;padding:20px;fonr-size:18px;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:28px; font-weight:bold;padding-left:10px; padding-right:10px;}\n.page_pd_other div {margin-top:15px;margin-bottom:15px;}\n.page_pd_other img {margin-bottom:15px;}\n.page_pd_other a {color:#FFF;}\n.page_pd_other a:hover {color:#CCC;text-decoration:none;}\nh1 {margin-top:10px;padding-bottom:10px;}\n@media (max-width: 767px) { .pd-left-0 { padding-left:15px;}\n}",
+  "extraCss": [],
+  "bootstrap": "full",
+  "neutral": false,
+  "langs": [
+    "en"
+  ],
+  "assets": [
+    "/upfile/Images/MEGA/pd-mega-450-b.jpg",
+    "/uploads/certification/20260917_092524_c629b77945.png",
+    "/uploads/certification/20260917_092450_ce8630d90c.png",
+    "/uploads/certification/20260917_092433_699f168cf1.png",
+    "/uploads/certification/20260917_092314_9889d42765.png",
+    "/uploads/certification/20260917_092210_ba52435792.png",
+    "/upfile/Images/MEGA/20250922_aquasky_MEGIA-450.png",
+    "/images/Materials_1.png",
+    "/pdownload/P_60_64_20260528134108.pdf",
+    "/images/products-line.png"
+  ],
+  "dataQuestions": []
+}

@@ -12,6 +12,10 @@
   "extraCss": [],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/FAQ/FAQ-01.png",
     "/images/FAQ/FAQ-08.png",

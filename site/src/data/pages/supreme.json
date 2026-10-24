@@ -12,6 +12,10 @@
   "extraCss": [],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/products/supreme/supreme_logo.png",
     "/upfile/Images/SUPREME-PLUS/Supermeplus_DM-040323-WEB-1.jpg",

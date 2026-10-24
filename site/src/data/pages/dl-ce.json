@@ -12,6 +12,10 @@
   "extraCss": [],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/products/ELBI/ELBI_logo.png",
     "/images/products_line/pdg-plus2.webp",

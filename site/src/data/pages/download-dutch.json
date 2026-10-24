@@ -14,6 +14,9 @@
   ],
   "bootstrap": "full",
   "neutral": true,
+  "langs": [
+    "en"
+  ],
   "assets": [
     "/download/EDM/Dutch/cover/AQUASKY_PUMPLUS-Almond_DM_nl_20260627_a7857e_web.jpg",
     "/download/EDM/Dutch/AQUASKY_PUMPLUS-Almond_DM_nl_20260627_a7857e_web.pdf",

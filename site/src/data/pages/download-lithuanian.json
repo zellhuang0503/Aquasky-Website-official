@@ -14,6 +14,9 @@
   ],
   "bootstrap": "full",
   "neutral": true,
+  "langs": [
+    "en"
+  ],
   "assets": [
     "/download/EDM/Lithuanian/cover/AQUASKY_PUMPLUS-Blue_DM_lt_20260627_f32189_web.jpg",
     "/download/EDM/Lithuanian/AQUASKY_PUMPLUS-Blue_DM_lt_20260627_f32189_web.pdf",

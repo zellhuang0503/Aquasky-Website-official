@@ -12,6 +12,10 @@
   "extraCss": [],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/products/GIGAPLUS/webp/WEB_PRODUCT_GIGAPLUS_202512.webp",
     "/images/products/GIGAPLUS/webp/WEB_PRODUCT_GIGAPLUS_202512_logo.webp",

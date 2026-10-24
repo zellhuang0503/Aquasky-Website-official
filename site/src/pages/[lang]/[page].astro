@@ -14,14 +14,15 @@ type Props = { kind: 'classic'; product: Classic } | { kind: 'legacy'; page: Leg
 
 export async function getStaticPaths() {
   const products = (await getCollection('products')).map((e) => e.data).filter((p): p is Classic => p.template === 'classic');
-  const pages = (await getCollection('pages')).map((e) => e.data).filter((p) => !p.neutral);   // /download/<language> 走 src/pages/download/
+  // /download/<language> 走 src/pages/download/；/products-det/… 與 /accessories-det/… 有自己的路由
+  const pages = (await getCollection('pages')).map((e) => e.data).filter((p) => !p.neutral && !p.path.slice(1).includes('/'));
   const routes = [
     ...products.map((product) => ({ path: product.path, props: { kind: 'classic', product } as Props })),
     ...pages.map((page) => ({ path: page.path, props: { kind: 'legacy', page } as Props })),
   ];
   const seen = new Set<string>();
   for (const r of routes) { if (seen.has(r.path)) throw new Error(`duplicate route ${r.path}`); seen.add(r.path); }
-  return routes.flatMap((r) => liveLangs.map((lang) => ({ params: { lang, page: r.path.slice(1) }, props: r.props })));
+  return routes.flatMap((r) => liveLangs.filter((lang) => r.props.kind !== 'legacy' || r.props.page.langs.includes(lang)).map((lang) => ({ params: { lang, page: r.path.slice(1) }, props: r.props })));
 }
 const lang = Astro.params.lang as Lang;
 const props = Astro.props as Props;

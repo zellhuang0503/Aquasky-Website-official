@@ -14,6 +14,9 @@
   ],
   "bootstrap": "full",
   "neutral": true,
+  "langs": [
+    "en"
+  ],
   "assets": [
     "/download/EDM/Korean/cover/AQUASKY_Pumplus-Blue_DM_ko_20260627_481b08_web.jpg",
     "/download/EDM/Korean/AQUASKY_Pumplus-Blue_DM_ko_20260627_481b08_web.pdf",

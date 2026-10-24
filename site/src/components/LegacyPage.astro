@@ -20,13 +20,25 @@ for (const item of nav.items) {
   for (const c2 of item.children ?? []) if (!crumb.length && c2.path === page.path) crumb = item.key === 'products' ? [{ name: labelOf('products'), path: '/products' }, { name: labelOf(c2.key), path: page.path }] : [{ name: labelOf(c2.key), path: page.path }];
   for (const g of item.groups ?? []) for (const c3 of g.children) if (!crumb.length && c3.path === page.path) crumb = [{ name: labelOf('products'), path: '/products' }, { name: labelOf(c3.key), path: page.path }];
 }
+// 產品明細（/products-det/<series>/<model>）：首頁›產品系列›該系列›型號；配件明細：首頁›產品系列›安裝配件›品名
+const detail = page.path.match(/^\/(products-det|accessories-det)\/([^/]+)/);
+if (detail) {
+  const seriesPath = detail[1] === 'accessories-det' ? '/accessories' : `/${detail[2]}`;
+  let seriesCrumb: { name: string; path: string } | null = null;
+  for (const item of nav.items) {
+    for (const c2 of item.children ?? []) if (c2.path.toLowerCase() === seriesPath.toLowerCase()) seriesCrumb = { name: labelOf(c2.key), path: c2.path };
+    for (const g of item.groups ?? []) for (const c3 of g.children) if (c3.path.toLowerCase() === seriesPath.toLowerCase()) seriesCrumb = { name: labelOf(c3.key), path: c3.path };
+  }
+  if (!seriesCrumb) throw new Error(`${page.path}: series ${seriesPath} not in nav`);
+  crumb = [{ name: labelOf('products'), path: '/products' }, seriesCrumb, { name: c.h1, path: page.path }];
+}
 // 下載子頁（/download/<language>）：首頁›DOWNLOAD›EDM English
 if (page.neutral && page.path.startsWith('/download/')) crumb = [{ name: labelOf('download'), path: '/downloadpage' }, { name: c.subtitle ?? c.h1, path: page.path }];
 if (!crumb.length) crumb = [{ name: c.h1, path: page.path }];
 const breadcrumbs = [{ name: d.common.breadcrumbHome, path: '' }, ...crumb];
 const image = page.assets.find((a) => /\.(png|jpe?g|webp)$/i.test(a));
 ---
-<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap={page.bootstrap} extraCss={page.extraCss} headStyle={page.legacyCss} noLangPrefix={page.neutral} alternates={page.neutral ? [] : undefined}>
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap={page.bootstrap} extraCss={page.extraCss} headStyle={page.legacyCss} noLangPrefix={page.neutral} alternates={page.neutral ? [] : page.langs}>
   {!c.hasVisibleH1 && <h1 class="visually-hidden">{c.h1}</h1>}
   <Fragment set:html={c.bodyHtml} />
   {page.id === 'feature' && (

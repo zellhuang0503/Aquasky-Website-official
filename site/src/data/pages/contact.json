@@ -12,6 +12,10 @@
   "extraCss": [],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [],
   "dataQuestions": []
 }

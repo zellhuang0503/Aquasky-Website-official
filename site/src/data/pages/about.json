@@ -15,6 +15,10 @@
   ],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/about/about-t-01.png",
     "/js/owl/owl.carousel.css",

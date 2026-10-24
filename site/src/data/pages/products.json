@@ -15,6 +15,10 @@
   ],
   "bootstrap": "min",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/products/pd_ling_bg.jpg",
     "/images/pdg-01.png",

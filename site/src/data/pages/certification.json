@@ -15,6 +15,10 @@
   ],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/CERTIFICATION/icon/img_01.png",
     "/images/CERTIFICATION/icon/img_02.png",

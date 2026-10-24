@@ -14,6 +14,9 @@
   ],
   "bootstrap": "full",
   "neutral": true,
+  "langs": [
+    "en"
+  ],
   "assets": [
     "/download/EDM/Thai/cover/AQUASKY_PUMPLUS-Blue_DM_th_20260627_07f3e4_web.jpg",
     "/download/EDM/Thai/AQUASKY_PUMPLUS-Blue_DM_th_20260627_07f3e4_web.pdf",

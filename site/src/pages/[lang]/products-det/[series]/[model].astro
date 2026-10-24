@@ -1,0 +1,16 @@
+---
+// 英文產品明細：/en/products-det/<series>/<model>（舊站只有英文版，中文系列頁也連到這裡；照抄模板）
+import { getCollection } from 'astro:content';
+import LegacyPage from '../../../../components/LegacyPage.astro';
+import { type Lang, liveLangs } from '../../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const pages = (await getCollection('pages')).map((e) => e.data).filter((p) => p.path.startsWith('/products-det/'));
+  return pages.flatMap((page) => {
+    const [, , series, model] = page.path.split('/');
+    return page.langs.filter((l) => liveLangs.includes(l)).map((lang) => ({ params: { lang, series, model }, props: { page } }));
+  });
+}
+const { page } = Astro.props;
+---
+<LegacyPage lang={Astro.params.lang as Lang} page={page} />

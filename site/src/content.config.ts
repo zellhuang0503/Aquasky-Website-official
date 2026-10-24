@@ -157,7 +157,8 @@ const legacy = defineCollection({
     legacyJsonLd: z.array(z.object({ '@type': z.string() }).passthrough()),
     // 主體 HTML：不准有 script／iframe／form／事件屬性；相對路徑都已改絕對
     bodyHtml: z.string().min(200)
-      .refine((s) => !/<(script|iframe|object|embed)\b/i.test(s), 'bodyHtml 不能有 script/iframe')
+      .refine((s) => !/<(script|object|embed)\b/i.test(s), 'bodyHtml 不能有 script/object/embed')
+      .refine((s) => [...s.matchAll(/<iframe[^>]*src="([^"]*)"/g)].every((m) => /^https:\/\/www\.youtube(-nocookie)?\.com\/embed\//.test(m[1])), 'iframe 只准 YouTube')
       .refine((s) => !/<form\b(?![^>]*action="#")/i.test(s), '表單只能 action="#"（新站是靜態站，送出要另接 Worker API）')
       .refine((s) => !/\son\w+=/i.test(s), 'bodyHtml 不能有 on* 事件屬性')
       .refine((s) => !/cdn-cgi|__cf_email__/.test(s), 'bodyHtml 不能留 Cloudflare email 混淆')
@@ -176,6 +177,8 @@ const pages = defineCollection({
     bootstrap: z.enum(['min', 'full']).default('full'),
     /** 網址沒有語系前綴、只有一個版本（/download/<language>，舊站一律英文介面）；內容檔只有 en.json */
     neutral: z.boolean().default(false),
+    /** 這頁有哪些語系（產品明細、配件明細、下載子頁只有 en） */
+    langs: z.array(lang).min(1).default(['en', 'zh']),
     assets: z.array(z.string()),
     dataQuestions: z.array(z.string()),
   }),

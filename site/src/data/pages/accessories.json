@@ -12,6 +12,10 @@
   "extraCss": [],
   "bootstrap": "full",
   "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
   "assets": [
     "/images/products/accessories/accessories-plus.jpg",
     "/upfile/Images/ACCESSORIES/Pressure%20Tank%20Wall%20Fix%20Bracket.jpg",

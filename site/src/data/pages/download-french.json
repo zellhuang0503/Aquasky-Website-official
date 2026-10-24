@@ -14,6 +14,9 @@
   ],
   "bootstrap": "full",
   "neutral": true,
+  "langs": [
+    "en"
+  ],
   "assets": [
     "/download/EDM/French/cover/AQUASKY_PUMPLUS-Blue_DM_fr_20260717_23e1ef_web.jpg",
     "/download/EDM/French/AQUASKY_PUMPLUS-Blue_DM_fr_20260717_23e1ef_web.pdf",

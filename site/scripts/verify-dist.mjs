@@ -62,8 +62,10 @@ const PAGES = [
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code,
     series: p.template === 'lqcol', classic: p.template === 'classic' ? p : null,
   }))),
-  ...legacyPages.filter((p) => !p.neutral).flatMap((p) => LANGS.map(([code, htmlLang]) => ({
+  ...legacyPages.filter((p) => !p.neutral).flatMap((p) => LANGS.filter(([code]) => (p.langs ?? ['en', 'zh']).includes(code)).map(([code, htmlLang]) => ({
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code, legacy: p,
+    // 只有英文的頁（產品明細、配件明細）hreflang 只列 en
+    ...((p.langs ?? ['en', 'zh']).length === 1 ? { hreflang: [htmlLang, 'x-default'] } : {}),
   }))),
   // 沒有語系前綴的照抄頁（/download/<language>）：英文介面、不輸出 hreflang、內容檔是 en.json
   ...legacyPages.filter((p) => p.neutral).map((p) => ({
@@ -217,7 +219,8 @@ for (const page of PAGES) {
     if (!archived) fail(`${where}: archived page not found for text comparison`);
     else {
       // aria-hidden 區塊（舊站聯絡表單的蜜罐欄位）不算內容；新站匯入時已拿掉
-      const plain = (s) => decode(s.replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<script[\s\S]*?<\/script>/g, '').replace(/<div[^>]*aria-hidden="true"[\s\S]*?<\/div>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
+      // 舊站產品明細的 <font> 包裝匯入時已拿掉（沒有視覺效果）；比對前兩邊都先去掉，免得標籤變成多一個空格
+      const plain = (s) => decode(s.replace(/<\/?font[^>]*>/g, '').replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<script[\s\S]*?<\/script>/g, '').replace(/<div[^>]*aria-hidden="true"[\s\S]*?<\/div>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
       const decodeCf = (hex) => { const k = parseInt(hex.slice(0, 2), 16); let o = ''; for (let i = 2; i < hex.length; i += 2) o += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16) ^ k); return o; };
       const oldBody = archived.slice(archived.indexOf('</header>') + 9, archived.indexOf('<footer'))
         .replace(/<span[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/span>/g, (_m, h) => decodeCf(h))   // 舊站 CF email 混淆（兩種寫法），比對前先還原

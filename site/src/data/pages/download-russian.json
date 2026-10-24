@@ -14,6 +14,9 @@
   ],
   "bootstrap": "full",
   "neutral": true,
+  "langs": [
+    "en"
+  ],
   "assets": [
     "/download/EDM/Russian/cover/AQUASKY_PUMPLUS-Blue_DM_ru_20260717_f1cba0_web.jpg",
     "/download/EDM/Russian/AQUASKY_PUMPLUS-Blue_DM_ru_20260717_f1cba0_web.pdf",
