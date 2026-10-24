@@ -41,6 +41,9 @@ function parse(lang, p) {
     const obj = JSON.parse(m[1]);
     if (Array.isArray(obj)) throw new Error(`${lang}${p.path}: JSON-LD array not handled`);
     delete obj['@context'];
+    // 舊站把 BreadcrumbList 塞在 Product.breadcrumb 裡：schema.org 的 Product 沒有這個屬性（那是 WebPage 的），Google 不會讀；
+    // 而且舊站的名稱跟選單對不上（zh 的「Home」是英文、「專用配件」vs 選單「安裝配件」）。新站只留 Seo.astro 頂層那份（用選單字樣）。
+    delete obj.breadcrumb;
     return obj;
   });
   // 頁面 <style>
