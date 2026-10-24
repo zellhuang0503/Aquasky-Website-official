@@ -140,4 +140,33 @@ const products = defineCollection({
   schema: z.discriminatedUnion('template', [lqcolProduct, classicProduct]),
 });
 
-export const collections = { series, home, products };
+// 照抄型頁面：舊站主體 HTML 整段（src/content/legacy/<id>/<lang>.json）＋語系無關設定（src/data/pages/<id>.json）
+const legacy = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/legacy' }),
+  schema: z.object({
+    template: z.literal('legacy'),
+    lang,
+    status,
+    seo,
+    h1: z.string().min(3),
+    hasVisibleH1: z.boolean(),
+    // 主體 HTML：不准有 script／iframe／form／事件屬性；相對路徑都已改絕對
+    bodyHtml: z.string().min(200)
+      .refine((s) => !/<(script|iframe|form|object|embed)/i.test(s), 'bodyHtml 不能有 script/iframe/form')
+      .refine((s) => !/\son\w+=/i.test(s), 'bodyHtml 不能有 on* 事件屬性')
+      .refine((s) => !/(src|href)="(?!\/|https?:|#|mailto:|tel:)/.test(s), 'bodyHtml 的 src/href 必須是絕對路徑'),
+  }),
+});
+const pages = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/data/pages' }),
+  schema: z.object({
+    id: z.string().min(1),
+    path: sitePath,
+    template: z.literal('legacy'),
+    legacyCss: z.string(),
+    extraCss: z.array(sitePath),
+    assets: z.array(z.string()),
+  }),
+});
+
+export const collections = { series, home, products, legacy, pages };

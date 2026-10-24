@@ -105,10 +105,14 @@ const ASSETS = [
 // 各產品資料檔自己列的資源（import-classic-series.mjs 產生的 assets 陣列）也一起複製
 import { readdirSync } from 'node:fs';
 const productsDir = resolve(here, '..', 'src', 'data', 'products');
-for (const f of readdirSync(productsDir)) {
-  if (!f.endsWith('.json')) continue;
-  const data = JSON.parse(readFileSync(join(productsDir, f), 'utf8'));
-  for (const a of data.assets ?? []) ASSETS.push([a]);
+const pagesDir = resolve(here, '..', 'src', 'data', 'pages');
+for (const dir of [productsDir, pagesDir]) {
+  if (!existsSync(dir)) continue;
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith('.json')) continue;
+    const data = JSON.parse(readFileSync(join(dir, f), 'utf8'));
+    for (const a of data.assets ?? []) ASSETS.push([a]);
+  }
 }
 
 const index = new Map();

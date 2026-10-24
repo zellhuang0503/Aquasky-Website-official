@@ -1,0 +1,33 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/supreme/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/supreme 與 /zh/supreme。",
+  "id": "supreme",
+  "path": "/supreme",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/supreme",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-custom-style { width: 100%; text-align: center; background-color: #004a74; color: #FFF; padding:10px 10px;}\n.h1-custom-style h1 { margin-top: 0; margin-bottom: 0; font-size: 24px;}\n#pd-container-01 { background:url(/images/products/supreme/supreme_bg.jpg) top center no-repeat; background-size: 100%; background-color:#004a74;}\n#pd-container-02 { background-color:#fdf9ee; padding:50px 15px;}\n.pd-aquasky-text {padding:15% 10px 50% 10px; text-align:left;width:100%;}\n.pd-about-text {padding:30px 10px 20px 10px; color:#FFF; line-height: 25px;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top:50px;}\n#pd-more-info img {margin:10px auto;}\n.pd-more-info-link { text-align:center; margin:60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border:1px sloid #FFF; font-size:18px; padding:15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}\n.pds-img-style-01 {padding:20px 20px 0 20px;}\n.pds-txt-style-01 { min-height:180px; text-align:center; padding:10px 20px;}\n.pds-txt-style-01 p {font-size:12px;}\n.pds-font-style-01 {font-weight:bold;}\n.pd-spacing-01 { padding-top:30px; padding-bottom:30px;}\n.pd-table-a { background-color:rgba(0,66,107,0.5); padding:20px; color:#FFF;}\n.pd-table-a tr:first-child { border-top:1px solid #FFF;}\n.pd-table-a tr { border-bottom:1px solid #FFF;}\n.pd-table-a td { padding:5px 10px; line-height: 25px;}\n.page_pd_name_p1 {line-height:25px;font-size:15px; padding-left:10px; padding-right:10px;}\n.page_pd_name_p2 {font-size:28px; font-weight:bold;padding-left:10px; padding-right:10px;}\n.page_pd_item {margin-top:35px;}\n.page_pd_item div {margin-bottom:15px;}\n.page_pd_item img {margin-bottom:15px;}\n.page_pd_item a {color:#FFF;}\n.page_pd_item a:hover {color:#CCC;text-decoration:none;}\n.pd_item_margin img {margin-top:10px;margin-bottom:10px;max-height:374px;}\n@media (max-width: 1600px) { .pd-aquasky-text {padding:110px 10px 420px 10px; text-align:left;width:100%;}\n}\n@media (max-width: 1440px) { .pd-aquasky-text {padding:8% 10px 33% 10px; text-align:left;width:100%;}\n}\n@media (max-width: 1024px) { .pd-aquasky-text {padding:8% 10px 20% 10px; text-align:left;width:100%;}\n}\n@media (max-width: 768px) { .pd-aquasky-text {padding:20px 10px 100px 10px; text-align:left;width:100%;}\n}\n@media (max-width: 767px) { .owl-theme .owl-controls .owl-buttons .owl-prev{ display:none;}\n.owl-theme .owl-controls .owl-buttons .owl-next{ display:none;}\n}\n@media (max-width: 425px) { .pd-aquasky-text {padding:20px 10px 20px 10px; text-align:left;width:100%;}\n}\n@media (max-width: 380px) { #pd-container-01 {}\n#pd-more-info {}\n#pd-more-info img {}\n}",
+  "extraCss": [],
+  "assets": [
+    "/images/products/supreme/supreme_logo.png",
+    "/upfile/Images/SUPREME-PLUS/Supermeplus_DM-040323-WEB-1.jpg",
+    "/upfile/Images/SUPREME-PLUS/Supermeplus_DM-040323-WEB-2.jpg",
+    "/images/products_line/pdg-plus2.webp",
+    "/images/products_line/pdg-mega2-2022.webp",
+    "/images/products_line/pdg-thermal2.webp",
+    "/images/products_line/pdg-rot2.webp",
+    "/images/products_line/pdg-hydro2.webp",
+    "/images/products_line/pdg-solar2.webp",
+    "/images/products_line/pdg-premiumplus.webp",
+    "/images/products_line/LQCOLPLUS_pdlline1.webp",
+    "/images/products_line/WEB_PRODUCT_LINE_GIGAPLUS.webp",
+    "/images/products_line/Elbi_B2022.webp",
+    "/images/products_line/SupremePlus_2023B.webp",
+    "/images/products_line/accessories3.webp",
+    "/images/products/supreme/supreme_bg.jpg",
+    "/upfile/Images/SUPREME-PLUS/20231011_SupermePlus-DM_CH_01.jpg",
+    "/upfile/Images/SUPREME-PLUS/20231011_SupermePlus-DM_CH_02.jpg"
+  ]
+}

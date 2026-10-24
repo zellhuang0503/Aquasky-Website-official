@@ -1,0 +1,26 @@
+---
+// 照抄型頁面：舊站主體 HTML 整段輸出（src/content/legacy/<id>/<lang>.json 的 bodyHtml），頁面樣式照舊站（src/data/pages/<id>.json 的 legacyCss）。
+import { getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { type Lang, t } from '../lib/i18n';
+
+interface Props { lang: Lang; page: CollectionEntry<'pages'>['data'] }
+const { lang, page } = Astro.props;
+const entry = await getEntry('legacy', `${page.id}/${lang}`);
+if (!entry) throw new Error(`missing src/content/legacy/${page.id}/${lang}.json`);
+const c = entry.data;
+const d = t(lang);
+const navKey: Record<string, string> = { supreme: 'SUPREME-PLUS', 'dl-ce': 'DL-TANK', 'asme-ht': 'ASME-TANK', 'giga-plus': 'GIGA-PLUS', accessories: 'ACCESSORIES-PLUS' };
+const label = (d.nav as Record<string, string>)[navKey[page.id] ?? ''] ?? c.h1;
+const breadcrumbs = [
+  { name: d.common.breadcrumbHome, path: '' },
+  { name: d.nav.products, path: '/products' },
+  { name: label, path: page.path },
+];
+const image = page.assets.find((a) => /\.(png|jpe?g|webp)$/i.test(a));
+---
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={page.extraCss} headStyle={page.legacyCss}>
+  {!c.hasVisibleH1 && <h1 class="visually-hidden">{c.h1}</h1>}
+  <Fragment set:html={c.bodyHtml} />
+</Base>

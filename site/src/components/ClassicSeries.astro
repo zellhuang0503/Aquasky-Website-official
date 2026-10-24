@@ -1,33 +1,24 @@
 ---
 // 經典模板系列頁（PUMPLUS、RO-PLUS、THERMAL-PLUS、HYDRO-PLUS、PREMIUM-PLUS、MEGA-PLUS、SOLAR-PLUS）。
-// 網址 /en/<舊路徑>、/zh/<舊路徑>。HTML 結構照舊站：h1 色條 → #pd-container-01（底圖＋標題圖＋介紹文＋型號清單）→ 產品列。
+// HTML 結構照舊站：h1 色條 → #pd-container-01（底圖＋標題圖＋介紹文＋型號清單＋產品列）。
 // 每頁的 <style> 照舊站抄（product JSON 的 legacyCss），所以顏色、底圖、間距都跟舊站一樣。
-// LQCOL-PLUS 有自己的檔（LQCOL-PLUS.astro），Astro 的靜態路由優先，不會撞到這裡。
 import { getEntry } from 'astro:content';
-import Base from '../../layouts/Base.astro';
-import ProductLine from '../../components/ProductLine.astro';
-import { brand } from '../../lib/data';
-import { type Lang, liveLangs, t } from '../../lib/i18n';
-import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProductLine from './ProductLine.astro';
+import { brand } from '../lib/data';
+import { type Lang, t } from '../lib/i18n';
 
 type Product = Extract<CollectionEntry<'products'>['data'], { template: 'classic' }>;
-
-export async function getStaticPaths() {
-  const all = await getCollection('products');
-  const products = all.map((e) => e.data).filter((p): p is Product => p.template === 'classic');
-  return products.flatMap((product) => liveLangs.map((lang) => ({ params: { lang, series: product.path.slice(1) }, props: { product } })));
-}
-const lang = Astro.params.lang as Lang;
-const { product } = Astro.props as { product: Product };
+interface Props { lang: Lang; product: Product }
+const { lang, product } = Astro.props;
 const entry = await getEntry('series', `${product.id}/${lang}`);
 if (!entry || entry.data.template !== 'classic') throw new Error(`missing classic content src/content/series/${product.id}/${lang}.json`);
 const c = entry.data;
 const d = t(lang);
 const site = brand.url;
 const pageUrl = `${site}/${lang}${product.path}`;
-const navKey = product.series as keyof typeof d.nav;
-const seriesLabel = (d.nav as Record<string, string>)[navKey] ?? product.series;
+const seriesLabel = (d.nav as Record<string, string>)[product.series] ?? product.series;
 const allModels = product.groups.flatMap((g) => g.models);
 
 const productGroup = {

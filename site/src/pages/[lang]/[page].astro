@@ -1,0 +1,29 @@
+---
+// 一支動態路由吃兩種模板（網址都是 /en/<舊路徑>、/zh/<舊路徑>；LQCOL-PLUS 有自己的檔，靜態路由優先）：
+//   classic（products 集合）：PUMPLUS、RO-PLUS、THERMAL-PLUS、HYDRO-PLUS、PREMIUM-PLUS、MEGA-PLUS、SOLAR-PLUS → ClassicSeries.astro
+//   legacy（pages 集合）：supreme、dl-ce、asme-ht、GIGA-PLUS、accessories → LegacyPage.astro（舊站主體 HTML 照抄）
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import ClassicSeries from '../../components/ClassicSeries.astro';
+import LegacyPage from '../../components/LegacyPage.astro';
+import { type Lang, liveLangs } from '../../lib/i18n';
+
+type Classic = Extract<CollectionEntry<'products'>['data'], { template: 'classic' }>;
+type Legacy = CollectionEntry<'pages'>['data'];
+type Props = { kind: 'classic'; product: Classic } | { kind: 'legacy'; page: Legacy };
+
+export async function getStaticPaths() {
+  const products = (await getCollection('products')).map((e) => e.data).filter((p): p is Classic => p.template === 'classic');
+  const pages = (await getCollection('pages')).map((e) => e.data);
+  const routes = [
+    ...products.map((product) => ({ path: product.path, props: { kind: 'classic', product } as Props })),
+    ...pages.map((page) => ({ path: page.path, props: { kind: 'legacy', page } as Props })),
+  ];
+  const seen = new Set<string>();
+  for (const r of routes) { if (seen.has(r.path)) throw new Error(`duplicate route ${r.path}`); seen.add(r.path); }
+  return routes.flatMap((r) => liveLangs.map((lang) => ({ params: { lang, page: r.path.slice(1) }, props: r.props })));
+}
+const lang = Astro.params.lang as Lang;
+const props = Astro.props as Props;
+---
+{props.kind === 'classic' ? <ClassicSeries lang={lang} product={props.product} /> : <LegacyPage lang={lang} page={props.page} />}

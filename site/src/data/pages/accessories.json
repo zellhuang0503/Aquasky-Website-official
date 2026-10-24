@@ -1,0 +1,34 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/accessories/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/accessories 與 /zh/accessories。",
+  "id": "accessories",
+  "path": "/accessories",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/accessories",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": "#pd-container-01 { background-color:#13171A;}\n#pd-container-02 { background-color:#fdf9ee; padding:50px 15px;}\n.pd-aquasky-text {padding:100px 10px 350px 10px; text-align:right;width:100%;}\n.pd-about-text {padding:30px 10px 20px 10px; color:#FFF;}\n#pd-more-info {}\n#pd-more-info .pd-more-info-block { padding-top:50px;}\n#pd-more-info img {margin:10px auto;}\n.pd-more-info-link { text-align:center; margin:60px 0 60px 0;}\n.btn-more { color: #FFF; border-color: #FFF; border:1px sloid #FFF; font-size:18px; padding:15px 50px; border-radius: 30px;}\n.btn-more:focus, .btn-more.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-more:hover { color: #333; background-color: #e6e6e6; border-color: #adadad;}\n.pds-img-style-01 {padding:20px 20px 0 20px;}\n.pds-txt-style-01 { min-height:180px; text-align:center; padding:10px 20px;}\n.pds-txt-style-01 p {font-size:12px;}\n.pds-font-style-01 {font-weight:bold;}\n.pd-spacing-01 { padding-top:30px; padding-bottom:30px;}\n.accessories_img { padding-bottom:50px;}\n.accessories_img2 { padding:20px 0 0 0;}\n.page_pd_name_p1 {line-height:25px;font-size:24px; font-weight:bold; padding-left:0; padding-right:0;padding-bottom: 20px;}\n.page_pd_name_p2 {font-size:24px;padding-left:0; padding-right:0;padding-bottom: 20px;height: 50px;}\n.page_pd_item {margin-top:35px;}\n.page_pd_item div {margin-bottom:15px;}\n.page_pd_item img {margin-bottom:15px;}\n.page_pd_item a {color:#FFF;}\n.page_pd_item a:hover {color:#CCC;text-decoration:none;}\n.pd_item_margin img {margin-top:10px;margin-bottom:10px;}\n@media (max-width: 767px) { .owl-theme .owl-controls .owl-buttons .owl-prev{ display:none;}\n.owl-theme .owl-controls .owl-buttons .owl-next{ display:none;}\n}\n@media (max-width: 380px) { #pd-container-01 {}\n#pd-more-info {}\n.pd-aquasky-text {padding-bottom:100px;}\n#pd-more-info img {}\n}",
+  "extraCss": [],
+  "assets": [
+    "/images/products/accessories/accessories-plus.jpg",
+    "/upfile/Images/ACCESSORIES/Pressure%20Tank%20Wall%20Fix%20Bracket.jpg",
+    "/upfile/Images/ACCESSORIES/Horizontal%20Support%20Base.jpg",
+    "/upfile/Images/ACCESSORIES/Vertical%20Pressure%20Tank%20Stand.jpg",
+    "/upfile/Images/ACCESSORIES/Fixed%20Tank%20Base.jpg",
+    "/upfile/Images/ACCESSORIES/Cross%20Base.jpg",
+    "/images/products_line/pdg-plus2.webp",
+    "/images/products_line/pdg-mega2-2022.webp",
+    "/images/products_line/pdg-thermal2.webp",
+    "/images/products_line/pdg-rot2.webp",
+    "/images/products_line/pdg-hydro2.webp",
+    "/images/products_line/pdg-solar2.webp",
+    "/images/products_line/pdg-premiumplus.webp",
+    "/images/products_line/LQCOLPLUS_pdlline1.webp",
+    "/images/products_line/WEB_PRODUCT_LINE_GIGAPLUS.webp",
+    "/images/products_line/Elbi_B2022.webp",
+    "/images/products_line/SupremePlus_2023B.webp",
+    "/images/products_line/accessories3.webp",
+    "/upfile/Images/ACCESSORIES/accessories-plus-DM-CH_230525web.jpg"
+  ]
+}

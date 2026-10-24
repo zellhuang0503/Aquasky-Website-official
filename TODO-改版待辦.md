@@ -37,7 +37,8 @@
   - [x] 2026-10-24：依黃老闆指示把版型改回**跟舊站一樣**（沿用舊站 bootstrap／style.css／series_content.css，HTML 結構照抄；首頁藍底字標＋輪播、系列頁深咖啡底）。桌面與手機並排比對過，選單行為同舊站。
   - [x] 2026-10-24：7 個經典模板系列頁 en／zh 做完（PUMPLUS、RO、THERMAL、HYDRO、PREMIUM、MEGA、SOLAR，共 14 頁；加首頁與 LQCOL 共 19 頁），`import-classic-series.mjs` 直接從封存解析，版型與舊站逐頁比對過。中文頁照舊站沒型號清單、放 DM 大圖。
   - [ ] **開發順序（黃老闆 10/24）：先把所有頁面的 en＋zh 做完給客戶確認，客戶 OK 後才做 es／fr／ru／ar。**
-  - [ ] 還沒搬的頁：supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（各有各的結構）；products、about、feature、certification、sel_tools（含三個計算器）、news 列表與明細、videos、downloadpage、FAQ、contact；90 頁英文產品明細 `/en/products-det/...`；accessories-det。
+  - [x] 2026-10-24：supreme、dl-ce、asme-ht、GIGA-PLUS、accessories 五頁 en／zh 做完（照抄模板 `import-legacy-page.mjs`，主體 HTML 整段抄，verify 逐字比純文字），新站共 29 頁。
+  - [ ] 還沒搬的頁：products、about、feature、certification、sel_tools（含三個計算器）、news 列表與明細、videos、downloadpage、FAQ、contact；90 頁英文產品明細 `/en/products-det/...`；accessories-det。
   - [ ] **圖片瘦身（全部頁面做完之後再做，黃老闆 10/24）**：系列頁底圖 1–3 MB（LQCOLPLUS_bg.png 3.1 MB、首頁 hbg-01-11.jpg 1.1 MB）、中文系列頁 DM 圖每張 1–1.7 MB，以前就拖累 PageSpeed。做法候選：壓縮／轉 WebP、responsive srcset、lazy、底圖改 CSS 漸層＋小圖。先照原樣，不要在搬頁時動。
   - [ ] 還沒做：ar 版型（RTL）；部署到 Cloudflare 預覽網址（帳戶歸屬未定）；走一次「改內容檔→預覽→審→發布」。
   - [x] 2026-10-24 第一次審查（首頁＋LQCOL）：網址／SEO／JSON-LD／工程衛生全過，版型 9 項不通過已全部修掉：產品列回深色區、首頁米色底＋44pt 公司名＋字標原尺寸＋輪播一次一張、選單結構與 padding 與 logo 照舊站、正文粗體、規格數字照原字串、結構圖標示照舊站斷行、中文選單／認證說明／地址一字不差、zh ASME 按鈕兩行（手機不再溢出）、en 首頁認證說明先不顯示（舊站沒有）、產品／品牌／選單資料檔都加 schema。

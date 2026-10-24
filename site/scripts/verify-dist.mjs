@@ -33,6 +33,9 @@ import { readdirSync } from 'node:fs';
 const LANGS = [['en', 'en'], ['zh', 'zh-Hant']];
 const products = readdirSync(join(root, 'src/data/products')).filter((f) => f.endsWith('.json'))
   .map((f) => JSON.parse(readFileSync(join(root, 'src/data/products', f), 'utf8')));
+const legacyPages = existsSync(join(root, 'src/data/pages'))
+  ? readdirSync(join(root, 'src/data/pages')).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(readFileSync(join(root, 'src/data/pages', f), 'utf8')))
+  : [];
 const PAGES = [
   { url: '/', file: 'index.html', lang: 'en' },
   { url: '/en', file: 'en.html', lang: 'en' },
@@ -40,6 +43,9 @@ const PAGES = [
   ...products.flatMap((p) => LANGS.map(([code, htmlLang]) => ({
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code,
     series: p.template === 'lqcol', classic: p.template === 'classic' ? p : null,
+  }))),
+  ...legacyPages.flatMap((p) => LANGS.map(([code, htmlLang]) => ({
+    url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code, legacy: p,
   }))),
 ];
 const built = new Set(PAGES.map((p) => p.url));
@@ -152,6 +158,25 @@ for (const page of PAGES) {
         .replace(/<p[^>]*>/g, '<p>').replace(/\s+/g, '').trim();
       const gotBlock = html.match(/<div id="ImgAutoResponsive"[^>]*>([\s\S]*?)<\/div>/)?.[1] ?? '';
       if (norm(block) !== norm(gotBlock)) fail(`${where}: DM block structure differs from archived page\n    old: ${norm(block).slice(0, 160)}\n    new: ${norm(gotBlock).slice(0, 160)}`);
+    }
+  }
+  if (page.legacy) {
+    // 照抄型：<main> 的純文字要跟封存舊頁 </header>…<footer 之間的純文字一字不差
+    const archived = archivedPage(page.code, page.legacy.path);
+    if (!archived) fail(`${where}: archived page not found for text comparison`);
+    else {
+      const plain = (s) => decode(s.replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
+      const oldText = plain(archived.slice(archived.indexOf('</header>') + 9, archived.indexOf('<footer')));
+      const mainHtml = html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1] ?? '';
+      const content = JSON.parse(readFileSync(join(root, `src/content/legacy/${page.legacy.id}/${page.code}.json`), 'utf8'));
+      let newText = plain(mainHtml);
+      if (!content.hasVisibleH1) newText = newText.replace(plain(content.h1), '').replace(/\s+/g, ' ').trim();   // 補的隱藏 h1 不算
+      if (oldText !== newText) {
+        let i = 0; while (i < oldText.length && oldText[i] === newText[i]) i++;
+        fail(`${where}: body text differs from archived page at char ${i}
+    old: …${oldText.slice(Math.max(0, i - 40), i + 80)}
+    new: …${newText.slice(Math.max(0, i - 40), i + 80)}`);
+      }
     }
   }
   console.log(`✓ ${where}  ${title?.slice(0, 70)}`);
