@@ -20,11 +20,13 @@ for (const item of nav.items) {
   for (const c2 of item.children ?? []) if (!crumb.length && c2.path === page.path) crumb = item.key === 'products' ? [{ name: labelOf('products'), path: '/products' }, { name: labelOf(c2.key), path: page.path }] : [{ name: labelOf(c2.key), path: page.path }];
   for (const g of item.groups ?? []) for (const c3 of g.children) if (!crumb.length && c3.path === page.path) crumb = [{ name: labelOf('products'), path: '/products' }, { name: labelOf(c3.key), path: page.path }];
 }
+// 下載子頁（/download/<language>）：首頁›DOWNLOAD›EDM English
+if (page.neutral && page.path.startsWith('/download/')) crumb = [{ name: labelOf('download'), path: '/downloadpage' }, { name: c.subtitle ?? c.h1, path: page.path }];
 if (!crumb.length) crumb = [{ name: c.h1, path: page.path }];
 const breadcrumbs = [{ name: d.common.breadcrumbHome, path: '' }, ...crumb];
 const image = page.assets.find((a) => /\.(png|jpe?g|webp)$/i.test(a));
 ---
-<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap={page.bootstrap} extraCss={page.extraCss} headStyle={page.legacyCss}>
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap={page.bootstrap} extraCss={page.extraCss} headStyle={page.legacyCss} noLangPrefix={page.neutral} alternates={page.neutral ? [] : undefined}>
   {!c.hasVisibleH1 && <h1 class="visually-hidden">{c.h1}</h1>}
   <Fragment set:html={c.bodyHtml} />
   {page.id === 'feature' && (

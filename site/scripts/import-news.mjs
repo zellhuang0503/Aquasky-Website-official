@@ -1,8 +1,8 @@
-// 從舊站封存（../migration-2026-10-22）匯入新聞：列表頁（EXHIBITIONS／INDUSTRY，每頁 5 篇）與每篇明細。
+// 從舊站封存（../migration-2026-10-22）匯入「列表＋明細」型的頁：新聞（EXHIBITIONS／INDUSTRY）與影片（VIDEOS）。兩者版型相同，每頁 5 篇。
 // 產出：
-//   src/data/news/<lang>-<CAT>.json      列表設定：標題帶、兩個 h4、「更多」字樣、右欄固定 5 篇、文章順序、SEO、舊站 CollectionPage
-//   src/data/news/common.json             列表頁與明細頁的舊站 <style>（兩種各一份，全部頁面相同）
-//   src/content/news/<lang>/<CAT>/<slug>.json  每篇：日期字樣、標題、封面、摘要 HTML、正文 HTML、SEO、舊站 NewsArticle、用到的圖
+//   src/data/news/<lang>-<CAT>.json      列表設定：種類、標題帶、h4、「更多」「返回」字樣、右欄固定幾篇、文章順序、SEO
+//   src/data/news/common.json             列表頁與明細頁的舊站 <style>（新聞與影片共用同一份，匯入時會驗證相同）
+//   src/content/news/<lang>/<CAT>/<slug>.json  每篇：日期字樣、標題、封面、摘要 HTML、正文 HTML、SEO、舊站 NewsArticle／Article／VideoObject、用到的圖
 // 用法（site/）：node scripts/import-news.mjs [--force]
 // 原則：文字照抄，不改字；只做舊站 JS 在瀏覽器裡本來就會做的事（去掉圖片 inline 寬高＋加 img-responsive、還原 Cloudflare email 混淆）。
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
@@ -15,7 +15,11 @@ const archive = resolve(root, '..', 'migration-2026-10-22');
 const ORIGIN = 'https://aquaskyplus.com';
 const force = process.argv.includes('--force');
 const LANGS = ['en', 'zh'];
-const CATS = ['EXHIBITIONS', 'INDUSTRY'];
+// 種類：列表網址與明細網址的規則
+const KINDS = [
+  { kind: 'news', cats: ['EXHIBITIONS', 'INDUSTRY'], listPath: (c) => `/news/${c}`, detailPrefix: (c) => `/news-detail/${c}/` },
+  { kind: 'videos', cats: ['VIDEOS'], listPath: () => '/videos', detailPrefix: () => '/videos-detail/' },
+];
 const PER_PAGE = 5;   // 舊站每頁 5 篇（頁尾還有一段註解掉的範本 <div class="row news-item">，不算）
 
 const index = new Map();
@@ -82,14 +86,29 @@ const cleanBody = (html, where) => {
   return b.trim();
 };
 
+// 從 <div id="ImgAutoResponsive"…> 開頭往後找配對的 </div>，回傳裡面的 HTML（新聞與影片明細的結尾標記不同，用配對比較穩）
+const innerOfDiv = (html, openTag, where) => {
+  const start = html.indexOf(openTag);
+  if (start < 0) throw new Error(`${where}: ${openTag} not found`);
+  let depth = 0;
+  const re = /<div\b|<\/div>/g;
+  re.lastIndex = start;
+  for (let m; (m = re.exec(html)); ) {
+    depth += m[0] === '<\/div>' ? -1 : 1;
+    if (depth === 0) return html.slice(start + openTag.length, m.index);
+  }
+  throw new Error(`${where}: unbalanced div after ${openTag}`);
+};
+
 const assetsOf = (html) => [...new Set([...html.matchAll(/<img[^>]+src="(\/[^"]+)"/g)].map((m) => m[1]))];
 
 const common = { listCss: null, detailCss: null };
 let articles = 0, lists = 0;
 for (const lang of LANGS) {
-  for (const cat of CATS) {
-    const base = `/news/${cat}`;
-    // ---- 列表頁（第 1 頁＝/news/CAT，之後 /news/CAT/pageN）----
+  for (const K of KINDS) for (const cat of K.cats) {
+    const base = K.listPath(cat);
+    const detailPrefix = K.detailPrefix(cat);
+    // ---- 列表頁（第 1 頁＝base，之後 base/pageN）----
     const first = page(`/${lang}${base}`);
     if (!first) throw new Error(`no archive for /${lang}${base}`);
     const pager = first.body.match(/<ul class="pagination">([\s\S]*?)<\/ul>/);
@@ -98,7 +117,7 @@ for (const lang of LANGS) {
     const h4s = [...first.body.matchAll(/<h4 class="news-h4">([\s\S]*?)<\/h4>/g)].map((m) => text(m[1]));
     if (h4s.length !== 2) throw new Error(`/${lang}${base}: expected 2 h4, got ${h4s.length}`);
     const moreLabel = text(first.body.match(/class="text-right news-item-more"><a[^>]*>([\s\S]*?)<\/a>/)[1]);
-    // 右欄固定 5 篇（每頁相同，下面會比對）
+    // 右欄固定幾篇（每頁相同，下面會比對）
     const sideHtml = first.body.slice(first.body.indexOf('block-bg-02'));
     const sidebar = [...sideHtml.matchAll(/<div class="news-right-list"><p class="news-time-style-1">([^<]*)<\/p><p class="news-right-list-title"><a href="([^"]+)">([\s\S]*?)<\/a><\/p><\/div>/g)]
       .map((m) => ({ dateText: m[1], href: absUrl(m[2]), title: unescape(m[3].trim()) }));
@@ -123,7 +142,7 @@ for (const lang of LANGS) {
         const href = absUrl(it.match(/<a href="([^"]+)">/)[1]);
         if (href !== absUrl(moreHref)) throw new Error(`${href}: more link differs`);
         const slug = href.split('/').pop();
-        if (!href.startsWith(`/${lang}/news-detail/${cat}/`)) throw new Error(`${href}: not under /${lang}/news-detail/${cat}/`);
+        if (!href.startsWith(`/${lang}${detailPrefix}`)) throw new Error(`${href}: not under /${lang}${detailPrefix}`);
         const dateText = it.match(/<p class="news-time-style-1">([^<]*)<\/p>/)[1];
         if (!/^\d\d \d\d \d{4}$/.test(dateText)) throw new Error(`${href}: date "${dateText}"`);
         const cover = absUrl(it.match(/<img src="([^"]+)"/)[1]);
@@ -141,9 +160,9 @@ for (const lang of LANGS) {
     mkdirSync(dir, { recursive: true });
     const outDir = join(root, 'src', 'data', 'news');
     mkdirSync(outDir, { recursive: true });
-    let backLabel = null;
+    let backLabel = null, h4Detail = null;
     for (const slug of order) {
-      const path = `/news-detail/${cat}/${slug}`;
+      const path = `${detailPrefix}${slug}`;
       const p = page(`/${lang}${path}`);
       if (!p) throw new Error(`no archive for /${lang}${path}`);
       const li = listItems.get(slug);
@@ -154,7 +173,8 @@ for (const lang of LANGS) {
       if (!head) throw new Error(`/${lang}${path}: title block not found`);
       const dateText = head[1].match(/news-time-style-1">([^<]*)<\/div>/)[1];
       const title = unescape(head[1].match(/news-title-style">([\s\S]*?)<\/div>/)[1].trim());
-      const back = head[1].match(/<a id="newsBackBtn" href="([^"]+)">([^<]*)<\/a>/);
+      const back = head[1].match(/<a id="(?:news|videos)BackBtn" href="([^"]+)">([^<]*)<\/a>/);
+      if (!back) throw new Error(`/${lang}${path}: back button not found`);
       if (absUrl(back[1]) !== `/${lang}${base}`) throw new Error(`/${lang}${path}: back link ${back[1]}`);
       backLabel = backLabel ?? back[2];
       if (back[2] !== backLabel) throw new Error(`/${lang}${path}: back label "${back[2]}"`);
@@ -162,18 +182,21 @@ for (const lang of LANGS) {
       const band = text(p.body.match(/id="about-top-title">([\s\S]*?)<\/div>/)[1]);
       if (band !== titleBand) throw new Error(`/${lang}${path}: title band "${band}"`);
       const h4 = text(p.body.match(/<h4 class="news-h4">([\s\S]*?)<\/h4>/)[1]);
-      if (h4 !== h4s[0]) throw new Error(`/${lang}${path}: h4 "${h4}"`);
-      const bodyStart = p.body.indexOf('<div id="ImgAutoResponsive" style="padding-top:20px;">');
-      if (bodyStart < 0) throw new Error(`/${lang}${path}: #ImgAutoResponsive not found`);
-      const bodyEnd = p.body.indexOf('</div>\n\t\t\t\t<!--<div class="row news-item">', bodyStart);
-      if (bodyEnd < 0) throw new Error(`/${lang}${path}: end of #ImgAutoResponsive not found`);
-      const bodyHtml = cleanBody(p.body.slice(bodyStart + '<div id="ImgAutoResponsive" style="padding-top:20px;">'.length, bodyEnd), `/${lang}${path}`);
-      const news = dm.jsonLd.filter((o) => o['@type'] === 'NewsArticle');
-      if (news.length !== 1 || !news[0].datePublished) throw new Error(`/${lang}${path}: NewsArticle JSON-LD missing`);
+      h4Detail = h4Detail ?? h4;   // 新聞明細的 h4＝列表的「RECENT NEWS」；影片明細的 h4 是「VIDEOS」，跟列表不同
+      if (h4 !== h4Detail) throw new Error(`/${lang}${path}: h4 "${h4}"`);
+      const bodyHtml = cleanBody(innerOfDiv(p.body, '<div id="ImgAutoResponsive" style="padding-top:20px;">', `/${lang}${path}`), `/${lang}${path}`);
+      const main = dm.jsonLd.filter((o) => ['NewsArticle', 'Article'].includes(o['@type']));
+      if (main.length !== 1) throw new Error(`/${lang}${path}: expected one NewsArticle/Article JSON-LD, got ${main.length}`);
+      if (K.kind === 'news' && !main[0].datePublished) throw new Error(`/${lang}${path}: datePublished missing`);
+      // 舊站 zh 影片的 @id 還寫 videos-detail.php?sid=…；一律改成新站乾淨網址
+      for (const o of dm.jsonLd) {
+        if (o.mainEntityOfPage && typeof o.mainEntityOfPage === 'object') o.mainEntityOfPage['@id'] = `${ORIGIN}/${lang}${path}`;
+        if (typeof o['@id'] === 'string' && /\.php/.test(o['@id'])) o['@id'] = `${ORIGIN}/${lang}${path}#article`;
+      }
       const assets = [...new Set([li.cover, ...assetsOf(bodyHtml)])];
       const entry = {
-        lang, category: cat, slug, path, status: 'approved-legacy',
-        dateText, datePublished: news[0].datePublished, title, cover: li.cover, excerptHtml: li.excerptHtml,
+        kind: K.kind, lang, category: cat, slug, path, status: 'approved-legacy',
+        dateText, datePublished: main[0].datePublished ?? null, title, cover: li.cover, excerptHtml: li.excerptHtml,
         seo: { title: dm.title, description: dm.description },
         legacyJsonLd: dm.jsonLd, bodyHtml, assets,
       };
@@ -181,13 +204,13 @@ for (const lang of LANGS) {
       articles++;
     }
     const list = {
-      id: `${lang}-${cat}`, lang, category: cat, path: base, perPage: PER_PAGE, pageCount,
-      titleBand, h4Recent: h4s[0], h4Side: h4s[1], moreLabel, backLabel, sidebar, order,
+      id: `${lang}-${cat}`, kind: K.kind, lang, category: cat, path: base, perPage: PER_PAGE, pageCount,
+      titleBand, h4Recent: h4s[0], h4Side: h4s[1], h4Detail, moreLabel, backLabel, sidebar, order,
       seo: { title: meta.title, description: meta.description },
     };
     writeFileSync(join(outDir, `${lang}-${cat}.json`), JSON.stringify(list, null, 2) + '\n');
     lists++;
-    console.log(`${lang} ${cat}: ${pageCount} list page(s), ${order.length} articles`);
+    console.log(`${lang} ${K.kind} ${cat}: ${pageCount} list page(s), ${order.length} articles`);
   }
 }
 writeFileSync(join(root, 'src', 'data', 'news', 'common.json'), JSON.stringify(common, null, 2) + '\n');

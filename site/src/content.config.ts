@@ -147,9 +147,12 @@ const legacy = defineCollection({
     template: z.literal('legacy'),
     lang,
     status,
-    seo,
+    // 舊站下載子頁的 description 長到 2927 字，照抄；其餘頁本來就在 220 字內
+    seo: z.object({ title: z.string().min(10), description: z.string().min(40) }),
     h1: z.string().min(3),
     hasVisibleH1: z.boolean(),
+    /** 頁內第一個 h2（下載子頁的「EDM English」），給麵包屑用 */
+    subtitle: z.string().optional(),
     // 舊站 <head> 的 JSON-LD（Product），原樣搬來（無 @context）
     legacyJsonLd: z.array(z.object({ '@type': z.string() }).passthrough()),
     // 主體 HTML：不准有 script／iframe／form／事件屬性；相對路徑都已改絕對
@@ -171,24 +174,29 @@ const pages = defineCollection({
     extraCss: z.array(sitePath),
     // 舊站首頁／products 載 bootstrap.min.css，其他內頁載客製 bootstrap.css
     bootstrap: z.enum(['min', 'full']).default('full'),
+    /** 網址沒有語系前綴、只有一個版本（/download/<language>，舊站一律英文介面）；內容檔只有 en.json */
+    neutral: z.boolean().default(false),
     assets: z.array(z.string()),
     dataQuestions: z.array(z.string()),
   }),
 });
 
 // 新聞：每篇一檔（src/content/news/<lang>/<CAT>/<slug>.json，import-news.mjs 從舊站封存產生）
-const newsCategory = z.enum(['EXHIBITIONS', 'INDUSTRY']);
+const newsCategory = z.enum(['EXHIBITIONS', 'INDUSTRY', 'VIDEOS']);
+const newsKind = z.enum(['news', 'videos']);
 const news = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/news' }),
   schema: z.object({
+    kind: newsKind,
     lang,
     category: newsCategory,
     slug: z.string().regex(/^[A-Za-z0-9._-]+$/),
-    path: sitePath.startsWith('/news-detail/'),
+    path: sitePath.regex(/^\/(news-detail|videos-detail)\//),
     status,
     /** 舊站列表與明細顯示的日期字樣，MM DD YYYY，照抄 */
     dateText: z.string().regex(/^\d\d \d\d \d{4}$/),
-    datePublished: z.string().regex(/^\d{4}-\d\d-\d\dT/),
+    // 舊站影片的 Article 沒有 datePublished
+    datePublished: z.string().regex(/^\d{4}-\d\d-\d\dT/).nullable(),
     title: z.string().min(3),
     cover: sitePath,
     excerptHtml: z.string(),
@@ -211,14 +219,17 @@ const newsLists = defineCollection({
   loader: glob({ pattern: '*-*.json', base: './src/data/news' }),
   schema: z.object({
     id: z.string(),
+    kind: newsKind,
     lang,
     category: newsCategory,
-    path: sitePath.startsWith('/news/'),
+    path: sitePath.regex(/^\/(news\/|videos$)/),
     perPage: z.literal(5),
     pageCount: z.number().int().min(1),
     titleBand: z.string().min(1),
     h4Recent: z.string().min(1),
     h4Side: z.string().min(1),
+    /** 明細頁的 h4（新聞＝h4Recent；影片是「VIDEOS／影片專區」） */
+    h4Detail: z.string().min(1),
     moreLabel: z.string().min(1),
     backLabel: z.string().min(1),
     sidebar: z.array(z.object({ dateText: z.string().min(1), href: sitePath, title: z.string().min(1) })).min(1).max(5),

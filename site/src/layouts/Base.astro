@@ -28,6 +28,10 @@ interface Props {
   seriesCss?: boolean;
   /** 這一頁真的存在的語系（給 hreflang；預設全部已建置語系） */
   alternates?: Lang[];
+  /** 網址沒有語系前綴（/download/<language>）：canonical 與麵包屑不加 /<lang> */
+  noLangPrefix?: boolean;
+  /** 要掛在 <body> 上的 data-* 屬性（給頁內小 JS 用） */
+  bodyData?: Record<string, string>;
 }
 const props = Astro.props;
 const info = langInfo(props.lang);
@@ -60,7 +64,7 @@ const d = t(props.lang);
       </Fragment>
     )}
   </head>
-  <body class={props.bodyClass}>
+  <body class={props.bodyClass} {...Object.fromEntries(Object.entries(props.bodyData ?? {}).map(([k, v]) => [`data-${k.replace(/[A-Z]/g, (c) => '-' + c.toLowerCase())}`, v]))}>
     <a class="skip-link" href="#main">{d.common.skipToContent}</a>
     {stage === 'preview' && <div class="preview-banner" role="note">PREVIEW · {new Date().toISOString().slice(0, 10)}</div>}
     <Header lang={props.lang} path={props.path} alternates={props.alternates} />

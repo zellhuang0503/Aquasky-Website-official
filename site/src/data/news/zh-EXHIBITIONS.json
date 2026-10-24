@@ -1,5 +1,6 @@
 {
   "id": "zh-EXHIBITIONS",
+  "kind": "news",
   "lang": "zh",
   "category": "EXHIBITIONS",
   "path": "/news/EXHIBITIONS",
@@ -8,6 +9,7 @@
   "titleBand": "展覽訊息",
   "h4Recent": "最新文章",
   "h4Side": "熱門文章",
+  "h4Detail": "最新文章",
   "moreLabel": "了解更多...",
   "backLabel": "返回",
   "sidebar": [

@@ -1,0 +1,26 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/download-thai/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/download/thai 與 /zh/download/thai。",
+  "id": "download-thai",
+  "path": "/download/thai",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/download/thai",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-22"
+  },
+  "legacyCss": ".h1-1 { margin:0; padding:0;}\n#service-container { background-color:#f4f2f0; padding-left:0 ; padding-right:0;}\n.service-txt h2 { color:#002d49; font-weight:bold; text-align:center;}\n.service-txt p { color:#0088d1; font-size:18px; line-height:30px;}\n.service-txt-b { font-weight:bold; text-align:center;}\n.service_spacing { padding-top:50px; padding-bottom:50px;}\n.download_spacing-2 { padding-top:10px; padding-bottom:10px;}\n.dl-item { padding:15px;}\n.dl-btn-link { text-align:center; margin:20px 0;}\n.btn-dl { color: #FFF; border-color: #FFF; border:1px sloid #FFF; display: block; font-size:18px; padding:15px 10px; background-color:#00a5e9;}\n.btn-dl:focus, .btn-dl.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-dl:hover { color: #009; background-color: #e6e6e6; border-color: #adadad;}\n.dl_title_line { background:url(/images/pd-title-line-01.png) center center no-repeat; width:98%; height:42px; text-align:center; line-height:42px; color:#0086cd; font-weight:bold; font-size:28px; margin:5px auto 30px auto;}\n.dl_title_line span { background-color:#f4f2f0; padding:5px;}\n.valign-bottom { vertical-align:text-bottom;}\n.drop-shadow-box { -webkit-box-shadow: 3px 5px 5px rgba(0,0,0,0.4); -moz-box-shadow: 3px 5px 5px rgba(0,0,0,0.4); box-shadow: 3px 5px 5px rgba(0,0,0,0.4);}\n.btn-bg-color { background-image: -webkit-gradient(linear, center top, center bottom, from(#00a6ea), to(#0075c1)); background-image: -webkit-linear-gradient(top, #00a6ea, #0075c1); background-image: -moz-linear-gradient(top, #00a6ea, #0075c1); background-image: -o-linear-gradient(top, #00a6ea, #0075c1); background-image: -ms-linear-gradient(top, #00a6ea, #0075c1); background-image: linear-gradient(to bottom, #00a6ea, #0075c1);}\n.lang_content { padding:15px 15px 25px 15px; line-height:25px; font-size:15px; text-align: justify; color:#666;}",
+  "extraCss": [
+    "/css/bootstrap-grid.min.css"
+  ],
+  "bootstrap": "full",
+  "neutral": true,
+  "assets": [
+    "/download/EDM/Thai/cover/AQUASKY_PUMPLUS-Blue_DM_th_20260627_07f3e4_web.jpg",
+    "/download/EDM/Thai/AQUASKY_PUMPLUS-Blue_DM_th_20260627_07f3e4_web.pdf",
+    "/download/EDM/Thai/cover/AQUASKY_PUMPLUS-Almond_DM_th_20260627_4bdc71_web.jpg",
+    "/download/EDM/Thai/AQUASKY_PUMPLUS-Almond_DM_th_20260627_4bdc71_web.pdf",
+    "/images/pd-title-line-01.png",
+    "/css/bootstrap-grid.min.css"
+  ],
+  "dataQuestions": []
+}

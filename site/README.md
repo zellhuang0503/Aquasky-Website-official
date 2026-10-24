@@ -13,11 +13,13 @@
 | `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[page].astro` → `ClassicSeries.astro`（經典模板） | 舊站英文原文＋型號清單 |
 | 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
-| `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、videos、sel_tools | 同上（照抄模板） | 同上。contact 表單外觀保留但 action="#"、拿掉 PHP 驗證碼與隱藏欄位，送出功能上線前接 Worker API；sel_tools 只是入口頁，三個計算器另做 |
+| `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、sel_tools | 同上（照抄模板） | 同上。contact 表單外觀保留但 action="#"、拿掉 PHP 驗證碼與隱藏欄位，送出功能上線前接 Worker API；sel_tools 只是入口頁，三個計算器另做 |
+| `/download/english` … 14 個語系子頁（網址沒有語系前綴） | `src/pages/download/[language].astro` → `LegacyPage.astro`（照抄模板，`neutral: true`） | 舊站這些頁一律英文介面、沒有 canonical／hreflang；新站英文介面、canonical 指自己、不輸出 hreflang、語言選單回各語系首頁。83 個 EDM PDF（66 MB）與封面圖由 copy 腳本複製 |
 | `/en/news/EXHIBITIONS`、`/en/news/INDUSTRY`、`/en/news/<CAT>/pageN`（zh 同） | `src/pages/[lang]/news/[category].astro`、`[category]/[page].astro` → `NewsList.astro` | 舊站列表照抄：每頁 5 篇、右欄固定幾篇「熱門文章」、分頁列全頁碼；en 6＋33 頁、zh 1＋10 頁 |
 | `/en/news-detail/<CAT>/<slug>`（237 篇：en 187、zh 50） | `src/pages/[lang]/news-detail/[category]/[slug].astro` → `NewsDetail.astro` | 正文整段照抄（`src/content/news/<lang>/<CAT>/<slug>.json`），verify 逐字比。每篇只有一個語系，沒有對應翻譯 |
+| `/en/videos`、`/en/videos/page2`、`page3`（zh 同）；`/en/videos-detail/<slug>` 11 篇（zh 11 篇，slug 不同） | `src/pages/[lang]/videos.astro`、`videos/[page].astro`、`videos-detail/[slug].astro` → 同新聞的 `NewsList`／`NewsDetail`（`kind: videos`） | 版型與新聞完全相同（CSS 同一份）；明細 JSON-LD 是舊站的 Article＋VideoObject；返回鈕用 `videos_back` |
 
-還沒搬：影片明細 11 頁、下載專區各語系子頁（/download/…）、選型工具三個計算器、配件明細 6 頁，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
+還沒搬：下載專區各語系子頁（/download/…）、選型工具三個計算器、配件明細 6 頁，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
 
 ## 三種系列頁模板
 
@@ -25,7 +27,7 @@
 | --- | --- | --- |
 | `lqcol` | LQCOL-PLUS | `scripts/import-lqcol.mjs`（從 translation/ 匯入） |
 | `classic` | PUMPLUS、RO-PLUS、THERMAL-PLUS、HYDRO-PLUS、PREMIUM-PLUS、MEGA-PLUS、SOLAR-PLUS | `scripts/import-classic-series.mjs`（直接解析封存的 en／zh 頁面：h1、介紹文、型號清單、DM 圖、頁面 `<style>`） |
-| `news` | 新聞列表與 237 篇明細 | `scripts/import-news.mjs`：從封存解析列表（順序、日期字樣、封面、摘要、右欄、分頁數、SEO）與明細（標題列、`#ImgAutoResponsive` 正文、舊站 NewsArticle）。只做舊站 JS 本來會做的事：圖去 inline 寬高＋加 img-responsive、Cloudflare email 還原；檔名有空格的圖改 `%20` |
+| `news` | 新聞列表與 237 篇明細、影片列表與 22 篇明細（`kind: news`／`videos`，同一套） | `scripts/import-news.mjs`：從封存解析列表（順序、日期字樣、封面、摘要、右欄、分頁數、SEO）與明細（標題列、`#ImgAutoResponsive` 正文、舊站 NewsArticle）。只做舊站 JS 本來會做的事：圖去 inline 寬高＋加 img-responsive、Cloudflare email 還原；檔名有空格的圖改 `%20` |
 | `legacy` | supreme、dl-ce、asme-ht、GIGA-PLUS、accessories（結構各不同、數量少） | `scripts/import-legacy-page.mjs`：舊頁 `</header>`…`<footer` 整段抄進 `src/content/legacy/<id>/<lang>.json` 的 `bodyHtml`（相對路徑改絕對、去 wow 動畫 class、第二個 h1 改 div、#ImgAutoResponsive 的圖照舊站 JS 改 img-responsive）；頁面樣式在 `src/data/pages/<id>.json`。schema 禁止 script／iframe／on* 屬性，表單只允許 action="#"。改文字直接改 bodyHtml |
 
 每個系列頁自己的樣式（h1 色條顏色、底圖、標題圖位置）照舊站頁面的 `<style>` 抄在 `src/data/products/<id>.json` 的 `legacyCss`，由頁面以 `headStyle` 輸出；共用的 `src/styles/site.css` 不放任何系列專用規則，免得互相蓋到。匯入腳本只跑一次，之後改內容直接改 JSON；要重跑加 `--force`。
@@ -55,7 +57,8 @@ npm run check           # 型別與模板檢查
 | LQCOL-PLUS 型號與規格數字 | `src/data/products/lqcol-plus.json`（兩個語系、JSON-LD 共用這一份） |
 | 7 個經典系列的型號清單、圖片、頁面樣式、資料疑點 | `src/data/products/<id>.json`（`dataQuestions` 自動列出公升換加侖對不上的型號） |
 | 首頁頁面樣式與輪播設定 | `src/data/home.json` |
-| 新聞每篇文字（標題、日期字樣、摘要、正文、SEO） | `src/content/news/<lang>/<CAT>/<slug>.json`；新文章＝新增一檔並把 slug 加進列表 `order` 最前面 |
+| 新聞／影片每篇文字（標題、日期字樣、摘要、正文、SEO） | `src/content/news/<lang>/<CAT>/<slug>.json`（影片的 CAT 是 VIDEOS）；新文章＝新增一檔並把 slug 加進列表 `order` 最前面 |
+| 下載子頁的文字與 PDF 清單 | `src/content/legacy/download-<language>/en.json` 的 bodyHtml（PDF 放 `public/download/EDM/<Language>/`，封面在 `cover/`） |
 | 新聞列表：順序、右欄「熱門文章」、標題帶、按鈕字樣、SEO | `src/data/news/<lang>-<CAT>.json`（`pageCount` 要＝ceil(篇數/5)，schema 會檢查） |
 | 新聞列表／明細的頁面樣式 | `src/data/news/common.json` |
 
@@ -107,6 +110,8 @@ npm run check           # 型別與模板檢查
 - 照抄頁載哪個 bootstrap 照舊站（products 與首頁是 min，其他是客製 full）；series_content.css 只有 LQCOL 載。
 - 新聞：hreflang 只列真的有這一頁的語系（明細只有自己；列表第 N 頁要兩個語系都有 N 頁才互列），語言選單切到沒有這頁的語系時回該語系首頁（舊站語言選單一律回首頁）。列表封面圖補 alt＝標題（舊站沒有）。CollectionPage 每頁指自己的網址（舊站每頁都指第 1 頁）；NewsArticle 原樣搬並補 publisher。列表與明細各補一個看不見的 h1（列表＝標題帶字樣、明細＝文章標題）。
 - 新聞正文裡 YouTube 的 iframe 保留（schema 只准 youtube／youtube-nocookie）；正文裡連到舊站 `.php` 的連結照舊（約 130 處），切換時要改。
+- 影片明細的 JSON-LD：舊站 zh 影片的 `@id`／`mainEntityOfPage` 還寫 `videos-detail.php?sid=…`，匯入時改成新站乾淨網址；Article 補 publisher。
+- 下載子頁（/download/<language>）：舊站線上版的選單語言會跟著 cookie 走（看過中文頁再開就變中文選單），封存版是英文；新站固定英文介面。這些頁舊站沒有 canonical／hreflang，新站 canonical 指自己、不輸出 hreflang（14 頁各是一種型錄語言，不是網站語系）。麵包屑：首頁›DOWNLOAD›EDM English。
 - 新聞明細手機版：8 篇正文有固定寬度的表格或 iframe，舊站會把整頁撐寬（390 寬變 515～815）；新站在 site.css 讓 `#news-container #ImgAutoResponsive` 橫向捲、iframe max-width 100%，桌機版面不變。
 - 新聞 meta description 長短不一（13～1235 字）照舊站，不改；列在「已知的資料問題」。
 - 聯絡表單：舊站用 PHP 驗證碼圖與 csrf；新站是靜態站，先拿掉驗證碼那一列與隱藏欄位、action 改 `#`（按送出不會送）。上線前另做 Worker API＋Turnstile（整體規劃 §7.2）。

@@ -14,7 +14,7 @@ type Props = { kind: 'classic'; product: Classic } | { kind: 'legacy'; page: Leg
 
 export async function getStaticPaths() {
   const products = (await getCollection('products')).map((e) => e.data).filter((p): p is Classic => p.template === 'classic');
-  const pages = (await getCollection('pages')).map((e) => e.data);
+  const pages = (await getCollection('pages')).map((e) => e.data).filter((p) => !p.neutral);   // /download/<language> 走 src/pages/download/
   const routes = [
     ...products.map((product) => ({ path: product.path, props: { kind: 'classic', product } as Props })),
     ...pages.map((page) => ({ path: page.path, props: { kind: 'legacy', page } as Props })),

@@ -1,5 +1,6 @@
 {
   "id": "en-INDUSTRY",
+  "kind": "news",
   "lang": "en",
   "category": "INDUSTRY",
   "path": "/news/INDUSTRY",
@@ -8,6 +9,7 @@
   "titleBand": "INDUSTRY",
   "h4Recent": "RECENT NEWS",
   "h4Side": "LATEST NEWS",
+  "h4Detail": "RECENT NEWS",
   "moreLabel": "more...",
   "backLabel": "BACK",
   "sidebar": [

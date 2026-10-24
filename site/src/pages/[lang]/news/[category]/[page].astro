@@ -5,7 +5,7 @@ import NewsList from '../../../../components/NewsList.astro';
 import { type Lang, liveLangs } from '../../../../lib/i18n';
 
 export async function getStaticPaths() {
-  const lists = (await getCollection('newsLists')).map((e) => e.data);
+  const lists = (await getCollection('newsLists')).map((e) => e.data).filter((l) => l.kind === 'news');
   return lists.filter((l) => liveLangs.includes(l.lang)).flatMap((list) =>
     Array.from({ length: list.pageCount - 1 }, (_, i) => i + 2).map((page) => ({
       params: { lang: list.lang, category: list.category, page: `page${page}` },

@@ -28,11 +28,10 @@ const slugs = list.order.slice((page - 1) * list.perPage, page * list.perPage);
 const items = slugs.map((s) => { const a = bySlug.get(s); if (!a) throw new Error(`${list.id}: article ${s} missing`); return a; });
 
 const catLabel = (d.nav as Record<string, string>)[list.category.toLowerCase()] ?? list.category;
-const breadcrumbs = [
-  { name: d.common.breadcrumbHome, path: '' },
-  { name: d.nav.news, path: basePath },
-  { name: catLabel, path: basePath },
-];
+// 新聞：首頁›最新消息›分類；影片：首頁›影片專區
+const breadcrumbs = list.kind === 'news'
+  ? [{ name: d.common.breadcrumbHome, path: '' }, { name: d.nav.news, path: basePath }, { name: catLabel, path: basePath }]
+  : [{ name: d.common.breadcrumbHome, path: '' }, { name: d.nav.videos, path: basePath }];
 const site = brand.url;
 const jsonLd = [{
   '@type': 'CollectionPage',
@@ -44,7 +43,7 @@ const jsonLd = [{
 }];
 const pages = Array.from({ length: list.pageCount }, (_, i) => i + 1);
 ---
-<Base lang={lang} title={list.seo.title} description={list.seo.description} path={path} image={items[0]?.cover} jsonLd={jsonLd} breadcrumbs={breadcrumbs} alternates={alternates} bootstrap="full" headStyle={common.listCss}>
+<Base lang={lang} title={list.seo.title} description={list.seo.description} path={path} image={items[0]?.cover} jsonLd={jsonLd} breadcrumbs={breadcrumbs} alternates={alternates} bootstrap="full" headStyle={common.listCss} bodyData={{ backKey: `${list.kind}_back` }}>
   <h1 class="visually-hidden">{list.titleBand}</h1>
   <!--about-container-01-->
   <div id="news-container" class="container-fluid">
@@ -94,7 +93,7 @@ const pages = Array.from({ length: list.pageCount }, (_, i) => i + 1);
   </div>
   <!--end news-container-01-->
   <script is:inline>
-    // 舊站：記住從哪個列表頁進明細，明細頁的「返回」才能回到同一頁
-    try { sessionStorage.setItem('news_back', location.href); } catch (e) {}
+    // 舊站：記住從哪個列表頁進明細，明細頁的「返回」才能回到同一頁（新聞 news_back、影片 videos_back）
+    try { sessionStorage.setItem(document.body.dataset.backKey, location.href); } catch (e) {}
   </script>
 </Base>

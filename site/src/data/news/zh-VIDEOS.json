@@ -1,0 +1,59 @@
+{
+  "id": "zh-VIDEOS",
+  "kind": "videos",
+  "lang": "zh",
+  "category": "VIDEOS",
+  "path": "/videos",
+  "perPage": 5,
+  "pageCount": 3,
+  "titleBand": "影片專區",
+  "h4Recent": "近期影音",
+  "h4Side": "最新影音",
+  "h4Detail": "影片專區",
+  "moreLabel": "了解更多...",
+  "backLabel": "返回",
+  "sidebar": [
+    {
+      "dateText": "December 23 2020",
+      "href": "/zh/videos-detail/aquasky-online-selection-toolspressure-tank-pumplus-aquasky-15",
+      "title": "Aquasky online selection tools｜Pressure Tank, Pumplus｜ Aquasky"
+    },
+    {
+      "dateText": "June 07 2019",
+      "href": "/zh/videos-detail/rot-4-pressure-tank-standard-reverse-osmosis-tankwater-storage-tankaquasky-14",
+      "title": "ROT 4 Pressure Tank ｜Standard Reverse Osmosis Tank｜Water storage tank｜Aquasky"
+    },
+    {
+      "dateText": "April 17 2019",
+      "href": "/zh/videos-detail/n2-filling-testpressure-tank-pump-tank-energy-savingaquasky-13",
+      "title": "N2 Filling Test｜Pressure Tank, Pump tank, Energy Saving｜Aquasky"
+    },
+    {
+      "dateText": "April 03 2018",
+      "href": "/zh/videos-detail/aquaskyro-plus-pumplus-thermal-plus-hydro-pluspressure-tank-ro-tank-12",
+      "title": "AQUASKY｜Ro-plus, Pumplus, Thermal-Plus, Hydro-Plus｜Pressure Tank, RO Tank"
+    },
+    {
+      "dateText": "March 20 2018",
+      "href": "/zh/videos-detail/aquasky-pumplus-seriespump-tank-pressure-tankro-tank-water-storage-tank-11",
+      "title": "Aquasky PumPlus Series｜pump tank, pressure tank,RO tank, water storage tank"
+    }
+  ],
+  "order": [
+    "aquasky-online-selection-toolspressure-tank-pumplus-aquasky-15",
+    "rot-4-pressure-tank-standard-reverse-osmosis-tankwater-storage-tankaquasky-14",
+    "n2-filling-testpressure-tank-pump-tank-energy-savingaquasky-13",
+    "aquaskyro-plus-pumplus-thermal-plus-hydro-pluspressure-tank-ro-tank-12",
+    "aquasky-pumplus-seriespump-tank-pressure-tankro-tank-water-storage-tank-11",
+    "multiple-color-selectionsro-tank-pressure-tank-roplusaquasky-10",
+    "aquasky-painting-quality-inspectionro-tank-pressure-tank-pumplus-9",
+    "rot-4-unboxing-reviewpressure-tank-ro-tank-roplusaquasky-8",
+    "rot-4-installationpressure-tank-ro-tank-pumplusaquasky-7",
+    "aquaskyaquasky-enterprise-corp-nsf-tank-reserve-osmosis-tank-thermal-expansion-tank-6",
+    "aquaskyaquasky-enterprise-corp-pump-tank-pressure-tankro-tank-water-storage-tank-5"
+  ],
+  "seo": {
+    "title": "AQUASKY 產品測試與教學影片：氣門嘴氮氣充填與隔膜桶運作示範",
+    "description": "觀看溢康企業 (AQUASKY) 壓力桶的實際運作影片。包含專利 100% 氮氣充填測試、極限耐壓測試與安裝使用教學。"
+  }
+}

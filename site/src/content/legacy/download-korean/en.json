@@ -1,0 +1,15 @@
+{
+  "_note": "Old /en/download/korean page body copied verbatim (incl. its product line). Edit bodyHtml to change text.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Aquasky PLUS-EDM 한국어 다운로드",
+    "description": "Aquasky는 다양한 액체 응용 분야에 다양한 전문 압력 탱크 라인을 생산합니다. RO-PLUS는 역삼 투 식수 시스템에 설치되어 여과 후 식수를 저장합니다. PUMPLUS는 지하수 부스터 시스템 또는 폐쇄 형 가정용 급수 시스템으로 설정된 압력 범위의 위생 수를 저장하여 워터 펌프의 에너지 절약 보호를 제공합니다. MEGA-PLUS는 PUMPLUS 시리즈의 업그레이드 버전으로 고층 빌딩 용수 시스템 및 고압 용수 시스템 용 고압 수 시스템에 적용됩니다. THERMAL-PLUS는 물의 열팽창을 흡수하고 온수기를 보호하는 밀폐형 온수 시스템 용 안전 장치입니다. HYDRO-PLUS는 유압식 팽창 탱크로 주거용 또는 상업용 유압식 난방 및 냉각 시스템에 사용됩니다. SOLAR-PLUS는 온도 변화로 인한 열전달 회로의 열 액체 팽창을 흡수하는 태양열 팽창 탱크입니다. 여기에서는 모든 시리즈 전단지 및 광고 전단지를 제공합니다."
+  },
+  "h1": "DOWNLOAD",
+  "hasVisibleH1": true,
+  "subtitle": "EDM 한국어",
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<h1 id=\"about-top-title\" class=\"h1-1\">DOWNLOAD</h1>\n\t<div class=\"container service_spacing\">\n    <h2 class=\"dl_title_line\"><span>EDM 한국어</span></h2>\n\n    <div class=\"lang_content\">\n    \t<p>PumPlus다이아프램(Diaphragm) 압력탱크는 부스터시스템, 관계시스템, 보일러 및 온도팽창흡수 수격방지 장치용 등에 광범위하게 사용될 수 있도록 고안, 생산된 제품 입니다. 스테인레스 연결구, FDA등급 폴리프로필렌(Polypropylene) 라이너를 사용함으로써 미국 NSF(미국위생협회), 한국 KC, 유럽 인증등을 획득 하였고 손쉬운 설치와 부식방지, 유지 보수 불필요로 5년의 보증 기간을 제공하고 있습니다.</p>\r\n    </div>\n    <div>\n    \t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3\">\n\t\t\t\t\t<div class=\"col\">\n\t\t\t\t\t\t<div class=\"dl-item\"><img class=\"img-responsive center-block drop-shadow-box\" src=\"/download/EDM/Korean/cover/AQUASKY_Pumplus-Blue_DM_ko_20260627_481b08_web.jpg\" />\n\t\t\t\t\t\t<div class=\"dl-btn-link\"><a class=\"btn btn-dl btn-bg-color\" download href=\"/download/EDM/Korean/AQUASKY_Pumplus-Blue_DM_ko_20260627_481b08_web.pdf\" target=\"_blank\">Pumplus-Blue</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col\">\n\t\t\t\t\t\t<div class=\"dl-item\"><img class=\"img-responsive center-block drop-shadow-box\" src=\"/download/EDM/Korean/cover/AQUASKY_Pumplus-Almond_DM_ko_20260627_098a9b_web.jpg\" />\n\t\t\t\t\t\t<div class=\"dl-btn-link\"><a class=\"btn btn-dl btn-bg-color\" download href=\"/download/EDM/Korean/AQUASKY_Pumplus-Almond_DM_ko_20260627_098a9b_web.pdf\" target=\"_blank\">Pumplus-Almond</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div></div>    </div>\n\n</div>\n\n<div class=\"service_spacing\"></div>\n</div>"
+}

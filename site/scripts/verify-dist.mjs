@@ -25,7 +25,7 @@ function archivedPage(code, path) {
       if (line.trim()) { const r = JSON.parse(line); archiveIndex.set(r.url, r.relative_path); }
     }
   }
-  const rel = archiveIndex.get(`https://aquaskyplus.com/${code}${path}`);
+  const rel = archiveIndex.get(`https://aquaskyplus.com${code ? '/' + code : ''}${path}`);   // code 空＝沒有語系前綴的頁（/download/<language>）
   return rel ? readFileSync(join(archiveDir, rel), 'utf8') : null;
 }
 
@@ -62,9 +62,13 @@ const PAGES = [
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code,
     series: p.template === 'lqcol', classic: p.template === 'classic' ? p : null,
   }))),
-  ...legacyPages.flatMap((p) => LANGS.map(([code, htmlLang]) => ({
+  ...legacyPages.filter((p) => !p.neutral).flatMap((p) => LANGS.map(([code, htmlLang]) => ({
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code, legacy: p,
   }))),
+  // 沒有語系前綴的照抄頁（/download/<language>）：英文介面、不輸出 hreflang、內容檔是 en.json
+  ...legacyPages.filter((p) => p.neutral).map((p) => ({
+    url: p.path, file: `${p.path.slice(1)}.html`, lang: 'en', code: '', contentLang: 'en', legacy: p, hreflang: [],
+  })),
   ...NEWS_PAGES,
 ];
 const built = new Set(PAGES.map((p) => p.url));
@@ -90,7 +94,7 @@ for (const page of PAGES) {
   const expectCanon = 'https://aquaskyplus.com' + (page.url === '/' ? '/en' : page.url);
   if (canonical !== expectCanon) fail(`${where}: canonical ${canonical} expected ${expectCanon}`);
   const hreflangs = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)"/g)].map((m) => m[1]);
-  const expectHreflang = page.hreflang ?? ['en', 'zh-Hant', 'x-default'];
+  const expectHreflang = page.hreflang ?? ['en', 'zh-Hant', 'x-default'];   // 空陣列＝這頁不該有 hreflang
   if ([...hreflangs].sort().join() !== [...expectHreflang].sort().join()) fail(`${where}: hreflang [${hreflangs}] expected [${expectHreflang}]`);
   const noindex = /<meta name="robots" content="noindex/.test(html);
   if (stage === 'preview' && !noindex) fail(`${where}: preview build without noindex`);
@@ -202,9 +206,10 @@ for (const page of PAGES) {
     }
   }
   if (page.newsArticle) {
-    const na = graph.find((n) => n['@type'] === 'NewsArticle');
-    if (!na || !na.datePublished || na.publisher?.['@id'] !== 'https://aquaskyplus.com/#organization') fail(`${where}: NewsArticle missing or incomplete`);
-    if (!html.includes('id="newsBackBtn"')) fail(`${where}: back button missing`);
+    const na = graph.find((n) => ['NewsArticle', 'Article'].includes(n['@type']));
+    if (!na || (page.newsArticle.kind === 'news' && !na.datePublished) || na.publisher?.['@id'] !== 'https://aquaskyplus.com/#organization') fail(`${where}: NewsArticle/Article missing or incomplete`);
+    if (!html.includes(`id="${page.newsArticle.kind}BackBtn"`)) fail(`${where}: back button missing`);
+    if (page.newsArticle.kind === 'videos' && !graph.some((n) => n['@type'] === 'VideoObject')) fail(`${where}: VideoObject missing`);
   }
   if (page.legacy || page.newsList || page.newsArticle) {
     // 照抄型：<main> 的純文字要跟封存舊頁 </header>…<footer 之間的純文字一字不差
@@ -221,7 +226,7 @@ for (const page of PAGES) {
       const mainHtml = html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1] ?? '';
       // 補的隱藏 h1 不算（照抄頁：content.h1；新聞列表：標題帶；明細：文章標題）
       const hiddenH1 = page.legacy
-        ? (() => { const c = JSON.parse(readFileSync(join(root, `src/content/legacy/${page.legacy.id}/${page.code}.json`), 'utf8')); return c.hasVisibleH1 ? null : c.h1; })()
+        ? (() => { const c = JSON.parse(readFileSync(join(root, `src/content/legacy/${page.legacy.id}/${page.contentLang ?? page.code}.json`), 'utf8')); return c.hasVisibleH1 ? null : c.h1; })()
         : page.newsList ? page.newsList.titleBand : page.newsArticle.title;
       let newText = plain(mainHtml);
       if (hiddenH1) newText = newText.replace(plain(hiddenH1), '').replace(/\s+/g, ' ').trim();

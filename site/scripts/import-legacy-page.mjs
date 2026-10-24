@@ -15,9 +15,12 @@ const archive = resolve(root, '..', 'migration-2026-10-22');
 const args = process.argv.slice(2);
 const force = args.includes('--force');
 const ORIGIN = 'https://aquaskyplus.com';
-const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories', '/products', '/about', '/feature', '/certification', '/FAQ', '/contact', '/downloadpage', '/videos', '/sel_tools'];
+const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories', '/products', '/about', '/feature', '/certification', '/FAQ', '/contact', '/downloadpage', '/sel_tools'];
+// 下載專區各語系子頁：網址沒有語系前綴（/download/english），舊站一律英文介面，只匯一份（內容檔 en.json）
+const DOWNLOAD_LANGS = ['arabic', 'chinese', 'dutch', 'english', 'french', 'german', 'italian', 'japanese', 'korean', 'latvian', 'lithuanian', 'russian', 'spanish', 'thai'];
 const paths = args.filter((a) => a.startsWith('/'));
-const PAGES = (paths.length ? paths : DEFAULT).map((p) => ({ path: p, id: p.slice(1).toLowerCase() }));
+const toPage = (p) => p.startsWith('/download/') ? { path: p, id: p.slice(1).replace('/', '-').toLowerCase(), neutral: true } : { path: p, id: p.slice(1).toLowerCase() };
+const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`)]).map(toPage);
 
 const index = new Map();
 for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\n')) {
@@ -39,7 +42,7 @@ export const decodeCfEmail = (hex) => { const k = parseInt(hex.slice(0, 2), 16);
 const absUrl = (u) => { u = u.replace(/[\r\n\t]+/g, ''); return /^(\/|https?:|#|mailto:|tel:|data:)/.test(u) ? u : '/' + u.replace(/^(\.\.\/)+/, ''); };
 
 function parse(lang, p) {
-  const row = index.get(`${ORIGIN}/${lang}${p.path}`);
+  const row = index.get(p.neutral ? `${ORIGIN}${p.path}` : `${ORIGIN}/${lang}${p.path}`);
   if (!row) throw new Error(`archive has no ${lang}${p.path}`);
   const html = readFileSync(join(archive, row.relative_path), 'utf8');
   const title = text(html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? '');
@@ -126,7 +129,8 @@ function parse(lang, p) {
     if (qa.length < 20) throw new Error(`${lang}${p.path}: only ${qa.length} FAQ pairs parsed`);
     legacyJsonLd.push({ '@type': 'FAQPage', '@id': `${ORIGIN}/${lang}${p.path}#faqpage`, mainEntity: qa });
   }
-  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd, bootstrap };
+  const subtitle = text(body.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] ?? '') || undefined;
+  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd, bootstrap, subtitle };
 }
 
 // 舊站資料疑點（頁面照原樣，不改；要請客戶確認）。2026-10-24 審查官列出。
@@ -141,7 +145,7 @@ const DATA_QUESTIONS = {
 let written = 0;
 for (const p of PAGES) {
   const en = parse('en', p);
-  const zh = parse('zh', p);
+  const zh = p.neutral ? en : parse('zh', p);
   if (en.legacyCss !== zh.legacyCss) console.log(`note: ${p.path} en/zh page <style> differ; using en`);
   const page = {
     _note: `照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en${p.path} 與 /zh${p.path}。`,
@@ -152,6 +156,7 @@ for (const p of PAGES) {
     legacyCss: en.legacyCss,
     extraCss: en.extraCss,
     bootstrap: en.bootstrap,
+    neutral: !!p.neutral,
     assets: [...new Set([...en.assets, ...zh.assets])],
     dataQuestions: DATA_QUESTIONS[p.id] ?? [],
   };
@@ -165,10 +170,12 @@ for (const p of PAGES) {
     seo: { title: d.title, description: d.description },
     h1: d.h1 || d.title,
     hasVisibleH1: d.hasH1,
+    ...(d.subtitle ? { subtitle: d.subtitle } : {}),
     legacyJsonLd: d.legacyJsonLd,
     bodyHtml: d.body,
   });
-  for (const [rel, data] of [[`src/data/pages/${p.id}.json`, page], [`src/content/legacy/${p.id}/en.json`, content('en', en)], [`src/content/legacy/${p.id}/zh.json`, content('zh', zh)]]) {
+  const files = [[`src/data/pages/${p.id}.json`, page], [`src/content/legacy/${p.id}/en.json`, content('en', en)], ...(p.neutral ? [] : [[`src/content/legacy/${p.id}/zh.json`, content('zh', zh)]])];
+  for (const [rel, data] of files) {
     const target = resolve(root, rel);
     if (existsSync(target) && !force) { console.log(`skip (exists): ${rel}`); continue; }
     mkdirSync(dirname(target), { recursive: true });

@@ -1,0 +1,19 @@
+---
+// 影片明細：/en/videos-detail/<slug>（網址照舊站；en 與 zh 的 slug 不同，每篇只有一個語系）
+import { getCollection } from 'astro:content';
+import NewsDetail from '../../../components/NewsDetail.astro';
+import { type Lang, liveLangs } from '../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const lists = (await getCollection('newsLists')).map((e) => e.data).filter((l) => l.kind === 'videos');
+  const articles = (await getCollection('news')).map((e) => e.data).filter((a) => a.kind === 'videos' && liveLangs.includes(a.lang));
+  return articles.map((article) => {
+    const list = lists.find((l) => l.lang === article.lang);
+    if (!list) throw new Error(`no videos list for ${article.lang}`);
+    if (!list.order.includes(article.slug)) throw new Error(`${article.lang}/videos/${article.slug} not in list order`);
+    return { params: { lang: article.lang, slug: article.slug }, props: { article, list } };
+  });
+}
+const { article, list } = Astro.props;
+---
+<NewsDetail lang={Astro.params.lang as Lang} article={article} list={list} />

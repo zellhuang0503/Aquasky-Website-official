@@ -1,0 +1,15 @@
+{
+  "_note": "Old /en/download/japanese page body copied verbatim (incl. its product line). Edit bodyHtml to change text.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Aquasky PLUS-EDM Japanese ダウンロード",
+    "description": "Aquaskyは、いくつかの異なる液体用途に合わせて、さまざまな専門の圧力タンクラインを製造しています。 RO-PLUSは、ろ過処理後の飲料水を貯蔵するために逆浸透飲料水システムに設置されます。 PUMPLUSは、地下水ブースターシステムまたはクローズドホーム給水システムで、設定された圧力範囲で衛生水を貯蔵して、ウォーターポンプに省エネ保護を提供します。 MEGA-PLUSは、PUMPLUSシリーズのアップグレードバージョンで、高層ビルの給水システムおよび高圧給水システムの高圧給水システムに適用されます。 THERMAL-PLUSは、水の熱膨張を吸収して給湯器を保護する閉鎖型給湯システムの安全装置です。 HYDRO-PLUSは、油圧式膨張タンクであり、住宅用または商用の油圧式冷暖房システムで使用されます。 SOLAR-PLUSは、温度変化による熱伝達回路内の液体の熱膨張を吸収する太陽熱膨張タンクです。ここでは、すべてのシリーズのチラシとコマーシャルのチラシを提供しています。"
+  },
+  "h1": "DOWNLOAD",
+  "hasVisibleH1": true,
+  "subtitle": "EDM Japanese",
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<h1 id=\"about-top-title\" class=\"h1-1\">DOWNLOAD</h1>\n\t<div class=\"container service_spacing\">\n    <h2 class=\"dl_title_line\"><span>EDM Japanese</span></h2>\n\n    <div class=\"lang_content\">\n    \t<p>横型圧力タンク<br />\r\nPumPlus 圧力タンクは、水圧を一定レベルに維持する加圧水システムに不可欠です。タンクが、タイアフラムとライナーの間に補給水を保管し、加圧エアーチャンバーは、供給サークルを作ることができます。このプロセスによって、システム圧力を設定レベルに維持するためにモーターが始動する必要のある回数が減少します。<br />\r\nダイアフラムの張力がシステム内の水圧を保ち、食器洗い機や洗濯機の正常な動作を確保して、 シャワーや浴槽の蛇口の水の勢いを維持します。PumPlus 圧力タンクはエネルギーを節約する機器であり、メインテナンスは不要です。<br />\r\n適切なサイズのポンプとポンプタンクのチームワークがニーズを満たし、長年に渡って信頼できる動作をお約束します。</p>\r\n    </div>\n    <div>\n    \t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3\">\n\t\t\t\t\t<div class=\"col\">\n\t\t\t\t\t\t<div class=\"dl-item\"><img class=\"img-responsive center-block drop-shadow-box\" src=\"/download/EDM/Japanese/cover/AQUASKY_PUMPLUS-Blue_DM_ja_20260627_ae59fb_web.jpg\" />\n\t\t\t\t\t\t<div class=\"dl-btn-link\"><a class=\"btn btn-dl btn-bg-color\" download href=\"/download/EDM/Japanese/AQUASKY_PUMPLUS-Blue_DM_ja_20260627_ae59fb_web.pdf\" target=\"_blank\">PUMPLUS-Blue</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col\">\n\t\t\t\t\t\t<div class=\"dl-item\"><img class=\"img-responsive center-block drop-shadow-box\" src=\"/download/EDM/Japanese/cover/AQUASKY_PUMPLUS-Almond_DM_ja_20260627_370844_web.jpg\" />\n\t\t\t\t\t\t<div class=\"dl-btn-link\"><a class=\"btn btn-dl btn-bg-color\" download href=\"/download/EDM/Japanese/AQUASKY_PUMPLUS-Almond_DM_ja_20260627_370844_web.pdf\" target=\"_blank\">PUMPLUS-Almond</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div></div>    </div>\n\n</div>\n\n<div class=\"service_spacing\"></div>\n</div>"
+}

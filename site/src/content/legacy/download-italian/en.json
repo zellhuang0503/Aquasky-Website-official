@@ -1,0 +1,15 @@
+{
+  "_note": "Old /en/download/italian page body copied verbatim (incl. its product line). Edit bodyHtml to change text.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Aquasky PLUS-EDM Italiana Scaricamento",
+    "description": "Aquasky produce diverse linee di serbatoi a pressione professionali per diverse applicazioni di liquidi. RO-PLUS è installato sul sistema di acqua potabile a osmosi inversa per immagazzinare l\\\\\\'acqua potabile dopo il processo di filtrazione. PUMPLUS è per il sistema di aumento pressione dell\\\\\\'acqua sotterranea o il sistema di approvvigionamento idrico domestico chiuso per l\\\\\\'accumulo di acqua sanitaria in un intervallo di pressione impostato per fornire protezione a risparmio energetico per la pompa dell\\\\\\'acqua. MEGA-PLUS è una versione di aggiornamento della serie PUMPLUS applicabile a un sistema idrico ad alta pressione per il sistema idrico di grattacieli e il sistema idrico ad alta pressione. THERMAL-PLUS è un dispositivo di sicurezza per impianto di riscaldamento ad acqua chiuso per assorbire la dilatazione termica dell\\\\\\'acqua e proteggere lo scaldacqua. HYDRO-PLUS è un vaso di espansione idraulico e viene utilizzato negli impianti di riscaldamento e raffreddamento idraulico residenziali o commerciali. SOLAR-PLUS è un vaso di espansione solare per assorbire la dilatazione termica del liquido nel circuito di scambio termico dovuta alla variazione di temperatura. Qui fornisce tutte le serie di volantini e depliant commerciali."
+  },
+  "h1": "DOWNLOAD",
+  "hasVisibleH1": true,
+  "subtitle": "EDM Italiana",
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<h1 id=\"about-top-title\" class=\"h1-1\">DOWNLOAD</h1>\n\t<div class=\"container service_spacing\">\n    <h2 class=\"dl_title_line\"><span>EDM Italiana</span></h2>\n\n    <div class=\"lang_content\">\n    \t    </div>\n    <div>\n    \t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3\">\n\t\t\t\t\t<div class=\"col\">\n\t\t\t\t\t\t<div class=\"dl-item\"><img class=\"img-responsive center-block drop-shadow-box\" src=\"/download/EDM/Italian/cover/AQUASKY_PUMPLUS-Blue_DM_it_20260627_17d496_web.jpg\" />\n\t\t\t\t\t\t<div class=\"dl-btn-link\"><a class=\"btn btn-dl btn-bg-color\" download href=\"/download/EDM/Italian/AQUASKY_PUMPLUS-Blue_DM_it_20260627_17d496_web.pdf\" target=\"_blank\">PUMPLUS-Blue</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col\">\n\t\t\t\t\t\t<div class=\"dl-item\"><img class=\"img-responsive center-block drop-shadow-box\" src=\"/download/EDM/Italian/cover/AQUASKY_PUMPLUS-Almond_DM_it_20260627_551959_web.jpg\" />\n\t\t\t\t\t\t<div class=\"dl-btn-link\"><a class=\"btn btn-dl btn-bg-color\" download href=\"/download/EDM/Italian/AQUASKY_PUMPLUS-Almond_DM_it_20260627_551959_web.pdf\" target=\"_blank\">PUMPLUS-Almond</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div></div>    </div>\n\n</div>\n\n<div class=\"service_spacing\"></div>\n</div>"
+}

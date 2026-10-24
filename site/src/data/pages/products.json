@@ -14,6 +14,7 @@
     "/js/owl/owl.theme.css"
   ],
   "bootstrap": "min",
+  "neutral": false,
   "assets": [
     "/images/products/pd_ling_bg.jpg",
     "/images/pdg-01.png",

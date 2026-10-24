@@ -15,16 +15,18 @@ interface Props {
   breadcrumbs?: { name: string; path: string }[];
   /** 404 等不該被收錄的頁 */
   noindex?: boolean;
-  /** 這一頁真的存在的語系（預設＝全部已建置語系；新聞每篇只有一個語系） */
+  /** 這一頁真的存在的語系（預設＝全部已建置語系；新聞每篇只有一個語系；空陣列＝不輸出 hreflang） */
   alternates?: Lang[];
+  /** 網址沒有語系前綴（/download/<language>） */
+  noLangPrefix?: boolean;
 }
-const { lang, title, description, path, image = brand.logo, jsonLd = [], breadcrumbs = [], noindex = false, alternates: altLangs = liveLangs } = Astro.props;
+const { lang, title, description, path, image = brand.logo, jsonLd = [], breadcrumbs = [], noindex = false, alternates: altLangs = liveLangs, noLangPrefix = false } = Astro.props;
 
 const site = brand.url;
-const canonical = `${site}/${lang}${path}`;
+const canonical = noLangPrefix ? `${site}${path}` : `${site}/${lang}${path}`;
 // hreflang 只列這一版真的有建置的語系（舊站全指首頁是錯的，這裡逐頁對應）
 const alternates = altLangs.map((code) => ({ hreflang: langInfo(code).htmlLang, href: `${site}/${code}${path}` }));
-const xDefault = `${site}/${altLangs.includes('en') ? 'en' : altLangs[0]}${path}`;
+const xDefault = altLangs.length ? `${site}/${altLangs.includes('en') ? 'en' : altLangs[0]}${path}` : null;
 const ogLocale = { en: 'en_US', zh: 'zh_TW', es: 'es_ES', fr: 'fr_FR', ru: 'ru_RU', ar: 'ar_AR' }[lang];
 
 const organization = {
@@ -52,7 +54,8 @@ const website = {
 const breadcrumbList = breadcrumbs.length
   ? {
       '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: `${site}/${lang}${b.path}` })),
+      // 沒有語系前綴的頁，自己那一層的網址也不加 /<lang>（上層的「首頁」「DOWNLOAD」仍是 /en/…）
+      itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: noLangPrefix && b.path === path ? `${site}${b.path}` : `${site}/${lang}${b.path}` })),
     }
   : null;
 const graph = { '@context': 'https://schema.org', '@graph': [organization, website, ...(breadcrumbList ? [breadcrumbList] : []), ...jsonLd] };
@@ -63,7 +66,7 @@ const graph = { '@context': 'https://schema.org', '@graph': [organization, websi
   <Fragment>
     <link rel="canonical" href={canonical} />
     {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
-    <link rel="alternate" hreflang="x-default" href={xDefault} />
+    {xDefault && <link rel="alternate" hreflang="x-default" href={xDefault} />}
   </Fragment>
 )}
 {(stage === 'preview' || noindex) && <meta name="robots" content="noindex, nofollow" />}

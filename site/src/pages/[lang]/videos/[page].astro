@@ -1,0 +1,18 @@
+---
+// 影片列表第 2 頁起：/en/videos/page2 …
+import { getCollection } from 'astro:content';
+import NewsList from '../../../components/NewsList.astro';
+import { type Lang, liveLangs } from '../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const lists = (await getCollection('newsLists')).map((e) => e.data).filter((l) => l.kind === 'videos');
+  return lists.filter((l) => liveLangs.includes(l.lang)).flatMap((list) =>
+    Array.from({ length: list.pageCount - 1 }, (_, i) => i + 2).map((page) => ({
+      params: { lang: list.lang, page: `page${page}` },
+      props: { list, page, alternates: lists.filter((o) => liveLangs.includes(o.lang) && o.pageCount >= page).map((o) => o.lang) },
+    })),
+  );
+}
+const { list, page, alternates } = Astro.props;
+---
+<NewsList lang={Astro.params.lang as Lang} list={list} page={page} alternates={alternates} />
