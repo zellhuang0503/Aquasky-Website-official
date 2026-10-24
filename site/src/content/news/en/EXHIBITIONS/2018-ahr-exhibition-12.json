@@ -1,0 +1,40 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "2018-ahr-exhibition-12",
+  "path": "/news-detail/EXHIBITIONS/2018-ahr-exhibition-12",
+  "status": "approved-legacy",
+  "dateText": "01 26 2018",
+  "datePublished": "2018-01-26T12:25:19+0800",
+  "title": "2018 AHR Exhibition",
+  "cover": "/upfile/Images/news-20180125.jpg",
+  "excerptHtml": "<p>Aquasky&#39;s partner Elbi America &amp; Duratrac went to present Aquasky ThermPlus Expansion Tank at AHR 2018.&nbsp;</p>",
+  "seo": {
+    "title": "Aquasky News: Presenting Aquasky ThermPlus Expansion Tank at AHR 2017.",
+    "description": "Aquasky's partner Elbi America & Duratrac went to present Aquasky ThermPlus Expansion Tank at AHR 2018."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/2018-ahr-exhibition-12#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/2018-ahr-exhibition-12"
+      },
+      "headline": "2018 AHR Exhibition",
+      "image": "https://aquaskyplus.com/upfile/Images/news-20180125.jpg",
+      "description": "Aquasky's partner Elbi America & Duratrac went to present Aquasky ThermPlus Expansion Tank at AHR 2018.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2018-01-26T12:25:19+0800"
+    }
+  ],
+  "bodyHtml": "<p>Aquasky&#39;s partner Elbi America &amp; Duratrac went to present Aquasky ThermPlus Expansion Tank at AHR 2018.&nbsp;<br />\r\nThe International Air-Conditioning, Heating, Refrigerating Exposition (AHR Expo), which started 86 years ago as a heating and ventilation show, has grown into the event of the year for the HVACR industry. Looking forward to see you there!!</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/groundwater2018_news_img.jpg\" /></p>\r\n\r\n<p>About Aquasky<br />\r\nFounded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning, and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur Goal is to provide top-quality, dependable pressure tank to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option, and the on-time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news-20180125.jpg",
+    "/upfile/Images/news/groundwater2018_news_img.jpg"
+  ]
+}

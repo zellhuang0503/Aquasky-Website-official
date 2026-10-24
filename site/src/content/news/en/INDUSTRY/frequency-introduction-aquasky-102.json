@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "frequency-introduction-aquasky-102",
+  "path": "/news-detail/INDUSTRY/frequency-introduction-aquasky-102",
+  "status": "approved-legacy",
+  "dateText": "04 20 2022",
+  "datePublished": "2022-04-20T10:46:12+0800",
+  "title": "Frequency introduction ｜Aquasky",
+  "cover": "/upfile/Images/news/Flow.jpg",
+  "excerptHtml": "<p>The frequency is defined as the number of vibrations per second, and its unit is (times/second). We usually use f to represent. Vibrating once per second is called 1Hz (Hertz). We often hear examples such as 50Hz and 60Hz in our lives.</p>",
+  "seo": {
+    "title": "Frequency introduction ｜Aquasky",
+    "description": "The frequency is defined as the number of vibrations per second, and its unit is (times/second). We usually use f to represent. Vibrating once per second is called 1Hz (Hertz). We often hear examples such as 50Hz and 60Hz in our lives."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/frequency-introduction-aquasky-102#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/frequency-introduction-aquasky-102"
+      },
+      "headline": "Frequency introduction ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/Flow.jpg",
+      "description": "The frequency is defined as the number of vibrations per second, and its unit is (times/second). We usually use f to represent. Vibrating once per second is called 1Hz (Hertz). We often hear examples such as 50Hz and 60Hz in our lives.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-04-20T10:46:12+0800"
+    }
+  ],
+  "bodyHtml": "<p>Frequency introduction</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/Flow.jpg\" /></p>\r\n\r\n<p>The frequency is defined as the number of vibrations per second, and its unit is (times/second). We usually use f to represent. Vibrating once per second is called 1Hz (Hertz). We often hear examples such as 50Hz and 60Hz in our lives.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The utility frequency is the abbreviation of the working frequency of the electrical grid. It refers to the frequency of AC power in the power grid. All generators, transmission and distribution equipment and users in the same power grid use this frequency of AC power. At present, most countries in the world use 50Hz as the power grid operating frequency while the United States, Mexico and some Asian countries or regions use 60Hz power frequency. What should arouse people&#39;s attention is why 50HZ or 60HZ should be used instead of higher or lower.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>In electrical systems, frequency is a very important element and can not be decided at random.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>It seems to be a simple question. But it turns out to be more complicated than you have expected. It involves many aspects. Tracing back from the principle, it can be found from Maxwell that the classical electromagnetic theory has been discovered. Hertz has added a crucial stroke to Maxwell&rsquo;s theory. Invented Faraday&rsquo;s law of electromagnetic induction and the world&rsquo;s first electromagnetic induction generator, Siemens discovered the principle of the generator. This is the first practical application in the field of generators.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Afterward, people found the summed-up theorem were: an electric current that periodically changes its direction is called alternating current, the time for the electric current to change periodically is called the cycle, the number of current changes per second is the frequency, and in order to commemorate the contribution of Hertz, uses hertz as the frequency unit. The frequency of the alternating current is 50 (60) Hz, the direction of the current changes 50 (60) periodically per second, and the number of changes per second is 100 (120) times.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The synchronous speed of a 50 Hz two-pole generator is 3000 rpm, and if the frequency doubles to 100 Hz, the synchronous speed will be 6000 rpm. Such a high speed will bring many problems to the manufacture of generators, especially if the linear speed on the surface of the rotor is too high, which will greatly limit the increase in capacity. In addition, from the perspective of use, the frequency is too high, which increases the reactance and the electromagnetic loss, which intensifies the amount of reactive power. Taking a three-phase motor as an example, its current is greatly reduced, and the output power and torque are also greatly reduced, which is no benefit. If a lower frequency such as 30 Hz is used, the transformation efficiency is low, which will not be conducive to the transformation and transmission of alternating current.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Different frequencies have the greatest impact on transformers and motors in electrical appliances.</p>\r\n\r\n<p>(A) If a 60Hz electrical appliance is connected to a 50Hz power supply: (1) The electrical motor speed is reduced by 17%</p>\r\n\r\n<p>(2) The input inductance is reduced by 17% (inductance = 2&pi;fL), the transformer current rises by 17%, and the output current becomes larger. This causes the temperature to rise and the transformer is easy to burn. And because the output current increases, the internal circuit is easy to age or even burn.</p>\r\n\r\n<p>(B) If a 50Hz electrical appliance is connected to a 60Hz power supply: (1) The motor speed increases by 17%, which causes the motor to generate higher heat and is easily damaged. (2) The input inductance increases by 17%, and the transformer current decreases by 17%. The current becomes smaller.</p>\r\n\r\n<p>Therefore, connecting a 60Hz electrical appliance to a 50Hz power supply will easily cause the transformer to burn out. Connecting a 50Hz electrical appliance to a 60Hz power supply will easily cause damage to the motor.</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/Flow.jpg"
+  ]
+}

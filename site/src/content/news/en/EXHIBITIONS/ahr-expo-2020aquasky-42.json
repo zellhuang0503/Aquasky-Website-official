@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "ahr-expo-2020aquasky-42",
+  "path": "/news-detail/EXHIBITIONS/ahr-expo-2020aquasky-42",
+  "status": "approved-legacy",
+  "dateText": "02 03 2020",
+  "datePublished": "2020-02-03T13:53:05+0800",
+  "title": "AHR Expo 2020｜Aquasky",
+  "cover": "/upfile/Images/news/ahr2020.jpg",
+  "excerptHtml": "<p>The AHR Expo is the world&rsquo;s largest HVACR event, which attracts industry professionals from around the world each year.</p>\r\n\r\n<p>Aquasky partner, Duratrac Product&rsquo;s Booth Number: 5792</p>\r\n\r\n<p>If you want to have a meeting in the show. Please use the email below to contact us.</p>\r\n\r\n<p>frankwang@aquasky.com.tw</p>",
+  "seo": {
+    "title": "AHR Expo 2020｜Aquasky",
+    "description": "The AHR Expo is the world’s largest HVACR event, which attracts industry professionals from around the world each year. The Show provides an opportunity for manufacturers of all sizes and specialties to come together to share ideas and showcase the future of HVACR technology under one roof."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/ahr-expo-2020aquasky-42#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/ahr-expo-2020aquasky-42"
+      },
+      "headline": "AHR Expo 2020｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/ahr2020.jpg",
+      "description": "The AHR Expo is the world’s largest HVACR event, which attracts industry professionals from around the world each year. The Show provides an opportunity for manufacturers of all sizes and specialties to come together to share ideas and showcase the future of HVACR technology under one roof.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2020-02-03T13:53:05+0800"
+    }
+  ],
+  "bodyHtml": "<p>AHR Expo 2020｜Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/ahr2020.jpg\" /></p>\r\n\r\n<p>The AHR Expo is the world&rsquo;s largest HVACR event, which attracts industry professionals from around the world each year. The Show provides an opportunity for manufacturers of all sizes and specialties to come together to share ideas and showcase the future of HVACR technology under one roof. You&rsquo;ll have approaches to it all, from complete systems engineered for large commercial and industrial buildings to labor-saving tools and profit-generating services for residential contractors.&nbsp;</p>\r\n\r\n<p>Aquasky partner, Duratrac Product&rsquo;s Booth Number: 5792</p>\r\n\r\n<p>If you want to have a meeting in the show. Please use the email below to contact us.</p>\r\n\r\n<p>frankwang@aquasky.com.tw</p>",
+  "assets": [
+    "/upfile/Images/news/ahr2020.jpg"
+  ]
+}

@@ -117,13 +117,11 @@ for (const css of ['/css/style.css', '/css/a-hover.css', '/css/series_content.cs
 }
 const productsDir = resolve(here, '..', 'src', 'data', 'products');
 const pagesDir = resolve(here, '..', 'src', 'data', 'pages');
-for (const dir of [productsDir, pagesDir]) {
-  if (!existsSync(dir)) continue;
-  for (const f of readdirSync(dir)) {
-    if (!f.endsWith('.json')) continue;
-    const data = JSON.parse(readFileSync(join(dir, f), 'utf8'));
-    for (const a of data.assets ?? []) ASSETS.push([a]);
-  }
+const newsDir = resolve(here, '..', 'src', 'content', 'news');
+const jsonFilesIn = (dir) => existsSync(dir) ? readdirSync(dir, { recursive: true }).filter((f) => f.endsWith('.json')).map((f) => join(dir, f)) : [];
+for (const file of [...jsonFilesIn(productsDir), ...jsonFilesIn(pagesDir), ...jsonFilesIn(newsDir)]) {
+  const data = JSON.parse(readFileSync(file, 'utf8'));
+  for (const a of data.assets ?? []) ASSETS.push([a]);
 }
 
 const index = new Map();

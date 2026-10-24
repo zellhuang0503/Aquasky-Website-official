@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "2022-happy-new-year-aquasky-88",
+  "path": "/news-detail/INDUSTRY/2022-happy-new-year-aquasky-88",
+  "status": "approved-legacy",
+  "dateText": "12 30 2021",
+  "datePublished": "2021-12-30T07:57:58+0800",
+  "title": "2022 Happy New Year ｜Aquasky",
+  "cover": "/upfile/Images/news/messageImage_1640774407527.jpg",
+  "excerptHtml": "<p>Happy New Year 2022. In the new year, we will continue to provide you with high-quality pressure tanks and great service.</p>",
+  "seo": {
+    "title": "2022 Happy New Year ｜Aquasky",
+    "description": "Happy New Year 2022 In the new year, Aquasky will continue to provide you with high-quality pressure tanks and great service."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/2022-happy-new-year-aquasky-88#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/2022-happy-new-year-aquasky-88"
+      },
+      "headline": "2022 Happy New Year ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/messageImage_1640774407527.jpg",
+      "description": "Happy New Year 2022 In the new year, Aquasky will continue to provide you with high-quality pressure tanks and great service.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2021-12-30T07:57:58+0800"
+    }
+  ],
+  "bodyHtml": "<p>Happy New Year 2022</p>\r\n\r\n<p>In the new year, Aquasky will continue to provide you with high-quality pressure tanks and great service.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/messageImage_1640774407527.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/news/messageImage_1640774407527.jpg"
+  ]
+}

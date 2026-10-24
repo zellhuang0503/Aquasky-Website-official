@@ -1,0 +1,42 @@
+{
+  "lang": "zh",
+  "category": "INDUSTRY",
+  "slug": "apt-40-aquasky-155",
+  "path": "/news-detail/INDUSTRY/apt-40-aquasky-155",
+  "status": "approved-legacy",
+  "dateText": "01 08 2024",
+  "datePublished": "2024-01-08T14:52:04+0800",
+  "title": "APT-40 設計變更通知 ｜溢康 Aquasky",
+  "cover": "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+  "excerptHtml": "<p>溢康宣布40L壓力桶新設計，新設計將於2024年1月開始上市。</p>",
+  "seo": {
+    "title": "APT-40 設計變更通知 ｜溢康 Aquasky",
+    "description": "溢康宣布40L壓力桶新設計，新設計將於2024年1月開始上市。"
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/apt-40-aquasky-155#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/apt-40-aquasky-155"
+      },
+      "headline": "APT-40 設計變更通知 ｜溢康 Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20240108_aquasky_apt40.jpg",
+      "description": "溢康宣布40L壓力桶新設計，新設計將於2024年1月開始上市。",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2024-01-08T14:52:04+0800"
+    }
+  ],
+  "bodyHtml": "<p>APT-40 設計變更通知</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_aquasky_apt40.jpg\" /></p>\r\n\r\n<p>溢康宣布40L壓力桶新設計。40L壓力桶的新舊版本尺寸比較表如所示。40L壓力桶從原本的3層設計更改為2層設計，壓力桶直徑加大。</p>\r\n\r\n<p>新設計有兩大優勢:</p>\r\n\r\n<p>※ 由於改為2層設計，在顯著的壓差條件下可以提升儲水量。透過充分壓縮空氣，我們能增加20%的儲水量。</p>\r\n\r\n<p>※ 我們降低了壓力桶的高度，在運輸過程中可以大幅度減少壓力桶損壞的風險，且壓力桶的容量精確地調整至40L，符合最佳效能及安全標準。</p>\r\n\r\n<p>新設計將於2024年1月開始上市。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ch_apt40_01.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ch_apt40_02.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ch_apt40_03.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+    "/upfile/Images/news/20240108_ch_apt40_01.jpg",
+    "/upfile/Images/news/20240108_ch_apt40_02.jpg",
+    "/upfile/Images/news/20240108_ch_apt40_03.jpg"
+  ]
+}

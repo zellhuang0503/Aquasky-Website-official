@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "hydraulic-head-of-the-pump-and-the-relative-relationship-between-water-pressure-and-water-volumeaquasky-91",
+  "path": "/news-detail/INDUSTRY/hydraulic-head-of-the-pump-and-the-relative-relationship-between-water-pressure-and-water-volumeaquasky-91",
+  "status": "approved-legacy",
+  "dateText": "01 25 2022",
+  "datePublished": "2022-01-25T18:32:10+0800",
+  "title": "Hydraulic head of the pump and the relative relationship between water pressure and water volume｜Aquasky",
+  "cover": "/upfile/Images/_DUS9267.jpg",
+  "excerptHtml": "<p>Before purchasing a pump, you must understand the three parameters first. The three important values are hydraulic head (H), horsepower (HP), and water volume (Q). Of course, other considerations may include Choosing according to your own usage conditions. Therefore, you can install the pump correctly. resistance loss, liquid vortex loss, and water level drop.</p>",
+  "seo": {
+    "title": "Hydraulic head of the pump and the relative relationship between water pressure and water volume｜Aquasky",
+    "description": "Before purchasing a pump, you must understand the three parameters first. The three important values are hydraulic head (H), horsepower (HP), and water volume (Q). Of course, other considerations may include Choosing according to your own usage conditions. Therefore, you can install the pump correctly. resistance loss, liquid vortex loss, and water level drop."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/hydraulic-head-of-the-pump-and-the-relative-relationship-between-water-pressure-and-water-volumeaquasky-91#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/hydraulic-head-of-the-pump-and-the-relative-relationship-between-water-pressure-and-water-volumeaquasky-91"
+      },
+      "headline": "Hydraulic head of the pump and the relative relationship between water pressure and water volume｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/_DUS9267.jpg",
+      "description": "Before purchasing a pump, you must understand the three parameters first. The three important values are hydraulic head (H), horsepower (HP), and water volume (Q). Of course, other considerations may include Choosing according to your own usage conditions. Therefore, you can install the pump correctly. resistance loss, liquid vortex loss, and water level drop.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-01-25T18:32:10+0800"
+    }
+  ],
+  "bodyHtml": "<p>Hydraulic head of the pump and the relative relationship between water pressure and water volume｜Aquasky</p>\r\n\r\n<p>Before purchasing a pump, you must understand the three parameters first. The three important values are hydraulic head (H), horsepower (HP), and water volume (Q). Of course, other considerations may include Choosing according to your own usage conditions. Therefore, you can install the pump correctly. resistance loss, liquid vortex loss, and water level drop.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/_DUS9267.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The definition and meaning of hydraulic head (H)</p>\r\n\r\n<p>The head refers to the vertical height that the pump can pressurize the liquid to raise the liquid level. The unit is meter (m), usually represented by H. The head is divided into a suction head and a pressurized water head. The former is the height that can absorb water from below the center of the impeller, and the latter is the vertical height above the center of the impeller. Therefore, the pump head is the sum of the suction and pressurized water heads. In simple terms, the head is the difference in the vertical height of the two surfaces of the liquid. The greater the horsepower of the pump, the higher the liquid level and the greater the lift.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Head (H) = pressure (kgw/m&sup2;) / liquid density (kgw/m&sup3;)</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>According to the formula above, the pump lift is proportional to the pressure if the pumped medium is pure water. Pressure and head are corresponding. When pressure is 1 bar, the hydraulic head will be 10m.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The definition and meaning of flow rate (Q)</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Flow rate refers to the amount of liquid delivered or the amount of delivery per unit time. There are many units that can be expressed, and it is often represented by the capital Q in English. The pump flow that sets will affect the size of the pipes to be used. Pumps with larger flow rates should be equipped with thicker pipes to avoid pipeline damage, water leakage, or noise. Under a certain head, the greater the flow of liquid to be transported, the greater the horsepower of the pump. It can be deduced from the above formula:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Head (H) = power (Nm/s) / specific weight (N/m&sup3;) ‧ flow (m&sup3;/s)</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>What does it mean? Each pump has its own head-flow curve, referred to as HQ curve, which represents how much flow or head can be matched when the pump is running at full speed.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Make good use of HQ graph</p>\r\n\r\n<p>The Y-axis of the HQ graph is the hydraulic head, and the X-axis is the flow. And below the curve is the range of how the pump can operate. When the flow increases, the hydraulic head is bound to decrease. On the other hand, the flow will increase when the head decreases. As long as you first find out the head and water volume you need, you can find the corresponding pump horsepower value on the HQ curve when choosing a pump.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>For example: According to this picture, if you want to send water to a height of 10 meters and the water demand is 500 (L/min), you must choose at least a 3 HP pump.</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/_DUS9267.jpg"
+  ]
+}

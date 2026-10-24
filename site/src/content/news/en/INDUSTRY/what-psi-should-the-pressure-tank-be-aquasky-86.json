@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "what-psi-should-the-pressure-tank-be-aquasky-86",
+  "path": "/news-detail/INDUSTRY/what-psi-should-the-pressure-tank-be-aquasky-86",
+  "status": "approved-legacy",
+  "dateText": "12 14 2021",
+  "datePublished": "2021-12-14T10:26:17+0800",
+  "title": "What PSI should the pressure tank be? ｜Aquasky",
+  "cover": "/upfile/Images/20180725-3.jpg",
+  "excerptHtml": "<p>What PSI should the pressure tank be? ｜Aquasky</p>\r\n\r\n<p>Your well tank&rsquo;s pressure should be set at 2 psi below the pressure switch&rsquo;s cut-on point. The way is to provide water while the pump is starting - without it, pressure will drop to zero (or very nearly) every time when water runs out but the pump is still spinning up.</p>",
+  "seo": {
+    "title": "What PSI should the pressure tank be? ｜Aquasky",
+    "description": "What PSI should the pressure tank be? ｜Aquasky Your well tank’s pressure should be set at 2 psi below the pressure switch’s cut-on point. The way is to provide water while the pump is starting - without it, pressure will drop to zero (or very nearly) every time when water runs out but the pump is still spinning up."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/what-psi-should-the-pressure-tank-be-aquasky-86#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/what-psi-should-the-pressure-tank-be-aquasky-86"
+      },
+      "headline": "What PSI should the pressure tank be? ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/20180725-3.jpg",
+      "description": "What PSI should the pressure tank be? ｜Aquasky Your well tank’s pressure should be set at 2 psi below the pressure switch’s cut-on point. The way is to provide water while the pump is starting - without it, pressure will drop to zero (or very nearly) every time when water runs out but the pump is still spinning up.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2021-12-14T10:26:17+0800"
+    }
+  ],
+  "bodyHtml": "<p>Your well tank&rsquo;s pressure should be set at 2 psi below the pressure switch&rsquo;s cut-on point. The way is to provide water while the pump is starting - without it, pressure will drop to zero (or very nearly) every time when water runs out but the pump is still spinning up.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/20180725-3.jpg\" /></p>\r\n\r\n<p>This differs depending on your tank&rsquo;s pressure settings. Most well tanks come set at 30/50. The cut-on pressure for the well pump is 30 psi, so the pressure of the tank should have a pressure of 28 psi. If your well tank is on a 40/60 pressure switch, your pressure setting should be 38 psi. This pressure represents the tank empty of any water, as when there is water within the tank, the pressure will increase.</p>\r\n\r\n<p>It is also important to note that a 20 psi separation between the cut-on and cut-off pressure on all pressure switches (for example, 30/50 and 40/60) is much better. If there is too large a gap between the cut-on and cut-off pressure, although your well pump will have less cycle, the high water pressure can cause stress on your pipes, plumbing, and water fixtures.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>If the cut-on pressure is too close to the cut-off pressure, the tank will not be able to store enough water to fulfill your household&rsquo;s demands.</p>\r\n\r\n<p>The pump will cycle constantly even light water usage, and cause the pressure to drop and the pump to turn on. The pump will cut off before the tank is filled. Moreover, the short-cycling rapidly and frequently is destined for premature failure. This perpetual fluctuation between &ldquo;on&rdquo; and &ldquo;off&rdquo; will put an enormous amount of strain on the components of your pump, ultimately causing it to break.</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/20180725-3.jpg"
+  ]
+}

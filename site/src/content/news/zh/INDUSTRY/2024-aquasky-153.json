@@ -1,0 +1,39 @@
+{
+  "lang": "zh",
+  "category": "INDUSTRY",
+  "slug": "2024-aquasky-153",
+  "path": "/news-detail/INDUSTRY/2024-aquasky-153",
+  "status": "approved-legacy",
+  "dateText": "12 20 2023",
+  "datePublished": "2023-12-20T20:10:03+0800",
+  "title": "聖誕快樂 & 2024新年快樂 ｜溢康 Aquasky",
+  "cover": "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+  "excerptHtml": "<p>隨著12月的到來，我們即將結束這個非凡的2023年，溢康想要向您表示最熱烈的祝福，祝您有一個充滿溫暖、愛與珍貴時光的歡樂聖誕節。</p>",
+  "seo": {
+    "title": "聖誕快樂 & 2024新年快樂 ｜溢康 Aquasky",
+    "description": "隨著12月的到來，我們即將結束這個非凡的2023年，溢康想要向您表示最熱烈的祝福，祝您有一個充滿溫暖、愛與珍貴時光的歡樂聖誕節。"
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/2024-aquasky-153#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/2024-aquasky-153"
+      },
+      "headline": "聖誕快樂 & 2024新年快樂 ｜溢康 Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+      "description": "隨著12月的到來，我們即將結束這個非凡的2023年，溢康想要向您表示最熱烈的祝福，祝您有一個充滿溫暖、愛與珍貴時光的歡樂聖誕節。",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2023-12-20T20:10:03+0800"
+    }
+  ],
+  "bodyHtml": "<p>聖誕快樂 &amp; 2024新年快樂 ｜溢康</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png\" /></p>\r\n\r\n<p>隨著12月的到來，我們即將結束這個非凡的2023年，溢康想要向您表示最熱烈的祝福，祝您有一個充滿溫暖、愛與珍貴時光的歡樂聖誕節。</p>\r\n\r\n<p>為即將到來的新年舉杯慶祝，願新的一年充滿新的冒險及成功！",
+  "assets": [
+    "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png"
+  ]
+}

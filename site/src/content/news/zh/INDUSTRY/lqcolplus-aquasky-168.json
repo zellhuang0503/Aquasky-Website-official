@@ -1,0 +1,47 @@
+{
+  "lang": "zh",
+  "category": "INDUSTRY",
+  "slug": "lqcolplus-aquasky-168",
+  "path": "/news-detail/INDUSTRY/lqcolplus-aquasky-168",
+  "status": "approved-legacy",
+  "dateText": "10 01 2024",
+  "datePublished": "2024-10-01T22:44:36+0800",
+  "title": "數據中心冷卻解決方案 - 溢康的LQCOLPLUS液冷系統膨脹水箱水箱在液冷系統中的應用｜溢康 Aquasky",
+  "cover": "/upfile/Images/news/20241001_aquasky_pressuretank_00.png",
+  "excerptHtml": "<p>在當今數位時代，隨著高效能運算（HPC）和人工智慧（AI）工作負載的快速增長，數據中心的需求正以指數級速度攀升。這股增長帶來了前所未有的計算密度，對於先進伺服器冷卻解決方案的需求日益迫切，以確保系統在高負載下仍能保持最佳性能與穩定性。有效的冷卻不僅能顯著降低能源消耗，還能延長數據中心的使用壽命，並提升其整體運行效率。</p>",
+  "seo": {
+    "title": "數據中心冷卻解決方案 - 溢康的LQCOLPLUS液冷系統膨脹水箱水箱在液冷系統中的應用｜溢康 Aquasky",
+    "description": "在當今數位時代，隨著高效能運算（HPC）和人工智慧（AI）工作負載的快速增長，數據中心的需求正以指數級速度攀升。這股增長帶來了前所未有的計算密度，對於先進伺服器冷卻解決方案的需求日益迫切，以確保系統在高負載下仍能保持最佳性能與穩定性。有效的冷卻不僅能顯著降低能源消耗，還能延長數據中心的使用壽命，並提升其整體運行效率。"
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/lqcolplus-aquasky-168#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/lqcolplus-aquasky-168"
+      },
+      "headline": "數據中心冷卻解決方案 - 溢康的LQCOLPLUS液冷系統膨脹水箱水箱在液冷系統中的應用｜溢康 Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20241001_aquasky_pressuretank_00.png",
+      "description": "在當今數位時代，隨著高效能運算（HPC）和人工智慧（AI）工作負載的快速增長，數據中心的需求正以指數級速度攀升。這股增長帶來了前所未有的計算密度，對於先進伺服器冷卻解決方案的需求日益迫切，以確保系統在高負載下仍能保持最佳性能與穩定性。有效的冷卻不僅能顯著降低能源消耗，還能延長數據中心的使用壽命，並提升其整體運行效率。",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2024-10-01T22:44:36+0800"
+    }
+  ],
+  "bodyHtml": "<p>數據中心冷卻解決方案 - 溢康的LQCOLPLUS液冷系統膨脹水箱水箱在液冷系統中的應用</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241001_aquasky_pressuretank_00.png\" /></p>\r\n\r\n<p>在當今數位時代，隨著高效能運算（HPC）和人工智慧（AI）工作負載的快速增長，數據中心的需求正以指數級速度攀升。這股增長帶來了前所未有的計算密度，對於先進伺服器冷卻解決方案的需求日益迫切，以確保系統在高負載下仍能保持最佳性能與穩定性。有效的冷卻不僅能顯著降低能源消耗，還能延長數據中心的使用壽命，並提升其整體運行效率。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241001_aquasky_pressuretank_01.png\" /></p>\r\n\r\n<p><em><strong>一、數據中心的冷卻技術</strong></em></p>\r\n\r\n<p><em><strong>1.1. 氣冷散熱：</strong></em></p>\r\n\r\n<p>氣冷散熱是數據中心最常見的冷卻方式，透過風扇和散熱器來散發伺服器組件（如CPU、GPU和記憶體模組）所產生的熱量。風扇將較涼的環境空氣吹過這些發熱元件，吸收熱量後再將暖空氣排出伺服器或數據中心。散熱片則安裝在這些元件上，利用其大表面積將熱量高效地傳遞給流動的空氣。隨後，熱空氣被排出伺服器機架，並通過冷卻系統排出數據中心或進行循環再利用。儘管氣冷散熱對許多應用有效，但在高密度計算環境中，當熱量產生超過氣冷散熱的處理能力時，其效果將受到限制。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241001_aquasky_pressuretank_02.png\" /></p>\r\n\r\n<p>圖1：伺服器內部氣流示意圖（<a href=\"https://www.supermicro.com/white_paper/white_paper_Liquid-Cooling-Solutions.pdf\">來源</a>）</p>\r\n\r\n<p><strong><em>1.2. 液冷散熱：</em></strong></p>\r\n\r\n<p>液冷技術為管理高性能伺服器產生的大量熱量提供了一種更高效的解決方案。此技術使用冷卻液，直接從CPU、GPU等關鍵元件吸收熱量，並通過管道或回路系統循環。冷卻液與發熱組件直接接觸，將熱量傳導至熱交換器，然後在那裡釋放熱能。經冷卻的液體隨後重新循環使用，確保持續有效的散熱。液冷系統通常由泵浦、儲液罐和散熱器組成，有時還會與風扇相結合，以進一步增強散熱效果並提升系統性能。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241001_aquasky_pressuretank_03.png\" /></p>\r\n\r\n<p>圖2：直接芯片冷卻技術示意圖（<a href=\"https://www.supermicro.com/white_paper/white_paper_Liquid-Cooling-Solutions.pdf\">來源</a>）</p>\r\n\r\n<p><em><strong>1.3. 浸沒式散熱：</strong></em></p>\r\n\r\n<p>浸沒式散熱是目前最先進的液冷技術，廣泛應用於高效能運算（HPC）系統和數據中心。此技術將電子元件（如伺服器）直接浸泡在不導電的液體中，實現與熱源的直接接觸。相比傳統冷卻方式，浸沒式冷卻不僅能提供極為卓越的散熱效果和能源效率，還能有效省去傳統的冷卻元件，如散熱片、銅管和風扇，顯著簡化系統結構並提升效能。</p>\r\n\r\n<p>單相浸沒式冷卻：在此方法中，冷卻液在整個過程中始終保持液態狀態。當冷卻液吸收電子元件的熱量後，其溫度上升，隨後通過泵送至熱交換器，在那裡有效地釋放所吸收的熱能並冷卻降溫。冷卻後的液體再循環回浸沒罐內。冷卻液分配控制器（CDU）在這一過程中發揮關鍵作用，負責控制液體的循環並將熱量轉移至次級冷卻回路，例如建築物的冷水系統或外部空氣冷卻系統。此方法使用的是不導電的液體，確保過程中的安全性。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241001_aquasky_pressuretank_04.png\" /></p>\r\n\r\n<p>圖3：單相浸沒式冷卻技術示意圖（<a href=\"https://jduntonassociates.co.uk/wp-content/uploads/2023/11/single-phase-immersion-1536x607.png\">來源</a>）</p>\r\n\r\n<p>雙相浸沒式冷卻：此方法利用在吸收電子元件熱量時會由液態轉變為氣態的冷卻液來實現散熱。當冷卻液蒸發後，上升至系統頂部，並與較冷的冷凝表面接觸。在冷凝器內，蒸汽釋放所吸收的熱量，隨之冷卻並凝結回液態。冷卻後的液態冷卻液再度流回至系統罐中，周而復始地進行循環冷卻，持續為元件降溫。由於該方法通過相變實現了高效的熱吸收和散熱效果，因此特別適用於高密度環境，是冷卻高性能密集硬體的理想解決方案。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241001_aquasky_pressuretank_05.png\" /></p>\r\n\r\n<p>圖4：雙相浸沒式冷卻技術示意圖（<a href=\"https://img.c3controls.com/c3controls-Two-Phase-Liquid-Immersion-Cooling.jpg?w=1200&amp;fit=fill\">來源</a>）</p>\r\n\r\n<p>下表比較了四種冷卻方法 &ndash; 氣冷散熱、液冷、單相浸沒式冷卻和雙相浸沒式冷卻進行了優缺點比較，重點分析了它們在冷卻效率、成本、複雜性和適用性方面的主要差異。這一比較突出顯示了各種方法在不同應用場景中的優勢和局限性。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241008_aquasky_Chinese_%20Cooling%20Solutions.png\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>在權衡成本、性能與維護需求時，直接液冷（DLC）和單相浸沒冷卻是理想的選擇。這兩種冷卻技術特別適合於高效能運算（HPC）需求，如人工智慧（AI）和其他密集型應用，能夠提供高效的散熱效果。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>二、溢康的LQCOLPLUS膨脹水箱在液冷系統中的應用</strong></p>\r\n\r\n<p>溢康推出的LQCOLPLUS液冷系統膨脹水箱系列，專為高效能運算環境中的液冷系統設計。這些水箱配備了EPDM耐熱橡膠隔膜，能夠提供卓越的熱穩定性，並在高溫下保持長期耐用性。這一創新設計通過有效緩解壓力波動並防止與壓力相關的問題，大幅提升了液冷系統的穩定性和可靠性，從而延長了整個系統的壽命。</p>\r\n\r\n<p>膨脹水箱在液冷中的作用：</p>\r\n\r\n<p>在液冷系統中，膨脹水箱的主要功能是吸收由溫度波動引起的冷卻液體積變化。若無膨脹水箱，壓力增加可能會損壞關鍵部件，如冷卻塊、散熱器或軟管，甚至導致洩漏。LQCOLPLUS壓力桶的設計中，部分空間被冷卻液填充，剩餘部分則留給空氣。當冷卻液受熱膨脹時，罐內的空氣被壓縮，從而吸收多餘的壓力，防止系統損壞。此設置可保持系統內的壓力穩定，確保泵的高效運行與冷卻液的正常循環。同時，穩定的壓力還能防止泵內發生氣蝕現象，減少磨損，從而延長整個液冷系統的使用壽命。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241008_aquasky_Fig%205_cooling%20solution.png\" /></p>\r\n\r\n<p>圖5：溢康LQCOLPLUS膨脹水箱集成系統示意圖</p>\r\n\r\n<p>圖5是溢康LQCOLPLUS膨脹水箱在伺服器液冷系統中的安裝示意圖。膨脹水箱垂直安裝在進入冷卻液的管線上，系統內的泵負責將冷卻液循環，並配備了過濾器，確保液體保持乾淨。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20241001_aquasky_pressuretank_08.png\" /></p>\r\n\r\n<p>圖6. 溢康液冷系統膨脹水箱(LQCOLPLUS)</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>三、結論：</strong></p>\r\n\r\n<p>隨著對高效能運算的需求不斷增加，選擇合適的冷卻解決方案變得比以往更加重要。先進的冷卻技術，如液冷和浸沒冷卻，與傳統空氣冷卻相比，提供了更為出色的熱管理性能。將溢康的LQCOLPLUS壓力桶整合到這些系統中，不僅能保持穩定的壓力，還能顯著增強散熱效果，從而進一步優化系統性能。這種設置確保了數據中心能夠有效應對現代計算工作負載的需求，提供可持續的運行環境，是希望最大化性能和延長設備壽命的數據中心的不二選擇。欲了解更多有關<a href=\"https://aquaskyplus.com\">溢康</a>液冷系統膨脹水箱（LQCOLPLUS）的詳情，請訪問我們的網站：<a href=\"https://aquaskyplus.com\">https://aquaskyplus.com</a>。或者您可以發送電子郵件至：<a href=\"mailto:frankwang@aquasky.com.tw\">frankwang@aquasky.com.tw</a>。</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20241001_aquasky_pressuretank_00.png",
+    "/upfile/Images/news/20241001_aquasky_pressuretank_01.png",
+    "/upfile/Images/news/20241001_aquasky_pressuretank_02.png",
+    "/upfile/Images/news/20241001_aquasky_pressuretank_03.png",
+    "/upfile/Images/news/20241001_aquasky_pressuretank_04.png",
+    "/upfile/Images/news/20241001_aquasky_pressuretank_05.png",
+    "/upfile/Images/news/20241008_aquasky_Chinese_%20Cooling%20Solutions.png",
+    "/upfile/Images/news/20241008_aquasky_Fig%205_cooling%20solution.png",
+    "/upfile/Images/news/20241001_aquasky_pressuretank_08.png"
+  ]
+}

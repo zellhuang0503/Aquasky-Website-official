@@ -36,6 +36,24 @@ const products = readdirSync(join(root, 'src/data/products')).filter((f) => f.en
 const legacyPages = existsSync(join(root, 'src/data/pages'))
   ? readdirSync(join(root, 'src/data/pages')).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(readFileSync(join(root, 'src/data/pages', f), 'utf8')))
   : [];
+// 新聞：列表（每語系每分類 pageCount 頁）＋每篇明細；明細只有一個語系，hreflang 只列自己
+const newsLists = existsSync(join(root, 'src/data/news'))
+  ? readdirSync(join(root, 'src/data/news')).filter((f) => /^[a-z]{2}-[A-Z]+\.json$/.test(f)).map((f) => JSON.parse(readFileSync(join(root, 'src/data/news', f), 'utf8')))
+  : [];
+const newsArticles = [];
+for (const l of newsLists) {
+  const dir = join(root, 'src/content/news', l.lang, l.category);
+  for (const f of readdirSync(dir)) if (f.endsWith('.json')) newsArticles.push(JSON.parse(readFileSync(join(dir, f), 'utf8')));
+}
+const htmlLangOf = (code) => Object.fromEntries(LANGS)[code];
+const NEWS_PAGES = [
+  ...newsLists.flatMap((l) => Array.from({ length: l.pageCount }, (_, i) => i + 1).map((n) => {
+    const path = n === 1 ? l.path : `${l.path}/page${n}`;
+    const langsWithPage = newsLists.filter((o) => o.category === l.category && o.pageCount >= n).map((o) => htmlLangOf(o.lang));
+    return { url: `/${l.lang}${path}`, file: `${l.lang}${path}.html`, lang: htmlLangOf(l.lang), code: l.lang, newsList: l, newsPage: n, path, hreflang: [...langsWithPage, 'x-default'] };
+  })),
+  ...newsArticles.map((a) => ({ url: `/${a.lang}${a.path}`, file: `${a.lang}${a.path}.html`, lang: htmlLangOf(a.lang), code: a.lang, newsArticle: a, path: a.path, hreflang: [htmlLangOf(a.lang), 'x-default'] })),
+];
 const PAGES = [
   { url: '/', file: 'index.html', lang: 'en' },
   { url: '/en', file: 'en.html', lang: 'en' },
@@ -47,6 +65,7 @@ const PAGES = [
   ...legacyPages.flatMap((p) => LANGS.map(([code, htmlLang]) => ({
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code, legacy: p,
   }))),
+  ...NEWS_PAGES,
 ];
 const built = new Set(PAGES.map((p) => p.url));
 let problems = 0;
@@ -66,12 +85,13 @@ for (const page of PAGES) {
   const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
   if (!title) fail(`${where}: no <title>`);
   const desc = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
-  if (!desc || desc.length < 40) fail(`${where}: description missing or short`);
+  if (!desc || (desc.length < 40 && !page.newsArticle)) fail(`${where}: description missing or short`);   // 舊站新聞 description 照抄，長短不管
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   const expectCanon = 'https://aquaskyplus.com' + (page.url === '/' ? '/en' : page.url);
   if (canonical !== expectCanon) fail(`${where}: canonical ${canonical} expected ${expectCanon}`);
   const hreflangs = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)"/g)].map((m) => m[1]);
-  for (const h of ['en', 'zh-Hant', 'x-default']) if (!hreflangs.includes(h)) fail(`${where}: hreflang ${h} missing`);
+  const expectHreflang = page.hreflang ?? ['en', 'zh-Hant', 'x-default'];
+  if ([...hreflangs].sort().join() !== [...expectHreflang].sort().join()) fail(`${where}: hreflang [${hreflangs}] expected [${expectHreflang}]`);
   const noindex = /<meta name="robots" content="noindex/.test(html);
   if (stage === 'preview' && !noindex) fail(`${where}: preview build without noindex`);
   if (stage === 'production' && noindex) fail(`${where}: production build has noindex`);
@@ -167,21 +187,44 @@ for (const page of PAGES) {
     if (!faq) fail(`${where}: FAQPage missing`);
     else if ((faq.mainEntity || []).length !== onPage) fail(`${where}: FAQPage has ${(faq.mainEntity || []).length} questions, page shows ${onPage}`);
   }
-  if (page.legacy) {
+  if (page.newsList) {
+    // 列表：CollectionPage 指到這一頁的網址；分頁列跟舊站逐字相同；篇數對
+    const cp = graph.find((n) => n['@type'] === 'CollectionPage');
+    if (!cp || cp.url !== 'https://aquaskyplus.com' + page.url) fail(`${where}: CollectionPage url ${cp?.url}`);
+    const items = (html.match(/<div class="row news-item">/g) || []).length;
+    const expectItems = Math.min(5, page.newsList.order.length - (page.newsPage - 1) * 5);
+    if (items !== expectItems) fail(`${where}: ${items} items, expected ${expectItems}`);
+    const archived = archivedPage(page.code, page.path);
+    if (!archived) fail(`${where}: archived page not found`);
+    else {
+      const pager = (s) => (s.match(/<ul class="pagination">([\s\S]*?)<\/ul>/)?.[1] ?? '').replace(/\s+/g, '');
+      if (pager(archived) !== pager(html)) fail(`${where}: pagination differs from archived page`);
+    }
+  }
+  if (page.newsArticle) {
+    const na = graph.find((n) => n['@type'] === 'NewsArticle');
+    if (!na || !na.datePublished || na.publisher?.['@id'] !== 'https://aquaskyplus.com/#organization') fail(`${where}: NewsArticle missing or incomplete`);
+    if (!html.includes('id="newsBackBtn"')) fail(`${where}: back button missing`);
+  }
+  if (page.legacy || page.newsList || page.newsArticle) {
     // 照抄型：<main> 的純文字要跟封存舊頁 </header>…<footer 之間的純文字一字不差
-    const archived = archivedPage(page.code, page.legacy.path);
+    const archived = archivedPage(page.code, page.legacy ? page.legacy.path : page.path);
     if (!archived) fail(`${where}: archived page not found for text comparison`);
     else {
       // aria-hidden 區塊（舊站聯絡表單的蜜罐欄位）不算內容；新站匯入時已拿掉
       const plain = (s) => decode(s.replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<script[\s\S]*?<\/script>/g, '').replace(/<div[^>]*aria-hidden="true"[\s\S]*?<\/div>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
       const decodeCf = (hex) => { const k = parseInt(hex.slice(0, 2), 16); let o = ''; for (let i = 2; i < hex.length; i += 2) o += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16) ^ k); return o; };
       const oldBody = archived.slice(archived.indexOf('</header>') + 9, archived.indexOf('<footer'))
-        .replace(/<a[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/a>/g, (_m, h) => decodeCf(h));   // 舊站 CF email 混淆，比對前先還原
+        .replace(/<span[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/span>/g, (_m, h) => decodeCf(h))   // 舊站 CF email 混淆（兩種寫法），比對前先還原
+        .replace(/<a[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/a>/g, (_m, h) => decodeCf(h));
       const oldText = plain(oldBody);
       const mainHtml = html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1] ?? '';
-      const content = JSON.parse(readFileSync(join(root, `src/content/legacy/${page.legacy.id}/${page.code}.json`), 'utf8'));
+      // 補的隱藏 h1 不算（照抄頁：content.h1；新聞列表：標題帶；明細：文章標題）
+      const hiddenH1 = page.legacy
+        ? (() => { const c = JSON.parse(readFileSync(join(root, `src/content/legacy/${page.legacy.id}/${page.code}.json`), 'utf8')); return c.hasVisibleH1 ? null : c.h1; })()
+        : page.newsList ? page.newsList.titleBand : page.newsArticle.title;
       let newText = plain(mainHtml);
-      if (!content.hasVisibleH1) newText = newText.replace(plain(content.h1), '').replace(/\s+/g, ' ').trim();   // 補的隱藏 h1 不算
+      if (hiddenH1) newText = newText.replace(plain(hiddenH1), '').replace(/\s+/g, ' ').trim();
       if (oldText !== newText) {
         let i = 0; while (i < oldText.length && oldText[i] === newText[i]) i++;
         fail(`${where}: body text differs from archived page at char ${i}

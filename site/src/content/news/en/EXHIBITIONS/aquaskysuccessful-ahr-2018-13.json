@@ -1,0 +1,45 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "aquaskysuccessful-ahr-2018-13",
+  "path": "/news-detail/EXHIBITIONS/aquaskysuccessful-ahr-2018-13",
+  "status": "approved-legacy",
+  "dateText": "02 06 2018",
+  "datePublished": "2018-02-06T22:20:18+0800",
+  "title": "Aquasky｜Successful AHR 2018",
+  "cover": "/upfile/Images/news/20180206news-001-tmp.jpg",
+  "excerptHtml": "<p>Aquasky had a successful AHR 2018 at Chicago with US partner Duratrac / Elbi America.&nbsp;</p>",
+  "seo": {
+    "title": "Aquasky news: Successed in presenting Aquasky ThermPlus Expansion Tank at AHR 2018.",
+    "description": "Aquasky had a successful AHR 2018 in Chicago with US partner Duratrac / Elbi America."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/aquaskysuccessful-ahr-2018-13#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/aquaskysuccessful-ahr-2018-13"
+      },
+      "headline": "Aquasky｜Successful AHR 2018",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20180206news-001-tmp.jpg",
+      "description": "Aquasky had a successful AHR 2018 in Chicago with US partner Duratrac / Elbi America.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2018-02-06T22:20:18+0800"
+    }
+  ],
+  "bodyHtml": "<style type=\"text/css\">.news-img-a1 {\r\n  margin-top: 15px;\r\n  vertical-align: middle;\r\n}\r\n</style>\r\n<p>Aquasky&#39;s partner Elbi America &amp; Duratrac went to present Aquasky ThermPlus Expansion Tank at AHR 2018.&nbsp;<br />\r\nThe International Air-Conditioning, Heating, Refrigerating Exposition (AHR Expo), which started 86 years ago as a heating and ventilation show, has grown into the event of the year for the HVACR industry.</p>\r\n\r\n<div class=\"col-md-4 news-img-a1\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/20180206news-001.jpg\" /></div>\r\n\r\n<div class=\"col-md-4 news-img-a1\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/20180206news-005.jpg\" /></div>\r\n\r\n<div class=\"col-md-4 news-img-a1\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/20180206news-006.jpg\" /></div>\r\n\r\n<div class=\"col-md-4 news-img-a1\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/20180206news-002.jpg\" /></div>\r\n\r\n<div class=\"col-md-4 news-img-a1\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/20180206news-003.jpg\" /></div>\r\n\r\n<div class=\"col-md-4 news-img-a1\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/20180206news-004.jpg\" /></div>",
+  "assets": [
+    "/upfile/Images/news/20180206news-001-tmp.jpg",
+    "/upfile/Images/news/20180206news-001.jpg",
+    "/upfile/Images/news/20180206news-005.jpg",
+    "/upfile/Images/news/20180206news-006.jpg",
+    "/upfile/Images/news/20180206news-002.jpg",
+    "/upfile/Images/news/20180206news-003.jpg",
+    "/upfile/Images/news/20180206news-004.jpg"
+  ]
+}

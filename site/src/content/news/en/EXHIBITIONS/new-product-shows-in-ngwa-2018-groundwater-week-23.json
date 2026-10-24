@@ -1,0 +1,41 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "new-product-shows-in-ngwa-2018-groundwater-week-23",
+  "path": "/news-detail/EXHIBITIONS/new-product-shows-in-ngwa-2018-groundwater-week-23",
+  "status": "approved-legacy",
+  "dateText": "11 15 2018",
+  "datePublished": "2018-11-15T19:26:41+0800",
+  "title": "New product shows in NGWA 2018 (Groundwater Week)",
+  "cover": "/upfile/Images/news/groundwater2018.png",
+  "excerptHtml": "<p>NGWA is the abbrieviation for National Groundwater Association. It is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach. Our new product, APT-450, will be on display in the show.&nbsp;<br />\r\nIf you want to have a meeting in the show. Please use the email below to contact us.<br />\r\nfrankwang@aquasky.com.tw</p>",
+  "seo": {
+    "title": "New product shows in NGWA 2018 (Groundwater Week)",
+    "description": "NGWA is the abbrieviation for National Groundwater Association. It is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach. Our new product, APT-450, will be on display in the show."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/new-product-shows-in-ngwa-2018-groundwater-week-23#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/new-product-shows-in-ngwa-2018-groundwater-week-23"
+      },
+      "headline": "New product shows in NGWA 2018 (Groundwater Week)",
+      "image": "https://aquaskyplus.com/upfile/Images/news/groundwater2018.png",
+      "description": "NGWA is the abbrieviation for National Groundwater Association. It is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach. Our new product, APT-450, will be on display in the show.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2018-11-15T19:26:41+0800"
+    }
+  ],
+  "bodyHtml": "<p>NGWA is the abbrieviation for National Groundwater Association. It is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach. Our new product, APT-450, will be on display in the show.&nbsp;<br />\r\nIf you want to have a meeting in the show. Please use the email below to contact us.<br />\r\nfrankwang@aquasky.com.tw</p>\r\n\r\n<p>About Aquasky<br />\r\nFounded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur Goal is to provide top quality, dependable pressure tank to our customers at a competitive price time after time. Our end-to end manufacturing solution provides a stable price list, the fastest custom design option and the on time delivery.</p>\r\n\r\n<p><img alt=\"\" class=\"img-responsive\" src=\"/upfile/Images/news/groundwater2018_news_img.jpg\" /><img alt=\"\" class=\"img-responsive\" src=\"/upfile/Images/news/new-APT-450-2.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/groundwater2018.png",
+    "/upfile/Images/news/groundwater2018_news_img.jpg",
+    "/upfile/Images/news/new-APT-450-2.jpg"
+  ]
+}

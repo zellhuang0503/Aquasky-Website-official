@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "ngwa-2016-groundwater-week-5",
+  "path": "/news-detail/EXHIBITIONS/ngwa-2016-groundwater-week-5",
+  "status": "approved-legacy",
+  "dateText": "06 28 2017",
+  "datePublished": "2017-06-28T13:29:00+0800",
+  "title": "NGWA 2016 (Groundwater Week)",
+  "cover": "/upfile/Images/news/Groundwater.jpg",
+  "excerptHtml": "<p>Groundwater Week is an annual conference featuring education, exhibits, and networking with the industry&rsquo;s finest from around the world.<br />\r\nAT: Las Vegas Convention Center3150 Paradise Road<br />\r\nLas Vegas , NV 89109</p>",
+  "seo": {
+    "title": "Aquasky news: NGWA 2016",
+    "description": "Aquasky: Groundwater Week is an annual conference featuring education, exhibits, and networking with the industry’s finest from around the world."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/ngwa-2016-groundwater-week-5#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/ngwa-2016-groundwater-week-5"
+      },
+      "headline": "NGWA 2016 (Groundwater Week)",
+      "image": "https://aquaskyplus.com/upfile/Images/news/Groundwater.jpg",
+      "description": "Aquasky: Groundwater Week is an annual conference featuring education, exhibits, and networking with the industry’s finest from around the world.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2017-06-28T13:29:00+0800"
+    }
+  ],
+  "bodyHtml": "<p>Groundwater Week is an annual conference featuring education, exhibits, and networking with the industry&rsquo;s finest from around the world.<br />\r\nAT: Las Vegas Convention Center3150 Paradise Road<br />\r\nLas Vegas , NV 89109</p>\r\n\r\n<p>About Aquasky</p>\r\n\r\n<p>Founded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in residential water cleaning, water heater, air conditioning, and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur goal is to provide top-quality, dependable pressure tanks to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option, and the on-time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/Groundwater.jpg"
+  ]
+}

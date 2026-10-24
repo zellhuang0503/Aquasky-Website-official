@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "is-a-bigger-water-pressure-tank-better-aquasky-tells-you-48",
+  "path": "/news-detail/INDUSTRY/is-a-bigger-water-pressure-tank-better-aquasky-tells-you-48",
+  "status": "approved-legacy",
+  "dateText": "05 22 2020",
+  "datePublished": "2020-05-22T16:40:17+0800",
+  "title": "Is a bigger water pressure tank better? Aquasky tells you!",
+  "cover": "/upfile/Images/news/efficiency-ss-1920.png",
+  "excerptHtml": "<p>Is a bigger water pressure tank better? A larger pressure tank can store more water volume to reduce the pump on-off circle.&nbsp;</p>",
+  "seo": {
+    "title": "Is a bigger water pressure tank better? Aquasky tells you!",
+    "description": "Is a bigger water pressure tank better? A larger pressure tank can store more water volume to reduce the pump on-off circle."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/is-a-bigger-water-pressure-tank-better-aquasky-tells-you-48#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/is-a-bigger-water-pressure-tank-better-aquasky-tells-you-48"
+      },
+      "headline": "Is a bigger water pressure tank better? Aquasky tells you!",
+      "image": "https://aquaskyplus.com/upfile/Images/news/efficiency-ss-1920.png",
+      "description": "Is a bigger water pressure tank better? A larger pressure tank can store more water volume to reduce the pump on-off circle.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2020-05-22T16:40:17+0800"
+    }
+  ],
+  "bodyHtml": "<p>Is a bigger water pressure tank better?<br />\r\nA larger pressure tank can store more water volume to reduce the pump on-off circle.&nbsp;</p>\r\n\r\n<p>For example, If you need to use 4L water per faucet opening, and your pump supply 2L per second with the pipe flow rate 2L per second.&nbsp;</p>\r\n\r\n<p>The pressure switch has a cut-in pressure at 2 bar and cut-off pressure at 4 bar. The acceptable factory for the pressure tank is 0.4.</p>\r\n\r\n<p>A 60L tank in the system contains 24L of water in each circle. The faucet can open 6 times until the pump start and fill up the water into the tank.&nbsp;</p>\r\n\r\n<p>A 100L tank in the system contains 40L of water. The faucet can open 10 times until the pump start and fill up the water into the tank.&nbsp;</p>\r\n\r\n<p>With 4000L period,&nbsp;</p>\r\n\r\n<p>In the system with 60L, the pump starts 166 times.<br />\r\nIn the system with 100L, the pump starts 100 times.</p>\r\n\r\n<p>The system using a 100L tank can save 66-time circles than the system using a 60L tank.&nbsp;</p>\r\n\r\n<p>The only downside to a larger tank is simply that it costs more and takes up more space.&nbsp;</p>\r\n\r\n<p>To have the best efficacy of your system, you can use the Aquasky selection chart to find out the proper size tank for your system.<br />\r\n&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/efficiency-ss-1920.png\" /></p>",
+  "assets": [
+    "/upfile/Images/news/efficiency-ss-1920.png"
+  ]
+}

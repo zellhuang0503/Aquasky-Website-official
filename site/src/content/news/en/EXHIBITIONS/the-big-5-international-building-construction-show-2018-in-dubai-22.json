@@ -1,0 +1,41 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "the-big-5-international-building-construction-show-2018-in-dubai-22",
+  "path": "/news-detail/EXHIBITIONS/the-big-5-international-building-construction-show-2018-in-dubai-22",
+  "status": "approved-legacy",
+  "dateText": "11 14 2018",
+  "datePublished": "2018-11-14T08:37:51+0800",
+  "title": "THE BIG 5 International Building & Construction Show 2018 in Dubai",
+  "cover": "/upfile/Images/news/the-big-5-dubai-2018s2.jpg",
+  "excerptHtml": "<p>THE BIG 5 International Building &amp; Construction Show will be held at the Dubai World Trade Centre from November 26 to 29 in this year.</p>\r\n\r\n<p>In THE BIG 5, you can find the biggest names in the global construction industry, including international, regional and local brands with showcasing their products and services. Our new product, APT-450, will be on display in the show.&nbsp;</p>",
+  "seo": {
+    "title": "THE BIG 5 International Building & Construction Show 2018 in Dubai",
+    "description": "THE BIG 5 International Building & Construction Show will be held at the Dubai World Trade Centre from November 26 to 29 in this year. In THE BIG 5, you can find the biggest names in the global construction industry, including international, regional and local brands with showcasing their products and services. Our new product, APT-450, will be on display in the show."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/the-big-5-international-building-construction-show-2018-in-dubai-22#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/the-big-5-international-building-construction-show-2018-in-dubai-22"
+      },
+      "headline": "THE BIG 5 International Building & Construction Show 2018 in Dubai",
+      "image": "https://aquaskyplus.com/upfile/Images/news/the-big-5-dubai-2018s2.jpg",
+      "description": "THE BIG 5 International Building & Construction Show will be held at the Dubai World Trade Centre from November 26 to 29 in this year. In THE BIG 5, you can find the biggest names in the global construction industry, including international, regional and local brands with showcasing their products and services. Our new product, APT-450, will be on display in the show.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2018-11-14T08:37:51+0800"
+    }
+  ],
+  "bodyHtml": "<div>\r\n<div class=\"col-sm-7\">\r\n<p>THE BIG 5 International Building &amp; Construction Show will be held at the Dubai World Trade Centre from November 26 to 29 in this year.<br />\r\nIn THE BIG 5, you can find the biggest names in the global construction industry, including international, regional and local brands with showcasing their products and services. Our new product, APT-450, will be on display in the show.&nbsp;<br />\r\nIf you want to have a meeting in the show. Please use the email below to contact us.<br />\r\nE-mail: frankwang@aquasky.com.tw</p>\r\n<img alt=\"\" class=\"img-responsive\" src=\"/upfile/Images/news/messageImage2018.jpg\" /></div>\r\n\r\n<div class=\"col-sm-4\">\r\n<p><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/new-APT-450-2.jpg\" /></p>\r\n\r\n<p class=\"text-center\"><strong>New Product Pumplus Apt-450 released</strong></p>\r\n</div>\r\n</div>",
+  "assets": [
+    "/upfile/Images/news/the-big-5-dubai-2018s2.jpg",
+    "/upfile/Images/news/messageImage2018.jpg",
+    "/upfile/Images/news/new-APT-450-2.jpg"
+  ]
+}

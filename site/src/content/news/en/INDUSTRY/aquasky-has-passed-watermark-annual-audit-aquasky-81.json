@@ -1,0 +1,40 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "aquasky-has-passed-watermark-annual-audit-aquasky-81",
+  "path": "/news-detail/INDUSTRY/aquasky-has-passed-watermark-annual-audit-aquasky-81",
+  "status": "approved-legacy",
+  "dateText": "10 27 2021",
+  "datePublished": "2021-10-27T15:39:59+0800",
+  "title": "AQUASKY has passed WaterMark annual audit ｜ Aquasky",
+  "cover": "/upfile/Images/CERTIFICATION/wm_b.png",
+  "excerptHtml": "<p>AQUASKY has passed the WaterMark annual audit. The Australian Building Codes Board (ABCB) administers the WaterMark Certification Scheme. Plumbing or drainage products that are on the scheme list should be WaterMark certified. Once certified, and the product needs to be installed by a licensed plumbing practitioner.</p>",
+  "seo": {
+    "title": "AQUASKY has passed WaterMark annual audit ｜ Aquasky",
+    "description": "AQUASKY has passed the WaterMark annual audit. The Australian Building Codes Board (ABCB) administers the WaterMark Certification Scheme. Plumbing or drainage products that are on the scheme list should be WaterMark certified. Once certified, and the product needs to be installed by a licensed plumbing practitioner."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-watermark-annual-audit-aquasky-81#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-watermark-annual-audit-aquasky-81"
+      },
+      "headline": "AQUASKY has passed WaterMark annual audit ｜ Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/CERTIFICATION/wm_b.png",
+      "description": "AQUASKY has passed the WaterMark annual audit. The Australian Building Codes Board (ABCB) administers the WaterMark Certification Scheme. Plumbing or drainage products that are on the scheme list should be WaterMark certified. Once certified, and the product needs to be installed by a licensed plumbing practitioner.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2021-10-27T15:39:59+0800"
+    }
+  ],
+  "bodyHtml": "<p>AQUASKY has successfully passed the WaterMark annual audit.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The Australian Building Codes Board (ABCB) administers the WaterMark Certification Scheme. Plumbing or drainage products that are on the scheme list should be WaterMark certified. Once certified, and the product needs to be installed by a licensed plumbing practitioner.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/2021%20WM-022939%20Factory%20Inspection%20Report%2C%20Aquasky%20Enterprise%20Corp-1_page-0001.jpg\" /></p>\r\n\r\n<p>WaterMark is a mandatory certification scheme for plumbing and drainage products to ensure they are suitable for purpose and appropriately authorized for use in plumbing and drainage installations.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/CERTIFICATION/wm_b.png\" /></p>",
+  "assets": [
+    "/upfile/Images/CERTIFICATION/wm_b.png",
+    "/upfile/Images/news/2021%20WM-022939%20Factory%20Inspection%20Report%2C%20Aquasky%20Enterprise%20Corp-1_page-0001.jpg"
+  ]
+}

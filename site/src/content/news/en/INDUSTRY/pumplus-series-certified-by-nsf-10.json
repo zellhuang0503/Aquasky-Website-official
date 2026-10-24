@@ -1,0 +1,42 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "pumplus-series-certified-by-nsf-10",
+  "path": "/news-detail/INDUSTRY/pumplus-series-certified-by-nsf-10",
+  "status": "approved-legacy",
+  "dateText": "12 08 2017",
+  "datePublished": "2017-12-08T06:42:55+0800",
+  "title": "PumPlus series Certified by NSF",
+  "cover": "/upfile/Images/news/nsf_ansi61.gif",
+  "excerptHtml": "<p>We are happy to announce that our Aqusaky PumPlus Pressure Tank have recently Certified with NSF 61. Aquasky is the only Pressure Tank manufacture having certified for the whole product Line. Aquasky care your water quality.</p>",
+  "seo": {
+    "title": "Aquasky news: PumPlus series Certified by NSF",
+    "description": "Aqusaky PumPlus Pressure Tank have recently Certified with NSF 61. Aquasky is the only Pressure Tank manufacture having certified for the whole product Line. Aquasky care your water quality."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/pumplus-series-certified-by-nsf-10#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/pumplus-series-certified-by-nsf-10"
+      },
+      "headline": "PumPlus series Certified by NSF",
+      "image": "https://aquaskyplus.com/upfile/Images/news/nsf_ansi61.gif",
+      "description": "Aqusaky PumPlus Pressure Tank have recently Certified with NSF 61. Aquasky is the only Pressure Tank manufacture having certified for the whole product Line. Aquasky care your water quality.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2017-12-08T06:42:55+0800"
+    }
+  ],
+  "bodyHtml": "<p>We are happy to announce that our Aqusaky PumPlus Pressure Tank has recently Certified with NSF 61. Aquasky is the only Pressure Tank manufacture having certified for the whole product line. Aquasky cares about your water quality.</p>\r\n\r\n<p><strong><span style=\"background-color:white\"><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/aquasky-nsf01.jpg\" /><br />\r\n<img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/aquasky-nsf02.jpg\" /><br />\r\n<img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/aquasky-nsf03.jpg\" /></span></strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>[About Aquasky]</p>\r\n\r\n<p>Founded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning, and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur goal is to provide top-quality, dependable pressure tanks to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option, and on-time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/nsf_ansi61.gif",
+    "/upfile/Images/news/aquasky-nsf01.jpg",
+    "/upfile/Images/news/aquasky-nsf02.jpg",
+    "/upfile/Images/news/aquasky-nsf03.jpg"
+  ]
+}

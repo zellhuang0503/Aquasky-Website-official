@@ -15,14 +15,16 @@ interface Props {
   breadcrumbs?: { name: string; path: string }[];
   /** 404 等不該被收錄的頁 */
   noindex?: boolean;
+  /** 這一頁真的存在的語系（預設＝全部已建置語系；新聞每篇只有一個語系） */
+  alternates?: Lang[];
 }
-const { lang, title, description, path, image = brand.logo, jsonLd = [], breadcrumbs = [], noindex = false } = Astro.props;
+const { lang, title, description, path, image = brand.logo, jsonLd = [], breadcrumbs = [], noindex = false, alternates: altLangs = liveLangs } = Astro.props;
 
 const site = brand.url;
 const canonical = `${site}/${lang}${path}`;
 // hreflang 只列這一版真的有建置的語系（舊站全指首頁是錯的，這裡逐頁對應）
-const alternates = liveLangs.map((code) => ({ hreflang: langInfo(code).htmlLang, href: `${site}/${code}${path}` }));
-const xDefault = `${site}/en${path}`;
+const alternates = altLangs.map((code) => ({ hreflang: langInfo(code).htmlLang, href: `${site}/${code}${path}` }));
+const xDefault = `${site}/${altLangs.includes('en') ? 'en' : altLangs[0]}${path}`;
 const ogLocale = { en: 'en_US', zh: 'zh_TW', es: 'es_ES', fr: 'fr_FR', ru: 'ru_RU', ar: 'ar_AR' }[lang];
 
 const organization = {

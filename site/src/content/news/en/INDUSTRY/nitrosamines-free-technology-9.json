@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "nitrosamines-free-technology-9",
+  "path": "/news-detail/INDUSTRY/nitrosamines-free-technology-9",
+  "status": "approved-legacy",
+  "dateText": "06 28 2017",
+  "datePublished": "2017-06-28T14:16:18+0800",
+  "title": "Nitrosamines FREE Technology",
+  "cover": "/upfile/Images/news/Technology.jpg",
+  "excerptHtml": "<p>Nitrosamines are chemical compounds of the chemical structure R1N(&ndash;R2)&ndash;N=O and are used in the manufacture of rubber products. Nitrosamines can cause Cancers. Currently available epidemiological evidence from case-control studies on nitrite and nitrosamine intake supports a positive association with gastric cancer risk.</p>",
+  "seo": {
+    "title": "Aquasky news: Nitrosamines",
+    "description": "Aquasky: Nitrosamines are chemical compounds of the chemical structure R1N(–R2)–N=O and are used in the manufacture of rubber products."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/nitrosamines-free-technology-9#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/nitrosamines-free-technology-9"
+      },
+      "headline": "Nitrosamines FREE Technology",
+      "image": "https://aquaskyplus.com/upfile/Images/news/Technology.jpg",
+      "description": "Aquasky: Nitrosamines are chemical compounds of the chemical structure R1N(–R2)–N=O and are used in the manufacture of rubber products.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2017-06-28T14:16:18+0800"
+    }
+  ],
+  "bodyHtml": "<p>Nitrosamines are chemical compounds of the chemical structure R1N(&ndash;R2)&ndash;N=O and are used in the manufacture of rubber products. Nitrosamines can cause Cancers. Currently available epidemiological evidence from case-control studies on nitrite and nitrosamine intake supports a positive association with gastric cancer risk.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/Technology.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/news/Technology.jpg"
+  ]
+}

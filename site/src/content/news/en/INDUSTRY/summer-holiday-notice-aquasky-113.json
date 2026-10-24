@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "summer-holiday-notice-aquasky-113",
+  "path": "/news-detail/INDUSTRY/summer-holiday-notice-aquasky-113",
+  "status": "approved-legacy",
+  "dateText": "07 25 2022",
+  "datePublished": "2022-07-25T07:42:24+0800",
+  "title": "Summer Holiday Notice ｜Aquasky",
+  "cover": "/upfile/Images/news/SUMMER%20HOLIDAY.png",
+  "excerptHtml": "<p>Summer Holiday Notice ｜Aquasky</p>",
+  "seo": {
+    "title": "Summer Holiday Notice ｜Aquasky",
+    "description": "Aquasky will be closed for Summer Holiday from 28 July to 31 July 2022. The office hour will be resumed as normal on 1st August 2022."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/summer-holiday-notice-aquasky-113#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/summer-holiday-notice-aquasky-113"
+      },
+      "headline": "Summer Holiday Notice ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/SUMMER%20HOLIDAY.png",
+      "description": "Aquasky will be closed for Summer Holiday from 28 July to 31 July 2022. The office hour will be resumed as normal on 1st August 2022.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-07-25T07:42:24+0800"
+    }
+  ],
+  "bodyHtml": "<p>Aquasky will be closed for Summer Holiday from 28 July to 31 July 2022.</p>\r\n\r\n<p>The office hour will be resumed as normal on 1st August 2022.</p>\r\n\r\n<p>We apologize for any inconvenience but thank you for your understanding.</p>\r\n\r\n<p>We hope you have a nice summer.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/SUMMER%20HOLIDAY.png\" /></p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/SUMMER%20HOLIDAY.png"
+  ]
+}

@@ -26,6 +26,8 @@ interface Props {
   bootstrap?: 'min' | 'full';
   /** 只有 LQCOL 這種新版系列頁載 series_content.css */
   seriesCss?: boolean;
+  /** 這一頁真的存在的語系（給 hreflang；預設全部已建置語系） */
+  alternates?: Lang[];
 }
 const props = Astro.props;
 const info = langInfo(props.lang);
@@ -61,7 +63,7 @@ const d = t(props.lang);
   <body class={props.bodyClass}>
     <a class="skip-link" href="#main">{d.common.skipToContent}</a>
     {stage === 'preview' && <div class="preview-banner" role="note">PREVIEW · {new Date().toISOString().slice(0, 10)}</div>}
-    <Header lang={props.lang} path={props.path} />
+    <Header lang={props.lang} path={props.path} alternates={props.alternates} />
     <main id="main">
       <slot />
     </main>

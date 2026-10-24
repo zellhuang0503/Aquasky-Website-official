@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "the-shield-coating-tank-6",
+  "path": "/news-detail/INDUSTRY/the-shield-coating-tank-6",
+  "status": "approved-legacy",
+  "dateText": "06 28 2017",
+  "datePublished": "2017-06-28T13:30:24+0800",
+  "title": "The Shield Coating Tank",
+  "cover": "/upfile/Images/news/The_Shield_Coating_Tank.jpg",
+  "excerptHtml": "<p>The Shield is 3 times thicker compared to epoxy coating.<br />\r\nPerfect to install in high humidity and salt content environment such as coastal areas or rainforest climate.<br />\r\nGO GREEN! Help our planet! The Shield contain zero Volatile Organic Compounds, and generate less 80% waste waterduring application.</p>",
+  "seo": {
+    "title": "Aquasky news: The Shield Coating Tank",
+    "description": "Aquasky: Perfect to install in high humidity and salt content environment such as coastal areas or rainforest climate."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/the-shield-coating-tank-6#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/the-shield-coating-tank-6"
+      },
+      "headline": "The Shield Coating Tank",
+      "image": "https://aquaskyplus.com/upfile/Images/news/The_Shield_Coating_Tank.jpg",
+      "description": "Aquasky: Perfect to install in high humidity and salt content environment such as coastal areas or rainforest climate.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2017-06-28T13:30:24+0800"
+    }
+  ],
+  "bodyHtml": "<p>The Shield is 3 times thicker compared to epoxy coating.<br />\r\nPerfect to install in high humidity and salt content environments such as coastal areas or rainforest climate.<br />\r\nGO GREEN! Help our planet! The Shield contains zero Volatile Organic Compounds and generates less than 80% wastewater during application.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/The_Shield_Coating_Tank.jpg\" /></p>\r\n\r\n<p>About Aquasky&nbsp;</p>\r\n\r\n<p>Founded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning, and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur goal is to provide top-quality, dependable pressure tanks to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option, and the on-time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/The_Shield_Coating_Tank.jpg"
+  ]
+}

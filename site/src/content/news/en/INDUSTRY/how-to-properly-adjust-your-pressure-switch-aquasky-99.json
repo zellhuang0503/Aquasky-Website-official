@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "how-to-properly-adjust-your-pressure-switch-aquasky-99",
+  "path": "/news-detail/INDUSTRY/how-to-properly-adjust-your-pressure-switch-aquasky-99",
+  "status": "approved-legacy",
+  "dateText": "03 29 2022",
+  "datePublished": "2022-03-29T13:45:40+0800",
+  "title": "How to Properly Adjust your Pressure Switch? ｜Aquasky",
+  "cover": "/upfile/Images/news/groundwater2018_news_img.jpg",
+  "excerptHtml": "<p>Pressure switches are designed to automatically sense when the pressure has changed. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids. Most pressure switches have the capability of making field adjustments, but some do not. You need to know your water pump setting and have the correct pressure range before you select your pressure switch.</p>",
+  "seo": {
+    "title": "How to Properly Adjust your Pressure Switch? ｜Aquasky",
+    "description": "Pressure switches are designed to automatically sense when the pressure has changed. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids. Most pressure switches have the capability of making field adjustments, but some do not. You need to know your water pump setting and have the correct pressure range before you select your pressure switch."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/how-to-properly-adjust-your-pressure-switch-aquasky-99#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/how-to-properly-adjust-your-pressure-switch-aquasky-99"
+      },
+      "headline": "How to Properly Adjust your Pressure Switch? ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/groundwater2018_news_img.jpg",
+      "description": "Pressure switches are designed to automatically sense when the pressure has changed. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids. Most pressure switches have the capability of making field adjustments, but some do not. You need to know your water pump setting and have the correct pressure range before you select your pressure switch.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-03-29T13:45:40+0800"
+    }
+  ],
+  "bodyHtml": "<p>How to Properly Adjust your Pressure Switch? ｜Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/groundwater2018_news_img.jpg\" /></p>\r\n\r\n<p>Pressure switches are designed to automatically sense when the pressure has changed. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids.</p>\r\n\r\n<p>Most pressure switches have the capability of making field adjustments, but some do not. You need to know your water pump setting and have the correct pressure range before you select your pressure switch.</p>\r\n\r\n<p>[Cut-In and Cut-Out]</p>\r\n\r\n<p>All Pressure switches have two operating points known as the cut-in (Reset Point) and cut-out (Trip Point) settings. The cut-in point is for the falling pressure and the cut-out point is for the rising pressure. Every switch also includes a differential or a range based on the cut-in and cut-out points. Both the cut-in and cut-out on most switches can be adjusted if certain applications require that.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>For example: if the cut-in is 40 PSI and the cut-out is 60 PSI the differential is 20 PSI.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>[Adjustment Tips for a Standard Switch]</p>\r\n\r\n<p>1. To protect you and your switch, the first thing to do is disconnect the power to the switch from the power supply before you attempt to do any adjustments.</p>\r\n\r\n<p>2. After the power is disconnected, measure and write down the distance from the exposed thread from the top of the nut to the top of the stud that you are adjusting. Write it in fractions of an inch or mm, this is in case you need to start over so then you know where you started.</p>\r\n\r\n<p>3. The first adjustment you should make is to the cut-in and cut-out settings. Once you have made the desired adjustments to those, you can adjust the differential as a secondary adjustment. . There should be only 3 turns per nut maximum, either up or down each time.</p>\r\n\r\n<p>Adjusting the Cut-In</p>\r\n\r\n<p>In order to increase or decrease the cut-in or the cut-out setting, you will need to use a 3/8&quot; nut driver or socket to adjust the switch, while still maintaining the same differential. To do this, follow the below.</p>\r\n\r\n<p>1. Rotate the range nut in a clockwise direction for higher cut-in pressure and counterclockwise for lower cut-in pressure. Note: changing these settings DOES NOT change the differential.</p>\r\n\r\n<p>2. As you start to change the cut-in value, the cut-out value will change by the same amount and in the same direction. For example, if you increase the cut-in pressure by 10 PSI it will also increase the cut-out pressure by 10 PSI, saving you from having to adjust the cut-out value as well.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>[Monitoring is Important]</p>\r\n\r\n<p>You should then monitor the system closely to ensure the pressure setting is what you desired. Note that the adjustment you make to the pressure switch can only be read after the pump has reached its first adjusted shut-off. The next cut-in and cut-off pressure is your new setting.</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/groundwater2018_news_img.jpg"
+  ]
+}

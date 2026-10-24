@@ -1,0 +1,95 @@
+{
+  "id": "zh-INDUSTRY",
+  "lang": "zh",
+  "category": "INDUSTRY",
+  "path": "/news/INDUSTRY",
+  "perPage": 5,
+  "pageCount": 10,
+  "titleBand": "產業訊息",
+  "h4Recent": "最新文章",
+  "h4Side": "熱門文章",
+  "moreLabel": "了解更多...",
+  "backLabel": "返回",
+  "sidebar": [
+    {
+      "dateText": "March 03 2025",
+      "href": "/zh/news-detail/INDUSTRY/lqcol-plus-aquasky-175",
+      "title": "液冷系統的關鍵角色：膨脹水箱的功能與選擇指南 (LQCOL PLUS)｜溢康 Aquasky"
+    },
+    {
+      "dateText": "July 04 2024",
+      "href": "/zh/news-detail/INDUSTRY/thermal-plus-aquasky-165",
+      "title": "Thermal-Plus 密閉式膨脹水箱：保障您的熱水系統 ｜溢康Aquasky"
+    },
+    {
+      "dateText": "April 24 2024",
+      "href": "/zh/news-detail/INDUSTRY/pumplus-aquasky-161",
+      "title": "溢康Pumplus壓力桶介紹 ｜Aquasky 溢康"
+    },
+    {
+      "dateText": "September 27 2023",
+      "href": "/zh/news-detail/INDUSTRY/aquasky-145",
+      "title": "關於密閉式熱膨脹水箱說明與介紹｜溢康Aquasky"
+    },
+    {
+      "dateText": "January 07 2025",
+      "href": "/zh/news-detail/INDUSTRY/pp-aquasky-172",
+      "title": "介紹聚丙烯（PP）｜溢康 Aquasky"
+    }
+  ],
+  "order": [
+    "reshaping-potable-water-systems-ch",
+    "liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch",
+    "aquasky-lqcol-plus-ai-cooling_CH",
+    "giga-plus-25-bar-aquasky-189",
+    "2026-aquasky-188",
+    "24-aquasky-187",
+    "acs-attestation-de-conformit-sanitaireaquasky-186",
+    "2026-aquasky-185",
+    "watermark-watermark-lf-aquasky-184",
+    "aquasky-183",
+    "2025-aquasky-182",
+    "202556aquasky-181",
+    "covid-19-aquasky-180",
+    "2025-aquasky-179",
+    "premium-plus-aquasky-178",
+    "aquasky-176",
+    "lqcol-plus-aquasky-175",
+    "2024iso-90012015-aquasky-174",
+    "2025-aquasky-173",
+    "pp-aquasky-172",
+    "2025-aquasky-171",
+    "aquasky-170",
+    "aquasky-169",
+    "lqcolplus-aquasky-168",
+    "esgesg-aquasky-167",
+    "2024-aquasky-166",
+    "thermal-plus-aquasky-165",
+    "mega-plus-16-bar-aquasky-164",
+    "ccaaquasky-163",
+    "cbam-aquasky-162",
+    "pumplus-aquasky-161",
+    "aquasky-160",
+    "mega-plus-aquasky-159",
+    "aquasky-158",
+    "aquasky-157",
+    "esg-aquasky-156",
+    "apt-40-aquasky-155",
+    "hydro-plus-aquasky-154",
+    "2024-aquasky-153",
+    "nsf-aquasky-152",
+    "aquasky-151",
+    "iso-14064-12018-aquasky-150",
+    "roaquasky-149",
+    "nsfansi-372-aquasky-148",
+    "mega-plus-16-baraquasky-147",
+    "aquasky-146",
+    "aquasky-145",
+    "aquasky-144",
+    "aquasky-143"
+  ],
+  "seo": {
+    "title": "水處理產業趨勢與技術專欄：掌握壓力桶與加壓水系統最新知識",
+    "description": "閱讀水處理產業的最新技術見解與全球趨勢。提供壓力罐創新設計、加壓泵系統優化以及隔膜式壓力桶的專業製造知識。"
+  }
+}

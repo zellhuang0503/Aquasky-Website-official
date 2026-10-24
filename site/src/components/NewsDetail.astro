@@ -1,0 +1,52 @@
+---
+// 新聞明細頁（/news-detail/<CAT>/<slug>）：標記照舊站，正文整段照抄（src/content/news/<lang>/<CAT>/<slug>.json 的 bodyHtml）。
+import type { CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import common from '../data/news/common.json';
+import brand from '../data/brand.json';
+import { type Lang, t } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  article: CollectionEntry<'news'>['data'];
+  list: CollectionEntry<'newsLists'>['data'];
+}
+const { lang, article: a, list } = Astro.props;
+const d = t(lang);
+const catLabel = (d.nav as Record<string, string>)[list.category.toLowerCase()] ?? list.category;
+const breadcrumbs = [
+  { name: d.common.breadcrumbHome, path: '' },
+  { name: d.nav.news, path: list.path },
+  { name: catLabel, path: list.path },
+  { name: a.title, path: a.path },
+];
+const site = brand.url;
+// 舊站 head 的 NewsArticle 原樣搬，只補 publisher 指向全站 Organization
+const jsonLd = a.legacyJsonLd.map((o) => (o['@type'] === 'NewsArticle' ? { ...o, publisher: { '@id': `${site}/#organization` } } : o));
+---
+<Base lang={lang} title={a.seo.title} description={a.seo.description} path={a.path} image={a.cover} jsonLd={jsonLd} breadcrumbs={breadcrumbs} alternates={[lang]} bootstrap="full" headStyle={common.detailCss}>
+  <h1 class="visually-hidden">{a.title}</h1>
+  <!--about-container-01-->
+  <div id="news-container" class="container-fluid">
+    <div id="about-top-title">{list.titleBand}</div>
+    <div class="container page_spacing lang_rtl">
+      <div class="row">
+        <div class="col-md-12 block-bg-01">
+          <h4 class="news-h4">{list.h4Recent}</h4>
+          <div class="row news-title-border">
+            <div class="col-md-2 news-time-style-1">{a.dateText}</div>
+            <div class="col-md-8 news-title-style">{a.title}</div>
+            <div class="col-md-2 text-right"><a id="newsBackBtn" href={`/${lang}${list.path}`}>{list.backLabel}</a></div>
+          </div>
+          <div id="ImgAutoResponsive" style="padding-top:20px;" set:html={a.bodyHtml} />
+        </div>
+      </div>
+    </div>
+    <!--end container-01-->
+  </div>
+  <!--end news-container-01-->
+  <script is:inline>
+    // 舊站：「返回」回到進來前的那個列表頁（sessionStorage 由列表頁寫入）；沒有就回該分類第 1 頁
+    try { var b = sessionStorage.getItem('news_back'); if (b) document.getElementById('newsBackBtn').href = b; } catch (e) {}
+  </script>
+</Base>

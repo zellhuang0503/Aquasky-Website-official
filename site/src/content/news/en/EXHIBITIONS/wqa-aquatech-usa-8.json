@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "wqa-aquatech-usa-8",
+  "path": "/news-detail/EXHIBITIONS/wqa-aquatech-usa-8",
+  "status": "approved-legacy",
+  "dateText": "06 28 2017",
+  "datePublished": "2017-06-28T14:13:33+0800",
+  "title": "WQA Aquatech USA",
+  "cover": "/upfile/Images/news/WQA_2017.jpg",
+  "excerptHtml": "<p>The WQA Annual Convention and Exposition brings each segment of the water treatment and supply market together in one place. The event provides a forum for people to learn about new ideas and innovative technology, develop relationships and their business, and learn about equipment and devices.&nbsp;</p>",
+  "seo": {
+    "title": "Aquasky news: WQA 2017",
+    "description": "Aquasky: The event provides a forum for people to learn about new ideas and innovative technology, develop relationships and their business, and learn about equipment and devices."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/wqa-aquatech-usa-8#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/wqa-aquatech-usa-8"
+      },
+      "headline": "WQA Aquatech USA",
+      "image": "https://aquaskyplus.com/upfile/Images/news/WQA_2017.jpg",
+      "description": "Aquasky: The event provides a forum for people to learn about new ideas and innovative technology, develop relationships and their business, and learn about equipment and devices.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2017-06-28T14:13:33+0800"
+    }
+  ],
+  "bodyHtml": "<p>&bull; The WQA Annual Convention and Exposition brings each segment of the water treatment and supply market together in one place. The event provides a forum for people to learn about new ideas and innovative technology, develop relationships and their business, and learn about equipment and devices.&nbsp;<br />\r\n&bull; 28-31 Mar 2017 ( notify new dates )<br />\r\n&bull; &nbsp;Orange County Convention Center, Orlando, USA</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>About Aquasky<br />\r\nFounded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur goal is to provide top-quality, dependable pressure tanks to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option and the on time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/WQA_2017.jpg"
+  ]
+}

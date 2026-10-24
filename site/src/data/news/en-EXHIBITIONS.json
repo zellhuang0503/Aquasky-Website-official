@@ -1,0 +1,72 @@
+{
+  "id": "en-EXHIBITIONS",
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "path": "/news/EXHIBITIONS",
+  "perPage": 5,
+  "pageCount": 6,
+  "titleBand": "EXHIBITIONS",
+  "h4Recent": "RECENT NEWS",
+  "h4Side": "LATEST NEWS",
+  "moreLabel": "more...",
+  "backLabel": "BACK",
+  "sidebar": [
+    {
+      "dateText": "November 15 2019",
+      "href": "/en/news-detail/EXHIBITIONS/the-big-5-international-building-construction-show-2019-in-dubai-37",
+      "title": "THE BIG 5 International Building & Construction Show 2019 in Dubai"
+    },
+    {
+      "dateText": "June 23 2022",
+      "href": "/en/news-detail/EXHIBITIONS/mce-mostra-convegno-expocomfort-2022-aquasky-109",
+      "title": "MCE MOSTRA CONVEGNO EXPOCOMFORT 2022 ｜Aquasky"
+    },
+    {
+      "dateText": "January 04 2019",
+      "href": "/en/news-detail/EXHIBITIONS/aquasky-is-going-to-ahr-expo-2019-26",
+      "title": "Aquasky is going to AHR Expo 2019"
+    },
+    {
+      "dateText": "February 03 2020",
+      "href": "/en/news-detail/EXHIBITIONS/ahr-expo-2020aquasky-42",
+      "title": "AHR Expo 2020｜Aquasky"
+    },
+    {
+      "dateText": "November 02 2019",
+      "href": "/en/news-detail/EXHIBITIONS/aquatech-amsterdam-exhibitionaquasky-pumplus-pressure-tank-35",
+      "title": "Aquatech Amsterdam Exhibition｜Aquasky, pumplus, pressure tank"
+    }
+  ],
+  "order": [
+    "ish-frankfurt-2025-solutions-for-a-sustainable-future-aquasky-175",
+    "ish-frankfurt-2023-aquasky-134",
+    "mce-mostra-convegno-expocomfort-2022-aquasky-109",
+    "the-2022-ahr-expo-will-take-place-on-jan-31-feb-2-2022-in-las-vegas-aquasky-90",
+    "ahr-expo-2020aquasky-42",
+    "successful-ngwa-2019-groundwater-week-39",
+    "aqausky-attending-ngwa-2019-groundwater-week-38",
+    "the-big-5-international-building-construction-show-2019-in-dubai-37",
+    "aquasky-successful-aquatech-amsterdam-2019-36",
+    "aquatech-amsterdam-exhibitionaquasky-pumplus-pressure-tank-35",
+    "wqa-convention-exposition-pressure-tanks-in-aquasky-30",
+    "ish-trade-fair-in-frankfurt-29",
+    "aquasky-successful-ahr-expo-2019-28",
+    "aquasky-is-going-to-ahr-expo-2019-26",
+    "new-product-shows-in-ngwa-2018-groundwater-week-23",
+    "the-big-5-international-building-construction-show-2018-in-dubai-22",
+    "aquaskymce-mostra-convegno-expocomfort-14",
+    "aquaskysuccessful-ahr-2018-13",
+    "2018-ahr-exhibition-12",
+    "wqa-aquatech-usa-8",
+    "las-vegas-convention-center-las-vegas-usa-7",
+    "ngwa-2016-groundwater-week-5",
+    "asean-sustainable-energy-week-2016-4",
+    "mce-exhibition-2016-3",
+    "wqa-convention-exposition-2016-2",
+    "2016-ahr-expo-orlando-1"
+  ],
+  "seo": {
+    "title": "AQUASKY International Exhibitions: Global Water Treatment & Trade Shows",
+    "description": "Explore AQUASKY's global exhibition schedule. Visit our booths at top international water shows like MCE Italy and Aquatech to view our premium pressure tanks."
+  }
+}

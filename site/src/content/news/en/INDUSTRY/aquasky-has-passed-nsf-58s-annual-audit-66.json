@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "aquasky-has-passed-nsf-58s-annual-audit-66",
+  "path": "/news-detail/INDUSTRY/aquasky-has-passed-nsf-58s-annual-audit-66",
+  "status": "approved-legacy",
+  "dateText": "07 06 2021",
+  "datePublished": "2021-07-06T09:01:46+0800",
+  "title": "AQUASKY has passed NSF 58's annual audit",
+  "cover": "/upfile/Images/news/NSF%202021.PNG",
+  "excerptHtml": "<p>AQUASKY has passed NSF 58&#39;s annual audit.</p>\r\n\r\n<p>AQUASKY has successfully passed the National Sanitation Foundation 58 (NSF 58) annual audit.</p>",
+  "seo": {
+    "title": "AQUASKY has passed NSF 58's annual audit.",
+    "description": "AQUASKY has passed NSF 58's annual audit. AQUASKY has successfully passed the National Sanitation Foundation 58 (NSF 58) annual audit."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-nsf-58s-annual-audit-66#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-nsf-58s-annual-audit-66"
+      },
+      "headline": "AQUASKY has passed NSF 58's annual audit",
+      "image": "https://aquaskyplus.com/upfile/Images/news/NSF%202021.PNG",
+      "description": "AQUASKY has passed NSF 58's annual audit. AQUASKY has successfully passed the National Sanitation Foundation 58 (NSF 58) annual audit.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2021-07-06T09:01:46+0800"
+    }
+  ],
+  "bodyHtml": "<p>AQUASKY has passed NSF 58&#39;s annual audit</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>AQUASKY has successfully passed the National Sanitation Foundation 58 (NSF 58) annual audit.</p>\r\n\r\n<p>NSF/ANSI 58 is the American National Standard for reverse osmosis (RO) systems. It was developed by a joint committee with equal representation from regulators, manufacturers, and end-users.</p>\r\n\r\n<p>The scope of NSF/ANSI 58 includes material safety, structural integrity, total dissolved solids (TDS) reduction, and other optional contaminant reduction claims. The most common optional claims addressed by NSF/ANSI 58 include cyst reduction, hexavalent and trivalent chromium reduction, arsenic reduction, nitrate/nitrite reduction, and cadmium and lead reduction.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/NSF%202021.PNG\" /></p>",
+  "assets": [
+    "/upfile/Images/news/NSF%202021.PNG"
+  ]
+}

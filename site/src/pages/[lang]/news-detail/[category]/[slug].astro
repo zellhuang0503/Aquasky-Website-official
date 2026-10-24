@@ -1,0 +1,19 @@
+---
+// 新聞明細：/en/news-detail/INDUSTRY/<slug>（網址照舊站；每篇只有一個語系，沒有對應翻譯）
+import { getCollection } from 'astro:content';
+import NewsDetail from '../../../../components/NewsDetail.astro';
+import { type Lang, liveLangs } from '../../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const lists = (await getCollection('newsLists')).map((e) => e.data);
+  const articles = (await getCollection('news')).map((e) => e.data).filter((a) => liveLangs.includes(a.lang));
+  return articles.map((article) => {
+    const list = lists.find((l) => l.lang === article.lang && l.category === article.category);
+    if (!list) throw new Error(`no list for ${article.lang}/${article.category}`);
+    if (!list.order.includes(article.slug)) throw new Error(`${article.lang}/${article.category}/${article.slug} not in list order`);
+    return { params: { lang: article.lang, category: article.category, slug: article.slug }, props: { article, list } };
+  });
+}
+const { article, list } = Astro.props;
+---
+<NewsDetail lang={Astro.params.lang as Lang} article={article} list={list} />

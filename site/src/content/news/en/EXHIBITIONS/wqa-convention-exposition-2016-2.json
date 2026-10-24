@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "wqa-convention-exposition-2016-2",
+  "path": "/news-detail/EXHIBITIONS/wqa-convention-exposition-2016-2",
+  "status": "approved-legacy",
+  "dateText": "02 18 2016",
+  "datePublished": "2016-02-18T04:28:45+0800",
+  "title": "WQA Convention & Exposition 2016",
+  "cover": "/upfile/Images/news/news-img-03.jpg",
+  "excerptHtml": "<p>WQA Aquatech USA is a 4 day event being held from 14th March to the 17th March 2016 in Nashville, United States Of America.&nbsp;</p>",
+  "seo": {
+    "title": "Aquasky news: WQA 2016",
+    "description": "Aquasky: WQA's conventions and meetings provide a tremendous opportunity for representatives water quality improvement companies to generate sales leads, network with fellow professionals and learn the latest industry trends."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/wqa-convention-exposition-2016-2#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/wqa-convention-exposition-2016-2"
+      },
+      "headline": "WQA Convention & Exposition 2016",
+      "image": "https://aquaskyplus.com/upfile/Images/news/news-img-03.jpg",
+      "description": "Aquasky: WQA's conventions and meetings provide a tremendous opportunity for representatives water quality improvement companies to generate sales leads, network with fellow professionals and learn the latest industry trends.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2016-02-18T04:28:45+0800"
+    }
+  ],
+  "bodyHtml": "<p>WQA Aquatech USA is a 4 day event being held from 14th March to the 17th March 2016 in Nashville, United States Of America. This event showcases products like a one-stop event that connects technologies, know-how, education, training, networking and business opportunities to multiple water industries, every segment of the increasingly complex and dynamic water treatment and supply market, the most cost effective way to develop relationships, learn about equipment and devices, and pick up new business tips etc. in the Business Services industry.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>About Aquasky</p>\r\n\r\n<p>Founded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning, and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur goal is to provide top-quality, dependable pressure tanks to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option, and on-time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/news-img-03.jpg"
+  ]
+}

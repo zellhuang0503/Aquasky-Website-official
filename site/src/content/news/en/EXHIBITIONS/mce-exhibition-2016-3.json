@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "mce-exhibition-2016-3",
+  "path": "/news-detail/EXHIBITIONS/mce-exhibition-2016-3",
+  "status": "approved-legacy",
+  "dateText": "03 12 2016",
+  "datePublished": "2016-03-12T04:33:34+0800",
+  "title": "mce exhibition 2016",
+  "cover": "/upfile/Images/news/news-img-02.jpg",
+  "excerptHtml": "<p>MCE is the the unique marketplace and the global event where companies in the HVAC+R and energy efficiency sectors gather and showcase the latest technologies, solutions and systems for smart buildings in commercial, industrial and domestic residential sectors.</p>",
+  "seo": {
+    "title": "Aquasky news: MCE 2016",
+    "description": "Aquasky: The biennial international exhibition Mostra Convegno Expocomfort, dedicated to most advanced technologies in HVAC, plumbing and sanitary ware industries as well as renewable energies"
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/mce-exhibition-2016-3#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/mce-exhibition-2016-3"
+      },
+      "headline": "mce exhibition 2016",
+      "image": "https://aquaskyplus.com/upfile/Images/news/news-img-02.jpg",
+      "description": "Aquasky: The biennial international exhibition Mostra Convegno Expocomfort, dedicated to most advanced technologies in HVAC, plumbing and sanitary ware industries as well as renewable energies",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2016-03-12T04:33:34+0800"
+    }
+  ],
+  "bodyHtml": "<p>MCE is the unique marketplace and the global event where companies in the HVAC+R and energy efficiency sectors gather and showcase the latest technologies, solutions, and systems for smart buildings in commercial, industrial, and domestic residential sectors.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>About Aquasky<br />\r\nFounded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning, and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur goal is to provide top-quality, dependable pressure tanks to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option, and on-time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/news-img-02.jpg"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "aquasky-successful-ahr-expo-2019-28",
+  "path": "/news-detail/EXHIBITIONS/aquasky-successful-ahr-expo-2019-28",
+  "status": "approved-legacy",
+  "dateText": "01 22 2019",
+  "datePublished": "2019-01-22T17:27:07+0800",
+  "title": "Aquasky Successful AHR Expo 2019",
+  "cover": "/upfile/Images/news/1547689822002.jpg",
+  "excerptHtml": "<p>Aquasky&#39;s partner Duratrac went to present Aquasky&#39;s latest version of Thermal-Plus Thermal Expansion Tank Products at AHR 2019.</p>\r\n\r\n<p>The AHR Expo is the world&#39;s largest HVACR event, attracting the industry professionals from around the globe each year. The Show provides a unique forum where manufacturers can come together to share ideas and showcase the future of HVACR technology under one roof.</p>",
+  "seo": {
+    "title": "Aquasky Successful AHR Expo 2019",
+    "description": "Aquasky's partner Duratrac went to present Aquasky's latest version of Thermal-Plus Thermal Expansion Tank Products at AHR 2019."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/aquasky-successful-ahr-expo-2019-28#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/aquasky-successful-ahr-expo-2019-28"
+      },
+      "headline": "Aquasky Successful AHR Expo 2019",
+      "image": "https://aquaskyplus.com/upfile/Images/news/1547689822002.jpg",
+      "description": "Aquasky's partner Duratrac went to present Aquasky's latest version of Thermal-Plus Thermal Expansion Tank Products at AHR 2019.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2019-01-22T17:27:07+0800"
+    }
+  ],
+  "bodyHtml": "<p>Aquasky&#39;s partner Duratrac went to present Aquasky&#39;s latest version of Thermal-Plus Thermal Expansion Tank Products at AHR 2019.</p>\r\n\r\n<p>The AHR Expo is the world&#39;s largest HVACR event, attracting the industry professionals from around the globe each year. The Show provides a unique forum where manufacturers can come together to share ideas and showcase the future of HVACR technology under one roof.</p>\r\n\r\n<p><about aquasky=\"\"><br />\r\nFounded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning and solar water heater as well as the residential and commercial pumping system.</about></p>\r\n\r\n<div class=\"row\">\r\n<div class=\"col-md-6\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/1547689822002.jpg\" /></div>\r\n\r\n<div class=\"col-md-6\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/1547689829011.jpg\" /></div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"row\">\r\n<div class=\"col-md-6\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/1547689837105.jpg\" /></div>\r\n\r\n<div class=\"col-md-6\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/news/1547689841747.jpg\" /></div>\r\n</div>",
+  "assets": [
+    "/upfile/Images/news/1547689822002.jpg",
+    "/upfile/Images/news/1547689829011.jpg",
+    "/upfile/Images/news/1547689837105.jpg",
+    "/upfile/Images/news/1547689841747.jpg"
+  ]
+}

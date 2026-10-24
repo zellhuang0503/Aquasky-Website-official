@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "aquasky-has-passed-peds-annual-audit-51",
+  "path": "/news-detail/INDUSTRY/aquasky-has-passed-peds-annual-audit-51",
+  "status": "approved-legacy",
+  "dateText": "09 23 2020",
+  "datePublished": "2020-09-23T09:11:00+0800",
+  "title": "AQUASKY has passed PED's annual audit",
+  "cover": "/upfile/Images/CE%202020%E5%B9%B4%E5%BA%A6%E7%A8%BD%E6%A0%B8%E9%80%9A%E9%81%8E.jpg",
+  "excerptHtml": "<p>AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit.</p>",
+  "seo": {
+    "title": "AQUASKY has passed PED's annual audit",
+    "description": "AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-peds-annual-audit-51#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-peds-annual-audit-51"
+      },
+      "headline": "AQUASKY has passed PED's annual audit",
+      "image": "https://aquaskyplus.com/upfile/Images/CE%202020%E5%B9%B4%E5%BA%A6%E7%A8%BD%E6%A0%B8%E9%80%9A%E9%81%8E.jpg",
+      "description": "AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2020-09-23T09:11:00+0800"
+    }
+  ],
+  "bodyHtml": "<p>AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit.</p>\r\n\r\n<p><br />\r\nThe Pressure Equipment Directive (PED) (2014/68/EU) applies to the design, manufacture, and conformity assessment of stationary pressure equipment with a maximum allowable pressure greater than 0,5 bar.&nbsp;<br />\r\nThe Pressure Equipment Directive aims to guarantee free movement of the products in its scope while ensuring a high level of safety.<br />\r\n<img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/CE%202020%E5%B9%B4%E5%BA%A6%E7%A8%BD%E6%A0%B8%E9%80%9A%E9%81%8E.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/CE%202020%E5%B9%B4%E5%BA%A6%E7%A8%BD%E6%A0%B8%E9%80%9A%E9%81%8E.jpg"
+  ]
+}

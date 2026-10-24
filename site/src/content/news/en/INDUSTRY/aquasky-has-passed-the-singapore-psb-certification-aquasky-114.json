@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "aquasky-has-passed-the-singapore-psb-certification-aquasky-114",
+  "path": "/news-detail/INDUSTRY/aquasky-has-passed-the-singapore-psb-certification-aquasky-114",
+  "status": "approved-legacy",
+  "dateText": "08 02 2022",
+  "datePublished": "2022-08-02T09:57:35+0800",
+  "title": "Aquasky has passed the Singapore PSB certification ｜ Aquasky",
+  "cover": "/upfile/Images/news/PSB.png",
+  "excerptHtml": "<p>Aquasky has passed the Singapore PSB certification.&nbsp;PSB certification is a mandatory safety certification in Singapore. Only registered products with the SAFETY logo can be sold in Singapore.</p>",
+  "seo": {
+    "title": "Aquasky has passed the Singapore PSB certification ｜ Aquasky",
+    "description": "Aquasky has passed the Singapore PSB certification. PSB certification is a mandatory safety certification in Singapore. Only registered products with the SAFETY logo can be sold in Singapore."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-the-singapore-psb-certification-aquasky-114#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-the-singapore-psb-certification-aquasky-114"
+      },
+      "headline": "Aquasky has passed the Singapore PSB certification ｜ Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/PSB.png",
+      "description": "Aquasky has passed the Singapore PSB certification. PSB certification is a mandatory safety certification in Singapore. Only registered products with the SAFETY logo can be sold in Singapore.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-08-02T09:57:35+0800"
+    }
+  ],
+  "bodyHtml": "<p>Aquasky has passed the Singapore PSB certification ｜ Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/PSB.png\" /></p>\r\n\r\n<p>Singapore Standards, The Singapore Consumer Product Protection Regulation, was designated in 1911. PSB certification is a mandatory safety certification in Singapore. Only registered products with the SAFETY logo can be sold in Singapore. The relevant units responsible for selling regulated goods to consumers in Singapore must register each model with the security authority.</p>",
+  "assets": [
+    "/upfile/Images/news/PSB.png"
+  ]
+}

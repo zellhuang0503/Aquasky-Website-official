@@ -1,0 +1,40 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "the-difference-between-pressure-controller-and-float-aquasky-77",
+  "path": "/news-detail/INDUSTRY/the-difference-between-pressure-controller-and-float-aquasky-77",
+  "status": "approved-legacy",
+  "dateText": "09 24 2021",
+  "datePublished": "2021-09-24T08:37:27+0800",
+  "title": "The difference between pressure controller and float ｜ Aquasky",
+  "cover": "/upfile/Images/news/groundwater2018_news_img.jpg",
+  "excerptHtml": "<p>In modern society, the invention and use of various sensors (detectors) have greatly changed our world. In recent years, the construction industry has developed greatly. With the large-scale construction of high-rise buildings, automatic liquid level sensors have also been used. Used extensively.</p>",
+  "seo": {
+    "title": "The difference between pressure controller and float ｜ Aquasky",
+    "description": "In modern society, the invention and use of various sensors (detectors) have greatly changed our world. In recent years, the construction industry has developed greatly. With the large-scale construction of high-rise buildings, automatic liquid level sensors have also been used. Used extensively."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/the-difference-between-pressure-controller-and-float-aquasky-77#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/the-difference-between-pressure-controller-and-float-aquasky-77"
+      },
+      "headline": "The difference between pressure controller and float ｜ Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/groundwater2018_news_img.jpg",
+      "description": "In modern society, the invention and use of various sensors (detectors) have greatly changed our world. In recent years, the construction industry has developed greatly. With the large-scale construction of high-rise buildings, automatic liquid level sensors have also been used. Used extensively.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2021-09-24T08:37:27+0800"
+    }
+  ],
+  "bodyHtml": "<p>In modern society, the invention and use of various sensors (detectors) have greatly changed our world. In recent years, the construction industry has developed greatly. With the large-scale construction of high-rise buildings, automatic liquid level sensors have also been used. Used extensively.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/_DOU0849_500x333.jpg\" /></p>\r\n\r\n<p>Liquid level switches are classified into float type, pressure type, direct reading type, mechanical type, microwave type, weight type, heavy hammer type, radiation line type, a capacitive type, electrode type, ultrasonic type... etc. Liquid level control circuit system. In this article, only common pressure sensors and floats are described.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Most of the automatic water level controllers used in households are float switches. The principle of the float switch is not only simple and inexpensive, but the water level controller made with the float switch also has disadvantages. The fulcrum of the floating link often fails and is prone to rust and corrosion. The flush toilet in daily life is the best example of using a float switch to control the water level.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The float switch has three main components: steel ball, connecting rod, and microswitch.</p>\r\n\r\n<p>Its principle is to use the difference of the water level to pass it to the water level switch (micro switch) as the control of pump start and stop.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>1. When the liquid level is low, the floating ball sinks as the water level drops. At this time, the steel ball moves downward due to gravity, and the microswitch is driven by the connecting rod. The normally open point NO is closed, and the normally closed point NC is disconnected. And then indirectly control the start or stop of the motor, make water or drain!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>2. When the liquid level is high, the floating ball moves into the tank as the water level rises. At this time, the connecting rod is separated from the steel ball, the microswitch returns to the original working state, the normally open point NO returns to disconnection, and the normally closed point NC Recover closed, indirect control circuit start and stop!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The working principle of the pressure controller:</p>\r\n\r\n<p>When the pressure in the system is higher or lower than the set safety pressure, the disc in the pressure switch sensor moves instantaneously, and the switch connector is turned on or off through the connected guide rod. When the pressure drops or rises to When the rated recovery value is set, the disc is reset instantly, and the switch will automatically reset.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Or simply speaking, when the measured pressure of the device exceeds the set rated value, the free end of the elastic component produces a corresponding displacement, directly or indirectly pushes the switch element after comparison, and changes the instantaneous on-off state of the switch element. To achieve the purpose of controlling the measured pressure.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The elastic elements used in the pressure switch include a single coil spring tube, a diaphragm, a bellows, and a bellows. Switching elements include magnetic switches, mercury switches, micro switches, and so on.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The main features of the pressure controller are:</p>\r\n\r\n<p>1. It adopts an inch pipe thread quick joint or copper pipe welding type installation structure, which is flexible in installation and convenient to use, without special installation and fixing devices.</p>\r\n\r\n<p>2. The plug-in wire connection method can be selected by the user arbitrarily.</p>\r\n\r\n<p>3. The sealed stainless steel sensor is safe and reliable.</p>\r\n\r\n<p>4. The pressure range can be customized according to the pressure value selected by the user arbitrarily.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/groundwater2018_news_img.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/news/groundwater2018_news_img.jpg",
+    "/upfile/Images/news/_DOU0849_500x333.jpg"
+  ]
+}

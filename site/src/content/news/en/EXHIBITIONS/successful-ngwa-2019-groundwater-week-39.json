@@ -1,0 +1,40 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "successful-ngwa-2019-groundwater-week-39",
+  "path": "/news-detail/EXHIBITIONS/successful-ngwa-2019-groundwater-week-39",
+  "status": "approved-legacy",
+  "dateText": "12 12 2019",
+  "datePublished": "2019-12-12T07:58:30+0800",
+  "title": "Successful NGWA 2019 (Groundwater Week)",
+  "cover": "/upfile/Images/news/S__9347080.jpg",
+  "excerptHtml": "<p>NGWA is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach.</p>",
+  "seo": {
+    "title": "Successful NGWA 2019 (Groundwater Week)",
+    "description": "NGWA is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/successful-ngwa-2019-groundwater-week-39#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/successful-ngwa-2019-groundwater-week-39"
+      },
+      "headline": "Successful NGWA 2019 (Groundwater Week)",
+      "image": "https://aquaskyplus.com/upfile/Images/news/S__9347080.jpg",
+      "description": "NGWA is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2019-12-12T07:58:30+0800"
+    }
+  ],
+  "bodyHtml": "<p>NGWA is a community of groundwater professionals working together to improve groundwater knowledge and the success of the members through education and outreach.&nbsp;<br />\r\nThis year, the event is going to collocate with the Irrigation Association&#39;s annual show. That is, you will have approaches to more activities, opportunities and &nbsp;exhibitors.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/S__9347078.jpg\" /><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/S__9347080.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/news/S__9347080.jpg",
+    "/upfile/Images/news/S__9347078.jpg"
+  ]
+}

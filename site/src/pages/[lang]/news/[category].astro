@@ -1,0 +1,16 @@
+---
+// 新聞列表第 1 頁：/en/news/EXHIBITIONS、/en/news/INDUSTRY、/zh/…（第 2 頁起在 [category]/[page].astro）
+import { getCollection } from 'astro:content';
+import NewsList from '../../../components/NewsList.astro';
+import { type Lang, liveLangs } from '../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const lists = (await getCollection('newsLists')).map((e) => e.data);
+  return lists.filter((l) => liveLangs.includes(l.lang)).map((list) => ({
+    params: { lang: list.lang, category: list.category },
+    props: { list, alternates: lists.filter((o) => o.category === list.category && liveLangs.includes(o.lang)).map((o) => o.lang) },
+  }));
+}
+const { list, alternates } = Astro.props;
+---
+<NewsList lang={Astro.params.lang as Lang} list={list} page={1} alternates={alternates} />

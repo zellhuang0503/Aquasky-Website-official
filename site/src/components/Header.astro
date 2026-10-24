@@ -5,8 +5,9 @@
 import { brand, nav } from '../lib/data';
 import { type Lang, href, t, languages } from '../lib/i18n';
 
-interface Props { lang: Lang; /** 語系後路徑，語言切換時保留同一頁 */ path: string }
-const { lang, path } = Astro.props;
+interface Props { lang: Lang; /** 語系後路徑，語言切換時保留同一頁 */ path: string; /** 這一頁真的存在的語系；不在裡面的語系切過去就到該語系首頁（舊站一律回首頁） */ alternates?: Lang[] }
+const { lang, path, alternates } = Astro.props;
+const switchHref = (code: Lang) => (!alternates || alternates.includes(code) ? href(code, path) : href(code));
 const d = t(lang);
 const label = (key: string) => (d.nav as Record<string, string>)[key] ?? key;
 const forLang = <T extends { langs?: string[] }>(x: T) => !x.langs || x.langs.includes(lang);
@@ -57,7 +58,7 @@ const active = (p?: string) => (p !== undefined && current === href(lang, p) ? '
           <ul class="dropdown-menu dropdown-menu-left">
             {languages.map((l) =>
               l.live ? (
-                <li class={l.code === lang ? 'active' : undefined}><a href={href(l.code, path)} hreflang={l.htmlLang} lang={l.htmlLang}><i class="fas fa-chevron-right" aria-hidden="true"></i> {l.label}</a></li>
+                <li class={l.code === lang ? 'active' : undefined}><a href={switchHref(l.code)} hreflang={l.htmlLang} lang={l.htmlLang}><i class="fas fa-chevron-right" aria-hidden="true"></i> {l.label}</a></li>
               ) : (
                 <li><span class="lang-pending" lang={l.htmlLang} title={d.common.languageNotLive}>{l.label}</span></li>
               )

@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "merry-christmas-and-happy-new-year-aquasky-129",
+  "path": "/news-detail/INDUSTRY/merry-christmas-and-happy-new-year-aquasky-129",
+  "status": "approved-legacy",
+  "dateText": "12 22 2022",
+  "datePublished": "2022-12-22T09:27:39+0800",
+  "title": "Merry Christmas and Happy New Year! ｜Aquasky",
+  "cover": "/upfile/Images/news/20221222_christmas_aquasky.png",
+  "excerptHtml": "<p>Merry Christmas and Happy New Year!</p>",
+  "seo": {
+    "title": "Merry Christmas and Happy New Year! ｜Aquasky",
+    "description": "Congratulations on a great year, and warm wishes to you and your family throughout the holiday season. Merry Christmas and Happy New Year!"
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/merry-christmas-and-happy-new-year-aquasky-129#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/merry-christmas-and-happy-new-year-aquasky-129"
+      },
+      "headline": "Merry Christmas and Happy New Year! ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20221222_christmas_aquasky.png",
+      "description": "Congratulations on a great year, and warm wishes to you and your family throughout the holiday season. Merry Christmas and Happy New Year!",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-12-22T09:27:39+0800"
+    }
+  ],
+  "bodyHtml": "<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20221222_christmas_aquasky.png\" /></p>\r\n\r\n<p>Congratulations on a great year, and warm wishes to you and your family throughout the holiday season.</p>\r\n\r\n<p>Merry Christmas and Happy New Year!</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20221222_christmas_aquasky.png"
+  ]
+}

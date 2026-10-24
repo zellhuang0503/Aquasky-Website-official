@@ -176,4 +176,55 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { series, home, products, legacy, pages };
+// 新聞：每篇一檔（src/content/news/<lang>/<CAT>/<slug>.json，import-news.mjs 從舊站封存產生）
+const newsCategory = z.enum(['EXHIBITIONS', 'INDUSTRY']);
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/news' }),
+  schema: z.object({
+    lang,
+    category: newsCategory,
+    slug: z.string().regex(/^[A-Za-z0-9._-]+$/),
+    path: sitePath.startsWith('/news-detail/'),
+    status,
+    /** 舊站列表與明細顯示的日期字樣，MM DD YYYY，照抄 */
+    dateText: z.string().regex(/^\d\d \d\d \d{4}$/),
+    datePublished: z.string().regex(/^\d{4}-\d\d-\d\dT/),
+    title: z.string().min(3),
+    cover: sitePath,
+    excerptHtml: z.string(),
+    // 舊站新聞的 description 長短不一（13～1235 字），照抄；之後整理再收緊
+    seo: z.object({ title: z.string().min(3), description: z.string().min(1) }),
+    legacyJsonLd: z.array(z.object({ '@type': z.string() }).passthrough()).min(1),
+    // 正文照抄；只准 YouTube 的 iframe，其餘跟照抄頁一樣的限制
+    bodyHtml: z.string().min(50)
+      .refine((s) => !/<(script|object|embed)\b/i.test(s), 'bodyHtml 不能有 script/object/embed')
+      .refine((s) => !/<form\b/i.test(s), 'bodyHtml 不能有表單')
+      .refine((s) => !/\son\w+=/i.test(s), 'bodyHtml 不能有 on* 事件屬性')
+      .refine((s) => !/cdn-cgi|__cf_email__/.test(s), 'bodyHtml 不能留 Cloudflare email 混淆')
+      .refine((s) => [...s.matchAll(/<iframe[^>]*src="([^"]*)"/g)].every((m) => /^https:\/\/www\.youtube(-nocookie)?\.com\/embed\//.test(m[1])), 'iframe 只准 YouTube')
+      .refine((s) => !/(src|href)="(?!\/|https?:|#|mailto:|tel:)/.test(s), 'bodyHtml 的 src/href 必須是絕對路徑'),
+    assets: z.array(z.string()),
+  }),
+});
+// 新聞列表設定：每個語系＋分類一檔（src/data/news/<lang>-<CAT>.json）
+const newsLists = defineCollection({
+  loader: glob({ pattern: '*-*.json', base: './src/data/news' }),
+  schema: z.object({
+    id: z.string(),
+    lang,
+    category: newsCategory,
+    path: sitePath.startsWith('/news/'),
+    perPage: z.literal(5),
+    pageCount: z.number().int().min(1),
+    titleBand: z.string().min(1),
+    h4Recent: z.string().min(1),
+    h4Side: z.string().min(1),
+    moreLabel: z.string().min(1),
+    backLabel: z.string().min(1),
+    sidebar: z.array(z.object({ dateText: z.string().min(1), href: sitePath, title: z.string().min(1) })).min(1).max(5),
+    order: z.array(z.string()).min(1),
+    seo,
+  }).refine((l) => Math.ceil(l.order.length / l.perPage) === l.pageCount, '頁數要等於 ceil(篇數/5)'),
+});
+
+export const collections = { series, home, products, legacy, pages, news, newsLists };

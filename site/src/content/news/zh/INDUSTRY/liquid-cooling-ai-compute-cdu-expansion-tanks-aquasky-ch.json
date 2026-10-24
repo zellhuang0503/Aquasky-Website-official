@@ -1,0 +1,40 @@
+{
+  "lang": "zh",
+  "category": "INDUSTRY",
+  "slug": "liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch",
+  "path": "/news-detail/INDUSTRY/liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch",
+  "status": "approved-legacy",
+  "dateText": "07 30 2026",
+  "datePublished": "2026-07-30T14:35:54+0800",
+  "title": "[技術白皮書] AI 算力時代的液冷防線：液冷 CDU 膨脹水箱關鍵作用與溢康全不鏽鋼解決方案｜溢康 AQUASKY",
+  "cover": "/upfile/Images/news/20260730_Liquid%20Cooling%20Defense%20COVER_aquasky_01%20(1)%20(1).png",
+  "excerptHtml": "<p>溢康（AQUASKY）以全不鏽鋼桶殼設計，搭配高純度乾燥氮氣預充，以及對 PG25 完美相容的過氧化物固化 EPDM 隔膜，為資料中心工程師提供了解決高溫差、高壓力波動的終極方案。這不僅符合 Google、微軟、亞馬遜等頂級終端客戶對「不鏽蝕、不洩漏、極致可靠」的硬體設備高標準要求，更為 AI 時代的高效能冷卻架構奠定了最堅實的防線。</p>",
+  "seo": {
+    "title": "[技術白皮書] AI 算力時代的液冷防線：液冷 CDU 膨脹水箱關鍵作用與溢康全不鏽鋼解決方案｜溢康 AQUASKY",
+    "description": "溢康（AQUASKY）以全不鏽鋼桶殼設計，搭配高純度乾燥氮氣預充，以及對 PG25 完美相容的過氧化物固化 EPDM 隔膜，為資料中心工程師提供了解決高溫差、高壓力波動的終極方案。這不僅符合 Google、微軟、亞馬遜等頂級終端客戶對「不鏽蝕、不洩漏、極致可靠」的硬體設備高標準要求，更為 AI 時代的高效能冷卻架構奠定了最堅實的防線。"
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch"
+      },
+      "headline": "[技術白皮書] AI 算力時代的液冷防線：液冷 CDU 膨脹水箱關鍵作用與溢康全不鏽鋼解決方案｜溢康 AQUASKY",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20260730_Liquid%20Cooling%20Defense%20COVER_aquasky_01%20%281%29%20%281%29.png",
+      "description": "溢康（AQUASKY）以全不鏽鋼桶殼設計，搭配高純度乾燥氮氣預充，以及對 PG25 完美相容的過氧化物固化 EPDM 隔膜，為資料中心工程師提供了解決高溫差、高壓力波動的終極方案。這不僅符合 Google、微軟、亞馬遜等頂級終端客戶對「不鏽蝕、不洩漏、極致可靠」的硬體設備高標準要求，更為 AI 時代的高效能冷卻架構奠定了最堅實的防線。",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2026-07-30T14:35:54+0800"
+    }
+  ],
+  "bodyHtml": "<p>隨著人工智慧（AI）、高效能運算（HPC）與萬物互聯的爆發性成長，資料中心單一機架（Rack）的熱設計功耗（TDP）正迅速突破 100 kW。傳統的風冷技術已面臨物理極限，以冷卻分配單元（CDU, Coolant Distribution Unit）為核心的直接液冷（DLC）或晶片液冷（Direct-to-Chip）已成為 Hyperscaler（如 Google、Microsoft、Amazon）的標準配置。在高度複雜且精密的水路系統中，如何維持微觀壓力的穩定、吸收流體因劇烈溫差產生的熱膨脹，並防止介質洩漏與系統氣蝕（Cavitation），是確保伺服器 24/7/365 不間斷運作的關鍵。本白皮書旨在探討密閉式膨脹水箱在二次迴路（Secondary Loop）中的核心物理機制，並闡述溢康（AQUASKY）專為極端液冷工況設計之全不鏽鋼隔膜式膨脹水箱的技術優勢。</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20260730_Liquid%20Cooling%20Defense%20COVER_aquasky_01%20(1)%20(1).png\" /></p>\r\n\r\n<p>一、 為什麼液冷 CDU 系統必須配置「密閉式膨脹水箱」？</p>\r\n\r\n<p>冷卻分配單元（CDU）在資料中心液冷架構中，扮演著熱交換與流體控制的中樞角色。通常系統分為一次迴路（Primary Loop，對外連接冷卻塔或冰水主機）與二次迴路（Secondary Loop，直接流經伺服器冷板 Cold Plate）。在封閉式的二次迴路中，流體力學與熱力學的物理特性決定了系統必須配置密閉式膨脹水箱：</p>\r\n\r\n<p>1. 吸收溫升引發的流體熱膨脹（Thermal Expansion Absorption）</p>\r\n\r\n<p>液冷系統在伺服器不同負載下，水溫會發生劇烈且迅速的波動。當冷卻介質（如純水或 25% 丙二醇溶液 PG25）溫度升高時，流體密度下降，體積隨之膨脹。在完全剛性的管路與冷板中，若無彈性容器吸收此膨脹體積，根據流體不可壓縮性（Incompressibility），微小的體積膨脹將導致系統內部壓力呈幾何級數急劇飆升，極易引發冷板變形、快拆接頭（Quick Disconnects）漏水、甚至管路爆裂，造成伺服器損毀的災難性後果。</p>\r\n\r\n<p>2. 動態壓力補償與氣蝕預防（Dynamic Pressure Compensation &amp; Cavitation Prevention）</p>\r\n\r\n<p>當伺服器負載驟降、水溫冷卻收縮時，若無系統性補償，迴路內會瞬間產生局部「負壓」（真空狀態）。負壓不僅會將外部空氣經由密封微孔吸入系統導致管路氧化，更會在循環水泵進口端引發「氣蝕現象」（Cavitation）。水泵葉片在高頻氣泡破裂的衝擊下會快速疲勞、產生噪音，甚至導致水泵燒毀、流量驟降。膨脹水箱提供動態的正壓補償，確保系統在任何溫度變化下均維持穩定的正壓（Positive Gauge Pressure）。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>二、 溢康（AQUASKY）全不鏽鋼（Stainless Steel）設計：直擊 Hyperscaler 的嚴苛規範</p>\r\n\r\n<p>對於 Google、微軟（Microsoft）、亞馬遜（Amazon AWS）等終端客戶而言，資料中心的維運標準是「不容許單點故障（Zero Single Point of Failure）」。傳統用於民生暖通（HVAC）或輕工業的碳鋼塗裝膨脹水箱，已完全無法通過這些 Hyperscaler 的技術審查（LQC/TQR 標準）。溢康針對此痛點，開發出全不鏽鋼設計，提供三大核心技術優勢：</p>\r\n\r\n<p>1. 零腐蝕與高純度水質維護（Zero Corrosion &amp; Fluid Purity Retention）</p>\r\n\r\n<p>資料中心二次迴路所使用的液體（如去離子水 DI Water 或專用冷卻液），對金屬具有高度敏感性與腐蝕傾向。</p>\r\n\r\n<p>材質選擇：溢康水箱桶殼採用高級不鏽鋼（SUS304 / SUS316L）製造。其表面在出廠前經過精密的化學鈍化（Passivation）或電拋光（Electropolishing）處理，能阻絕與介質的電化學反應，徹底消除生鏽、微粒子（Particles）釋放的風險。</p>\r\n\r\n<p>保護精密元件：這能確保冷板（Micro-channels）細微流道不被鐵鏽或雜質堵塞，維持最佳熱阻（Thermal Resistance）。</p>\r\n\r\n<p>2. 極致防洩漏結構與高承壓強度（Extreme Leak-Proof &amp; High MWP Resilience）</p>\r\n\r\n<p>精密焊接工藝：溢康擁有引以為傲的獨家自動化全焊接結構（Full-Welding Structure）。相對於傳統法蘭連接或螺紋密封，全焊接結構消除了密封圈因老化、熱脹冷縮而退化失效的風險，確保系統在 30 Bar 以上的超高設計壓力（MWP）下，仍維持絕對氣密性與液密性。</p>\r\n\r\n<p>承壓彈性：不鏽鋼本體具備極高的機械拉伸強度，在經歷無數次的壓力和溫度循環（Pressure and Thermal Cycling）後，桶身不會產生結構疲勞、變形或蠕變。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>三、 特製 EPDM 橡膠隔膜與 PG25 的完美物理相容性</p>\r\n\r\n<p>膨脹水箱的核心在於將「水室」與「氣室」完全隔離的彈性隔膜（Diaphragm）。溢康與國際高分子材料實驗室合作，專為資料中心液冷系統開發了特製過氧化物固化 EPDM（Peroxide Cured EPDM）隔膜：</p>\r\n\r\n<p>1. 與 PG25 (25% Propylene Glycol) 的完美相容性</p>\r\n\r\n<p>為防止低溫結凍並提供防腐蝕保護，CDU 二次迴路普遍採用 25% 丙二醇水溶液（PG25）。常規的橡膠（如天然橡膠、丁腈橡膠 NBR）在長期接觸醇類、添加劑與防腐蝕抑制劑時，會發生溶脹（Swelling）、硬化、甚至分子的降解（Degradation）。</p>\r\n\r\n<p>耐化學性：溢康的 Peroxide Cured EPDM 隔膜在化學鍵結上具備極高的穩定性，對於 PG25 展現了近乎零的化學反應活性。在長期的高溫運作下，隔膜不釋放增塑劑（Plasticizer）、不析出雜質，確保冷卻液的導電度（Conductivity）與化學成份維持恆定。</p>\r\n\r\n<p>2. 優異的彈性記憶與抗滲透率（Elastic Memory &amp; Anti-Permeation）</p>\r\n\r\n<p>微觀防滲透：此特製 EPDM 具有極低的氣體滲透率，能防止氣室的氣體分子分子級擴散滲透至冷卻液中，避免造成二次迴路氣阻。</p>\r\n\r\n<p>抗疲勞性能：在劇烈溫差波動引起的連續往復形變中，此隔膜具備出色的彈性記憶（Elastic Memory），能承受高頻次、大範圍的膨脹收縮，確保長期壽命。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>四、 內預充高純度氮氣（Dry Nitrogen Pre-charge）的熱力學物理優勢</p>\r\n\r\n<p>溢康密閉式膨脹水箱在出廠前，其氣室已預先充填高純度的乾燥氮氣（N_2）。相較於常規充填空氣，預充氮氣具有決定性的熱力學與化學防護優勢：</p>\r\n\r\n<p>1. 消除外部與內部溫差對壓力的擾動</p>\r\n\r\n<p>熱力學穩定性：氮氣屬於惰性氣體，其分子體積較大且不含水分。在極端的環境溫差波動下，其膨脹係數極低且極其穩定，其行為高度符合理想氣體狀態方程式：</p>\r\n\r\n<p>P&sdot;V=n&sdot;R&sdot;T</p>\r\n\r\n<p>恆定壓力：這意味著即使二次迴路周圍的機房環境溫度或機櫃溫度發生劇烈變動，水箱內部的預充壓力（P_low）依然能維持驚人的一致性，不會因為空氣中的水氣冷凝或熱膨脹而產生氣墊壓力的漂移（Pressure Drift），確保 CDU 系統壓力控制元件（如壓力傳感器、安全閥）的控制邏輯不被打亂。</p>\r\n\r\n<p>2. 防止內部氧化與隔膜老化</p>\r\n\r\n<p>長壽命保證：如果充填常規空氣，空氣中的氧氣與水氣在長期的壓迫與中高溫狀態下，會對隔膜背部進行微觀的氧化與水解，導致橡膠加速老化龜裂。高純度乾燥氮氣創造了一個完全無氧、無水分的惰性保護環境，從根本上杜絕了隔膜材料與不鏽鋼內壁的任何氣相腐蝕，將水箱的設計使用壽命推向與資料中心同級的 10 年以上。</p>\r\n\r\n<p>五、 技術參數與物理性能比較表</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20260730_Liquid%20Cooling%20Defense%20COVER_aquasky_02_CH.png\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>六、 結論</p>\r\n\r\n<p>在 Hyperscale 資料中心追求 PUE（電力使用效率）極致化的今天，液冷系統的微小失效都可能導致數百萬美元的算力損失。冷卻分配單元（CDU）的穩定性，建立在每一個基礎實體物理元件的絕對可靠之上。</p>\r\n\r\n<p>溢康（AQUASKY）以全不鏽鋼桶殼設計，搭配高純度乾燥氮氣預充，以及對 PG25 完美相容的過氧化物固化 EPDM 隔膜，為資料中心工程師提供了解決高溫差、高壓力波動的終極方案。這不僅符合 Google、微軟、亞馬遜等頂級終端客戶對「不鏽蝕、不洩漏、極致可靠」的硬體設備高標準要求，更為 AI 時代的高效能冷卻架構奠定了最堅實的防線。</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20260730_Liquid%20Cooling%20Defense%20COVER_aquasky_01%20(1)%20(1).png",
+    "/upfile/Images/news/20260730_Liquid%20Cooling%20Defense%20COVER_aquasky_02_CH.png"
+  ]
+}

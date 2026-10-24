@@ -1,0 +1,27 @@
+{
+  "id": "zh-EXHIBITIONS",
+  "lang": "zh",
+  "category": "EXHIBITIONS",
+  "path": "/news/EXHIBITIONS",
+  "perPage": 5,
+  "pageCount": 1,
+  "titleBand": "展覽訊息",
+  "h4Recent": "最新文章",
+  "h4Side": "熱門文章",
+  "moreLabel": "了解更多...",
+  "backLabel": "返回",
+  "sidebar": [
+    {
+      "dateText": "April 14 2025",
+      "href": "/zh/news-detail/EXHIBITIONS/2025ish-aquasky-177",
+      "title": "2025法蘭克福ISH：「邁向永續未來的解決方案」｜溢康 Aquasky"
+    }
+  ],
+  "order": [
+    "2025ish-aquasky-177"
+  ],
+  "seo": {
+    "title": "AQUASKY 國際展覽資訊：全球水處理展與衛浴水暖展覽時程",
+    "description": "掌握溢康企業 (AQUASKY) 全球參展計畫。歡迎於義大利 MCE、Aquatech 等頂級國際水處理及衛浴水暖展會參觀我們的攤位並體驗高品質壓力桶。"
+  }
+}

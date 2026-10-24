@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "happy-chinese-new-year-aquasky-92",
+  "path": "/news-detail/INDUSTRY/happy-chinese-new-year-aquasky-92",
+  "status": "approved-legacy",
+  "dateText": "01 29 2022",
+  "datePublished": "2022-01-29T15:47:48+0800",
+  "title": "Happy Chinese New Year ｜Aquasky",
+  "cover": "/upfile/Images/news/20220129_01aq.jpg",
+  "excerptHtml": "<p>Happy Chinese New Year ｜Aquasky</p>\r\n\r\n<p>The year of Tiger. We wish you have a wonderful&nbsp;life.&nbsp;Wishing you the fullness of the vigor and vitality of the tiger.</p>",
+  "seo": {
+    "title": "Happy Chinese New Year ｜Aquasky",
+    "description": "Happy Chinese New Year ｜Aquasky The year of Tiger. We wish you have a wonderful life. Wishing you the fullness of the vigor and vitality of the tiger."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/happy-chinese-new-year-aquasky-92#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/happy-chinese-new-year-aquasky-92"
+      },
+      "headline": "Happy Chinese New Year ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20220129_01aq.jpg",
+      "description": "Happy Chinese New Year ｜Aquasky The year of Tiger. We wish you have a wonderful life. Wishing you the fullness of the vigor and vitality of the tiger.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-01-29T15:47:48+0800"
+    }
+  ],
+  "bodyHtml": "<p>Happy Chinese New Year ｜Aquasky</p>\r\n\r\n<p>The year of Tiger. We wish you have a wonderful&nbsp;life.</p>\r\n\r\n<p>Wishing you the fullness of the vigor and vitality of the tiger.</p>\r\n\r\n<p>In the new year, Aquasky will continue to provide you with high-quality pressure tanks and great service.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20220129_01aq.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/news/20220129_01aq.jpg"
+  ]
+}

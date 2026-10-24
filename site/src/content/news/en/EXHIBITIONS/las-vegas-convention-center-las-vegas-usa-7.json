@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "las-vegas-convention-center-las-vegas-usa-7",
+  "path": "/news-detail/EXHIBITIONS/las-vegas-convention-center-las-vegas-usa-7",
+  "status": "approved-legacy",
+  "dateText": "06 28 2017",
+  "datePublished": "2017-06-28T13:33:20+0800",
+  "title": "Las Vegas Convention Center, Las Vegas,  USA",
+  "cover": "/upfile/Images/news/2017_AHR_EXPO.jpg",
+  "excerptHtml": "<p>2017 AHR EXPO - International Air-Conditioning, Heating, Refrigerating Exposition is a 3 day event being held from 30th January to the 1st February 2017 at the Las Vegas Convention Center in Las Vegas, USA.</p>",
+  "seo": {
+    "title": "Aquasky news: AHR EXPO 2017",
+    "description": "Aquasky: This event showcases products like International AHR Expo 2017 is an International Air-Conditioning, Heating, Refrigerating Exposition."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/las-vegas-convention-center-las-vegas-usa-7#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/las-vegas-convention-center-las-vegas-usa-7"
+      },
+      "headline": "Las Vegas Convention Center, Las Vegas, USA",
+      "image": "https://aquaskyplus.com/upfile/Images/news/2017_AHR_EXPO.jpg",
+      "description": "Aquasky: This event showcases products like International AHR Expo 2017 is an International Air-Conditioning, Heating, Refrigerating Exposition.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2017-06-28T13:33:20+0800"
+    }
+  ],
+  "bodyHtml": "<p>2017 AHR EXPO - International Air-Conditioning, Heating, Refrigerating Exposition is a 3 day event being held from 30th January to the 1st February 2017 at the Las Vegas Convention Center in Las Vegas, USA. This event showcases products like International AHR Expo 2017 is an International Air-Conditioning, Heating, Refrigerating Exposition.<br />\r\nAT: Las Vegas Convention Center, Las Vegas, &nbsp;USA</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>About Aquasky</p>\r\n\r\n<p>Founded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning, and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur goal is to provide top-quality, dependable pressure tanks to our customers at a competitive price time after time. Our end-to-end manufacturing solution provides a stable price list, the fastest custom design option, and the on-time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/2017_AHR_EXPO.jpg"
+  ]
+}

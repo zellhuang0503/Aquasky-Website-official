@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "how-big-a-pressure-tank-do-i-need-aquasky-45",
+  "path": "/news-detail/INDUSTRY/how-big-a-pressure-tank-do-i-need-aquasky-45",
+  "status": "approved-legacy",
+  "dateText": "03 04 2020",
+  "datePublished": "2020-03-04T14:07:11+0800",
+  "title": "How big a pressure tank do I need? ｜Aquasky",
+  "cover": "/upfile/Images/news/Flow.jpg",
+  "excerptHtml": "<p>How big a pressure tank do I need? ｜Aquasky</p>\r\n\r\n<p>How big a pressure tank do I need?&nbsp;A water pressure tank inside a booster pump system can avoid the water overrun and have too much on and off circle. The more a pump must run, the more wear and tear occurs to the pumping mechanism and the electric motor.&nbsp;</p>",
+  "seo": {
+    "title": "How big a pressure tank do I need?",
+    "description": "How big a pressure tank do I need? A water pressure tank inside a booster pump system can avoid the water overrun and have too much on and off circle. The more a pump must run, the more wear and tear occurs to the pumping mechanism and the electric motor."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/how-big-a-pressure-tank-do-i-need-aquasky-45#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/how-big-a-pressure-tank-do-i-need-aquasky-45"
+      },
+      "headline": "How big a pressure tank do I need? ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/Flow.jpg",
+      "description": "How big a pressure tank do I need? A water pressure tank inside a booster pump system can avoid the water overrun and have too much on and off circle. The more a pump must run, the more wear and tear occurs to the pumping mechanism and the electric motor.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2020-03-04T14:07:11+0800"
+    }
+  ],
+  "bodyHtml": "<p>How big a pressure tank do I need?</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/Flow.jpg\" /></p>\r\n\r\n<p>A water pressure tank inside a booster pump system can avoid the water overrun and have too much on and off circle. The more a pump must run, the more wear and tear occurs to the pumping mechanism and the electric motor.&nbsp;</p>\r\n\r\n<p>The key point of sizing a water pressure tank is to have the system outlet opens, and the water pump should not start after the water run for a minute.&nbsp;</p>\r\n\r\n<p>Understanding the pressure setting for the system is also very important. Most private home well systems operate between 30 pounds per square inch (PSI) and 50 PSI. This means that the pump shuts off at the higher 50 PSI and turns back on to fill the pressure tank at 30 PSI.</p>\r\n\r\n<p>If the water pressure drops from 50 PSI to 30 PSI less in a minute then you need a larger size pressure tank.<br />\r\n&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/Flow.jpg"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "the-relationship-between-pressure-controller-and-pump-and-barrel-87",
+  "path": "/news-detail/INDUSTRY/the-relationship-between-pressure-controller-and-pump-and-barrel-87",
+  "status": "approved-legacy",
+  "dateText": "12 22 2021",
+  "datePublished": "2021-12-22T10:56:10+0800",
+  "title": "The relationship between pressure controller and pump and barrel",
+  "cover": "/upfile/Images/PRESSURE%20SWITCH.jpg",
+  "excerptHtml": "<p>The relationship between pressure controller and pump and barrel</p>\r\n\r\n<p>A pressure switch is most often used to turn a water pump on and off by sensing a change in system pressure. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids.</p>",
+  "seo": {
+    "title": "The relationship between pressure controller and pump and barrel",
+    "description": "The relationship between pressure controller and pump and barrel A pressure switch is most often used to turn a water pump on and off by sensing a change in system pressure. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/the-relationship-between-pressure-controller-and-pump-and-barrel-87#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/the-relationship-between-pressure-controller-and-pump-and-barrel-87"
+      },
+      "headline": "The relationship between pressure controller and pump and barrel",
+      "image": "https://aquaskyplus.com/upfile/Images/PRESSURE%20SWITCH.jpg",
+      "description": "The relationship between pressure controller and pump and barrel A pressure switch is most often used to turn a water pump on and off by sensing a change in system pressure. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2021-12-22T10:56:10+0800"
+    }
+  ],
+  "bodyHtml": "<p>The relationship between pressure controller and pump and barrel</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/PRESSURE%20SWITCH.jpg\" /></p>\r\n\r\n<p>A pressure switch is most often used to turn a water pump on and off by sensing a change in system pressure. They are used widely in the Water Well Industry as they are mainly used in systems that have pressurized liquids.</p>\r\n\r\n<p>In addition, switches can be used to control air compressor pumps. They are commonly used to make or break electrical circuits at selected pressures or other devices such as alarms used in many industrial applications.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>All Pressure switches have two operating points known as the cut-in (Reset Point) and cut-out (Trip Point) settings. The cut-in point is for the falling pressure and the cut-out point is for the rising pressure. Every switch also includes a differential or a range based on the cut-in and cut-out points.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Normally, if the pressure in the system were to drop approximately 10 PSI below the set cut-in point, the switch will open and turn off the pump. When the condition has been relieved, the manual lever can be turned back to the start position and, if pressure is restored while holding there, the switch resumes normal operation.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>A difference of a minimum of 2-5 PSI is required to ensure the switch won&#39;t trip. If you are finding that the switch is tripping the cut-in pressure is most likely too close to the tank pre-charge. For example, if the switch cut-in is 40 PSI then the tank pre-charge should be 35-38 PSI maximum.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>It is beneficial for the installation of pressure switches and pressure tanks in the water system, which helps preserve the life of the pump.</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/PRESSURE%20SWITCH.jpg"
+  ]
+}

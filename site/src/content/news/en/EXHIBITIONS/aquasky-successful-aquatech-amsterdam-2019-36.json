@@ -1,0 +1,40 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "aquasky-successful-aquatech-amsterdam-2019-36",
+  "path": "/news-detail/EXHIBITIONS/aquasky-successful-aquatech-amsterdam-2019-36",
+  "status": "approved-legacy",
+  "dateText": "11 12 2019",
+  "datePublished": "2019-11-12T11:02:34+0800",
+  "title": "Aquasky Successful Aquatech Amsterdam 2019",
+  "cover": "/upfile/Images/news/1573196462980.jpg",
+  "excerptHtml": "<p>Aquasky Successful Aquatech Amsterdam 2019&nbsp;</p>\r\n\r\n<p>Aquatech Amsterdam is a water trade show for process, drinking and waste water.</p>",
+  "seo": {
+    "title": "Aquasky Successful Aquatech Amsterdam 2019",
+    "description": "Aquatech Amsterdam is a water trade show for process, drinking and waste water. Since 1964, it has been the platform for professionals to exchange know-how, build long-lasting relations and create high-quality leads."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/aquasky-successful-aquatech-amsterdam-2019-36#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/aquasky-successful-aquatech-amsterdam-2019-36"
+      },
+      "headline": "Aquasky Successful Aquatech Amsterdam 2019",
+      "image": "https://aquaskyplus.com/upfile/Images/news/1573196462980.jpg",
+      "description": "Aquatech Amsterdam is a water trade show for process, drinking and waste water. Since 1964, it has been the platform for professionals to exchange know-how, build long-lasting relations and create high-quality leads.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2019-11-12T11:02:34+0800"
+    }
+  ],
+  "bodyHtml": "<p>Aquasky Successful Aquatech Amsterdam 2019&nbsp;</p>\r\n\r\n<p>Aquatech Amsterdam is a water trade show for process, drinking and waste water. Since 1964, it has been the platform for professionals to exchange know-how, build long-lasting relations and create high-quality leads. About 21,000 visitors from 139 countries and over 850 exhibitors will attend the exhibition. The show is held every two years. It provides a global presence from which you can benefit all year round.&nbsp;</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/1573196466225.jpg\" /><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/1573196462980.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/news/1573196462980.jpg",
+    "/upfile/Images/news/1573196466225.jpg"
+  ]
+}

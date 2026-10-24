@@ -1,0 +1,40 @@
+{
+  "lang": "en",
+  "category": "INDUSTRY",
+  "slug": "aquasky-has-passed-peds-annual-audit-aquasky-123",
+  "path": "/news-detail/INDUSTRY/aquasky-has-passed-peds-annual-audit-aquasky-123",
+  "status": "approved-legacy",
+  "dateText": "10 25 2022",
+  "datePublished": "2022-10-25T10:02:58+0800",
+  "title": "AQUASKY has passed PED's annual audit ｜Aquasky",
+  "cover": "/upfile/Images/news/tuv%20rheinland%E5%BE%B7%E5%9C%8B%E8%90%8A%E8%8C%B5%E6%AA%A2%E9%A9%97.jpg",
+  "excerptHtml": "<p>AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit.</p>",
+  "seo": {
+    "title": "AQUASKY has passed PED's annual audit ｜Aquasky",
+    "description": "AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-peds-annual-audit-aquasky-123#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-has-passed-peds-annual-audit-aquasky-123"
+      },
+      "headline": "AQUASKY has passed PED's annual audit ｜Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/tuv%20rheinland%E5%BE%B7%E5%9C%8B%E8%90%8A%E8%8C%B5%E6%AA%A2%E9%A9%97.jpg",
+      "description": "AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2022-10-25T10:02:58+0800"
+    }
+  ],
+  "bodyHtml": "<p>AQUASKY has successfully passed the Directive 2014/68/EU (PED) annual audit.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/tuv%20rheinland%E5%BE%B7%E5%9C%8B%E8%90%8A%E8%8C%B5%E6%AA%A2%E9%A9%97.jpg\" /></p>\r\n\r\n<p>The Pressure Equipment Directive (PED) (2014/68/EU) applies to the design, manufacture, and conformity assessment of stationary pressure equipment with a maximum allowable pressure greater than 0.5 bar.</p>\r\n\r\n<p>Pressure equipment that is covered by the PED includes pressure vessels, pressure accessories, piping, steam boilers, safety accessories, and assemblies. The Pressure Equipment Directive aims to guarantee the free movement of the products in its scope while ensuring a high level of safety.</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20221109_Aquasky_CE%E8%AA%8D%E8%AD%89%E9%80%9A%E9%81%8E.jpg\" /></p>",
+  "assets": [
+    "/upfile/Images/news/tuv%20rheinland%E5%BE%B7%E5%9C%8B%E8%90%8A%E8%8C%B5%E6%AA%A2%E9%A9%97.jpg",
+    "/upfile/Images/news/20221109_Aquasky_CE%E8%AA%8D%E8%AD%89%E9%80%9A%E9%81%8E.jpg"
+  ]
+}

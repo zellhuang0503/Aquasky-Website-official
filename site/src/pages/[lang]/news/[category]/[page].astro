@@ -1,0 +1,19 @@
+---
+// 新聞列表第 2 頁起：/en/news/INDUSTRY/page2 …（網址照舊站，pageN 不加斜線）
+import { getCollection } from 'astro:content';
+import NewsList from '../../../../components/NewsList.astro';
+import { type Lang, liveLangs } from '../../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const lists = (await getCollection('newsLists')).map((e) => e.data);
+  return lists.filter((l) => liveLangs.includes(l.lang)).flatMap((list) =>
+    Array.from({ length: list.pageCount - 1 }, (_, i) => i + 2).map((page) => ({
+      params: { lang: list.lang, category: list.category, page: `page${page}` },
+      // 這一頁在其他語系也有（頁數夠）才列 hreflang
+      props: { list, page, alternates: lists.filter((o) => o.category === list.category && liveLangs.includes(o.lang) && o.pageCount >= page).map((o) => o.lang) },
+    })),
+  );
+}
+const { list, page, alternates } = Astro.props;
+---
+<NewsList lang={Astro.params.lang as Lang} list={list} page={page} alternates={alternates} />

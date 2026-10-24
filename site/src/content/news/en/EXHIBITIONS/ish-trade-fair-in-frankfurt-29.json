@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "category": "EXHIBITIONS",
+  "slug": "ish-trade-fair-in-frankfurt-29",
+  "path": "/news-detail/EXHIBITIONS/ish-trade-fair-in-frankfurt-29",
+  "status": "approved-legacy",
+  "dateText": "03 06 2019",
+  "datePublished": "2019-03-06T15:49:44+0800",
+  "title": "ISH trade fair in Frankfurt",
+  "cover": "/upfile/Images/news/ISH-2019-Frankfurt.jpg",
+  "excerptHtml": "<p>ISH is the world&#39;s leading trade fair focusing on the responsible management of water and energy in buildings.&nbsp;<br />\r\nOver 2,500 exhibitors will launch their latest products, technologies and solutions at ISH. Therefore, ISH has a leading role worldwide as the occasion itself when the sector comes together.&nbsp;<br />\r\nThis trade fair is held in Frankfurt, Germany.<br />\r\nIf you want to have a meeting with us. Please use the email to contact us.</p>",
+  "seo": {
+    "title": "ISH trade fair in Frankfurt",
+    "description": "ISH is the world's leading trade fair focusing on the responsible management of water and energy in buildings. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/ish-trade-fair-in-frankfurt-29#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/en/news-detail/EXHIBITIONS/ish-trade-fair-in-frankfurt-29"
+      },
+      "headline": "ISH trade fair in Frankfurt",
+      "image": "https://aquaskyplus.com/upfile/Images/news/ISH-2019-Frankfurt.jpg",
+      "description": "ISH is the world's leading trade fair focusing on the responsible management of water and energy in buildings. Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2019-03-06T15:49:44+0800"
+    }
+  ],
+  "bodyHtml": "<p>ISH is the world&#39;s leading trade fair focusing on the responsible management of water and energy in buildings.&nbsp;<br />\r\nOver 2,500 exhibitors will launch their latest products, technologies and solutions at ISH. Therefore, ISH has a leading role worldwide as the occasion itself when the sector comes together.&nbsp;<br />\r\nThis trade fair is held in Frankfurt, Germany.<br />\r\nIf you want to have a meeting with us. Please use the email to contact us.</p>\r\n\r\n<p>About Aquasky<br />\r\nAquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning and solar water heater as well as the residential and commercial pumping system.<br />\r\nOur Goal is to provide top quality, dependable pressure tank to our customers at a competitive price time after time. Our end-to end manufacturing solution provides a stable price list, the fastest custom design option and the on time delivery.</p>",
+  "assets": [
+    "/upfile/Images/news/ISH-2019-Frankfurt.jpg"
+  ]
+}
