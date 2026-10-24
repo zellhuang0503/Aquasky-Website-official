@@ -34,6 +34,11 @@
 .draft-note { display: inline-block; margin: 8px auto 0; background: #fff6d6; color: #6a4f00; border: 1px solid #f1d98a; padding: 2px 10px; border-radius: 6px; font-size: 13px; font-weight: normal; }
 .series-content .series-spec th[scope] { font-weight: normal; }
 
+/* 新聞明細：8 篇正文有固定寬度的表格／YouTube iframe，舊站在手機上會把整頁撐寬；
+   新站讓正文在自己的框裡橫向捲、影片最多跟框一樣寬。桌機 1140 寬放得下，版面不變。 */
+#news-container #ImgAutoResponsive { overflow-x: auto; }
+#news-container #ImgAutoResponsive iframe { max-width: 100%; }
+
 /* 404 */
 .notfound { text-align: center; padding: 64px 16px; }
 .notfound .btn-link { margin: 4px; }
