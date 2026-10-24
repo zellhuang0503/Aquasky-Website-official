@@ -75,7 +75,8 @@ function parse(lang, s) {
   const headSeg = main.slice(0, main.indexOf('<h2 class="h2_2hline lang_rtl">'));
   const heroBlocks = [...headSeg.matchAll(/<div class="([^"]+)">\s*(?:<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"(?:[^>]*alt="([^"]*)")?[^>]*>)?\s*<\/div>/g)]
     .filter((m) => !m[1].startsWith('pd-aquasky-text') && !m[1].startsWith('container'))
-    .map((m) => ({ class: m[1], image: m[2] ? { src: abs(m[2]), class: m[3], alt: unescape(m[4] ?? '') } : null }));
+    // 舊站 THERMAL 大圖 alt 寫成「HERMAL-PLUS…」（少一個 T），新站修正，README 有列
+    .map((m) => ({ class: m[1], image: m[2] ? { src: abs(m[2]), class: m[3], alt: unescape(m[4] ?? '').replace(/^HERMAL-PLUS/, 'THERMAL-PLUS') } : null }));
   // PREMIUM-PLUS：h1 色條與 #pd-container-01 之間有一條滿版橫幅圖
   const pre = main.slice(0, main.indexOf('id="pd-container-01"')).match(/<div style="background-color:(#[0-9A-Fa-f]{3,6});">\s*<img[^>]+src="([^"]+)"[^>]*class="([^"]+)"(?:[^>]*alt="([^"]*)")?[^>]*>\s*<\/div>/);
   const preBanner = pre ? { bg: pre[1], image: { src: abs(pre[2]), class: pre[3], alt: unescape(pre[4] ?? '') } } : null;

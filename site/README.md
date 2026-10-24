@@ -76,7 +76,7 @@ npm run check           # 型別與模板檢查
 審查官（`.claude/agents/aquasky-site-reviewer.md`）B1 項以這份清單為準：不在清單上的差異都算不通過。
 
 - hreflang 逐頁對應（舊站全部指首頁，是 SEO 錯誤）。
-- 型號統一寫 `LQC-3`（舊站 `LQC- 3`、`LQC -12` 空格亂）；下載連結「Brchure」錯字改成「Brochure」。
+- 型號統一寫 `LQC-3`（舊站 `LQC- 3`、`LQC -12` 空格亂）；下載連結「Brchure」錯字改成「Brochure」；THERMAL-PLUS 大圖 alt「HERMAL-PLUS」改成「THERMAL-PLUS」。
 - 原生輸出 JSON-LD：Organization、WebSite、BreadcrumbList、ProductGroup、FAQPage。舊站靠 AEO Worker 從外面注入。
 - 每頁只有一個 `<h1>`：首頁 h1 是字標圖（同舊站）；系列頁舊站有兩個 h1（色條一個、標題圖又包一個），新站標題圖改用 `<div class="h1-1">`。
 - 語言選單裡還沒上線的語系（es／fr／ru／ar）是灰字不能點，舊站是連結。等那些語系做好再開。

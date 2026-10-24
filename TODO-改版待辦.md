@@ -43,6 +43,7 @@
   - [x] 2026-10-24 第一次審查（首頁＋LQCOL）：網址／SEO／JSON-LD／工程衛生全過，版型 9 項不通過已全部修掉：產品列回深色區、首頁米色底＋44pt 公司名＋字標原尺寸＋輪播一次一張、選單結構與 padding 與 logo 照舊站、正文粗體、規格數字照原字串、結構圖標示照舊站斷行、中文選單／認證說明／地址一字不差、zh ASME 按鈕兩行（手機不再溢出）、en 首頁認證說明先不顯示（舊站沒有）、產品／品牌／選單資料檔都加 schema。
   - [x] 2026-10-24 第二次審查（19 頁）：9 項已修：zh 7 頁 DM 圖補齊並照舊站 JS 用 img-responsive 滿版、PUMPLUS 橫式一列三張（colClass）、RO 型號無包裝層／MEGA 標題外 <p> 間距／PREMIUM 無標題外框（照舊站逐頁存旗標）、內頁改載舊站客製 bootstrap.css、en 首頁補空的公司名段落、home.json 加 schema、classic 加 dataQuestions（自動列公升換加侖不符：APT-3、ROT-1 的 3 L＝0.5 gal；APT-60／APT-60H／ROT-14／MEGA-60 的 60 L＝14 gal）、zh 經典頁 JSON-LD 不帶 hasVariant、README 補 HYDRO 舊站 HTML 未閉合一條。
   - [x] 2026-10-24 第三次審查：上輪 9 項全過；新 2 項已修：zh DM 區塊照舊站結構含空段落（edmHtml，verify 與封存逐字比）、README 補「不做 WOW 進場動畫」；標題圖 alt 改用舊站原文。
+  - [x] 2026-10-24 第四次審查：**可以交付**（19 頁 en/zh；頁高與舊站差 3–4px 像素誤差，zh/LQCOL 因 AI 初稿文字長度不同）。
   - [ ] 問客戶（規格疑點彙整）：LQCOL 三項＋上述 6 個型號的加侖數＋MEGA／GIGA 中文都叫「高壓泵浦壓力桶」。
   - [ ] 審查流程：每做完一頁用 `.claude/agents/aquasky-site-reviewer.md` 審（10/24 建；本 session 建的要重開 session 才會被 Agent 工具認得，過渡期用 general-purpose agent 讀該檔執行）。
   - [ ] 2026-10-24 已擬 LINE 訊息向 Tiffany 要三樣：所有 Banner 原圖、所有下載 PDF 原檔、Selection Tools 最終版 Excel（草稿在 官網改版說明文件/05-舊站資料擷取/2026-10-24-LINE給Tiffany-索取Banner-PDF-選型Excel.md）。黃老闆傳出後改成「等回覆」。收件用 Drive 資料夾已開：`梵亞/AQUASKY-AEO/溢康提供素材-20261024/`（三個子資料夾），Tiffany 要求存取權時記得給「編輯者」。
