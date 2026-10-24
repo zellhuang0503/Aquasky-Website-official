@@ -18,7 +18,6 @@ const ORIGIN = 'https://aquaskyplus.com';
 const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories'];
 const paths = args.filter((a) => a.startsWith('/'));
 const PAGES = (paths.length ? paths : DEFAULT).map((p) => ({ path: p, id: p.slice(1).toLowerCase() }));
-const LANGS = ['en', 'zh'];
 
 const index = new Map();
 for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\n')) {
@@ -36,6 +35,14 @@ function parse(lang, p) {
   const html = readFileSync(join(archive, row.relative_path), 'utf8');
   const title = text(html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? '');
   const description = unescape(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '');
+  // 舊站 <head> 自己寫的 JSON-LD（Product），原樣搬過來；@context 拿掉，由 Seo.astro 的 @graph 統一給
+  const headHtml = html.slice(0, html.indexOf('<body'));
+  const legacyJsonLd = [...headHtml.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((m) => {
+    const obj = JSON.parse(m[1]);
+    if (Array.isArray(obj)) throw new Error(`${lang}${p.path}: JSON-LD array not handled`);
+    delete obj['@context'];
+    return obj;
+  });
   // 頁面 <style>
   let legacyCss = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n')
     .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\.nav\s*>\s*li\s*>\s*a\s*\{[^}]*\}/g, '')
@@ -69,11 +76,24 @@ function parse(lang, p) {
     .replace(/(src|href)="([^"]+)"/g, (_m, k, v) => `${k}="${absUrl(v)}"`)
     .replace(/url\((['"]?)(?!\/|https?:|data:)/g, 'url($1/')
     .replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  // 舊站有的頁少關一個 div（accessories）；補上，否則瀏覽器會把頁尾吃進去（HYDRO-PLUS 經典頁同樣處理，README 有列）
+  const opens = (body.match(/<div\b/g) || []).length, closes = (body.match(/<\/div>/g) || []).length;
+  if (opens > closes) body += '\n' + '</div>'.repeat(opens - closes) + ' <!-- 補舊站少關的 div -->';
+  if (closes > opens) throw new Error(`${lang}${p.path}: more </div> than <div>`);
   const assets = new Set();
   for (const m of body.matchAll(/(?:src|href)="(\/[^"]+\.(?:png|jpe?g|webp|gif|svg|pdf))"/gi)) assets.add(m[1]);
   for (const m of (body + legacyCss).matchAll(/url\(['"]?(\/[^'")]+)['"]?\)/g)) assets.add(m[1]);
-  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1 };
+  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd };
 }
+
+// 舊站資料疑點（頁面照原樣，不改；要請客戶確認）。2026-10-24 審查官列出。
+const DATA_QUESTIONS = {
+  'dl-ce': ['規格表第 5 列型號寫「DL 750/16 CE」，數值卻是 5000 L／10 bar／Ø1550／H3315，且與第 6 列型號重複；應為 DL 5000/10 CE？', '小標「Procuct Specifications」錯字（舊站原樣）。'],
+  'asme-ht': ['HTL-1000 寫 210.0 Gal／800 L，與 HTL-800 完全相同。', 'HTL-300 的加侖寫「80」，其他列都有小數「.0」。', 'CHARACTERISTICS 寫工作溫度 -29°／+93°C，規格表 Maximum Temperature 卻是 115。', '小標「Procuct Specifications」錯字（舊站原樣）。'],
+  'giga-plus': ['GIGA-60 寫 60 L＝14 gal（換算約 15.9）；GIGA-100 寫 100 L＝28 gal（換算約 26.4）。'],
+  accessories: ['「Horizontal Pump Stand」與「Vertical Pressure Tank Stand」用同一張圖 Vertical Pressure Tank Stand.jpg。'],
+  supreme: [],
+};
 
 let written = 0;
 for (const p of PAGES) {
@@ -89,6 +109,7 @@ for (const p of PAGES) {
     legacyCss: en.legacyCss,
     extraCss: en.extraCss,
     assets: [...new Set([...en.assets, ...zh.assets])],
+    dataQuestions: DATA_QUESTIONS[p.id] ?? [],
   };
   const content = (lang, d) => ({
     _note: lang === 'zh'
@@ -100,6 +121,7 @@ for (const p of PAGES) {
     seo: { title: d.title, description: d.description },
     h1: d.h1 || d.title,
     hasVisibleH1: d.hasH1,
+    legacyJsonLd: d.legacyJsonLd,
     bodyHtml: d.body,
   });
   for (const [rel, data] of [[`src/data/pages/${p.id}.json`, page], [`src/content/legacy/${p.id}/en.json`, content('en', en)], [`src/content/legacy/${p.id}/zh.json`, content('zh', zh)]]) {

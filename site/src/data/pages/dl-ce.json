@@ -26,5 +26,9 @@
     "/images/products_line/accessories3.webp",
     "/images/products/ELBI/elbi-01-1.jpg",
     "/upfile/Images/ELBI/20231011_ELBI-Tank(DL-CE_ASME)-DM_CH_01.jpg"
+  ],
+  "dataQuestions": [
+    "規格表第 5 列型號寫「DL 750/16 CE」，數值卻是 5000 L／10 bar／Ø1550／H3315，且與第 6 列型號重複；應為 DL 5000/10 CE？",
+    "小標「Procuct Specifications」錯字（舊站原樣）。"
   ]
 }

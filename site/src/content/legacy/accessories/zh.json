@@ -9,5 +9,79 @@
   },
   "h1": "Accessories-Plus 壓力桶專用安裝配件 | 壓力開關、銅三通與壓力表 | AQUASKY 溢康企業",
   "hasVisibleH1": false,
+  "legacyJsonLd": [
+    {
+      "@type": "Product",
+      "@id": "https://aquaskyplus.com/zh/accessories#product",
+      "name": "Accessories-Plus 壓力桶專用安裝配件",
+      "image": "https://aquaskyplus.com/upfile/Images/logo.png",
+      "description": "原廠專業級壓力桶安裝配件，包含高靈敏壓力開關、防漏黃銅三通、耐震壓力表及專利防漏氣閥嘴，提供一站式加壓系統安裝方案。",
+      "brand": {
+        "@type": "Brand",
+        "name": "AQUASKY"
+      },
+      "category": "壓力桶安裝配件",
+      "model": "ACCESSORIES",
+      "manufacturer": {
+        "@id": "https://aquaskyplus.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "最大工作壓力",
+          "value": "N/A"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "最大工作溫度",
+          "value": "N/A"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "充填氣體",
+          "value": "N/A"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "安全認證",
+          "value": "NSF/ANSI 372, NSF/ANSI 61, CE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "產品保固",
+          "value": "1 年"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "材質",
+          "value": "黃銅與不鏽鋼"
+        }
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "@id": "https://aquaskyplus.com/zh/accessories#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aquaskyplus.com/zh"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "產品系列",
+            "item": "https://aquaskyplus.com/zh/products"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "專用配件",
+            "item": "https://aquaskyplus.com/zh/accessories"
+          }
+        ]
+      }
+    }
+  ],
   "bodyHtml": "<div id=\"pd-container-01\" class=\"container-fluid\">\n<div class=\"accessories_img\"><img src=\"/images/products/accessories/accessories-plus.jpg\" class=\"img-responsive center-block\"></div>\n\t<div class=\"container\">\n        <h2 class=\"h2_2hline lang_rtl\">ACCESSORIES-PLUS：完整的壓力桶安裝配件系列</h2>\n\t  \t<div class=\"pd-about-text txt-align-justify lang_rtl\">整系列完整的壓力桶安裝配件, 包含立式的底座, 臥式的安裝架, 以及特殊空間的牆面固定架,我們都提供非常完整的配件.</div>\n\n\t\t\t\t<p>&nbsp;</p>\n      \t<p>&nbsp;</p>\n      \t<div class=\"lang_rtl\">\n        \t<p style=\"text-align: center;\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/ACCESSORIES/accessories-plus-DM-CH_230525web.jpg\" /></p>      \t</div>\n\n \t</div>\n\n\t<div id=\"pd-more-info\" class=\"container\">\n\t\t<h2 class=\"h2_2hline h2_2hline_margin lang_rtl\">產品系列</h2>\n\n<div id=\"other_pd_line\" class=\"container\">\n  <div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n\t<img src=\"/images/products_line/pdg-plus2.webp\" class=\"img-responsive center-block\" alt=\"PUMPLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/PUMPLUS\" class=\"btn btn-link2\">泵浦壓力桶</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-mega2-2022.webp\" class=\"img-responsive center-block\" alt=\"MEGA-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/MEGA-PLUS\" class=\"btn btn-link2\">高壓泵浦壓力桶</a>\n    </div>\n  </div>\n</div>\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-thermal2.webp\" class=\"img-responsive center-block\" alt=\"THERMAL-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/THERMAL-PLUS\" class=\"btn btn-link2\">密閉式膨脹水箱</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-rot2.webp\" class=\"img-responsive center-block\" alt=\"RO-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/RO-PLUS\" class=\"btn btn-link2\">RO逆滲透儲水桶</a>\n    </div>\n  </div>\n</div>\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-hydro2.webp\" class=\"img-responsive center-block\" alt=\"HYDRO-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/HYDRO-PLUS\" class=\"btn btn-link2\">導熱液體膨脹罐</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-solar2.webp\" class=\"img-responsive center-block\" alt=\"SOLAR-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/SOLAR-PLUS\" class=\"btn btn-link2\">太陽能液體膨脹罐</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-premiumplus.webp\" class=\"img-responsive center-block\" alt=\"PREMIUM-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/PREMIUM-PLUS\" class=\"btn btn-link2\">不鏽鋼泵浦壓力桶</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/LQCOLPLUS_pdlline1.webp\" class=\"img-responsive center-block\" alt=\"LQCOL-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/LQCOL-PLUS\" class=\"btn btn-link2\">液冷系統膨脹水箱</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/WEB_PRODUCT_LINE_GIGAPLUS.webp\" class=\"img-responsive center-block\" alt=\"GIGA-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/GIGA-PLUS\" class=\"btn btn-link2\">高壓泵浦壓力桶</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/Elbi_B2022.webp\" class=\"img-responsive center-block\" alt=\"LARGE SIZE DL TANK\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/dl-ce\" class=\"btn btn-link2\" style=\"margin-bottom:5px;\">工業式密閉膨脹水箱</a> <a href=\"/zh/asme-ht\" class=\"btn btn-link2\" style=\"padding-top:2px;padding-bottom:2px;margin-bottom:5px;\">ASME認證<br>工業式密閉膨脹水箱</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/SupremePlus_2023B.webp\" class=\"img-responsive center-block\" alt=\"SUPREME-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/supreme\" class=\"btn btn-link2\">經濟型工業式密閉膨脹水箱</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/accessories3.webp\" class=\"img-responsive center-block\" alt=\"ACCESSORIES-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/zh/accessories\" class=\"btn btn-link2\">安裝配件</a>\n    </div>\n  </div>\n</div>\n\n\t<div class=\"pd-spacing-01\"></div>\n</div>\t</div>\n\n</div>"
 }

@@ -150,6 +150,8 @@ const legacy = defineCollection({
     seo,
     h1: z.string().min(3),
     hasVisibleH1: z.boolean(),
+    // 舊站 <head> 的 JSON-LD（Product），原樣搬來（無 @context）
+    legacyJsonLd: z.array(z.object({ '@type': z.string() }).passthrough()),
     // 主體 HTML：不准有 script／iframe／form／事件屬性；相對路徑都已改絕對
     bodyHtml: z.string().min(200)
       .refine((s) => !/<(script|iframe|form|object|embed)/i.test(s), 'bodyHtml 不能有 script/iframe/form')
@@ -166,6 +168,7 @@ const pages = defineCollection({
     legacyCss: z.string(),
     extraCss: z.array(sitePath),
     assets: z.array(z.string()),
+    dataQuestions: z.array(z.string()),
   }),
 });
 

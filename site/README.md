@@ -10,14 +10,13 @@
 | `/en`、`/zh` | `src/pages/[lang].astro` | 舊站文字；英文認證說明是新補的，待審 |
 | `/en/LQCOL-PLUS` | `src/pages/[lang]/LQCOL-PLUS.astro` | 舊站英文原文 |
 | `/zh/LQCOL-PLUS` | 同上 | **AI 初稿**，頁面上有黃色提示，待 Tiffany 審 |
-| `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[series].astro`（經典模板） | 舊站英文原文＋型號清單 |
+| `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[page].astro` → `ClassicSeries.astro`（經典模板） | 舊站英文原文＋型號清單 |
 | 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
-
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
 
 還沒搬：products、about、feature、certification、sel_tools、news、videos、downloadpage、FAQ、contact，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
 
-## 兩種系列頁模板
+## 三種系列頁模板
 
 | 模板 | 頁 | 資料從哪來 |
 | --- | --- | --- |
@@ -67,6 +66,8 @@ npm run check           # 型別與模板檢查
 
 列在 `src/data/products/lqcol-plus.json` 的 `dataQuestions`：LQC-3 重量與外箱比 LQC-8 大、LQC-60SS 的加侖數、內文提到的 0.5L／1L／100L+ 機型規格表沒有。
 
+經典頁的 `dataQuestions` 由匯入腳本自動算（公升換加侖不符）：APT-3、APT-60、APT-60H、ROT-1、ROT-14、MEGA-60。照抄頁的在 `src/data/pages/<id>.json`：dl-ce 第 5 列型號與數值對不上（DL 750/16 應為 DL 5000/10？）、asme-ht 的 HTL-1000 與 HTL-800 相同／HTL-300 加侖格式／工作溫度 93 對 115、GIGA-60 與 GIGA-100 的加侖數、accessories 兩個配件同一張圖，以及 dl-ce／asme-ht 的「Procuct」錯字。
+
 ## 版型原則（黃老闆 2026-10-24 指示：跟舊站盡量一樣，不改編排）
 
 - 直接沿用舊站的 CSS：`public/css/bootstrap.min.css`（舊站首頁用）、`bootstrap.css`（舊站內頁用的客製版，`.container` padding 0，Base 的 `bootstrap="full"`）、`bootstrap-grid.min.css`（經典系列頁）、`style.css`、`series_content.css`、`a-hover.css`、`all.min.css`（Font Awesome）。這幾個檔從封存複製後**進 Git**，不要改；新站自己的補充只放 `src/styles/site.css`。
@@ -80,7 +81,7 @@ npm run check           # 型別與模板檢查
 
 - hreflang 逐頁對應（舊站全部指首頁，是 SEO 錯誤）。
 - 型號統一寫 `LQC-3`（舊站 `LQC- 3`、`LQC -12` 空格亂）；下載連結「Brchure」錯字改成「Brochure」；THERMAL-PLUS 大圖 alt「HERMAL-PLUS」改成「THERMAL-PLUS」。
-- 原生輸出 JSON-LD：Organization、WebSite、BreadcrumbList、ProductGroup、FAQPage。舊站靠 AEO Worker 從外面注入。
+- JSON-LD：舊站每個系列頁 `<head>` 自己有一段 Product（另有 AEO Worker 從外面注入的）。新站：照抄頁把那段 Product 原樣搬來；資料化的頁（LQCOL、7 個經典頁）改輸出 ProductGroup（含型號）取代它；全站另有 Organization、WebSite、BreadcrumbList，LQCOL 有 FAQPage。
 - 每頁只有一個 `<h1>`：首頁 h1 是字標圖（同舊站）；系列頁舊站有兩個 h1（色條一個、標題圖又包一個），新站標題圖改用 `<div class="h1-1">`。
 - 語言選單裡還沒上線的語系（es／fr／ru／ar）是灰字不能點，舊站是連結。等那些語系做好再開。
 - 英文首頁認證圖示下面舊站沒有文字，新站也不顯示；建議的英文說明放在 `src/content/home/en.json` 的 `draftLabel`，客戶審過才會改成 `label` 顯示。
@@ -89,7 +90,7 @@ npm run check           # 型別與模板檢查
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories 頁沒有 `<h1>`，新站補一個看不見的 h1（＝title），版面不變。
 - 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。
-- 舊站 HYDRO-PLUS 頁 HTML 少關一個 div，造成頁尾內縮露出深藍底；新站不照抄這個錯。
+- 舊站 HYDRO-PLUS、accessories 頁 HTML 各少關一個 div（頁尾被吃進去）；新站不照抄這個錯（照抄模板會自動補上）。
 - 經典系列頁舊站的型號 `.pd_item_margin` 包裝、每列欄數（PUMPLUS 橫式 col-md-4）、MEGA 標題圖外面多出的 `<p>` 間距，都照舊站逐頁存在資料檔（`titleBlock`、`colClass`、`itemWrapper`）。
 - 不做 WOW.js 進場動畫（舊站首頁字標、認證圖示、系列頁標題區有 fadeInDown／fadeInRight）。靜止版面相同，只差動畫；少一支 JS，也避免載入時版面位移。黃老闆要一樣再加。
 - 首頁多一個看不見的 h2「認證與技術」（給螢幕閱讀器與大綱用），舊站沒有。

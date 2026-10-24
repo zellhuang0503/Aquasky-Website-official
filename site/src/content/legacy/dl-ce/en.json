@@ -9,5 +9,79 @@
   },
   "h1": "REPLACEABLE BLADDER MULTI-FUNCTIONAL TANK",
   "hasVisibleH1": true,
+  "legacyJsonLd": [
+    {
+      "@type": "Product",
+      "@id": "https://aquaskyplus.com/en/dl-ce#product",
+      "name": "DL Series Large Replacement Bladder Tank",
+      "image": "https://aquaskyplus.com/images/logo.png",
+      "description": "CE-approved, large-volume pressure vessels featuring replaceable bladders, engineered for municipal water distribution, HVAC, and industrial water storage.",
+      "brand": {
+        "@type": "Brand",
+        "name": "AQUASKY"
+      },
+      "category": "Large-Capacity Replaceable Bladder Tanks",
+      "model": "DL-CE",
+      "manufacturer": {
+        "@id": "https://aquaskyplus.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Maximum Pressure",
+          "value": "10 Bar / 16 Bar (150 / 230 PSI)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Maximum Operating Temperature",
+          "value": "90°C (194°F)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Pre-charge Gas",
+          "value": "100% Stable Nitrogen (N2)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Certification",
+          "value": "NSF/ANSI 372, NSF/ANSI 61, CE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Warranty",
+          "value": "5 Years"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Materials",
+          "value": "Replaceable bladder design with high-quality rubber"
+        }
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "@id": "https://aquaskyplus.com/en/dl-ce#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aquaskyplus.com/en"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://aquaskyplus.com/en/products"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "DL Series Tanks",
+            "item": "https://aquaskyplus.com/en/dl-ce"
+          }
+        ]
+      }
+    }
+  ],
   "bodyHtml": "<div class=\"h1-custom-style\"><h1>REPLACEABLE BLADDER MULTI-FUNCTIONAL TANK</h1></div><div id=\"pd-container-01\" class=\"container-fluid\">\n\t<div class=\"container\">\n        <div class=\"pd-aquasky-text\"><div class=\"h1-1\"><img src=\"/images/products/ELBI/ELBI_logo.png\" class=\"img-responsive pull-right\" alt=\"PUMPLUS Pressure Tank\"></div></div>\n        <h2 class=\"h2_2hline lang_rtl\">About REPLACEABLE BLADDER MULTI-FUNCTIONAL Tank</h2>\n\t    <div class=\"pd-about-text txt-align-justify lang_rtl\">The DL series replaceable bladder tanks represent an effective alternative for installation in plants with high water contents which conventionally made us use traditional tanks without any bladders or install a series of smaller tanks. Installation of DL tanks allows therefore considerable cost savings for installation and maintenance. The DL series is equipped with an exclusively designed bladder which works without mechanical stress even in high-pressure conditions or an air cushion leak, thus ensuring an almost unlimited bladder life.</div>\n\n        <div id=\"ImgAutoResponsive\" class=\"lang_rtl\">\n            <h2 class=\"h2_2hline h2_2hline_margin2\">Procuct Specifications</h2>\r\n\r\n<div class=\"row\">\r\n<div class=\"col-md-12\">\r\n<div class=\"pd-table-a table-responsive\">\r\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td align=\"center\" width=\"11%\">MODEL</td>\r\n\t\t\t<td align=\"center\" width=\"13%\">Capacity (liter)</td>\r\n\t\t\t<td align=\"center\" width=\"15%\">Precharge Pressure<br />\r\n\t\t\t(bar)</td>\r\n\t\t\t<td align=\"center\" width=\"15%\">Maximum Working Pressure (bar)</td>\r\n\t\t\t<td align=\"center\" width=\"13%\">Maximum<br />\r\n\t\t\tTemperature</td>\r\n\t\t\t<td align=\"center\" width=\"14%\">Diameter<br />\r\n\t\t\t(mm)</td>\r\n\t\t\t<td align=\"center\" width=\"10%\">Height<br />\r\n\t\t\t(mm)</td>\r\n\t\t\t<td align=\"center\" width=\"9%\">Connector<br />\r\n\t\t\tDimension (inch)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 750/10 CE</td>\r\n\t\t\t<td align=\"center\">750</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">10</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">800</td>\r\n\t\t\t<td align=\"center\">1920</td>\r\n\t\t\t<td align=\"center\">2&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 1000/10 CE</td>\r\n\t\t\t<td align=\"center\">1000</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">10</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">800</td>\r\n\t\t\t<td align=\"center\">2370</td>\r\n\t\t\t<td align=\"center\">2&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 2000/10 CE</td>\r\n\t\t\t<td align=\"center\">2000</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">10</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">1100</td>\r\n\t\t\t<td align=\"center\">2690</td>\r\n\t\t\t<td align=\"center\">3&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 3000/10 CE</td>\r\n\t\t\t<td align=\"center\">3000</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">10</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">1250</td>\r\n\t\t\t<td align=\"center\">3100</td>\r\n\t\t\t<td align=\"center\">3&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 750/16 CE</td>\r\n\t\t\t<td align=\"center\">5000</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">10</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">1550</td>\r\n\t\t\t<td align=\"center\">3315</td>\r\n\t\t\t<td align=\"center\">3&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 750/16 CE</td>\r\n\t\t\t<td align=\"center\">750</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">16</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">800</td>\r\n\t\t\t<td align=\"center\">1920</td>\r\n\t\t\t<td align=\"center\">2&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 1000/16 CE</td>\r\n\t\t\t<td align=\"center\">1000</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">16</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">800</td>\r\n\t\t\t<td align=\"center\">2370</td>\r\n\t\t\t<td align=\"center\">2&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 2000/16 CE</td>\r\n\t\t\t<td align=\"center\">2000</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">16</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">1100</td>\r\n\t\t\t<td align=\"center\">2690</td>\r\n\t\t\t<td align=\"center\">3&quot;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>DL 3000/16 CE</td>\r\n\t\t\t<td align=\"center\">3000</td>\r\n\t\t\t<td align=\"center\">2.5</td>\r\n\t\t\t<td align=\"center\">16</td>\r\n\t\t\t<td align=\"center\">+99&deg;C</td>\r\n\t\t\t<td align=\"center\">1250</td>\r\n\t\t\t<td align=\"center\">3100</td>\r\n\t\t\t<td align=\"center\">3&quot;</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<h2 class=\"h2_2hline h2_2hline_margin\">Procuct Specifications</h2>\r\n\r\n<div class=\"row\">\r\n<div class=\"col-md-6\">\r\n<div class=\"pd-table-a\">\r\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td align=\"center\">APPLICATION SYSTEM</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>‧For drinking water<br />\r\n\t\t\t‧For sanitary hot water<br />\r\n\t\t\t‧For heating systems<br />\r\n\t\t\t‧For air conditioning systems<br />\r\n\t\t\t‧For pressurization systems</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col-md-6\">\r\n<div class=\"pd-table-a\">\r\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td align=\"center\">CHARACTERISTICS</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>‧Working temperature: -10&deg; / +99&deg;C.<br />\r\n\t\t\t‧Solvent painted, grey color.<br />\r\n\t\t\t‧Pre-charging pressure: 2.5 bar.<br />\r\n\t\t\t‧Reference standard: Declaration of conformity to essential safety requirements<br />\r\n\t\t\toutlined by Directive 2014/68/UE</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>        </div>\n    </div>\n\t<div id=\"pd-more-info\" class=\"container\">\n\t\t<h2 class=\"h2_2hline h2_2hline_margin lang_rtl\">Product Line</h2>\n\n<div id=\"other_pd_line\" class=\"container\">\n  <div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n\t<img src=\"/images/products_line/pdg-plus2.webp\" class=\"img-responsive center-block\" alt=\"PUMPLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/PUMPLUS\" class=\"btn btn-link2\">PUMPLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-mega2-2022.webp\" class=\"img-responsive center-block\" alt=\"MEGA-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/MEGA-PLUS\" class=\"btn btn-link2\">MEGA-PLUS</a>\n    </div>\n  </div>\n</div>\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-thermal2.webp\" class=\"img-responsive center-block\" alt=\"THERMAL-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/THERMAL-PLUS\" class=\"btn btn-link2\">THERMAL-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-rot2.webp\" class=\"img-responsive center-block\" alt=\"RO-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/RO-PLUS\" class=\"btn btn-link2\">RO-PLUS</a>\n    </div>\n  </div>\n</div>\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-hydro2.webp\" class=\"img-responsive center-block\" alt=\"HYDRO-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/HYDRO-PLUS\" class=\"btn btn-link2\">HYDRO-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-solar2.webp\" class=\"img-responsive center-block\" alt=\"SOLAR-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/SOLAR-PLUS\" class=\"btn btn-link2\">SOLAR-PLUS</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-premiumplus.webp\" class=\"img-responsive center-block\" alt=\"PREMIUM-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/PREMIUM-PLUS\" class=\"btn btn-link2\">PREMIUM-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/LQCOLPLUS_pdlline1.webp\" class=\"img-responsive center-block\" alt=\"LQCOL-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/LQCOL-PLUS\" class=\"btn btn-link2\">LQCOL-PLUS</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/WEB_PRODUCT_LINE_GIGAPLUS.webp\" class=\"img-responsive center-block\" alt=\"GIGA-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/GIGA-PLUS\" class=\"btn btn-link2\">GIGA-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/Elbi_B2022.webp\" class=\"img-responsive center-block\" alt=\"LARGE SIZE DL TANK\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/dl-ce\" class=\"btn btn-link2\" style=\"margin-bottom:5px;\">LARGE SIZE DL TANK</a> <a href=\"/en/asme-ht\" class=\"btn btn-link2\" style=\"margin-bottom:5px;\">ASME TANK</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/SupremePlus_2023B.webp\" class=\"img-responsive center-block\" alt=\"SUPREME-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/supreme\" class=\"btn btn-link2\">SUPREME-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/accessories3.webp\" class=\"img-responsive center-block\" alt=\"ACCESSORIES-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/en/accessories\" class=\"btn btn-link2\">ACCESSORIES-PLUS</a>\n    </div>\n  </div>\n</div>\n\n\t<div class=\"pd-spacing-01\"></div>\n</div>\t</div>\n\n</div>"
 }

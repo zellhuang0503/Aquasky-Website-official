@@ -20,7 +20,7 @@ const breadcrumbs = [
 ];
 const image = page.assets.find((a) => /\.(png|jpe?g|webp)$/i.test(a));
 ---
-<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={page.extraCss} headStyle={page.legacyCss}>
+<Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={page.extraCss} headStyle={page.legacyCss}>
   {!c.hasVisibleH1 && <h1 class="visually-hidden">{c.h1}</h1>}
   <Fragment set:html={c.bodyHtml} />
 </Base>

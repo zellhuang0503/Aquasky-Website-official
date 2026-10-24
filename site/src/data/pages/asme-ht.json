@@ -26,5 +26,11 @@
     "/images/products_line/accessories3.webp",
     "/images/products/ELBI/elbi-02-1.jpg",
     "/upfile/Images/ELBI/20231011_ELBI-Tank(DL-CE_ASME)-DM_CH_02.jpg"
+  ],
+  "dataQuestions": [
+    "HTL-1000 寫 210.0 Gal／800 L，與 HTL-800 完全相同。",
+    "HTL-300 的加侖寫「80」，其他列都有小數「.0」。",
+    "CHARACTERISTICS 寫工作溫度 -29°／+93°C，規格表 Maximum Temperature 卻是 115。",
+    "小標「Procuct Specifications」錯字（舊站原樣）。"
   ]
 }
