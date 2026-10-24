@@ -104,8 +104,17 @@ const ASSETS = [
   ['/uploads/series/pdf/SERIES_lqcol-plus_2_20261020_222359.pdf'],
 ];
 
-// 各產品資料檔自己列的資源（import-classic-series.mjs 產生的 assets 陣列）也一起複製
+// 舊站 CSS 裡 url(...) 引用的圖（文字頁的藍色標題帶、about 水泡底圖等都在 style.css）也一起複製
 import { readdirSync } from 'node:fs';
+for (const css of ['/css/style.css', '/css/a-hover.css', '/css/series_content.css']) {
+  const file = join(publicDir, css);
+  if (!existsSync(file)) continue;
+  for (const m of readFileSync(file, 'utf8').matchAll(/url\(['"]?([^'")]+)['"]?\)/g)) {
+    const u = m[1].split(/[?#]/)[0];
+    if (/^(data:|https?:)/.test(u) || !u) continue;
+    ASSETS.push([new URL(u, 'https://x' + css).pathname]);   // 相對路徑以 CSS 檔所在目錄解析（../images/x → /images/x，all.min.css → /css/all.min.css）
+  }
+}
 const productsDir = resolve(here, '..', 'src', 'data', 'products');
 const pagesDir = resolve(here, '..', 'src', 'data', 'pages');
 for (const dir of [productsDir, pagesDir]) {

@@ -92,7 +92,10 @@ npm run check           # 型別與模板檢查
 - 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。
 - 聯絡頁 email：舊站經 Cloudflare 混淆（/cdn-cgi/l/email-protection）再靠 JS 還原；新站匯入時直接解碼成純文字（同舊站還原後的樣子）。
 - feature 頁六個說明面板的切換，舊站是 jQuery；新站在 LegacyPage 裡用 10 行純 JS 做同樣的事。
-- FAQ 頁的 FAQPage 結構化資料，舊站是 AEO Worker 注入的；新站改從頁面 29 題直接產生，verify 比題數。
+- FAQ 頁的 FAQPage 結構化資料，舊站是 AEO Worker 注入的；新站改從頁面 29 題直接產生（HTML 實體全部還原成純文字），verify 比題數。
+- 舊站頁面或 Worker 帶的 Organization／Corporation／WebSite／BreadcrumbList 一律不搬；全站只有新站自己產生的 `#organization` 一個，麵包屑一份。
+- 麵包屑規則：產品系列頁＝首頁›產品系列›該系列；/products＝首頁›產品系列；其他文字頁＝首頁›該頁選單字樣（不掛 PRODUCTS）。
+- 舊站 style.css／a-hover.css 裡 url() 用到的圖（文字頁藍色標題帶、about 底圖）由 copy-archive-assets 一起複製，verify 檢查存在。
 - 照抄頁載哪個 bootstrap 照舊站（products 與首頁是 min，其他是客製 full）；series_content.css 只有 LQCOL 載。
 - 聯絡表單：舊站用 PHP 驗證碼圖與 csrf；新站是靜態站，先拿掉驗證碼那一列與隱藏欄位、action 改 `#`（按送出不會送）。上線前另做 Worker API＋Turnstile（整體規劃 §7.2）。
 - 下載頁有 6 張國旗圖檔名是非英文（例如 Україна.jpg），封存裡是百分比編碼，複製腳本兩種寫法都認；`--fetch-missing` 可從線上舊站補封存沒有的檔。

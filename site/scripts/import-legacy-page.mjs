@@ -25,7 +25,12 @@ for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\
   const row = JSON.parse(line);
   index.set(row.url, row);
 }
-const unescape = (s) => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/&rsquo;/g, '’').replace(/&ndash;/g, '–');
+// HTML 實體還原成純文字（JSON-LD 的字串不能留 &deg; 這種實體，Google 會當字面文字）
+const NAMED = { amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', ndash: '–', mdash: '—', deg: '°', hellip: '…', copy: '©', reg: '®', trade: '™', times: '×', middot: '·', bull: '•', apos: "'" };
+const unescape = (s) => s
+  .replace(/&#x([0-9a-f]+);/gi, (_m, h) => String.fromCodePoint(parseInt(h, 16)))
+  .replace(/&#(\d+);/g, (_m, d) => String.fromCodePoint(Number(d)))
+  .replace(/&([a-z]+);/gi, (m, n) => { if (!(n in NAMED)) throw new Error(`unknown entity ${m}`); return NAMED[n]; });
 const text = (s) => unescape(s.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
 // 相對路徑改絕對：舊站的 ../images/x 與 images/x 都在站根，一律變 /images/x；src 裡的換行（舊站打錯）去掉
 // Cloudflare 的 email 混淆：<a href="/cdn-cgi/l/email-protection" data-cfemail="97f1…">[email protected]</a>

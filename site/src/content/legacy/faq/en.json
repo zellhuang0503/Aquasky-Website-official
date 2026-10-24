@@ -75,7 +75,7 @@
           "name": "What is the maximum working temperature of AQUASKY pressure tanks?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pressure Tanks &deg;C &deg;F Pumplus 90 194 Mega-Plus 90 194 Giga-Plus 90 194 RO-Plus 90 194 Thermal-Plus 90 194 LQCOL-Plus 120 248 Solar-Plus 130 266 Hydro-Plus 130 266"
+            "text": "Pressure Tanks °C °F Pumplus 90 194 Mega-Plus 90 194 Giga-Plus 90 194 RO-Plus 90 194 Thermal-Plus 90 194 LQCOL-Plus 120 248 Solar-Plus 130 266 Hydro-Plus 130 266"
           }
         },
         {

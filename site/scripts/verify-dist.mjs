@@ -193,6 +193,19 @@ for (const page of PAGES) {
   console.log(`✓ ${where}  ${title?.slice(0, 70)}`);
 }
 
+// 舊站 CSS 的 url() 圖也要在 dist（文字頁標題帶、about 底圖都靠它；bootstrap 的 glyphicon 字型全站沒用到，不查）
+for (const css of ['/css/style.css', '/css/a-hover.css', '/css/series_content.css']) {
+  const file = join(dist, css);
+  if (!existsSync(file)) { fail(`${css} missing in dist`); continue; }
+  const missing = new Set();
+  for (const m of readFileSync(file, 'utf8').matchAll(/url\(['"]?([^'")]+)['"]?\)/g)) {
+    const u = m[1].split(/[?#]/)[0];
+    if (/^(data:|https?:)/.test(u) || !u) continue;
+    const p = new URL(u, 'https://x' + css).pathname;   // 相對路徑以 CSS 檔所在目錄解析（../images/x → /images/x，all.min.css → /css/all.min.css）
+    if (!existsSync(join(dist, decodeURIComponent(p)))) missing.add(p);
+  }
+  if (missing.size) fail(`${css} references ${missing.size} missing file(s): ${[...missing].join(', ')}`);
+}
 if (existsSync(join(dist, 'sitemap-index.xml'))) console.log('✓ sitemap-index.xml');
 else fail('sitemap-index.xml missing');
 
