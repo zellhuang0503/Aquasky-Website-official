@@ -6,7 +6,9 @@ import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
-const archive = resolve(here, '..', args[args.indexOf('--archive') + 1] || '../migration-2026-10-22');
+const fetchMissing = args.includes('--fetch-missing');   // 封存沒有的，從線上舊站抓（例如下載頁的非英文檔名國旗圖）
+const archiveArg = args.includes('--archive') ? args[args.indexOf('--archive') + 1] : null;
+const archive = resolve(here, '..', archiveArg || '../migration-2026-10-22');
 const publicDir = resolve(here, '..', 'public');
 const ORIGIN = 'https://aquaskyplus.com';
 
@@ -124,13 +126,28 @@ for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\
 
 let copied = 0, missing = [];
 for (const [src, dest = src] of ASSETS) {
-  const row = index.get(ORIGIN + src);
-  if (!row) { missing.push(src); continue; }
-  const target = join(publicDir, decodeURIComponent(dest));
+  // 封存的 URL 是百分比編碼（Rep%C3%BAblica…），舊頁 HTML 可能寫原字；兩種都查
+  const clean = src.replace(/[\r\n\t]+/g, '');
+  const row = index.get(ORIGIN + clean) || index.get(ORIGIN + encodeURI(decodeURIComponent(clean)));
+  if (!row) { missing.push(clean); continue; }
+  const target = join(publicDir, decodeURIComponent(dest === src ? clean : dest));
   mkdirSync(dirname(target), { recursive: true });
   copyFileSync(join(archive, row.relative_path), target);
   copied++;
 }
 console.log(`copied ${copied} files from ${archive} -> ${publicDir}`);
-if (missing.length) console.log('not in archive (skipped):\n  ' + missing.join('\n  '));
+if (missing.length && fetchMissing) {
+  let fetched = 0;
+  for (const src of missing) {
+    const target = join(publicDir, decodeURIComponent(src));
+    if (existsSync(target)) { fetched++; continue; }
+    const res = await fetch(ORIGIN + encodeURI(decodeURIComponent(src)));
+    if (!res.ok) { console.log(`  live site has no ${src} (${res.status})`); continue; }
+    mkdirSync(dirname(target), { recursive: true });
+    const { writeFileSync } = await import('node:fs');
+    writeFileSync(target, Buffer.from(await res.arrayBuffer()));
+    fetched++;
+  }
+  console.log(`fetched ${fetched}/${missing.length} missing files from the live old site:\n  ` + missing.join('\n  '));
+} else if (missing.length) console.log('not in archive (skipped; add --fetch-missing to pull from the live site):\n  ' + missing.join('\n  '));
 if (!existsSync(join(publicDir, 'images', 'logo.png'))) process.exit(1);

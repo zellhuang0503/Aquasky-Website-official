@@ -41,7 +41,8 @@
   - [x] 2026-10-24 第五次審查（5 個照抄頁）：版型／文字／SEO 全過，2 項記錄問題已修：照抄頁加 dataQuestions（dl-ce 型號與數值對不上、asme-ht 三處、GIGA 加侖、accessories 同圖）、README 修 3 處；另把舊站 head 的 Product JSON-LD 搬回照抄頁、accessories 補少關的 div。
   - [x] 2026-10-24 照抄頁複審：**可以交付**（29 頁）。
   - [x] 2026-10-24 麵包屑決定：只留新站頂層 BreadcrumbList（選單字樣）；舊站 Product.breadcrumb 是不合規屬性且名稱不一致，匯入時拿掉。舊站 body 裡 AEO Worker 注入的 @graph 沒搬，切換時跟 Worker 一起處理。
-  - [ ] 還沒搬的頁：products、about、feature、certification、sel_tools（含三個計算器）、news 列表與明細、videos、downloadpage、FAQ、contact；90 頁英文產品明細 `/en/products-det/...`；accessories-det。
+  - [x] 2026-10-24：products、about、feature、certification、FAQ、contact、downloadpage、videos、sel_tools 九頁 en／zh 做完（照抄模板），新站共 47 頁。contact 表單先不接後端（上線前 Worker API＋Turnstile）。
+  - [ ] 還沒搬的頁：新聞列表分頁與明細（en 187、zh 50，要列表＋明細模板）；影片明細 11；下載專區各語系子頁 /download/…；選型工具三個計算器 sel_unit_ps／vsd／thermal（公式在 RUN_REPORT §A3）；配件明細 6；90 頁英文產品明細 /en/products-det/…。
   - [ ] **圖片瘦身（全部頁面做完之後再做，黃老闆 10/24）**：系列頁底圖 1–3 MB（LQCOLPLUS_bg.png 3.1 MB、首頁 hbg-01-11.jpg 1.1 MB）、中文系列頁 DM 圖每張 1–1.7 MB，以前就拖累 PageSpeed。做法候選：壓縮／轉 WebP、responsive srcset、lazy、底圖改 CSS 漸層＋小圖。先照原樣，不要在搬頁時動。
   - [ ] 還沒做：ar 版型（RTL）；部署到 Cloudflare 預覽網址（帳戶歸屬未定）；走一次「改內容檔→預覽→審→發布」。
   - [x] 2026-10-24 第一次審查（首頁＋LQCOL）：網址／SEO／JSON-LD／工程衛生全過，版型 9 項不通過已全部修掉：產品列回深色區、首頁米色底＋44pt 公司名＋字標原尺寸＋輪播一次一張、選單結構與 padding 與 logo 照舊站、正文粗體、規格數字照原字串、結構圖標示照舊站斷行、中文選單／認證說明／地址一字不差、zh ASME 按鈕兩行（手機不再溢出）、en 首頁認證說明先不顯示（舊站沒有）、產品／品牌／選單資料檔都加 schema。

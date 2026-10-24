@@ -165,7 +165,8 @@ for (const page of PAGES) {
     const archived = archivedPage(page.code, page.legacy.path);
     if (!archived) fail(`${where}: archived page not found for text comparison`);
     else {
-      const plain = (s) => decode(s.replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
+      // aria-hidden 區塊（舊站聯絡表單的蜜罐欄位）不算內容；新站匯入時已拿掉
+      const plain = (s) => decode(s.replace(/<!--[\s\S]*?-->/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<div[^>]*aria-hidden="true"[\s\S]*?<\/div>/g, '').replace(/<[^>]+>/g, ' ')).replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
       const oldText = plain(archived.slice(archived.indexOf('</header>') + 9, archived.indexOf('<footer')));
       const mainHtml = html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1] ?? '';
       const content = JSON.parse(readFileSync(join(root, `src/content/legacy/${page.legacy.id}/${page.code}.json`), 'utf8'));

@@ -14,7 +14,9 @@
     "/js/owl/owl.theme.css"
   ],
   "assets": [
-    "/images/about/about-t-01.png"
+    "/images/about/about-t-01.png",
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
   ],
   "dataQuestions": []
 }

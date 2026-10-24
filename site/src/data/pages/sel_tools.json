@@ -13,6 +13,9 @@
     "/js/owl/owl.carousel.css",
     "/js/owl/owl.theme.css"
   ],
-  "assets": [],
+  "assets": [
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
   "dataQuestions": []
 }

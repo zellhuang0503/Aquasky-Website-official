@@ -26,7 +26,9 @@
     "/images/products/GIGAPLUS/WEB_PRODUCT_LINE_GIGAPLUS.png",
     "/images/Elbi_2022.png",
     "/images/SupremePlus_2023A.png",
-    "/images/products/accessories/accessories3.jpg"
+    "/images/products/accessories/accessories3.jpg",
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
   ],
   "dataQuestions": []
 }

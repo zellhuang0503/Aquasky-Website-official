@@ -27,7 +27,8 @@ for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\
 }
 const unescape = (s) => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/&rsquo;/g, '’').replace(/&ndash;/g, '–');
 const text = (s) => unescape(s.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
-const absUrl = (u) => (/^(\/|https?:|#|mailto:|tel:|data:)/.test(u) ? u : '/' + u);
+// 相對路徑改絕對：舊站的 ../images/x 與 images/x 都在站根，一律變 /images/x；src 裡的換行（舊站打錯）去掉
+const absUrl = (u) => { u = u.replace(/[\r\n\t]+/g, ''); return /^(\/|https?:|#|mailto:|tel:|data:)/.test(u) ? u : '/' + u.replace(/^(\.\.\/)+/, ''); };
 
 function parse(lang, p) {
   const row = index.get(`${ORIGIN}/${lang}${p.path}`);
@@ -52,7 +53,7 @@ function parse(lang, p) {
   // 頁面 <style>
   let legacyCss = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n')
     .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\.nav\s*>\s*li\s*>\s*a\s*\{[^}]*\}/g, '')
-    .replace(/url\((['"]?)(?!\/|https?:|data:)/g, 'url($1/').replace(/\s+/g, ' ').replace(/\s*}\s*/g, '}\n').trim();
+    .replace(/url\((['"]?)(?:\.\.\/)*(?!\/|https?:|data:)/g, 'url($1/').replace(/\s+/g, ' ').replace(/\s*}\s*/g, '}\n').trim();
   const extraCss = [...html.matchAll(/<link[^>]+href="([^"]+\.css)(?:\?[^"]*)?"/g)].map((m) => absUrl(m[1]))
     .filter((h) => !['/css/bootstrap.css', '/css/bootstrap.min.css', '/css/style.css', '/css/animation.css', '/js/wow/css/libs/animate.css', '/css/a-hover.css'].includes(h))
     .filter((h) => { const ok = index.has(ORIGIN + h); if (!ok) console.log(`note: ${lang}${p.path} links ${h} but the old site has no such file; skipped`); return ok; });
@@ -93,7 +94,7 @@ function parse(lang, p) {
     .replace(/\s(?:wow|fadeIn\w*|fadeOut\w*|zoomIn\w*|bounceIn\w*)(?=[\s"])/g, '')
     .replace(/\sdata-wow-[\w-]+="[^"]*"/g, '')
     .replace(/(src|href)="([^"]+)"/g, (_m, k, v) => `${k}="${absUrl(v)}"`)
-    .replace(/url\((['"]?)(?!\/|https?:|data:)/g, 'url($1/')
+    .replace(/url\((['"]?)(?:\.\.\/)*(?!\/|https?:|data:)/g, 'url($1/')
     .replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
   // 舊站有的頁少關一個 div（accessories）；補上，否則瀏覽器會把頁尾吃進去（HYDRO-PLUS 經典頁同樣處理，README 有列）
   const opens = (body.match(/<div\b/g) || []).length, closes = (body.match(/<\/div>/g) || []).length;
@@ -102,6 +103,7 @@ function parse(lang, p) {
   const assets = new Set();
   for (const m of body.matchAll(/(?:src|href)="(\/[^"]+\.(?:png|jpe?g|webp|gif|svg|pdf))"/gi)) assets.add(m[1]);
   for (const m of (body + legacyCss).matchAll(/url\(['"]?(\/[^'")]+)['"]?\)/g)) assets.add(m[1]);
+  for (const c of extraCss) assets.add(c);
   return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd };
 }
 

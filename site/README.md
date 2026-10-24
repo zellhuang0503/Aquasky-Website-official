@@ -13,8 +13,9 @@
 | `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[page].astro` → `ClassicSeries.astro`（經典模板） | 舊站英文原文＋型號清單 |
 | 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
+| `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、videos、sel_tools | 同上（照抄模板） | 同上。contact 表單外觀保留但 action="#"、拿掉 PHP 驗證碼與隱藏欄位，送出功能上線前接 Worker API；sel_tools 只是入口頁，三個計算器另做 |
 
-還沒搬：products、about、feature、certification、sel_tools、news、videos、downloadpage、FAQ、contact，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
+還沒搬：新聞列表分頁與明細（en 187 篇、zh 50 篇）、影片明細 11 頁、下載專區各語系子頁（/download/…）、選型工具三個計算器、配件明細 6 頁，以及 90 頁英文產品明細（`/en/products-det/...`，型號清單點進去會 404）。`npm run verify` 會列出這些連結。
 
 ## 三種系列頁模板
 
@@ -88,7 +89,9 @@ npm run check           # 型別與模板檢查
 - 中文 LQCOL-PLUS 頁是 AI 初稿，頁頂多一條黃色「AI 初稿」提示；審過後拿掉。
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁），中文頁同樣連英文明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
-- 舊站 accessories 頁沒有 `<h1>`，新站補一個看不見的 h1（＝title），版面不變。
+- 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。
+- 聯絡表單：舊站用 PHP 驗證碼圖與 csrf；新站是靜態站，先拿掉驗證碼那一列與隱藏欄位、action 改 `#`（按送出不會送）。上線前另做 Worker API＋Turnstile（整體規劃 §7.2）。
+- 下載頁有 6 張國旗圖檔名是非英文（例如 Україна.jpg），封存裡是百分比編碼，複製腳本兩種寫法都認；`--fetch-missing` 可從線上舊站補封存沒有的檔。
 - 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。
 - 舊站 HYDRO-PLUS 頁與英文 accessories 頁 HTML 各少關一個 div（頁尾被吃進去）；新站不照抄這個錯（照抄模板會自動補上）。
 - 照抄頁搬回的舊站 Product JSON-LD 原本夾一個 `breadcrumb`（schema.org 的 Product 沒有這個屬性，Google 不讀，而且名稱跟選單對不上）；新站拿掉它，全站只有 @graph 頂層一份 BreadcrumbList，名稱用選單字樣（黃老闆 2026-10-24 決定留一份）。
