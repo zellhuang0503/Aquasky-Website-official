@@ -89,7 +89,7 @@ function parse(lang, p) {
 // 舊站資料疑點（頁面照原樣，不改；要請客戶確認）。2026-10-24 審查官列出。
 const DATA_QUESTIONS = {
   'dl-ce': ['規格表第 5 列型號寫「DL 750/16 CE」，數值卻是 5000 L／10 bar／Ø1550／H3315，且與第 6 列型號重複；應為 DL 5000/10 CE？', '小標「Procuct Specifications」錯字（舊站原樣）。'],
-  'asme-ht': ['HTL-1000 寫 210.0 Gal／800 L，與 HTL-800 完全相同。', 'HTL-300 的加侖寫「80」，其他列都有小數「.0」。', 'CHARACTERISTICS 寫工作溫度 -29°／+93°C，規格表 Maximum Temperature 卻是 115。', '小標「Procuct Specifications」錯字（舊站原樣）。'],
+  'asme-ht': ['HTL-1000 寫 210.0 Gal／800 L，與 HTL-800 的容量相同（只有直徑 750 對 800 不同）。', 'HTL-300 的加侖寫「80」，其他列都有小數「.0」。', 'CHARACTERISTICS 寫工作溫度 -29°／+93°C，規格表 Maximum Temperature 卻是 115。', '小標「Procuct Specifications」錯字（舊站原樣）。'],
   'giga-plus': ['GIGA-60 寫 60 L＝14 gal（換算約 15.9）；GIGA-100 寫 100 L＝28 gal（換算約 26.4）。'],
   accessories: ['「Horizontal Pump Stand」與「Vertical Pressure Tank Stand」用同一張圖 Vertical Pressure Tank Stand.jpg。'],
   supreme: [],

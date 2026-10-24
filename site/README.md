@@ -90,7 +90,8 @@ npm run check           # 型別與模板檢查
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories 頁沒有 `<h1>`，新站補一個看不見的 h1（＝title），版面不變。
 - 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。
-- 舊站 HYDRO-PLUS、accessories 頁 HTML 各少關一個 div（頁尾被吃進去）；新站不照抄這個錯（照抄模板會自動補上）。
+- 舊站 HYDRO-PLUS 頁與英文 accessories 頁 HTML 各少關一個 div（頁尾被吃進去）；新站不照抄這個錯（照抄模板會自動補上）。
+- 照抄頁因為搬回舊站的 Product JSON-LD，頁上有兩份麵包屑（@graph 頂層一份用選單字樣，舊 Product 的 `breadcrumb` 欄位一份用舊站字樣）。上線前要決定留哪一份（待辦有記）。
 - 經典系列頁舊站的型號 `.pd_item_margin` 包裝、每列欄數（PUMPLUS 橫式 col-md-4）、MEGA 標題圖外面多出的 `<p>` 間距，都照舊站逐頁存在資料檔（`titleBlock`、`colClass`、`itemWrapper`）。
 - 不做 WOW.js 進場動畫（舊站首頁字標、認證圖示、系列頁標題區有 fadeInDown／fadeInRight）。靜止版面相同，只差動畫；少一支 JS，也避免載入時版面位移。黃老闆要一樣再加。
 - 首頁多一個看不見的 h2「認證與技術」（給螢幕閱讀器與大綱用），舊站沒有。
