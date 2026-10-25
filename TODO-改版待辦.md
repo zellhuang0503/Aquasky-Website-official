@@ -101,7 +101,7 @@
     2. **程式 bug：失敗的請求不釋放 US$2 預留**。供應商回錯誤時沒有費用回報，`reported_usd` 留 NULL，預算公式就一直算 `reserved_usd` 2 美元。10 筆 402 失敗卡住 US$20，加上實際花費 US$3.32，10 月預算 25 美元被記成 23.32，10/8 剩下 66 筆全被 `budget_blocked`。
     - 今天 09:00 的重點複查也會被同一個門檻整輪擋掉（23.32 + 2 > 25）。
   - [x] OpenRouter 帳號已重建（2026-10-22 上午，Zell）。推測原帳號未收到費用或被砍，才會全回 402。
-  - [ ] **把新的 OpenRouter 金鑰放上 Worker（Zell 自己放）**。用 `scripts/set-aiqa-secrets.py --config <config.ini 路徑>` 從 stdin 寫入 `OPENROUTER_API_KEY`，金鑰不進 Git、不貼命令列。（10/25 查 `wrangler versions list`：最後一次 Secret Change 是 9/25，所以還沒放。）放上去後跑一題 × 六模型小量驗收，標成「上線驗收」：用 `plannedRun(now,'acceptance',undefined,['B1'])` 產 INSERT 寫進 D1，cron 五分鐘內會自己跑；10/25 已備好 SQL，等金鑰放好再送。
+  - [x] **新 OpenRouter 金鑰已放上 Worker**（2026-10-25 11:33，Zell 用 `set-aiqa-secrets.py` 上傳；config.ini 先換成新金鑰）。**上線驗收通過**：`acceptance-2026-10-25`（B1 × 六模型）11:36 六份皆 answered、finish=stop、回傳模型 ID 與設定一致、六份都提到品牌且引用官網；合計 US$0.648（OpenAI 0.270、Grok 0.169、Claude 0.111、Google 0.081、DeepSeek 0.010、Perplexity 0.007）。
   - [x] **修 bug**（2026-10-25）：`monitor/src/aiqa-runner.mjs` 供應商回錯誤且無費用回報時 `reported_usd` 設 0 釋放預留，逾時後的 uncertain 仍保留預留；加回歸測試（aiqa 測試 38 通過；monitor.test.mjs 另有 2 項本來就失敗的測試未動）。commit 964e63b，Worker 已部署（版本 9e165ece）。
   - [x] **清掉已卡住的 US$20**（2026-10-25）：D1 `aiqa_attempts` 10 月 `reported_usd IS NULL` 且 item 為 failed/402 的 10 筆已設 0；10 月 accounted 從 23.32 降到 3.32。被擋的 90 題（10/8 月測 66、10/22 複查 24）狀態是 `budget_blocked`，屬終態，不會自己補跑。
   - [ ] 修好後補跑一輪完整 72 筆（依文件 40：中斷不自動補跑數週，要人工決定），並重新做人工複核與 10 月月報。
