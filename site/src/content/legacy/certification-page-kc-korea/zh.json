@@ -1,0 +1,14 @@
+{
+  "_note": "舊站 /zh/certification-page/kc-korea 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。",
+  "template": "legacy",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank",
+    "description": "Aquasky: first choices of pressure tank, water tank, thermal tank, pump tank, ro tank, self-cleaning tank, water heating tank, expansion tank. Aquasky products:  Ro-Plus, Pumplus, Thermal-Plus, Hydro-Plus"
+  },
+  "h1": "認證 | KC韓國安全認證",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">認證 | KC韓國安全認證</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t<img src=\"/upfile/Images/CERTIFICATION/kc_b.png\" border=\"0\" class=\"img-responsive\">        </div>\n        <div class=\"col-md-6\">\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<p><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/%5BAQUASKY%5D%EC%9C%84%EC%83%9D%EC%95%88%EC%A0%84%EA%B8%B0%EC%A4%80%20%EC%9D%B8%EC%A6%9D%EC%84%9C(KC)_%EC%95%95%EB%A0%A5%ED%83%B1%ED%81%AC%20(1).png\" style=\"width: 800px; height: 1131px;\" /></p>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}

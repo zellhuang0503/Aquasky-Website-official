@@ -1,0 +1,29 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/certification-page-iso-9001-eurocert/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/certification-page/iso-9001-eurocert 與 /zh/certification-page/iso-9001-eurocert。",
+  "id": "certification-page-iso-9001-eurocert",
+  "path": "/certification-page/iso-9001-eurocert",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/certification-page/iso-9001-eurocert",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-25"
+  },
+  "legacyCss": "#cerfitication-container {background:#002D49;}\n#about-top-title {background:#0086CF;}\n.cerfitication_title { padding:20px 15px 20px 15px; margin-top:50px; margin-bottom:50px; border-bottom:2px solid #FFF;}\n.pd-btn-info-link { text-align:right; margin:40px 0 40px 0;}\n.btn-link { color: #008ecf; border-color:#008ecf; border:1px sloid #008ecf; font-size:18px; padding:10px 20px; border-radius: 30px; min-width:200px;}\n.btn-link:focus, .btn-link.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-link:hover { color: #333; background-color: #e6e6e6; border-color: #adadad; text-decoration:none;}",
+  "extraCss": [
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "bootstrap": "full",
+  "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
+  "assets": [
+    "/upfile/Images/CERTIFICATION/eurocert_b.png",
+    "/upfile/Images/CERTIFICATION/20241209_EUROCERT-IOS9001.png",
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "dataQuestions": []
+}

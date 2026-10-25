@@ -18,13 +18,15 @@ const ORIGIN = 'https://aquaskyplus.com';
 const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories', '/products', '/about', '/feature', '/certification', '/FAQ', '/contact', '/downloadpage', '/sel_tools'];
 // 下載專區各語系子頁：網址沒有語系前綴（/download/english），舊站一律英文介面，只匯一份（內容檔 en.json）
 const DOWNLOAD_LANGS = ['arabic', 'chinese', 'dutch', 'english', 'french', 'german', 'italian', 'japanese', 'korean', 'latvian', 'lithuanian', 'russian', 'spanish', 'thai'];
+// 單張認證頁：舊站 certification_page.php?sid=N（查詢字串，靜態站做不了），新站改乾淨網址；封存索引（live-2026-10-25）已用新網址當 key
+const CERT_PAGES = { 4: 'iso-9001-eurocert', 6: 'kc-korea', 7: 'acs-france', 9: 'watermark-australia', 10: 'psb-singapore' };
 const paths = args.filter((a) => a.startsWith('/'));
 // 英文產品明細（/products-det/<series>/<model>，90 頁）與配件明細（/accessories-det/<item>，6 頁）：舊站只有英文版；從封存索引自動找
 const toPage = (p) => {
   if (p.startsWith('/download/')) return { path: p, id: p.slice(1).replace('/', '-').toLowerCase(), neutral: true, langs: ['en'] };
   // id 不能有「.」（APT-1.3）：Astro 內容集合的 id 會把點吃掉，找不到檔；網址本身不變
   if (/^\/(products-det|accessories-det)\//.test(p)) return { path: p, id: p.slice(1).replace(/[/.]/g, '-').toLowerCase(), langs: ['en'] };
-  return { path: p, id: p.slice(1).toLowerCase(), langs: ['en', 'zh'] };
+  return { path: p, id: p.slice(1).replace(/[/.]/g, '-').toLowerCase(), langs: ['en', 'zh'] };
 };
 
 const index = new Map();
@@ -34,7 +36,7 @@ for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\
   index.set(row.url, row);
 }
 const DETAIL_PATHS = [...index.keys()].filter((u) => /^https:\/\/aquaskyplus\.com\/en\/(products-det|accessories-det)\//.test(u)).map((u) => u.replace(`${ORIGIN}/en`, '')).sort();
-const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`), ...DETAIL_PATHS]).map(toPage);
+const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`), ...DETAIL_PATHS, ...Object.values(CERT_PAGES).map((s) => `/certification-page/${s}`)]).map(toPage);
 // HTML 實體還原成純文字（JSON-LD 的字串不能留 &deg; 這種實體，Google 會當字面文字）
 const NAMED = { amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', ndash: '–', mdash: '—', deg: '°', hellip: '…', copy: '©', reg: '®', trade: '™', times: '×', middot: '·', bull: '•', apos: "'" };
 const unescape = (s) => s
@@ -83,6 +85,8 @@ function parse(lang, p) {
   body = body.replace(/<\/?font\b[^>]*>/g, '');
   // 配件明細的「<<back」連舊站 PHP 網址，改成新站同一頁
   body = body.replace(/href="accessories\.php\?lang=en"/g, 'href="/en/accessories"');
+  // 認證頁的「CERTIFICATION LINK」：certification_page.php?sid=N → /<lang>/certification-page/<slug>
+  body = body.replace(/href="\/?certification_page\.php\?sid=(\d+)"/g, (_m, sid) => { const slug = CERT_PAGES[sid]; if (!slug) throw new Error(`${lang}${p.path}: unknown certification sid ${sid}`); return `href="/${lang}/certification-page/${slug}"`; });
   if (/<script|<object|<embed/i.test(body)) throw new Error(`${lang}${p.path}: body has script — handle by hand`);
   for (const m of body.matchAll(/<iframe[^>]*src="([^"]+)"/g)) {
     if (!/^https:\/\/www\.youtube(-nocookie)?\.com\/embed\//.test(m[1])) throw new Error(`${lang}${p.path}: iframe not YouTube: ${m[1]}`);
@@ -104,7 +108,9 @@ function parse(lang, p) {
     if (before === body || /chk_code|csrf|recode\.php|onclick/.test(body)) throw new Error(`${lang}${p.path}: contact form cleanup did not apply`);
   }
   const h1s = [...body.matchAll(/<h1([^>]*)>([\s\S]*?)<\/h1>/g)];
-  const h1 = h1s.map((m) => text(m[2])).find((t) => t) ?? '';
+  let h1 = h1s.map((m) => text(m[2])).find((t) => t) ?? '';
+  // 單張認證頁沒有 h1、title 又是全站通用的一句；看不見的 h1 用標題帶的字（CERTIFICATION | Eurocert）
+  if (!h1 && p.path.startsWith('/certification-page/')) h1 = text(body.match(/id="about-top-title">([\s\S]*?)<\/div>/)?.[1] ?? '');
   // 只留第一個有字的 h1；其他 h1（包標題圖的）改成 div
   let seenMain = false;
   body = body.replace(/<h1([^>]*)>([\s\S]*?)<\/h1>/g, (m, attrs, inner) => {
@@ -151,7 +157,8 @@ function parse(lang, p) {
     const tableGal = body.match(/([\d.]+)\s*gallons?/i)?.[1];
     if (altGal && tableGal && Number(altGal) !== Number(tableGal)) autoQuestions.push(`主圖 alt 寫 Gal ${altGal}，規格表寫 ${tableGal} gallons；系列頁型號清單也用 alt 的數字。`);
   }
-  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1: !!h1, legacyJsonLd, bootstrap, subtitle, autoQuestions };
+  const hasH1 = h1s.some((m) => text(m[2]));   // 真的有 <h1> 才算（認證頁的 h1 是從標題帶推出來的，頁面要補看不見的 h1）
+  return { row, title, description, legacyCss, extraCss, h1, body, assets, hasH1, legacyJsonLd, bootstrap, subtitle, autoQuestions };
 }
 
 // 舊站資料疑點（頁面照原樣，不改；要請客戶確認）。2026-10-24 審查官列出。

@@ -148,7 +148,8 @@ if (missing.length && fetchMissing) {
   for (const src of missing) {
     const target = join(publicDir, decodeURIComponent(src));
     if (existsSync(target)) { fetched++; continue; }
-    const res = await fetch(ORIGIN + encodeURI(decodeURIComponent(src)));
+    // 舊站的 Cloudflare 會擋沒有瀏覽器 UA 的請求（403），帶一個
+    const res = await fetch(ORIGIN + encodeURI(decodeURIComponent(src)), { headers: { 'User-Agent': 'Mozilla/5.0 (aquasky-site asset copy)' } });
     if (!res.ok) { console.log(`  live site has no ${src} (${res.status})`); continue; }
     mkdirSync(dirname(target), { recursive: true });
     const { writeFileSync } = await import('node:fs');

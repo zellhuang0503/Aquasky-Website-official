@@ -1,0 +1,14 @@
+{
+  "_note": "Old /en/certification-page/watermark-australia page body copied verbatim (incl. its product line). Edit bodyHtml to change text. The old page had no h1; the page adds a visually-hidden h1 = title.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank",
+    "description": "Aquasky: first choices of pressure tank, water tank, thermal tank, pump tank, ro tank, self-cleaning tank, water heating tank, expansion tank. Aquasky products:  Ro-Plus, Pumplus, Thermal-Plus, Hydro-Plus"
+  },
+  "h1": "CERTIFICATION | WaterMark Certification Scheme",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">CERTIFICATION | WaterMark Certification Scheme</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t<img src=\"/upfile/Images/CERTIFICATION/2025-WaterMark%20LF(1).png\" border=\"0\" class=\"img-responsive\">        </div>\n        <div class=\"col-md-6\">\n                    <div class=\"pd-btn-info-link\">\n                 <a href=\"/upfile/Files/20251204_WaterMark%20%E7%B6%B2%E7%AB%99%E7%89%88.pdf\" download=\"\" class=\"btn btn-link\">DOWDLOAD PDF</a>\n            </div>\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\r\n<div class=\"col-md-6 padding_bottom_20\" style=\"text-align: center;\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20251127_WaterMark-1.jpg\" style=\"width: 500px; height: 692px;\" /></div>\r\n\r\n<div class=\"col-md-6 padding_bottom_20\" style=\"text-align: center;\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20251127_WaterMark-p2.png\" style=\"width: 600px; height: 425px;\" /></div>\r\n\r\n<div class=\"col-md-6 padding_bottom_20\" style=\"text-align: center;\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20251127_WaterMark-p3.png\" style=\"width: 600px; height: 425px;\" /></div>\r\n</div>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}

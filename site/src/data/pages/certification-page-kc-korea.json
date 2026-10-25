@@ -1,0 +1,29 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/certification-page-kc-korea/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/certification-page/kc-korea 與 /zh/certification-page/kc-korea。",
+  "id": "certification-page-kc-korea",
+  "path": "/certification-page/kc-korea",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/certification-page/kc-korea",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-25"
+  },
+  "legacyCss": "#cerfitication-container {background:#002D49;}\n#about-top-title {background:#0086CF;}\n.cerfitication_title { padding:20px 15px 20px 15px; margin-top:50px; margin-bottom:50px; border-bottom:2px solid #FFF;}\n.pd-btn-info-link { text-align:right; margin:40px 0 40px 0;}\n.btn-link { color: #008ecf; border-color:#008ecf; border:1px sloid #008ecf; font-size:18px; padding:10px 20px; border-radius: 30px; min-width:200px;}\n.btn-link:focus, .btn-link.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-link:hover { color: #333; background-color: #e6e6e6; border-color: #adadad; text-decoration:none;}",
+  "extraCss": [
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "bootstrap": "full",
+  "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
+  "assets": [
+    "/upfile/Images/CERTIFICATION/kc_b.png",
+    "/upfile/Images/CERTIFICATION/%5BAQUASKY%5D%EC%9C%84%EC%83%9D%EC%95%88%EC%A0%84%EA%B8%B0%EC%A4%80%20%EC%9D%B8%EC%A6%9D%EC%84%9C(KC)_%EC%95%95%EB%A0%A5%ED%83%B1%ED%81%AC%20(1).png",
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "dataQuestions": []
+}

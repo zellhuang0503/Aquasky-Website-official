@@ -14,3 +14,4 @@ migration-2026-10-09/failed_references_pre_base.json
 Thumbs.db
 desktop.ini
 __pycache__/
+migration-*/live-*/

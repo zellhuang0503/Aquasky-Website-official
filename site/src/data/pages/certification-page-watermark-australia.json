@@ -1,0 +1,32 @@
+{
+  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/certification-page-watermark-australia/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/certification-page/watermark-australia 與 /zh/certification-page/watermark-australia。",
+  "id": "certification-page-watermark-australia",
+  "path": "/certification-page/watermark-australia",
+  "template": "legacy",
+  "source": {
+    "url": "https://aquaskyplus.com/en/certification-page/watermark-australia",
+    "archive": "migration-2026-10-22",
+    "retrieved": "2026-10-25"
+  },
+  "legacyCss": "#cerfitication-container {background:#002D49;}\n#about-top-title {background:#0086CF;}\n.cerfitication_title { padding:20px 15px 20px 15px; margin-top:50px; margin-bottom:50px; border-bottom:2px solid #FFF;}\n.pd-btn-info-link { text-align:right; margin:40px 0 40px 0;}\n.btn-link { color: #008ecf; border-color:#008ecf; border:1px sloid #008ecf; font-size:18px; padding:10px 20px; border-radius: 30px; min-width:200px;}\n.btn-link:focus, .btn-link.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c;}\n.btn-link:hover { color: #333; background-color: #e6e6e6; border-color: #adadad; text-decoration:none;}",
+  "extraCss": [
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "bootstrap": "full",
+  "neutral": false,
+  "langs": [
+    "en",
+    "zh"
+  ],
+  "assets": [
+    "/upfile/Images/CERTIFICATION/2025-WaterMark%20LF(1).png",
+    "/upfile/Files/20251204_WaterMark%20%E7%B6%B2%E7%AB%99%E7%89%88.pdf",
+    "/upfile/Images/CERTIFICATION/20251127_WaterMark-1.jpg",
+    "/upfile/Images/CERTIFICATION/20251127_WaterMark-p2.png",
+    "/upfile/Images/CERTIFICATION/20251127_WaterMark-p3.png",
+    "/js/owl/owl.carousel.css",
+    "/js/owl/owl.theme.css"
+  ],
+  "dataQuestions": []
+}

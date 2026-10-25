@@ -1,0 +1,14 @@
+{
+  "_note": "Old /en/certification-page/acs-france page body copied verbatim (incl. its product line). Edit bodyHtml to change text. The old page had no h1; the page adds a visually-hidden h1 = title.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank",
+    "description": "Aquasky: first choices of pressure tank, water tank, thermal tank, pump tank, ro tank, self-cleaning tank, water heating tank, expansion tank. Aquasky products:  Ro-Plus, Pumplus, Thermal-Plus, Hydro-Plus"
+  },
+  "h1": "CERTIFICATION | Attestation De Conformité Sanitaire",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">CERTIFICATION | Attestation De Conformité Sanitaire</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t<img src=\"/upfile/Images/CERTIFICATION/acs_b.png\" border=\"0\" class=\"img-responsive\">        </div>\n        <div class=\"col-md-6\">\n                    <div class=\"pd-btn-info-link\">\n                 <a href=\"/upfile/Files/ACS%20AQUASKY%2025%20ACC%20NY%20563.pdf\" download=\"\" class=\"btn btn-link\">DOWDLOAD PDF</a>\n            </div>\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\r\n<div class=\"col-md-6 padding_bottom_20\" style=\"text-align: center;\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20251216_Aquasky%20ACS%20p1.jpg\" style=\"width: 500px; height: 707px;\" /></div>\r\n\r\n<div class=\"col-md-6 padding_bottom_20\" style=\"text-align: center;\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20251216_Aquasky%20ACS%20p2.jpg\" style=\"width: 500px; height: 707px;\" /></div>\r\n</div>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}

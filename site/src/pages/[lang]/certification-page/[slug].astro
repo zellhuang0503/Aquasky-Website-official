@@ -1,0 +1,13 @@
+---
+// 單張認證頁：/en/certification-page/<slug>、/zh/…（舊站是 certification_page.php?sid=N，靜態站做不了查詢字串網址；照抄模板）
+import { getCollection } from 'astro:content';
+import LegacyPage from '../../../components/LegacyPage.astro';
+import { type Lang, liveLangs } from '../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const pages = (await getCollection('pages')).map((e) => e.data).filter((p) => p.path.startsWith('/certification-page/'));
+  return pages.flatMap((page) => page.langs.filter((l) => liveLangs.includes(l)).map((lang) => ({ params: { lang, slug: page.path.slice('/certification-page/'.length) }, props: { page } })));
+}
+const { page } = Astro.props;
+---
+<LegacyPage lang={Astro.params.lang as Lang} page={page} />

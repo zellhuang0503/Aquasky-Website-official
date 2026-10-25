@@ -32,6 +32,8 @@ if (detail) {
   if (!seriesCrumb) throw new Error(`${page.path}: series ${seriesPath} not in nav`);
   crumb = [{ name: labelOf('products'), path: '/products' }, seriesCrumb, { name: c.h1, path: page.path }];
 }
+// 單張認證頁（/certification-page/<slug>）：首頁›CERTIFICATION›該認證
+if (page.path.startsWith('/certification-page/')) crumb = [{ name: labelOf('certification'), path: '/certification' }, { name: c.h1, path: page.path }];
 // 下載子頁（/download/<language>）：首頁›DOWNLOAD›EDM English
 if (page.neutral && page.path.startsWith('/download/')) crumb = [{ name: labelOf('download'), path: '/downloadpage' }, { name: c.subtitle ?? c.h1, path: page.path }];
 if (!crumb.length) crumb = [{ name: c.h1, path: page.path }];

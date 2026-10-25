@@ -1,0 +1,14 @@
+{
+  "_note": "舊站 /zh/certification-page/psb-singapore 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。",
+  "template": "legacy",
+  "lang": "zh",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank",
+    "description": "Aquasky: first choices of pressure tank, water tank, thermal tank, pump tank, ro tank, self-cleaning tank, water heating tank, expansion tank. Aquasky products:  Ro-Plus, Pumplus, Thermal-Plus, Hydro-Plus"
+  },
+  "h1": "認證 | PSB 新加坡認證",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">認證 | PSB 新加坡認證</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t        </div>\n        <div class=\"col-md-6\">\n                    <div class=\"pd-btn-info-link\">\n                 <a href=\"/upfile/Files/20220802Singapore%20PSB%20certification.pdf\" download=\"\" class=\"btn btn-link\">DOWDLOAD PDF</a>\n            </div>\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<p>Singapore PSB certification</p>\r\n\r\n<p><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20220802Singapore%20PSB%20certification.jpg\" style=\"width: 500px; height: 708px;\" /></p>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}
