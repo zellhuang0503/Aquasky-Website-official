@@ -40,6 +40,8 @@
 #news-container #ImgAutoResponsive iframe { max-width: 100%; }
 /* 英文產品明細 68 頁正文裡的 YouTube iframe（width=560）同樣會在手機撐寬整頁；桌機 560 < 欄寬不受影響 */
 .pd-text-2 iframe { max-width: 100%; }
+/* 單張認證頁 10 頁的證書大圖是 inline 寬高（500～848px），手機會撐寬整頁（舊站同）；限欄寬、高度跟著等比。桌機 1280 只有 600px 的 WaterMark 兩張縮成 570 */
+#cerfitication-container .container img { max-width: 100%; height: auto !important; }
 
 /* 404 */
 .notfound { text-align: center; padding: 64px 16px; }

@@ -1,5 +1,5 @@
 {
-  "_note": "舊站 /zh/certification-page/psb-singapore 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。",
+  "_note": "舊站 /zh/certification-page/psb-singapore 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝標題帶字樣。",
   "template": "legacy",
   "lang": "zh",
   "status": "approved-legacy",
