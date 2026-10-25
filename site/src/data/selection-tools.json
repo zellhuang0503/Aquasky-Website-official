@@ -1,0 +1,91 @@
+{
+  "_note": "選型工具（/sel_unit_ps、/sel_unit_vsd、/sel_unit_thermal）的參數與型號對照。算式來源：溢康 2022-04-13「SELECTION TOOL 計算式列表.docx」；型號對照來源：2020-09-23 Selection Tool.xlsx（官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/README.md）。改數字只改這裡，程式在 public/js/selection-tools.js。",
+  "formulas": {
+    "psiPerBar": 14.5,
+    "ps": {
+      "_": "Pressure Switch：AF=(cut_out−cut_in)/(cut_out+1)；Total=運轉分鐘×每分鐘公升；Size=Total/AF；PSI 先 ÷14.5 換 bar",
+      "prechargeBarOffset": 0.2,
+      "prechargePsiOffset": 2,
+      "_prechargePsiOffset": "客戶 2022 文件寫 Cut-in − 2；舊站程式寫 − 2.8（工程師自己換算的）。先照客戶文件，待 Tiffany 確認（2026-10-25）。",
+      "megaFromCutInBar": 9,
+      "megaFromCutInPsi": 130
+    },
+    "vsd": {
+      "_": "VSD／VFD：Size=water_flow/36（36 固定）；預充壓 bar=(set+0.1)×0.65、psi=(set+1.5)×0.65",
+      "flowDivisor": 36,
+      "prechargeBar": { "add": 0.1, "mul": 0.65 },
+      "prechargePsi": { "add": 1.5, "mul": 0.65 },
+      "megaFromSetBar": 8.5,
+      "megaFromSetPsi": 120
+    },
+    "thermal": {
+      "_": "Thermal Expansion：Size=Total_Water_Volume×0.044（0.044 固定）；預充壓 bar=operating−0.2、psi=(operating+0.1)×0.65（客戶文件如此，不是 bug）",
+      "volumeFactor": 0.044,
+      "prechargeBarOffset": 0.2,
+      "prechargePsi": { "add": 0.1, "mul": 0.65 }
+    }
+  },
+  "models": {
+    "_": "挑「容積 ≥ 算出值」的第一個型號；超過最後一個就顯示 multipleTanks 文字。APT／MEGA 的級距照 2020 Excel「推薦條件」（MEGA 最小 8 L）。Thermal 客戶沒給對照表，用 THERMAL-PLUS 型號清單套同一規則，待 Tiffany 核。",
+    "apt": [
+      { "max": 1.3, "model": "APT-1.3", "volumeL": 1.3, "volumeGal": 0.3, "path": "/products-det/pumplus/APT-1.3" },
+      { "max": 3, "model": "APT-3", "volumeL": 3, "volumeGal": 0.5, "path": "/products-det/pumplus/APT-3" },
+      { "max": 8, "model": "APT-8", "volumeL": 8, "volumeGal": 2, "path": "/products-det/pumplus/APT-8" },
+      { "max": 12, "model": "APT-12", "volumeL": 12, "volumeGal": 3, "path": "/products-det/pumplus/APT-12" },
+      { "max": 18, "model": "APT-18", "volumeL": 18, "volumeGal": 4.5, "path": "/products-det/pumplus/APT-18" },
+      { "max": 24, "model": "APT-24", "volumeL": 24, "volumeGal": 6, "path": "/products-det/pumplus/APT-24" },
+      { "max": 40, "model": "APT-40", "volumeL": 40, "volumeGal": 10, "path": "/products-det/pumplus/APT-40" },
+      { "max": 60, "model": "APT-60", "volumeL": 60, "volumeGal": 14, "path": "/products-det/pumplus/APT-60" },
+      { "max": 80, "model": "APT-80", "volumeL": 80, "volumeGal": 20, "path": "/products-det/pumplus/APT-80" },
+      { "max": 100, "model": "APT-100", "volumeL": 100, "volumeGal": 28, "path": "/products-det/pumplus/APT-100" },
+      { "max": 120, "model": "APT-120", "volumeL": 120, "volumeGal": 32, "path": "/products-det/pumplus/APT-120" },
+      { "max": 130, "model": "APT-130", "volumeL": 130, "volumeGal": 36, "path": "/products-det/pumplus/APT-130" },
+      { "max": 160, "model": "APT-160", "volumeL": 160, "volumeGal": 42, "path": "/products-det/pumplus/APT-160" },
+      { "max": 200, "model": "APT-200", "volumeL": 200, "volumeGal": 53, "path": "/products-det/pumplus/APT-200" },
+      { "max": 240, "model": "APT-240", "volumeL": 240, "volumeGal": 62, "path": "/products-det/pumplus/APT-240" },
+      { "max": 300, "model": "APT-300", "volumeL": 300, "volumeGal": 80, "path": "/products-det/pumplus/APT-300" },
+      { "max": 450, "model": "APT-450", "volumeL": 450, "volumeGal": 119, "path": "/products-det/pumplus/APT-450" }
+    ],
+    "mega": [
+      { "max": 8, "model": "MEGA-8", "volumeL": 8, "volumeGal": 2, "path": "/products-det/mega-plus/MEGA-8" },
+      { "max": 12, "model": "MEGA-12", "volumeL": 12, "volumeGal": 3, "path": "/products-det/mega-plus/MEGA-12" },
+      { "max": 18, "model": "MEGA-18", "volumeL": 18, "volumeGal": 4.5, "path": "/products-det/mega-plus/MEGA-18" },
+      { "max": 24, "model": "MEGA-24", "volumeL": 24, "volumeGal": 6, "path": "/products-det/mega-plus/MEGA-24" },
+      { "max": 40, "model": "MEGA-40", "volumeL": 40, "volumeGal": 10, "path": "/products-det/mega-plus/MEGA-40" },
+      { "max": 60, "model": "MEGA-60", "volumeL": 60, "volumeGal": 14, "path": "/products-det/mega-plus/MEGA-60" },
+      { "max": 80, "model": "MEGA-80", "volumeL": 80, "volumeGal": 20, "path": "/products-det/mega-plus/MEGA-80" },
+      { "max": 100, "model": "MEGA-100", "volumeL": 100, "volumeGal": 28, "path": "/products-det/mega-plus/MEGA-100" },
+      { "max": 120, "model": "MEGA-120", "volumeL": 120, "volumeGal": 32, "path": "/products-det/mega-plus/MEGA-120" },
+      { "max": 130, "model": "MEGA-130", "volumeL": 130, "volumeGal": 36, "path": "/products-det/mega-plus/MEGA-130" },
+      { "max": 160, "model": "MEGA-160", "volumeL": 160, "volumeGal": 42, "path": "/products-det/mega-plus/MEGA-160" },
+      { "max": 200, "model": "MEGA-200", "volumeL": 200, "volumeGal": 53, "path": "/products-det/mega-plus/MEGA-200" },
+      { "max": 240, "model": "MEGA-240", "volumeL": 240, "volumeGal": 62, "path": "/products-det/mega-plus/MEGA-240" },
+      { "max": 300, "model": "MEGA-300", "volumeL": 300, "volumeGal": 80, "path": "/products-det/mega-plus/MEGA-300" },
+      { "max": 450, "model": "MEGA-450", "volumeL": 450, "volumeGal": 119, "path": "/products-det/mega-plus/MEGA-450" }
+    ],
+    "thermal": [
+      { "max": 3, "model": "TP-3", "volumeL": 3, "volumeGal": 0.8, "path": "/products-det/thermal-plus/TP-3" },
+      { "max": 8, "model": "TP-8", "volumeL": 8, "volumeGal": 2, "path": "/products-det/thermal-plus/TP-8" },
+      { "max": 18, "model": "TP-18", "volumeL": 18, "volumeGal": 4.5, "path": "/products-det/thermal-plus/TP-18" },
+      { "max": 24, "model": "TP-24", "volumeL": 24, "volumeGal": 6, "path": "/products-det/thermal-plus/TP-24" },
+      { "max": 40, "model": "TP-40", "volumeL": 40, "volumeGal": 10, "path": "/products-det/thermal-plus/TP-40" },
+      { "max": 60, "model": "TP-60", "volumeL": 60, "volumeGal": 14, "path": "/products-det/thermal-plus/TP-60" },
+      { "max": 80, "model": "TP-80", "volumeL": 80, "volumeGal": 20, "path": "/products-det/thermal-plus/TP-80" },
+      { "max": 100, "model": "TP-100", "volumeL": 100, "volumeGal": 28, "path": "/products-det/thermal-plus/TP-100" }
+    ]
+  },
+  "text": {
+    "_": "結果區文字。舊站三頁的步驟標籤本來就是英文（zh 頁也是），結果區沿用英文；備註句照舊站 2021 列印 PDF。",
+    "prechargeBar": "*The suggested pre-charge is {v} Bar.",
+    "prechargePsi": "*The suggested pre-charge is {v} PSI.",
+    "resultTitle": "Suggested model",
+    "modelNumber": "Model Number",
+    "series": "Series",
+    "totalVolume": "Total Tank Volume",
+    "properSize": "Proper Tank Size: {v} L or above",
+    "viewDetails": "View product details",
+    "disclaimer": "*The suggested model is only useful according to the data.",
+    "multipleTanks": "Select multiple tanks with a total volume of at least {v} L",
+    "seriesName": { "apt": "PUMPLUS", "mega": "MEGA-PLUS", "thermal": "THERMAL-PLUS" }
+  }
+}

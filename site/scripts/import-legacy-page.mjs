@@ -20,12 +20,15 @@ const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories',
 const DOWNLOAD_LANGS = ['arabic', 'chinese', 'dutch', 'english', 'french', 'german', 'italian', 'japanese', 'korean', 'latvian', 'lithuanian', 'russian', 'spanish', 'thai'];
 // 單張認證頁：舊站 certification_page.php?sid=N（查詢字串，靜態站做不了），新站改乾淨網址；封存索引（live-2026-10-25）已用新網址當 key
 const CERT_PAGES = { 4: 'iso-9001-eurocert', 6: 'kc-korea', 7: 'acs-france', 9: 'watermark-australia', 10: 'psb-singapore' };
+// 選型工具三個計算器：表單 HTML 照抄，舊站的 jQuery／AJAX／PDF 表單拿掉，計算改由 public/js/selection-tools.js 做
+const CALC_PAGES = { '/sel_unit_ps': 'ps', '/sel_unit_vsd': 'vsd', '/sel_unit_thermal': 'thermal' };
 const paths = args.filter((a) => a.startsWith('/'));
 // 英文產品明細（/products-det/<series>/<model>，90 頁）與配件明細（/accessories-det/<item>，6 頁）：舊站只有英文版；從封存索引自動找
 const toPage = (p) => {
   if (p.startsWith('/download/')) return { path: p, id: p.slice(1).replace('/', '-').toLowerCase(), neutral: true, langs: ['en'] };
   // id 不能有「.」（APT-1.3）：Astro 內容集合的 id 會把點吃掉，找不到檔；網址本身不變
   if (/^\/(products-det|accessories-det)\//.test(p)) return { path: p, id: p.slice(1).replace(/[/.]/g, '-').toLowerCase(), langs: ['en'] };
+  if (CALC_PAGES[p]) return { path: p, id: p.slice(1).toLowerCase(), langs: ['en', 'zh'], calculator: CALC_PAGES[p] };
   return { path: p, id: p.slice(1).replace(/[/.]/g, '-').toLowerCase(), langs: ['en', 'zh'] };
 };
 
@@ -36,7 +39,7 @@ for (const line of readFileSync(join(archive, 'success.jsonl'), 'utf8').split('\
   index.set(row.url, row);
 }
 const DETAIL_PATHS = [...index.keys()].filter((u) => /^https:\/\/aquaskyplus\.com\/en\/(products-det|accessories-det)\//.test(u)).map((u) => u.replace(`${ORIGIN}/en`, '')).sort();
-const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`), ...DETAIL_PATHS, ...Object.values(CERT_PAGES).map((s) => `/certification-page/${s}`)]).map(toPage);
+const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`), ...DETAIL_PATHS, ...Object.values(CERT_PAGES).map((s) => `/certification-page/${s}`), ...Object.keys(CALC_PAGES)]).map(toPage);
 // HTML 實體還原成純文字（JSON-LD 的字串不能留 &deg; 這種實體，Google 會當字面文字）
 const NAMED = { amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', ndash: '–', mdash: '—', deg: '°', hellip: '…', copy: '©', reg: '®', trade: '™', times: '×', middot: '·', bull: '•', apos: "'" };
 const unescape = (s) => s
@@ -63,7 +66,8 @@ function parse(lang, p) {
     const parsed = JSON.parse(m[1]);
     const items = Array.isArray(parsed) ? parsed : parsed['@graph'] ? parsed['@graph'] : [parsed];
     // Organization 的子類（Corporation…）也算，新站的 Organization 只有一個
-    return items.filter((o) => !['Organization', 'Corporation', 'LocalBusiness', 'WebSite', 'BreadcrumbList'].includes(o['@type']));
+    // 計算器頁舊站 head 的 WebPage 指到 /sel_tools（錯的），不搬
+    return items.filter((o) => !['Organization', 'Corporation', 'LocalBusiness', 'WebSite', 'BreadcrumbList', ...(p.calculator ? ['WebPage'] : [])].includes(o['@type']));
   }).map((obj) => {
     delete obj['@context'];
     // 舊站把 BreadcrumbList 塞在 Product.breadcrumb 裡：schema.org 的 Product 沒有這個屬性（那是 WebPage 的），Google 不會讀；
@@ -87,11 +91,19 @@ function parse(lang, p) {
   body = body.replace(/href="accessories\.php\?lang=en"/g, 'href="/en/accessories"');
   // 認證頁的「CERTIFICATION LINK」：certification_page.php?sid=N → /<lang>/certification-page/<slug>
   body = body.replace(/href="\/?certification_page\.php\?sid=(\d+)"/g, (_m, sid) => { const slug = CERT_PAGES[sid]; if (!slug) throw new Error(`${lang}${p.path}: unknown certification sid ${sid}`); return `href="/${lang}/certification-page/${slug}"`; });
+  if (p.calculator) {
+    // 舊站：送 PDF 的隱藏表單（printpdf*.php／sel_contact.php）拿掉；input 的 onChange 與 Cloudflare 的 data-cf-modified 拿掉；表單 action 改 #（JS 擋住送出）
+    body = body.replace(/<form[^>]*id="pdf_form2?"[\s\S]*?<\/form>/g, '')
+      .replace(/\s(?:onChange|onchange|onclick|onClick)="[^"]*"/g, '')
+      .replace(/\sdata-cf-modified-[\w-]*=""/g, '')
+      .replace(/<form([^>]*)>/g, (_m, attrs) => '<form' + (/\saction=/.test(attrs) ? attrs.replace(/action="[^"]*"/, 'action="#"') : attrs + ' action="#"') + '>');   // ps 頁 action=""、vsd／thermal 頁連到 sizing_bar.php，一律改 #
+    if (/pdf_form|SendPDFData|__cfRL/.test(body)) throw new Error(`${lang}${p.path}: calculator cleanup did not apply`);
+  }
   if (/<script|<object|<embed/i.test(body)) throw new Error(`${lang}${p.path}: body has script — handle by hand`);
   for (const m of body.matchAll(/<iframe[^>]*src="([^"]+)"/g)) {
     if (!/^https:\/\/www\.youtube(-nocookie)?\.com\/embed\//.test(m[1])) throw new Error(`${lang}${p.path}: iframe not YouTube: ${m[1]}`);
   }
-  if (/<form/i.test(body) && p.id !== 'contact') throw new Error(`${lang}${p.path}: unexpected <form>`);
+  if (/<form/i.test(body) && p.id !== 'contact' && !p.calculator) throw new Error(`${lang}${p.path}: unexpected <form>`);
   body = body.replace(/<div id="return-to-top"[\s\S]*$/, '');
   body = body.replace(/<a[^>]*href="\/cdn-cgi\/l\/email-protection"[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/a>/g, (_m, hex) => decodeCfEmail(hex))
              .replace(/<span[^>]*class="__cf_email__"[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/span>/g, (_m, hex) => decodeCfEmail(hex));
@@ -192,6 +204,7 @@ for (const p of PAGES) {
     bootstrap: en.bootstrap,
     neutral: !!p.neutral,
     langs: p.langs,
+    ...(p.calculator ? { calculator: p.calculator } : {}),
     assets: [...new Set([...en.assets, ...zh.assets])],
     dataQuestions: [...(DATA_QUESTIONS[p.id] ?? []), ...en.autoQuestions],
   };

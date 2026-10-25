@@ -43,8 +43,14 @@
 /* 單張認證頁 10 頁的證書大圖是 inline 寬高（500～848px），手機會撐寬整頁（舊站同）；限欄寬、高度跟著等比。桌機 1280 只有 600px 的 WaterMark 兩張縮成 570 */
 #cerfitication-container .container img { max-width: 100%; height: auto !important; }
 
+/* 選型工具結果區（舊站由伺服器回 HTML，新站自己畫；用舊站的 .table 與 .btn-link 樣式） */
+.sel-result-size { font-size: 20px; font-weight: bold; color: #0088d1; }
+.sel-result-table th { width: 45%; color: #002d49; }
+.sel-result-multi { font-size: 18px; font-weight: bold; }
+body.printing-tool header, body.printing-tool footer, body.printing-tool .preview-banner, body.printing-tool .step_arrow_down { display: none !important; }
+
 /* 404 */
 .notfound { text-align: center; padding: 64px 16px; }
 .notfound .btn-link { margin: 4px; }
 
-@media print { .preview-banner, .navbar-toggle { display: none; } }
+@media print { .preview-banner, .navbar-toggle { display: none; } body.printing-tool #select_tools .select_btn, body.printing-tool #submit_s1, body.printing-tool #submit_s2, body.printing-tool [id^=show_print_] { display: none !important; } }

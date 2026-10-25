@@ -15,13 +15,14 @@
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
 | `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、sel_tools | 同上（照抄模板） | 同上。contact 表單外觀保留但 action="#"、拿掉 PHP 驗證碼與隱藏欄位，送出功能上線前接 Worker API；sel_tools 只是入口頁，三個計算器另做 |
 | `/en/products-det/<series>/<model>` 90 頁、`/en/accessories-det/<item>` 6 頁（舊站只有英文版；中文系列頁照舊站沒有型號清單，不連明細） | `src/pages/[lang]/products-det/[series]/[model].astro`、`[lang]/accessories-det/[item].astro` → `LegacyPage.astro`（照抄模板，`langs: ['en']`） | 主體照抄，verify 逐字比。匯入時拿掉 Google 翻譯殘留的 `<font>` 包裝（90 頁合計 6 萬多個、單頁最多約 1,100 個；APT-3 從 57 KB 變 15 KB）；配件頁「<<back」改連 `/en/accessories`；YouTube iframe 保留；hreflang 只列 en；麵包屑 首頁›產品系列›該系列›型號 |
+| `/en/sel_unit_ps`、`/en/sel_unit_vsd`、`/en/sel_unit_thermal`（zh 同）選型計算器 3 個 | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板，`calculator: ps/vsd/thermal`）＋ `public/js/selection-tools.js` ＋ `src/data/selection-tools.json` | 表單 HTML 照抄舊站；計算從舊站的 jQuery＋AJAX（select_api*.php）改成純 JS 在瀏覽器算，算式照溢康 2022-04-13 文件（`官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/README.md`），型號對照照 2020 Excel。`npm run test:tools` 跑公式單元測試 |
 | `/en/certification-page/<slug>`、`/zh/…` 5 張認證（iso-9001-eurocert、kc-korea、acs-france、watermark-australia、psb-singapore） | `src/pages/[lang]/certification-page/[slug].astro` → `LegacyPage.astro`（照抄模板） | 舊站是 `certification_page.php?sid=N`（查詢字串，靜態站做不了），封存也沒抓到；10/25 從線上抓（`migration-2026-10-22/live-2026-10-25/`，索引用新網址當 key）。認證頁的「CERTIFICATION LINK」匯入時改連新網址；切換時舊網址要 Worker 轉址 |
 | `/download/english` … 14 個語系子頁（網址沒有語系前綴） | `src/pages/download/[language].astro` → `LegacyPage.astro`（照抄模板，`neutral: true`） | 舊站這些頁一律英文介面、沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站英文介面、canonical 指自己、不輸出 hreflang、語言選單回各語系首頁。83 個 EDM PDF（66 MB）與封面圖由 copy 腳本複製 |
 | `/en/news/EXHIBITIONS`、`/en/news/INDUSTRY`、`/en/news/<CAT>/pageN`（zh 同） | `src/pages/[lang]/news/[category].astro`、`[category]/[page].astro` → `NewsList.astro` | 舊站列表照抄：每頁 5 篇、右欄固定幾篇「熱門文章」、分頁列全頁碼；en 6＋33 頁、zh 1＋10 頁 |
 | `/en/news-detail/<CAT>/<slug>`（237 篇：en 187、zh 50） | `src/pages/[lang]/news-detail/[category]/[slug].astro` → `NewsDetail.astro` | 正文整段照抄（`src/content/news/<lang>/<CAT>/<slug>.json`），verify 逐字比。每篇只有一個語系，沒有對應翻譯 |
 | `/en/videos`、`/en/videos/page2`、`page3`（zh 同）；`/en/videos-detail/<slug>` 11 篇（zh 11 篇，slug 不同） | `src/pages/[lang]/videos.astro`、`videos/[page].astro`、`videos-detail/[slug].astro` → 同新聞的 `NewsList`／`NewsDetail`（`kind: videos`） | 版型與新聞完全相同（CSS 同一份）；明細 JSON-LD 是舊站的 Article＋VideoObject；返回鈕用 `videos_back` |
 
-還沒搬：選型工具三個計算器（`/en|zh/sel_unit_ps|vsd|thermal`）。`npm run verify` 會列出這些連結。
+舊站的頁全部搬完（486 頁）；`npm run verify` 的「尚未搬遷」已是 0。
 
 ## 三種系列頁模板
 
@@ -61,6 +62,7 @@ npm run check           # 型別與模板檢查
 | 首頁頁面樣式與輪播設定 | `src/data/home.json` |
 | 新聞／影片每篇文字（標題、日期字樣、摘要、正文、SEO） | `src/content/news/<lang>/<CAT>/<slug>.json`（影片的 CAT 是 VIDEOS）；新文章＝新增一檔並把 slug 加進列表 `order` 最前面 |
 | 英文產品明細／配件明細的文字 | `src/content/legacy/products-det-<series>-<model>/en.json`、`accessories-det-<item>/en.json` 的 bodyHtml（id 裡的「.」改成「-」：APT-1.3 → apt-1-3，網址不變） |
+| 選型計算器的算式參數、型號對照、結果區文字 | `src/data/selection-tools.json`（改完跑 `npm run test:tools`） |
 | 下載子頁的文字與 PDF 清單 | `src/content/legacy/download-<language>/en.json` 的 bodyHtml（PDF 放 `public/download/EDM/<Language>/`，封面在 `cover/`） |
 | 新聞列表：順序、右欄「熱門文章」、標題帶、按鈕字樣、SEO | `src/data/news/<lang>-<CAT>.json`（`pageCount` 要＝ceil(篇數/5)，schema 會檢查） |
 | 新聞列表／明細的頁面樣式 | `src/data/news/common.json` |
@@ -117,6 +119,7 @@ npm run check           # 型別與模板檢查
 - 新聞：hreflang 只列真的有這一頁的語系（明細只有自己；列表第 N 頁要兩個語系都有 N 頁才互列），語言選單切到沒有這頁的語系時回該語系首頁（舊站語言選單一律回首頁）。列表封面圖補 alt＝標題（舊站沒有）。CollectionPage 每頁指自己的網址（舊站每頁都指第 1 頁）；NewsArticle 原樣搬並補 publisher。列表與明細各補一個看不見的 h1（列表＝標題帶字樣、明細＝文章標題）。
 - 新聞正文裡 YouTube 的 iframe 保留（schema 只准 youtube／youtube-nocookie）；正文裡連到舊站 `.php` 的連結照舊（約 130 處），切換時要改。
 - 英文產品明細（90 頁）：匯入時拿掉 `<font dir="auto" style="vertical-align: inherit;">` 層層包裝（Google 翻譯殘留，90 頁合計 6 萬多個；唯一的視覺影響是規格表每列矮 2px，APT-3 整頁 5846 vs 舊站 5862，肉眼看不出），verify 比對時兩邊都先去掉；配件明細的「<<back」從 `accessories.php?lang=en` 改成 `/en/accessories`；頁內「Price Inquiry」「Contact us」連 `/en/sel_tools`、`/en/contact`（舊站是相對路徑，同一處）。68 頁正文裡的 YouTube iframe（width=560）在手機會撐寬整頁（舊站同），site.css 讓它不超過欄寬。舊站這些頁 head 沒有 JSON-LD（AEO Worker 注入的不搬），新站只有全站的 Organization／WebSite／BreadcrumbList。
+- 選型計算器：舊站把算出的容積 POST 到 select_api*.php 由伺服器挑型號、回一段 HTML，再可 POST 到 printpdf*.php 產 PDF、sel_contact.php 轉詢價；新站全部在瀏覽器算（結果區自己畫：Proper Tank Size、Model Number、Series、Total Tank Volume、連到產品明細、預充壓與免責句照 2021 列印 PDF），「Print Technical File」改成瀏覽器列印（印出表單與結果，藏掉選單與頁尾），「contact us」改成連到聯絡頁（不帶入選型資料）。Pressure Switch PSI 預充壓用客戶文件的 `Cut-in − 2`（舊站 − 2.8），待 Tiffany 確認；預充壓數字四捨五入到 2 位（舊站直接印浮點數會出現 2.0999999）。Thermal 的型號對照客戶沒給，用 THERMAL-PLUS 型號清單套「容積 ≥ 算出值的最小型號」。舊站 head 的 WebPage（指到 /sel_tools）不搬。
 - 單張認證頁：網址從 `certification_page.php?sid=N` 改成 `/<lang>/certification-page/<slug>`（舊網址切換時要 Worker 301）；舊站沒有 h1、title 五頁都是同一句全站通用的，新站補看不見的 h1＝標題帶字樣（CERTIFICATION | Eurocert），title／description 照舊（列在資料問題）。證書大圖 inline 寬高在手機撐寬整頁（舊站同），site.css 讓它不超過欄寬、高度等比；桌機只有 WaterMark 兩張 600px 的縮成 570。
 - 影片明細的 JSON-LD：舊站 zh 影片的 `@id`／`mainEntityOfPage` 還寫 `videos-detail.php?sid=…`，匯入時改成新站乾淨網址；Article 補 publisher。
 - 下載子頁（/download/<language>）：舊站線上版的選單語言會跟著 cookie 走（看過中文頁再開就變中文選單），封存版是英文；新站固定英文介面。這些頁舊站沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站 canonical 指自己、不輸出 hreflang（14 頁各是一種型錄語言，不是網站語系）。麵包屑：首頁›DOWNLOAD›EDM English。

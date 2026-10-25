@@ -179,6 +179,8 @@ const pages = defineCollection({
     neutral: z.boolean().default(false),
     /** 這頁有哪些語系（產品明細、配件明細、下載子頁只有 en） */
     langs: z.array(lang).min(1).default(['en', 'zh']),
+    /** 選型工具計算器：頁面會載 public/js/selection-tools.js 與 src/data/selection-tools.json */
+    calculator: z.enum(['ps', 'vsd', 'thermal']).optional(),
     assets: z.array(z.string()),
     dataQuestions: z.array(z.string()),
   }),

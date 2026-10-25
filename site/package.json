@@ -13,6 +13,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "assets:copy": "node scripts/copy-archive-assets.mjs",
+    "test:tools": "node scripts/test-selection-tools.mjs",
     "verify": "node scripts/verify-dist.mjs",
     "cf:preview": "wrangler dev --ip 127.0.0.1 --port 8788",
     "cf:deploy": "wrangler deploy"
