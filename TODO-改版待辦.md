@@ -105,9 +105,8 @@
   - [x] **新 OpenRouter 金鑰已放上 Worker**（2026-10-25 11:33，Zell 用 `set-aiqa-secrets.py` 上傳；config.ini 先換成新金鑰）。**上線驗收通過**：`acceptance-2026-10-25`（B1 × 六模型）11:36 六份皆 answered、finish=stop、回傳模型 ID 與設定一致、六份都提到品牌且引用官網；合計 US$0.648（OpenAI 0.270、Grok 0.169、Claude 0.111、Google 0.081、DeepSeek 0.010、Perplexity 0.007）。
   - [x] **修 bug**（2026-10-25）：`monitor/src/aiqa-runner.mjs` 供應商回錯誤且無費用回報時 `reported_usd` 設 0 釋放預留，逾時後的 uncertain 仍保留預留；加回歸測試（aiqa 測試 38 通過；monitor.test.mjs 另有 2 項本來就失敗的測試未動）。commit 964e63b，Worker 已部署（版本 9e165ece）。
   - [x] **清掉已卡住的 US$20**（2026-10-25）：D1 `aiqa_attempts` 10 月 `reported_usd IS NULL` 且 item 為 failed/402 的 10 筆已設 0；10 月 accounted 從 23.32 降到 3.32。被擋的 90 題（10/8 月測 66、10/22 複查 24）狀態是 `budget_blocked`，屬終態，不會自己補跑。
-  - [ ] **補跑中，卡在 OpenRouter 餘額**（2026-10-25 Zell 決定補跑，輪次 `monthly-2026-10-08-catchup`，kind=monthly、簽章同 10/8 原輪，設定內 note 標「補跑」）。11:40 起跑，到 12:35 答完 36、沒答完 2（DeepSeek A4/A5 達 6000 token 上限）、失敗 21（全是 OpenRouter 402：`limit_source: openrouter_credits`，新帳號儲值用完）、13 題我先暫停（`next_at` 推到 2100 年）。這輪已花 US$5.84，10 月合計 9.8。
-    - [ ] **Zell 到 https://openrouter.ai/settings/credits 儲值**。剩 34 題估 US$5–6；11 月一輪完整月測約 8、兩輪重點複查約 5，建議一次放 US$25 以上。
-    - [ ] 儲值後重啟：21 筆 failed 改回 `queued`、13 筆 `next_at` 歸 0（同一輪繼續，不另開輪次），cron 約 30 分鐘跑完。
-    - [ ] 跑完做人工複核與 10 月月報（晚了兩週，月報要註明資料日期是 10/25 補跑）。
+  - [x] **10 月 72 題補跑完成**（2026-10-25 16:51，輪次 `monthly-2026-10-08-catchup`，kind=monthly、簽章同 10/8 原輪，設定內 note 標「補跑」）。70 答完、2 沒答完（DeepSeek A4／A5 撞 6000 token 上限）。過程：11:40 起跑到 36 題時 OpenRouter 新帳號儲值用完（402 `openrouter_credits`），Zell 儲值後 16:18 放開續跑；尾端 2 題被每月門檻誤擋（6 題同時各預留 US$2，接近 25 時會擋）手動改回 queued 補完。這輪實花 US$11.50，10 月合計 15.47，剩 9.5 夠 10/29 重點複查（約 3）。
+    - [ ] **人工複核（下一工作日 10/27 17:00 前）**，優先看這 7 筆：B7 的 Claude／DeepSeek／Google／Perplexity 與 B6 的 Claude 被標「出現水族燈／Fluval」要核對是否認錯品牌（這是保固題與經銷題）；DeepSeek A4／A5 沒答完。未提示品牌的 A 組五題，六模型自然提到 AQUASKY 的只有 2–3 題，這是本月最該講的數字。
+    - [ ] 10 月月報：資料日期要寫 10/25 補跑，不是 10/8；月會已過，改成寄給 Frank 或併入 11 月月會。
   - [ ] 11 月預排：11/12 完整月測、11/17 定稿、11/19 月會。這次要在 11/13 看一眼有沒有跑成。
   - 監測專案位置：`E:\CascadeProjects\Aquasky Edge AEO On Cloudflare Project`（節奏見 docs/40、雲端實作見 docs/41）。（10/23 更正：原本寫的 C 槽路徑不存在。）
