@@ -101,9 +101,9 @@
     2. **程式 bug：失敗的請求不釋放 US$2 預留**。供應商回錯誤時沒有費用回報，`reported_usd` 留 NULL，預算公式就一直算 `reserved_usd` 2 美元。10 筆 402 失敗卡住 US$20，加上實際花費 US$3.32，10 月預算 25 美元被記成 23.32，10/8 剩下 66 筆全被 `budget_blocked`。
     - 今天 09:00 的重點複查也會被同一個門檻整輪擋掉（23.32 + 2 > 25）。
   - [x] OpenRouter 帳號已重建（2026-10-22 上午，Zell）。推測原帳號未收到費用或被砍，才會全回 402。
-  - [ ] **今天（10/22）下午：把新的 OpenRouter 金鑰放上 Worker**。用 `scripts/set-aiqa-secrets.py --config <config.ini 路徑>` 從 stdin 寫入 `OPENROUTER_API_KEY`，金鑰不進 Git、不貼命令列。放上去後用一題 × 六模型做小量驗收，標成「上線驗收」。
-  - [ ] **修 bug**：`monitor/src/aiqa-runner.mjs` 第 57–64 行，供應商回錯誤且無費用回報時，把該筆 attempt 的 `reported_usd` 設 0 釋放預留；部署 Worker。
-  - [ ] **清掉已卡住的 US$20**：對 D1 `aiqa_attempts` 把 10 月 `reported_usd IS NULL` 且對應 item 為 failed/402 的 10 筆設 `reported_usd=0`。
+  - [ ] **把新的 OpenRouter 金鑰放上 Worker（Zell 自己放）**。用 `scripts/set-aiqa-secrets.py --config <config.ini 路徑>` 從 stdin 寫入 `OPENROUTER_API_KEY`，金鑰不進 Git、不貼命令列。（10/25 查 `wrangler versions list`：最後一次 Secret Change 是 9/25，所以還沒放。）放上去後跑一題 × 六模型小量驗收，標成「上線驗收」：用 `plannedRun(now,'acceptance',undefined,['B1'])` 產 INSERT 寫進 D1，cron 五分鐘內會自己跑；10/25 已備好 SQL，等金鑰放好再送。
+  - [x] **修 bug**（2026-10-25）：`monitor/src/aiqa-runner.mjs` 供應商回錯誤且無費用回報時 `reported_usd` 設 0 釋放預留，逾時後的 uncertain 仍保留預留；加回歸測試（aiqa 測試 38 通過；monitor.test.mjs 另有 2 項本來就失敗的測試未動）。commit 964e63b，Worker 已部署（版本 9e165ece）。
+  - [x] **清掉已卡住的 US$20**（2026-10-25）：D1 `aiqa_attempts` 10 月 `reported_usd IS NULL` 且 item 為 failed/402 的 10 筆已設 0；10 月 accounted 從 23.32 降到 3.32。被擋的 90 題（10/8 月測 66、10/22 複查 24）狀態是 `budget_blocked`，屬終態，不會自己補跑。
   - [ ] 修好後補跑一輪完整 72 筆（依文件 40：中斷不自動補跑數週，要人工決定），並重新做人工複核與 10 月月報。
   - [ ] 11 月預排：11/12 完整月測、11/17 定稿、11/19 月會。這次要在 11/13 看一眼有沒有跑成。
   - 監測專案位置：`E:\CascadeProjects\Aquasky Edge AEO On Cloudflare Project`（節奏見 docs/40、雲端實作見 docs/41）。（10/23 更正：原本寫的 C 槽路徑不存在。）
