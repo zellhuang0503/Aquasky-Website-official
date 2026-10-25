@@ -47,6 +47,8 @@
 .sel-result-size { font-size: 20px; font-weight: bold; color: #0088d1; }
 .sel-result-table th { width: 45%; color: #002d49; }
 .sel-result-multi { font-size: 18px; font-weight: bold; }
+/* 「Need detailed explanation？contact us!」鈕 415px 寬，手機 390 會撐出畫面（舊站 .btn 是 nowrap）；讓它換行 */
+[id^=show_print_] .btn { white-space: normal; max-width: 100%; }
 body.printing-tool header, body.printing-tool footer, body.printing-tool .preview-banner, body.printing-tool .step_arrow_down { display: none !important; }
 
 /* 404 */

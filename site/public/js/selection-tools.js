@@ -69,7 +69,7 @@
         '<tr><th>' + t.series + '</th><td>' + t.seriesName[r.series] + '</td></tr>' +
         '<tr><th>' + t.totalVolume + '</th><td>' + m.volumeL + ' L / ' + m.volumeGal + ' Gal</td></tr>' +
         '</tbody></table>' +
-        '<p><a class="btn btn-link btn_active" href="/' + lang + m.path + '">' + t.viewDetails + '</a></p>';
+        '<p><a class="btn btn-link btn_active" href="/en' + m.path + '">' + t.viewDetails + '</a></p>';   // 產品明細只有英文版（舊站也是），zh 頁也連 /en/
     }
     h += '<p class="text-danger">' + fill(r.unit === 'psi' ? t.prechargePsi : t.prechargeBar, r.precharge) + '<br>' + t.disclaimer + '</p>';
     return h;

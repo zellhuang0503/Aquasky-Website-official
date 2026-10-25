@@ -53,6 +53,14 @@ for (const k of ['apt', 'mega', 'thermal']) {
 // 結果 HTML 有型號與連結
 const html = sel.resultHtml(d, 'en', { ...sel.calc.ps(d, 'bar', 1, 2, 1, 1), unit: 'bar' });
 eq('result html has model', /APT-3/.test(html) && /\/en\/products-det\/pumplus\/APT-3/.test(html), true);
+// 產品明細只有英文版：zh 頁的結果也要連 /en/…
+const htmlZh = sel.resultHtml(d, 'zh', { ...sel.calc.ps(d, 'bar', 1, 2, 1, 1), unit: 'bar' });
+eq('zh result links to /en/ detail', /href="\/en\/products-det\/pumplus\/APT-3"/.test(htmlZh) && !/\/zh\/products-det/.test(htmlZh), true);
+// 門檻邊界
+eq('VSD bar set 8.5 → MEGA', sel.calc.vsd(d, 'bar', 180, 8.5).series, 'mega');
+eq('VSD bar set 8.4 → APT', sel.calc.vsd(d, 'bar', 180, 8.4).series, 'apt');
+eq('PS psi cut-in 129 → APT', sel.calc.ps(d, 'psi', 129, 150, 1, 1).series, 'apt');
+eq('TH 99.97 → TP-100', sel.pickModel(d.models.thermal, 99.97).model, 'TP-100');
 
 console.log(fails ? `\n${fails} failing` : '\nOK: selection-tools formulas');
 process.exit(fails ? 1 : 0);
