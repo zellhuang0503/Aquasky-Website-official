@@ -105,8 +105,9 @@
   - [x] **新 OpenRouter 金鑰已放上 Worker**（2026-10-25 11:33，Zell 用 `set-aiqa-secrets.py` 上傳；config.ini 先換成新金鑰）。**上線驗收通過**：`acceptance-2026-10-25`（B1 × 六模型）11:36 六份皆 answered、finish=stop、回傳模型 ID 與設定一致、六份都提到品牌且引用官網；合計 US$0.648（OpenAI 0.270、Grok 0.169、Claude 0.111、Google 0.081、DeepSeek 0.010、Perplexity 0.007）。
   - [x] **修 bug**（2026-10-25）：`monitor/src/aiqa-runner.mjs` 供應商回錯誤且無費用回報時 `reported_usd` 設 0 釋放預留，逾時後的 uncertain 仍保留預留；加回歸測試（aiqa 測試 38 通過；monitor.test.mjs 另有 2 項本來就失敗的測試未動）。commit 964e63b，Worker 已部署（版本 9e165ece）。
   - [x] **清掉已卡住的 US$20**（2026-10-25）：D1 `aiqa_attempts` 10 月 `reported_usd IS NULL` 且 item 為 failed/402 的 10 筆已設 0；10 月 accounted 從 23.32 降到 3.32。被擋的 90 題（10/8 月測 66、10/22 複查 24）狀態是 `budget_blocked`，屬終態，不會自己補跑。
-  - [x] **10 月 72 題補跑完成**（2026-10-25 16:51，輪次 `monthly-2026-10-08-catchup`，kind=monthly、簽章同 10/8 原輪，設定內 note 標「補跑」）。70 答完、2 沒答完（DeepSeek A4／A5 撞 6000 token 上限）。過程：11:40 起跑到 36 題時 OpenRouter 新帳號儲值用完（402 `openrouter_credits`），Zell 儲值後 16:18 放開續跑；尾端 2 題被每月門檻誤擋（6 題同時各預留 US$2，接近 25 時會擋）手動改回 queued 補完。這輪實花 US$11.50，10 月合計 15.47，剩 9.5 夠 10/29 重點複查（約 3）。
-    - [ ] **人工複核（下一工作日 10/27 17:00 前）**，優先看這 7 筆：B7 的 Claude／DeepSeek／Google／Perplexity 與 B6 的 Claude 被標「出現水族燈／Fluval」要核對是否認錯品牌（這是保固題與經銷題）；DeepSeek A4／A5 沒答完。未提示品牌的 A 組五題，六模型自然提到 AQUASKY 的只有 2–3 題，這是本月最該講的數字。
-    - [ ] 10 月月報：資料日期要寫 10/25 補跑，不是 10/8；月會已過，改成寄給 Frank 或併入 11 月月會。
+  - [x] **10 月 72 題補跑完成，72/72 答完**（輪次 `monthly-2026-10-08-catchup`，kind=monthly、簽章同 10/8 原輪，設定內 note 標「補跑」；狀態 collected）。10/25 11:40 起跑到 36 題時 OpenRouter 新帳號儲值用完（402 `openrouter_credits`），Zell 儲值後 16:18 續跑；尾端 2 題被每月門檻誤擋（6 題同時各預留 US$2，接近 25 時會擋）手動改回 queued 補完。DeepSeek A4／A5 第一次撞 6000 token 上限（思考佔 4500），依文件 40 同設定重試：A4 第 2 次、A5 第 3 次答完，三次原始回應都留在 aiqa_attempts。這輪實花 US$11.54，10 月合計 15.51，剩 9.5 夠 10/29 重點複查（約 3）。
+    - [ ] **人工複核（10/27 17:00 前）**，優先看 5 筆：B7 的 Claude／DeepSeek／Google／Perplexity 與 B6 的 Claude 被標「出現水族燈／Fluval」要核對是否認錯品牌（保固題與經銷題）。A 組五題未提示品牌，六模型自然提到 AQUASKY 只有 2–3 題，這是本月最該講的數字。
+    - [ ] **10 月補跑結果併進 11 月月會**（Zell 10/26 決定）：不另出 10 月月報；11/17 定稿的月報並列兩輪（10/25 補跑＋11/12 月測），資料日期寫 10/25 不寫 10/8。日曆 11/17 事件已改名加說明。
+    - [ ] 11 月前決定：DeepSeek V4.1 Flash 思考常吃掉 4500 token，要不要只對 DeepSeek 加 `reasoning_effort: low`（Claude 已有）。改了簽章會變，11 月輪跟 10 月輪就不能直接比，要在月報註記。
   - [ ] 11 月預排：11/12 完整月測、11/17 定稿、11/19 月會。這次要在 11/13 看一眼有沒有跑成。
   - 監測專案位置：`E:\CascadeProjects\Aquasky Edge AEO On Cloudflare Project`（節奏見 docs/40、雲端實作見 docs/41）。（10/23 更正：原本寫的 C 槽路徑不存在。）
