@@ -69,13 +69,27 @@ npm run check           # 型別與模板檢查
 
 內容檔有 schema（`src/content.config.ts`），欄位少了或型別錯，`npm run build` 會直接失敗。schema 只驗格式，不驗事實。
 
-## 部署（還沒做）
+## 部署
 
-`wrangler.jsonc` 只設了 assets，沒有掛 aquaskyplus.com。上線前要做的：
+### 預覽網址（2026-10-26 起上線）
 
-1. Cloudflare Workers Builds 連 GitHub：根目錄 `site`、組建命令 `npm ci && npm run assets:copy && npm run build`、部署命令 `npx wrangler deploy`。注意 `assets:copy` 讀的是 repo 裡沒有的封存資料夾，正式流程要改成把圖片放 R2 或另一個來源（待決）。
-2. 帳戶歸屬（客戶名下或梵亞名下）待合約決定。
-3. 切換時加 routes，並逐項解除舊 `aquasky-edge-aeo` Worker 的路由（規劃 §13）。
+**https://aquasky-site.cloundflare1.workers.dev** — 梵亞的 Cloudflare 帳戶（cloundflare1，登入者 zell.huang@gmail.com），Worker 名稱 `aquasky-site`，純靜態資源，沒有掛任何 routes；每頁 `noindex, nofollow`、不載 GA（預覽階段）。
+
+重新部署（從本機，每次改完內容都這樣做）：
+
+```powershell
+cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangler deploy
+```
+
+- `npm run build` 預設就是 preview 階段（黃色 PREVIEW 條＋noindex）。**不要**用 `SITE_STAGE=production` 建置後 deploy 到這個網址。
+- 圖片 PDF 跟著 `dist/` 一起上傳（1,450 檔、427 MB；Workers 靜態資源上限 20,000 檔、單檔 25 MB，目前最大 8 MB）。wrangler 只上傳有變的檔，第一次 95 秒、之後幾秒。所以**不需要 R2**，也不需要 Workers Builds；要在雲端自動建置的話，封存資料夾不在 repo 裡，`assets:copy` 會沒東西可抄——先維持本機 deploy。
+- 預覽網址沒有密碼；靠 noindex 與不公開連結。要鎖的話可在 Cloudflare Zero Trust 加 Access 規則（Email OTP 給 Tiffany），再決定。
+
+### 正式上線前要做的
+
+1. 帳戶歸屬（客戶名下或梵亞名下）待合約決定；若要搬帳戶，就是在新帳戶重跑一次 `wrangler deploy`。
+2. 建置改 `SITE_STAGE=production`（拿掉 PREVIEW 條與 noindex、載 GA），`wrangler.jsonc` 加 `routes`（aquaskyplus.com/*），並逐項解除舊 `aquasky-edge-aeo` Worker 的路由（規劃 §13）。
+3. 舊網址 301 轉址（`.php?lang=`、`certification_page.php?sid=`）要加一支小 Worker（`main`＋`run_worker_first`）。
 
 ## 已知的資料問題（舊站本來就這樣，沒有改，要問客戶）
 
