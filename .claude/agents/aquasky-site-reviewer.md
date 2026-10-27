@@ -25,6 +25,7 @@ tools: Bash, Read, Grep, Glob, mcp__Claude_Browser__navigate, mcp__Claude_Browse
 ### B. 版型與舊站一致（黃老闆 2026-10-24 指示：盡量一樣，不改編排）
 - B1 用瀏覽器把舊頁與新頁在 1280 寬各截一張全頁圖，逐區塊比：區塊順序、背景色、標題樣式、按鈕樣式、圖片位置。有差就列出差在哪、是否為 README「跟舊站不一樣的地方（刻意的）」已列的項目。不在清單上的差異＝不通過。
 - B2 手機寬（390）再看一次：不能左右溢出（`document.documentElement.scrollWidth === innerWidth`），漢堡選單能開，下拉能開，規格表在自己的框裡可橫向捲動。
+- B2a 桌機（≥1201）第一層選單的行為要跟舊站一樣：**滑過不展開、點了才展開**（展開＝li 掛 `.open`，字白色 #fff、底 #005d9c）；子選單（RESIDENTIAL／COMMERCIAL）滑過展開。用真的 hover 動作在乾淨頁面測，不要先用 JS 加 `.open`。2026-10-27 黃老闆在預覽網址抓到：site.css 自加的 hover 展開讓選單變成深底深字。
 - B3 用的是舊站 CSS（`/css/bootstrap.min.css`、`style.css`、`series_content.css`）；新站補充只在 `src/styles/site.css`。不能有人去改 `public/css/` 裡的舊檔。
 - B4 圖片：頁內引用的每張圖與 PDF 在 dist 都存在（verify 會查），而且**要用瀏覽器確認載入完成後 logo／標題圖真的看得到**（`document.images` 全部 `complete && naturalWidth>0`）。
 

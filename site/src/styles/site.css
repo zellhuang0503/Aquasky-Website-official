@@ -10,11 +10,9 @@
 .skip-link:focus { left: 8px; }
 .preview-banner { background: #ffd34d; color: #3b2a00; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .08em; padding: 2px 0; }
 
-/* 下拉：沒有 Bootstrap JS，改用 .open class（小段 JS）＋桌面 hover */
-@media (min-width: 1201px) {
-  .navbar-nav > li.dropdown:hover > .dropdown-menu { display: block; }
-  .navbar-nav > li.dropdown:hover > a { color: #fff; background-color: #1eb9ee; }
-}
+/* 下拉：沒有 Bootstrap JS，改用 .open class（Header.astro 的小段 JS）。
+   第一層選單跟舊站一樣「點了才開」，不做滑過展開——style.css 的白字規則只掛在 .open 底下，
+   滑過展開時沒有 .open 會變成深藍底配深字（2026-10-27 黃老闆在預覽網址看到的問題）。子選單照舊站用 :hover。 */
 .dropdown-submenu > .dropdown-menu { display: none; }
 .dropdown-submenu:hover > .dropdown-menu, .dropdown-submenu.open > .dropdown-menu { display: block; }
 .navbar-default .dropdown-menu > li > a { white-space: nowrap; }
