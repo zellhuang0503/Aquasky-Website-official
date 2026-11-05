@@ -15,3 +15,6 @@ Thumbs.db
 desktop.ini
 __pycache__/
 migration-*/live-*/
+
+# 溢康回簽報價單照片（含匯款帳號），歸檔到 業務文件\報價單\溢康企業，不進版控
+S__128237632.jpg

@@ -1,15 +1,28 @@
-// Cloudflare Workers 設定：把 Astro 產出的 dist/ 當靜態網站部署（Workers Static Assets）。
-// 純靜態，沒有 Worker 程式；日後要加表單 API 或舊 .php?query 轉址時，再加 "main" 與 run_worker_first。
-// 用 Workers Builds（從 GitHub 建置）時：根目錄 site、組建命令 npm run build、部署命令 npx wrangler deploy。
+// Cloudflare Workers 設定：把 Astro 產出的 dist/ 當靜態網站部署（Workers Static Assets），外加一支小 Worker（worker/index.mjs）
+// 只接 run_worker_first 列的路徑：聯絡表單 API、舊站 .php 網址與兩個無語系前綴網址的 301 轉址；其餘請求不經 Worker、直接回靜態檔。
 // 正式網域 aquaskyplus.com 先不掛（舊站與 aquasky-edge-aeo Worker 還在線上）；
 // 預覽用 <name>.<account>.workers.dev，切換時再加 routes 並逐項解除舊 AEO Worker 的路由。
+//
+// 聯絡表單（worker/contact.mjs）：
+//   vars.CONTACT_MODE  preview＝檢查照做但不寄信（現在）；live＝寄信（正式上線時改）
+//   vars.CONTACT_TO    收件信箱，逗號分隔多個（問 Tiffany；2026-11-05 LINE 第二則第 1 題）
+//   vars.CONTACT_FROM  寄件人，網域要先在 Resend 驗證（aquaskyplus.com DNS 在梵亞手上，加 DKIM 紀錄即可）
+//   secrets（wrangler secret put）：TURNSTILE_SECRET_KEY、RESEND_API_KEY。本機用 .dev.vars（已在 .gitignore）。
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "aquasky-site",
+  "main": "worker/index.mjs",
   "compatibility_date": "2026-09-01",
   "assets": {
+    "binding": "ASSETS",
     "directory": "./dist",
     "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/api/*", "/*.php", "/LQCOL-PLUS", "/certification"]
+  },
+  "vars": {
+    "CONTACT_MODE": "preview",
+    "CONTACT_TO": "",
+    "CONTACT_FROM": "AQUASKY Website <website@aquaskyplus.com>"
   }
 }

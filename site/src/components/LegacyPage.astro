@@ -6,6 +6,7 @@ import Base from '../layouts/Base.astro';
 import { type Lang, t } from '../lib/i18n';
 import { nav } from '../lib/data';
 import selectionTools from '../data/selection-tools.json';
+import contactForm from '../data/contact-form.json';
 
 interface Props { lang: Lang; page: CollectionEntry<'pages'>['data'] }
 const { lang, page } = Astro.props;
@@ -48,6 +49,14 @@ const image = page.assets.find((a) => /\.(png|jpe?g|webp)$/i.test(a));
     <Fragment>
       <script type="application/json" id="sel-tools-data" set:html={JSON.stringify({ kind: page.calculator, lang, formulas: selectionTools.formulas, models: selectionTools.models, text: selectionTools.text })} />
       <script is:inline src="/js/selection-tools.js"></script>
+    </Fragment>
+  )}
+  {page.id === 'contact' && (
+    <Fragment>
+      {/* 聯絡表單：HTML 照舊站，送出改打 /api/contact（worker/contact.mjs）；驗證框與狀態訊息由 contact-form.js 在載入後補上 */}
+      <script type="application/json" id="contact-form-data" set:html={JSON.stringify({ endpoint: contactForm.endpoint, sitekey: contactForm.sitekey, lang, text: d.contact })} />
+      <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=__aqTurnstileReady&render=explicit" async defer></script>
+      <script is:inline src="/js/contact-form.js" defer></script>
     </Fragment>
   )}
   {page.id === 'feature' && (

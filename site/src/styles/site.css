@@ -54,3 +54,10 @@ body.printing-tool header, body.printing-tool footer, body.printing-tool .previe
 .notfound .btn-link { margin: 4px; }
 
 @media print { .preview-banner, .navbar-toggle { display: none; } body.printing-tool #select_tools .select_btn, body.printing-tool #submit_s1, body.printing-tool #submit_s2, body.printing-tool [id^=show_print_] { display: none !important; } }
+
+/* 聯絡表單：Turnstile 驗證框與送出後的狀態訊息（contact-form.js 在載入後補進表單；舊站沒有） */
+.contact-turnstile { margin: 10px 0; min-height: 65px; }
+.contact-status { margin: 10px 0 0; font-size: 15px; line-height: 22px; color: #0086ce; }
+.contact-status:empty { display: none; }
+.contact-status-error { color: #c0392b; }
+.contact-status-ok { color: #1e7e34; }

@@ -53,5 +53,20 @@
     "skipToContent": "跳到主要內容",
     "languageNotLive": "此頁面尚未提供此語系版本。",
     "breadcrumbHome": "首頁"
+  },
+  "contact": {
+    "sending": "傳送中…",
+    "sent": "謝謝您，留言已送出，我們會盡快回覆。",
+    "sentPreview": "預覽站：表單可以送出，但正式上線前不會寄信。",
+    "failed": "留言沒有送出，請直接用本頁的信箱來信。",
+    "verify": "請先完成人機驗證。",
+    "codes": {
+      "invalid": "請確認必填欄位（姓名、電子郵件、留言內容）。",
+      "verify_required": "請先完成人機驗證。",
+      "verify_failed": "驗證已過期，請重新驗證後再送出。",
+      "verify_unavailable": "驗證服務暫時無法連線，請稍後再試。",
+      "unavailable": "聯絡表單暫停服務，請直接來信。",
+      "send_failed": "留言沒有寄出，請直接來信。"
+    }
   }
 }

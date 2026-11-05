@@ -1,0 +1,5 @@
+{
+  "_note": "聯絡表單前端設定。sitekey 是 Cloudflare Turnstile 的公開 site key；現在是官方測試金鑰（永遠通過、只顯示測試框），正式上線前到 Cloudflare 儀表板 Turnstile 建 widget（hostnames 填 aquaskyplus.com 與預覽網址），把 site key 填這裡、secret key 用 wrangler secret put TURNSTILE_SECRET_KEY 放上去。後端設定在 wrangler.jsonc 的 vars（CONTACT_MODE、CONTACT_TO、CONTACT_FROM）。",
+  "endpoint": "/api/contact",
+  "sitekey": "1x00000000000000000000AA"
+}

@@ -48,5 +48,20 @@
     "skipToContent": "Skip to content",
     "languageNotLive": "This page is not available in this language yet.",
     "breadcrumbHome": "Home"
+  },
+  "contact": {
+    "sending": "Sending…",
+    "sent": "Thank you. Your message has been sent. We will reply as soon as possible.",
+    "sentPreview": "Preview site: the form works, but messages are not delivered until the site goes live.",
+    "failed": "Your message could not be sent. Please email us directly using the address on this page.",
+    "verify": "Please complete the verification first.",
+    "codes": {
+      "invalid": "Please check the required fields (name, e-mail, message).",
+      "verify_required": "Please complete the verification first.",
+      "verify_failed": "Verification expired. Please verify again and resend.",
+      "verify_unavailable": "Verification service is temporarily unavailable. Please try again later.",
+      "unavailable": "The contact form is temporarily unavailable. Please email us directly.",
+      "send_failed": "Your message could not be delivered. Please email us directly."
+    }
   }
 }

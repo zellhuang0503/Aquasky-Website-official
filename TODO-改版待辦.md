@@ -5,7 +5,7 @@
 ## 合約與請款
 
 - [x] **2026-11-03 溢康回簽報價單 VY-2026-0924**（管理部 王士昕 用印，未稅 80,800／含稅 84,840）。第 3 項「AI 網站維護」旁有手寫備註「（大幅度修改還是會另報）」＝不限次數只限一般修改，大改另外報價。回簽照片 `S__128237632.jpg`（含匯款帳號，不進版控，應歸檔到 `業務文件\報價單\溢康企業\`）。
-- [ ] **請第一期款：建置費 50%＝32,500＋稅 1,625＝34,125**（簽約後付）。
+- [x] **請第一期款：建置費 50%＝32,500＋稅 1,625＝34,125**（簽約後付）。2026-11-05 發票已開，11/6 寄出。
 - [ ] 上線驗收後請：建置費尾款 34,125＋主機代管 8,000＋AI 維護 7,800（後兩項自上線日起算，含稅 16,590）。
 - 回簽＝合約成立，**不等於客戶確認預覽**。上正式網域前仍要：客戶確認 en／zh → 做 es／fr／ru／ar（合約寫「保留六語系內容」）→ 表單後端、轉址表、解除舊 AEO Worker → 切換。
 
@@ -58,7 +58,9 @@
   - [x] 選型工具正式算式（2026-10-25）：2022-04-13 Gill 的「SELECTION TOOL 計算式列表.docx」＋2020 Excel 型號對照表，存在 `官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/`（README 有比對表）。跟舊站 JS 六條路徑五條相同，Thermal PSI 不是 bug；只有 PS PSI 預充壓客戶寫 −2、舊站 −2.8，要問 Tiffany。
   - [ ] **圖片瘦身（全部頁面做完之後再做，黃老闆 10/24）**：系列頁底圖 1–3 MB（LQCOLPLUS_bg.png 3.1 MB、首頁 hbg-01-11.jpg 1.1 MB）、中文系列頁 DM 圖每張 1–1.7 MB，以前就拖累 PageSpeed。做法候選：壓縮／轉 WebP、responsive srcset、lazy、底圖改 CSS 漸層＋小圖。先照原樣，不要在搬頁時動。
   - [x] 2026-10-26：**預覽網址上線** https://aquasky-site.cloundflare1.workers.dev（梵亞帳戶 cloundflare1、Worker aquasky-site、無 routes、noindex）；圖片 PDF 跟 dist 一起上傳（1,450 檔 427 MB，95 秒），不用 R2。重新部署：`cd site; npm run build; npx wrangler deploy`。線上驗過 19 個網址、計算器、無壞圖。
-  - [ ] 下一步：把預覽網址給 Tiffany 看（附要她確認的清單：en／zh 全站、選型工具 3 題、資料疑點）。
+  - [ ] 下一步：把預覽網址給 Tiffany 看。**LINE 兩則已擬好（2026-11-05）**：`官網改版說明文件/2026-11-05-LINE給Tiffany-預覽網址與確認清單.md`（第一則預覽網址與怎麼看、第二則 12 個問題：表單收件信箱、選型 3 題、名稱 2 題、數字疑點 5 題、SEO 文字 2 題）。要求 11/12 前回覆（條款 5 個工作天）。黃老闆傳出後改成「等回覆」。
+  - [x] 2026-11-05 **聯絡表單後端做好**：`site/worker/contact.mjs`（同站來源→欄位→蜜罐→Turnstile→Resend 寄信），前端 `public/js/contact-form.js` 表單 HTML 不動；現在 `CONTACT_MODE: preview` 不寄信。單元測試 9 項（`npm run test:worker`）。正式上線前要：Turnstile 真 widget、Resend 驗證 aquaskyplus.com 寄件網域、`CONTACT_TO` 填 Tiffany 給的信箱、改 live（步驟在 site/README.md「聯絡表單與舊網址轉址」）。
+  - [x] 2026-11-05 **舊網址轉址表做好**：`site/worker/redirects.mjs`＋`scripts/test-redirects.mjs`，掛上正式網域即生效（細節同上 README 段）。
   - [ ] 還沒做：ar 版型（RTL）；走一次「改內容檔→預覽→審→發布」。
   - [x] 2026-10-24 第一次審查（首頁＋LQCOL）：網址／SEO／JSON-LD／工程衛生全過，版型 9 項不通過已全部修掉：產品列回深色區、首頁米色底＋44pt 公司名＋字標原尺寸＋輪播一次一張、選單結構與 padding 與 logo 照舊站、正文粗體、規格數字照原字串、結構圖標示照舊站斷行、中文選單／認證說明／地址一字不差、zh ASME 按鈕兩行（手機不再溢出）、en 首頁認證說明先不顯示（舊站沒有）、產品／品牌／選單資料檔都加 schema。
   - [x] 2026-10-24 第二次審查（19 頁）：9 項已修：zh 7 頁 DM 圖補齊並照舊站 JS 用 img-responsive 滿版、PUMPLUS 橫式一列三張（colClass）、RO 型號無包裝層／MEGA 標題外 <p> 間距／PREMIUM 無標題外框（照舊站逐頁存旗標）、內頁改載舊站客製 bootstrap.css、en 首頁補空的公司名段落、home.json 加 schema、classic 加 dataQuestions（自動列公升換加侖不符：APT-3、ROT-1 的 3 L＝0.5 gal；APT-60／APT-60H／ROT-14／MEGA-60 的 60 L＝14 gal）、zh 經典頁 JSON-LD 不帶 hasVariant、README 補 HYDRO 舊站 HTML 未閉合一條。

@@ -13,7 +13,7 @@
 | `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[page].astro` → `ClassicSeries.astro`（經典模板） | 舊站英文原文＋型號清單 |
 | 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
-| `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、sel_tools | 同上（照抄模板） | 同上。contact 表單外觀保留但 action="#"、拿掉 PHP 驗證碼與隱藏欄位，送出功能上線前接 Worker API；sel_tools 只是入口頁，三個計算器另做 |
+| `/en`、`/zh` 的 products、about、feature、certification、FAQ、contact、downloadpage、sel_tools | 同上（照抄模板） | 同上。contact 表單 HTML 照舊站（拿掉 PHP 驗證碼列與隱藏欄位），送出打 `/api/contact`（Worker＋Turnstile，見「聯絡表單與舊網址轉址」）；sel_tools 只是入口頁，三個計算器另做 |
 | `/en/products-det/<series>/<model>` 90 頁、`/en/accessories-det/<item>` 6 頁（舊站只有英文版；中文系列頁照舊站沒有型號清單，不連明細） | `src/pages/[lang]/products-det/[series]/[model].astro`、`[lang]/accessories-det/[item].astro` → `LegacyPage.astro`（照抄模板，`langs: ['en']`） | 主體照抄，verify 逐字比。匯入時拿掉 Google 翻譯殘留的 `<font>` 包裝（90 頁合計 6 萬多個、單頁最多約 1,100 個；APT-3 從 57 KB 變 15 KB）；配件頁「<<back」改連 `/en/accessories`；YouTube iframe 保留；hreflang 只列 en；麵包屑 首頁›產品系列›該系列›型號 |
 | `/en/sel_unit_ps`、`/en/sel_unit_vsd`、`/en/sel_unit_thermal`（zh 同）選型計算器 3 個 | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板，`calculator: ps/vsd/thermal`）＋ `public/js/selection-tools.js` ＋ `src/data/selection-tools.json` | 表單 HTML 照抄舊站；計算從舊站的 jQuery＋AJAX（select_api*.php）改成純 JS 在瀏覽器算，算式照溢康 2022-04-13 文件（`官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/README.md`），型號對照照 2020 Excel。`npm run test:tools` 跑公式單元測試 |
 | `/en/certification-page/<slug>`、`/zh/…` 5 張認證（iso-9001-eurocert、kc-korea、acs-france、watermark-australia、psb-singapore） | `src/pages/[lang]/certification-page/[slug].astro` → `LegacyPage.astro`（照抄模板） | 舊站是 `certification_page.php?sid=N`（查詢字串，靜態站做不了），封存也沒抓到；10/25 從線上抓（`migration-2026-10-22/live-2026-10-25/`，索引用新網址當 key）。認證頁的「CERTIFICATION LINK」匯入時改連新網址；切換時舊網址要 Worker 轉址 |
@@ -41,6 +41,7 @@
 npm install
 npm run assets:copy     # 從 ../migration-2026-10-22 封存複製舊站圖片／PDF 到 public/（不進 Git）
 npm run build           # 產生 dist/（預設預覽階段：noindex、不載 GA）
+npm run test:worker     # Worker 單元測試：聯絡表單後端（scripts/test-contact.mjs）、舊網址轉址表（scripts/test-redirects.mjs）
 npm run verify          # 驗收 dist：網址、lang、h1、canonical、hreflang、JSON-LD、規格數字＝資料檔、圖片存在
 npm run cf:preview      # 用 Cloudflare 本機模擬跑 dist：http://127.0.0.1:8788/en
 npm run check           # 型別與模板檢查
@@ -73,7 +74,7 @@ npm run check           # 型別與模板檢查
 
 ### 預覽網址（2026-10-26 起上線）
 
-**https://aquasky-site.cloundflare1.workers.dev** — 梵亞的 Cloudflare 帳戶（cloundflare1，登入者 zell.huang@gmail.com），Worker 名稱 `aquasky-site`，純靜態資源，沒有掛任何 routes；每頁 `noindex, nofollow`、不載 GA（預覽階段）。
+**https://aquasky-site.cloundflare1.workers.dev** — 梵亞的 Cloudflare 帳戶（cloundflare1，登入者 zell.huang@gmail.com），Worker 名稱 `aquasky-site`，靜態資源＋一支小 Worker（`worker/index.mjs`，只接聯絡表單 API 與舊網址轉址，見下一節），沒有掛任何 routes；每頁 `noindex, nofollow`、不載 GA（預覽階段）。
 
 重新部署（從本機，每次改完內容都這樣做）：
 
@@ -89,7 +90,21 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 
 1. 帳戶歸屬（客戶名下或梵亞名下）待合約決定；若要搬帳戶，就是在新帳戶重跑一次 `wrangler deploy`。
 2. 建置改 `SITE_STAGE=production`（拿掉 PREVIEW 條與 noindex、載 GA），`wrangler.jsonc` 加 `routes`（aquaskyplus.com/*），並逐項解除舊 `aquasky-edge-aeo` Worker 的路由（規劃 §13）。
-3. 舊網址 301 轉址（`.php?lang=`、`certification_page.php?sid=`）要加一支小 Worker（`main`＋`run_worker_first`）。
+3. 舊網址 301 轉址已在 `worker/redirects.mjs`（2026-11-05），掛上正式網域時自動生效；切換後抽查 `aquaskyplus.com/PUMPLUS.php`、`news-detail.php?sid=82&lang=en` 等有沒有 301 到新頁。
+4. 聯絡表單切成正式：`wrangler.jsonc` 的 `CONTACT_MODE` 改 `live`、`CONTACT_TO` 填客戶信箱、Turnstile 真金鑰、Resend 金鑰與寄件網域（下一節）。
+
+## 聯絡表單與舊網址轉址（`worker/`，2026-11-05）
+
+`wrangler.jsonc` 的 `main` 指到 `worker/index.mjs`；`assets.run_worker_first` 只列 `/api/*`、`*.php`、`/LQCOL-PLUS`、`/certification`，其他請求不經 Worker（免費額度每天 10 萬次 Worker 請求，靜態檔不算）。
+
+**聯絡表單**（`/en/contact`、`/zh/contact`）：表單 HTML 照舊站一字不改，`public/js/contact-form.js` 載入後把送出改成 `fetch('/api/contact')`，並在送出鈕上面補 Cloudflare Turnstile 驗證框、下面補狀態訊息、再加一個看不見的蜜罐欄位。後端 `worker/contact.mjs`：同站來源檢查 → 欄位檢查（姓名／信箱／留言必填，長度照舊站 maxlength）→ 蜜罐 → Turnstile 伺服器端驗證 → 用 Resend 寄純文字信給 `CONTACT_TO`（逗號分隔多個），`reply_to` 是訪客信箱，客戶直接回信即可。不存資料庫、不重試：寄不出去回錯誤，畫面請訪客直接用本頁信箱來信。訊息文字在 `src/i18n/<lang>.json` 的 `contact`。
+
+- 現在是 `CONTACT_MODE: preview`：全部檢查照做但**不寄信**，畫面顯示「預覽站：表單可以送出，但正式上線前不會寄信」。Turnstile 用 Cloudflare 公開測試金鑰（site key 在 `src/data/contact-form.json`，secret 在 `.dev.vars`／`wrangler secret`，永遠通過）。
+- 正式上線前：① Cloudflare 儀表板 → Turnstile 建 widget（hostnames：aquaskyplus.com、預覽網址），site key 填 `src/data/contact-form.json`、`wrangler secret put TURNSTILE_SECRET_KEY`；② Resend 帳戶加 aquaskyplus.com 寄件網域（DNS 在梵亞手上，加它給的 DKIM／SPF 紀錄），`wrangler secret put RESEND_API_KEY`；③ `wrangler.jsonc` vars：`CONTACT_MODE: live`、`CONTACT_TO`＝Tiffany 給的信箱、`CONTACT_FROM` 用已驗證網域；④ 寄一封測試看客戶有沒有收到。
+- 本機測：`.dev.vars` 寫 `TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA`，`npm run build; npm run cf:preview`，開 `http://127.0.0.1:8788/en/contact` 送一次，應顯示預覽站訊息。單元測試 `npm run test:worker`。
+- 沒做的：速率限制（靠 Turnstile；要的話在 Cloudflare WAF 對 `/api/contact` 加 rate limiting 規則）、舊站選型結果「轉詢價」帶入資料（待 Tiffany 回答要不要保留）。
+
+**舊網址轉址**：`worker/redirects.mjs` 的 `legacyRedirect(url)` 把舊站 `.php` 網址（`index.php?lang=`、`<系列>.php`、`news-detail.php?sid=`、`products-det.php?sid=`、`certification_page.php?sid=`、選型工具的 `sizing.php`／`select_api*.php`／`printpdf*.php`／`sel_contact.php` 等）與無語系前綴的 `/LQCOL-PLUS`、`/certification` 對到新站網址，回 301；對照表與規則在同一個檔，測試 `scripts/test-redirects.mjs`。認不得的 `.php` 兜底到 `/en`；`recode.php`（舊驗證碼圖）故意 404。新聞正文裡約 130 處連到舊站 `.php` 的絕對網址不改，切換後靠這張表接住。
 
 ## 已知的資料問題（舊站本來就這樣，沒有改，要問客戶）
 
@@ -139,7 +154,7 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 - 下載子頁（/download/<language>）：舊站線上版的選單語言會跟著 cookie 走（看過中文頁再開就變中文選單），封存版是英文；新站固定英文介面。這些頁舊站沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站 canonical 指自己、不輸出 hreflang（14 頁各是一種型錄語言，不是網站語系）。麵包屑：首頁›DOWNLOAD›EDM English。
 - 新聞明細手機版：8 篇正文有固定寬度的表格或 iframe，舊站會把整頁撐寬（390 寬變 515～815）；新站在 site.css 讓 `#news-container #ImgAutoResponsive` 橫向捲、iframe max-width 100%，桌機版面不變。
 - 新聞 meta description 長短不一（13～1235 字）照舊站，不改；列在「已知的資料問題」。
-- 聯絡表單：舊站用 PHP 驗證碼圖與 csrf；新站是靜態站，先拿掉驗證碼那一列與隱藏欄位、action 改 `#`（按送出不會送）。上線前另做 Worker API＋Turnstile（整體規劃 §7.2）。
+- 聯絡表單：舊站驗證碼那一列（*CODE＋recode.php 圖）與 csrf 隱藏欄位拿掉，換成 Cloudflare Turnstile 框（送出鈕上方）；鈕下方多一行狀態訊息、另加看不見的蜜罐欄（都由 contact-form.js 載入後補上，表單 HTML 不變）；送出改打 `/api/contact`（整體規劃 §7.2；細節見「聯絡表單與舊網址轉址」）。
 - 下載頁有 6 張國旗圖檔名是非英文（例如 Україна.jpg），封存裡是百分比編碼，複製腳本兩種寫法都認；`--fetch-missing` 可從線上舊站補封存沒有的檔。
 - 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。
 - 舊站 HYDRO-PLUS 頁與英文 accessories 頁 HTML 各少關一個 div（頁尾被吃進去）；新站不照抄這個錯（照抄模板會自動補上）。
