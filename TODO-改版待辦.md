@@ -5,7 +5,7 @@
 ## 合約與請款
 
 - [x] **2026-11-03 溢康回簽報價單 VY-2026-0924**（管理部 王士昕 用印，未稅 80,800／含稅 84,840）。第 3 項「AI 網站維護」旁有手寫備註「（大幅度修改還是會另報）」＝不限次數只限一般修改，大改另外報價。回簽照片 `S__128237632.jpg`（含匯款帳號，不進版控，應歸檔到 `業務文件\報價單\溢康企業\`）。
-- [x] **請第一期款：建置費 50%＝32,500＋稅 1,625＝34,125**（簽約後付）。2026-11-05 發票已開，11/6 寄出。
+- [x] **請第一期款：建置費 50%＝32,500＋稅 1,625＝34,125**（簽約後付）。2026-11-05 發票已開；11/6 沒寄出，黃老闆改 **11/9 寄**（日曆 11/9 紅色事件，同天傳 LINE 預覽網址）。
 - [ ] 上線驗收後請：建置費尾款 34,125＋主機代管 8,000＋AI 維護 7,800（後兩項自上線日起算，含稅 16,590）。
 - 回簽＝合約成立，**不等於客戶確認預覽**。上正式網域前仍要：客戶確認 en／zh → 做 es／fr／ru／ar（合約寫「保留六語系內容」）→ 表單後端、轉址表、解除舊 AEO Worker → 切換。
 
@@ -58,7 +58,8 @@
   - [x] 選型工具正式算式（2026-10-25）：2022-04-13 Gill 的「SELECTION TOOL 計算式列表.docx」＋2020 Excel 型號對照表，存在 `官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/`（README 有比對表）。跟舊站 JS 六條路徑五條相同，Thermal PSI 不是 bug；只有 PS PSI 預充壓客戶寫 −2、舊站 −2.8，要問 Tiffany。
   - [ ] **圖片瘦身（全部頁面做完之後再做，黃老闆 10/24）**：系列頁底圖 1–3 MB（LQCOLPLUS_bg.png 3.1 MB、首頁 hbg-01-11.jpg 1.1 MB）、中文系列頁 DM 圖每張 1–1.7 MB，以前就拖累 PageSpeed。做法候選：壓縮／轉 WebP、responsive srcset、lazy、底圖改 CSS 漸層＋小圖。先照原樣，不要在搬頁時動。
   - [x] 2026-10-26：**預覽網址上線** https://aquasky-site.cloundflare1.workers.dev（梵亞帳戶 cloundflare1、Worker aquasky-site、無 routes、noindex）；圖片 PDF 跟 dist 一起上傳（1,450 檔 427 MB，95 秒），不用 R2。重新部署：`cd site; npm run build; npx wrangler deploy`。線上驗過 19 個網址、計算器、無壞圖。
-  - [ ] 下一步：把預覽網址給 Tiffany 看。**LINE 兩則已擬好（2026-11-05）**：`官網改版說明文件/2026-11-05-LINE給Tiffany-預覽網址與確認清單.md`（第一則預覽網址與怎麼看、第二則 12 個問題：表單收件信箱、選型 3 題、名稱 2 題、數字疑點 5 題、SEO 文字 2 題）。要求 5 個工作天內回覆（11/8 修訂版寫 11/13 週五前；條款 5 個工作天）。黃老闆傳出後改成「等回覆」。
+  - [ ] 下一步：把預覽網址給 Tiffany 看。**LINE 兩則已擬好（2026-11-05）**：`官網改版說明文件/2026-11-05-LINE給Tiffany-預覽網址與確認清單.md`（第一則預覽網址與怎麼看、第二則 12 個問題：表單收件信箱、選型 3 題、名稱 2 題、數字疑點 5 題、SEO 文字 2 題）。預計 11/9 傳出，要求 5 個工作天內回覆（11/8 修訂版寫 11/16 週一前；日曆 11/16 有催件事件）。黃老闆傳出後改成「等回覆」。11/8 黃老闆拍板第 2 題不問了：選型工具照現在網站版本（PS −2.8、2020 Excel），**列印 PDF 與轉詢價兩個功能都要做**（新待辦見下）。
+  - [ ] **選型工具補兩個功能：列印 PDF、轉詢價**（2026-11-08 黃老闆決定照舊站保留）。舊站是伺服器端產 PDF；新站做法待定（前端列印版面 vs Worker 產 PDF），列印版面可參考 `官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/` 的 6 份列印 PDF。轉詢價＝算完帶型號跳到 contact 表單預填留言。
   - [x] 2026-11-05 **聯絡表單後端做好**：`site/worker/contact.mjs`（同站來源→欄位→蜜罐→Turnstile→Resend 寄信），前端 `public/js/contact-form.js` 表單 HTML 不動；現在 `CONTACT_MODE: preview` 不寄信。單元測試 9 項（`npm run test:worker`）。正式上線前要：Turnstile 真 widget、Resend 驗證 aquaskyplus.com 寄件網域、`CONTACT_TO` 填 Tiffany 給的信箱、改 live（步驟在 site/README.md「聯絡表單與舊網址轉址」）。
   - [x] 2026-11-05 **舊網址轉址表做好**：`site/worker/redirects.mjs`＋`scripts/test-redirects.mjs`，掛上正式網域即生效（細節同上 README 段）。
   - [x] 2026-11-05 **表單＋轉址部署到預覽網址並線上驗過**（11/8 補驗表單）：`.php` 舊網址 301、`/LQCOL-PLUS`→`/en/LQCOL-PLUS`、`/recode.php` 404、`/api/contact` 預覽模式回 `{"ok":true,"delivered":false}`、en／zh 頁面真的按送出顯示「預覽站：表單可以送出，但正式上線前不會寄信」。坑兩個：① wrangler 舊 OAuth token 沒有 workers_scripts:write → deploy 403，重新 `wrangler login` 才好；② 用 PowerShell `echo | wrangler secret put` 存的 Turnstile 測試金鑰值不對（驗證一直失敗），改用 `wrangler secret bulk <json檔>` 才成功。
@@ -83,7 +84,7 @@
   - 初步判斷：靜態內容照現成的複製即可，已封存 813 頁 HTML＋173 PDF 作底（`migration-2026-10-09/`）。
   - 真正要原始碼的是下面的選型工具。
 - [x] **選型／規格計算工具（selection / sizing）公式來源** → 2026-10-22 已從前端 JS 取得（見上方 A3），不必再向工程師要。
-  - 剩下要做的：拿客戶的「選型工具驗證案例」驗證。Thermal 的 PSI 分支已確認是客戶文件寫的（2026-10-25），不必問；改問 PS PSI 預充壓 −2 或 −2.8、Thermal 型號對照、列印 PDF 的 Minimum／Ideal／Proper 定義。
+  - 剩下要做的：拿客戶的「選型工具驗證案例」驗證。Thermal 的 PSI 分支已確認是客戶文件寫的（2026-10-25），不必問；~~改問 PS PSI 預充壓 −2 或 −2.8、Thermal 型號對照~~ → 2026-11-08 黃老闆拍板照現在網站（−2.8、2020 Excel），LINE 改成說明不問；列印 PDF 的 Minimum／Ideal／Proper 定義做列印功能時再對照舊站 PDF。
 - [ ] **GSC 與網站分析的唯讀權限**（請客戶把 GSC、GA 唯讀權限開給梵亞）
 - [x] **舊主機是否兼跑信箱** → 確認不用處理。客戶信箱是 Gmail 掛在 Google Workspace，網域再掛進去；沒有信箱要綁，只有 DNS 要設定，DNS 本來就是梵亞在管。
 
