@@ -23,9 +23,9 @@ eq('PS excel AF', r.afPercent, '11.76'); eq('PS excel total', r.total, '132.00')
 eq('PS excel >450 → null', sel.pickModel(d.models[r.series], r.size), null);
 // 防呆：cut-out ≤ cut-in → cut-in + 1
 r = sel.calc.ps(d, 'bar', 3, 3, 1, 10); eq('PS cutout fix', r.cutOutFixed, 4);
-// PSI：14.5／29 psi＝1／2 bar → 同 AF；預充壓＝14.5 − 2（客戶文件；舊站 − 2.8 會是 11.7）
+// PSI：14.5／29 psi＝1／2 bar → 同 AF；預充壓＝14.5 − 2.8＝11.7（照舊站；客戶 2022 文件的 − 2 會是 12.5，2026-11-08 決定照舊站）
 r = sel.calc.ps(d, 'psi', 14.5, 29, 1, 1);
-eq('PS psi AF', r.afPercent, '33.33'); eq('PS psi size', r.sizeText, '3'); eq('PS psi precharge (docx −2)', r.precharge, '12.5');
+eq('PS psi AF', r.afPercent, '33.33'); eq('PS psi size', r.sizeText, '3'); eq('PS psi precharge (舊站 −2.8)', r.precharge, '11.7');
 eq('PS psi cut-in 130 → MEGA', sel.calc.ps(d, 'psi', 130, 150, 1, 1).series, 'mega');
 eq('PS bar cut-in 8.9 → APT', sel.calc.ps(d, 'bar', 8.9, 10, 1, 1).series, 'apt');
 

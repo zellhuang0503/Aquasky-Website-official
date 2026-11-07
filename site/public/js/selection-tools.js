@@ -27,7 +27,7 @@
       var af = (outBar - inBar) / (outBar + 1);
       var total = parseInt(minutes, 10) * parseInt(litres, 10);
       var size = total / af;
-      // 建議預充壓：bar＝cut-in − 0.2；psi＝cut-in − 2（客戶 2022 文件；舊站程式是 − 2.8，待 Tiffany 確認）
+      // 建議預充壓：bar＝cut-in − 0.2；psi＝cut-in − 2.8（照舊站程式；客戶 2022 文件寫 − 2，2026-11-08 黃老闆決定照現在網站）
       var pre = unit === 'psi' ? inRaw - f.prechargePsiOffset : inRaw - f.prechargeBarOffset;
       var mega = unit === 'psi' ? inRaw >= f.megaFromCutInPsi : inRaw >= f.megaFromCutInBar;
       return {
