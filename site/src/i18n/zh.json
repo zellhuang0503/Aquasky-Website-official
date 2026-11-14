@@ -1,5 +1,5 @@
 {
-  "_note": "選單用語一字不差沿用舊站 zh（translation/sources/*.md 的選單段），包括舊站沒加空格的「RO逆滲透儲水桶」「ASME認證…」，以及 MEGA-PLUS 與 GIGA-PLUS 都叫「高壓泵浦壓力桶」這個舊站本身的重複（要問 Tiffany 要不要改）。productLine 是首頁與系列頁底部按鈕的字，舊站 ASME 那顆是兩行，用 \\n 表示。",
+  "_note": "選單用語一字不差沿用舊站 zh（translation/sources/*.md 的選單段），包括舊站沒加空格的「RO逆滲透儲水桶」「ASME認證…」，MEGA-PLUS／GIGA-PLUS 舊站都叫「高壓泵浦壓力桶」，Tiffany 2026-11-13 回覆改成「16BAR高壓泵浦壓力桶」「25BAR高壓泵浦壓力桶」。productLine 是首頁與系列頁底部按鈕的字，舊站 ASME 那顆是兩行，用 \\n 表示。",
   "nav": {
     "company": "關於溢康",
     "about": "公司簡介",
@@ -15,12 +15,12 @@
     "HYDRO-PLUS": "導熱液體膨脹罐",
     "PREMIUM-PLUS": "不鏽鋼泵浦壓力桶",
     "LQCOL-PLUS": "液冷系統膨脹水箱",
-    "MEGA-PLUS": "高壓泵浦壓力桶",
+    "MEGA-PLUS": "16BAR高壓泵浦壓力桶",
     "SOLAR-PLUS": "太陽能液體膨脹罐",
     "SUPREME-PLUS": "經濟型工業式密閉膨脹水箱",
     "DL-TANK": "工業式密閉膨脹水箱",
     "ASME-TANK": "ASME認證工業式密閉膨脹水箱",
-    "GIGA-PLUS": "高壓泵浦壓力桶",
+    "GIGA-PLUS": "25BAR高壓泵浦壓力桶",
     "ACCESSORIES-PLUS": "安裝配件",
     "esg": "ESG產品",
     "news": "最新消息",

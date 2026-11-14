@@ -5,6 +5,8 @@
 檢查：`python translation/lqcol-plus/check_lqcol.py`。
 B01／B02 是舊站既有的標題與描述，照舊保留，未重翻。規格表的數字列不在此檔，只翻欄位標題。
 
+**2026-11-13 Tiffany 直接在預覽頁審完中文，網站以 `site/src/content/series/lqcol-plus/zh.json` 為準（status approved）。** 這份 md 留作 AI 初稿紀錄，沒有同步她改的字（特色三格標題、結構圖三個標示、FAQ Q3／Q4）。其他語系譯稿以英文為準，不受影響。
+
 ### B01 · title
 EN: LQCOL-Plus Liquid Cold Expansion Tank | Chilled Water Expansion Vessel | AQUASKY
 ZH: LQCOL-Plus 空調冷水膨脹罐 | 冰水主機與冷卻液循環膨脹水箱 | AQUASKY 溢康企業

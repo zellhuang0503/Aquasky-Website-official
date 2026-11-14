@@ -1,0 +1,29 @@
+{
+  "_note": "客戶核准、刻意跟舊站不一樣的照抄頁文字。verify-dist 比對照抄頁內文時，先把封存舊頁純文字裡的 from 換成 to 再比；from 在該頁找不到就算不通過（代表清單過期）。只放客戶指定的改字，每筆寫來源。",
+  "edits": [
+    {
+      "source": "Tiffany 2026-11-13（網站回覆 2026.11.13.docx 第 3 題）：MEGA-PLUS＝16BAR高壓泵浦壓力桶、GIGA-PLUS＝25BAR高壓泵浦壓力桶",
+      "pages": ["/zh/accessories", "/zh/asme-ht", "/zh/dl-ce", "/zh/GIGA-PLUS", "/zh/supreme"],
+      "replace": [
+        { "from": "產品系列 泵浦壓力桶 高壓泵浦壓力桶 密閉式膨脹水箱", "to": "產品系列 泵浦壓力桶 16BAR高壓泵浦壓力桶 密閉式膨脹水箱" },
+        { "from": "液冷系統膨脹水箱 高壓泵浦壓力桶 工業式密閉膨脹水箱", "to": "液冷系統膨脹水箱 25BAR高壓泵浦壓力桶 工業式密閉膨脹水箱" }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-13（網站回覆 2026.11.13.docx 第 3 題）",
+      "pages": ["/zh/products"],
+      "replace": [
+        { "from": "高壓泵浦壓力桶 MEGA-PLUS (16 bar)", "to": "16BAR高壓泵浦壓力桶 MEGA-PLUS (16 bar)" },
+        { "from": "高壓泵浦壓力桶 GIGA-PLUS", "to": "25BAR高壓泵浦壓力桶 GIGA-PLUS" }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-13（網站回覆 2026.11.13.docx 第 3 題）",
+      "pages": ["/download/chinese"],
+      "replace": [
+        { "from": "密閉式膨脹水箱 高壓泵浦壓力桶 導熱液體膨脹罐", "to": "密閉式膨脹水箱 16BAR高壓泵浦壓力桶 導熱液體膨脹罐" },
+        { "from": "太陽能液體膨脹罐 高壓泵浦壓力桶", "to": "太陽能液體膨脹罐 25BAR高壓泵浦壓力桶" }
+      ]
+    }
+  ]
+}

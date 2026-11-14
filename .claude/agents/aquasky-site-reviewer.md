@@ -34,6 +34,7 @@ tools: Bash, Read, Grep, Glob, mcp__Claude_Browser__navigate, mcp__Claude_Browse
 - C2 中文等譯文遵守 `translation/lqcol-plus/do-not-translate.md`：禁譯詞出現次數與英文相同，數字用西方數字，小數點是 `.`。
 - C3 內容檔 `status` 正確：AI 初稿必須是 `draft-ai` 且頁面上有黃色「AI 初稿」提示；只有客戶審過才能是 `approved`。
 - C4 事實只能來自舊站或客戶提供的資料。新補的文字（例如英文首頁認證說明）要在內容檔 `_note` 註明「新補、待審」。
+- C4b 照抄頁跟舊站不一樣的**畫面文字**，只能是 `site/src/data/client-text-edits.json` 列的（客戶指定、有來源，verify 會套用比對）；屬性（alt、title 等）的改字 verify 比不到，要列在 README「跟舊站不一樣的地方」。兩邊都沒列的改字算不通過。
 - C5 舊站本身的資料疑點（例如 LQC-3 重量比 LQC-8 大）要原樣保留並記在 `dataQuestions`，不能自行「修正」。
 
 ### D. SEO 與結構化資料

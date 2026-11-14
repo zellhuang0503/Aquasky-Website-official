@@ -160,9 +160,7 @@
       ]
     }
   ],
-  "dataQuestions": [
-    "MEGA-60 舊站寫「Liter 60 / Gal 14」，60 L 換算約 15.85 gal，要請客戶確認。"
-  ],
+  "dataQuestions": [],
   "assets": [
     "/images/products/mega/mega_bg.jpg",
     "/images/products/mega/mega_logo.png",

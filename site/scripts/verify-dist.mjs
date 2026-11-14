@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = join(root, 'dist');
 const product = JSON.parse(readFileSync(join(root, 'src/data/products/lqcol-plus.json'), 'utf8'));
+const clientTextEdits = JSON.parse(readFileSync(join(root, 'src/data/client-text-edits.json'), 'utf8')).edits;
 const stage = process.env.SITE_STAGE === 'production' ? 'production' : 'preview';
 // 封存的舊站頁（只讀）：拿來比 DM 張數等「新站自己的資料檔比不出來」的東西
 const archiveDir = join(root, '..', 'migration-2026-10-22');
@@ -225,7 +226,14 @@ for (const page of PAGES) {
       const oldBody = archived.slice(archived.indexOf('</header>') + 9, archived.indexOf('<footer'))
         .replace(/<span[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/span>/g, (_m, h) => decodeCf(h))   // 舊站 CF email 混淆（兩種寫法），比對前先還原
         .replace(/<a[^>]*data-cfemail="([0-9a-f]+)"[^>]*>[\s\S]*?<\/a>/g, (_m, h) => decodeCf(h));
-      const oldText = plain(oldBody);
+      let oldText = plain(oldBody);
+      // 客戶核准的改字（src/data/client-text-edits.json）：先套到舊頁文字上再比；找不到 from 就算清單過期
+      for (const e of clientTextEdits.filter((x) => x.pages.includes(where))) {
+        for (const r of e.replace) {
+          if (!oldText.includes(r.from)) fail(`${where}: client-text-edits.json「${r.from}」not found in archived text (stale entry?)`);
+          oldText = oldText.split(r.from).join(r.to);
+        }
+      }
       const mainHtml = html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1] ?? '';
       // 補的隱藏 h1 不算（照抄頁：content.h1；新聞列表：標題帶；明細：文章標題）
       const hiddenH1 = page.legacy
@@ -257,6 +265,8 @@ for (const css of ['/css/style.css', '/css/a-hover.css', '/css/series_content.cs
   }
   if (missing.size) fail(`${css} references ${missing.size} missing file(s): ${[...missing].join(', ')}`);
 }
+const comparedUrls = new Set(PAGES.filter((p) => p.legacy || p.newsList || p.newsArticle).map((p) => p.url));
+for (const e of clientTextEdits) for (const u of e.pages) if (!comparedUrls.has(u)) fail(`client-text-edits.json: ${u} is not a text-compared page (typo or stale entry?)`);
 if (existsSync(join(dist, 'sitemap-index.xml'))) console.log('✓ sitemap-index.xml');
 else fail('sitemap-index.xml missing');
 

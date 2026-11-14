@@ -7,6 +7,7 @@
 //   src/content/series/lqcol-plus/en.json       英文文字
 //   src/content/series/lqcol-plus/zh.json       中文文字
 // 匯入後以這三個檔為準；之後改內容直接改它們，不要再跑這支（會覆蓋）。要重跑加 --force。
+// 注意：zh.json 已是客戶審定版（Tiffany 2026-11-13，approved），--force 會把它蓋回 AI 初稿＋draft-ai。真要重跑先備份 zh.json 再還原。
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';

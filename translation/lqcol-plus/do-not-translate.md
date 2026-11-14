@@ -61,3 +61,7 @@ AI、HPC、CDU、QD（quick disconnect）、TDP、ZSPOF、In-Rack、In-Row。
 
 各語系 `<title>` 與 meta description 舊站已有在地化版本，B01／B02 照舊保留、未重翻。
 注意英文標題寫的是「Chilled Water Expansion Vessel／HVAC」，內文卻全是資料中心液冷；要不要改標題請客戶決定。
+
+## 10. 例外：客戶指定的中文（Tiffany 2026-11-13）
+
+zh 有兩處客戶給的字沒有 N₂，照客戶的字，不補：特色第三格標題「氮氣預充氣壓」（EN：Nitrogen (N₂) Pre-charge）、結構圖標示「可客製化氮氣／預充氣壓」（EN：Customizable Nitrogen (N₂) Pre-charge）。所以 zh 的 N₂ 次數比英文少 2，這是已知例外。

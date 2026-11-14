@@ -109,8 +109,7 @@
     }
   ],
   "dataQuestions": [
-    "ROT-1 舊站寫「Liter 3 / Gal 0.5」，3 L 換算約 0.79 gal，要請客戶確認。",
-    "ROT-14 舊站寫「Liter 60 / Gal 14」，60 L 換算約 15.85 gal，要請客戶確認。"
+    "ROT-1 舊站寫「Liter 3 / Gal 0.5」，3 L 換算約 0.79 gal，要請客戶確認。"
   ],
   "assets": [
     "/images/products/pumplus-bg-1B.jpg",

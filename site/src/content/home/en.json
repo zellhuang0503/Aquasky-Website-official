@@ -1,5 +1,5 @@
 {
-  "_note": "Home page, English. title/description verbatim from the 2026-10-22 archive. The old en home shows the certification icons WITHOUT captions, so label is empty here; draftLabel holds a proposed English caption (translated from zh) that is NOT rendered until the client approves it.",
+  "_note": "Home page, English. title/description verbatim from the 2026-10-22 archive. The old en home shows the certification icons WITHOUT captions, so label is empty (production shows nothing, same as the old site). draftLabel = our proposed English caption (translated from zh, 新補、待審). Since 2026-11-14 the PREVIEW build shows draftLabel so Tiffany can judge it in place (she asked 2026-11-13 whether these are the spots); production never renders draftLabel. If she approves, move each draftLabel into label; if not, delete draftLabel.",
   "lang": "en",
   "status": "approved-legacy",
   "seo": {
@@ -47,7 +47,7 @@
       {
         "icon": "/images/home-service/N2.png",
         "label": "",
-        "draftLabel": "Nitrogen Pre-charged"
+        "draftLabel": "Nitrogen Pre‑charged"
       },
       {
         "icon": "/images/home-service/unnamed2.png",

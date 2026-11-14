@@ -84,7 +84,7 @@ const home = defineCollection({
     slidesAlt: z.string(),
     certifications: z.object({
       heading: z.string(),
-      // label 可空（舊站 en 首頁圖示沒有說明文字）；draftLabel 是待客戶審的建議文字，不會輸出
+      // label 可空（舊站 en 首頁圖示沒有說明文字）；draftLabel 是待客戶審的建議文字：只在預覽版（SITE_STAGE≠production）顯示，正式版不輸出
       items: z.array(z.object({ icon: z.string(), label: z.string(), draftLabel: z.string().optional() })).length(8),
     }),
   }),

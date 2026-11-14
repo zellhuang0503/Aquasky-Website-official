@@ -109,16 +109,19 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 
 ## 已知的資料問題（舊站本來就這樣，沒有改，要問客戶）
 
-列在 `src/data/products/lqcol-plus.json` 的 `dataQuestions`：LQC-3 重量與外箱比 LQC-8 大、LQC-60SS 的加侖數、內文提到的 0.5L／1L／100L+ 機型規格表沒有。
+還沒答的（`dataQuestions`）：LQCOL 內文提到的 0.5L／1L／100L+ 機型規格表沒有（`src/data/products/lqcol-plus.json`）；ROT-1 系列頁寫 Gal 0.5、明細頁寫 0.8（`src/data/products/ro-plus.json`）。11/13 文件第 7 題有列 ROT-1，她只回「APT-3 改 0.8……其餘正確」，但 ROT-1 跟 APT-3 是同一個情況，語意不清，再問。
 
-經典頁的 `dataQuestions` 由匯入腳本自動算（公升換加侖不符）：APT-3、APT-60、APT-60H、ROT-1、ROT-14、MEGA-60。照抄頁的在 `src/data/pages/<id>.json`：dl-ce 第 5 列型號與數值對不上（DL 750/16 應為 DL 5000/10？）、asme-ht 的 HTL-1000 與 HTL-800 相同／HTL-300 加侖格式／工作溫度 93 對 115、GIGA-60 與 GIGA-100 的加侖數、accessories 兩個配件同一張圖，以及 dl-ce／asme-ht 的「Procuct」錯字。
+**Tiffany 2026-11-13 已回覆**（`../網站回覆 2026.11.13.docx`）：
+- 舊站數字是對的、不改：LQC-3 比 LQC-8 重／外箱大（LQC-3 一箱裝 4 個）、LQC-60SS 60 L＝14 gal；APT-60、APT-60H、ROT-14、MEGA-60 的 14 gal，GIGA-60、GIGA-100 的加侖數。已從 `dataQuestions` 拿掉。
+- APT-3 改成 0.8 gal（明細頁內文本來就是 0.8，只剩系列頁型號下方與主圖 alt 寫 0.5）：已改 `pumplus.json`、APT-3 明細頁 alt、`selection-tools.json`。
+- dl-ce、asme-ht、accessories：「此頁暫不修改，維持現狀，目前不販售」。疑點留在各頁 `dataQuestions`，前面加【暫不改】；「Procuct」錯字也先不動（那筆也加了【暫不改】）。
 
 ## 版型原則（黃老闆 2026-10-24 指示：跟舊站盡量一樣，不改編排）
 
 - 新聞：136 篇 meta description 超過 220 字、2 篇中文不到 40 字（`2025-aquasky-173`、`apt-40-aquasky-155`）；zh 展覽訊息只有 1 篇、右欄「熱門文章」只有 1 篇。全部照舊站，要不要整理由客戶決定。
 - 下載子頁的 meta description 照舊站，最長 2927 字（french），italian 1259、spanish 1250；要不要縮短由客戶決定。
 - 單張認證頁 5 頁的 title 都是「Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank」、description 也是全站通用那句（en／zh 都一樣）；請 Tiffany 給每張認證一句 title 與 description。證書大圖是 inline 寬高（500～848px），桌機 1280 放得下；手機會撐寬整頁（舊站同），site.css 限欄寬（見刻意差異）。
-- 產品明細 APT-3、ROT-1：主圖 alt 寫「Gal 0.5」，規格表寫「0.8 gallons」（3 L＝0.79 gal）；系列頁型號清單也用 alt 的 0.5（匯入腳本自動列進 `dataQuestions`）。
+- 產品明細 ROT-1：主圖 alt 寫「Gal 0.5」，規格表寫「0.8 gallons」（3 L＝0.79 gal）；系列頁型號清單也用 alt 的 0.5（匯入腳本自動列進 `dataQuestions`）。APT-3 原本也一樣，2026-11-13 客戶回覆後改成 0.8。
 - 新聞正文裡舊站本來就壞的連結，原樣保留：`en/INDUSTRY/introduction-to-premium-plus-series-tank-of-aquasky-aquasky-176` 的 `mailto:frankwang@aquasky`（舊站混淆碼就少 `.com.tw`，畫面文字是完整信箱）與 `href="http://Commercial%20and%20Business…"`；另一篇 `href="http://https://aquaskyplus.com/sizing.php"`。切換時連同 `.php` 連結一起改。
 - 直接沿用舊站的 CSS：`public/css/bootstrap.min.css`（舊站首頁用）、`bootstrap.css`（舊站內頁用的客製版，`.container` padding 0，Base 的 `bootstrap="full"`）、`bootstrap-grid.min.css`（經典系列頁）、`style.css`、`series_content.css`、`a-hover.css`、`all.min.css`（Font Awesome）。這幾個檔從封存複製後**進 Git**，不要改；新站自己的補充只放 `src/styles/site.css`。
 - HTML 結構與 class 名稱照舊站同一頁抄（navbar-default、#home-container-01…、series-sec、sf-stage、h2_2hline、btn-link）。搬新頁時先開舊站同頁對照。
@@ -134,8 +137,10 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 - JSON-LD：舊站每個系列頁 `<head>` 自己有一段 Product（另有 AEO Worker 從外面注入的）。新站：照抄頁把那段 Product 原樣搬來；資料化的頁（LQCOL、7 個經典頁）改輸出 ProductGroup（含型號）取代它；全站另有 Organization、WebSite、BreadcrumbList，LQCOL 有 FAQPage。
 - 每頁只有一個 `<h1>`：首頁 h1 是字標圖（同舊站）；系列頁舊站有兩個 h1（色條一個、標題圖又包一個），新站標題圖改用 `<div class="h1-1">`。
 - 語言選單裡還沒上線的語系（es／fr／ru／ar）是灰字不能點，舊站是連結。等那些語系做好再開。
-- 英文首頁認證圖示下面舊站沒有文字，新站也不顯示；建議的英文說明放在 `src/content/home/en.json` 的 `draftLabel`，客戶審過才會改成 `label` 顯示。
-- 中文 LQCOL-PLUS 頁是 AI 初稿，頁頂多一條黃色「AI 初稿」提示；審過後拿掉。
+- 英文首頁認證圖示下面舊站沒有文字。我們翻的英文說明放在 `src/content/home/en.json` 的 `draftLabel`：**預覽版（SITE_STAGE≠production）顯示**，讓 Tiffany 看實際位置再決定（她 11/13 問「是不是這些位置」）；**正式版不輸出**，跟舊站一樣空白。她核准就把 `draftLabel` 搬進 `label`。說明字較長，`site.css` 只在英文頁讓 `.ca_txt` 從固定 50px 改成至少 50px（手機兩欄會折 4 行），手機兩欄時每列第一格清除浮動免得排歪；中文頁不套，照舊站固定 50px。
+- 中文 LQCOL-PLUS 頁：Tiffany 2026-11-13 審過，`status` 改 `approved`，頁頂黃色「AI 初稿」提示拿掉。她改的字：特色三格標題（頂級桶身材質／EPDM 橡膠隔膜／氮氣預充氣壓）、結構圖三個標示、FAQ Q3、Q4。她寫的「不銹鋼」照全站慣例用「不鏽鋼」、「EPDM橡膠隔膜」照全站慣例在英中之間加空格。「氮氣預充氣壓」「可客製化氮氣預充氣壓」沒有 N₂，是禁譯詞的已知例外（`../translation/lqcol-plus/do-not-translate.md` 第 10 節）。`translation/lqcol-plus/LQCOL-PLUS.zh.md` 沒同步，網站以 zh.json 為準；`import-lqcol.mjs --force` 會蓋掉客戶的字。
+- 中文選單與產品列：MEGA-PLUS「16BAR高壓泵浦壓力桶」、GIGA-PLUS「25BAR高壓泵浦壓力桶」（舊站兩個都叫「高壓泵浦壓力桶」；Tiffany 2026-11-13 指定）。照抄頁裡寫死的產品列按鈕、產品總覽頁 h2、中文下載頁按鈕一起改；新聞內文不改。照抄頁這類「客戶指定改字」記在 `src/data/client-text-edits.json`（每筆寫來源），`npm run verify` 比對舊頁文字前先套用；清單外的差異照樣不通過。
+- APT-3 系列頁型號下方、明細頁主圖 alt、選型工具結果寫 Gal 0.8（舊站 0.5；Tiffany 2026-11-13 指定）。alt 是屬性，verify 的照抄頁文字比對看不到，所以記在這裡、不放 `client-text-edits.json`。
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁）；中文系列頁照舊站沒有型號清單，不連明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。

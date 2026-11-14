@@ -6,7 +6,7 @@ import Base from '../layouts/Base.astro';
 import ProductLine from './ProductLine.astro';
 import { brand } from '../lib/data';
 import { home } from '../lib/data';
-import { type Lang, href, format, t, pick } from '../lib/i18n';
+import { type Lang, href, format, t, pick, stage } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -23,6 +23,8 @@ const slides = [
   '/upfile/Images/S_0182_2022.jpg',
 ];
 const lines = (s: string) => s.split('\n');
+// 認證說明：label 是核准的字；draftLabel 是待客戶審的建議字，只在預覽版顯示給客戶看，正式版不輸出。
+const caption = (item: { label: string; draftLabel?: string }) => item.label || (stage === 'preview' ? item.draftLabel ?? '' : '');
 ---
 <Base lang={lang} title={c.seo.title} description={c.seo.description} path="" headStyle={home.legacyCss}>
   <div id="home-container-01" class="container-fluid">
@@ -69,7 +71,7 @@ const lines = (s: string) => s.split('\n');
           {row.map((item) => (
             <div class="col-xs-6 col-sm-3">
               <img src={item.icon} class="img-responsive center-block" alt="" loading="lazy" />
-              <p class="ca_txt">{lines(item.label).map((line, i) => (<Fragment>{i > 0 && <br />}{line}</Fragment>))}</p>
+              <p class="ca_txt">{lines(caption(item)).map((line, i) => (<Fragment>{i > 0 && <br />}{line}</Fragment>))}</p>
             </div>
           ))}
         </div>

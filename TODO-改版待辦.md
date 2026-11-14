@@ -26,7 +26,7 @@
 - [ ] **LQCOL-PLUS 六語系翻譯：梵亞出 AI 初稿**（黃老闆 10/23 決定，不向客戶要譯文）。步驟：① 從 10/22 封存各語系既有頁面抽術語表（附來源頁）→ ② AI 翻六語系，規格／數字／認證／型號／單位列禁譯清單，翻完程式比對一致 → ③ 附英文對照送客戶各語系審稿人 → ④ 客戶改完回傳＝定稿。阿拉伯文另驗 RTL 版面。
   - [x] ① 2026-10-23 完成：27 頁六語系文字在 `translation/sources/`；術語表 `translation/glossary/`（201 條，附來源頁，舊站自相矛盾的譯法另列 inconsistencies.md）。
   - [x] ② 2026-10-23 完成：`translation/lqcol-plus/LQCOL-PLUS.{zh,es,fr,ru,ar}.md`，75 區塊 × 5 語系，每區塊附英文；`do-not-translate.md` 禁譯清單；`check_lqcol.py` 375 區塊全數通過。標題與 meta 沿用舊站既有在地化版本未重翻。
-  - [ ] ③ 送審：**審稿人＝Tiffany，只審中文（附英文原文）**（黃老闆 10/23：客戶人少，不必各語系找人）。把 `LQCOL-PLUS.zh.md`＋`do-not-translate.md` 給 Tiffany，只改 ZH 行；回傳後再跑一次 `check_lqcol.py`。
+  - [x] ③ 送審：**審稿人＝Tiffany，只審中文（附英文原文）**（黃老闆 10/23：客戶人少，不必各語系找人）。把 `LQCOL-PLUS.zh.md`＋`do-not-translate.md` 給 Tiffany，只改 ZH 行；回傳後再跑一次 `check_lqcol.py`。 **2026-11-13 Tiffany 直接在預覽頁上審完**（網站回覆 2026.11.13.docx）：改特色三格標題、結構圖三個標示、FAQ Q3／Q4，其他照初稿；11/14 已改、status 改 approved、黃色提示拿掉。
   - [ ] 西／法／俄／阿：AI 初稿先放著，上線前黃老闆決定「照上並標示 AI 譯稿」或「先保留英文」。
   - [ ] 要問客戶：英文標題寫「Chilled Water Expansion Vessel／HVAC」，內文全是資料中心液冷，各語系標題要不要跟著改。
   - [ ] 新站上線前要修：英文頁下載連結錯字「Brchure」；規格表型號空格不一致（`LQC- 3`、`LQC - 8`、`LQC -12`）統一成 `LQC-3`。
@@ -58,7 +58,9 @@
   - [x] 選型工具正式算式（2026-10-25）：2022-04-13 Gill 的「SELECTION TOOL 計算式列表.docx」＋2020 Excel 型號對照表，存在 `官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/`（README 有比對表）。跟舊站 JS 六條路徑五條相同，Thermal PSI 不是 bug；只有 PS PSI 預充壓客戶寫 −2、舊站 −2.8，要問 Tiffany。
   - [ ] **圖片瘦身（全部頁面做完之後再做，黃老闆 10/24）**：系列頁底圖 1–3 MB（LQCOLPLUS_bg.png 3.1 MB、首頁 hbg-01-11.jpg 1.1 MB）、中文系列頁 DM 圖每張 1–1.7 MB，以前就拖累 PageSpeed。做法候選：壓縮／轉 WebP、responsive srcset、lazy、底圖改 CSS 漸層＋小圖。先照原樣，不要在搬頁時動。
   - [x] 2026-10-26：**預覽網址上線** https://aquasky-site.cloundflare1.workers.dev（梵亞帳戶 cloundflare1、Worker aquasky-site、無 routes、noindex）；圖片 PDF 跟 dist 一起上傳（1,450 檔 427 MB，95 秒），不用 R2。重新部署：`cd site; npm run build; npx wrangler deploy`。線上驗過 19 個網址、計算器、無壞圖。
-  - [ ] 下一步：把預覽網址給 Tiffany 看。**LINE 兩則已擬好（2026-11-05）**：`官網改版說明文件/2026-11-05-LINE給Tiffany-預覽網址與確認清單.md`（第一則預覽網址與怎麼看、第二則 12 個問題：表單收件信箱、選型 3 題、名稱 2 題、數字疑點 5 題、SEO 文字 2 題）。預計 11/9 傳出，要求 5 個工作天內回覆（11/8 修訂版寫 11/16 週一前；日曆 11/16 有催件事件）。黃老闆傳出後改成「等回覆」。11/8 黃老闆拍板第 2 題不問了：選型工具照現在網站版本（PS −2.8、2020 Excel），**列印 PDF 與轉詢價兩個功能都要做**（新待辦見下）。
+  - [x] 下一步：把預覽網址給 Tiffany 看。**LINE 兩則已擬好（2026-11-05）**：`官網改版說明文件/2026-11-05-LINE給Tiffany-預覽網址與確認清單.md`（第一則預覽網址與怎麼看、第二則 12 個問題：表單收件信箱、選型 3 題、名稱 2 題、數字疑點 5 題、SEO 文字 2 題）。預計 11/9 傳出，要求 5 個工作天內回覆（11/8 修訂版寫 11/16 週一前；日曆 11/16 有催件事件）。黃老闆傳出後改成「等回覆」。11/8 黃老闆拍板第 2 題不問了：選型工具照現在網站版本（PS −2.8、2020 Excel），**列印 PDF 與轉詢價兩個功能都要做**（新待辦見下）。 **2026-11-13 Tiffany 回覆了**（`網站回覆 2026.11.13.docx`），處理見下一條。
+  - [x] 2026-11-14 **處理 Tiffany 11/13 回覆**：MEGA／GIGA 中文改「16BAR／25BAR高壓泵浦壓力桶」（選單＋照抄頁寫死的產品列／產品總覽／下載頁，verify 用新檔 `site/src/data/client-text-edits.json` 記客戶指定改字）；LQCOL 中文照她的字改＋approved；APT-3 改 0.8 gal（系列頁、主圖 alt、選型工具）；規格疑點她說對的從 dataQuestions 拿掉；dl-ce／asme-ht／accessories「暫不修改、目前不販售」；英文首頁認證說明只在預覽版顯示給她看（正式版不輸出）。回覆草稿：`官網改版說明文件/2026-11-14-LINE給Tiffany-1113回覆處理結果.md`。 審查三輪「可以交付」（抓到並修好：未核准英文說明會進正式版→改成只在預覽版顯示、N₂ 例外記錄、手機英文認證格排歪）；已部署預覽（版本 5970759d）。
+  - [ ] **等 Tiffany 回 5 件**（11/14 草稿，黃老闆傳出後開始等）：① 表單收件信箱是不是 frankwang@aquasky.com.tw、還有誰（拿到填 `site/wrangler.jsonc` 的 `CONTACT_TO`）② LQCOL 英中 SEO 標題改成液冷版（建議字在草稿）③ 英文首頁認證說明留不留 ④ ROT-1 要不要也改 0.8 gal ⑤ LQCOL 內文 0.5L／1L／100L+ 機型怎麼處理。第三類（認證頁標題、meta 縮短）她可以慢慢給。
   - [ ] **選型工具補兩個功能：列印 PDF、轉詢價**（2026-11-08 黃老闆決定照舊站保留）。舊站是伺服器端產 PDF；新站做法待定（前端列印版面 vs Worker 產 PDF），列印版面可參考 `官網改版說明文件/05-舊站資料擷取/selection-tools-原始算式/` 的 6 份列印 PDF。轉詢價＝算完帶型號跳到 contact 表單預填留言。
   - [x] 2026-11-05 **聯絡表單後端做好**：`site/worker/contact.mjs`（同站來源→欄位→蜜罐→Turnstile→Resend 寄信），前端 `public/js/contact-form.js` 表單 HTML 不動；現在 `CONTACT_MODE: preview` 不寄信。單元測試 9 項（`npm run test:worker`）。正式上線前要：Turnstile 真 widget、Resend 驗證 aquaskyplus.com 寄件網域、`CONTACT_TO` 填 Tiffany 給的信箱、改 live（步驟在 site/README.md「聯絡表單與舊網址轉址」）。
   - [x] 2026-11-05 **舊網址轉址表做好**：`site/worker/redirects.mjs`＋`scripts/test-redirects.mjs`，掛上正式網域即生效（細節同上 README 段）。
@@ -68,13 +70,13 @@
   - [x] 2026-10-24 第二次審查（19 頁）：9 項已修：zh 7 頁 DM 圖補齊並照舊站 JS 用 img-responsive 滿版、PUMPLUS 橫式一列三張（colClass）、RO 型號無包裝層／MEGA 標題外 <p> 間距／PREMIUM 無標題外框（照舊站逐頁存旗標）、內頁改載舊站客製 bootstrap.css、en 首頁補空的公司名段落、home.json 加 schema、classic 加 dataQuestions（自動列公升換加侖不符：APT-3、ROT-1 的 3 L＝0.5 gal；APT-60／APT-60H／ROT-14／MEGA-60 的 60 L＝14 gal）、zh 經典頁 JSON-LD 不帶 hasVariant、README 補 HYDRO 舊站 HTML 未閉合一條。
   - [x] 2026-10-24 第三次審查：上輪 9 項全過；新 2 項已修：zh DM 區塊照舊站結構含空段落（edmHtml，verify 與封存逐字比）、README 補「不做 WOW 進場動畫」；標題圖 alt 改用舊站原文。
   - [x] 2026-10-24 第四次審查：**可以交付**（19 頁 en/zh；頁高與舊站差 3–4px 像素誤差，zh/LQCOL 因 AI 初稿文字長度不同）。
-  - [ ] 問客戶（規格疑點彙整）：LQCOL 三項＋上述 6 個型號的加侖數＋MEGA／GIGA 中文都叫「高壓泵浦壓力桶」。
+  - [x] 問客戶（規格疑點彙整）：LQCOL 三項＋上述 6 個型號的加侖數＋MEGA／GIGA 中文都叫「高壓泵浦壓力桶」。 → 2026-11-13 已回（ROT-1 沒提到，再問）。
   - [ ] 審查流程：每做完一頁用 `.claude/agents/aquasky-site-reviewer.md` 審（10/24 建；本 session 建的要重開 session 才會被 Agent 工具認得，過渡期用 general-purpose agent 讀該檔執行）。
   - [ ] 2026-10-24 已擬 LINE 訊息向 Tiffany 要三樣：所有 Banner 原圖、所有下載 PDF 原檔、Selection Tools 最終版 Excel（草稿在 官網改版說明文件/05-舊站資料擷取/2026-10-24-LINE給Tiffany-索取Banner-PDF-選型Excel.md）。黃老闆傳出後改成「等回覆」。收件用 Drive 資料夾已開：`梵亞/AQUASKY-AEO/溢康提供素材-20261024/`（三個子資料夾），Tiffany 要求存取權時記得給「編輯者」。
   - [ ] 要決定：舊站圖片／PDF 正式部署時放哪（現在從本機封存複製，不進 Git；Workers Builds 在雲端拿不到封存）。選項：放 R2，或把需要的圖片 commit 進 site/public（LQCOL 用到的約 10 MB，主要是 8 MB 的使用手冊 PDF）。
-  - [ ] 問客戶：LQCOL 規格表三個疑點（LQC-3 重量／外箱比 LQC-8 大、LQC-60SS 加侖數 14 對不上 60 L、內文說有 0.5L／1L／100L+ 但表上沒有）。已記在 site/src/data/products/lqcol-plus.json 的 dataQuestions。
+  - [x] 問客戶：LQCOL 規格表三個疑點（LQC-3 重量／外箱比 LQC-8 大、LQC-60SS 加侖數 14 對不上 60 L、內文說有 0.5L／1L／100L+ 但表上沒有）。已記在 site/src/data/products/lqcol-plus.json 的 dataQuestions。 → 2026-11-13：前兩項舊站數字正確不改；第三項（0.5L／1L／100L+）沒答，再問。
   - [x] 2026-10-24 盤點各系列獨立 logo 檔：8 個系列有（Thermal、HYDRO、MEGA、SOLAR、SUPREME、ELBI＝dl-ce 與 asme-ht 共用、GIGA webp、LQCOL），PUMPLUS／RO／PREMIUM 用文字或標題圖，accessories 沒有獨立 logo。全部已列入 assets:copy。首頁產品系列 12 張圖本身就含 logo，顯示正常（黃老闆截到的空白是圖還沒載完）。
-  - [ ] 英文首頁認證圖示的說明文字是新補的（舊站英文版沒有），從中文說明翻過來，要 Tiffany 一起看。
+  - [ ] 英文首頁認證圖示的說明文字是新補的（舊站英文版沒有），從中文說明翻過來，要 Tiffany 一起看。 2026-11-14 起 `draftLabel` 只在預覽版顯示（正式版不輸出），等 Tiffany 說留不留（要就搬進 `label`）。
 - [ ] 待決：Cloudflare 帳戶放客戶名下還是梵亞名下（規劃 §8.4，合約事）。定案前先用梵亞帳戶做預覽。
 - [ ] 切換時要逐項解除舊 AEO Worker（`Aquasky Edge AEO On Cloudflare Project/worker/wrangler.toml`，掛在 aquaskyplus.com 六語系路由）的 HTML 注入（規劃 §13）。
 

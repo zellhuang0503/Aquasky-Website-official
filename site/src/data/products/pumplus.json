@@ -47,9 +47,9 @@
         },
         {
           "model": "APT-3",
-          "volumeText": "Liter 3 / Gal 0.5",
+          "volumeText": "Liter 3 / Gal 0.8",
           "volumeL": 3,
-          "volumeGal": 0.5,
+          "volumeGal": 0.8,
           "image": "/upfile/Images/PUMPLUS/pd-apt-3.jpg",
           "detailPath": "/products-det/pumplus/APT-3"
         },
@@ -248,11 +248,7 @@
       ]
     }
   ],
-  "dataQuestions": [
-    "APT-3 舊站寫「Liter 3 / Gal 0.5」，3 L 換算約 0.79 gal，要請客戶確認。",
-    "APT-60 舊站寫「Liter 60 / Gal 14」，60 L 換算約 15.85 gal，要請客戶確認。",
-    "APT-60H 舊站寫「Liter 60 / Gal 14」，60 L 換算約 15.85 gal，要請客戶確認。"
-  ],
+  "dataQuestions": [],
   "assets": [
     "/images/products/pumplus-bg2-v1.jpg",
     "/images/products/PRODUCT_PUMPLUS_200209_txt2.png",
