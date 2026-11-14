@@ -91,7 +91,7 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 1. 帳戶歸屬（客戶名下或梵亞名下）待合約決定；若要搬帳戶，就是在新帳戶重跑一次 `wrangler deploy`。
 2. 建置改 `SITE_STAGE=production`（拿掉 PREVIEW 條與 noindex、載 GA），`wrangler.jsonc` 加 `routes`（aquaskyplus.com/*），並逐項解除舊 `aquasky-edge-aeo` Worker 的路由（規劃 §13）。
 3. 舊網址 301 轉址已在 `worker/redirects.mjs`（2026-11-05），掛上正式網域時自動生效；切換後抽查 `aquaskyplus.com/PUMPLUS.php`、`news-detail.php?sid=82&lang=en` 等有沒有 301 到新頁。
-4. 聯絡表單切成正式：`wrangler.jsonc` 的 `CONTACT_MODE` 改 `live`、`CONTACT_TO` 填客戶信箱、Turnstile 真金鑰、Resend 金鑰與寄件網域（下一節）。
+4. 聯絡表單切成正式：`wrangler.jsonc` 的 `CONTACT_MODE` 改 `live`、`CONTACT_TO`（2026-11-14 已填 frankwang@aquasky.com.tw，照舊站）、Turnstile 真金鑰、Resend 金鑰與寄件網域（下一節）。
 
 ## 聯絡表單與舊網址轉址（`worker/`，2026-11-05）
 
@@ -101,7 +101,7 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 
 - 現在是 `CONTACT_MODE: preview`：全部檢查照做但**不寄信**，畫面顯示「預覽站：表單可以送出，但正式上線前不會寄信」。Turnstile 用 Cloudflare 公開測試金鑰（site key 在 `src/data/contact-form.json`，secret 在 `.dev.vars`／`wrangler secret`，永遠通過）。
 - 存 secret 在 Windows 上**不要用** `echo "值" | npx wrangler secret put NAME`（PowerShell 的管線會多帶換行，2026-11-05 存進去的金鑰因此驗證一直失敗）。改成寫一個 JSON 檔 `{"NAME":"值"}`（放 repo 外，例如 Temp），跑 `npx wrangler secret bulk "路徑.json"`；或直接 `npx wrangler secret put NAME` 不接管線、在提示後貼值。多帳戶登入時先 `$env:CLOUDFLARE_ACCOUNT_ID = '00b64e29ee78f15e15cfbfd95748f66d'`（cloundflare1）免得選錯帳戶。
-- 正式上線前：① Cloudflare 儀表板 → Turnstile 建 widget（hostnames：aquaskyplus.com、預覽網址），site key 填 `src/data/contact-form.json`、`TURNSTILE_SECRET_KEY` 依上一條方式存；② Resend 帳戶加 aquaskyplus.com 寄件網域（DNS 在梵亞手上，加它給的 DKIM／SPF 紀錄），`wrangler secret put RESEND_API_KEY`；③ `wrangler.jsonc` vars：`CONTACT_MODE: live`、`CONTACT_TO`＝Tiffany 給的信箱、`CONTACT_FROM` 用已驗證網域；④ 寄一封測試看客戶有沒有收到。
+- 正式上線前：① Cloudflare 儀表板 → Turnstile 建 widget（hostnames：aquaskyplus.com、預覽網址），site key 填 `src/data/contact-form.json`、`TURNSTILE_SECRET_KEY` 依上一條方式存；② Resend 帳戶加 aquaskyplus.com 寄件網域（DNS 在梵亞手上，加它給的 DKIM／SPF 紀錄），`wrangler secret put RESEND_API_KEY`；③ `wrangler.jsonc` vars：`CONTACT_MODE: live`、`CONTACT_TO`＝frankwang@aquasky.com.tw（已填）、`CONTACT_FROM` 用已驗證網域；④ 寄一封測試看客戶有沒有收到。
 - 本機測：`.dev.vars` 寫 `TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA`，`npm run build; npm run cf:preview`，開 `http://127.0.0.1:8788/en/contact` 送一次，應顯示預覽站訊息。單元測試 `npm run test:worker`。
 - 沒做的：速率限制（靠 Turnstile；要的話在 Cloudflare WAF 對 `/api/contact` 加 rate limiting 規則）、舊站選型結果「轉詢價」帶入資料（待 Tiffany 回答要不要保留）。
 
