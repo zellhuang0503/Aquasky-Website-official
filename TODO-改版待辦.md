@@ -110,7 +110,7 @@
 
 ## AEO／AI 回答月測（Cloudflare 雲端自動檢核）
 
-- [ ] **10/8 完整月測失敗，至今沒人處理**（2026-10-22 查核）。72 筆只取得 1 筆、71 筆失敗或待處理；10/9 抽查 OpenAI 與 Claude 回「模型服務錯誤」。之後的 10/13 月報定稿、人工複核都沒做，監測專案最後一筆 commit 停在 9/24。
+- [x] **10/8 完整月測失敗**（2026-10-22 查核；**2026-11-17 全部處理完**：修好、補跑、複核、併進 11 月月報）。72 筆只取得 1 筆、71 筆失敗或待處理；10/9 抽查 OpenAI 與 Claude 回「模型服務錯誤」。之後的 10/13 月報定稿、人工複核都沒做，監測專案最後一筆 commit 停在 9/24。
   - 取數本身是自動的（`aquasky-monitor` Worker，每 5 分鐘 cron，結果存 D1 與私人儀表板，不進 Git），所以不是「忘了跑」，是「跑了但壞了、沒人看」。
   - **2026-10-22 08:30 已登入儀表板查明原因（兩個問題疊加）：**
     1. **OpenRouter 餘額用完**：10/1 起五個走 OpenRouter 的模型（OpenAI、Google、Claude、Grok、DeepSeek）全回 HTTP 402 Payment Required；Perplexity 走自己的金鑰，正常。10/1 重點複查就已 18 答 6 失敗。
@@ -122,8 +122,9 @@
   - [x] **清掉已卡住的 US$20**（2026-10-25）：D1 `aiqa_attempts` 10 月 `reported_usd IS NULL` 且 item 為 failed/402 的 10 筆已設 0；10 月 accounted 從 23.32 降到 3.32。被擋的 90 題（10/8 月測 66、10/22 複查 24）狀態是 `budget_blocked`，屬終態，不會自己補跑。
   - [x] **10 月 72 題補跑完成，72/72 答完**（輪次 `monthly-2026-10-08-catchup`，kind=monthly、簽章同 10/8 原輪，設定內 note 標「補跑」；狀態 collected）。10/25 11:40 起跑到 36 題時 OpenRouter 新帳號儲值用完（402 `openrouter_credits`），Zell 儲值後 16:18 續跑；尾端 2 題被每月門檻誤擋（6 題同時各預留 US$2，接近 25 時會擋）手動改回 queued 補完。DeepSeek A4／A5 第一次撞 6000 token 上限（思考佔 4500），依文件 40 同設定重試：A4 第 2 次、A5 第 3 次答完，三次原始回應都留在 aiqa_attempts。這輪實花 US$11.54，10 月合計 15.51，剩 9.5 夠 10/29 重點複查（約 3）。
     - [x] **人工複核**（2026-11-17 做完，兩輪一起；Claude 協助、待 Zell 確認）：Fluval 標記 10 筆中真的認錯只有 Perplexity B7（兩輪都是），其他 8 筆是主動區分品牌。另抓到 Grok 7 筆只回開場白（系統沒抓到）、公司中文名叫錯 13 筆（多為 Google）、官網保固（FAQ 井用／熱水／暖通 5 年 vs 26 個英文 PUMPLUS 產品頁 3 年）與 MOQ（標準色無 MOQ vs 經銷 20 呎櫃）兩處自相矛盾。細節：Edge AEO 專案 `docs/reports/2026-11-17/README.md`。
-    - [x] **10 月補跑結果併進 11 月月會**：11/17 客戶版一頁月報定稿（兩輪並列），在 Edge AEO 專案 `docs/reports/2026-11-17/`（HTML＋A4 一頁 PDF＋`data-snapshot.json` 固定版本），本機 commit d9927bb、68db906，未 push。
+    - [x] **10 月補跑結果併進 11 月月會**：11/17 客戶版一頁月報定稿（兩輪並列），在 Edge AEO 專案 `docs/reports/2026-11-17/`（HTML＋A4 一頁 PDF＋`data-snapshot.json` 固定版本），commit d9927bb、68db906，11/17 已 push。
     - [x] DeepSeek `reasoning_effort` 沒改（11/12 輪簽章與 10 月相同，兩輪可直接比）；11/12 輪 DeepSeek A4 重試 1 次答完。
+    - [x] **Grok「只回開場白」偵測修好**（2026-11-17）：多加「不到 400 字且引用 ≥30 筆」；10、11 月 144 筆重播，7 筆全抓到、0 誤判。commit 7aa8300 已 push，Worker 已部署（版本 db995e86）。舊紀錄不變，12/3 抽測起生效。
   - [x] 11 月預排：11/12 月測 72/72（4 筆 11/14 補齊）、11/17 月報定稿完成。
   - [ ] **11/19 月會**（時間待跟 Frank 確認）：帶 11 月月報 PDF，請 Frank 確認下月三件事。
   - [ ] **11/24（二）送保固／MOQ 對照表給 Tiffany（副本 Frank）**，請 12/1 前回覆；回了就改新站 FAQ＋PUMPLUS 產品頁（en＋zh）。日曆已放。
