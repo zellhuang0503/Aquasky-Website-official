@@ -121,8 +121,11 @@
   - [x] **修 bug**（2026-10-25）：`monitor/src/aiqa-runner.mjs` 供應商回錯誤且無費用回報時 `reported_usd` 設 0 釋放預留，逾時後的 uncertain 仍保留預留；加回歸測試（aiqa 測試 38 通過；monitor.test.mjs 另有 2 項本來就失敗的測試未動）。commit 964e63b，Worker 已部署（版本 9e165ece）。
   - [x] **清掉已卡住的 US$20**（2026-10-25）：D1 `aiqa_attempts` 10 月 `reported_usd IS NULL` 且 item 為 failed/402 的 10 筆已設 0；10 月 accounted 從 23.32 降到 3.32。被擋的 90 題（10/8 月測 66、10/22 複查 24）狀態是 `budget_blocked`，屬終態，不會自己補跑。
   - [x] **10 月 72 題補跑完成，72/72 答完**（輪次 `monthly-2026-10-08-catchup`，kind=monthly、簽章同 10/8 原輪，設定內 note 標「補跑」；狀態 collected）。10/25 11:40 起跑到 36 題時 OpenRouter 新帳號儲值用完（402 `openrouter_credits`），Zell 儲值後 16:18 續跑；尾端 2 題被每月門檻誤擋（6 題同時各預留 US$2，接近 25 時會擋）手動改回 queued 補完。DeepSeek A4／A5 第一次撞 6000 token 上限（思考佔 4500），依文件 40 同設定重試：A4 第 2 次、A5 第 3 次答完，三次原始回應都留在 aiqa_attempts。這輪實花 US$11.54，10 月合計 15.51，剩 9.5 夠 10/29 重點複查（約 3）。
-    - [ ] **人工複核（10/27 17:00 前）**，優先看 5 筆：B7 的 Claude／DeepSeek／Google／Perplexity 與 B6 的 Claude 被標「出現水族燈／Fluval」要核對是否認錯品牌（保固題與經銷題）。A 組五題未提示品牌，六模型自然提到 AQUASKY 只有 2–3 題，這是本月最該講的數字。
-    - [ ] **10 月補跑結果併進 11 月月會**（Zell 10/26 決定）：不另出 10 月月報；11/17 定稿的月報並列兩輪（10/25 補跑＋11/12 月測），資料日期寫 10/25 不寫 10/8。日曆 11/17 事件已改名加說明。
-    - [ ] 11 月前決定：DeepSeek V4.1 Flash 思考常吃掉 4500 token，要不要只對 DeepSeek 加 `reasoning_effort: low`（Claude 已有）。改了簽章會變，11 月輪跟 10 月輪就不能直接比，要在月報註記。
-  - [ ] 11 月預排：11/12 完整月測、11/17 定稿、11/19 月會。這次要在 11/13 看一眼有沒有跑成。
+    - [x] **人工複核**（2026-11-17 做完，兩輪一起；Claude 協助、待 Zell 確認）：Fluval 標記 10 筆中真的認錯只有 Perplexity B7（兩輪都是），其他 8 筆是主動區分品牌。另抓到 Grok 7 筆只回開場白（系統沒抓到）、公司中文名叫錯 13 筆（多為 Google）、官網保固（FAQ 井用／熱水／暖通 5 年 vs 26 個英文 PUMPLUS 產品頁 3 年）與 MOQ（標準色無 MOQ vs 經銷 20 呎櫃）兩處自相矛盾。細節：Edge AEO 專案 `docs/reports/2026-11-17/README.md`。
+    - [x] **10 月補跑結果併進 11 月月會**：11/17 客戶版一頁月報定稿（兩輪並列），在 Edge AEO 專案 `docs/reports/2026-11-17/`（HTML＋A4 一頁 PDF＋`data-snapshot.json` 固定版本），本機 commit d9927bb、68db906，未 push。
+    - [x] DeepSeek `reasoning_effort` 沒改（11/12 輪簽章與 10 月相同，兩輪可直接比）；11/12 輪 DeepSeek A4 重試 1 次答完。
+  - [x] 11 月預排：11/12 月測 72/72（4 筆 11/14 補齊）、11/17 月報定稿完成。
+  - [ ] **11/19 月會**（時間待跟 Frank 確認）：帶 11 月月報 PDF，請 Frank 確認下月三件事。
+  - [ ] **11/24（二）送保固／MOQ 對照表給 Tiffany（副本 Frank）**，請 12/1 前回覆；回了就改新站 FAQ＋PUMPLUS 產品頁（en＋zh）。日曆已放。
+  - [ ] 12 月：12/3 看重點複查、12/10 月測、12/11 複核、12/15 月報定稿、12/17 月會基準日（日曆已放）。
   - 監測專案位置：`E:\CascadeProjects\Aquasky Edge AEO On Cloudflare Project`（節奏見 docs/40、雲端實作見 docs/41）。（10/23 更正：原本寫的 C 槽路徑不存在。）
