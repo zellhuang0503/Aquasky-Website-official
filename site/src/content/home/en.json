@@ -1,5 +1,5 @@
 {
-  "_note": "Home page, English. title/description verbatim from the 2026-10-22 archive. The old en home shows the certification icons WITHOUT captions, so label is empty (production shows nothing, same as the old site). draftLabel = our proposed English caption (translated from zh, 新補、待審). Since 2026-11-14 the PREVIEW build shows draftLabel so Tiffany can judge it in place (she asked 2026-11-13 whether these are the spots); production never renders draftLabel. If she approves, move each draftLabel into label; if not, delete draftLabel.",
+  "_note": "Home page, English. title/description verbatim from the 2026-10-22 archive. Certification captions: the old site shows a caption under each icon in zh/es/fr/ru/ar but left English empty, and the icons have no alt text, so the English home had no crawlable text for CE / ISO 9001 / UPC / KC / Lead-Free. Zell decided 2026-11-17: captions help SEO/AEO/GEO, so every language must have them (schema enforces non-empty). These English captions are written by VAI from the zh captions plus the mark names on the icons; Tiffany may correct the wording. These 8 captions are NEW text (新補、待審): not from the old site and not yet reviewed by the client as of 2026-11-17; status approved-legacy covers everything else in this file. When Tiffany has seen them, replace this sentence with the approval date.",
   "lang": "en",
   "status": "approved-legacy",
   "seo": {
@@ -21,43 +21,35 @@
     "items": [
       {
         "icon": "/images/home-service/s2-img-01.png",
-        "label": "",
-        "draftLabel": "EU Pressure Equipment Safety Certification"
+        "label": "CE Marking: EU Pressure Equipment Safety"
       },
       {
         "icon": "/images/home-service/s2-img-02.png",
-        "label": "",
-        "draftLabel": "ISO 9001 Quality Management"
+        "label": "ISO 9001 Quality Management Certification"
       },
       {
         "icon": "/images/home-service/s2-img-03.png",
-        "label": "",
-        "draftLabel": "Lead-Free Certification"
+        "label": "Lead-Free Certification"
       },
       {
         "icon": "/images/home-service/s2-img-04.png",
-        "label": "",
-        "draftLabel": "UPC Plumbing Safety Certification"
+        "label": "UPC Plumbing Safety Certification (USA)"
       },
       {
         "icon": "/images/home-service/s2-img-05.png",
-        "label": "",
-        "draftLabel": "NSF Drinking Water Standard"
+        "label": "NSF Drinking Water Standard Certification"
       },
       {
         "icon": "/images/home-service/N2.png",
-        "label": "",
-        "draftLabel": "Nitrogen Pre‑charged"
+        "label": "Nitrogen Filled"
       },
       {
         "icon": "/images/home-service/unnamed2.png",
-        "label": "",
-        "draftLabel": "KC Korea Safety Certification"
+        "label": "KC Korea Safety Certification"
       },
       {
         "icon": "/images/home-service/s2-img-08.png",
-        "label": "",
-        "draftLabel": "Anti-Rust Shield"
+        "label": "Anti-Rust Shield Coating"
       }
     ]
   }

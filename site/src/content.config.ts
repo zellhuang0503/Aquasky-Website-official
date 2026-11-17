@@ -84,8 +84,8 @@ const home = defineCollection({
     slidesAlt: z.string(),
     certifications: z.object({
       heading: z.string(),
-      // label 可空（舊站 en 首頁圖示沒有說明文字）；draftLabel 是待客戶審的建議文字：只在預覽版（SITE_STAGE≠production）顯示，正式版不輸出
-      items: z.array(z.object({ icon: z.string(), label: z.string(), draftLabel: z.string().optional() })).length(8),
+      // 每個語系都一定要有說明文字（黃老闆 2026-11-17：對 SEO／AEO／GEO 有幫助，圖示本身沒有 alt，機器只讀得到這排字）；空字串建置會失敗
+      items: z.array(z.object({ icon: z.string(), label: z.string().trim().min(1) })).length(8),
     }),
   }),
 });
