@@ -49,6 +49,12 @@
 | （工作區）../translation/ | 六語系翻譯：sources 對照檔、glossary 術語表、lqcol-plus 譯稿 | ../translation |
 | （腳本）../migration-2026-10-09/diff_archives.py | 兩次封存比對：新增、消失、文字有變、只有標記變 | ../migration-2026-10-09 |
 
+## 月會與客戶往來（本資料夾根目錄）
+| 檔案 | 用途 |
+| --- | --- |
+| 2026-11-17-網站確認事項整理-給Tiffany.html | 給 Tiffany 的預覽確認事項（已完成 9 項、待確認 3 項、不急 2 項） |
+| 2026-11-19-月會待辦清單.html | 11/19 月會的決定與待辦。保固全部改 5 年；標準色 MOQ、經銷 20 呎櫃兩句刪掉，改成客製化說法；目標 11 月底；12 月月會改 12/9。內容依梵亞、溢康、玉丹分列，另列要黃老闆決定的 3 件。原始逐字稿是上一層的 .md 檔 |
+
 ## 其他相關專案（未複製）
 - `E:\CascadeProjects\Aquasky Edge AEO On Cloudflare Project`：現行 Cloudflare Worker、監測腳本、所有 docs 原檔
 - `E:\CascadeProjects\Aquasky-AIQA-Monitor`：AI 問答監測程式
