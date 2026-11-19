@@ -149,7 +149,7 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 
   FAQ 另外刪掉兩句：「標準色無 MOQ」和「經銷最少一個 20 呎貨櫃」。經銷那題的 20 呎櫃那句，換成「Pricing is based on FOB Taichung terms.／價格以 FOB 台中計價。」，後面的付款條件不變。客製化說法等 Tiffany 寫初稿，梵亞補強之後再加。「客製色每批 400 件」「可混裝型號」會議沒提，維持原樣。
 
-  正文的改字記在 `client-text-edits.json`（7 筆）。meta description 是屬性，verify 比不到，所以只記在這裡。es／fr／ru／ar 上線時要套同樣的改法，`translation/sources/FAQ.md`、`RO-PLUS.md` 那四個語系的原文還是舊說法。FAQ 第 9 題「warranty differs in market」沒改，會議沒決定這一題。
+  正文的改字記在 `client-text-edits.json`（7 筆）。meta description 是屬性，verify 比不到，所以只記在這裡。es／fr／ru／ar 上線時要套同樣的改法，`translation/sources/FAQ.md`、`RO-PLUS.md` 那四個語系的原文還是舊說法。FAQ 第 9 題原本寫「warranty differs in market…請洽當地經銷商」，黃老闆 11/19 會後決定也改成 5 年：「All AQUASKY tanks (RO, Well, Thermal and Hydronic) come with a 5-year warranty.／溢康所有罐體（含 RO 罐）皆提供 5 年保固。」，原本的經銷商那句一起拿掉（client-text-edits.json 另 2 筆）。es／fr／ru／ar 的第 9 題也一樣要改。
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁）；中文系列頁照舊站沒有型號清單，不連明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。

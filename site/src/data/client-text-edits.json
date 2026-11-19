@@ -75,6 +75,20 @@
       "replace": [
         { "from": "產品提供三年保固", "to": "產品提供五年保固" }
       ]
+    },
+    {
+      "source": "依黃老闆／溢康 2026-11-19 月會「全部改 5 年」；黃老闆會後決定 FAQ 第 9 題「保固因市場而異」也照改",
+      "pages": ["/en/FAQ"],
+      "replace": [
+        { "from": "AQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.", "to": "All AQUASKY tanks (RO, Well, Thermal and Hydronic) come with a 5-year warranty." }
+      ]
+    },
+    {
+      "source": "依黃老闆／溢康 2026-11-19 月會「全部改 5 年」；黃老闆會後決定 FAQ 第 9 題「保固因市場而異」也照改",
+      "pages": ["/zh/FAQ"],
+      "replace": [
+        { "from": "溢康保固期因市場而異。 請聯繫您當地的經銷商以獲得適用於您所在地區的保固。", "to": "溢康所有罐體（含 RO 罐）皆提供 5 年保固。" }
+      ]
     }
   ]
 }
