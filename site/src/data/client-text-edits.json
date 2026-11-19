@@ -24,6 +24,57 @@
         { "from": "密閉式膨脹水箱 高壓泵浦壓力桶 導熱液體膨脹罐", "to": "密閉式膨脹水箱 16BAR高壓泵浦壓力桶 導熱液體膨脹罐" },
         { "from": "太陽能液體膨脹罐 高壓泵浦壓力桶", "to": "太陽能液體膨脹罐 25BAR高壓泵浦壓力桶" }
       ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
+      "pages": ["/en/products-det/pumplus/APT-1.3", "/en/products-det/pumplus/APT-100", "/en/products-det/pumplus/APT-100H", "/en/products-det/pumplus/APT-12", "/en/products-det/pumplus/APT-120", "/en/products-det/pumplus/APT-130", "/en/products-det/pumplus/APT-160", "/en/products-det/pumplus/APT-18", "/en/products-det/pumplus/APT-18H", "/en/products-det/pumplus/APT-2", "/en/products-det/pumplus/APT-200", "/en/products-det/pumplus/APT-24", "/en/products-det/pumplus/APT-240", "/en/products-det/pumplus/APT-24H", "/en/products-det/pumplus/APT-3", "/en/products-det/pumplus/APT-300", "/en/products-det/pumplus/APT-325", "/en/products-det/pumplus/APT-40", "/en/products-det/pumplus/APT-40H", "/en/products-det/pumplus/APT-450", "/en/products-det/pumplus/APT-500", "/en/products-det/pumplus/APT-60", "/en/products-det/pumplus/APT-60H", "/en/products-det/pumplus/APT-8", "/en/products-det/pumplus/APT-80", "/en/products-det/pumplus/APT-80H"],
+      "replace": [
+        { "from": "3-year factory warranty", "to": "5-year factory warranty" }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
+      "pages": ["/en/FAQ"],
+      "replace": [
+        { "from": "RO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years.", "to": "All tanks (RO, Well, Thermal and Hydronic): 5-years." }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會：刪「標準色無 MOQ」與「經銷最少一個 20 呎貨櫃」，客製化說法等 Tiffany 初稿",
+      "pages": ["/en/FAQ"],
+      "replace": [
+        { "from": "No required MOQ for standard colors (Blue and Almond). The MOQ for customized colors", "to": "The MOQ for customized colors" },
+        { "from": "MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms.", "to": "Pricing is based on FOB Taichung terms." }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
+      "pages": ["/zh/FAQ"],
+      "replace": [
+        { "from": "RO 罐 3 年保固；其餘多數罐體 5 年保固。", "to": "所有罐體（含 RO 罐）皆為 5 年保固。" }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會：刪「標準色無 MOQ」與「經銷最少一個 20 呎貨櫃」，客製化說法等 Tiffany 初稿",
+      "pages": ["/zh/FAQ"],
+      "replace": [
+        { "from": "標準顏色（藍色、米色）無 MOQ 要求。客製化顏色", "to": "客製化顏色" },
+        { "from": "最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。", "to": "價格以 FOB 台中計價。" }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
+      "pages": ["/en/news-detail/INDUSTRY/introduction-to-liquid-cold-system-expansion-tank-lqcol-plus-aquasky-173"],
+      "replace": [
+        { "from": "Backed by a 3-Year Warranty", "to": "Backed by a 5-Year Warranty" }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
+      "pages": ["/zh/news-detail/INDUSTRY/lqcol-plus-aquasky-175"],
+      "replace": [
+        { "from": "產品提供三年保固", "to": "產品提供五年保固" }
+      ]
     }
   ]
 }

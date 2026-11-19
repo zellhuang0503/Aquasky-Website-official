@@ -141,12 +141,21 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 - 中文 LQCOL-PLUS 頁：Tiffany 2026-11-13 審過，`status` 改 `approved`，頁頂黃色「AI 初稿」提示拿掉。她改的字：特色三格標題（頂級桶身材質／EPDM 橡膠隔膜／氮氣預充氣壓）、結構圖三個標示、FAQ Q3、Q4。她寫的「不銹鋼」照全站慣例用「不鏽鋼」、「EPDM橡膠隔膜」照全站慣例在英中之間加空格。「氮氣預充氣壓」「可客製化氮氣預充氣壓」沒有 N₂，是禁譯詞的已知例外（`../translation/lqcol-plus/do-not-translate.md` 第 10 節）。`translation/lqcol-plus/LQCOL-PLUS.zh.md` 沒同步，網站以 zh.json 為準；`import-lqcol.mjs --force` 會蓋掉客戶的字。
 - 中文選單與產品列：MEGA-PLUS「16BAR高壓泵浦壓力桶」、GIGA-PLUS「25BAR高壓泵浦壓力桶」（舊站兩個都叫「高壓泵浦壓力桶」；Tiffany 2026-11-13 指定）。照抄頁裡寫死的產品列按鈕、產品總覽頁 h2、中文下載頁按鈕一起改；新聞內文不改。照抄頁這類「客戶指定改字」記在 `src/data/client-text-edits.json`（每筆寫來源），`npm run verify` 比對舊頁文字前先套用；清單外的差異照樣不通過。
 - APT-3 系列頁型號下方、明細頁主圖 alt、選型工具結果寫 Gal 0.8（舊站 0.5；Tiffany 2026-11-13 指定）。alt 是屬性，verify 的照抄頁文字比對看不到，所以記在這裡、不放 `client-text-edits.json`。
+- 保固一律 5 年，RO 桶也一樣。這是黃老闆和溢康 2026-11-19 月會的決定，黃老闆會後也確認過。舊站有三種說法：FAQ「RO 3 年、Well／Thermal／Hydronic 5 年」，26 個英文 PUMPLUS 明細頁「3-year factory warranty」，LQCOL 新聞「3-Year」「三年保固」。AI 讀到這些就會講成兩種年限。改到的地方：
+  - 26 個 APT 明細頁
+  - FAQ（en、zh）的頁面文字、FAQPage 答案、meta description
+  - RO-PLUS 系列頁（en、zh）的 description
+  - 兩篇 LQCOL 新聞（en 173、zh 175）
+
+  FAQ 另外刪掉兩句：「標準色無 MOQ」和「經銷最少一個 20 呎貨櫃」。經銷那題的 20 呎櫃那句，換成「Pricing is based on FOB Taichung terms.／價格以 FOB 台中計價。」，後面的付款條件不變。客製化說法等 Tiffany 寫初稿，梵亞補強之後再加。「客製色每批 400 件」「可混裝型號」會議沒提，維持原樣。
+
+  正文的改字記在 `client-text-edits.json`（7 筆）。meta description 是屬性，verify 比不到，所以只記在這裡。es／fr／ru／ar 上線時要套同樣的改法，`translation/sources/FAQ.md`、`RO-PLUS.md` 那四個語系的原文還是舊說法。FAQ 第 9 題「warranty differs in market」沒改，會議沒決定這一題。
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁）；中文系列頁照舊站沒有型號清單，不連明細。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。
 - 聯絡頁 email：舊站經 Cloudflare 混淆（/cdn-cgi/l/email-protection）再靠 JS 還原；新站匯入時直接解碼成純文字（同舊站還原後的樣子）。
 - feature 頁六個說明面板的切換，舊站是 jQuery；新站在 LegacyPage 裡用 10 行純 JS 做同樣的事。
-- FAQ 頁的 FAQPage 結構化資料，舊站是 AEO Worker 注入的；新站改從頁面 29 題直接產生（HTML 實體全部還原成純文字），verify 比題數。
+- FAQ 頁的 FAQPage 結構化資料，舊站是 AEO Worker 注入的。新站從內容檔 `legacyJsonLd` 輸出，29 題、HTML 實體都還原成純文字。verify 只比題數、不比答案，所以**改 FAQ 答案要頁面文字和 `legacyJsonLd` 兩邊一起改**。
 - 舊站頁面或 Worker 帶的 Organization／Corporation／WebSite／BreadcrumbList 一律不搬；全站只有新站自己產生的 `#organization` 一個，麵包屑一份。
 - 麵包屑規則：產品系列頁＝首頁›產品系列›該系列；/products＝首頁›產品系列；其他文字頁＝首頁›該頁選單字樣（不掛 PRODUCTS）。
 - 舊站 style.css／a-hover.css 裡 url() 用到的圖（文字頁藍色標題帶、about 底圖）由 copy-archive-assets 一起複製，verify 檢查存在。
