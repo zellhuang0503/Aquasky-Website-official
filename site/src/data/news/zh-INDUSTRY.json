@@ -5,7 +5,7 @@
   "category": "INDUSTRY",
   "path": "/news/INDUSTRY",
   "perPage": 5,
-  "pageCount": 10,
+  "pageCount": 11,
   "titleBand": "產業訊息",
   "h4Recent": "最新文章",
   "h4Side": "熱門文章",
@@ -40,6 +40,8 @@
     }
   ],
   "order": [
+    "aquasky-vertical-horizontal-pressure-tank-ch",
+    "world-temp-peak-warming-aquasky-ch",
     "reshaping-potable-water-systems-ch",
     "liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch",
     "aquasky-lqcol-plus-ai-cooling_CH",

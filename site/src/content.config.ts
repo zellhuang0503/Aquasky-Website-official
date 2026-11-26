@@ -216,7 +216,8 @@ const news = defineCollection({
       .refine((s) => !/\son\w+=/i.test(s), 'bodyHtml 不能有 on* 事件屬性')
       .refine((s) => !/cdn-cgi|__cf_email__/.test(s), 'bodyHtml 不能留 Cloudflare email 混淆')
       .refine((s) => [...s.matchAll(/<iframe[^>]*src="([^"]*)"/g)].every((m) => /^https:\/\/www\.youtube(-nocookie)?\.com\/embed\//.test(m[1])), 'iframe 只准 YouTube')
-      .refine((s) => !/(src|href)="(?!\/|https?:|#|mailto:|tel:)/.test(s), 'bodyHtml 的 src/href 必須是絕對路徑'),
+      // data:image/ 例外：2026-11 的「立式與臥式壓力桶」那篇舊站六語都把圖片直接嵌在正文裡（base64），照舊站保留
+      .refine((s) => !/(src|href)="(?!\/|https?:|#|mailto:|tel:|data:image\/)/.test(s), 'bodyHtml 的 src/href 必須是絕對路徑'),
     assets: z.array(z.string()),
   }),
 });

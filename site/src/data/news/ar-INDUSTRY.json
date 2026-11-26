@@ -24,14 +24,14 @@
       "title": "فوائد خزان ضغط المياه الصالحة للشرب معبأ بنتروجين مسبق | Aquasky"
     },
     {
+      "dateText": "November 06 2024",
+      "href": "/ar/news-detail/INDUSTRY/-181",
+      "title": "استكشاف أنظمة التدفئة الشمسية"
+    },
+    {
       "dateText": "January 11 2024",
       "href": "/ar/news-detail/INDUSTRY/aquasky-160",
       "title": "حول خزان الحجاب الحاجز ｜Aquasky"
-    },
-    {
-      "dateText": "March 18 2024",
-      "href": "/ar/news-detail/INDUSTRY/mega-plus-16-aquasky-169",
-      "title": "خزانات الضغط عالي الضغط (MEGA-PLUS 16 بار): ضمان إمداد موثوق بالمياه للمباني المرتفعة | Aquasky"
     },
     {
       "dateText": "February 11 2024",
@@ -40,6 +40,8 @@
     }
   ],
   "order": [
+    "aquasky-vertical-horizontal-pressure-tank-ar",
+    "world-temp-peak-warming-aquasky-ar",
     "reshaping-potable-water-systems-ar",
     "liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ar",
     "aquasky-lqcol-plus-ai-cooling_AR",

@@ -40,6 +40,8 @@
     }
   ],
   "order": [
+    "aquasky-vertical-horizontal-pressure-tank-es",
+    "world-temp-peak-warming-aquasky-es",
     "reshaping-potable-water-systems-es",
     "liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ES",
     "aquasky-lqcol-plus-ai-cooling_ES",
