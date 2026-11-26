@@ -27,9 +27,9 @@
       "models": [
         {
           "model": "ROT-1",
-          "volumeText": "Liter 3 / Gal 0.5",
+          "volumeText": "Liter 3 / Gal 0.8",
           "volumeL": 3,
-          "volumeGal": 0.5,
+          "volumeGal": 0.8,
           "image": "/upfile/Images/ROT/pd-ROT-1.jpg",
           "detailPath": "/products-det/ro-plus/ROT-1"
         },
@@ -108,9 +108,7 @@
       ]
     }
   ],
-  "dataQuestions": [
-    "ROT-1 舊站寫「Liter 3 / Gal 0.5」，3 L 換算約 0.79 gal，要請客戶確認。"
-  ],
+  "dataQuestions": [],
   "assets": [
     "/images/products/pumplus-bg-1B.jpg",
     "/upfile/Images/ROT/pd-ROT-1.jpg",
