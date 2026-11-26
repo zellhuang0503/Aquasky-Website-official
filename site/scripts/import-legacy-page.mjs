@@ -19,7 +19,8 @@ const DEFAULT = ['/supreme', '/dl-ce', '/asme-ht', '/GIGA-PLUS', '/accessories',
 // 下載專區各語系子頁：網址沒有語系前綴（/download/english），舊站一律英文介面，只匯一份（內容檔 en.json）
 const DOWNLOAD_LANGS = ['arabic', 'chinese', 'dutch', 'english', 'french', 'german', 'italian', 'japanese', 'korean', 'latvian', 'lithuanian', 'russian', 'spanish', 'thai'];
 // 單張認證頁：舊站 certification_page.php?sid=N（查詢字串，靜態站做不了），新站改乾淨網址；封存索引（live-2026-10-25）已用新網址當 key
-const CERT_PAGES = { 4: 'iso-9001-eurocert', 6: 'kc-korea', 7: 'acs-france', 9: 'watermark-australia', 10: 'psb-singapore' };
+// sid=8（WRAS）舊站有頁、但認證總覽沒連過去；2026-11-26 照 Tiffany 11/20 要求補上，線上抓的頁存 live-2026-11-26/
+const CERT_PAGES = { 4: 'iso-9001-eurocert', 6: 'kc-korea', 7: 'acs-france', 8: 'wras-uk', 9: 'watermark-australia', 10: 'psb-singapore' };
 // 選型工具三個計算器：表單 HTML 照抄，舊站的 jQuery／AJAX／PDF 表單拿掉，計算改由 public/js/selection-tools.js 做
 const CALC_PAGES = { '/sel_unit_ps': 'ps', '/sel_unit_vsd': 'vsd', '/sel_unit_thermal': 'thermal' };
 const paths = args.filter((a) => a.startsWith('/'));
@@ -191,14 +192,14 @@ for (const p of PAGES) {
     _note: p.neutral
       ? `照抄型頁面（網址沒有語系前綴，舊站一律英文介面，只有一份）。主體 HTML 在 src/content/legacy/${p.id}/en.json 的 bodyHtml。來源：2026-10-22 封存 ${p.path}。`
       : p.path.startsWith('/certification-page/')
-        ? `照抄型頁面。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml。來源：2026-10-25 從線上抓 certification_page.php?sid=${Object.entries(CERT_PAGES).find(([, s]) => p.path.endsWith('/' + s))[0]}（zh 加 &lang=zh），存 migration-2026-10-22/live-2026-10-25/；舊網址是查詢字串，新站改乾淨網址。`
+        ? `照抄型頁面。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml。來源：${en.row.retrieved_at.slice(0, 10)} 從線上抓 certification_page.php?sid=${Object.entries(CERT_PAGES).find(([, s]) => p.path.endsWith('/' + s))[0]}（zh 加 &lang=zh），存 migration-2026-10-22/${dirname(en.row.relative_path)}/；舊網址是查詢字串，新站改乾淨網址。`
       : p.langs.includes('zh')
         ? `照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/${p.id}/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en${p.path} 與 /zh${p.path}。`
         : `照抄型頁面（舊站只有英文版）。主體 HTML 在 src/content/legacy/${p.id}/en.json 的 bodyHtml。來源：2026-10-22 封存 /en${p.path}。`,
     id: p.id,
     path: p.path,
     template: 'legacy',
-    source: { url: p.path.startsWith('/certification-page/') ? en.row.final_url : p.neutral ? `${ORIGIN}${p.path}` : `${ORIGIN}/en${p.path}`, archive: p.path.startsWith('/certification-page/') ? 'migration-2026-10-22/live-2026-10-25' : 'migration-2026-10-22', retrieved: en.row.retrieved_at.slice(0, 10) },
+    source: { url: p.path.startsWith('/certification-page/') ? en.row.final_url : p.neutral ? `${ORIGIN}${p.path}` : `${ORIGIN}/en${p.path}`, archive: p.path.startsWith('/certification-page/') ? `migration-2026-10-22/${dirname(en.row.relative_path)}` : 'migration-2026-10-22', retrieved: en.row.retrieved_at.slice(0, 10) },
     legacyCss: en.legacyCss,
     extraCss: en.extraCss,
     bootstrap: en.bootstrap,

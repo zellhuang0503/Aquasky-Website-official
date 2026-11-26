@@ -1,11 +1,11 @@
 {
-  "_note": "舊站 /zh/certification-page/iso-9001-eurocert 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝標題帶字樣。",
+  "_note": "舊站 /zh/certification-page/iso-9001-eurocert 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝標題帶字樣。 SEO: Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）給的 title／description；zh 由梵亞照她的英文意思翻。",
   "template": "legacy",
   "lang": "zh",
   "status": "approved-legacy",
   "seo": {
-    "title": "Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank",
-    "description": "Aquasky: first choices of pressure tank, water tank, thermal tank, pump tank, ro tank, self-cleaning tank, water heating tank, expansion tank. Aquasky products:  Ro-Plus, Pumplus, Thermal-Plus, Hydro-Plus"
+    "title": "ISO 9001:2015 品質管理系統認證 | AQUASKY 溢康企業",
+    "description": "AQUASKY 溢康企業取得 Eurocert ISO 9001:2015 認證，範圍涵蓋壓力桶的製造與銷售，確保品質管理一致。"
   },
   "h1": "認證 | ISO 9001製造品質管理認證",
   "hasVisibleH1": false,

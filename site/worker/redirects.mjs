@@ -19,7 +19,7 @@
 //        所以不能跨語系退到 en 那篇，只能退到列表。）
 //   6. videos-detail.php?sid=N → 該語系影片明細；沒有 → /<lang>/videos
 //   7. products-det.php?sid=N → /en/products-det/<系列>/<型號>（只有英文有明細）；不認得的 sid → /en/products
-//   8. certification_page.php?sid=4|6|7|9|10 → /<lang>/certification-page/<slug>；其他 sid → /<lang>/certification
+//   8. certification_page.php?sid=4|6|7|8|9|10 → /<lang>/certification-page/<slug>；其他 sid → /<lang>/certification
 //   9. accessories-det.php（封存裡沒出現過這種網址，保險起見）→ /en/accessories
 //  10. 選型工具的後端／列印頁（sizing.php、select_api*.php、printpdf*.php…）→ /<lang>/sel_tools；sel_contact.php → /<lang>/contact
 //  11. recode.php（驗證碼圖）→ null，讓它 404
@@ -79,6 +79,7 @@ export const redirectTable = {
     4: '/certification-page/iso-9001-eurocert',
     6: '/certification-page/kc-korea',
     7: '/certification-page/acs-france',
+    8: '/certification-page/wras-uk',
     9: '/certification-page/watermark-australia',
     10: '/certification-page/psb-singapore',
   },
