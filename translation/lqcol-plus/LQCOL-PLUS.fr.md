@@ -107,8 +107,8 @@ EN: • Direct-to-Chip & Immersion Cooling: Precision cooling loops needing zero
 FR: • Refroidissement direct sur puce et par immersion : boucles de refroidissement de précision exigeant zéro micro-fuite et un flux de liquide de refroidissement pur.
 
 ### B26 · p
-EN: • Tailored for both In-Rack and In-Row CDUs, offering ultra-compact designs (0.5L / 1L / 3L) for space-constrained server racks and high-volume tanks (24L / 60L / 100L+) for rack-level and row-level cooling.
-FR: • Adapté aux CDU In-Rack comme In-Row : conceptions ultra-compactes (0.5L / 1L / 3L) pour les baies de serveurs à l'espace limité et réservoirs grand volume (24L / 60L / 100L+) pour le refroidissement au niveau de la baie et de la rangée.
+EN: • Tailored for both In-Rack and In-Row CDUs, offering compact designs (3L+) for space-constrained server racks and high-volume tanks (24L / 60L) for rack-level and row-level cooling.
+FR: • Adapté aux CDU In-Rack comme In-Row : conceptions compactes (3L+) pour les baies de serveurs à l'espace limité et réservoirs grand volume (24L / 60L) pour le refroidissement au niveau de la baie et de la rangée.
 
 ### B27 · p
 EN: • Hyperscaler Infrastructure: Built for zero single point of failure (ZSPOF) standards.

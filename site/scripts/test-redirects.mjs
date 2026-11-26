@@ -112,6 +112,7 @@ test('certification_page.php?sid=N → 認證明細；其他 → /<lang>/certifi
   assert.equal(r('/certification_page.php?sid=4'), '/en/certification-page/iso-9001-eurocert');
   assert.equal(r('/certification_page.php?sid=6'), '/en/certification-page/kc-korea');
   assert.equal(r('/certification_page.php?sid=7&lang=zh'), '/zh/certification-page/acs-france');
+  assert.equal(r('/certification_page.php?sid=8&lang=zh'), '/zh/certification-page/wras-uk');
   assert.equal(r('/certification_page.php?sid=9'), '/en/certification-page/watermark-australia');
   assert.equal(r('/certification_page.php?sid=10&lang=zh'), '/zh/certification-page/psb-singapore');
   assert.equal(r('/certification_page.php?sid=5'), '/en/certification');
@@ -179,7 +180,7 @@ test('對照表筆數', () => {
   assert.equal(news.filter((x) => x.zh).length, 47);
   assert.equal(Object.keys(redirectTable.videosBySid).length, 11);
   assert.equal(Object.keys(redirectTable.productsBySid).length, 7);
-  assert.equal(Object.keys(redirectTable.certificationBySid).length, 5);
+  assert.equal(Object.keys(redirectTable.certificationBySid).length, 6);
   assert.deepEqual(SUPPORTED_LANGS, ['en', 'zh', 'es', 'fr', 'ru', 'ar']);
 });
 

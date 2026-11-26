@@ -89,6 +89,20 @@
       "replace": [
         { "from": "溢康保固期因市場而異。 請聯繫您當地的經銷商以獲得適用於您所在地區的保固。", "to": "溢康所有罐體（含 RO 罐）皆提供 5 年保固。" }
       ]
+    },
+    {
+      "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：「WRAS認證在網站上沒有連結，請再建立」→ WRAS 那格補認證連結按鈕，連到新建的 /en/certification-page/wras-uk",
+      "pages": ["/en/certification"],
+      "replace": [
+        { "from": "with which they come into contact. &nbsp; WaterMark Certification Scheme", "to": "with which they come into contact. &nbsp; CERTIFICATION LINK WaterMark Certification Scheme" }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：WRAS 那格補「認證連結」按鈕，連到新建的 /zh/certification-page/wras-uk（同格的證書圖也從舊站的 Under Process 換成 WRAS 證書，圖片不在文字比對範圍）",
+      "pages": ["/zh/certification"],
+      "replace": [
+        { "from": "對接觸的水的影響。 WaterMark澳洲飲用水容器認證", "to": "對接觸的水的影響。 認證連結 WaterMark澳洲飲用水容器認證" }
+      ]
     }
   ]
 }

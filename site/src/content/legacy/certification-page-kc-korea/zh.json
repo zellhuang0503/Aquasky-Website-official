@@ -1,11 +1,11 @@
 {
-  "_note": "舊站 /zh/certification-page/kc-korea 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝標題帶字樣。",
+  "_note": "舊站 /zh/certification-page/kc-korea 已上線的中文頁主體，整段照抄（含它的產品列）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝標題帶字樣。 SEO: Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）給的 title／description；zh 由梵亞照她的英文意思翻。",
   "template": "legacy",
   "lang": "zh",
   "status": "approved-legacy",
   "seo": {
-    "title": "Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank",
-    "description": "Aquasky: first choices of pressure tank, water tank, thermal tank, pump tank, ro tank, self-cleaning tank, water heating tank, expansion tank. Aquasky products:  Ro-Plus, Pumplus, Thermal-Plus, Hydro-Plus"
+    "title": "韓國 KC 壓力桶認證 | AQUASKY 溢康企業",
+    "description": "AQUASKY 密閉式壓力桶取得韓國 KC 認證，符合韓國供水系統適用的衛生與安全要求。"
   },
   "h1": "認證 | KC韓國安全認證",
   "hasVisibleH1": false,

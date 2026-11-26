@@ -1,0 +1,14 @@
+{
+  "_note": "Old /en/certification-page/wras-uk page body copied verbatim (incl. its product line). Edit bodyHtml to change text. The old page had no h1; the page adds a visually-hidden h1 = the title band text. SEO: Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）給的 title／description.",
+  "template": "legacy",
+  "lang": "en",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "UK WRAS Water Regulations Certification | AQUASKY",
+    "description": "AQUASKY's PUMPLUS pressure tanks hold UK WRAS approval, meeting strict UK water supply regulations for non-metallic materials in contact with water."
+  },
+  "h1": "CERTIFICATION | Water Regulations Advisory Scheme",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">CERTIFICATION | Water Regulations Advisory Scheme</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t<img src=\"/upfile/Images/CERTIFICATION/wars_b.png\" border=\"0\" class=\"img-responsive\">        </div>\n        <div class=\"col-md-6\">\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\r\n<div class=\"col-md-6 padding_bottom_20\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20260715_AQUASKY_WRAS_CERTIFICATION.jpg\" style=\"width: 500px; height: 707px;\" /></div>\r\n</div>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}
