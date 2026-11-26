@@ -22,7 +22,9 @@
 | `/en/news-detail/<CAT>/<slug>`（237 篇：en 187、zh 50） | `src/pages/[lang]/news-detail/[category]/[slug].astro` → `NewsDetail.astro` | 正文整段照抄（`src/content/news/<lang>/<CAT>/<slug>.json`），verify 逐字比。每篇只有一個語系，沒有對應翻譯 |
 | `/en/videos`、`/en/videos/page2`、`page3`（zh 同）；`/en/videos-detail/<slug>` 11 篇（zh 11 篇，slug 不同） | `src/pages/[lang]/videos.astro`、`videos/[page].astro`、`videos-detail/[slug].astro` → 同新聞的 `NewsList`／`NewsDetail`（`kind: videos`） | 版型與新聞完全相同（CSS 同一份）；明細 JSON-LD 是舊站的 Article＋VideoObject；返回鈕用 `videos_back` |
 
-舊站的頁全部搬完（486 頁）；`npm run verify` 的「尚未搬遷」已是 0。
+**西／法／俄／阿（es／fr／ru／ar，2026-11-26 起，本機建置、還沒部署）**：上表凡是有 `/zh/…` 的頁，四語也都有（首頁、LQCOL、7 個經典系列頁、照抄模板 13 頁＋3 個計算器、6 張認證單頁、新聞與影片列表）；網址規則相同（`/es/PUMPLUS`…）。新聞明細每語 62 篇、影片 11 篇（slug 跟 en 不同，各自只有一個語系）。產品明細 90 頁、配件明細 6 頁、`/download/<language>` 14 頁舊站只有英文，四語不做。來源與刻意差異見下面「跟舊站不一樣的地方」四語那段。
+
+舊站的頁全部搬完：en／zh 486 頁，加四語共 972 頁（`npm run verify` 的頁數）；「尚未搬遷」是 0。
 
 ## 三種系列頁模板
 
@@ -134,7 +136,19 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 - 型號統一寫 `LQC-3`（舊站 `LQC- 3`、`LQC -12` 空格亂）；下載連結「Brchure」錯字改成「Brochure」；THERMAL-PLUS 大圖 alt「HERMAL-PLUS」改成「THERMAL-PLUS」。
 - JSON-LD：舊站每個系列頁 `<head>` 自己有一段 Product（另有 AEO Worker 從外面注入的）。新站：照抄頁把那段 Product 原樣搬來；資料化的頁（LQCOL、7 個經典頁）改輸出 ProductGroup（含型號）取代它；全站另有 Organization、WebSite、BreadcrumbList，LQCOL 有 FAQPage。
 - 每頁只有一個 `<h1>`：首頁 h1 是字標圖（同舊站）；系列頁舊站有兩個 h1（色條一個、標題圖又包一個），新站標題圖改用 `<div class="h1-1">`。
-- 語言選單裡還沒上線的語系（es／fr／ru／ar）是灰字不能點，舊站是連結。等那些語系做好再開。
+- 西／法／俄／阿（es／fr／ru／ar，2026-11-26 起在本機建置，**還沒部署**）：舊站本來就有的頁照搬舊站該語系原文（首頁、11 個系列頁、16 個照抄頁、6 張認證單頁、新聞 62＋影片 11 篇與列表），verify 逐字比封存。跟舊站不同的只有下面這些：
+  - 客戶指定改字同 en／zh 一起套：保固一律 5 年（FAQ 保固題、FAQ 與 RO-PLUS 的 description、LQCOL 新聞「3 年」）、認證總覽 WRAS 那格補「認證連結」按鈕（舊站這格有空的按鈕容器）。正文改字記在 `client-text-edits.json`；新句是 AI 譯（內容檔 `_note` 有寫、FAQ 的 `status` 改 `draft-ai`）。
+  - 阿拉伯文：黃老闆 2026-11-26 說溢康不懂阿拉伯文、舊站寫得對不對沒把握，請梵亞特別注意。梵亞看過主要頁（首頁、公司、產品結構、認證、FAQ、產品總覽、7 個系列頁），改了 16 處明顯錯誤：「vessel」譯成「船」、cut-in／cut-out 直譯成「切斷點／出口點」、「淋浴與浴缸」兩個都譯成「洗澡」、「在坐著的範圍內」、NSF 名稱前後不一、錯字與文法、MEGA 標題前多一個 T（「[16بار]」也補了空格成「[16 بار]」）。系列頁這 4 處（PUMPLUS、MEGA 的淋浴句、SOLAR 的「安全範圍」、MEGA 標題）系列頁不做逐字比對，所以沒進 `client-text-edits.json`，就記在這裡。都記在 `client-text-edits.json`（或系列頁內容檔 `_note`），是 AI 判斷、未經母語審稿。新聞 73 篇沒逐篇看。
+  - 舊站四語 WRAS 單頁放的是 ACS 證書與報告 4 張圖（舊站錯誤），新站換成 en／zh 那張 WRAS 證書；文字不變。
+  - 認證單頁舊站 title 是全站通用那句英文，新站用 Tiffany 2026-11-20 的英文 title／description 的 AI 譯（`status: draft-ai`）。
+  - LQCOL-PLUS 四語不用舊站（舊站四語還是 HVAC 舊內容），改用 `translation/lqcol-plus/LQCOL-PLUS.<lang>.md` 的 AI 初稿（`import-lqcol-langs.mjs` 會先確認 md 的英文＝目前 en.json），頁頂會出現「Draft translation, pending review.」。
+  - 首頁 h1＝title 去掉「AQUASKY - 」（同 en／zh）；首頁 slidesAlt、選擇工具圖 alt、隱藏的認證標題，以及介面文字裡舊站沒有的字（`src/i18n/<lang>.json` 的 `_note` 列了哪些）是 AI 譯。
+  - 樣式：舊站 es／fr／ru 每頁 `<style>` 有「選單 padding 5px、標題線換 pd-title-line-02.png」，ar 有「.lang_rtl、#footer-content、.about-top-title、.pd-btn-info-link 改 direction:rtl」，新站放進 `site.css`（用 `html[lang=…]`）。**阿拉伯文改成整頁由右到左**（黃老闆 2026-11-26 指示；舊站 `<html lang="ar">` 沒有 dir、只有那幾塊文字改方向）：`brand.json` 的 ar 是 `dir: rtl`，`site.css` 最後一段把 Bootstrap 3 的欄位浮動、選單、下拉、左右對齊對調；舊站那一行照留。
+  - 頁尾的公司中文名那行只有 zh 有（舊站四語頁尾沒有這行）；四語頁尾地址用英文、TEL／FAX 用英文（同舊站）。
+  - 舊站四語 FAQ 只有 16 題（en／zh 29 題），表格也是舊版；先照搬，等 Tiffany 的客製化說法到了再用目前 en 整頁重翻。四語 meta description 約 310 段超過 160 字，還沒縮。
+- AI 譯字怎麼標：整頁都是 AI 初稿的頁（LQCOL 四語）`status: draft-ai`，頁頂顯示黃色提示。照抄頁的主體是舊站已上線的原文，只有 title／description 或一兩句是 AI 譯的（四語 FAQ、四語認證單頁）也標 `draft-ai`，但**不顯示**頁頂提示——頁面上看到的幾乎全是舊站原文，掛「AI 初稿」會誤導；改了哪幾句寫在 `_note`，正文改字另記在 `client-text-edits.json`。只補了 alt、隱藏標題這類看不到的字的頁（四語首頁）維持 `approved-legacy`，`_note` 記哪些是 AI 譯。
+- 選單會把目前所在的頁反白（`li.active`），舊站沒有；en／zh 一開始就這樣做，四語沿用。
+- 加語系的匯入指令（只寫新語系的檔，en／zh 不動）：`import-legacy-page.mjs --langs es,fr,ru,ar`、`import-classic-series.mjs --langs …`、`import-news.mjs --langs …`、`import-home-langs.mjs`、`import-lqcol-langs.mjs`。在 Git Bash 跑記得先 `export MSYS_NO_PATHCONV=1`，不然 `/FAQ` 這種參數會被改成 Windows 路徑。**`import-news.mjs` 不加 `--langs` 會重寫 en／zh 全部新聞**（後來縮短的 meta 會被蓋回去）。
 - 首頁認證圖示的說明文字，**每個語系都一定要有**（黃老闆 2026-11-17 決定；`content.config.ts` 強制不可空白）。理由：對 SEO／AEO／GEO 有幫助——圖示是圖片、沒有 alt，機器讀不到圖裡的字；舊站 zh／es／fr／ru／ar 本來都有這排字，只有英文是空的，所以英文首頁內文原本完全沒有 CE、ISO 9001、UPC、KC、Lead-Free 這些字。英文說明由梵亞依中文說明＋圖示上的標章名稱寫（`src/content/home/en.json`），Tiffany 可改用字，但不問留不留（2026-11-17 她還沒看過這 8 句，en.json 的 `_note` 有標「新補、待審」）。做 es／fr／ru／ar 時直接用舊站該語系的原文。說明字較長，`site.css` 只在英文頁讓 `.ca_txt` 從固定 50px 改成至少 50px，手機兩欄時每列第一格清除浮動；中文頁不套，照舊站固定 50px。
 - 中文 LQCOL-PLUS 頁：Tiffany 2026-11-13 審過，`status` 改 `approved`，頁頂黃色「AI 初稿」提示拿掉。她改的字：特色三格標題（頂級桶身材質／EPDM 橡膠隔膜／氮氣預充氣壓）、結構圖三個標示、FAQ Q3、Q4。她寫的「不銹鋼」照全站慣例用「不鏽鋼」、「EPDM橡膠隔膜」照全站慣例在英中之間加空格。「氮氣預充氣壓」「可客製化氮氣預充氣壓」沒有 N₂，是禁譯詞的已知例外（`../translation/lqcol-plus/do-not-translate.md` 第 10 節）。`translation/lqcol-plus/LQCOL-PLUS.zh.md` 沒同步，網站以 zh.json 為準；`import-lqcol.mjs --force` 會蓋掉客戶的字。
 - 中文選單與產品列：MEGA-PLUS「16BAR高壓泵浦壓力桶」、GIGA-PLUS「25BAR高壓泵浦壓力桶」（舊站兩個都叫「高壓泵浦壓力桶」；Tiffany 2026-11-13 指定）。照抄頁裡寫死的產品列按鈕、產品總覽頁 h2、中文下載頁按鈕一起改；新聞內文不改。照抄頁這類「客戶指定改字」記在 `src/data/client-text-edits.json`（每筆寫來源），`npm run verify` 比對舊頁文字前先套用；清單外的差異照樣不通過。

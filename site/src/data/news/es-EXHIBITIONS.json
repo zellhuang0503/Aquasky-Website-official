@@ -1,0 +1,29 @@
+{
+  "id": "es-EXHIBITIONS",
+  "kind": "news",
+  "lang": "es",
+  "category": "EXHIBITIONS",
+  "path": "/news/EXHIBITIONS",
+  "perPage": 5,
+  "pageCount": 1,
+  "titleBand": "Exposiciones Comerciales",
+  "h4Recent": "NOTICIAS RECIENTES",
+  "h4Side": "ÚLTIMAS NOTICIAS",
+  "h4Detail": "NOTICIAS RECIENTES",
+  "moreLabel": "Aprende más...",
+  "backLabel": "REGRESAR",
+  "sidebar": [
+    {
+      "dateText": "April 14 2025",
+      "href": "/es/news-detail/EXHIBITIONS/ish-frankfurt-2025-soluciones-para-un-futuro-sostenible-aquasky-47",
+      "title": "ISH Frankfurt 2025: \"Soluciones para un Futuro Sostenible\" ｜Aquasky"
+    }
+  ],
+  "order": [
+    "ish-frankfurt-2025-soluciones-para-un-futuro-sostenible-aquasky-47"
+  ],
+  "seo": {
+    "title": "Exposiciones Internacionales de AQUASKY: Ferias Globales de Tratamiento de Agua",
+    "description": "Explore el calendario de exposiciones globales de AQUASKY. Visite nuestros stands en las principales ferias de agua como MCE Italia y Aquatech."
+  }
+}

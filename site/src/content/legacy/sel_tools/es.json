@@ -1,0 +1,33 @@
+{
+  "_note": "舊站 /es/sel_tools（español）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "legacy",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Calculadora Online de Tamaño de Tanques de Presión | AQUASKY",
+    "description": "Utilice la herramienta de selección en línea de AQUASKY para calcular el tamaño exacto del tanque de presión necesario para su bomba o sistema de ósmosis."
+  },
+  "h1": "HERRAMIENTAS DE SELECCIÓN",
+  "hasVisibleH1": true,
+  "legacyJsonLd": [
+    {
+      "@type": "WebPage",
+      "@id": "https://aquaskyplus.com/es/sel_tools#webpage",
+      "url": "https://aquaskyplus.com/es/sel_tools",
+      "name": "Calculadora Online de Tamaño de Tanques de Presión | AQUASKY",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://aquaskyplus.com/es/sel_tools#app",
+      "name": "AQUASKY Tank Sizing Calculator",
+      "url": "https://aquaskyplus.com/es/sel_tools",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+  ],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<h1 id=\"about-top-title\" class=\"h1-1\">HERRAMIENTAS DE SELECCIÓN</h1>\n\t<div id=\"select_tools\" class=\"container\">\n    \t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"st_txt_style1\">\n            \t<p class=\"lang_rtl\" style=\"text-align:justify;\">Con años de experiencia y un excelente servicio al cliente, Aquasky cuenta con una amplia experiencia en el dimensionamiento de su sistema. Nuestros ingenieros de diseño, minoristas y técnicos brindan el apoyo que puedan necesitar al calcular fórmulas y evaluar datos técnicos. Una herramienta que hace lo difícil simple. Esta herramienta es rápida y precisa para encontrar la mejor solución cuando se trata de dimensionar los productos Aquasky Plus. Con un simple clic en la información de presión, obtendrá el tamaño óptimo del tanque de presión para su sistema.</p>\n            </div>\n\t\t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\"></div>\n            \t<div class=\"col-sm-4\">\n                \t<div class=\"step_style-1\"><p>System</p></div>\n                </div>\n                <div class=\"col-sm-4\"></div>\n            </div>\n            <div class=\"service_spacing-2\"></div>\n\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/es/sel_unit_ps\"><p>Pressure Switch</p></a></p></div>\n                </div>\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/es/sel_unit_vsd\"><p>VSD(VFD)</p></a></p></div>\n                </div>\n                <div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/es/sel_unit_thermal\"><p>Thermal<br>Expansion Tank</p></a></p></div>\n                </div>\n            </div>\n\n        <div class=\"service_spacing-2\"></div>\n\t</div>\n</div>"
+}

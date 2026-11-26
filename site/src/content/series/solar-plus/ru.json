@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ru/SOLAR-PLUS（русский）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/solar-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "ru",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Solar-Plus Расширительный бак для гелиосистем | Высокотемпературный бак | AQUASKY",
+    "description": "Расширительные баки AQUASKY Solar-Plus оснащены мембранами повышенной термостойкости для компенсации расширения теплоносителя в солнечных коллекторах."
+  },
+  "h1": "Solar-Plus Расширительный бак для гелиосистем | Высокотемпературный бак | AQUASKY",
+  "about": {
+    "heading": "БАКЕ ПОД ДАВЛЕНИЕМ SOLAR-PLUS",
+    "body": "Как и в любой закрытой системе, в которой меняется температура жидкости, солнечная установка также требует расширительного бака. Расширительный бак Solar-plus играет важную роль в этом отношении, когда дело доходит до поддержания давления. Давление не должно стать слишком высоким, когда циркуляция в коллекторе останавливается, но и не слишком низким, когда на улице температура ниже точки замерзания. Среда в солнечной установке в основном является смесью воды и гликоля, имеющих высокий коэффициент расширения. Бак для расширения Solar-Plus может предвидеть такие колебания температуры и поддерживает давление системы в заданном диапазоне."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20231114_SolarPlus-DM-Ru_231105-1.jpg",
+      "alt": "SOLAR-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20231114_SolarPlus-DM-Ru_231105-2.jpg",
+      "alt": "SOLAR-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20231114_SolarPlus-DM-Ru_231105-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20231114_SolarPlus-DM-Ru_231105-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

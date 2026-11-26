@@ -1,0 +1,56 @@
+{
+  "_note": "首頁 ru。title、description、產品系列與選擇工具標題、按鈕字樣（\\n＝舊站 <br>）、8 個認證說明一字不差沿用 2026-10-22 封存的舊站 /ru 首頁（ISO 那句的「//」是舊站原文）；h1＝title 去掉「AQUASKY - 」（同 en／zh 做法）。slidesAlt、selectionTools.alt、certifications.heading 舊站沒有，2026-11-26 AI 譯，未經審稿。",
+  "lang": "ru",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "AQUASKY - Мировой лидер в производстве мембранных баков и гидроаккумуляторов",
+    "description": "Основанная в 1998 году, компания AQUASKY является мировым лидером в производстве мембранных напорных баков. Продукция сертифицирована NSF и заправлена 100% азотом."
+  },
+  "h1": "Мировой лидер в производстве мембранных баков и гидроаккумуляторов",
+  "companyName": "",
+  "productLineHeading": "ЛИНЕЙКА ПРОДУКТОВ",
+  "selectionTools": {
+    "heading": "ИНСТРУМЕНТЫ ВЫБОРА",
+    "cta": "ПРОВЕРКА С ПОМОЩЬЮ\nИНСТРУМЕНТА ВЫБОРА",
+    "image": "/images/selection-tools_ru.png",
+    "alt": "Онлайн-инструменты выбора напорных баков AQUASKY"
+  },
+  "slidesAlt": "Завод AQUASKY и производство напорных баков",
+  "certifications": {
+    "heading": "Сертификаты и технологии",
+    "items": [
+      {
+        "icon": "/images/home-service/s2-img-01.png",
+        "label": "Европейское соответствие"
+      },
+      {
+        "icon": "/images/home-service/s2-img-02.png",
+        "label": "Сертификат ISO 9001//Евросерт"
+      },
+      {
+        "icon": "/images/home-service/s2-img-03.png",
+        "label": "сертификация без содержания свинца"
+      },
+      {
+        "icon": "/images/home-service/s2-img-04.png",
+        "label": "UPC Единый сантехнический кодекс"
+      },
+      {
+        "icon": "/images/home-service/s2-img-05.png",
+        "label": "NSF Национальный фонд санитарии 58"
+      },
+      {
+        "icon": "/images/home-service/N2.png",
+        "label": "Заполнение азотом"
+      },
+      {
+        "icon": "/images/home-service/unnamed2.png",
+        "label": "Сертификация Корея KC метки"
+      },
+      {
+        "icon": "/images/home-service/s2-img-08.png",
+        "label": "Защита от ржавчины"
+      }
+    ]
+  }
+}

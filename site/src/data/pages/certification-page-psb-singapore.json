@@ -17,13 +17,18 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/upfile/Files/20220802Singapore%20PSB%20certification.pdf",
     "/upfile/Images/CERTIFICATION/20220802Singapore%20PSB%20certification.jpg",
     "/js/owl/owl.carousel.css",
-    "/js/owl/owl.theme.css"
+    "/js/owl/owl.theme.css",
+    "/images/pd-title-line-02.png"
   ],
   "dataQuestions": []
 }

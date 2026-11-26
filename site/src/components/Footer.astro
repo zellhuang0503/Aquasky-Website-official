@@ -11,7 +11,7 @@ const d = t(lang);
     <div id="footer-content">
       <p><img alt={brand.brand} class="img-responsive center-block" src={brand.footerLogo} width="200" height="60" loading="lazy" /></p>
       <p>www.aquaskyplus.com</p>
-      {lang !== 'en' && <p>{pick(brand.legalName, lang)}</p>}
+      {lang === 'zh' && <p>{pick(brand.legalName, lang)}</p>}
       <p>{pick(brand.address, lang)}</p>
       <p>{d.common.tel} {brand.tel} / {d.common.fax} {brand.fax}</p>
       <p>

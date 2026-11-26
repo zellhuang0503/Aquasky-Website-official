@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /es/PREMIUM-PLUS（español）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/premium-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Premium-Plus Tanque de Presión de Acero Inoxidable | Anticorrosión | AQUASKY",
+    "description": "AQUASKY Premium-Plus cuenta con carcasas de acero inoxidable 304/316 de primera calidad para una resistencia superior a la corrosión. Ideal para aplicaciones marinas."
+  },
+  "h1": "Premium-Plus Tanque de Presión de Acero Inoxidable | Anticorrosión | AQUASKY",
+  "about": {
+    "heading": "PREMIUM-PLUS Tanque de presión de acero inoxidable.",
+    "body": "Los tanques de presión de la serie PREMIUM-PLUS están fabricados con acero inoxidable de alta calidad 304. La superficie de cada tanque PREMIUM-PLUS está pulida como un espejo. El tanque es perfecto para aplicaciones especiales y entornos exigentes, como equipos de alimentos, bebidas y almacenamiento de agua de mar en yates. El tanque de presión antióxido es perfecto para usuarios premium."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/20231013_Premium-Plus-DM_ES_231006-1.jpg",
+      "alt": "PREMIUM-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/20231013_Premium-Plus-DM_ES_231006-2.jpg",
+      "alt": "PREMIUM-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/PREMIUM-PLUS/20231013_Premium-Plus-DM_ES_231006-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/PREMIUM-PLUS/20231013_Premium-Plus-DM_ES_231006-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

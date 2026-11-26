@@ -4,6 +4,7 @@
 //   src/data/news/common.json             列表頁與明細頁的舊站 <style>（新聞與影片共用同一份，匯入時會驗證相同）
 //   src/content/news/<lang>/<CAT>/<slug>.json  每篇：日期字樣、標題、封面、摘要 HTML、正文 HTML、SEO、舊站 NewsArticle／Article／VideoObject、用到的圖
 // 用法（site/）：node scripts/import-news.mjs [--force]
+//   加語系：node scripts/import-news.mjs --langs es,fr,ru,ar [--force] —— 只寫該語系的列表與文章，en／zh 與 common.json 不動（common.json 只拿來比對）
 // 原則：文字照抄，不改字；只做舊站 JS 在瀏覽器裡本來就會做的事（去掉圖片 inline 寬高＋加 img-responsive、還原 Cloudflare email 混淆）。
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -14,7 +15,12 @@ const root = resolve(here, '..');
 const archive = resolve(root, '..', 'migration-2026-10-22');
 const ORIGIN = 'https://aquaskyplus.com';
 const force = process.argv.includes('--force');
-const LANGS = ['en', 'zh'];
+const langsArg = process.argv.find((a) => a.startsWith('--langs'));
+const ADD_LANGS = langsArg ? (langsArg.includes('=') ? langsArg.split('=')[1] : process.argv[process.argv.indexOf(langsArg) + 1]).split(',') : null;
+if (ADD_LANGS && ADD_LANGS.some((l) => !['es', 'fr', 'ru', 'ar'].includes(l))) throw new Error(`--langs only takes es,fr,ru,ar: ${ADD_LANGS}`);
+const LANGS = ADD_LANGS ?? ['en', 'zh'];
+// 舊站每頁 <style> 第一行是選單 padding，es／fr／ru 另加標題線、ar 另加 direction:rtl（全站一樣，新站放 site.css）；比對 <style> 時拿掉這一段
+const normStyle = (s) => s.replace(/^\.nav > li > a \{[^}]*\}\s*(\.pd_title_line \{[^}]*\}|\.lang_rtl,#footer-content,\.about-top-title,\.pd-btn-info-link \{direction:rtl;\})?\s*/, '');
 // 種類：列表網址與明細網址的規則
 const KINDS = [
   { kind: 'news', cats: ['EXHIBITIONS', 'INDUSTRY'], listPath: (c) => `/news/${c}`, detailPrefix: (c) => `/news-detail/${c}/` },
@@ -102,7 +108,7 @@ const innerOfDiv = (html, openTag, where) => {
 
 const assetsOf = (html) => [...new Set([...html.matchAll(/<img[^>]+src="(\/[^"]+)"/g)].map((m) => m[1]))];
 
-const common = { listCss: null, detailCss: null };
+const common = ADD_LANGS ? JSON.parse(readFileSync(join(root, 'src', 'data', 'news', 'common.json'), 'utf8')) : { listCss: null, detailCss: null };
 let articles = 0, lists = 0;
 for (const lang of LANGS) {
   for (const K of KINDS) for (const cat of K.cats) {
@@ -124,7 +130,7 @@ for (const lang of LANGS) {
     if (sidebar.length < 1 || sidebar.length > 5) throw new Error(`/${lang}${base}: sidebar has ${sidebar.length} items`);   // 舊站最多 5 篇；zh 展覽訊息只有 1 篇
     const meta = headMeta(first.head);
     if (common.listCss === null) common.listCss = meta.style;
-    else if (common.listCss !== meta.style) throw new Error(`/${lang}${base}: list <style> differs from the first list page`);
+    else if (normStyle(common.listCss) !== normStyle(meta.style)) throw new Error(`/${lang}${base}: list <style> differs from the first list page`);
 
     const order = [];
     const listItems = new Map();   // slug → 列表上的資料（日期、封面、摘要）
@@ -168,7 +174,7 @@ for (const lang of LANGS) {
       const li = listItems.get(slug);
       const dm = headMeta(p.head);
       if (common.detailCss === null) common.detailCss = dm.style;
-      else if (common.detailCss !== dm.style) throw new Error(`/${lang}${path}: detail <style> differs`);
+      else if (normStyle(common.detailCss) !== normStyle(dm.style)) throw new Error(`/${lang}${path}: detail <style> differs`);
       const head = p.body.match(/<div class="row news-title-border">([\s\S]*?)<\/div>\s*<div id="ImgAutoResponsive"/);
       if (!head) throw new Error(`/${lang}${path}: title block not found`);
       const dateText = head[1].match(/news-time-style-1">([^<]*)<\/div>/)[1];
@@ -213,5 +219,5 @@ for (const lang of LANGS) {
     console.log(`${lang} ${K.kind} ${cat}: ${pageCount} list page(s), ${order.length} articles`);
   }
 }
-writeFileSync(join(root, 'src', 'data', 'news', 'common.json'), JSON.stringify(common, null, 2) + '\n');
+if (!ADD_LANGS) writeFileSync(join(root, 'src', 'data', 'news', 'common.json'), JSON.stringify(common, null, 2) + '\n');
 console.log(`wrote ${lists} lists, ${articles} articles, common.json`);

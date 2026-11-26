@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /fr/MEGA-PLUS（français）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/mega-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Mega-Plus Réservoir Haute Pression 16 Bar | Surpresseur Commercial | AQUASKY",
+    "description": "Le réservoir AQUASKY Mega-Plus es un ballon à diaphragme haute performance de 16 bars (230 PSI) conçu pour les immeubles de grande hauteur et les surpresseurs."
+  },
+  "h1": "Mega-Plus Réservoir Haute Pression 16 Bar | Surpresseur Commercial | AQUASKY",
+  "about": {
+    "heading": "Réservoir à pression MEGA-PLUS",
+    "body": "Le réservoir à pression Mega-Plus est un élément essentiel d'un système d'eau sous pression qui fournit une pression d'eau à un niveau défini. Le réservoir stocke l'eau supplémentaire entre le diaphragme et le revêtement, et la chambre à air sous pression est capable de créer un cycle d'approvisionnement. Ce processus réduit le nombre de fois que le moteur doit démarrer pour que la pression du système reste au niveau défini. La tension du diaphragme maintient la pression de l'eau dans le système, assurant le bon fonctionnement du lave-vaisselle et de la machine à laver, et un débit robuste pour la douche et le bain. Mega-Plus offre une solution à haute pression d'eau pour les bâtiments de grande hauteur et le soutien à la pression à longue distance. Assurant que le système d'eau fonctionne de manière efficace et économe en énergie, sans entretien."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/MEGA/20231102_AQUASKY_MEGA-Plus-DM-Fr_231025-1.jpg",
+      "alt": "MEGA-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/MEGA/20231102_AQUASKY_MEGA-Plus-DM-Fr_231025-2.jpg",
+      "alt": "MEGA-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/MEGA/20231102_AQUASKY_MEGA-Plus-DM-Fr_231025-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p>&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/MEGA/20231102_AQUASKY_MEGA-Plus-DM-Fr_231025-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

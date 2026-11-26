@@ -1,0 +1,64 @@
+{
+  "_note": "舊站 /es/dl-ce（español）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "legacy",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Tanque de Membrana Grande Serie DL | Certificación CE | AQUASKY",
+    "description": "Tanques de membrana de gran capacidad serie DL de AQUASKY. Con certificación CE y diseño multifuncional para grandes demandas comerciales e industriales."
+  },
+  "h1": "Tanque de Membrana Grande Serie DL | Certificación CE | AQUASKY",
+  "hasVisibleH1": true,
+  "subtitle": "TANQUE MULTIFUNCIONAL CON VEJIGA REEMPLAZABLE",
+  "legacyJsonLd": [
+    {
+      "@type": "Product",
+      "@id": "https://aquaskyplus.com/es/dl-ce#product",
+      "name": "Tanque de Membrana Grande Serie DL",
+      "image": "https://aquaskyplus.com/upfile/Images/logo.png",
+      "description": "Tanques de presión de gran capacidad con certificación CE y membrana de recambio para distribución municipal de agua y sistemas de climatización.",
+      "brand": {
+        "@type": "Brand",
+        "name": "AQUASKY"
+      },
+      "category": "Tanques de Membrana de Gran Capacidad",
+      "model": "DL-CE",
+      "manufacturer": {
+        "@id": "https://aquaskyplus.com/#organization"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Maximum Pressure",
+          "value": "10 Bar / 16 Bar (150 / 230 PSI)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Maximum Operating Temperature",
+          "value": "90°C (194°F)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Pre-charge Gas",
+          "value": "100% Stable Nitrogen (N2)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Certification",
+          "value": "NSF/ANSI 372, NSF/ANSI 61, CE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Warranty",
+          "value": "5 Years"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Materials",
+          "value": "Replaceable bladder design with high-quality rubber"
+        }
+      ]
+    }
+  ],
+  "bodyHtml": "<div class=\"h1-custom-style\"><h1>Tanque de Membrana Grande Serie DL | Certificación CE | AQUASKY</h1></div><div id=\"pd-container-01\" class=\"container-fluid\">\n\t<div class=\"container\">\n        <div class=\"pd-aquasky-text\"><div class=\"h1-1\"><img src=\"/images/products/ELBI/ELBI_logo.png\" class=\"img-responsive pull-right\" alt=\"PUMPLUS Pressure Tank\"></div></div>\n        <h2 class=\"h2_2hline lang_rtl\">TANQUE MULTIFUNCIONAL CON VEJIGA REEMPLAZABLE</h2>\n\t    <div class=\"pd-about-text txt-align-justify lang_rtl\">Las cisternas de la serie DL con vejiga reemplazable representan una alternativa efectiva para su instalación en plantas con alto contenido de agua, que convencionalmente nos hacía usar tanques tradicionales sin ninguna vejiga o instalar una serie de tanques más pequeños. Por lo tanto, la instalación de tanques DL permite un considerable ahorro en costos de instalación y mantenimiento.\r\nLa serie DL está equipada con una vejiga diseñada exclusivamente que funciona sin estrés mecánico, incluso en condiciones de alta presión o una fuga en el cojín de aire, garantizando así una vida útil de la vejiga casi ilimitada.</div>\n\n        <div id=\"ImgAutoResponsive\" class=\"lang_rtl\">\n            <p style=\"text-align: center;\"><img alt=\"\" class=\"img-responsive center-block\" src=\"/upfile/Images/ELBI/20231013_ELBI_DL-CE_ASME-Tank-DM_ES_231006-1.jpg\"></p>        </div>\n    </div>\n\t<div id=\"pd-more-info\" class=\"container\">\n\t\t<h2 class=\"h2_2hline h2_2hline_margin lang_rtl\">GAMA DE PRODUCTOS</h2>\n\n<div id=\"other_pd_line\" class=\"container\">\n  <div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n\t<img src=\"/images/products_line/pdg-plus2.webp\" class=\"img-responsive center-block\" alt=\"PUMPLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/PUMPLUS\" class=\"btn btn-link2\">PUMPLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-mega2-2022.webp\" class=\"img-responsive center-block\" alt=\"MEGA-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/MEGA-PLUS\" class=\"btn btn-link2\">MEGA-PLUS</a>\n    </div>\n  </div>\n</div>\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-thermal2.webp\" class=\"img-responsive center-block\" alt=\"THERMAL-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/THERMAL-PLUS\" class=\"btn btn-link2\">THERMAL-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-rot2.webp\" class=\"img-responsive center-block\" alt=\"RO-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/RO-PLUS\" class=\"btn btn-link2\">RO-PLUS</a>\n    </div>\n  </div>\n</div>\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-hydro2.webp\" class=\"img-responsive center-block\" alt=\"HYDRO-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/HYDRO-PLUS\" class=\"btn btn-link2\">HYDRO-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/pdg-solar2.webp\" class=\"img-responsive center-block\" alt=\"SOLAR-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/SOLAR-PLUS\" class=\"btn btn-link2\">SOLAR-PLUS</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n  \t<img src=\"/images/products_line/pdg-premiumplus.webp\" class=\"img-responsive center-block\" alt=\"PREMIUM-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/PREMIUM-PLUS\" class=\"btn btn-link2\">PREMIUM-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/LQCOLPLUS_pdlline1.webp\" class=\"img-responsive center-block\" alt=\"LQCOL-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/LQCOL-PLUS\" class=\"btn btn-link2\">LQCOL-PLUS</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/WEB_PRODUCT_LINE_GIGAPLUS.webp\" class=\"img-responsive center-block\" alt=\"GIGA-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/GIGA-PLUS\" class=\"btn btn-link2\">GIGA-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/Elbi_B2022.webp\" class=\"img-responsive center-block\" alt=\"LARGE SIZE DL TANK\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/dl-ce\" class=\"btn btn-link2\" style=\"margin-bottom:5px;\">DEPÓSITO DE <br>GRAN TAMAÑO DL</a> <a href=\"/es/asme-ht\" class=\"btn btn-link2\" style=\"margin-bottom:5px;\">TANQUE ASME</a>\n    </div>\n  </div>\n</div>\n\n<div class=\"row padding_top_40\">\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/SupremePlus_2023B.webp\" class=\"img-responsive center-block\" alt=\"SUPREME-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/supreme\" class=\"btn btn-link2\">SUPREME-PLUS</a>\n    </div>\n  </div>\n  <div class=\"col-lg-6 col-md-6 col-sm-6\">\n    <img src=\"/images/products_line/accessories3.webp\" class=\"img-responsive center-block\" alt=\"ACCESSORIES-PLUS\" loading=\"lazy\">\n    <div class=\"pd-btn-info-link\">\n    \t<a href=\"/es/accessories\" class=\"btn btn-link2\">ACCESORIOS-PLUS</a>\n    </div>\n  </div>\n</div>\n\n\t<div class=\"pd-spacing-01\"></div>\n</div>\t</div>\n\n</div>"
+}

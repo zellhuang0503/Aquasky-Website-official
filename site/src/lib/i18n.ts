@@ -2,11 +2,15 @@
 import brand from '../data/brand.json';
 import en from '../i18n/en.json';
 import zh from '../i18n/zh.json';
+import es from '../i18n/es.json';
+import fr from '../i18n/fr.json';
+import ru from '../i18n/ru.json';
+import ar from '../i18n/ar.json';
 
 export type Lang = 'en' | 'zh' | 'es' | 'fr' | 'ru' | 'ar';
 export type Dict = typeof en;
 
-const dicts: Partial<Record<Lang, Dict>> = { en, zh: zh as Dict };
+const dicts: Partial<Record<Lang, Dict>> = { en, zh: zh as Dict, es: es as Dict, fr: fr as Dict, ru: ru as Dict, ar: ar as Dict };
 
 export const languages = brand.languages as { code: Lang; label: string; htmlLang: string; dir: 'ltr' | 'rtl'; live: boolean }[];
 /** 這一版有建置的語系（brand.json 裡 live: true）。加語系＝補 i18n/<lang>.json、內容檔，再把 live 改 true。 */

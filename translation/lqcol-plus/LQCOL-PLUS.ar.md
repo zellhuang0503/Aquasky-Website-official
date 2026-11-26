@@ -4,16 +4,16 @@
 格式：每個區塊 `### B編號 · 元素`，`EN:` 是英文原文，`AR:` 是譯文。審稿只改 `AR:` 那一行；數字、型號、單位、品牌一律原樣保留（見 do-not-translate.md）。數字一律用西方阿拉伯數字 0-9，小數點保留 `.`。
 排版：本檔是純文字；正式上線時阿拉伯文容器要設 `dir="rtl"`，並另外檢查含拉丁字母與數字的句子（型號、單位、縮寫）在 RTL 下的顯示順序。
 檢查：`python translation/lqcol-plus/check_lqcol.py`。
-B01／B02 是舊站既有的標題與描述，照舊保留，未重翻。規格表的數字列不在此檔，只翻欄位標題。
+B01／B02 是 Tiffany 2026-11-20 改的英文搜尋標題／描述（液冷版），2026-11-26 AI 重翻（舊站 HVAC 版作廢）。規格表的數字列不在此檔，只翻欄位標題。
 للمراجع: يُرجى تعديل سطر `AR:` فقط في كل فقرة. احتفظ بالأرقام وأرقام الطرازات والوحدات والاختصارات وأسماء العلامات التجارية كما هي في النص الإنجليزي.
 
 ### B01 · title
-EN: LQCOL-Plus Liquid Cold Expansion Tank | Chilled Water Expansion Vessel | AQUASKY
-AR: LQCOL-Plus خزان التمدد للمياه الباردة وأنظمة التبريد | AQUASKY
+EN: LQCOL-Plus Liquid Cold System Expansion Tank | Data Center Liquid Cooling | AQUASKY
+AR: LQCOL-Plus خزان تمدد لأنظمة التبريد السائل | مراكز البيانات | AQUASKY
 
 ### B02 · meta
-EN: AQUASKY LQCOL-Plus is optimized for chilled water and liquid cooling systems, accommodating water volume changes in commercial HVAC and refrigeration loops.
-AR: تم تحسين خزان AQUASKY LQCOL-Plus لأنظمة المياه المبردة وتبريد السوائل، مما يستوعب تغيرات حجم المياه في أنظمة التكييف والتهوية التجارية.
+EN: AQUASKY LQCOL-Plus expansion tank for data center liquid cooling and CDU loops absorbs coolant volume changes and stabilizes pressure for AI/HPC servers.
+AR: خزان التمدد AQUASKY LQCOL-Plus لأنظمة التبريد السائل ودوائر CDU في مراكز البيانات: يستوعب تغيرات حجم سائل التبريد ويثبّت الضغط لخوادم AI/HPC.
 
 ### B03 · h1
 EN: LIQUID COLD SYSTEM EXPANSION TANK

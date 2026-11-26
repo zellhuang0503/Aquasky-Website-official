@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /es/SOLAR-PLUS（español）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/solar-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Solar-Plus Tanque de Expansión para Sistemas Solares Térmicos | AQUASKY",
+    "description": "Los tanques AQUASKY Solar-Plus están diseñados con diafragmas resistentes a altas temperaturas para absorber la expansión en sistemas solares térmicos."
+  },
+  "h1": "Solar-Plus Tanque de Expansión para Sistemas Solares Térmicos | AQUASKY",
+  "about": {
+    "heading": "Tanque de presión SOLAR-PLUS",
+    "body": "Al igual que cualquier sistema cerrado en el que cambia la temperatura de un líquido, una instalación solar también necesita un depósito de expansión. El depósito de expansión Solar-plus juega un papel importante en este sentido cuando se trata de mantener la presión. La presión no debe aumentar demasiado cuando la circulación en el colector se detiene, pero tampoco debe ser demasiado baja cuando la temperatura exterior está por debajo del punto de congelación. El medio en una instalación solar es principalmente una mezcla de agua y glicol, que tiene un alto coeficiente de expansión. El tanque de expansión Solar-Plus puede anticipar tales fluctuaciones de temperatura y mantener la presión del sistema en un rango óptimo."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20231013_SolarPlus-DM_ES_231005-1.jpg",
+      "alt": "SOLAR-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20231013_SolarPlus-DM_ES_231005-2.jpg",
+      "alt": "SOLAR-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20231013_SolarPlus-DM_ES_231005-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20231013_SolarPlus-DM_ES_231005-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

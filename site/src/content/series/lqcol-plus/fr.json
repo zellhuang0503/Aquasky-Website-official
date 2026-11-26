@@ -1,0 +1,173 @@
+{
+  "_note": "LQCOL-PLUS français。來源：translation/lqcol-plus/LQCOL-PLUS.fr.md（梵亞 AI 初稿，未經母語審稿；英文對照已確認＝目前 en.json）。舊站 /fr/LQCOL-PLUS 是舊版（HVAC）內容，不沿用。結構圖三句固定標示與兩個 alt 是 2026-11-26 AI 譯。數字、型號、單位不要改，規格數字在 src/data/products/lqcol-plus.json。",
+  "template": "lqcol",
+  "lang": "fr",
+  "status": "draft-ai",
+  "seo": {
+    "title": "LQCOL-Plus Vase d’Expansion pour Refroidissement Liquide | Data Centers | AQUASKY",
+    "description": "Vase d’expansion AQUASKY LQCOL-Plus pour refroidissement liquide et boucles CDU : absorbe les variations de volume et stabilise la pression des serveurs AI/HPC."
+  },
+  "h1": "VASE D'EXPANSION POUR SYSTÈMES DE REFROIDISSEMENT LIQUIDE",
+  "about": {
+    "heading": "À propos du VASE D'EXPANSION POUR SYSTÈMES DE REFROIDISSEMENT LIQUIDE - LQCOL PLUS",
+    "body": "Le vase d'expansion LQCOL PLUS pour systèmes de refroidissement liquide est conçu spécifiquement pour les systèmes de refroidissement liquide et les boucles secondaires (CDU) des centres de données. Il absorbe efficacement les variations de volume du liquide de refroidissement causées par les fortes fluctuations de température lors des charges de calcul AI et HPC à haute densité. Grâce à l'absorption dynamique de l'expansion et à la compensation de pression, il prévient les pics de pression excessifs, protège les raccords rapides (QDs) et les plaques froides, et préserve les composants critiques des serveurs contre les fuites."
+  },
+  "features": {
+    "heading": "Caractéristiques et avantages clés",
+    "groups": [
+      {
+        "label": "Matériaux d'enveloppe haut de gamme",
+        "items": [
+          {
+            "lead": "Tout inox",
+            "text": "enveloppe en SUS304 électropolie garantissant zéro corrosion et une pureté parfaite du fluide."
+          },
+          {
+            "lead": "Acier au carbone revêtu",
+            "text": "acier au carbone renforcé avec peinture triple qualité pour une durabilité extérieure supérieure."
+          },
+          {
+            "lead": "Raccord en inox 304",
+            "text": "le raccordement 3/4″ G/NPT/BSP empêche la rouille aux jonctions du système."
+          }
+        ]
+      },
+      {
+        "label": "Caoutchouc EPDM",
+        "items": [
+          {
+            "lead": "Compatibilité 100% PG25",
+            "text": "aucun gonflement du caoutchouc, aucune migration de plastifiant ni contamination du fluide."
+          },
+          {
+            "lead": "Haute température et faible perméabilité",
+            "text": "fonctionnement continu jusqu'à 90°C (194°F) et prévention des bouchons de vapeur."
+          }
+        ]
+      },
+      {
+        "label": "Précharge d'azote (N₂)",
+        "items": [
+          {
+            "lead": "Coussin de N₂ stable (2 bar / 30 psi)",
+            "text": "empêche la dérive de pression due aux variations de température ambiante."
+          },
+          {
+            "lead": "Plus de 10 ans sans entretien",
+            "text": "la chambre sans oxygène stoppe l'oxydation interne pour une longue durée de vie."
+          }
+        ]
+      }
+    ]
+  },
+  "structure": {
+    "alt": "Schéma de structure LQCOL PLUS",
+    "labels": [
+      "Technologie brevetée\nanti-fuite avec raccord\nen acier inoxydable 304\nsoudé.",
+      "Matériaux d'enveloppe haut de gamme\nAcier au carbone revêtu",
+      "Matériaux d'enveloppe haut de gamme\nTout inox",
+      "Caoutchouc EPDM",
+      "Précharge d’azote (N₂)\npersonnalisable",
+      "Capot de valve breveté\navec bouchon étanche\nà joint torique (O-ring)."
+    ]
+  },
+  "applications": {
+    "heading": "Applications",
+    "alt": "Applications LQCOL PLUS",
+    "items": [
+      {
+        "lead": "Centres de données AI et HPC",
+        "text": "baies de serveurs haute densité (>100 kW TDP) exigeant une fiabilité extrême du refroidissement liquide."
+      },
+      {
+        "lead": "Boucles secondaires CDU",
+        "text": "compensation de pression en boucle fermée entre les CDU et les plaques froides des serveurs."
+      },
+      {
+        "lead": "Refroidissement direct sur puce et par immersion",
+        "text": "boucles de refroidissement de précision exigeant zéro micro-fuite et un flux de liquide de refroidissement pur."
+      },
+      {
+        "lead": "Adapté aux CDU In-Rack comme In-Row",
+        "text": "conceptions compactes (3L+) pour les baies de serveurs à l'espace limité et réservoirs grand volume (24L / 60L) pour le refroidissement au niveau de la baie et de la rangée."
+      },
+      {
+        "lead": "Infrastructures hyperscale",
+        "text": "conçu selon les normes « zéro point de défaillance unique » (ZSPOF)."
+      }
+    ]
+  },
+  "specs": {
+    "heading": "Spécifications du produit",
+    "tableTitle": "VASE D'EXPANSION POUR SYSTÈMES DE REFROIDISSEMENT LIQUIDE - LQCOL PLUS",
+    "captionCarbon": "ACIER AU CARBONE LAMINÉ À FROID",
+    "captionStainless": "ACIER INOXYDABLE",
+    "columns": {
+      "model": "Numéro de modèle",
+      "volume": "Volume total du réservoir",
+      "diameter": "Diamètre",
+      "height": "Hauteur",
+      "boxLength": "Longueur du carton",
+      "boxWidth": "Largeur du carton",
+      "boxHeight": "Hauteur du carton",
+      "netWeight": "Poids net",
+      "grossWeight": "Poids brut",
+      "shippingVolume": "Volume d'expédition",
+      "connection": "Raccordement"
+    },
+    "props": {
+      "shell": "Enveloppe",
+      "shellValue": "Acier au carbone laminé à froid / Acier inoxydable",
+      "systemConnection": "Raccordement au système",
+      "systemConnectionValue": "Raccord en acier inoxydable 304",
+      "coating": "Revêtement",
+      "coatingValue": "Peinture triple qualité",
+      "diaphragm": "Diaphragme",
+      "diaphragmValue": "Caoutchouc EPDM",
+      "factoryPrecharge": "Précharge en usine",
+      "maxWorkingTemp": "Température de fonctionnement max.",
+      "maxWorkingTempCarbon": "Acier au carbone laminé à froid : 90°C / 194°F",
+      "maxWorkingTempStainless": "Acier inoxydable : 120°C / 248°F",
+      "maxWorkingPressure": "Pression de fonctionnement max."
+    }
+  },
+  "faq": {
+    "heading": "FAQ",
+    "items": [
+      {
+        "q": "Pourquoi le vase d'expansion LQCOL PLUS est-il essentiel au refroidissement liquide des centres de données AI ?",
+        "a": "Lorsque les serveurs AI haute puissance dépassent 100 kW par baie, les fortes variations de température font se dilater et se contracter le liquide de refroidissement. Le LQCOL PLUS absorbe cette expansion, prévient les pics de pression, élimine la cavitation des pompes et protège les raccords rapides et les plaques froides contre les fuites."
+      },
+      {
+        "q": "Le réservoir est-il compatible avec le propylène glycol à 25% (PG25) ou l'eau pure ?",
+        "a": "Oui. Notre diaphragme en EPDM vulcanisé au peroxyde est spécialement formulé pour le propylène glycol à 25% (PG25) et l'eau déionisée. Il résiste au gonflement, au durcissement du caoutchouc et à la migration des plastifiants, garantissant durablement la pureté et la conductivité du fluide."
+      },
+      {
+        "q": "Quelle est la différence entre les modèles tout inox et acier au carbone revêtu ?",
+        "a": "Le modèle tout inox (SUS304/316L) est conçu pour les boucles de fluide haute pureté, avec des parois intérieures électropolies. Le modèle en acier au carbone possède une enveloppe renforcée en acier au carbone laminé à froid avec un revêtement protecteur triple qualité offrant une excellente résistance à la corrosion extérieure. Les deux sont équipés d'un raccord en inox 304."
+      },
+      {
+        "q": "Pourquoi la précharge d'usine à l'azote (N₂) haute pureté est-elle supérieure à l'air comprimé ?",
+        "a": "La charge d'usine d'azote sec à 99.9% à 2 bar (30 psi) élimine l'humidité et l'oxygène internes. Elle stoppe l'oxydation interne et empêche la dérive de pression due aux variations de température ambiante, pour une durée de vie de plus de 10 ans sans entretien."
+      },
+      {
+        "q": "Comment le vase d'expansion empêche-t-il la cavitation des pompes dans les boucles secondaires ?",
+        "a": "Lorsque le liquide de refroidissement se contracte à la suite d'une chute brutale de la charge des serveurs, un vide localisé peut apparaître. Le réservoir fournit une pression positive dynamique continue qui maintient stable la pression d'aspiration de la pompe, supprime l'implosion des bulles de vapeur et réduit le bruit de la pompe ainsi que l'usure de la roue."
+      },
+      {
+        "q": "La pression de précharge d'usine peut-elle être ajustée selon les exigences du système ?",
+        "a": "Oui. Bien que préchargé en usine à 2 bar (30 PSI) avec de l'azote haute pureté, la pression de précharge peut être ajustée finement via la valve d'air supérieure avant l'installation, afin de correspondre à la pression minimale de fonctionnement de votre boucle."
+      },
+      {
+        "q": "Comment le réservoir protège-t-il les plaques froides de précision des serveurs contre l'obstruction ou les fuites ?",
+        "a": "Le corps en acier inoxydable électropoli ou l'enveloppe à triple revêtement empêche la formation de particules de corrosion, tandis que le diaphragme en EPDM ne laisse aucun résidu chimique. Cela évite l'accumulation de particules dans les micro-canaux des plaques froides et absorbe les pics de pression responsables des fuites aux QD."
+      }
+    ]
+  },
+  "downloads": {
+    "heading": "TÉLÉCHARGEMENTS",
+    "brochure": "LQCOL PLUS – Brochure produit LQC",
+    "manual": "LQCOL PLUS – Manuel d'utilisation"
+  },
+  "productLineHeading": "Gamme de produits"
+}

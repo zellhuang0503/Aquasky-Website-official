@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /es/RO-PLUS（español）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/ro-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "RO-Plus Tanque de Almacenamiento de Ósmosis Inversa | Tanque de Grado Alimenticio | AQUASKY",
+    "description": "AQUASKY RO-Plus es un tanque de almacenamiento de agua premium de grado alimenticio para sistemas de purificación por ósmosis inversa. Certificado NSF, conector de acero inoxidable."
+  },
+  "h1": "RO-Plus Tanque de Almacenamiento de Ósmosis Inversa | Tanque de Grado Alimenticio | AQUASKY",
+  "about": {
+    "heading": "TANQUE DE ÓSMOSIS INVERSA ROT",
+    "body": "AQUASKY inventó la tecnología a prueba de fugas y la aplicó en el conector de acero inoxidable para el tanque de almacenamiento de agua pre-presurizada hace 18 años, y son el estándar de la industria para los tanques de agua potable. El revestimiento de polipropileno y el diafragma de butilo están hechos con materiales aprobados por la FDA y evitan que el agua entre en contacto con el tanque de metal para obtener agua más limpia, fresca y de mejor sabor. El caucho de butilo está fabricado con un ingrediente y compuesto único que ofrece la mejor resistencia al aire en comparación con otros tanques del mercado. La tapa de latón con anillo de sellado interno garantiza que no se pierda aire desde el respiradero. No se necesita mantenimiento durante su vida útil. Todos los tanques RO-PLUS se fabrican en nuestras instalaciones registradas ISO 9001:2008. Están certificados por NSF, el estándar más alto para los tanques de ósmosis inversa. Además, cuentan con la certificación IAPMO y CE para ser los recipientes a presión más seguros del mercado."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/ROT/20231013_ROT-PLUS-DM_ES_231005-1.jpg",
+      "alt": "RO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/ROT/20231013_ROT-PLUS-DM_ES_231005-2.jpg",
+      "alt": "RO-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/ROT/20231013_ROT-PLUS-DM_ES_231005-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/ROT/20231013_ROT-PLUS-DM_ES_231005-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

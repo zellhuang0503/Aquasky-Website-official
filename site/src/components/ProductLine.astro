@@ -1,7 +1,7 @@
 ---
 // 產品系列清單：照舊站 row/col-md-6 兩欄 + .pd-btn-info-link 圓角按鈕。
 // 首頁 variant="home"（大圖、btn-link）；系列頁底部 variant="series"（webp 小圖、btn-link2）。
-// 按鈕文字先查 i18n 的 productLine（舊站 zh 的 ASME 按鈕是兩行、縮小 padding），沒有才用 nav 的字。
+// 按鈕文字先查 i18n 的 productLine（舊站 zh 的 ASME 按鈕是兩行、縮小 padding；es／fr／ru 的 DL 按鈕也是兩行，但 padding 不變），沒有才用 nav 的字。
 import { nav } from '../lib/data';
 import { type Lang, href, t } from '../lib/i18n';
 interface Props { lang: Lang; variant?: 'home' | 'series' }
@@ -10,7 +10,7 @@ const d = t(lang) as ReturnType<typeof t> & { productLine?: Record<string, strin
 const label = (key: string) => d.productLine?.[key] ?? (d.nav as Record<string, string>)[key] ?? key;
 const lines = (key: string) => label(key).split('\n');
 const btnStyle = (key: string, stacked: boolean) =>
-  [stacked ? 'margin-bottom:5px;' : '', lines(key).length > 1 ? 'padding-top:2px;padding-bottom:2px;' : ''].join('') || undefined;
+  [stacked ? 'margin-bottom:5px;' : '', lines(key).length > 1 && lang === 'zh' ? 'padding-top:2px;padding-bottom:2px;' : ''].join('') || undefined;
 const btn = variant === 'home' ? 'btn btn-link' : 'btn btn-link2';
 const list = nav.productLine;
 const rows: typeof list[] = [];

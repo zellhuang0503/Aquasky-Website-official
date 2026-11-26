@@ -1,0 +1,43 @@
+{
+  "kind": "news",
+  "lang": "es",
+  "category": "INDUSTRY",
+  "slug": "aviso-de-cambio-de-diseo-del-tanque-de-presin-aquasky-40l-aquasky-17",
+  "path": "/news-detail/INDUSTRY/aviso-de-cambio-de-diseo-del-tanque-de-presin-aquasky-40l-aquasky-17",
+  "status": "approved-legacy",
+  "dateText": "01 08 2024",
+  "datePublished": "2024-01-08T15:19:43+0800",
+  "title": "Aviso de Cambio de Diseño del Tanque de Presión Aquasky 40L | Aquasky",
+  "cover": "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+  "excerptHtml": "<p>El Tanque de Presi&oacute;n Aquasky anuncia un cambio de dise&ntilde;o nuevo de 40L. El tanque de 40L tiene una nueva versi&oacute;n y la tabla de comparaci&oacute;n de dimensiones se muestra.</p>",
+  "seo": {
+    "title": "Aviso de Cambio de Diseño del Tanque de Presión Aquasky 40L | Aquasky",
+    "description": "El Tanque de Presión Aquasky anuncia un cambio de diseño nuevo de 40L. El tanque de 40L tiene una nueva versión y la tabla de comparación de dimensiones se muestra."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/es/news-detail/INDUSTRY/aviso-de-cambio-de-diseo-del-tanque-de-presin-aquasky-40l-aquasky-17#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/es/news-detail/INDUSTRY/aviso-de-cambio-de-diseo-del-tanque-de-presin-aquasky-40l-aquasky-17"
+      },
+      "headline": "Aviso de Cambio de Diseño del Tanque de Presión Aquasky 40L | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20240108_aquasky_apt40.jpg",
+      "description": "El Tanque de Presión Aquasky anuncia un cambio de diseño nuevo de 40L. El tanque de 40L tiene una nueva versión y la tabla de comparación de dimensiones se muestra.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2024-01-08T15:19:43+0800"
+    }
+  ],
+  "bodyHtml": "<p>Aviso de Cambio de Dise&ntilde;o del Tanque de Presi&oacute;n Aquasky 40L | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_aquasky_apt40.jpg\" /></p>\r\n\r\n<p>El Tanque de Presi&oacute;n Aquasky anuncia un cambio de dise&ntilde;o nuevo de 40L. El tanque de 40L tiene una nueva versi&oacute;n y la tabla de comparaci&oacute;n de dimensiones se muestra. El dise&ntilde;o de 40L cambia de un dise&ntilde;o de 3 carcasas a un dise&ntilde;o de 2 carcasas e incrementa el di&aacute;metro.</p>\r\n\r\n<p>Hay dos ventajas principales del nuevo dise&ntilde;o.</p>\r\n\r\n<p>&bull; La primera ventaja es aumentar el volumen de almacenamiento de agua en una gran diferencia de presi&oacute;n debido al dise&ntilde;o de dos carcasas. El aire puede comprimirse completamente para aumentar el volumen de almacenamiento de agua en un 20%.</p>\r\n\r\n<p>&bull; La segunda ventaja es poder reducir la altura para evitar un alto porcentaje de da&ntilde;os durante el env&iacute;o. El volumen del tanque se ajusta con precisi&oacute;n a 40L.</p>\r\n\r\n<p>El nuevo dise&ntilde;o comenzar&aacute; a estar en servicio en enero de 2024.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_sp_apt40_01.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_sp_apt40_02.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_sp_apt40_03.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+    "/upfile/Images/news/20240108_sp_apt40_01.jpg",
+    "/upfile/Images/news/20240108_sp_apt40_02.jpg",
+    "/upfile/Images/news/20240108_sp_apt40_03.jpg"
+  ]
+}

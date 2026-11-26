@@ -17,7 +17,11 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/images/products/pd_ling_bg.jpg",
@@ -34,7 +38,8 @@
     "/images/SupremePlus_2023A.png",
     "/images/products/accessories/accessories3.jpg",
     "/js/owl/owl.carousel.css",
-    "/js/owl/owl.theme.css"
+    "/js/owl/owl.theme.css",
+    "/images/pd-title-line-02.png"
   ],
   "dataQuestions": []
 }

@@ -1,0 +1,56 @@
+{
+  "_note": "首頁 es。title、description、產品系列與選擇工具標題、按鈕字樣（\\n＝舊站 <br>）、8 個認證說明一字不差沿用 2026-10-22 封存的舊站 /es 首頁（ISO 那句的「//」是舊站原文）；h1＝title 去掉「AQUASKY - 」（同 en／zh 做法）。slidesAlt、selectionTools.alt、certifications.heading 舊站沒有，2026-11-26 AI 譯，未經審稿。",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "AQUASKY - Fabricante Global de Tanques de Presión y Tratamiento de Agua",
+    "description": "Fundado en 1998, AQUASKY es líder global en la fabricación de tanques de presión de diafragma. Tanques certificados por NSF y precargados con 100% nitrógeno."
+  },
+  "h1": "Fabricante Global de Tanques de Presión y Tratamiento de Agua",
+  "companyName": "",
+  "productLineHeading": "GAMA DE PRODUCTOS",
+  "selectionTools": {
+    "heading": "HERRAMIENTAS DE SELECCIÓN",
+    "cta": "CONSULTAR EN\nHERRAMIENTA DE\nSELECCIÓN",
+    "image": "/images/selection-tools_es.png",
+    "alt": "Herramientas de selección de tanques de presión en línea de AQUASKY"
+  },
+  "slidesAlt": "Fábrica de AQUASKY y producción de tanques de presión",
+  "certifications": {
+    "heading": "Certificaciones y tecnología",
+    "items": [
+      {
+        "icon": "/images/home-service/s2-img-01.png",
+        "label": "CE Certificación de Conformidad Europea"
+      },
+      {
+        "icon": "/images/home-service/s2-img-02.png",
+        "label": "ISO 9001 Gestión de la Calidad//Eurocert"
+      },
+      {
+        "icon": "/images/home-service/s2-img-03.png",
+        "label": "Certificación Libre de Plomo"
+      },
+      {
+        "icon": "/images/home-service/s2-img-04.png",
+        "label": "UPC Código Uniforme de Plomería"
+      },
+      {
+        "icon": "/images/home-service/s2-img-05.png",
+        "label": "NSF Fundación Nacional de Saneamiento"
+      },
+      {
+        "icon": "/images/home-service/N2.png",
+        "label": "llenado de nitrógeno"
+      },
+      {
+        "icon": "/images/home-service/unnamed2.png",
+        "label": "Certificación de Marca KC de Corea"
+      },
+      {
+        "icon": "/images/home-service/s2-img-08.png",
+        "label": "Escudo contra el óxido"
+      }
+    ]
+  }
+}

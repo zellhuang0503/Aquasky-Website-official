@@ -14,7 +14,11 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/images/FAQ/FAQ-01.png",
@@ -30,7 +34,8 @@
     "/images/FAQ/FAQ-06.png",
     "/images/FAQ/FAQ-13.png",
     "/images/FAQ/FAQ-07.png",
-    "/images/FAQ/FAQ-14.png"
+    "/images/FAQ/FAQ-14.png",
+    "/images/pd-title-line-02.png"
   ],
   "dataQuestions": []
 }

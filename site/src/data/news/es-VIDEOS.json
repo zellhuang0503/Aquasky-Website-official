@@ -1,0 +1,59 @@
+{
+  "id": "es-VIDEOS",
+  "kind": "videos",
+  "lang": "es",
+  "category": "VIDEOS",
+  "path": "/videos",
+  "perPage": 5,
+  "pageCount": 3,
+  "titleBand": "VÍDEOS",
+  "h4Recent": "VÍDEOS RECIENTES",
+  "h4Side": "ÚLTIMOS VÍDEOS",
+  "h4Detail": "VÍDEOS",
+  "moreLabel": "Aprende más...",
+  "backLabel": "REGRESAR",
+  "sidebar": [
+    {
+      "dateText": "December 23 2020",
+      "href": "/es/videos-detail/aquasky-online-selection-toolspressure-tank-pumplus-aquasky-15",
+      "title": "Aquasky online selection tools｜Pressure Tank, Pumplus｜ Aquasky"
+    },
+    {
+      "dateText": "June 07 2019",
+      "href": "/es/videos-detail/rot-4-pressure-tank-standard-reverse-osmosis-tankwater-storage-tankaquasky-14",
+      "title": "ROT 4 Pressure Tank ｜Standard Reverse Osmosis Tank｜Water storage tank｜Aquasky"
+    },
+    {
+      "dateText": "April 17 2019",
+      "href": "/es/videos-detail/n2-filling-testpressure-tank-pump-tank-energy-savingaquasky-13",
+      "title": "N2 Filling Test｜Pressure Tank, Pump tank, Energy Saving｜Aquasky"
+    },
+    {
+      "dateText": "April 03 2018",
+      "href": "/es/videos-detail/aquaskyro-plus-pumplus-thermal-plus-hydro-pluspressure-tank-ro-tank-12",
+      "title": "AQUASKY｜Ro-plus, Pumplus, Thermal-Plus, Hydro-Plus｜Pressure Tank, RO Tank"
+    },
+    {
+      "dateText": "March 20 2018",
+      "href": "/es/videos-detail/aquasky-pumplus-seriespump-tank-pressure-tankro-tank-water-storage-tank-11",
+      "title": "Aquasky PumPlus Series｜pump tank, pressure tank,RO tank, water storage tank"
+    }
+  ],
+  "order": [
+    "aquasky-online-selection-toolspressure-tank-pumplus-aquasky-15",
+    "rot-4-pressure-tank-standard-reverse-osmosis-tankwater-storage-tankaquasky-14",
+    "n2-filling-testpressure-tank-pump-tank-energy-savingaquasky-13",
+    "aquaskyro-plus-pumplus-thermal-plus-hydro-pluspressure-tank-ro-tank-12",
+    "aquasky-pumplus-seriespump-tank-pressure-tankro-tank-water-storage-tank-11",
+    "multiple-color-selectionsro-tank-pressure-tank-roplusaquasky-10",
+    "aquasky-painting-quality-inspectionro-tank-pressure-tank-pumplus-9",
+    "rot-4-unboxing-reviewpressure-tank-ro-tank-roplusaquasky-8",
+    "rot-4-installationpressure-tank-ro-tank-pumplusaquasky-7",
+    "aquaskyaquasky-enterprise-corp-nsf-tank-reserve-osmosis-tank-thermal-expansion-tank-6",
+    "aquaskyaquasky-enterprise-corp-pump-tank-pressure-tankro-tank-water-storage-tank-5"
+  ],
+  "seo": {
+    "title": "Videos de Productos AQUASKY: Prueba de Nitrógeno y Demos de Tanques",
+    "description": "Vea los tanques de presión AQUASKY en acción. Las demostraciones en video incluyen nuestras pruebas de nitrógeno 100% patentadas y guías de instalación."
+  }
+}

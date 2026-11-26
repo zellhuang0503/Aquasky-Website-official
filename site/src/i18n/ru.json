@@ -1,0 +1,71 @@
+{
+  "_note": "選單、系列名、productLine（系列頁底部 h2）、foundedIn、TEL／FAX 一字不差沿用舊站 ru（2026-10-22 封存 /ru/about、/ru/PUMPLUS、/ru 首頁；舊站 ru 頁尾 TEL／FAX 本來就是英文、沒有公司名那行）。其餘（menu、home、breadcrumbHome、skipToContent、languageNotLive、selectionTools、checkSelectionTool、download、faq、specifications、applications、features、factory、contact 表單訊息）舊站沒有，2026-11-26 AI 譯稿，未經審稿。 productLine 是首頁與系列頁底部按鈕的字，舊站 DL 那顆是兩行（\n＝<br>），但不像 zh 的 ASME 那顆縮小 padding。",
+  "nav": {
+    "company": "КОМПАНИЯ",
+    "about": "КОМПАНИЯ",
+    "feature": "ОСОБЕННОСТИ ПРОДУКТА",
+    "certification": "СЕРТИФИКАЦИЯ",
+    "selectionTools": "ИНСТРУМЕНТЫ ВЫБОРА",
+    "products": "ПРОДУКТЫ",
+    "residential": "Жилой",
+    "commercial": "Коммерческий",
+    "PUMPLUS": "PUMPLUS",
+    "RO-PLUS": "RO-PLUS",
+    "THERMAL-PLUS": "THERMAL-PLUS",
+    "HYDRO-PLUS": "HYDRO-PLUS",
+    "PREMIUM-PLUS": "PREMIUM-PLUS",
+    "LQCOL-PLUS": "LQCOL-PLUS",
+    "MEGA-PLUS": "MEGA-PLUS",
+    "SOLAR-PLUS": "SOLAR-PLUS",
+    "SUPREME-PLUS": "SUPREME-PLUS",
+    "DL-TANK": "БОЛЬШОЙ РАЗМЕР DL БАКА",
+    "ASME-TANK": "ASME БАК",
+    "GIGA-PLUS": "GIGA-PLUS",
+    "ACCESSORIES-PLUS": "Аксессуары",
+    "news": "НОВОСТИ",
+    "exhibitions": "Специализированная выставка",
+    "industry": "Промышленность",
+    "videos": "ВИДЕО",
+    "download": "СКАЧАТЬ",
+    "faq": "ВОПРОСЫ И ОТВЕТЫ",
+    "contact": "КОНТАКТЫ",
+    "language": "ЯЗЫК",
+    "menu": "Меню",
+    "home": "Главная"
+  },
+  "productLine": {
+    "DL-TANK": "БОЛЬШОЙ РАЗМЕР\nDL БАКА"
+  },
+  "common": {
+    "productLine": "ЛИНЕЙКА ПРОДУКТОВ",
+    "selectionTools": "Инструменты выбора",
+    "checkSelectionTool": "Проверить с помощью инструмента выбора",
+    "download": "Скачать",
+    "faq": "Вопросы и ответы",
+    "specifications": "Технические характеристики",
+    "applications": "Области применения",
+    "features": "Основные особенности и преимущества",
+    "factory": "Завод",
+    "tel": "TEL",
+    "fax": "FAX",
+    "foundedIn": "Основан в {year} году",
+    "skipToContent": "Перейти к содержанию",
+    "languageNotLive": "Эта страница пока недоступна на этом языке.",
+    "breadcrumbHome": "Главная"
+  },
+  "contact": {
+    "sending": "Отправка…",
+    "sent": "Спасибо. Ваше сообщение отправлено. Мы ответим как можно скорее.",
+    "sentPreview": "Предварительный сайт: форма работает, но сообщения не доставляются до запуска сайта.",
+    "failed": "Не удалось отправить сообщение. Пожалуйста, напишите нам напрямую по адресу, указанному на этой странице.",
+    "verify": "Сначала пройдите проверку.",
+    "codes": {
+      "invalid": "Проверьте обязательные поля (имя, e-mail, сообщение).",
+      "verify_required": "Сначала пройдите проверку.",
+      "verify_failed": "Срок проверки истёк. Пройдите проверку ещё раз и отправьте снова.",
+      "verify_unavailable": "Сервис проверки временно недоступен. Повторите попытку позже.",
+      "unavailable": "Форма обратной связи временно недоступна. Пожалуйста, напишите нам напрямую.",
+      "send_failed": "Не удалось доставить сообщение. Пожалуйста, напишите нам напрямую."
+    }
+  }
+}

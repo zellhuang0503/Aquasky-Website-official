@@ -14,8 +14,14 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
-  "assets": [],
+  "assets": [
+    "/images/pd-title-line-02.png"
+  ],
   "dataQuestions": []
 }

@@ -1,0 +1,40 @@
+{
+  "kind": "news",
+  "lang": "ar",
+  "category": "INDUSTRY",
+  "slug": "2024-aquasky-157",
+  "path": "/news-detail/INDUSTRY/2024-aquasky-157",
+  "status": "approved-legacy",
+  "dateText": "12 20 2023",
+  "datePublished": "2023-12-20T20:03:34+0800",
+  "title": "عيد ميلاد مجيد وسنة جديدة سعيدة 2024 | Aquasky",
+  "cover": "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+  "excerptHtml": "<p dir=\"rtl\">بينما نغلق فصل عام 2023 المليء بالإنجازات الرائعة، تود Aquasky أن تقدم أحر التهاني لكم جميعًا على كل النجاحات التي تحققت. نتمنى لكم عيد ميلاد مجيد مليء بالدفء والحب واللحظات الثمينة.</p>\r\n\r\n<p dir=\"rtl\">نخب عام جديد رائع مليء بالمغامرات الجديدة والنجاح المستمر!",
+  "seo": {
+    "title": "عيد ميلاد مجيد وسنة جديدة سعيدة 2024 | Aquasky",
+    "description": "بينما نغلق فصل عام 2023 المليء بالإنجازات الرائعة، تود Aquasky أن تقدم أحر التهاني لكم جميعًا على كل النجاحات التي تحققت. نتمنى لكم عيد ميلاد مجيد مليء بالدفء والحب واللحظات الثمينة. نخب عام جديد رائع مليء بالمغامرات الجديدة والنجاح المستمر!"
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/2024-aquasky-157#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/2024-aquasky-157"
+      },
+      "headline": "عيد ميلاد مجيد وسنة جديدة سعيدة 2024 | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+      "description": "بينما نغلق فصل عام 2023 المليء بالإنجازات الرائعة، تود Aquasky أن تقدم أحر التهاني لكم جميعًا على كل النجاحات التي تحققت. نتمنى لكم عيد ميلاد مجيد مليء بالدفء والحب واللحظات الثمينة. نخب عام جديد رائع مليء بالمغامرات الجديدة والنجاح المستمر!",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2023-12-20T20:03:34+0800"
+    }
+  ],
+  "bodyHtml": "<p dir=\"rtl\">عيد ميلاد مجيد وسنة جديدة سعيدة 2024 | Aquasky</p>\r\n\r\n<p style=\"text-align: center;\"><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png\" /></p>\r\n\r\n<p dir=\"rtl\">بينما نغلق فصل عام 2023 المليء بالإنجازات الرائعة، تود Aquasky أن تقدم أحر التهاني لكم جميعًا على كل النجاحات التي تحققت. نتمنى لكم عيد ميلاد مجيد مليء بالدفء والحب واللحظات الثمينة.</p>\r\n\r\n<p dir=\"rtl\">نخب عام جديد رائع مليء بالمغامرات الجديدة والنجاح المستمر!",
+  "assets": [
+    "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png"
+  ]
+}

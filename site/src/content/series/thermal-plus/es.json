@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /es/THERMAL-PLUS（español）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/thermal-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Thermal-Plus Tanque de Expansión Térmica para Calentador de Agua | AQUASKY",
+    "description": "Los tanques de expansión térmica AQUASKY Thermal-Plus absorben el exceso de volumen de agua caliente para proteger los sistemas cerrados de calefacción. Diafragma de alta durabilidad."
+  },
+  "h1": "Thermal-Plus Tanque de Expansión Térmica para Calentador de Agua | AQUASKY",
+  "about": {
+    "heading": "THERMAL-PLUS TANQUE DE EXPANSIÓN TÉRMICA.",
+    "body": "THERMAL-PLUS tanque de expansión térmica para absorber el agua expandida en sistemas cerrados de agua caliente. La expansión ocurre cuando se calienta el agua doméstica. Los tanques de expansión THERMAL-PLUS están diseñados para mantener de manera segura los niveles de presión del agua en los sistemas de calentamiento de agua para evitar la descarga de la válvula de alivio y otras condiciones potencialmente peligrosas. Los tanques de expansión térmica trabajan en conjunto con un preventor de reflujo o una válvula de retención. Los tanques de expansión THERMAL-PLUS están construidos con una conexión de sistema de acero inoxidable, un revestimiento de polipropileno que separa el agua de la carcasa del tanque, un diafragma de caucho butilo de alta resistencia y una precarga de nitrógeno de 40 PSIG. El tanque controla la presión excesiva generada dentro del calentador de agua y proporciona el sistema más seguro para su hogar."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20231013_ThermalPlus-DM_ES_231006-1.jpg",
+      "alt": "THERMAL-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20231013_ThermalPlus-DM_ES_231006-2.jpg",
+      "alt": "THERMAL-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20231013_ThermalPlus-DM_ES_231006-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20231013_ThermalPlus-DM_ES_231006-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

@@ -3,105 +3,507 @@
   "edits": [
     {
       "source": "Tiffany 2026-11-13（網站回覆 2026.11.13.docx 第 3 題）：MEGA-PLUS＝16BAR高壓泵浦壓力桶、GIGA-PLUS＝25BAR高壓泵浦壓力桶",
-      "pages": ["/zh/accessories", "/zh/asme-ht", "/zh/dl-ce", "/zh/GIGA-PLUS", "/zh/supreme"],
+      "pages": [
+        "/zh/accessories",
+        "/zh/asme-ht",
+        "/zh/dl-ce",
+        "/zh/GIGA-PLUS",
+        "/zh/supreme"
+      ],
       "replace": [
-        { "from": "產品系列 泵浦壓力桶 高壓泵浦壓力桶 密閉式膨脹水箱", "to": "產品系列 泵浦壓力桶 16BAR高壓泵浦壓力桶 密閉式膨脹水箱" },
-        { "from": "液冷系統膨脹水箱 高壓泵浦壓力桶 工業式密閉膨脹水箱", "to": "液冷系統膨脹水箱 25BAR高壓泵浦壓力桶 工業式密閉膨脹水箱" }
+        {
+          "from": "產品系列 泵浦壓力桶 高壓泵浦壓力桶 密閉式膨脹水箱",
+          "to": "產品系列 泵浦壓力桶 16BAR高壓泵浦壓力桶 密閉式膨脹水箱"
+        },
+        {
+          "from": "液冷系統膨脹水箱 高壓泵浦壓力桶 工業式密閉膨脹水箱",
+          "to": "液冷系統膨脹水箱 25BAR高壓泵浦壓力桶 工業式密閉膨脹水箱"
+        }
       ]
     },
     {
       "source": "Tiffany 2026-11-13（網站回覆 2026.11.13.docx 第 3 題）",
-      "pages": ["/zh/products"],
+      "pages": [
+        "/zh/products"
+      ],
       "replace": [
-        { "from": "高壓泵浦壓力桶 MEGA-PLUS (16 bar)", "to": "16BAR高壓泵浦壓力桶 MEGA-PLUS (16 bar)" },
-        { "from": "高壓泵浦壓力桶 GIGA-PLUS", "to": "25BAR高壓泵浦壓力桶 GIGA-PLUS" }
+        {
+          "from": "高壓泵浦壓力桶 MEGA-PLUS (16 bar)",
+          "to": "16BAR高壓泵浦壓力桶 MEGA-PLUS (16 bar)"
+        },
+        {
+          "from": "高壓泵浦壓力桶 GIGA-PLUS",
+          "to": "25BAR高壓泵浦壓力桶 GIGA-PLUS"
+        }
       ]
     },
     {
       "source": "Tiffany 2026-11-13（網站回覆 2026.11.13.docx 第 3 題）",
-      "pages": ["/download/chinese"],
+      "pages": [
+        "/download/chinese"
+      ],
       "replace": [
-        { "from": "密閉式膨脹水箱 高壓泵浦壓力桶 導熱液體膨脹罐", "to": "密閉式膨脹水箱 16BAR高壓泵浦壓力桶 導熱液體膨脹罐" },
-        { "from": "太陽能液體膨脹罐 高壓泵浦壓力桶", "to": "太陽能液體膨脹罐 25BAR高壓泵浦壓力桶" }
+        {
+          "from": "密閉式膨脹水箱 高壓泵浦壓力桶 導熱液體膨脹罐",
+          "to": "密閉式膨脹水箱 16BAR高壓泵浦壓力桶 導熱液體膨脹罐"
+        },
+        {
+          "from": "太陽能液體膨脹罐 高壓泵浦壓力桶",
+          "to": "太陽能液體膨脹罐 25BAR高壓泵浦壓力桶"
+        }
       ]
     },
     {
       "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
-      "pages": ["/en/products-det/pumplus/APT-1.3", "/en/products-det/pumplus/APT-100", "/en/products-det/pumplus/APT-100H", "/en/products-det/pumplus/APT-12", "/en/products-det/pumplus/APT-120", "/en/products-det/pumplus/APT-130", "/en/products-det/pumplus/APT-160", "/en/products-det/pumplus/APT-18", "/en/products-det/pumplus/APT-18H", "/en/products-det/pumplus/APT-2", "/en/products-det/pumplus/APT-200", "/en/products-det/pumplus/APT-24", "/en/products-det/pumplus/APT-240", "/en/products-det/pumplus/APT-24H", "/en/products-det/pumplus/APT-3", "/en/products-det/pumplus/APT-300", "/en/products-det/pumplus/APT-325", "/en/products-det/pumplus/APT-40", "/en/products-det/pumplus/APT-40H", "/en/products-det/pumplus/APT-450", "/en/products-det/pumplus/APT-500", "/en/products-det/pumplus/APT-60", "/en/products-det/pumplus/APT-60H", "/en/products-det/pumplus/APT-8", "/en/products-det/pumplus/APT-80", "/en/products-det/pumplus/APT-80H"],
+      "pages": [
+        "/en/products-det/pumplus/APT-1.3",
+        "/en/products-det/pumplus/APT-100",
+        "/en/products-det/pumplus/APT-100H",
+        "/en/products-det/pumplus/APT-12",
+        "/en/products-det/pumplus/APT-120",
+        "/en/products-det/pumplus/APT-130",
+        "/en/products-det/pumplus/APT-160",
+        "/en/products-det/pumplus/APT-18",
+        "/en/products-det/pumplus/APT-18H",
+        "/en/products-det/pumplus/APT-2",
+        "/en/products-det/pumplus/APT-200",
+        "/en/products-det/pumplus/APT-24",
+        "/en/products-det/pumplus/APT-240",
+        "/en/products-det/pumplus/APT-24H",
+        "/en/products-det/pumplus/APT-3",
+        "/en/products-det/pumplus/APT-300",
+        "/en/products-det/pumplus/APT-325",
+        "/en/products-det/pumplus/APT-40",
+        "/en/products-det/pumplus/APT-40H",
+        "/en/products-det/pumplus/APT-450",
+        "/en/products-det/pumplus/APT-500",
+        "/en/products-det/pumplus/APT-60",
+        "/en/products-det/pumplus/APT-60H",
+        "/en/products-det/pumplus/APT-8",
+        "/en/products-det/pumplus/APT-80",
+        "/en/products-det/pumplus/APT-80H"
+      ],
       "replace": [
-        { "from": "3-year factory warranty", "to": "5-year factory warranty" }
+        {
+          "from": "3-year factory warranty",
+          "to": "5-year factory warranty"
+        }
       ]
     },
     {
       "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
-      "pages": ["/en/FAQ"],
+      "pages": [
+        "/en/FAQ"
+      ],
       "replace": [
-        { "from": "RO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years.", "to": "All tanks (RO, Well, Thermal and Hydronic): 5-years." }
+        {
+          "from": "RO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years.",
+          "to": "All tanks (RO, Well, Thermal and Hydronic): 5-years."
+        }
       ]
     },
     {
       "source": "黃老闆／溢康 2026-11-19 月會：刪「標準色無 MOQ」與「經銷最少一個 20 呎貨櫃」，客製化說法等 Tiffany 初稿",
-      "pages": ["/en/FAQ"],
+      "pages": [
+        "/en/FAQ"
+      ],
       "replace": [
-        { "from": "No required MOQ for standard colors (Blue and Almond). The MOQ for customized colors", "to": "The MOQ for customized colors" },
-        { "from": "MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms.", "to": "Pricing is based on FOB Taichung terms." }
+        {
+          "from": "No required MOQ for standard colors (Blue and Almond). The MOQ for customized colors",
+          "to": "The MOQ for customized colors"
+        },
+        {
+          "from": "MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms.",
+          "to": "Pricing is based on FOB Taichung terms."
+        }
       ]
     },
     {
       "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
-      "pages": ["/zh/FAQ"],
+      "pages": [
+        "/zh/FAQ"
+      ],
       "replace": [
-        { "from": "RO 罐 3 年保固；其餘多數罐體 5 年保固。", "to": "所有罐體（含 RO 罐）皆為 5 年保固。" }
+        {
+          "from": "RO 罐 3 年保固；其餘多數罐體 5 年保固。",
+          "to": "所有罐體（含 RO 罐）皆為 5 年保固。"
+        }
       ]
     },
     {
       "source": "黃老闆／溢康 2026-11-19 月會：刪「標準色無 MOQ」與「經銷最少一個 20 呎貨櫃」，客製化說法等 Tiffany 初稿",
-      "pages": ["/zh/FAQ"],
+      "pages": [
+        "/zh/FAQ"
+      ],
       "replace": [
-        { "from": "標準顏色（藍色、米色）無 MOQ 要求。客製化顏色", "to": "客製化顏色" },
-        { "from": "最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。", "to": "價格以 FOB 台中計價。" }
+        {
+          "from": "標準顏色（藍色、米色）無 MOQ 要求。客製化顏色",
+          "to": "客製化顏色"
+        },
+        {
+          "from": "最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。",
+          "to": "價格以 FOB 台中計價。"
+        }
       ]
     },
     {
       "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
-      "pages": ["/en/news-detail/INDUSTRY/introduction-to-liquid-cold-system-expansion-tank-lqcol-plus-aquasky-173"],
+      "pages": [
+        "/en/news-detail/INDUSTRY/introduction-to-liquid-cold-system-expansion-tank-lqcol-plus-aquasky-173"
+      ],
       "replace": [
-        { "from": "Backed by a 3-Year Warranty", "to": "Backed by a 5-Year Warranty" }
+        {
+          "from": "Backed by a 3-Year Warranty",
+          "to": "Backed by a 5-Year Warranty"
+        }
       ]
     },
     {
       "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
-      "pages": ["/zh/news-detail/INDUSTRY/lqcol-plus-aquasky-175"],
+      "pages": [
+        "/zh/news-detail/INDUSTRY/lqcol-plus-aquasky-175"
+      ],
       "replace": [
-        { "from": "產品提供三年保固", "to": "產品提供五年保固" }
+        {
+          "from": "產品提供三年保固",
+          "to": "產品提供五年保固"
+        }
       ]
     },
     {
       "source": "依黃老闆／溢康 2026-11-19 月會「全部改 5 年」；黃老闆會後決定 FAQ 第 9 題「保固因市場而異」也照改",
-      "pages": ["/en/FAQ"],
+      "pages": [
+        "/en/FAQ"
+      ],
       "replace": [
-        { "from": "AQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.", "to": "All AQUASKY tanks (RO, Well, Thermal and Hydronic) come with a 5-year warranty." }
+        {
+          "from": "AQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.",
+          "to": "All AQUASKY tanks (RO, Well, Thermal and Hydronic) come with a 5-year warranty."
+        }
       ]
     },
     {
       "source": "依黃老闆／溢康 2026-11-19 月會「全部改 5 年」；黃老闆會後決定 FAQ 第 9 題「保固因市場而異」也照改",
-      "pages": ["/zh/FAQ"],
+      "pages": [
+        "/zh/FAQ"
+      ],
       "replace": [
-        { "from": "溢康保固期因市場而異。 請聯繫您當地的經銷商以獲得適用於您所在地區的保固。", "to": "溢康所有罐體（含 RO 罐）皆提供 5 年保固。" }
+        {
+          "from": "溢康保固期因市場而異。 請聯繫您當地的經銷商以獲得適用於您所在地區的保固。",
+          "to": "溢康所有罐體（含 RO 罐）皆提供 5 年保固。"
+        }
       ]
     },
     {
       "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：「WRAS認證在網站上沒有連結，請再建立」→ WRAS 那格補認證連結按鈕，連到新建的 /en/certification-page/wras-uk",
-      "pages": ["/en/certification"],
+      "pages": [
+        "/en/certification"
+      ],
       "replace": [
-        { "from": "with which they come into contact. &nbsp; WaterMark Certification Scheme", "to": "with which they come into contact. &nbsp; CERTIFICATION LINK WaterMark Certification Scheme" }
+        {
+          "from": "with which they come into contact. &nbsp; WaterMark Certification Scheme",
+          "to": "with which they come into contact. &nbsp; CERTIFICATION LINK WaterMark Certification Scheme"
+        }
       ]
     },
     {
       "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：WRAS 那格補「認證連結」按鈕，連到新建的 /zh/certification-page/wras-uk（同格的證書圖也從舊站的 Under Process 換成 WRAS 證書，圖片不在文字比對範圍）",
-      "pages": ["/zh/certification"],
+      "pages": [
+        "/zh/certification"
+      ],
       "replace": [
-        { "from": "對接觸的水的影響。 WaterMark澳洲飲用水容器認證", "to": "對接觸的水的影響。 認證連結 WaterMark澳洲飲用水容器認證" }
+        {
+          "from": "對接觸的水的影響。 WaterMark澳洲飲用水容器認證",
+          "to": "對接觸的水的影響。 認證連結 WaterMark澳洲飲用水容器認證"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：WRAS 那格補認證連結按鈕（同 en／zh），連到 /es/certification-page/wras-uk；按鈕字樣「ENLACE DE CERTIFICACIÓN」是本頁其他按鈕的舊站原文",
+      "pages": [
+        "/es/certification"
+      ],
+      "replace": [
+        {
+          "from": "con la que entran en contacto. WaterMark Certificac",
+          "to": "con la que entran en contacto. ENLACE DE CERTIFICACIÓN WaterMark Certificac"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：WRAS 那格補認證連結按鈕（同 en／zh），連到 /fr/certification-page/wras-uk；按鈕字樣「LIEN DE CERTIFICATION」是本頁其他按鈕的舊站原文",
+      "pages": [
+        "/fr/certification"
+      ],
+      "replace": [
+        {
+          "from": "laquelle ils entrent en contact. Le Schéma de Certific",
+          "to": "laquelle ils entrent en contact. LIEN DE CERTIFICATION Le Schéma de Certific"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：WRAS 那格補認證連結按鈕（同 en／zh），連到 /ru/certification-page/wras-uk；按鈕字樣「ССЫЛКА НА СЕРТИФИКАЦИЮ」是本頁其他按鈕的舊站原文",
+      "pages": [
+        "/ru/certification"
+      ],
+      "replace": [
+        {
+          "from": "воду, с которой они контактируют. WATERMARK АВСТРАЛИЯ",
+          "to": "воду, с которой они контактируют. ССЫЛКА НА СЕРТИФИКАЦИЮ WATERMARK АВСТРАЛИЯ"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-20（網站確認事項整理 v2 第 11 題）：WRAS 那格補認證連結按鈕（同 en／zh），連到 /ar/certification-page/wras-uk；按鈕字樣「رابط الشهادات」是本頁其他按鈕的舊站原文",
+      "pages": [
+        "/ar/certification"
+      ],
+      "replace": [
+        {
+          "from": "المياه التي تأتي في اتصال معها. شهادة ووتر مارك لأوع",
+          "to": "المياه التي تأتي في اتصال معها. رابط الشهادات شهادة ووتر مارك لأوع"
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，es 新句是 2026-11-26 AI 譯",
+      "pages": [
+        "/es/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "La garant&iacute;a de AQUASKY puede variar seg&uacute;n el mercado. Por favor, contacta a tu distribuidor local para conocer la garant&iacute;a aplicable en tu &aacute;rea.",
+          "to": "Todos los tanques AQUASKY (RO, pozo, térmicos e hidrónicos) tienen una garantía de 5 años."
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，fr 新句是 2026-11-26 AI 譯",
+      "pages": [
+        "/fr/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "La garantie AQUASKY varie selon les march&eacute;s. Veuillez contacter votre distributeur local pour conna&icirc;tre la garantie applicable dans votre r&eacute;gion.",
+          "to": "Tous les réservoirs AQUASKY (RO, puits, thermiques et hydroniques) bénéficient d’une garantie de 5 ans."
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，ru 新句是 2026-11-26 AI 譯",
+      "pages": [
+        "/ru/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "Гарантия AQUASKY варьируется в зависимости от рынка. Обратитесь к вашему местному дистрибьютору для получения информации о гарантии, действующей в вашем регионе.",
+          "to": "На все баки AQUASKY (RO, скважинные, термические и гидронные) предоставляется гарантия 5 лет."
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，ar 新句是 2026-11-26 AI 譯",
+      "pages": [
+        "/ar/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "يختلف ضمان AQUASKY في السوق. يرجى الاتصال بالموزع المحلي للحصول على الضمان المناسب في منطقتك.",
+          "to": "تأتي جميع خزانات AQUASKY (RO، والآبار، والحرارية، والهيدرونية) بضمان لمدة 5 سنوات."
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；同 en 173／zh 175 的 LQCOL 新聞改法",
+      "pages": [
+        "/es/news-detail/INDUSTRY/introduccin-al-tanque-de-expansin-para-sistemas-de-enfriamiento-lquido-lqcol-plus-aquasky-45"
+      ],
+      "replace": [
+        {
+          "from": "garant&iacute;a de 3 a&ntilde;os",
+          "to": "garant&iacute;a de 5 a&ntilde;os"
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；同 en 173／zh 175 的 LQCOL 新聞改法",
+      "pages": [
+        "/fr/news-detail/INDUSTRY/introduction-au-rservoir-dexpansion-du-systme-de-refroidissement-liquide-lqcol-plus-aquasky-45"
+      ],
+      "replace": [
+        {
+          "from": "Garanti trois ans",
+          "to": "Garanti cinq ans"
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；同 en 173／zh 175 的 LQCOL 新聞改法",
+      "pages": [
+        "/ru/news-detail/INDUSTRY/lqcol-plus-aquasky-45"
+      ],
+      "replace": [
+        {
+          "from": "3-летней гарантией",
+          "to": "5-летней гарантией"
+        }
+      ]
+    },
+    {
+      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；同 en 173／zh 175 的 LQCOL 新聞改法",
+      "pages": [
+        "/ar/news-detail/INDUSTRY/lqcol-plus-aquasky-187"
+      ],
+      "replace": [
+        {
+          "from": "بضمان لمدة 3 سنوات",
+          "to": "بضمان لمدة 5 سنوات"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：「vessel」被翻成「船」，改成「خزان（桶）」",
+      "pages": [
+        "/ar/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "تركيب السفينة فيها",
+          "to": "تركيب الخزان فيها"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
+      "pages": [
+        "/ar/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "لسفينة AQUASKY الفارغة",
+          "to": "لخزان AQUASKY الفارغ"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：cut-in／cut-out 被直譯成「切斷點／出口點」，改成「啟動點／停止點」",
+      "pages": [
+        "/ar/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "ما هي النقاط المعتادة للقطع والخروج؟",
+          "to": "ما هي نقاط التشغيل والإيقاف المعتادة؟"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
+      "pages": [
+        "/ar/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "تبدأ (نقطة القطع)",
+          "to": "تبدأ (نقطة التشغيل)"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
+      "pages": [
+        "/ar/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "تتوقف (نقطة الخروج)",
+          "to": "تتوقف (نقطة الإيقاف)"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
+      "pages": [
+        "/ar/FAQ"
+      ],
+      "replace": [
+        {
+          "from": "بين نقطة القطع والخروج",
+          "to": "بين نقطة التشغيل ونقطة الإيقاف"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：NSF 被寫成「美國國家標準組織」，改成全站其他地方的「المؤسسة الوطنية للصحة العامة」",
+      "pages": [
+        "/ar/feature"
+      ],
+      "replace": [
+        {
+          "from": "المؤسسة الوطنية للمعايير الأمريكية (NSF)",
+          "to": "المؤسسة الوطنية للصحة العامة (NSF)"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：錯字（المقرها 不成字）",
+      "pages": [
+        "/ar/certification"
+      ],
+      "replace": [
+        {
+          "from": "هيئات الشهادة المقرها في كوريا",
+          "to": "هيئات الشهادة التي مقرها في كوريا"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：文法錯（主格、形容詞單複數）",
+      "pages": [
+        "/ar/about"
+      ],
+      "replace": [
+        {
+          "from": "مديري الأعمال مخصص لدينا يأخذون",
+          "to": "مديرو الأعمال المخصصون لدينا يأخذون"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：「roll up our sleeves」被逐字直譯成「伸長袖子」，改成阿拉伯文同義慣用語",
+      "pages": [
+        "/ar/about"
+      ],
+      "replace": [
+        {
+          "from": "نمد أكمامنا في Aquasky",
+          "to": "نشمّر عن سواعدنا في Aquasky"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：「جالس（坐著的）」譯錯，改「آمن（安全的）」",
+      "pages": [
+        "/ar/products"
+      ],
+      "replace": [
+        {
+          "from": "في نطاق جالس",
+          "to": "في نطاق آمن"
+        }
+      ]
+    },
+    {
+      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：「shower and bath」兩個字都翻成「洗澡」，改「淋浴與浴缸」",
+      "pages": [
+        "/ar/products"
+      ],
+      "replace": [
+        {
+          "from": "للاستحمام والاستحمام",
+          "to": "للدش وحوض الاستحمام"
+        }
       ]
     }
   ]

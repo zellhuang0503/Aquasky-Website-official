@@ -17,13 +17,18 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/upfile/Images/CERTIFICATION/eurocert_b.png",
     "/upfile/Images/CERTIFICATION/20241209_EUROCERT-IOS9001.png",
     "/js/owl/owl.carousel.css",
-    "/js/owl/owl.theme.css"
+    "/js/owl/owl.theme.css",
+    "/images/pd-title-line-02.png"
   ],
   "dataQuestions": []
 }

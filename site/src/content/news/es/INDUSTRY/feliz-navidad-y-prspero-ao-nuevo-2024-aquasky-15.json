@@ -1,0 +1,40 @@
+{
+  "kind": "news",
+  "lang": "es",
+  "category": "INDUSTRY",
+  "slug": "feliz-navidad-y-prspero-ao-nuevo-2024-aquasky-15",
+  "path": "/news-detail/INDUSTRY/feliz-navidad-y-prspero-ao-nuevo-2024-aquasky-15",
+  "status": "approved-legacy",
+  "dateText": "12 20 2023",
+  "datePublished": "2023-12-20T20:21:33+0800",
+  "title": "Feliz Navidad y Próspero Año Nuevo 2024 | Aquasky",
+  "cover": "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+  "excerptHtml": "<p>Al cerrar el cap&iacute;tulo de un incre&iacute;ble a&ntilde;o 2023, en Aquasky queremos extender nuestras m&aacute;s c&aacute;lidas felicitaciones por todos los grandes logros alcanzados. Les deseamos una Navidad alegre, llena de calor, amor y momentos para atesorar.</p>",
+  "seo": {
+    "title": "Feliz Navidad y Próspero Año Nuevo 2024 | Aquasky",
+    "description": "Al cerrar el capítulo de un increíble año 2023, en Aquasky queremos extender nuestras más cálidas felicitaciones por todos los grandes logros alcanzados. Les deseamos una Navidad alegre, llena de calor, amor y momentos para atesorar."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/es/news-detail/INDUSTRY/feliz-navidad-y-prspero-ao-nuevo-2024-aquasky-15#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/es/news-detail/INDUSTRY/feliz-navidad-y-prspero-ao-nuevo-2024-aquasky-15"
+      },
+      "headline": "Feliz Navidad y Próspero Año Nuevo 2024 | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+      "description": "Al cerrar el capítulo de un increíble año 2023, en Aquasky queremos extender nuestras más cálidas felicitaciones por todos los grandes logros alcanzados. Les deseamos una Navidad alegre, llena de calor, amor y momentos para atesorar.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2023-12-20T20:21:33+0800"
+    }
+  ],
+  "bodyHtml": "<p>Feliz Navidad y Pr&oacute;spero A&ntilde;o Nuevo 2024 | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png\" /></p>\r\n\r\n<p>Al cerrar el cap&iacute;tulo de un incre&iacute;ble a&ntilde;o 2023, en Aquasky queremos extender nuestras m&aacute;s c&aacute;lidas felicitaciones por todos los grandes logros alcanzados. Les deseamos una Navidad alegre, llena de calor, amor y momentos para atesorar.</p>\r\n\r\n<p>&iexcl;Brindemos por un maravilloso A&ntilde;o Nuevo lleno de nuevas aventuras y continuos &eacute;xitos!",
+  "assets": [
+    "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png"
+  ]
+}

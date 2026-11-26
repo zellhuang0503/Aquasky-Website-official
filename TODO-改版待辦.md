@@ -66,7 +66,12 @@
   - [x] 2026-11-05 **聯絡表單後端做好**：`site/worker/contact.mjs`（同站來源→欄位→蜜罐→Turnstile→Resend 寄信），前端 `public/js/contact-form.js` 表單 HTML 不動；現在 `CONTACT_MODE: preview` 不寄信。單元測試 9 項（`npm run test:worker`）。正式上線前要：Turnstile 真 widget、Resend 驗證 aquaskyplus.com 寄件網域、`CONTACT_TO` 填 Tiffany 給的信箱、改 live（步驟在 site/README.md「聯絡表單與舊網址轉址」）。 （2026-11-14：`CONTACT_TO` 已填 frankwang@aquasky.com.tw。）
   - [x] 2026-11-05 **舊網址轉址表做好**：`site/worker/redirects.mjs`＋`scripts/test-redirects.mjs`，掛上正式網域即生效（細節同上 README 段）。
   - [x] 2026-11-05 **表單＋轉址部署到預覽網址並線上驗過**（11/8 補驗表單）：`.php` 舊網址 301、`/LQCOL-PLUS`→`/en/LQCOL-PLUS`、`/recode.php` 404、`/api/contact` 預覽模式回 `{"ok":true,"delivered":false}`、en／zh 頁面真的按送出顯示「預覽站：表單可以送出，但正式上線前不會寄信」。坑兩個：① wrangler 舊 OAuth token 沒有 workers_scripts:write → deploy 403，重新 `wrangler login` 才好；② 用 PowerShell `echo | wrangler secret put` 存的 Turnstile 測試金鑰值不對（驗證一直失敗），改用 `wrangler secret bulk <json檔>` 才成功。
-  - [ ] 還沒做：ar 版型（RTL）；走一次「改內容檔→預覽→審→發布」。
+  - [ ] 還沒做：走一次「改內容檔→預覽→審→發布」。（ar 版型 2026-11-26 已照舊站做：只有文字區塊 direction:rtl，不整頁鏡像。）
+  - [ ] **2026-11-26 西／法／俄／阿開工**（分支 claude/project-thread-bv8x2o，本機，**未部署、未推送**；推送／部署要黃老闆親手打字同意）：新站 488 → 972 頁。舊站有四語的頁全部照搬舊站原文（verify 逐字比封存過）；介面文字、首頁、LQCOL（用 translation/lqcol-plus AI 初稿）、6 張認證單頁（舊站線上抓）都做了；保固 5 年、WRAS 按鈕、LQCOL 液冷標題已套四語。細節見 site/README.md「刻意差異」四語段。
+    - [ ] 四語 FAQ：舊站只有 16 題（en／zh 29 題）→ 等 Tiffany 客製化說法到了，用目前 en 整頁 AI 重翻。
+    - [ ] 四語 meta description 約 310 段超過 160 字要縮（比照 11/26 en／zh 做法）。
+    - [ ] 上線前請黃老闆決定四語怎麼呈現（例如照上並標示 AI 譯稿）；LQCOL 四語頁現在頁頂會顯示英文「Draft translation, pending review.」。
+    - [ ] 要不要阿拉伯文整頁左右鏡像（舊站沒有）——可問黃老闆。
   - [x] 2026-10-24 第一次審查（首頁＋LQCOL）：網址／SEO／JSON-LD／工程衛生全過，版型 9 項不通過已全部修掉：產品列回深色區、首頁米色底＋44pt 公司名＋字標原尺寸＋輪播一次一張、選單結構與 padding 與 logo 照舊站、正文粗體、規格數字照原字串、結構圖標示照舊站斷行、中文選單／認證說明／地址一字不差、zh ASME 按鈕兩行（手機不再溢出）、en 首頁認證說明先不顯示（舊站沒有）、產品／品牌／選單資料檔都加 schema。
   - [x] 2026-10-24 第二次審查（19 頁）：9 項已修：zh 7 頁 DM 圖補齊並照舊站 JS 用 img-responsive 滿版、PUMPLUS 橫式一列三張（colClass）、RO 型號無包裝層／MEGA 標題外 <p> 間距／PREMIUM 無標題外框（照舊站逐頁存旗標）、內頁改載舊站客製 bootstrap.css、en 首頁補空的公司名段落、home.json 加 schema、classic 加 dataQuestions（自動列公升換加侖不符：APT-3、ROT-1 的 3 L＝0.5 gal；APT-60／APT-60H／ROT-14／MEGA-60 的 60 L＝14 gal）、zh 經典頁 JSON-LD 不帶 hasVariant、README 補 HYDRO 舊站 HTML 未閉合一條。
   - [x] 2026-10-24 第三次審查：上輪 9 項全過；新 2 項已修：zh DM 區塊照舊站結構含空段落（edmHtml，verify 與封存逐字比）、README 補「不做 WOW 進場動畫」；標題圖 alt 改用舊站原文。

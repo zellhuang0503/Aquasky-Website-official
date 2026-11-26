@@ -1,0 +1,29 @@
+{
+  "id": "ar-EXHIBITIONS",
+  "kind": "news",
+  "lang": "ar",
+  "category": "EXHIBITIONS",
+  "path": "/news/EXHIBITIONS",
+  "perPage": 5,
+  "pageCount": 1,
+  "titleBand": "معارض",
+  "h4Recent": "الأخبار الحديثة",
+  "h4Side": "آخر الأخبار",
+  "h4Detail": "الأخبار الحديثة",
+  "moreLabel": "اعرف المزيد...",
+  "backLabel": "رجوع",
+  "sidebar": [
+    {
+      "dateText": "April 14 2025",
+      "href": "/ar/news-detail/EXHIBITIONS/ish-2025-189",
+      "title": "معرض ISH فرانكفورت 2025:"
+    }
+  ],
+  "order": [
+    "ish-2025-189"
+  ],
+  "seo": {
+    "title": "معارض AQUASKY الدولية: معارض معالجة المياه العالمية والنشاطات التجارية",
+    "description": "اكتشف جدول معارض AQUASKY العالمية. تفضل بزيارة أجنحتنا في المعارض الدولية الكبرى مثل MCE إيطاليا و Aquatech لمشاهدة خزانات الضغط الممتازة."
+  }
+}

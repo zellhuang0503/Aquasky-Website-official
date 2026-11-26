@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ar/MEGA-PLUS（العربية）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/mega-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。 2026-11-26：舊站阿拉伯文有幾處明顯譯錯或錯字，梵亞改正（AI 判斷，未經母語審稿；改了哪些見 client-text-edits.json 或 README）。",
+  "template": "classic",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Mega-Plus خزان ضغط عالي 16 بار | نظام تعزيز المياه التجاري | AQUASKY",
+    "description": "خزان ضغط غشائي عالي الأداء بضغط 16 بار (230 PSI) مصمم للمباني الشاهقة ونظام تعزيز المياه التجاري."
+  },
+  "h1": "Mega-Plus خزان ضغط عالي 16 بار | نظام تعزيز المياه التجاري | AQUASKY",
+  "about": {
+    "heading": "خزان الضغط MEGA-PLUS [16 بار]",
+    "body": "خزان الضغط Mega-Plus هو جزء أساسي من نظام المياه المضغوطة الذي يوفر ضغط الماء عند مستوى محدد. يخزن الخزان الماء الإضافي بين الحجاب الحاجز والبطانة، ويمكن للغرفة الهوائية المضغوطة أن تخلق دائرة إمداد. هذه العملية تقلل من عدد مرات بدء تشغيل المحرك لكي يظل ضغط النظام عند المستوى المحدد. يحافظ توتر الحجاب الحاجز على ضغط الماء داخل النظام، مما يضمن عمل غسالة الأطباق وغسالة الملابس بشكل صحيح، وتدفق قوي للدش وحوض الاستحمام. يوفر Mega-Plus حلاً لضغط الماء العالي للمباني العالية ودعم الضغط على مسافات طويلة. ويضمن أن يعمل نظام المياه بكفاءة وتوفير للطاقة دون الحاجة إلى صيانة."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/MEGA/20240105_AQUASKY_MEGA-Plus-DM-Ar_231225-1.jpg",
+      "alt": "MEGA-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/MEGA/20240105_AQUASKY_MEGA-Plus-DM-Ar_231225-2.jpg",
+      "alt": "MEGA-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/MEGA/20240105_AQUASKY_MEGA-Plus-DM-Ar_231225-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/MEGA/20240105_AQUASKY_MEGA-Plus-DM-Ar_231225-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

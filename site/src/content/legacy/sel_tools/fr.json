@@ -1,0 +1,33 @@
+{
+  "_note": "舊站 /fr/sel_tools（français）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "legacy",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Calculateur en Ligne de Dimensionnement de Réservoir | AQUASKY",
+    "description": "Utilisez notre outil interactif en ligne pour calculer la taille et la capacité exactes du réservoir sous pression requis pour votre pompe ou chauffage."
+  },
+  "h1": "OUTILS DE SÉLECTION",
+  "hasVisibleH1": true,
+  "legacyJsonLd": [
+    {
+      "@type": "WebPage",
+      "@id": "https://aquaskyplus.com/fr/sel_tools#webpage",
+      "url": "https://aquaskyplus.com/fr/sel_tools",
+      "name": "Calculateur en Ligne de Dimensionnement de Réservoir | AQUASKY",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://aquaskyplus.com/fr/sel_tools#app",
+      "name": "AQUASKY Tank Sizing Calculator",
+      "url": "https://aquaskyplus.com/fr/sel_tools",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+  ],
+  "bodyHtml": "<div id=\"service-container\" class=\"container-fluid\">\n<h1 id=\"about-top-title\" class=\"h1-1\">OUTILS DE SÉLECTION</h1>\n\t<div id=\"select_tools\" class=\"container\">\n    \t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"st_txt_style1\">\n            \t<p class=\"lang_rtl\" style=\"text-align:justify;\">Des années d'expérience et un excellent service client, Aquasky a toute l'expérience nécessaire pour dimensionner votre système. Nos ingénieurs concepteurs, détaillants et techniciens apportent le soutien dont ils peuvent avoir besoin lors du calcul des formules et de l'évaluation des données techniques. Un outil qui transforme la difficulté en simplicité. Cet outil est un moyen rapide et précis pour trouver la meilleure solution lorsqu'il s'agit de dimensionner les produits Aquasky Plus. En un simple clic sur les informations de pression, la taille excellente du réservoir à pression s'affiche pour votre système.</p>\n            </div>\n\t\t\t<div class=\"service_spacing-2\"></div>\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\"></div>\n            \t<div class=\"col-sm-4\">\n                \t<div class=\"step_style-1\"><p>System</p></div>\n                </div>\n                <div class=\"col-sm-4\"></div>\n            </div>\n            <div class=\"service_spacing-2\"></div>\n\n\t\t\t<div class=\"row\">\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/fr/sel_unit_ps\"><p>Pressure Switch</p></a></p></div>\n                </div>\n            \t<div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/fr/sel_unit_vsd\"><p>VSD(VFD)</p></a></p></div>\n                </div>\n                <div class=\"col-sm-4\">\n                \t<div id=\"\" class=\"step_unit btn_active\"><a href=\"/fr/sel_unit_thermal\"><p>Thermal<br>Expansion Tank</p></a></p></div>\n                </div>\n            </div>\n\n        <div class=\"service_spacing-2\"></div>\n\t</div>\n</div>"
+}

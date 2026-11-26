@@ -60,6 +60,11 @@ const ASSETS = [
   ['/images/products/accessories/accessories6.png'],
   ['/images/selection%20tools_en.png', '/images/selection-tools_en.png'],
   ['/images/selection%20tools_zh.png', '/images/selection-tools_zh.png'],
+  ['/images/selection%20tools_es.png', '/images/selection-tools_es.png'],
+  ['/images/selection%20tools_fr.png', '/images/selection-tools_fr.png'],
+  ['/images/selection%20tools_ru.png', '/images/selection-tools_ru.png'],
+  ['/images/selection%20tools_arxa.png', '/images/selection-tools_ar.png'],   // 舊站阿拉伯文檔名就叫 _arxa
+  ['/images/pd-title-line-02.png'],   // 舊站 es／fr／ru 每頁 <style> 把標題線換成這張（site.css）
   // 首頁認證圖示
   ['/images/home-service/s2-img-01.png'],
   ['/images/home-service/s2-img-02.png'],

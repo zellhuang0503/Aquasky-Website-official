@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ar/SOLAR-PLUS（العربية）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/solar-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。 2026-11-26：舊站阿拉伯文有幾處明顯譯錯或錯字，梵亞改正（AI 判斷，未經母語審稿；改了哪些見 client-text-edits.json 或 README）。",
+  "template": "classic",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Solar-Plus خزان تمدد حراري للأنظمة الشمسية | AQUASKY",
+    "description": "تم تصميم خزان AQUASKY Solar-Plus بأغشية مقاومة لدرجات الحرارة المرتفعة لامتصاص تمدد السوائل في أنظمة التسخين الشمسي."
+  },
+  "h1": "Solar-Plus خزان تمدد حراري للأنظمة الشمسية | AQUASKY",
+  "about": {
+    "heading": "SOLAR-PLUS خزان الضغط",
+    "body": "مثل كل نظام مغلق حيث يتغير حرارة السائل، تحتاج التركيبة الشمسية أيضًا إلى وعاء توسع. يلعب وعاء التوسع Solar-plus دورًا مهمًا في هذا الصدد عندما يتعلق الأمر بالحفاظ على الضغط. يجب ألا يرتفع الضغط كثيرًا عند توقف الدورة في المجمع، ولكن أيضًا لا يجب أن يكون منخفضًا جدًا عندما تكون درجة الحرارة الخارجية أقل من النقطة التجميد. الوسط في تركيبة شمسية هو في الغالب خليط من الماء والجليكول، ولديه معامل توسع عالٍ. يمكن أن يتوقع خزان التوسع Solar-Plus مثل هذه التقلبات في درجة الحرارة ويحافظ على ضغط النظام في نطاق آمن."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20240105_AQUASKY_SolarPlus-DM-Ar_231225-1.jpg",
+      "alt": "SOLAR-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20240105_AQUASKY_SolarPlus-DM-Ar_231225-2.jpg",
+      "alt": "SOLAR-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20240105_AQUASKY_SolarPlus-DM-Ar_231225-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20240105_AQUASKY_SolarPlus-DM-Ar_231225-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

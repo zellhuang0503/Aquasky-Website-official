@@ -1,0 +1,40 @@
+{
+  "kind": "news",
+  "lang": "ru",
+  "category": "INDUSTRY",
+  "slug": "aquasky-11",
+  "path": "/news-detail/INDUSTRY/aquasky-11",
+  "status": "approved-legacy",
+  "dateText": "11 30 2023",
+  "datePublished": "2023-11-30T17:02:42+0800",
+  "title": "Преимущества наполнения бака под давлением для питьевой воды азотом | Aquasky",
+  "cover": "/upfile/Images/news/N2.png",
+  "excerptHtml": "<p>Баки Aquasky наполнены на 100% азотом, и мы единственный производитель баков, который это делает сейчас.</p>",
+  "seo": {
+    "title": "Преимущества наполнения бака под давлением для питьевой воды азотом | Aquasky",
+    "description": "Баки Aquasky наполнены на 100% азотом, и мы единственный производитель баков, который это делает сейчас."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/aquasky-11#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/aquasky-11"
+      },
+      "headline": "Преимущества наполнения бака под давлением для питьевой воды азотом | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/N2.png",
+      "description": "Баки Aquasky наполнены на 100% азотом, и мы единственный производитель баков, который это делает сейчас.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2023-11-30T17:02:42+0800"
+    }
+  ],
+  "bodyHtml": "<p>Преимущества наполнения бака под давлением для питьевой воды азотом | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/N2.png\" /></p>\r\n\r\n<p>Баки Aquasky наполнены на 100% азотом, и мы единственный производитель баков, который это делает сейчас.</p>\r\n\r\n<p>Воздух состоит на 78 процентов из азота, чуть менее 21 процента кислорода, а остальное &mdash; это водяной пар, CO2 и небольшие количества благородных газов, таких как неон и аргон.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Почему использовать азот?</p>\r\n\r\n<p>Азот менее склонен к миграции через резиновую диафрагму, чем кислород, что означает, что не требуется повторно наполнять бак воздухом после ввода его в эксплуатацию.</p>\r\n\r\n<p>Азот &mdash; это очень устойчивый газ против изменений температуры, что означает более стабильное давление в течение срока службы.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Например, Нью-Йорк:</p>\r\n\r\n<p>Летняя температура 28 градусов Цельсия</p>\r\n\r\n<p>Зимняя температура 0 градусов Цельсия</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>С обычным наполнением воздухом в баке под давлением, давление воздуха зимой ниже, чем летом, с разницей почти в 30 градусов.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><iframe allow=\";\" allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/XIcUfTpj4uE\" width=\"640\"></iframe></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>★Больше баков Aquasky:</p>\r\n\r\n<p>PUMPLUS Бак под давлением: <a href=\"https://aquaskyplus.com/products.php\">https://aquaskyplus.com/products.php</a></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/N2.png"
+  ]
+}

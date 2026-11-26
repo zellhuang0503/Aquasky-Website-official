@@ -1,0 +1,40 @@
+{
+  "kind": "news",
+  "lang": "ru",
+  "category": "INDUSTRY",
+  "slug": "2024-aquasky-15",
+  "path": "/news-detail/INDUSTRY/2024-aquasky-15",
+  "status": "approved-legacy",
+  "dateText": "12 20 2023",
+  "datePublished": "2023-12-20T20:19:14+0800",
+  "title": "С Рождеством и с Новым 2024 Годом |  Aquasky",
+  "cover": "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+  "excerptHtml": "<p>Акрывая главу об этом замечательном 2023 году , Aquasky хочет выразить вам наши самые теплые поздравления со всеми достигнутыми великими успехами. Желаем вам радостного Рождества, наполненного теплом, любовью и незабываемыми моментами.</p>",
+  "seo": {
+    "title": "С Рождеством и с Новым 2024 Годом | Aquasky",
+    "description": "Акрывая главу об этом замечательном 2023 году , Aquasky хочет выразить вам наши самые теплые поздравления со всеми достигнутыми великими успехами. Желаем вам радостного Рождества, наполненного теплом, любовью и незабываемыми моментами."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/2024-aquasky-15#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/2024-aquasky-15"
+      },
+      "headline": "С Рождеством и с Новым 2024 Годом | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+      "description": "Акрывая главу об этом замечательном 2023 году , Aquasky хочет выразить вам наши самые теплые поздравления со всеми достигнутыми великими успехами. Желаем вам радостного Рождества, наполненного теплом, любовью и незабываемыми моментами.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2023-12-20T20:19:14+0800"
+    }
+  ],
+  "bodyHtml": "<p>С Рождеством и с Новым 2024 Годом | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png\" /></p>\r\n\r\n<p>Акрывая главу об этом замечательном 2023 году , Aquasky хочет выразить вам наши самые теплые поздравления со всеми достигнутыми великими успехами. Желаем вам радостного Рождества, наполненного теплом, любовью и незабываемыми моментами.</p>\r\n\r\n<p>За прекрасный Новый Год, полный новых приключений и продолжающихся успехов!</p>",
+  "assets": [
+    "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ar/PUMPLUS（العربية）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/pumplus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。 2026-11-26：舊站阿拉伯文有幾處明顯譯錯或錯字，梵亞改正（AI 判斷，未經母語審稿；改了哪些見 client-text-edits.json 或 README）。",
+  "template": "classic",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "PumPlus خزان ضغط مضخة التعزيز | خزان المياه الغشائي للآبار | AQUASKY",
+    "description": "خزان الضغط الغشائي AQUASKY PumPlus موفر للطاقة وخالٍ من الصيانة ومخصص لمضخات التعزيز وأنظمة الآبار. معتمد بموجب معيار NSF/ANSI 372 الخالي من الرصاص، بضغط أقصى 10 بار."
+  },
+  "h1": "PumPlus خزان ضغط مضخة التعزيز | خزان المياه الغشائي للآبار | AQUASKY",
+  "about": {
+    "heading": "حول خزان الضغط PUMPLUS",
+    "body": "خزان الضغط PumPlus هو جزء أساسي من نظام المياه المضغوطة الذي يوفر ضغط الماء عند مستوى محدد. يخزن الخزان الماء الإضافي بين الحجاب الحاجز والبطانة، ويمكن للغرفة الهوائية المضغوطة أن تخلق دائرة إمداد. هذه العملية تقلل من عدد مرات بدء تشغيل المحرك لكي يظل ضغط النظام عند المستوى المحدد. توتر الحجاب الحاجز يحافظ على ضغط الماء داخل النظام، مما يضمن عمل غسالة الأطباق وغسالة الملابس بشكل صحيح، وتدفق قوي للدش وحوض الاستحمام. خزان الضغط PumPlus هو جهاز يوفر الطاقة ولا يحتاج إلى صيانة. سيعمل الضخ وخزان الضخ المحددان بشكل صحيح كفريق لتلبية احتياجاتك وسيقدمان العديد من سنوات الخدمة الموثوق بها."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/PUMPLUS/20240105_AQUASKY_PUMPLUS-DM-Blue-Ar_231228-1.jpg",
+      "alt": "PUMPLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/PUMPLUS/20240105_AQUASKY_PUMPLUS-DM-Blue-Ar_231228-2.jpg",
+      "alt": "PUMPLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/PUMPLUS/20240105_AQUASKY_PUMPLUS-DM-Blue-Ar_231228-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/PUMPLUS/20240105_AQUASKY_PUMPLUS-DM-Blue-Ar_231228-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

@@ -3,16 +3,16 @@
 來源：`translation/sources/LQCOL-PLUS.md`（2026-10-22 封存的 /en/LQCOL-PLUS）。產生：2026-10-23，梵亞 AI 初稿，尚未經母語審稿。
 格式：每個區塊 `### B編號 · 元素`，`EN:` 是英文原文，`ES:` 是譯文。審稿只改 `ES:` 那一行；數字、型號、單位、品牌一律原樣保留（見 do-not-translate.md）。小數點保留 `.`。
 檢查：`python translation/lqcol-plus/check_lqcol.py`。
-B01／B02 是舊站既有的標題與描述，照舊保留，未重翻。規格表的數字列不在此檔，只翻欄位標題。
+B01／B02 是 Tiffany 2026-11-20 改的英文搜尋標題／描述（液冷版），2026-11-26 AI 重翻（舊站 HVAC 版作廢）。規格表的數字列不在此檔，只翻欄位標題。
 Para el revisor: corrija solo la línea `ES:` de cada bloque. Conserve números, modelos, unidades, siglas y nombres de marca tal como están en inglés.
 
 ### B01 · title
-EN: LQCOL-Plus Liquid Cold Expansion Tank | Chilled Water Expansion Vessel | AQUASKY
-ES: LQCOL-Plus Tanque de Expansión para Agua Fría | Vaso HVAC | AQUASKY
+EN: LQCOL-Plus Liquid Cold System Expansion Tank | Data Center Liquid Cooling | AQUASKY
+ES: LQCOL-Plus Tanque de Expansión para Refrigeración Líquida | Centros de Datos | AQUASKY
 
 ### B02 · meta
-EN: AQUASKY LQCOL-Plus is optimized for chilled water and liquid cooling systems, accommodating water volume changes in commercial HVAC and refrigeration loops.
-ES: AQUASKY LQCOL-Plus está optimizado para sistemas de agua helada y enfriamiento líquido, absorbiendo cambios de volumen en HVAC comercial.
+EN: AQUASKY LQCOL-Plus expansion tank for data center liquid cooling and CDU loops absorbs coolant volume changes and stabilizes pressure for AI/HPC servers.
+ES: Tanque de expansión AQUASKY LQCOL-Plus para refrigeración líquida y circuitos CDU: absorbe cambios de volumen y estabiliza la presión en servidores AI/HPC.
 
 ### B03 · h1
 EN: LIQUID COLD SYSTEM EXPANSION TANK

@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ru/HYDRO-PLUS（русский）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/hydro-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "ru",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Hydro-Plus Расширительный бак для отопления | Мембранный бак | AQUASKY",
+    "description": "Мембранные расширительные баки AQUASKY Hydro-Plus разработаны для закрытых систем отопления и охлаждения для компенсации теплового расширения воды."
+  },
+  "h1": "Hydro-Plus Расширительный бак для отопления | Мембранный бак | AQUASKY",
+  "about": {
+    "heading": "БАК HYDRO-PLUS Баки для гидронического отопления",
+    "body": "Баки для гидронического расширения Hydro-Plus разработаны для поглощения расширенной жидкости в замкнутом контуре жилых или коммерческих систем гидронического отопления и охлаждения для контроля накопления давления. Баки для расширения Hydro-Plus состоят из бака из листовой стали, соответствующего стандартам IAPMO и EN, и сваренного в соответствии с процедурой ASME & EN сертифицированным сварщиком. Диафрагма изготовлена из резины EPDM, устойчивой к высоким температурам. Все модели подвергаются гидравлическому тесту с давлением, в 1,5 раза превышающим проектное давление. Бак для расширения Hydro-Plus - лучший выбор для вашей системы гидронического отопления."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/HYDRO/20231114_HydroPlus-DM-Ru_231107-1.jpg",
+      "alt": "HYDRO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/HYDRO/20231114_HydroPlus-DM-Ru_231107-2.jpg",
+      "alt": "HYDRO-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20231114_HydroPlus-DM-Ru_231107-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20231114_HydroPlus-DM-Ru_231107-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}
