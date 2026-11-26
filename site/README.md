@@ -8,8 +8,8 @@
 | --- | --- | --- |
 | `/`（英文首頁，canonical 指 `/en`） | `src/pages/index.astro` | 舊站文字 |
 | `/en`、`/zh` | `src/pages/[lang].astro` | 舊站文字；英文認證說明是新補的，待審 |
-| `/en/LQCOL-PLUS` | `src/pages/[lang]/LQCOL-PLUS.astro` | 舊站英文原文 |
-| `/zh/LQCOL-PLUS` | 同上 | **AI 初稿**，頁面上有黃色提示，待 Tiffany 審 |
+| `/en/LQCOL-PLUS` | `src/pages/[lang]/LQCOL-PLUS.astro` | 舊站英文原文＋Tiffany 2026-11-20 指定改字（搜尋標題／描述、容量那句） |
+| `/zh/LQCOL-PLUS` | 同上 | Tiffany 2026-11-13 審過（approved）；11/20 改字照英文同步 |
 | `/en/PUMPLUS`、`/en/RO-PLUS`、`/en/THERMAL-PLUS`、`/en/HYDRO-PLUS`、`/en/PREMIUM-PLUS`、`/en/MEGA-PLUS`、`/en/SOLAR-PLUS` | `src/pages/[lang]/[page].astro` → `ClassicSeries.astro`（經典模板） | 舊站英文原文＋型號清單 |
 | 同上 7 頁的 `/zh/…` | 同上 | 舊站中文原文；**照舊站沒有型號清單**，7 頁都放舊站的兩張 DM 大圖（照舊站 JS 的行為用 img-responsive：圖比欄寬就滿版，比欄窄就原尺寸置中）；DM 區塊的段落與空段落結構照舊站保存在 `edmHtml` |
 | `/en`、`/zh` 的 supreme、dl-ce、asme-ht、GIGA-PLUS、accessories | `src/pages/[lang]/[page].astro` → `LegacyPage.astro`（照抄模板） | 舊站主體 HTML 整段照抄，verify 會把頁面純文字跟封存逐字比 |
@@ -149,7 +149,8 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 
   正文的改字記在 `client-text-edits.json`（7 筆）。meta description 是屬性，verify 比不到，所以只記在這裡。es／fr／ru／ar 上線時要套同樣的改法，`translation/sources/FAQ.md`、`RO-PLUS.md` 那四個語系的原文還是舊說法。FAQ 第 9 題原本寫「warranty differs in market…請洽當地經銷商」，黃老闆 11/19 會後決定也改成 5 年：「All AQUASKY tanks (RO, Well, Thermal and Hydronic) come with a 5-year warranty.／溢康所有罐體（含 RO 罐）皆提供 5 年保固。」，原本的經銷商那句一起拿掉（client-text-edits.json 另 2 筆）。es／fr／ru／ar 的第 9 題也一樣要改。
 - 經典系列頁的型號連到 `/en/products-det/...`（舊站也是只有英文明細頁）；中文系列頁照舊站沒有型號清單，不連明細。
-- meta description 縮短（Tiffany 2026-11-20 第 12 題「依照貴司建議執行」）：超過英文 160／中日文 80 字的 341 段（下載子頁 14、新聞與影片約 220、產品明細、各系列與文字頁）縮到英文 ≤155、中日文 ≤80，只用原句裡有的事實，型號與數字照抄。只改 description，正文不動。schema 的長度上限還沒收緊（新聞與下載子頁仍放寬），之後新增內容要自己控制長度。
+- LQCOL-PLUS（Tiffany 2026-11-20 第 4、6 題）：en／zh 搜尋標題改「…Liquid Cold System Expansion Tank | Data Center Liquid Cooling…」「…液冷系統膨脹水箱 | 資料中心液冷專用…」，description 改講液冷；In-Rack／In-Row 那句改成她給的「compact designs (3L+)…(24L / 60L)」，拿掉 0.5L／1L／100L+。zh 那句（精巧機型（3L 以上））與 zh 標題以外的 description 是梵亞照英文改的，她還沒看過中文。
+- meta description 縮短（Tiffany 2026-11-20 第 12 題「依照貴司建議執行」）：超過英文 160／中日文 80 字的 340 段（下載子頁 14、新聞與影片約 220、產品明細、各系列與文字頁）縮到英文 ≤155、中日文 ≤80，只用同頁內容（原句、title、正文）裡有的事實，型號與數字照抄。只改 description，正文不動。schema 的長度上限還沒收緊（新聞與下載子頁仍放寬），之後新增內容要自己控制長度。
 - 認證總覽 WRAS 那格：補「CERTIFICATION LINK／認證連結」到新建的 wras-uk 頁（舊站那格沒有按鈕）；中文那格的證書圖舊站是「Under Process」，新站換成跟英文同一張 WRAS 證書。中文 WRAS 單頁舊站誤放 ACS 證書圖，新站也改放 WRAS 證書。
 - 沒有 cookie 同意列與「回到頂端」鈕（預覽期先不做；正式版要不要留 cookie 列待決）。
 - 舊站 accessories、products、FAQ、contact、downloadpage、videos 頁沒有 `<h1>`，新站各補一個看不見的 h1（＝title），版面不變。
@@ -164,11 +165,10 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
 - 新聞正文裡 YouTube 的 iframe 保留（schema 只准 youtube／youtube-nocookie）；正文裡連到舊站 `.php` 的連結照舊（約 130 處），切換時要改。
 - 英文產品明細（90 頁）：匯入時拿掉 `<font dir="auto" style="vertical-align: inherit;">` 層層包裝（Google 翻譯殘留，90 頁合計 6 萬多個；唯一的視覺影響是規格表每列矮 2px，APT-3 整頁 5846 vs 舊站 5862，肉眼看不出），verify 比對時兩邊都先去掉；配件明細的「<<back」從 `accessories.php?lang=en` 改成 `/en/accessories`；頁內「Price Inquiry」「Contact us」連 `/en/sel_tools`、`/en/contact`（舊站是相對路徑，同一處）。68 頁正文裡的 YouTube iframe（width=560）在手機會撐寬整頁（舊站同），site.css 讓它不超過欄寬。舊站這些頁 head 沒有 JSON-LD（AEO Worker 注入的不搬），新站只有全站的 Organization／WebSite／BreadcrumbList。
 - 選型計算器：舊站把算出的容積 POST 到 select_api*.php 由伺服器挑型號、回一段 HTML，再可 POST 到 printpdf*.php 產 PDF、sel_contact.php 轉詢價；新站全部在瀏覽器算（結果區自己畫：Proper Tank Size、Model Number、Series、Total Tank Volume、連到產品明細、預充壓與免責句照 2021 列印 PDF），「Print Technical File」改成瀏覽器列印（印出表單與結果，藏掉選單與頁尾），「contact us」改成連到聯絡頁（不帶入選型資料）。Pressure Switch PSI 預充壓照舊站的 `Cut-in − 2.8`（客戶 2022 文件寫 − 2；2026-11-08 黃老闆決定照現在網站、不問客戶，數字在 `src/data/selection-tools.json`）；預充壓數字四捨五入到 2 位（舊站直接印浮點數會出現 2.0999999）。Thermal 的型號對照客戶沒給，用 THERMAL-PLUS 型號清單套「容積 ≥ 算出值的最小型號」。STEP 2／3 的中間值與預充壓句載入就先算好顯示（舊站 VSD／Thermal 要按送出才顯示；PS 頁的 AF 與 Total 載入時空白），結果區連到英文產品明細（產品明細只有英文版，zh 頁也連 /en/）。PS PSI 區塊照抄來的「11.7 PSI」靜態字與 JS 算出的 11.7 一致（11/8 改回 − 2.8 之後）。黃老闆 11/8 另決定：舊站的「列印 PDF」與「轉詢價」兩個功能都要做（待辦）。舊站 head 的 WebPage（指到 /sel_tools）不搬。
-- 單張認證頁：網址從 `certification_page.php?sid=N` 改成 `/<lang>/certification-page/<slug>`（舊網址切換時要 Worker 301）；舊站沒有 h1、title 五頁都是同一句全站通用的，新站補看不見的 h1＝標題帶字樣（CERTIFICATION | Eurocert），title／description 照舊（列在資料問題）。證書大圖 inline 寬高在手機撐寬整頁（舊站同），site.css 讓它不超過欄寬、高度等比；桌機只有 WaterMark 兩張 600px 的縮成 570。
+- 單張認證頁：網址從 `certification_page.php?sid=N` 改成 `/<lang>/certification-page/<slug>`（舊網址切換時要 Worker 301）；舊站沒有 h1、title 五頁都是同一句全站通用的，新站補看不見的 h1＝標題帶字樣（CERTIFICATION | Eurocert）；title／description 用 Tiffany 2026-11-20 給的英文（6 頁含 WRAS），zh 由梵亞照意思翻，她還沒看過中文。證書大圖 inline 寬高在手機撐寬整頁（舊站同），site.css 讓它不超過欄寬、高度等比；桌機只有 WaterMark 兩張 600px 的縮成 570。
 - 影片明細的 JSON-LD：舊站 zh 影片的 `@id`／`mainEntityOfPage` 還寫 `videos-detail.php?sid=…`，匯入時改成新站乾淨網址；Article 補 publisher。
 - 下載子頁（/download/<language>）：舊站線上版的選單語言會跟著 cookie 走（看過中文頁再開就變中文選單），封存版是英文；新站固定英文介面。這些頁舊站沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站 canonical 指自己、不輸出 hreflang（14 頁各是一種型錄語言，不是網站語系）。麵包屑：首頁›DOWNLOAD›EDM English。
 - 新聞明細手機版：8 篇正文有固定寬度的表格或 iframe，舊站會把整頁撐寬（390 寬變 515～815）；新站在 site.css 讓 `#news-container #ImgAutoResponsive` 橫向捲、iframe max-width 100%，桌機版面不變。
-- 新聞 meta description 長短不一（13～1235 字）照舊站，不改；列在「已知的資料問題」。
 - 聯絡表單：舊站驗證碼那一列（*CODE＋recode.php 圖）與 csrf 隱藏欄位拿掉，換成 Cloudflare Turnstile 框（送出鈕上方）；鈕下方多一行狀態訊息、另加看不見的蜜罐欄（都由 contact-form.js 載入後補上，表單 HTML 不變）；送出改打 `/api/contact`（整體規劃 §7.2；細節見「聯絡表單與舊網址轉址」）。
 - 下載頁有 6 張國旗圖檔名是非英文（例如 Україна.jpg），封存裡是百分比編碼，複製腳本兩種寫法都認；`--fetch-missing` 可從線上舊站補封存沒有的檔。
 - 中文經典系列頁頁面上沒有型號清單（同舊站），所以 JSON-LD 的 ProductGroup 不帶 hasVariant；英文頁才有（結構化資料只標頁面看得到的東西）。
