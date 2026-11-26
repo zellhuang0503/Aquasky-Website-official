@@ -1,11 +1,11 @@
 {
-  "_note": "LQCOL-PLUS English text, verbatim from the 2026-10-22 archive (translation/sources/LQCOL-PLUS.md). Spec numbers live in src/data/products/lqcol-plus.json.",
+  "_note": "LQCOL-PLUS English text, verbatim from the 2026-10-22 archive (translation/sources/LQCOL-PLUS.md). Spec numbers live in src/data/products/lqcol-plus.json. Client-requested changes (Tiffany 2026-11-20, 網站確認事項整理 v2 Q4/Q6): seo title/description rewritten for data center liquid cooling; the In-Rack/In-Row sentence now reads 3L+ and 24L / 60L (0.5L / 1L / 100L+ removed).",
   "template": "lqcol",
   "lang": "en",
   "status": "approved-legacy",
   "seo": {
-    "title": "LQCOL-Plus Liquid Cold Expansion Tank | Chilled Water Expansion Vessel | AQUASKY",
-    "description": "AQUASKY LQCOL-Plus is optimized for chilled water and liquid cooling systems, accommodating water volume changes in commercial HVAC and refrigeration loops."
+    "title": "LQCOL-Plus Liquid Cold System Expansion Tank | Data Center Liquid Cooling | AQUASKY",
+    "description": "AQUASKY LQCOL-Plus expansion tank for data center liquid cooling and CDU loops absorbs coolant volume changes and stabilizes pressure for AI/HPC servers."
   },
   "h1": "LIQUID COLD SYSTEM EXPANSION TANK",
   "about": {
@@ -89,7 +89,7 @@
       },
       {
         "lead": "Tailored for both In-Rack and In-Row CDUs,",
-        "text": "offering ultra-compact designs (0.5L / 1L / 3L) for space-constrained server racks and high-volume tanks (24L / 60L / 100L+) for rack-level and row-level cooling."
+        "text": "offering compact designs (3L+) for space-constrained server racks and high-volume tanks (24L / 60L) for rack-level and row-level cooling."
       },
       {
         "lead": "Hyperscaler Infrastructure",

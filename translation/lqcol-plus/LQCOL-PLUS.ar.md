@@ -108,8 +108,8 @@ EN: • Direct-to-Chip & Immersion Cooling: Precision cooling loops needing zero
 AR: • التبريد المباشر للشريحة والتبريد بالغمر: حلقات تبريد دقيقة تتطلب انعدام التسرب الدقيق وتدفق سائل تبريد نقي.
 
 ### B26 · p
-EN: • Tailored for both In-Rack and In-Row CDUs, offering ultra-compact designs (0.5L / 1L / 3L) for space-constrained server racks and high-volume tanks (24L / 60L / 100L+) for rack-level and row-level cooling.
-AR: • مصمم لوحدات CDU من نوع In-Rack و In-Row: تصاميم فائقة الإحكام (0.5L / 1L / 3L) لرفوف الخوادم محدودة المساحة، وخزانات كبيرة السعة (24L / 60L / 100L+) للتبريد على مستوى الرف والصف.
+EN: • Tailored for both In-Rack and In-Row CDUs, offering compact designs (3L+) for space-constrained server racks and high-volume tanks (24L / 60L) for rack-level and row-level cooling.
+AR: • مصمم لوحدات CDU من نوع In-Rack و In-Row: تصاميم مدمجة (3L+) لرفوف الخوادم محدودة المساحة، وخزانات كبيرة السعة (24L / 60L) للتبريد على مستوى الرف والصف.
 
 ### B27 · p
 EN: • Hyperscaler Infrastructure: Built for zero single point of failure (ZSPOF) standards.
