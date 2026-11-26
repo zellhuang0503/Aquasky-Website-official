@@ -12,7 +12,7 @@
   "excerptHtml": "<p>The Head is a height at which a pump can give the fluid. It is measured in feet or meters of the output vessel of the pump. It is fluid-independent, that is, regardless of the fluid&#39;s relative density, the pump will lift it to the same height. The greater the pump head the greater the pressure that the pump can generate. These statistics can be measured by placing a water tube on the pump&#39;s discharge section, and measuring the maximum height that the pump can supply the water.</p>",
   "seo": {
     "title": "What are Water Head and Water Pressure? ｜Aquasky",
-    "description": "The Head is a height at which a pump can give the fluid. It is measured in feet or meters of the output vessel of the pump. It is fluid-independent, that is, regardless of the fluid's relative density, the pump will lift it to the same height. The greater the pump head the greater the pressure that the pump can generate. These statistics can be measured by placing a water tube on the pump's discharge section, and measuring the maximum height that the pump can supply the water."
+    "description": "Head is the height a pump can lift fluid, in feet or meters. The greater the pump head, the greater the pressure the pump can generate."
   },
   "legacyJsonLd": [
     {
