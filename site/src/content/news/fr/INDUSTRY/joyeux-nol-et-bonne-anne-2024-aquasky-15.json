@@ -1,0 +1,40 @@
+{
+  "kind": "news",
+  "lang": "fr",
+  "category": "INDUSTRY",
+  "slug": "joyeux-nol-et-bonne-anne-2024-aquasky-15",
+  "path": "/news-detail/INDUSTRY/joyeux-nol-et-bonne-anne-2024-aquasky-15",
+  "status": "approved-legacy",
+  "dateText": "12 20 2023",
+  "datePublished": "2023-12-20T20:15:08+0800",
+  "title": "Joyeux Noël et Bonne Année 2024 | Aquasky",
+  "cover": "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+  "excerptHtml": "<p>Alors que nous cl&ocirc;turons ce remarquable ann&eacute;e 2023, Aquasky souhaite vous adresser ses plus chaleureuses f&eacute;licitations pour tous les grands accomplissements r&eacute;alis&eacute;s. Nous vous souhaitons un joyeux No&euml;l rempli de chaleur, d&#39;amour et de moments pr&eacute;cieux.</p>",
+  "seo": {
+    "title": "Joyeux Noël et Bonne Année 2024 | Aquasky",
+    "description": "Alors que nous clôturons ce remarquable année 2023, Aquasky souhaite vous adresser ses plus chaleureuses félicitations pour tous les grands accomplissements réalisés. Nous vous souhaitons un joyeux Noël rempli de chaleur, d'amour et de moments précieux."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/joyeux-nol-et-bonne-anne-2024-aquasky-15#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/joyeux-nol-et-bonne-anne-2024-aquasky-15"
+      },
+      "headline": "Joyeux Noël et Bonne Année 2024 | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png",
+      "description": "Alors que nous clôturons ce remarquable année 2023, Aquasky souhaite vous adresser ses plus chaleureuses félicitations pour tous les grands accomplissements réalisés. Nous vous souhaitons un joyeux Noël rempli de chaleur, d'amour et de moments précieux.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2023-12-20T20:15:08+0800"
+    }
+  ],
+  "bodyHtml": "<p>Joyeux No&euml;l et Bonne Ann&eacute;e 2024 | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png\" /></p>\r\n\r\n<p>Alors que nous cl&ocirc;turons ce remarquable ann&eacute;e 2023, Aquasky souhaite vous adresser ses plus chaleureuses f&eacute;licitations pour tous les grands accomplissements r&eacute;alis&eacute;s. Nous vous souhaitons un joyeux No&euml;l rempli de chaleur, d&#39;amour et de moments pr&eacute;cieux.</p>\r\n\r\n<p>&Agrave; une merveilleuse nouvelle ann&eacute;e pleine de nouvelles aventures et de succ&egrave;s continus !</p>",
+  "assets": [
+    "/upfile/Images/news/20231220_%20Merry%20Christmas%20-%20final%20-%20front.png"
+  ]
+}

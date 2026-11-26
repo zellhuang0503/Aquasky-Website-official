@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /fr/THERMAL-PLUS（français）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/thermal-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Thermal-Plus Vase d'Expansion Thermique pour Chauffe-Eau | Ballon de Protection | AQUASKY",
+    "description": "Le vase d'expansion AQUASKY Thermal-Plus absorbe le volume d'eau dilaté pour protéger les chauffe-eau et réseaux de chauffage fermés. Membrane haute résistance, max 10bar."
+  },
+  "h1": "Thermal-Plus Vase d'Expansion Thermique pour Chauffe-Eau | Ballon de Protection | AQUASKY",
+  "about": {
+    "heading": "RÉSERVOIR D'EXPANSION THERMIQUE THERMAL-PLUS",
+    "body": "Le réservoir d'expansion thermique THERMAL-PLUS est conçu pour absorber l'eau dilatée dans les systèmes d'eau chaude fermés. La dilatation se produit lorsque l'eau domestique est chauffée. Les réservoirs d'expansion THERMAL-PLUS sont conçus pour maintenir en toute sécurité les niveaux de pression de l'eau dans les systèmes de chauffage de l'eau afin d'éviter la décharge de la soupape de sûreté et d'autres conditions potentiellement dangereuses. Les réservoirs d'expansion thermique fonctionnent en conjonction avec un dispositif anti-retour ou une soupape de retenue. Les réservoirs d'expansion THERMAL-PLUS sont équipés d'une connexion système en acier inoxydable, d'un revêtement en polypropylène séparant l'eau de la coque du réservoir, d'un diaphragme en caoutchouc butyle de haute résistance, et d'une précharge d'azote à 40 PSIG. Le réservoir contrôle la pression excessive générée à l'intérieur du chauffe-eau et assure le système le plus sûr pour votre maison."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20231102_AQUASKY_ThermalPlus-DM-Fr_231025-1.jpg",
+      "alt": "THERMAL-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20231102_AQUASKY_ThermalPlus-DM-Fr_231025-2.jpg",
+      "alt": "THERMAL-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20231102_AQUASKY_ThermalPlus-DM-Fr_231025-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20231102_AQUASKY_ThermalPlus-DM-Fr_231025-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

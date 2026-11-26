@@ -1,0 +1,29 @@
+{
+  "id": "ru-EXHIBITIONS",
+  "kind": "news",
+  "lang": "ru",
+  "category": "EXHIBITIONS",
+  "path": "/news/EXHIBITIONS",
+  "perPage": 5,
+  "pageCount": 1,
+  "titleBand": "Специализированная выставка",
+  "h4Recent": "ПОСЛЕДНИЕ НОВОСТИ",
+  "h4Side": "САМЫЕ СВЕЖИЕ НОВОСТИ",
+  "h4Detail": "ПОСЛЕДНИЕ НОВОСТИ",
+  "moreLabel": "Узнать больше...",
+  "backLabel": "НАЗАД",
+  "sidebar": [
+    {
+      "dateText": "April 14 2025",
+      "href": "/ru/news-detail/EXHIBITIONS/ish-frankfurt-2025-aquasky-47",
+      "title": "ISH Frankfurt 2025: \"Решения для устойчивого будущего\" | Aquasky"
+    }
+  ],
+  "order": [
+    "ish-frankfurt-2025-aquasky-47"
+  ],
+  "seo": {
+    "title": "Международные выставки AQUASKY: Мировые выставки водоочистки",
+    "description": "Ознакомьтесь с расписанием международных выставок AQUASKY. Посетите наши стенды на крупнейших выставках, таких как MCE в Италии и Aquatech."
+  }
+}

@@ -17,7 +17,11 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/upfile/Images/CERTIFICATION/acs_b.png",
@@ -25,7 +29,8 @@
     "/upfile/Images/CERTIFICATION/20251216_Aquasky%20ACS%20p1.jpg",
     "/upfile/Images/CERTIFICATION/20251216_Aquasky%20ACS%20p2.jpg",
     "/js/owl/owl.carousel.css",
-    "/js/owl/owl.theme.css"
+    "/js/owl/owl.theme.css",
+    "/images/pd-title-line-02.png"
   ],
   "dataQuestions": []
 }

@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ru/THERMAL-PLUS（русский）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/thermal-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "ru",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Thermal-Plus Расширительный бак для бойлера | Защитный напорный бак | AQUASKY",
+    "description": "Расширительные баки AQUASKY Thermal-Plus компенсируют температурное расширение воды в закрытых системах отопления и ГВС, защищая бойлеры и трубы. Давление до 10 бар."
+  },
+  "h1": "Thermal-Plus Расширительный бак для бойлера | Защитный напорный бак | AQUASKY",
+  "about": {
+    "heading": "THERMAL-PLUS БАК ДЛЯ ТЕРМИЧЕСКОГО РАСШИРЕНИЯ",
+    "body": "Бак для термического расширения THERMAL-PLUS предназначен для поглощения расширившейся воды в закрытых системах горячего водоснабжения. Расширение происходит при нагреве бытовой воды. Баки для термического расширения THERMAL-PLUS предназначены для безопасного поддержания уровня давления воды в системах водонагрева, чтобы избежать срабатывания клапана сброса давления и другие потенциально опасные условия. Баки для термического расширения работают совместно с устройствами предотвращения обратного потока или проверочными клапанами. Баки THERMAL-PLUS оснащены соединением из нержавеющей стали, полипропиленовым вкладышем, который отделяет воду от корпуса бака, мощной диафрагмой из бутилкаучука и предварительной зарядкой азота в 40 PSIG. Бак контролирует избыточное давление, создаваемое в водонагревателе, обеспечивая максимальную безопасность вашего дома."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20231114_ThermalPlus-DM-Ru_231105-1.jpg",
+      "alt": "THERMAL-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20231114_ThermalPlus-DM-Ru_231105-2.jpg",
+      "alt": "THERMAL-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20231114_ThermalPlus-DM-Ru_231105-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20231114_ThermalPlus-DM-Ru_231105-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

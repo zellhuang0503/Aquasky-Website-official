@@ -190,7 +190,8 @@ const pages = defineCollection({
 const newsCategory = z.enum(['EXHIBITIONS', 'INDUSTRY', 'VIDEOS']);
 const newsKind = z.enum(['news', 'videos']);
 const news = defineCollection({
-  loader: glob({ pattern: '**/*.json', base: './src/content/news' }),
+  // id 用檔案路徑（<lang>/<CAT>/<slug>）：資料裡有 slug 欄位，glob 預設會拿它當 id，es／fr／ru／ar 跟 en 同 slug 就會互相蓋掉
+  loader: glob({ pattern: '**/*.json', base: './src/content/news', generateId: ({ entry }) => entry.replace(/\.json$/, '') }),
   schema: z.object({
     kind: newsKind,
     lang,

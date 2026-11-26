@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /fr/SOLAR-PLUS（français）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/solar-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Solar-Plus Vase d'Expansion Solaire Haute Température | AQUASKY",
+    "description": "AQUASKY Solar-Plus est conçu avec des membranes résistantes aux hautes températures pour absorber la dilatation dans les systèmes de chauffage solaire thermique."
+  },
+  "h1": "Solar-Plus Vase d'Expansion Solaire Haute Température | AQUASKY",
+  "about": {
+    "heading": "Réservoir à pression SOLAR-PLUS",
+    "body": "Comme tout système fermé dans lequel la température d'un liquide change, une installation solaire a également besoin d'un réservoir d'expansion. Le réservoir d'expansion Solar-plus joue un rôle important à cet égard lorsqu'il s'agit de maintenir la pression. La pression ne doit pas monter trop haut lorsque la circulation dans le collecteur s'arrête, mais également pas trop basse lorsque la température extérieure est inférieure au point de congélation. Le milieu dans une installation solaire est principalement un mélange d'eau et de glycol, ayant un haut coefficient d'expansion. Le réservoir d'expansion Solar-Plus peut anticiper de telles fluctuations de température et maintient la pression du système dans une plage stable."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20231102_AQUASKY_SolarPlus-DM-Fr_231025-1.jpg",
+      "alt": "SOLAR-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/SOLAR-PLUS/20231102_AQUASKY_SolarPlus-DM-Fr_231025-2.jpg",
+      "alt": "SOLAR-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20231102_AQUASKY_SolarPlus-DM-Fr_231025-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/SOLAR-PLUS/20231102_AQUASKY_SolarPlus-DM-Fr_231025-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

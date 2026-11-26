@@ -1,0 +1,40 @@
+{
+  "kind": "news",
+  "lang": "ru",
+  "category": "INDUSTRY",
+  "slug": "2025-aquasky-52",
+  "path": "/news-detail/INDUSTRY/2025-aquasky-52",
+  "status": "approved-legacy",
+  "dateText": "07 12 2025",
+  "datePublished": "2025-07-12T21:11:48+0800",
+  "title": "Уведомление о летних каникулах 2025 | Aquasky",
+  "cover": "/upfile/Images/news/20250712_AQUASKY_SUMMER.jpg",
+  "excerptHtml": "<p>Компания Aquasky будет закрыта на короткий летний отпуск с среды, 23 июля, по пятницу, 25 июля 2025 года включительно.</p>\r\n\r\n<p>Мы возобновим обычный режим работы в офисе в понедельник, 28 июля 2025 года.</p>",
+  "seo": {
+    "title": "Уведомление о летних каникулах 2025 | Aquasky",
+    "description": "Компания Aquasky будет закрыта на короткий летний отпуск с среды, 23 июля, по пятницу, 25 июля 2025 года включительно. Мы возобновим обычный режим работы в офисе в понедельник, 28 июля 2025 года."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/2025-aquasky-52#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/2025-aquasky-52"
+      },
+      "headline": "Уведомление о летних каникулах 2025 | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20250712_AQUASKY_SUMMER.jpg",
+      "description": "Компания Aquasky будет закрыта на короткий летний отпуск с среды, 23 июля, по пятницу, 25 июля 2025 года включительно. Мы возобновим обычный режим работы в офисе в понедельник, 28 июля 2025 года.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2025-07-12T21:11:48+0800"
+    }
+  ],
+  "bodyHtml": "<p>Уведомление о летних каникулах 2025 | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20250712_AQUASKY_SUMMER.jpg\" /></p>\r\n\r\n<p>Уважаемые партнеры и клиенты,</p>\r\n\r\n<p>Компания Aquasky будет закрыта на короткий летний отпуск с среды, 23 июля, по пятницу, 25 июля 2025 года включительно.</p>\r\n\r\n<p>Мы возобновим обычный режим работы в офисе в понедельник, 28 июля 2025 года.</p>\r\n\r\n<p>В течение этого периода наша команда не сможет отвечать на электронные письма или обрабатывать заказы. Мы убедительно просим вас планировать любые срочные вопросы или запросы заранее, чтобы избежать сбоев в вашей работе.</p>\r\n\r\n<p>Мы приносим извинения за любые возможные неудобства и искренне ценим ваше понимание.</p>\r\n\r\n<p>Желаем вам прекрасного и расслабляющего лета!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20250712_AQUASKY_SUMMER.jpg"
+  ]
+}

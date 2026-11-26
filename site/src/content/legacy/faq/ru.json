@@ -1,0 +1,150 @@
+{
+  "_note": "舊站 /ru/FAQ（русский）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。客戶後來在 en／zh 改的字已套到本語系（見下）。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。 2026-11-26：保固題照 11/19 月會「所有罐體 5 年」改寫（同 en 第 9 題），新句與 meta description 是 AI 譯、未經審稿；舊 description「Ответы на вопросы о напорных баках AQUASKY: гарантия 3 или 5 лет, минимальный объем B2B заказа (20-фунтовый контейнер) и сертификат NSF/ANSI 372.」講 3/5 年、20 呎櫃，一起換掉。舊站本語系 FAQ 只有 16 題（en／zh 29 題），其餘 13 題等 Tiffany 客製化說法到了再整頁重翻。",
+  "template": "legacy",
+  "lang": "ru",
+  "status": "draft-ai",
+  "seo": {
+    "title": "Часто задаваемые вопросы: Гарантия, MOQ и кастомизация баков | AQUASKY",
+    "description": "Ответы на частые вопросы о напорных баках AQUASKY: гарантия 5 лет, B2B-заказы, индивидуальное исполнение и сертификат NSF/ANSI 372 (без свинца)."
+  },
+  "h1": "Часто задаваемые вопросы: Гарантия, MOQ и кастомизация баков | AQUASKY",
+  "hasVisibleH1": false,
+  "subtitle": "СЕРТИФИКАЦИЯ",
+  "legacyJsonLd": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://aquaskyplus.com/ru/FAQ#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Отмечены ли баки под давлением AQUASKY \"CE\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, баки под давлением AQUASKY соответствуют европейской директиве PED 2014/68 / EU (Директива по оборудованию под давлением) и выполнены в соответствии с EN 13831."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что такое NSF 61?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В общих чертах стандарт касается конкретных материалов, которые вступают в контакт с любым типом питьевой воды. Этот стандарт сосредоточен на оценке загрязнителей или примесей, проникающих в питьевую воду, и устанавливает требования к качеству воды с точки зрения здоровья."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Подходят ли диафрагменные баки под давлением AQUASKY для использования с питьевой водой?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, диафрагменные баки под давлением AQUASKY могут использоваться в санитарном водяном контуре и контактировать с питьевой водой."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какое максимальное рабочее давление у баков под давлением AQUASKY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Баки под давлением бар PSI Бак обратного осмоса RO-PLUS 7.0 100 Бак под давлением PUMPLUS 10 / 16 / 25 150/ 230 / 360 Бак термического расширения Therm-Plus 10 150 Бак гидронического отопления Hydro-Plus 10 150"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какая максимальная рабочая температура у баков под давлением AQUASKY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Баки под давлением Цельсий (°C) Фаренгейт (°F) Бак обратного осмоса RO-PLUS 90 194 Бак под давлением PUMPLUS 90 194 Бак термического расширения Therm-Plus 90 194 Бак гидронического отопления Hydro-Plus 120 250"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какой гарантийный срок у баков под давлением AQUASKY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "На все баки AQUASKY (RO, скважинные, термические и гидронные) предоставляется гарантия 5 лет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли изменить предварительное давление в баках под давлением AQUASKY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, возможно изменить предварительное давление в баках под давлением AQUASKY, соблюдая осторожность. Мы рекомендуем обратиться к эксперту для выполнения этой операции. Зная специфические особенности системы или установки, где должен быть или уже установлен сосуд, предварительное давление пустого сосуда AQUASKY можно увеличить до максимума в 3,5 бара и снизить до минимума в 0,5 бара."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие данные необходимы и как осуществляется подбор баков под давлением AQUASKY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В зависимости от типа использования (для котлов, систем отопления, систем горячего водоснабжения, систем горячего и холодного водоснабжения) можно подобрать бак под давлением, обратившись к КАЛЬКУЛЯТОРУ AQUASKY ДЛЯ РАЗМЕРОВ ПРОДУКТОВ AQUASKY. Для получения дополнительной информации свяжитесь с нашим техническим отделом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как датчик давления управляет насосом и баком?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Датчик давления координирует работу баков и насоса. Он контролирует давление внутри бака. Соответственно, он включает или отключает насос, когда в баке достигаются давления включения и выключения."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Каковы обычные давления включения и выключения?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В общем случае насос начинает и прекращает работу в соответствии с предустановленными значениями давления. Наш бак под давлением имеет функцию понижения давления с установками давления 30/50. Это означает, что насос включается (включение) при давлении в баке 30 psi и отключается (выключение) при 50 psi. Обычно разница между давлениями включения и выключения составляет 20 psi, начиная с 20 psi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Каково обычное предварительное давление для бака?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Предварительное давление бака зависит от многих факторов. Прежде всего, какой тип бака (в общем, только для отопления или для использования питьевой воды) и какой размер бака. Все баки AQUASKY предварительно заряжены и протестированы на заводе. Предварительное давление должно быть на 2 psi меньше давления включения насоса."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как устанавливать, обслуживать и обслуживать баки под давлением, производимые AQUASKY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Что касается установки, обслуживания и технического обслуживания баков под давлением, производимых AQUASKY, обратитесь к инструкциям по установке."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему диафрагменный бак?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Диафрагменный бак позволяет отделить азотное демпфирование системы от системной воды. Это предотвращает утечку воды, поскольку азот находится между стенкой бака и внешней стороной диафрагмы, а системная вода - с другой стороны. Корпус бака под давлением AQUASKY покрыт пищевым материалом с эпоксидным порошковым покрытием, к тому же, эта серия баков утверждена по стандарту NSF 61."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему использовать азот?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Азот менее склонен к миграции через резину диафрагмы, чем кислород, что означает, что бак под давлением не нуждается в дозаправке воздушного давления однажды находясь в эксплуатации. Азот - это очень стабильный газ в отношении изменений температуры, что означает более стабильные давления накачки в течение срока службы."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как проверить, не сломалась ли внутренняя диафрагма бака под давлением?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Все баки под давлением AQUASKY с диафрагмой предварительно заправляются азотом через воздушный клапан. Резиновая диафрагма внутри бака держит воду отделенной от азота. Поэтому, в случае сбоя и для проверки, не сломалась ли диафрагма бака, вы должны действовать на внутренний механизм воздушного клапана, нажимая на него инструментом, например, отверткой, и проверяя, что выходит. Если происходит утечка воды, это означает, что мембрана сломана, и вода полностью заполнила сосуд. Если выходит воздух, то мембрана, вероятно, все еще цела, и нужно просто снова предварительно заправить бак под давлением, чтобы он работал."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как избежать повреждений и неисправностей в баках под давлением и обеспечить продолжительность службы установленного изделия?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Afin d'éviter les casses et les dysfonctionnements, consultez d'abord l'étiquette technique collée sur le réservoir à pression et le manuel d'instructions fourni par le fabricant. De plus, il est nécessaire de : ● Правильно установите и проводите периодическое обслуживание ● Периодически проверяйте предварительное давление в баке под давлением и при необходимости восстанавливайте его до значения, указанного на этикетке ● Проверьте правильность заземления системы, чтобы избежать гальванических токов ● Проверьте правильный объем бака под давлением ● Обратите внимание на чрезмерное перепады давления и ударные явления в системе ● Избегайте установки бака под давлением в неподходящих условиях или в местах, подверженных особенно агрессивным климатическим условиям ● Избегайте образования конденсата, что приводит к развитию коррозионных явлений ● Отслеживайте pH-значение растворов, содержащих гликоли или другие вещества ● Избегайте смешивания различных антифризовых продуктов."
+          }
+        }
+      ]
+    }
+  ],
+  "bodyHtml": "<div id=\"news-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">ВОПРОСЫ И ОТВЕТЫ</div>\n\n<div class=\"container page_spacing lang_rtl\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-1\"></div>\n\t\t<div class=\"col-md-10 block-bg-01\">\n\n            <h2 class=\"news-h2 news-line\">СЕРТИФИКАЦИЯ</h2>\n<div class=\"row page_spacing-3\">\n\t<div class=\"col-md-3\"><img src=\"/images/FAQ/FAQ-01.png\" class=\"img-responsive center-block\" loading=\"lazy\"></div>\n    <div class=\"col-md-9\">\n    \t    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-08.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Отмечены ли баки под давлением AQUASKY \"CE\"?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_1\" aria-labelledby=\"qa_head_id_1\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Да, баки под давлением AQUASKY соответствуют европейской директиве PED 2014/68 / EU (Директива по оборудованию под давлением) и выполнены в соответствии с EN 13831.</p>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-08.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Что такое NSF 61?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_4\" aria-labelledby=\"qa_head_id_4\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>В общих чертах стандарт касается конкретных материалов, которые вступают в контакт с любым типом питьевой воды. Этот стандарт сосредоточен на оценке загрязнителей или примесей, проникающих в питьевую воду, и устанавливает требования к качеству воды с точки зрения здоровья.</p>            </div>\n        </div>\n\n    </div>\n</div>\n\n<h2 class=\"news-h2 news-line\">ПРОДУКТ</h2>\n<div class=\"row page_spacing-3\">\n\t<div class=\"col-md-3\"><img src=\"/images/FAQ/FAQ-02.png\" class=\"img-responsive center-block\" loading=\"lazy\"></div>\n    <div class=\"col-md-9\">\n    \t    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-09.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Подходят ли диафрагменные баки под давлением AQUASKY для использования с питьевой водой?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_2\" aria-labelledby=\"qa_head_id_2\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Да, диафрагменные баки под давлением AQUASKY могут использоваться в санитарном водяном контуре и контактировать с питьевой водой.</p>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-09.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Какое максимальное рабочее давление у баков под давлением AQUASKY?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_5\" aria-labelledby=\"qa_head_id_5\" >\n        \t<div class=\"news-content\">\n\t\t\t<table align=\"center\" class=\"table\">\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>\r\n\t\t\t<p>Баки под давлением</p>\r\n\t\t\t</th>\r\n\t\t\t<th>\r\n\t\t\t<p>бар</p>\r\n\t\t\t</th>\r\n\t\t\t<th>PSI</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак обратного осмоса RO-PLUS</p>\r\n\t\t\t</td>\r\n\t\t\t<td>7.0</td>\r\n\t\t\t<td>100</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак под давлением PUMPLUS</p>\r\n\t\t\t</td>\r\n\t\t\t<td>10 / 16 / 25</td>\r\n\t\t\t<td>150/ 230 / 360</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак термического расширения Therm-Plus</p>\r\n\t\t\t</td>\r\n\t\t\t<td>10</td>\r\n\t\t\t<td>150</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак гидронического отопления Hydro-Plus</p>\r\n\t\t\t</td>\r\n\t\t\t<td>10</td>\r\n\t\t\t<td>150</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-09.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Какая максимальная рабочая температура у баков под давлением AQUASKY?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_6\" aria-labelledby=\"qa_head_id_6\" >\n        \t<div class=\"news-content\">\n\t\t\t<table align=\"center\" class=\"table\">\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>\r\n\t\t\t<p>Баки под давлением</p>\r\n\t\t\t</th>\r\n\t\t\t<th>\r\n\t\t\t<p>Цельсий (&deg;C)</p>\r\n\t\t\t</th>\r\n\t\t\t<th>\r\n\t\t\t<p>Фаренгейт (&deg;F)</p>\r\n\t\t\t</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<thead>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак обратного осмоса RO-PLUS</p>\r\n\t\t\t</td>\r\n\t\t\t<td>90</td>\r\n\t\t\t<td>194</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак под давлением PUMPLUS</p>\r\n\t\t\t</td>\r\n\t\t\t<td>90</td>\r\n\t\t\t<td>194</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак термического расширения Therm-Plus</p>\r\n\t\t\t</td>\r\n\t\t\t<td>90</td>\r\n\t\t\t<td>194</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Бак гидронического отопления Hydro-Plus</p>\r\n\t\t\t</td>\r\n\t\t\t<td>120</td>\r\n\t\t\t<td>250</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-09.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Какой гарантийный срок у баков под давлением AQUASKY?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_7\" aria-labelledby=\"qa_head_id_7\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>На все баки AQUASKY (RO, скважинные, термические и гидронные) предоставляется гарантия 5 лет.</p>            </div>\n        </div>\n\n    </div>\n</div>\n\n<h2 class=\"news-h2 news-line2\">СОВЕТЫ</h2>\n<div class=\"row page_spacing-3\">\n\t<div class=\"col-md-3\"><img src=\"/images/FAQ/FAQ-03.png\" class=\"img-responsive center-block\" loading=\"lazy\"></div>\n    <div class=\"col-md-9\">\n    \t    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-10.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Можно ли изменить предварительное давление в баках под давлением AQUASKY?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_8\" aria-labelledby=\"qa_head_id_8\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Да, возможно изменить предварительное давление в баках под давлением AQUASKY, соблюдая осторожность. Мы рекомендуем обратиться к эксперту для выполнения этой операции. Зная специфические особенности системы или установки, где должен быть или уже установлен сосуд, предварительное давление пустого сосуда AQUASKY можно увеличить до максимума в 3,5 бара и снизить до минимума в 0,5 бара.</p>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-10.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Какие данные необходимы и как осуществляется подбор баков под давлением AQUASKY?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_9\" aria-labelledby=\"qa_head_id_9\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>В зависимости от типа использования (для котлов, систем отопления, систем горячего водоснабжения, систем горячего и холодного водоснабжения) можно подобрать бак под давлением, обратившись к КАЛЬКУЛЯТОРУ AQUASKY ДЛЯ РАЗМЕРОВ ПРОДУКТОВ AQUASKY. Для получения дополнительной информации свяжитесь с нашим техническим отделом.</p>            </div>\n        </div>\n\n    </div>\n</div>\n\n<h2 class=\"news-h2 news-line2\">ДАВЛЕНИЕ</h2>\n<div class=\"row page_spacing-3\">\n\t<div class=\"col-md-3\"><img src=\"/images/FAQ/FAQ-04.png\" class=\"img-responsive center-block\" loading=\"lazy\"></div>\n    <div class=\"col-md-9\">\n    \t    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-11.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Как датчик давления управляет насосом и баком?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_10\" aria-labelledby=\"qa_head_id_10\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Датчик давления координирует работу баков и насоса. Он контролирует давление внутри бака. Соответственно, он включает или отключает насос, когда в баке достигаются давления включения и выключения.</p>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-11.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Каковы обычные давления включения и выключения?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_11\" aria-labelledby=\"qa_head_id_11\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>В общем случае насос начинает и прекращает работу в соответствии с предустановленными значениями давления. Наш бак под давлением имеет функцию понижения давления с установками давления 30/50. Это означает, что насос включается (включение) при давлении в баке 30 psi и отключается (выключение) при 50 psi. Обычно разница между давлениями включения и выключения составляет 20 psi, начиная с 20 psi.</p>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-11.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Каково обычное предварительное давление для бака?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_12\" aria-labelledby=\"qa_head_id_12\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Предварительное давление бака зависит от многих факторов. Прежде всего, какой тип бака (в общем, только для отопления или для использования питьевой воды) и какой размер бака. Все баки AQUASKY предварительно заряжены и протестированы на заводе. Предварительное давление должно быть на 2 psi меньше давления включения насоса.</p>            </div>\n        </div>\n\n    </div>\n</div>\n\n<h2 class=\"news-h2 news-line2\">УСТАНОВКА</h2>\n<div class=\"row page_spacing-3\">\n\t<div class=\"col-md-3\"><img src=\"/images/FAQ/FAQ-05.png\" class=\"img-responsive center-block\" loading=\"lazy\"></div>\n    <div class=\"col-md-9\">\n    \t    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-12.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Как устанавливать, обслуживать и обслуживать баки под давлением, производимые AQUASKY?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_13\" aria-labelledby=\"qa_head_id_13\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Что касается установки, обслуживания и технического обслуживания баков под давлением, производимых AQUASKY, обратитесь к инструкциям по установке.</p>            </div>\n        </div>\n\n    </div>\n</div>\n\n<h2 class=\"news-h2 news-line2\">КАЧЕСТВО</h2>\n<div class=\"row page_spacing-3\">\n\t<div class=\"col-md-3\"><img src=\"/images/FAQ/FAQ-06.png\" class=\"img-responsive center-block\" loading=\"lazy\"></div>\n    <div class=\"col-md-9\">\n    \t    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-13.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Почему диафрагменный бак?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_14\" aria-labelledby=\"qa_head_id_14\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Диафрагменный бак позволяет отделить азотное демпфирование системы от системной воды. Это предотвращает утечку воды, поскольку азот находится между стенкой бака и внешней стороной диафрагмы, а системная вода - с другой стороны. Корпус бака под давлением AQUASKY покрыт пищевым материалом с эпоксидным порошковым покрытием, к тому же, эта серия баков утверждена по стандарту NSF 61.</p>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-13.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Почему использовать азот?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_15\" aria-labelledby=\"qa_head_id_15\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Азот менее склонен к миграции через резину диафрагмы, чем кислород, что означает, что бак под давлением не нуждается в дозаправке воздушного давления однажды находясь в эксплуатации. Азот - это очень стабильный газ в отношении изменений температуры, что означает более стабильные давления накачки в течение срока службы.</p>            </div>\n        </div>\n\n    </div>\n</div>\n\n<h2 class=\"news-h2 news-line\">РЕШЕНИЕ</h2>\n<div class=\"row page_spacing-3\">\n\t<div class=\"col-md-3\"><img src=\"/images/FAQ/FAQ-07.png\" class=\"img-responsive center-block\" loading=\"lazy\"></div>\n    <div class=\"col-md-9\">\n    \t    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-14.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Как проверить, не сломалась ли внутренняя диафрагма бака под давлением?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_3\" aria-labelledby=\"qa_head_id_3\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Все баки под давлением AQUASKY с диафрагмой предварительно заправляются азотом через воздушный клапан. Резиновая диафрагма внутри бака держит воду отделенной от азота. Поэтому, в случае сбоя и для проверки, не сломалась ли диафрагма бака, вы должны действовать на внутренний механизм воздушного клапана, нажимая на него инструментом, например, отверткой, и проверяя, что выходит. Если происходит утечка воды, это означает, что мембрана сломана, и вода полностью заполнила сосуд. Если выходит воздух, то мембрана, вероятно, все еще цела, и нужно просто снова предварительно заправить бак под давлением, чтобы он работал.</p>            </div>\n        </div>\n\n    \t<div class=\"news-title\">\n\n        \t\t<div class=\"row\">\n                    <div class=\"col-xs-2 col-md-2\"><img src=\"/images/FAQ/FAQ-14.png\" class=\"img-responsive center-block\" style=\"\" loading=\"lazy\"></div>\n                    <div class=\"col-xs-10 col-md-10\">Как избежать повреждений и неисправностей в баках под давлением и обеспечить продолжительность службы установленного изделия?</div>\n                </div>\n\n        </div>\n    \t<div id=\"collapse_qa_16\" aria-labelledby=\"qa_head_id_16\" >\n        \t<div class=\"news-content\">\n\t\t\t<p>Afin d&#39;&eacute;viter les casses et les dysfonctionnements, consultez d&#39;abord l&#39;&eacute;tiquette technique coll&eacute;e sur le r&eacute;servoir &agrave; pression et le manuel d&#39;instructions fourni par le fabricant. De plus, il est n&eacute;cessaire de :</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>● Правильно установите и проводите периодическое обслуживание</p>\r\n\r\n<p>● Периодически проверяйте предварительное давление в баке под давлением и при необходимости восстанавливайте его до значения, указанного на этикетке</p>\r\n\r\n<p>● Проверьте правильность заземления системы, чтобы избежать гальванических токов</p>\r\n\r\n<p>● Проверьте правильный объем бака под давлением</p>\r\n\r\n<p>● Обратите внимание на чрезмерное перепады давления и ударные явления в системе</p>\r\n\r\n<p>● Избегайте установки бака под давлением в неподходящих условиях или в местах, подверженных особенно агрессивным климатическим условиям</p>\r\n\r\n<p>● Избегайте образования конденсата, что приводит к развитию коррозионных явлений</p>\r\n\r\n<p>● Отслеживайте pH-значение растворов, содержащих гликоли или другие вещества</p>\r\n\r\n<p>● Избегайте смешивания различных антифризовых продуктов.</p>\r\n\r\n<p>&nbsp;</p>            </div>\n        </div>\n\n    </div>\n</div>\n\n        </div>\n        <div class=\"col-md-1\"></div>\n    </div>\n\n</div>\n</div>"
+}

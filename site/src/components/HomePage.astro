@@ -56,7 +56,7 @@ const lines = (s: string) => s.split('\n');
       <p>&nbsp;</p>
       <img src={c.selectionTools.image} class="img-responsive center-block hvr-grow" alt={c.selectionTools.alt} loading="lazy" />
       <p>&nbsp;</p>
-      <div class="pd-btn-info-link"><a href={href(lang, '/sel_tools')} class="btn btn-link">{c.selectionTools.cta}</a></div>
+      <div class="pd-btn-info-link"><a href={href(lang, '/sel_tools')} class="btn btn-link">{lines(c.selectionTools.cta).map((line, i) => (<Fragment>{i > 0 && <br />}{line}</Fragment>))}</a></div>
       <p>&nbsp;</p>
     </div>
   </div>

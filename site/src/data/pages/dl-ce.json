@@ -14,7 +14,11 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/images/products/ELBI/ELBI_logo.png",
@@ -31,7 +35,12 @@
     "/images/products_line/SupremePlus_2023B.webp",
     "/images/products_line/accessories3.webp",
     "/images/products/ELBI/elbi-01-1.jpg",
-    "/upfile/Images/ELBI/20231011_ELBI-Tank(DL-CE_ASME)-DM_CH_01.jpg"
+    "/upfile/Images/ELBI/20231011_ELBI-Tank(DL-CE_ASME)-DM_CH_01.jpg",
+    "/upfile/Images/ELBI/20231013_ELBI_DL-CE_ASME-Tank-DM_ES_231006-1.jpg",
+    "/images/pd-title-line-02.png",
+    "/upfile/Images/ELBI/20231102_AQUASKY_ELBI-Tank(DL-CE_ASME)-Fr_231025-2.jpg",
+    "/upfile/Images/ELBI/20231114_ELBI-Tank(DL-CE_ASME)-Ru_231105-1.jpg",
+    "/upfile/Images/ELBI/20240105_AQUASKY_ELBI-Tank(DL-CE_ASME)-Ar_231228-1.jpg"
   ],
   "dataQuestions": [
     "【暫不改：Tiffany 2026-11-13 回「此頁暫不修改，維持現狀，目前不販售」】規格表第 5 列型號寫「DL 750/16 CE」，數值卻是 5000 L／10 bar／Ø1550／H3315，且與第 6 列型號重複；應為 DL 5000/10 CE？",

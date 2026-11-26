@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /es/PUMPLUS（español）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/pumplus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "PumPlus Tanque de Presión para Bomba | Tanque de Diafragma para Pozo | AQUASKY",
+    "description": "AQUASKY PumPlus es un tanque de presión de diafragma libre de mantenimiento y ahorro de energía para sistemas de bombeo y pozos. Certificado NSF/ANSI 372 libre de plomo, 10bar máx."
+  },
+  "h1": "PumPlus Tanque de Presión para Bomba | Tanque de Diafragma para Pozo | AQUASKY",
+  "about": {
+    "heading": "Acerca del tanque de presión PUMPLUS",
+    "body": "El tanque de presión PumPlus es una parte esencial de un sistema de agua presurizada que proporciona presión de agua a un nivel establecido. El tanque almacena agua adicional entre el diafragma y el revestimiento, y la cámara de aire presurizado es capaz de crear un círculo de suministro. Este proceso reduce la cantidad de veces que el motor necesita arrancar para que la presión del sistema se mantenga en el nivel establecido. La tensión del diafragma mantiene la presión del agua dentro del sistema, garantizando el correcto funcionamiento del lavavajillas y la lavadora, y un flujo sólido para ducharse y bañarse. El tanque de presión PumPlus es un dispositivo de ahorro de energía y no requiere mantenimiento. Una bomba y un tanque de bomba correctamente dimensionados trabajarán en conjunto para satisfacer sus necesidades y brindarán muchos años de servicio confiable."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/PUMPLUS/20231019_PUMPLUS-DM-Blue_ES%E8%A5%BF%E7%8F%AD%E7%89%99%E6%96%87_231018-1.jpg",
+      "alt": "PUMPLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/PUMPLUS/20231019_PUMPLUS-DM-Blue_ES%E8%A5%BF%E7%8F%AD%E7%89%99%E6%96%87_231018-2.jpg",
+      "alt": "PUMPLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/PUMPLUS/20231019_PUMPLUS-DM-Blue_ES%E8%A5%BF%E7%8F%AD%E7%89%99%E6%96%87_231018-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/PUMPLUS/20231019_PUMPLUS-DM-Blue_ES%E8%A5%BF%E7%8F%AD%E7%89%99%E6%96%87_231018-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

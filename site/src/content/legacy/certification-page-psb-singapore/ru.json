@@ -1,0 +1,14 @@
+{
+  "_note": "舊站 /ru/certification-page/psb-singapore（русский）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。 title／description：舊站這頁只有全站通用的英文 title（「Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank」），改用 Tiffany 2026-11-20 給的英文 title／description，2026-11-26 AI 譯成本語系，未經審稿。",
+  "template": "legacy",
+  "lang": "ru",
+  "status": "draft-ai",
+  "seo": {
+    "title": "Сингапурский сертификат PSB для материалов питьевого водоснабжения | AQUASKY",
+    "description": "Бутилкаучук AQUASKY испытан TÜV SÜD PSB по сингапурскому стандарту SS 375:2015 на запах, вкус, рост микроорганизмов и безопасность воды."
+  },
+  "h1": "СЕРТИФИКАЦИЯ | СЕРТИФИКАЦИЯ PSB СИНГАПУРА",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">СЕРТИФИКАЦИЯ | СЕРТИФИКАЦИЯ PSB СИНГАПУРА</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t        </div>\n        <div class=\"col-md-6\">\n                    <div class=\"pd-btn-info-link\">\n                 <a href=\"/upfile/Files/20220802Singapore%20PSB%20certification.pdf\" download=\"\" class=\"btn btn-link\">DOWDLOAD PDF</a>\n            </div>\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<p>Singapore PSB certification</p>\r\n\r\n<p><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20220802Singapore%20PSB%20certification.jpg\" style=\"width: 500px; height: 708px;\" /></p>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}

@@ -127,6 +127,46 @@ function parse(lang, s) {
 }
 
 let written = 0;
+// 加語系（es／fr／ru／ar）：node scripts/import-classic-series.mjs --langs es,fr,ru,ar [--force]
+// 只寫 src/content/series/<id>/<lang>.json，並把該語系的 DM 圖補進 data/products/<id>.json 的 assets；en／zh 與型號資料一律不動。
+const langsArg = process.argv.find((a) => a.startsWith('--langs'));
+const ADD_LANGS = langsArg ? (langsArg.includes('=') ? langsArg.split('=')[1] : process.argv[process.argv.indexOf(langsArg) + 1]).split(',') : null;
+if (ADD_LANGS) {
+  const NOTE = { es: 'español', fr: 'français', ru: 'русский', ar: 'العربية' };
+  for (const s of SERIES) {
+    const productFile = resolve(root, `src/data/products/${s.id}.json`);
+    const product = JSON.parse(readFileSync(productFile, 'utf8'));
+    const before = JSON.stringify(product);
+    const enModels = product.groups.map((g) => g.models.map((m) => m.model).join(',')).join('|');
+    for (const lang of ADD_LANGS) {
+      if (!['es', 'fr', 'ru', 'ar'].includes(lang)) throw new Error(`--langs only takes es,fr,ru,ar: ${lang}`);
+      const p = parse(lang, s);
+      const models = p.groups.map((g) => g.models.map((m) => m.model).join(',')).join('|');
+      if (p.groups.length && models !== enModels) console.log(`note: ${lang}${s.path} model grid differs from en (${models} vs ${enModels}); page shows en data`);
+      const target = resolve(root, `src/content/series/${s.id}/${lang}.json`);
+      if (existsSync(target) && !force) console.log(`skip (exists): ${lang}${s.path}`);
+      else {
+        const data = {
+          _note: `舊站 /${lang}${s.path}（${NOTE[lang]}）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/${s.id}.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。`,
+          template: 'classic', lang, status: 'approved-legacy',
+          seo: { title: p.title, description: p.description },
+          h1: p.h1,
+          about: { heading: p.aboutHeading, body: p.about },
+          showModels: p.groups.length > 0,
+          groupHeadings: p.groups.map((g) => g.heading),
+          edmImages: p.edm.map((e, i) => ({ ...e, alt: `${s.key} DM ${i + 1}` })),
+          edmHtml: p.edmHtml,
+        };
+        writeFileSync(target, JSON.stringify(data, null, 2) + '\n', 'utf8'); written++;
+      }
+      for (const a of [...p.cssAssets, ...p.edm.map((e) => e.src)]) if (!product.assets.includes(a)) product.assets.push(a);
+      console.log(`${lang}${s.path}: grid ${p.groups.length ? p.groups.map((g) => g.models.length).join('+') : 'none'}, edm ${p.edm.length}, h1 "${p.h1.slice(0, 50)}"`);
+    }
+    if (JSON.stringify(product) !== before) writeFileSync(productFile, JSON.stringify(product, null, 2) + '\n', 'utf8');
+  }
+  console.log(`wrote ${written} files`);
+  process.exit(0);
+}
 for (const s of SERIES) {
   const en = parse('en', s);
   const zh = parse('zh', s);

@@ -14,7 +14,11 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/images/products/GIGAPLUS/webp/WEB_PRODUCT_GIGAPLUS_202512.webp",
@@ -33,7 +37,8 @@
     "/images/products_line/Elbi_B2022.webp",
     "/images/products_line/SupremePlus_2023B.webp",
     "/images/products_line/accessories3.webp",
-    "/images/products/GIGAPLUS/webp/WEB_PRODUCT_GIGAPLUS_202512_bg.webp"
+    "/images/products/GIGAPLUS/webp/WEB_PRODUCT_GIGAPLUS_202512_bg.webp",
+    "/images/pd-title-line-02.png"
   ],
   "dataQuestions": []
 }

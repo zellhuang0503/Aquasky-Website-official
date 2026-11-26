@@ -1,0 +1,43 @@
+{
+  "kind": "news",
+  "lang": "ru",
+  "category": "INDUSTRY",
+  "slug": "aquasky-40l-aquasky-17",
+  "path": "/news-detail/INDUSTRY/aquasky-40l-aquasky-17",
+  "status": "approved-legacy",
+  "dateText": "01 08 2024",
+  "datePublished": "2024-01-08T15:14:00+0800",
+  "title": "Уведомление об Изменении Дизайна Бака Давления Aquasky 40L | Aquasky",
+  "cover": "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+  "excerptHtml": "<p>Компания Aquasky объявляет об изменении дизайна бака давления 40L. Бак 40L теперь имеет новую версию, а таблица сравнения размеров представлена ниже.</p>",
+  "seo": {
+    "title": "Уведомление об Изменении Дизайна Бака Давления Aquasky 40L | Aquasky",
+    "description": "Компания Aquasky объявляет об изменении дизайна бака давления 40L. Бак 40L теперь имеет новую версию, а таблица сравнения размеров представлена ниже."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/aquasky-40l-aquasky-17#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/ru/news-detail/INDUSTRY/aquasky-40l-aquasky-17"
+      },
+      "headline": "Уведомление об Изменении Дизайна Бака Давления Aquasky 40L | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20240108_aquasky_apt40.jpg",
+      "description": "Компания Aquasky объявляет об изменении дизайна бака давления 40L. Бак 40L теперь имеет новую версию, а таблица сравнения размеров представлена ниже.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2024-01-08T15:14:00+0800"
+    }
+  ],
+  "bodyHtml": "<p>Уведомление об Изменении Дизайна Бака Давления Aquasky 40L | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_aquasky_apt40.jpg\" /></p>\r\n\r\n<p>Компания Aquasky объявляет об изменении дизайна бака давления 40L. Бак 40L теперь имеет новую версию, а таблица сравнения размеров представлена ниже. Дизайн 40L изменен с трехсекционного на двухсекционный и увеличен в диаметре.</p>\r\n\r\n<p>Есть два основных преимущества нового дизайна.</p>\r\n\r\n<p>&bull; Первое преимущество заключается в увеличении объема хранения воды при большой разнице давлений за счет двухсекционного дизайна. Воздух может быть полностью сжат, чтобы увеличить объем хранения воды на 20%.</p>\r\n\r\n<p>&bull; Второе преимущество заключается в возможности уменьшения высоты, чтобы избежать высокого процента повреждений во время транспортировки. Объем бака точно отрегулирован до 40L.</p>\r\n\r\n<p>Новый дизайн будет введен в эксплуатацию в январе 2024 года.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ru_apt40_01.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ru_apt40_02.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ru_apt40_03.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+    "/upfile/Images/news/20240108_ru_apt40_01.jpg",
+    "/upfile/Images/news/20240108_ru_apt40_02.jpg",
+    "/upfile/Images/news/20240108_ru_apt40_03.jpg"
+  ]
+}

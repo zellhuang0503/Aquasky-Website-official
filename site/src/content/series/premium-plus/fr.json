@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /fr/PREMIUM-PLUS（français）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/premium-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Premium-Plus Réservoir sous Pression en Acier Inoxydable | Ballon Inox | AQUASKY",
+    "description": "La gamme AQUASKY Premium-Plus comprend des réservoirs en acier inoxydable 304/316 pour une résistance maximale à la corrosion. Idéal pour les applications marines."
+  },
+  "h1": "Premium-Plus Réservoir sous Pression en Acier Inoxydable | Ballon Inox | AQUASKY",
+  "about": {
+    "heading": "PREMIUM-PLUS Réservoir sous pression en acier inoxydable",
+    "body": "Les réservoirs à pression en acier inoxydable de la série PREMIUM-PLUS sont fabriqués avec du matériel en acier inoxydable 304 de haute qualité. Chaque surface du réservoir Premium-plus est polie comme un miroir. Le réservoir est parfait pour les applications spéciales et les environnements difficiles tels que l'équipement alimentaire, les boissons et le stockage d'eau de mer sur un yacht. Le réservoir à pression anti-rouille est parfait pour l'utilisateur premium."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/20231102_AQUASKY_Premium-Plus-DM-Fr_231025-1.jpg",
+      "alt": "PREMIUM-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/20231102_AQUASKY_Premium-Plus-DM-Fr_231025-2.jpg",
+      "alt": "PREMIUM-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/PREMIUM-PLUS/20231102_AQUASKY_Premium-Plus-DM-Fr_231025-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p>&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/PREMIUM-PLUS/20231102_AQUASKY_Premium-Plus-DM-Fr_231025-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

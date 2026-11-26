@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /es/HYDRO-PLUS（español）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/hydro-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Hydro-Plus Tanque de Expansión Hidrónica | Vaso de Expansión | AQUASKY",
+    "description": "Los tanques de expansión hidrónica AQUASKY Hydro-Plus están diseñados para sistemas de calefacción y refrigeración de lazo cerrado para absorber la expansión térmica."
+  },
+  "h1": "Hydro-Plus Tanque de Expansión Hidrónica | Vaso de Expansión | AQUASKY",
+  "about": {
+    "heading": "Hydro-Plus Tanques de calentamiento hidrónico",
+    "body": "Los tanques de expansión hidrónicos Hydro-Plus están diseñados para absorber el fluido expandido en circuitos cerrados de sistemas de calefacción y refrigeración hidrónicos residenciales o comerciales, a fin de controlar la acumulación de presión. Los tanques de expansión Hydro-Plus están compuestos por un tanque de lámina de acero que cumple con las normas IAPMO y EN, y se sueldan según los procedimientos ASME y EN por soldadores certificados. El diafragma está hecho de caucho EPDM resistente a altas temperaturas. Todos los modelos se someten a pruebas hidráulicas con una presión 1.5 veces mayor que la presión de diseño. El tanque de expansión Hydro-Plus es la mejor opción en términos de seguridad para su sistema de calefacción hidrónica."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/HYDRO/20231013_HydroPlus-DM_ES_231005-1.jpg",
+      "alt": "HYDRO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/HYDRO/20231013_HydroPlus-DM_ES_231005-2.jpg",
+      "alt": "HYDRO-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20231013_HydroPlus-DM_ES_231005-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20231013_HydroPlus-DM_ES_231005-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

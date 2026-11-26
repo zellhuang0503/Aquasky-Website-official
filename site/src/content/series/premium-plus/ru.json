@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ru/PREMIUM-PLUS（русский）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/premium-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "ru",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Premium-Plus Гидроаккумулятор из нержавеющей стали | Бак питьевой воды | AQUASKY",
+    "description": "Баки AQUASKY Premium-Plus выполнены из высококачественной нержавеющей стали 304/316 для максимальной защиты от коррозии. Идеально для судового применения."
+  },
+  "h1": "Premium-Plus Гидроаккумулятор из нержавеющей стали | Бак питьевой воды | AQUASKY",
+  "about": {
+    "heading": "PREMIUM-PLUS Нержавеющие стальные баки под давлением",
+    "body": "Баки под давлением серии PREMIUM-PLUS изготовлены из высококачественной нержавеющей стали 304. Поверхность каждого бака Premium-plus полирована до зеркального блеска. Эти баки идеально подходят для специальных применений и жестких условий, таких как оборудование для продуктов питания, напитков, а также для хранения морской воды на яхтах. Антикоррозийные баки под давлением идеальны для премиальных пользователей."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/20231114_Premium-Plus-DM-Ru_231105-1.jpg",
+      "alt": "PREMIUM-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/PREMIUM-PLUS/20231114_Premium-Plus-DM-Ru_231105-2.jpg",
+      "alt": "PREMIUM-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/PREMIUM-PLUS/20231114_Premium-Plus-DM-Ru_231105-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/PREMIUM-PLUS/20231114_Premium-Plus-DM-Ru_231105-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

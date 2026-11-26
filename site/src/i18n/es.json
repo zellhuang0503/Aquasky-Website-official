@@ -1,0 +1,71 @@
+{
+  "_note": "選單、系列名、productLine（系列頁底部 h2）、foundedIn、TEL／FAX 一字不差沿用舊站 es（2026-10-22 封存 /es/about、/es/PUMPLUS、/es 首頁；舊站 es 頁尾 TEL／FAX 本來就是英文、沒有公司名那行）。其餘（menu、home、breadcrumbHome、skipToContent、languageNotLive、selectionTools、checkSelectionTool、download、faq、specifications、applications、features、factory、contact 表單訊息）舊站沒有，2026-11-26 AI 譯稿，未經審稿。 productLine 是首頁與系列頁底部按鈕的字，舊站 DL 那顆是兩行（\n＝<br>），但不像 zh 的 ASME 那顆縮小 padding。",
+  "nav": {
+    "company": "EMPRESA",
+    "about": "EMPRESA",
+    "feature": "CARACTERÍSTICA DEL PRODUCTO",
+    "certification": "CERTIFICACIÓN",
+    "selectionTools": "HERRAMIENTAS DE SELECCIÓN",
+    "products": "PRODUCTOS",
+    "residential": "Residencial",
+    "commercial": "Comercial",
+    "PUMPLUS": "PUMPLUS",
+    "RO-PLUS": "RO-PLUS",
+    "THERMAL-PLUS": "THERMAL-PLUS",
+    "HYDRO-PLUS": "HYDRO-PLUS",
+    "PREMIUM-PLUS": "PREMIUM-PLUS",
+    "LQCOL-PLUS": "LQCOL-PLUS",
+    "MEGA-PLUS": "MEGA-PLUS",
+    "SOLAR-PLUS": "SOLAR-PLUS",
+    "SUPREME-PLUS": "SUPREME-PLUS",
+    "DL-TANK": "DEPÓSITO DE GRAN TAMAÑO DL",
+    "ASME-TANK": "TANQUE ASME",
+    "GIGA-PLUS": "GIGA-PLUS",
+    "ACCESSORIES-PLUS": "ACCESORIOS-PLUS",
+    "news": "NOTICIAS",
+    "exhibitions": "Exposiciones Comerciales",
+    "industry": "Industria",
+    "videos": "VÍDEOS",
+    "download": "DESCARGAR",
+    "faq": "PREGUNTAS MÁS FRECUENTES",
+    "contact": "CONTACTO",
+    "language": "IDIOMA",
+    "menu": "Menú",
+    "home": "Inicio"
+  },
+  "productLine": {
+    "DL-TANK": "DEPÓSITO DE\nGRAN TAMAÑO DL"
+  },
+  "common": {
+    "productLine": "GAMA DE PRODUCTOS",
+    "selectionTools": "Herramientas de selección",
+    "checkSelectionTool": "Consultar en la herramienta de selección",
+    "download": "Descargar",
+    "faq": "Preguntas frecuentes",
+    "specifications": "Especificaciones del producto",
+    "applications": "Aplicaciones",
+    "features": "Características y ventajas principales",
+    "factory": "Fábrica",
+    "tel": "TEL",
+    "fax": "FAX",
+    "foundedIn": "Fundado en {year}",
+    "skipToContent": "Saltar al contenido",
+    "languageNotLive": "Esta página aún no está disponible en este idioma.",
+    "breadcrumbHome": "Inicio"
+  },
+  "contact": {
+    "sending": "Enviando…",
+    "sent": "Gracias. Su mensaje ha sido enviado. Le responderemos lo antes posible.",
+    "sentPreview": "Sitio de vista previa: el formulario funciona, pero los mensajes no se envían hasta que el sitio esté en línea.",
+    "failed": "No se pudo enviar su mensaje. Escríbanos directamente a la dirección de correo de esta página.",
+    "verify": "Complete primero la verificación.",
+    "codes": {
+      "invalid": "Revise los campos obligatorios (nombre, correo electrónico, mensaje).",
+      "verify_required": "Complete primero la verificación.",
+      "verify_failed": "La verificación ha caducado. Verifique de nuevo y reenvíe.",
+      "verify_unavailable": "El servicio de verificación no está disponible temporalmente. Inténtelo más tarde.",
+      "unavailable": "El formulario de contacto no está disponible temporalmente. Escríbanos directamente por correo electrónico.",
+      "send_failed": "No se pudo entregar su mensaje. Escríbanos directamente por correo electrónico."
+    }
+  }
+}

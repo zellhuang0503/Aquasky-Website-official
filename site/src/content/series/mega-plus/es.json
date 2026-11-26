@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /es/MEGA-PLUS（español）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/mega-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "es",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Mega-Plus Tanque de Alta Presión de 16 Bares | Suministro de Agua | AQUASKY",
+    "description": "AQUASKY Mega-Plus es un tanque de presión de diafragma de 16 bares (230 PSI) de alto rendimiento, ideal para edificios altos y sistemas de refuerzo comercial."
+  },
+  "h1": "Mega-Plus Tanque de Alta Presión de 16 Bares | Suministro de Agua | AQUASKY",
+  "about": {
+    "heading": "Tanque de presión MEGA-PLUS",
+    "body": "El tanque de presión Mega-Plus es una parte esencial de un sistema de agua presurizada que proporciona presión de agua a un nivel establecido. El tanque almacena agua adicional entre el diafragma y el revestimiento, y la cámara de aire presurizado es capaz de crear un círculo de suministro. Este proceso reduce la cantidad de veces que el motor necesita arrancar para que la presión del sistema se mantenga en el nivel establecido. La tensión del diafragma mantiene la presión del agua dentro del sistema, garantizando el correcto funcionamiento del lavavajillas y la lavadora, y un flujo sólido para ducharse y bañarse. Mega-Plus proporciona una solución de alta presión de agua para edificios de gran altura y soporte de presión a larga distancia. Asegura que el sistema de agua funcione de manera eficiente y ahorre energía sin necesidad de mantenimiento."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/MEGA/20231013_MEGA-Plus-DM_ES_231005-1.jpg",
+      "alt": "MEGA-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/MEGA/20231013_MEGA-Plus-DM_ES_231005-2.jpg",
+      "alt": "MEGA-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/MEGA/20231013_MEGA-Plus-DM_ES_231005-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/MEGA/20231013_MEGA-Plus-DM_ES_231005-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

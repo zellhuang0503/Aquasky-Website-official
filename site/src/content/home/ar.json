@@ -1,0 +1,56 @@
+{
+  "_note": "首頁 ar。title、description、產品系列與選擇工具標題、按鈕字樣（\\n＝舊站 <br>）、8 個認證說明一字不差沿用 2026-10-22 封存的舊站 /ar 首頁（ISO 那句的「//」是舊站原文）；h1＝title 去掉「AQUASKY - 」（同 en／zh 做法）。slidesAlt、selectionTools.alt、certifications.heading 舊站沒有，2026-11-26 AI 譯，未經審稿。",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "AQUASKY - الشركة المصنعة العالمية لخزانات الضغط الغشائي ومعالجة المياه",
+    "description": "تعتبر شركة AQUASKY، التي تأسست عام 1998، رائدة عالمية في تصنيع خزانات الضغط الغشائي. خزانات معتمدة من NSF ومعبأة بنسبة 100% بالنيتروجين."
+  },
+  "h1": "الشركة المصنعة العالمية لخزانات الضغط الغشائي ومعالجة المياه",
+  "companyName": "",
+  "productLineHeading": "خط المنتج",
+  "selectionTools": {
+    "heading": "أدوات الاختيار",
+    "cta": "استخدم أداة الاختيار",
+    "image": "/images/selection-tools_ar.png",
+    "alt": "أدوات AQUASKY الإلكترونية لاختيار خزانات الضغط"
+  },
+  "slidesAlt": "مصنع AQUASKY وإنتاج خزانات الضغط",
+  "certifications": {
+    "heading": "الشهادات والتقنية",
+    "items": [
+      {
+        "icon": "/images/home-service/s2-img-01.png",
+        "label": "شهادة الالتزام الأوروبية CE"
+      },
+      {
+        "icon": "/images/home-service/s2-img-02.png",
+        "label": "نظام إدارة الجودة ISO 9001:2015//Eurocert"
+      },
+      {
+        "icon": "/images/home-service/s2-img-03.png",
+        "label": "شهادة خالية من الرصاص"
+      },
+      {
+        "icon": "/images/home-service/s2-img-04.png",
+        "label": "القانون الموحد للسباكة (UPC)"
+      },
+      {
+        "icon": "/images/home-service/s2-img-05.png",
+        "label": "المؤسسة الوطنية للصحة العامة NSF"
+      },
+      {
+        "icon": "/images/home-service/N2.png",
+        "label": "ملء النيتروجين"
+      },
+      {
+        "icon": "/images/home-service/unnamed2.png",
+        "label": "شهادة KC (شهادة علامة KC الكورية)"
+      },
+      {
+        "icon": "/images/home-service/s2-img-08.png",
+        "label": "درع الصدأ"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_note": "舊站 /es/certification-page/kc-korea（español）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。 title／description：舊站這頁只有全站通用的英文 title（「Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank」），改用 Tiffany 2026-11-20 給的英文 title／description，2026-11-26 AI 譯成本語系，未經審稿。",
+  "template": "legacy",
+  "lang": "es",
+  "status": "draft-ai",
+  "seo": {
+    "title": "Certificación KC de Corea para Tanques de Presión | AQUASKY",
+    "description": "Los tanques de presión sellados de AQUASKY cuentan con la certificación KC de Corea y cumplen los requisitos coreanos de higiene y seguridad para sistemas de agua."
+  },
+  "h1": "CERTIFICACIÓN | Certificación de Marca KC de Corea",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">CERTIFICACIÓN | Certificación de Marca KC de Corea</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t<img src=\"/upfile/Images/CERTIFICATION/kc_b.png\" border=\"0\" class=\"img-responsive\">        </div>\n        <div class=\"col-md-6\">\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<p><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/%5BAQUASKY%5D%EC%9C%84%EC%83%9D%EC%95%88%EC%A0%84%EA%B8%B0%EC%A4%80%20%EC%9D%B8%EC%A6%9D%EC%84%9C(KC)_%EC%95%95%EB%A0%A5%ED%83%B1%ED%81%AC%20(1).png\" style=\"width: 800px; height: 1131px;\" /></p>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}

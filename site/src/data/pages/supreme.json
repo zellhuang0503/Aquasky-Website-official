@@ -14,7 +14,11 @@
   "neutral": false,
   "langs": [
     "en",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "ru",
+    "ar"
   ],
   "assets": [
     "/images/products/supreme/supreme_logo.png",
@@ -34,7 +38,16 @@
     "/images/products_line/accessories3.webp",
     "/images/products/supreme/supreme_bg.jpg",
     "/upfile/Images/SUPREME-PLUS/20231011_SupermePlus-DM_CH_01.jpg",
-    "/upfile/Images/SUPREME-PLUS/20231011_SupermePlus-DM_CH_02.jpg"
+    "/upfile/Images/SUPREME-PLUS/20231011_SupermePlus-DM_CH_02.jpg",
+    "/upfile/Images/SUPREME-PLUS/20231013_SupremePlus-DM_ES_231005-1.jpg",
+    "/upfile/Images/SUPREME-PLUS/20231013_SupremePlus-DM_ES_231005-2.jpg",
+    "/images/pd-title-line-02.png",
+    "/upfile/Images/SUPREME-PLUS/20231102_AQUASKY_SupremePlus-DM-Fr_231015-1.jpg",
+    "/upfile/Images/SUPREME-PLUS/20231102_AQUASKY_SupremePlus-DM-Fr_231015-2.jpg",
+    "/upfile/Images/SUPREME-PLUS/20231114_SupremePlus-DM-Ru_231105-1.jpg",
+    "/upfile/Images/SUPREME-PLUS/20231114_SupremePlus-DM-Ru_231105-2.jpg",
+    "/upfile/Images/SUPREME-PLUS/20240105_AQUASKY_SupremePlus-DM-Ar_231220-1.jpg",
+    "/upfile/Images/SUPREME-PLUS/20240105_AQUASKY_SupremePlus-DM-Ar_231220-2.jpg"
   ],
   "dataQuestions": []
 }

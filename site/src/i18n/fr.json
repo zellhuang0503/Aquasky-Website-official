@@ -1,0 +1,71 @@
+{
+  "_note": "選單、系列名、productLine（系列頁底部 h2）、foundedIn、TEL／FAX 一字不差沿用舊站 fr（2026-10-22 封存 /fr/about、/fr/PUMPLUS、/fr 首頁；舊站 fr 頁尾 TEL／FAX 本來就是英文、沒有公司名那行）。其餘（menu、home、breadcrumbHome、skipToContent、languageNotLive、selectionTools、checkSelectionTool、download、faq、specifications、applications、features、factory、contact 表單訊息）舊站沒有，2026-11-26 AI 譯稿，未經審稿。 productLine 是首頁與系列頁底部按鈕的字，舊站 DL 那顆是兩行（\n＝<br>），但不像 zh 的 ASME 那顆縮小 padding。",
+  "nav": {
+    "company": "ENTREPRISE",
+    "about": "ENTREPRISE",
+    "feature": "CARACTÉRISTIQUE DU PRODUIT",
+    "certification": "CERTIFICATION",
+    "selectionTools": "OUTILS DE SÉLECTION",
+    "products": "PRODUITS",
+    "residential": "Résidentiel",
+    "commercial": "Commercial",
+    "PUMPLUS": "PUMPLUS",
+    "RO-PLUS": "RO-PLUS",
+    "THERMAL-PLUS": "THERMAL-PLUS",
+    "HYDRO-PLUS": "HYDRO-PLUS",
+    "PREMIUM-PLUS": "PREMIUM-PLUS",
+    "LQCOL-PLUS": "LQCOL-PLUS",
+    "MEGA-PLUS": "MEGA-PLUS",
+    "SOLAR-PLUS": "SOLAR-PLUS",
+    "SUPREME-PLUS": "SUPREME-PLUS",
+    "DL-TANK": "RÉSERVOIR DL DE GRANDE TAILLE",
+    "ASME-TANK": "RÉSERVOIR ASME",
+    "GIGA-PLUS": "GIGA-PLUS",
+    "ACCESSORIES-PLUS": "ACCESSOIRES-PLUS",
+    "news": "NOUVELLES",
+    "exhibitions": "Expositions",
+    "industry": "Industrie",
+    "videos": "VIDÉOS",
+    "download": "TÉLÉCHARGEMENTS",
+    "faq": "FAQS",
+    "contact": "CONTACT",
+    "language": "LA LANGUE",
+    "menu": "Menu",
+    "home": "Accueil"
+  },
+  "productLine": {
+    "DL-TANK": "RÉSERVOIR DL DE\nGRANDE TAILLE"
+  },
+  "common": {
+    "productLine": "GAMME DE PRODUITS",
+    "selectionTools": "Outils de sélection",
+    "checkSelectionTool": "Vérifier avec l’outil de sélection",
+    "download": "Téléchargements",
+    "faq": "FAQ",
+    "specifications": "Caractéristiques techniques",
+    "applications": "Applications",
+    "features": "Caractéristiques et avantages clés",
+    "factory": "Usine",
+    "tel": "TEL",
+    "fax": "FAX",
+    "foundedIn": "Fondée en {year}",
+    "skipToContent": "Aller au contenu",
+    "languageNotLive": "Cette page n’est pas encore disponible dans cette langue.",
+    "breadcrumbHome": "Accueil"
+  },
+  "contact": {
+    "sending": "Envoi…",
+    "sent": "Merci. Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.",
+    "sentPreview": "Site de prévisualisation : le formulaire fonctionne, mais les messages ne sont pas envoyés avant la mise en ligne du site.",
+    "failed": "Votre message n’a pas pu être envoyé. Veuillez nous écrire directement à l’adresse indiquée sur cette page.",
+    "verify": "Veuillez d’abord effectuer la vérification.",
+    "codes": {
+      "invalid": "Veuillez vérifier les champs obligatoires (nom, e-mail, message).",
+      "verify_required": "Veuillez d’abord effectuer la vérification.",
+      "verify_failed": "La vérification a expiré. Veuillez vérifier à nouveau et renvoyer.",
+      "verify_unavailable": "Le service de vérification est temporairement indisponible. Veuillez réessayer plus tard.",
+      "unavailable": "Le formulaire de contact est temporairement indisponible. Veuillez nous écrire directement.",
+      "send_failed": "Votre message n’a pas pu être remis. Veuillez nous écrire directement."
+    }
+  }
+}

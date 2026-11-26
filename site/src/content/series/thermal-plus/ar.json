@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ar/THERMAL-PLUS（العربية）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/thermal-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Thermal-Plus خزان التمدد الحراري لسخان المياه | خزان حماية الضغط | AQUASKY",
+    "description": "تم تصميم خزانات التمدد AQUASKY Thermal-Plus لامتصاص حجم الماء الساخن الزائد لحماية أنظمة تسخين المياه المغلقة. غشاء عالي المتانة، ضغط أقصى 10 بار."
+  },
+  "h1": "Thermal-Plus خزان التمدد الحراري لسخان المياه | خزان حماية الضغط | AQUASKY",
+  "about": {
+    "heading": "خزان التوسع الحراري من نوع THERMAL-PLUS",
+    "body": "خزان التوسع الحراري من نوع THERMAL-PLUS مُصمم لامتصاص المياه المُوسعة في أنظمة المياه الساخنة المغلقة. يحدث التوسع عند تسخين المياه المنزلية. خزانات التوسع THERMAL-PLUS مُصممة للحفاظ على مستويات ضغط المياه بأمان في أنظمة تسخين المياه لتجنب تفريغ صمام التخفيف والظروف الخطرة المحتملة الأخرى. الخزانات الحرارية للتمدد تعمل بالتعاون مع مانع الرجوع أو صمام الفحص. خزانات التوسع THERMAL-PLUS مُصممة باتصال نظام من الفولاذ المقاوم للصدأ، وبطانة بولي بروبيلين تفصل الماء عن قشرة الخزان، وديافراجم من المطاط البيوتيل ذو الوظيفة الثقيلة، ومشحون مسبقًا بالنيتروجين بضغط 40 رطل لكل بوصة مربعة (PSIG). يتحكم الخزان في الضغط المفرط الذي يتم توليده داخل سخان المياه ويوفر أكثر أنظمة منزلك أمانًا."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20240105_AQUASKY_ThermalPlus-DM-Ar_231220-1.jpg",
+      "alt": "THERMAL-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/THERMAL-PLUS/20240105_AQUASKY_ThermalPlus-DM-Ar_231220-2.jpg",
+      "alt": "THERMAL-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20240105_AQUASKY_ThermalPlus-DM-Ar_231220-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/THERMAL-PLUS/20240105_AQUASKY_ThermalPlus-DM-Ar_231220-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

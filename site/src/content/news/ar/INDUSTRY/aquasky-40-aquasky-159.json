@@ -1,0 +1,43 @@
+{
+  "kind": "news",
+  "lang": "ar",
+  "category": "INDUSTRY",
+  "slug": "aquasky-40-aquasky-159",
+  "path": "/news-detail/INDUSTRY/aquasky-40-aquasky-159",
+  "status": "approved-legacy",
+  "dateText": "01 08 2024",
+  "datePublished": "2024-01-08T14:45:10+0800",
+  "title": "إشعار تغيير تصميم خزان الضغط Aquasky سعة 40 لتر | Aquasky",
+  "cover": "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+  "excerptHtml": "<p>Aquasky تعلن عن تغيير جديد في تصميم خزان الضغط سعة 40 لتر. للخزان سعة 40 لتر نسخة جديدة وجدول مقارنة الأبعاد كما هو موضح. تم تغيير تصميم الـ 40 لتر من تصميم ثلاث قشور إلى تصميم قشرتين وزيادة القطر.</p>",
+  "seo": {
+    "title": "إشعار تغيير تصميم خزان الضغط Aquasky سعة 40 لتر | Aquasky",
+    "description": "Aquasky تعلن عن تغيير جديد في تصميم خزان الضغط سعة 40 لتر. للخزان سعة 40 لتر نسخة جديدة وجدول مقارنة الأبعاد كما هو موضح. تم تغيير تصميم الـ 40 لتر من تصميم ثلاث قشور إلى تصميم قشرتين وزيادة القطر."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/aquasky-40-aquasky-159#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/ar/news-detail/INDUSTRY/aquasky-40-aquasky-159"
+      },
+      "headline": "إشعار تغيير تصميم خزان الضغط Aquasky سعة 40 لتر | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20240108_aquasky_apt40.jpg",
+      "description": "Aquasky تعلن عن تغيير جديد في تصميم خزان الضغط سعة 40 لتر. للخزان سعة 40 لتر نسخة جديدة وجدول مقارنة الأبعاد كما هو موضح. تم تغيير تصميم الـ 40 لتر من تصميم ثلاث قشور إلى تصميم قشرتين وزيادة القطر.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2024-01-08T14:45:10+0800"
+    }
+  ],
+  "bodyHtml": "<p dir=\"rtl\">إشعار تغيير تصميم خزان الضغط Aquasky سعة 40 لتر | Aquasky</p>\r\n\r\n<p dir=\"rtl\"><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_aquasky_apt40.jpg\" /></p>\r\n\r\n<p>Aquasky تعلن عن تغيير جديد في تصميم خزان الضغط سعة 40 لتر. للخزان سعة 40 لتر نسخة جديدة وجدول مقارنة الأبعاد كما هو موضح. تم تغيير تصميم الـ 40 لتر من تصميم ثلاث قشور إلى تصميم قشرتين وزيادة القطر.</p>\r\n\r\n<p dir=\"rtl\">هناك ميزتان رئيسيتان للتصميم الجديد.</p>\r\n\r\n<p dir=\"rtl\">&bull; الميزة الأولى هي زيادة حجم تخزين المياه في فارق الضغط الكبير بسبب التصميم ذو القشرتين. يمكن ضغط الهواء بالكامل لزيادة حجم تخزين المياه بنسبة 20٪.</p>\r\n\r\n<p dir=\"rtl\">&bull; الميزة الثانية هي القدرة على خفض الارتفاع لتجنب نسبة عالية من التلف أثناء الشحن. يتم ضبط حجم الخزان بدقة إلى 40 لتر.</p>\r\n\r\n<p dir=\"rtl\">سيبدأ التصميم الجديد في الخدمة في يناير 2024.</p>\r\n\r\n<p dir=\"rtl\">&nbsp;</p>\r\n\r\n<p dir=\"rtl\">&nbsp;</p>\r\n\r\n<p dir=\"rtl\"><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ar_apt40_01.jpg\" /></p>\r\n\r\n<p dir=\"rtl\"><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ar_apt40_02.jpg\" /></p>\r\n\r\n<p dir=\"rtl\"><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_ar_apt40_03.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+    "/upfile/Images/news/20240108_ar_apt40_01.jpg",
+    "/upfile/Images/news/20240108_ar_apt40_02.jpg",
+    "/upfile/Images/news/20240108_ar_apt40_03.jpg"
+  ]
+}

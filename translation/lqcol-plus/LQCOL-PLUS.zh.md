@@ -8,12 +8,12 @@ B01／B02 是舊站既有的標題與描述，照舊保留，未重翻。規格�
 **2026-11-13 Tiffany 直接在預覽頁審完中文，網站以 `site/src/content/series/lqcol-plus/zh.json` 為準（status approved）。** 這份 md 留作 AI 初稿紀錄，沒有同步她改的字（特色三格標題、結構圖三個標示、FAQ Q3／Q4）。其他語系譯稿以英文為準，不受影響。
 
 ### B01 · title
-EN: LQCOL-Plus Liquid Cold Expansion Tank | Chilled Water Expansion Vessel | AQUASKY
-ZH: LQCOL-Plus 空調冷水膨脹罐 | 冰水主機與冷卻液循環膨脹水箱 | AQUASKY 溢康企業
+EN: LQCOL-Plus Liquid Cold System Expansion Tank | Data Center Liquid Cooling | AQUASKY
+ZH: LQCOL-Plus 液冷系統膨脹水箱 | 資料中心液冷專用 | AQUASKY 溢康企業
 
 ### B02 · meta
-EN: AQUASKY LQCOL-Plus is optimized for chilled water and liquid cooling systems, accommodating water volume changes in commercial HVAC and refrigeration loops.
-ZH: AQUASKY LQCOL-Plus 專為中央空調冰水系統及工業冷卻液循環迴路優化設計，能安全吸收水溫波動帶來的體積變化，保護冷卻管路系統。
+EN: AQUASKY LQCOL-Plus expansion tank for data center liquid cooling and CDU loops absorbs coolant volume changes and stabilizes pressure for AI/HPC servers.
+ZH: AQUASKY LQCOL-Plus 液冷系統膨脹水箱，專為資料中心液冷與 CDU 二次側迴路設計，吸收冷卻液體積變化、穩定壓力，保護 AI／HPC 伺服器。
 
 ### B03 · h1
 EN: LIQUID COLD SYSTEM EXPANSION TANK

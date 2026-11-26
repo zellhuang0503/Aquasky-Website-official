@@ -1,0 +1,43 @@
+{
+  "kind": "news",
+  "lang": "fr",
+  "category": "INDUSTRY",
+  "slug": "avis-de-changement-de-conception-du-rservoir-sous-pression-aquasky-40l-aquasky-17",
+  "path": "/news-detail/INDUSTRY/avis-de-changement-de-conception-du-rservoir-sous-pression-aquasky-40l-aquasky-17",
+  "status": "approved-legacy",
+  "dateText": "01 08 2024",
+  "datePublished": "2024-01-08T15:07:14+0800",
+  "title": "Avis de changement de conception du réservoir sous pression Aquasky 40L | Aquasky",
+  "cover": "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+  "excerptHtml": "<p>Le r&eacute;servoir sous pression Aquasky annonce un changement de conception pour le mod&egrave;le 40L. Le r&eacute;servoir 40L poss&egrave;de une nouvelle version et un tableau comparatif des dimensions est pr&eacute;sent&eacute;.</p>",
+  "seo": {
+    "title": "Avis de changement de conception du réservoir sous pression Aquasky 40L | Aquasky",
+    "description": "Le réservoir sous pression Aquasky annonce un changement de conception pour le modèle 40L. Le réservoir 40L possède une nouvelle version et un tableau comparatif des dimensions est présenté."
+  },
+  "legacyJsonLd": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/avis-de-changement-de-conception-du-rservoir-sous-pression-aquasky-40l-aquasky-17#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaskyplus.com/fr/news-detail/INDUSTRY/avis-de-changement-de-conception-du-rservoir-sous-pression-aquasky-40l-aquasky-17"
+      },
+      "headline": "Avis de changement de conception du réservoir sous pression Aquasky 40L | Aquasky",
+      "image": "https://aquaskyplus.com/upfile/Images/news/20240108_aquasky_apt40.jpg",
+      "description": "Le réservoir sous pression Aquasky annonce un changement de conception pour le modèle 40L. Le réservoir 40L possède une nouvelle version et un tableau comparatif des dimensions est présenté.",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquasky",
+        "url": "https://aquaskyplus.com/"
+      },
+      "datePublished": "2024-01-08T15:07:14+0800"
+    }
+  ],
+  "bodyHtml": "<p>Avis de changement de conception du r&eacute;servoir sous pression Aquasky 40L | Aquasky</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_aquasky_apt40.jpg\" /></p>\r\n\r\n<p>Le r&eacute;servoir sous pression Aquasky annonce un changement de conception pour le mod&egrave;le 40L. Le r&eacute;servoir 40L poss&egrave;de une nouvelle version et un tableau comparatif des dimensions est pr&eacute;sent&eacute;. La conception du 40L passe d&#39;une structure &agrave; 3 coques &agrave; une structure &agrave; 2 coques et augmente le diam&egrave;tre.</p>\r\n\r\n<p>Il y a deux principaux avantages &agrave; la nouvelle conception.</p>\r\n\r\n<p>&bull; Le premier avantage est d&#39;augmenter le volume de stockage de l&#39;eau dans une grande diff&eacute;rence de pression due &agrave; la conception &agrave; deux coques. L&#39;air peut &ecirc;tre enti&egrave;rement comprim&eacute; pour augmenter le volume de stockage de l&#39;eau de 20%.</p>\r\n\r\n<p>&bull; Le second avantage est de pouvoir r&eacute;duire la hauteur pour &eacute;viter un taux &eacute;lev&eacute; de dommages pendant le transport. Le volume du r&eacute;servoir est pr&eacute;cis&eacute;ment ajust&eacute; &agrave; 40L.</p>\r\n\r\n<p>La nouvelle conception sera mise en service en janvier 2024.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_fr_apt40_01.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_fr_apt40_02.jpg\" /></p>\r\n\r\n<p><img class=\"img-responsive\" alt=\"\" src=\"/upfile/Images/news/20240108_fr_apt40_03.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>",
+  "assets": [
+    "/upfile/Images/news/20240108_aquasky_apt40.jpg",
+    "/upfile/Images/news/20240108_fr_apt40_01.jpg",
+    "/upfile/Images/news/20240108_fr_apt40_02.jpg",
+    "/upfile/Images/news/20240108_fr_apt40_03.jpg"
+  ]
+}

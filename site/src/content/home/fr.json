@@ -1,0 +1,56 @@
+{
+  "_note": "首頁 fr。title、description、產品系列與選擇工具標題、按鈕字樣（\\n＝舊站 <br>）、8 個認證說明一字不差沿用 2026-10-22 封存的舊站 /fr 首頁（ISO 那句的「//」是舊站原文）；h1＝title 去掉「AQUASKY - 」（同 en／zh 做法）。slidesAlt、selectionTools.alt、certifications.heading 舊站沒有，2026-11-26 AI 譯，未經審稿。",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "AQUASKY - Fabricant Mondial de Réservoirs sous Pression à Diaphragme",
+    "description": "Fondé en 1998, AQUASKY est un leader mondial des réservoirs à diaphragme sous pression. Ballons certifiés NSF et préchargés à 100% en azote."
+  },
+  "h1": "Fabricant Mondial de Réservoirs sous Pression à Diaphragme",
+  "companyName": "",
+  "productLineHeading": "GAMME DE PRODUITS",
+  "selectionTools": {
+    "heading": "OUTILS DE SÉLECTION",
+    "cta": "VÉRIFIER SUR L'OUTIL\nDE SÉLECTION",
+    "image": "/images/selection-tools_fr.png",
+    "alt": "Outils de sélection en ligne des réservoirs sous pression AQUASKY"
+  },
+  "slidesAlt": "Usine AQUASKY et production de réservoirs sous pression",
+  "certifications": {
+    "heading": "Certifications et technologie",
+    "items": [
+      {
+        "icon": "/images/home-service/s2-img-01.png",
+        "label": "CE Conformité Européenne"
+      },
+      {
+        "icon": "/images/home-service/s2-img-02.png",
+        "label": "Certification Qualité ISO 9001//Certification Eurocert"
+      },
+      {
+        "icon": "/images/home-service/s2-img-03.png",
+        "label": "Certification sans plomb"
+      },
+      {
+        "icon": "/images/home-service/s2-img-04.png",
+        "label": "UPC Code Uniforme de Plomberie"
+      },
+      {
+        "icon": "/images/home-service/s2-img-05.png",
+        "label": "NSF Fondation Nationale pour l'Assainissement"
+      },
+      {
+        "icon": "/images/home-service/N2.png",
+        "label": "Rempli d'azote"
+      },
+      {
+        "icon": "/images/home-service/unnamed2.png",
+        "label": "La certification coréenne KC"
+      },
+      {
+        "icon": "/images/home-service/s2-img-08.png",
+        "label": "Bouclier antirouille"
+      }
+    ]
+  }
+}

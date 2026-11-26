@@ -1,0 +1,24 @@
+{
+  "_note": "舊站 /ar/about（العربية）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。 2026-11-26：舊站阿拉伯文有幾處明顯譯錯或錯字，梵亞改正（AI 判斷，未經母語審稿；改了哪些見 client-text-edits.json 或 README）。",
+  "template": "legacy",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "حول AQUASKY: الشركة المصنعة الرائدة عالمياً لخزانات الضغط",
+    "description": "تعرف على شركة AQUASKY التي تأسست عام 1998 في تايوان. اكتشف رسالتنا والتزامنا بالجودة وتاريخنا كرائد عالمي في تصنيع خزانات الضغط الغشائي."
+  },
+  "h1": "الشركة",
+  "hasVisibleH1": true,
+  "legacyJsonLd": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://aquaskyplus.com/ar/about#webpage",
+      "url": "https://aquaskyplus.com/ar/about",
+      "name": "حول AQUASKY: الشركة المصنعة الرائدة عالمياً لخزانات الضغط",
+      "publisher": {
+        "@id": "https://aquaskyplus.com/#organization"
+      }
+    }
+  ],
+  "bodyHtml": "<div id=\"about-container-01\" class=\"container-fluid lang_rtl\">\n<h1 id=\"about-top-title\" class=\"h1-1\">الشركة</h1>\n<div class=\"container-fluid about_white_bg about_spacing_1\">\n\t<div class=\"container\">\n        <div class=\"about_img_01\"><img src=\"/images/about/about-t-01.png\" class=\"img-responsive center-block\" alt=\"Aquasky Enterprise Corp.,\"></div>\n        <div class=\"about_t_line_01\">تأسست في  1998</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        تأسست شركة AQUASKY Enterprise Corp في عام 1998 في ورشة آلات صغيرة في تايتشونغ، تايوان. اليوم، تطورت Aquasky إلى أن أصبحت من الشركات الرائدة عالمياً في تصنيع خزانات الضغط بالحجاب الحاجز، وتخدم سوق معالجة المياه العالمي. تقدم شركة Aquasky Enterprise Corp. حلول تصنيع الخزانات تحت الضغط من الألف إلى الياء، وقد أثبتت أن خزانات الضغط التي تنتجها هي من أفضل الأنواع لدعم الموزعين الدوليين الذين يعملون في تنظيف المياه السكنية، وسخانات المياه، وتكييف الهواء وسخان المياه الشمسي بالإضافة إلى نظام الضخ السكني والتجاري.\nهدفنا هو تقديم خزانات الضغط ذات الجودة العالية والموثوقية لعملائنا بأسعار تنافسية مرة بعد أخرى. حل التصنيع من الألف إلى الياء لدينا يوفر قائمة أسعار ثابتة، وأسرع خيار تصميم مخصص وتسليم في الوقت المحدد.        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s1\"></a>\n<div id=\"about-container-02\" class=\"container-fluid lang_rtl\">\n  <div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">الشراكات</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        نشمّر عن سواعدنا في Aquasky ونعمل بجد لخدمة عملائنا كل يوم. مديرو الأعمال المخصصون لدينا يأخذون الوقت لفهم كيف يمكننا مساعدتك في جعل عملك أكثر نجاحًا. كشركاء في صناعتك، نعمل جنبًا إلى جنب معك لتحقيق التوفير في التكاليف وتحسين العمليات.        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s2\"></a>\n<div id=\"about-container-03\" class=\"container-fluid lang_rtl\">\n<div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">جودة عالية</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        يستخدم إنتاجنا الضخم معدات الإنتاج وأجهزة الاختبار الآلية. يتم تدريب كل فرد من الموظفين ولديهم خبرة كاملة. يتم إنجاز معظم إنتاجنا داخليًا، مما يقلل من مشكلات الجودة الناجمة عن المصنعين الآخرين. يتم اختبار كل خزان بنسبة 100% من حيث ضغط الأمان لضمان أن أفضل المنتجات هي التي تغادر المصنع.        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s3\"></a>\n<div id=\"about-container-04\" class=\"container-fluid lang_rtl\">\n<div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">أسعار تنافسية</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        يتيح لنا حجم الإنتاج العالي والمتزايد التفاوض على أسعار أفضل للمواد الخام مثل الفولاذ الكربوني، المطاط البوتيل والفولاذ المقاوم للصدأ. وبالإضافة إلى ذلك، يتيح لنا الحجم الأكبر تبرير شراء معدات إنتاج أكثر تقدمًا وفعالية وتكلفة فعالة. وقد مكننا ذلك من امتصاص العديد من زيادات أسعار المواد الكبيرة التي تم تجربتها خلال السنتين الماضيتين.        </div>\n    </div>\n</div>\n</div>\n\n<a name=\"s4\"></a>\n<div id=\"about-container-05\" class=\"container-fluid lang_rtl\">\n<div class=\"container-fluid about_white_bg about_spacing_2\">\n\t<div class=\"container\">\n        <div class=\"about_img_02\">خدمة مُخصصة</div>\n        <div class=\"about_txt_01 txt-align-justify\">\n        أعضاء فريق المبيعات في Aquasky يتصرفون ويفكرون كأصحاب الأعمال لتحقيق حلول لعملائنا، ويتوقعون التحديات ويبحثون بشكل استباقي عن الحلول. نعتمد على العمل الجماعي و‎مجتهد للحفاظ على شراكاتنا. نحن نفعل الشيء الصحيح. نستمع إلى عملائنا، نتواصل بصدق، ونلتزم بوعودنا. نرغب في تسهيل الأمور قدر الإمكان لعملائنا للتعامل مع Aquasky. نرغب في أن نكون تمديدًا لشركتك.        </div>\n    </div>\n</div>\n</div>"
+}

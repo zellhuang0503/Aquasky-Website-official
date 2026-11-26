@@ -4,6 +4,11 @@
 
 /* 舊站每一頁 <style> 都有這一行 */
 .nav > li > a { padding-left: 15px; padding-right: 15px; }
+/* 舊站 es／fr／ru 每一頁 <style> 的同一行：選單字比較長，padding 改 5px；標題線換成 pd-title-line-02.png */
+html[lang="es"] .nav > li > a, html[lang="fr"] .nav > li > a, html[lang="ru"] .nav > li > a { padding-left: 5px; padding-right: 5px; }
+html[lang="es"] .pd_title_line, html[lang="fr"] .pd_title_line, html[lang="ru"] .pd_title_line { background: url(/images/pd-title-line-02.png) center center no-repeat; }
+/* 舊站 ar 每一頁 <style> 的同一行（舊站只有這幾塊由右往左）；新站 ar 改成整頁由右到左（黃老闆 2026-11-26），這行照留 */
+html[lang="ar"] .lang_rtl, html[lang="ar"] #footer-content, html[lang="ar"] .about-top-title, html[lang="ar"] .pd-btn-info-link { direction: rtl; }
 
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip-link { position: absolute; left: -999px; top: 0; background: #005d9c; color: #fff; padding: 8px 12px; z-index: 2000; }
@@ -65,3 +70,45 @@ body.printing-tool header, body.printing-tool footer, body.printing-tool .previe
 .contact-status:empty { display: none; }
 .contact-status-error { color: #c0392b; }
 .contact-status-ok { color: #1e7e34; }
+
+/* ===== 阿拉伯文整頁由右到左（黃老闆 2026-11-26：阿拉伯文要 RTL 版型）=====
+   舊站 ar 沒有 dir="rtl"，只有幾塊文字改方向。新站 <html dir="rtl">（brand.json ar dir: rtl），
+   瀏覽器會自動把文字靠右、行內順序反過來；Bootstrap 3 的浮動不會跟著翻，下面把它們左右對調。 */
+/* 欄位浮動跟 Bootstrap 斷點一樣：xs 一直浮動，sm／md／lg 只在各自寬度以上浮動（手機上 col-sm/md 要維持上下全寬） */
+html[dir="rtl"] [class*="col-xs-"] { float: right; }
+@media (min-width: 768px) { html[dir="rtl"] [class*="col-sm-"] { float: right; } }
+@media (min-width: 992px) { html[dir="rtl"] [class*="col-md-"] { float: right; } }
+@media (min-width: 1200px) { html[dir="rtl"] [class*="col-lg-"] { float: right; } }
+html[dir="rtl"] .pull-left { float: right !important; }
+html[dir="rtl"] .pull-right { float: left !important; }
+html[dir="rtl"] .text-left { text-align: right; }
+html[dir="rtl"] .text-right { text-align: left; }
+@media (min-width: 768px) {
+  html[dir="rtl"] .navbar-header, html[dir="rtl"] .navbar-nav, html[dir="rtl"] .navbar-nav > li { float: right; }
+  html[dir="rtl"] .navbar-right { float: left !important; margin-left: -15px; margin-right: 0; }
+  html[dir="rtl"] .navbar > .container .navbar-brand { margin-left: 0; margin-right: -15px; }
+  html[dir="rtl"] .dropdown-menu { left: auto; right: 0; }
+  /* 最左邊那格（語言）往右展開會超出畫面左緣，改成靠左對齊 */
+  html[dir="rtl"] .navbar-nav > li:last-child > .dropdown-menu { left: 0; right: auto; }
+  html[dir="rtl"] .dropdown-submenu > .dropdown-menu { left: auto; right: 100%; }
+}
+html[dir="rtl"] .dropdown-menu { text-align: right; }
+html[dir="rtl"] .nav { padding-right: 0; }
+html[dir="rtl"] .navbar-toggle { float: left; margin-left: 15px; margin-right: 0; }
+html[dir="rtl"] .navbar-brand { float: right; padding: 15px 15px 5px 5px; }   /* 舊站 style.css 是 15px 5px 5px 15px，左右對調 */
+html[dir="rtl"] .dropdown-submenu > a:after { float: left; transform: scaleX(-1); }
+html[dir="rtl"] .navbar-default .dropdown-menu > li > a .fas { margin-right: 0; margin-left: 4px; transform: scaleX(-1); }
+html[dir="rtl"] .breadcrumb > li + li:before { padding: 0 5px; }
+/* 型號、網址、email、電話這類拉丁字在 RTL 段落裡不要被拆亂 */
+/* 只套在整段都是英文／中文的地方（頁尾、聯絡頁聯絡資訊、計算器的英文說明），阿拉伯文段落就算以英文字開頭也維持由右到左 */
+html[dir="rtl"] #footer-content p, html[dir="rtl"] .contact-font-2, html[dir="rtl"] .contact-font-3, html[dir="rtl"] #setp4_remark { unicode-bidi: plaintext; }
+/* 首頁輪播：腳本用 translateX(-n×100%) 往左推，RTL 下圖片會排到左邊外面，輪播本身維持左到右 */
+html[dir="rtl"] #bg-slider { direction: ltr; }
+/* 「跳到主要內容」平常藏在畫面外；RTL 頁往左超出會變成可以橫向捲動，改藏到右邊外面 */
+html[dir="rtl"] .skip-link { left: auto; right: -999px; }
+html[dir="rtl"] .skip-link:focus { left: auto; right: 8px; }
+/* 舊站阿拉伯文 FAQ 的壓力／溫度表寫死 width="453"／"435"，手機會撐寬整頁（舊站同）；只在 ar 手機寬讓表格縮進欄寬 */
+@media (max-width: 767px) {
+  html[lang="ar"] .news-content table { width: 100% !important; }
+  html[lang="ar"] .news-content td { width: auto !important; }
+}

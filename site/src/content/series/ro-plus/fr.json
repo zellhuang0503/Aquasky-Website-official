@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /fr/RO-PLUS（français）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/ro-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。 2026-11-26：description 的「garantie 3 ans」改「garantie 5 ans」（11/19 月會：所有商品保固 5 年，同 en／zh）。",
+  "template": "classic",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "RO-Plus Réservoir de Stockage pour Osmose Inverse | Ballon Qualité Alimentaire | AQUASKY",
+    "description": "AQUASKY RO-Plus est un réservoir de stockage d'eau de qualité alimentaire supérieure pour systèmes de purification par osmose inverse. Certifié NSF, raccord inox, garantie 5 ans."
+  },
+  "h1": "RO-Plus Réservoir de Stockage pour Osmose Inverse | Ballon Qualité Alimentaire | AQUASKY",
+  "about": {
+    "heading": "RÉSERVOIR D'OSMOSE INVERSE ROT",
+    "body": "AQUASKY a inventé la technologie anti-fuites et l'a appliquée sur le connecteur en acier inoxydable pour le réservoir de stockage d'eau pré-pressurisé il y a 18 ans, et ils sont la norme de l'industrie pour le réservoir d'eau potable. Le revêtement en polypropylène et le diaphragme en butyle sont fabriqués avec des matériaux FDA et empêchent l'eau d'entrer en contact avec le réservoir métallique pour une eau plus propre, plus fraîche et de meilleure goût. Le caoutchouc butyle est fabriqué à partir d'un ingrédient et d'un composé uniques qui offrent la meilleure résistance à l'air comparée à d'autres réservoirs sur le marché. Le capuchon en laiton avec joint torique interne garantit qu'il n'y a pas de perte d'air par l'évent. Aucun entretien n'est nécessaire pendant la durée de vie. Tous les réservoirs RO-PLUS sont fabriqués dans nos installations enregistrées ISO 9001:2008. Listé NSF comme la norme la plus élevée pour le réservoir RO. Certifié IAPMO et CE pour le réservoir sous pression le plus sûr sur le marché."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/ROT/20231102_AQUASKY_ROT-PLUS-DM-Fr_231025-1.jpg",
+      "alt": "RO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/ROT/20231102_AQUASKY_ROT-PLUS-DM-Fr_231025-2.jpg",
+      "alt": "RO-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/ROT/20231102_AQUASKY_ROT-PLUS-DM-Fr_231025-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/ROT/20231102_AQUASKY_ROT-PLUS-DM-Fr_231025-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

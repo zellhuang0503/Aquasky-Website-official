@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ar/HYDRO-PLUS（العربية）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/hydro-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Hydro-Plus خزان التمدد لنظام التدفئة المغلق | خزان التمدد الحراري | AQUASKY",
+    "description": "تم تصميم خزانات التمدد المائي AQUASKY Hydro-Plus لأنظمة التدفئة والتبريد ذات الحلقة المغلقة لامتصاص التمدد الحراري للمياه."
+  },
+  "h1": "Hydro-Plus خزان التمدد لنظام التدفئة المغلق | خزان التمدد الحراري | AQUASKY",
+  "about": {
+    "heading": "HYDRO-PLUS خزانات التدفئة الهيدرونية",
+    "body": "تم تصميم خزانات توسيع Hydro-Plus Hydronic لامتصاص السائل الموسع في الدائرة المغلقة لأنظمة التدفئة والتبريد الهيدرونية السكنية أو التجارية للسيطرة على تراكم الضغط. خزانات التوسيع Hydro-Plus هي خزانات مكونة من خزان في صفائح الصلب متوافقة مع معايير IAPMO و EN وملحومة وفقاً لإجراءات ASME و EN بواسطة لحام معتمد. الحجاب الحاجز مصنوع من المطاط EPDM المقاوم للحرارة العالية. جميع النماذج تخضع لاختبار هيدروليكي بضغط أعلى 1.5 مرة من الضغط الأساسي. خزان توسع Hydro-Plus هو أفضل خيار لأمان نظام التدفئة الهيدروني لديك."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/HYDRO/20240105_AQUASKY_HydroPlus-DM-Ar_231228-1.jpg",
+      "alt": "HYDRO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/HYDRO/20240105_AQUASKY_HydroPlus-DM-Ar_231228-2.jpg",
+      "alt": "HYDRO-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20240105_AQUASKY_HydroPlus-DM-Ar_231228-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20240105_AQUASKY_HydroPlus-DM-Ar_231228-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

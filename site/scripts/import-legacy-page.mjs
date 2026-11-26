@@ -5,6 +5,9 @@
 //   src/data/pages/<id>.json            語系無關：路徑、頁面 <style>（legacyCss）、要複製的資源
 //   src/content/legacy/<id>/{en,zh}.json  每語系：title、description、h1、bodyHtml
 // 用法（site/ 目錄）：node scripts/import-legacy-page.mjs [--force] [path ...]   預設 5 頁
+//   加語系：node scripts/import-legacy-page.mjs --langs es,fr,ru,ar [path ...]
+//     只寫 src/content/legacy/<id>/<lang>.json（已存在就跳過，除非 --force），並把語系補進 data/pages/<id>.json 的 langs／assets；
+//     en／zh 內容檔與頁面設定的其他欄位一律不動（它們有後來的客戶改字，不能被封存蓋回去）。
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -24,6 +27,9 @@ const CERT_PAGES = { 4: 'iso-9001-eurocert', 6: 'kc-korea', 7: 'acs-france', 8: 
 // 選型工具三個計算器：表單 HTML 照抄，舊站的 jQuery／AJAX／PDF 表單拿掉，計算改由 public/js/selection-tools.js 做
 const CALC_PAGES = { '/sel_unit_ps': 'ps', '/sel_unit_vsd': 'vsd', '/sel_unit_thermal': 'thermal' };
 const paths = args.filter((a) => a.startsWith('/'));
+const addLangsArg = args.find((a) => a.startsWith('--langs'));
+const ADD_LANGS = addLangsArg ? (addLangsArg.includes('=') ? addLangsArg.split('=')[1] : args[args.indexOf(addLangsArg) + 1]).split(',') : null;
+if (ADD_LANGS && ADD_LANGS.some((l) => !['es', 'fr', 'ru', 'ar'].includes(l))) throw new Error(`--langs only takes es,fr,ru,ar: ${ADD_LANGS}`);
 // 英文產品明細（/products-det/<series>/<model>，90 頁）與配件明細（/accessories-det/<item>，6 頁）：舊站只有英文版；從封存索引自動找
 const toPage = (p) => {
   if (p.startsWith('/download/')) return { path: p, id: p.slice(1).replace('/', '-').toLowerCase(), neutral: true, langs: ['en'] };
@@ -43,6 +49,8 @@ const DETAIL_PATHS = [...index.keys()].filter((u) => /^https:\/\/aquaskyplus\.co
 const PAGES = (paths.length ? paths : [...DEFAULT, ...DOWNLOAD_LANGS.map((l) => `/download/${l}`), ...DETAIL_PATHS, ...Object.values(CERT_PAGES).map((s) => `/certification-page/${s}`), ...Object.keys(CALC_PAGES)]).map(toPage);
 // HTML 實體還原成純文字（JSON-LD 的字串不能留 &deg; 這種實體，Google 會當字面文字）
 const NAMED = { amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', ndash: '–', mdash: '—', deg: '°', hellip: '…', copy: '©', reg: '®', trade: '™', times: '×', middot: '·', bull: '•', apos: "'" };
+// 西法俄阿頁面有 &iacute; 這類拉丁字母實體：補 Latin-1／Latin Extended-A 全套（scripts/html-entities.json，Python html.entities 產生）
+Object.assign(NAMED, JSON.parse(readFileSync(join(here, 'html-entities.json'), 'utf8')), { amp: '&', quot: '"', lt: '<', gt: '>', nbsp: ' ' });
 const unescape = (s) => s
   .replace(/&#x([0-9a-f]+);/gi, (_m, h) => String.fromCodePoint(parseInt(h, 16)))
   .replace(/&#(\d+);/g, (_m, d) => String.fromCodePoint(Number(d)))
@@ -52,7 +60,7 @@ const text = (s) => unescape(s.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').tri
 // Cloudflare 的 email 混淆：<a href="/cdn-cgi/l/email-protection" data-cfemail="97f1…">[email protected]</a>
 // 舊站靠 CF 的 email-decode.min.js 還原成純文字；新站在匯入時直接解碼成純文字（舊站還原後也是純文字，不是 mailto）
 export const decodeCfEmail = (hex) => { const k = parseInt(hex.slice(0, 2), 16); let out = ''; for (let i = 2; i < hex.length; i += 2) out += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16) ^ k); return out; };
-const absUrl = (u) => { u = u.replace(/[\r\n\t]+/g, ''); return /^(\/|https?:|#|mailto:|tel:|data:)/.test(u) ? u : '/' + u.replace(/^(\.\.\/)+/, ''); };
+const absUrl = (u) => { u = u.replace(/[\r\n\t]+/g, ''); return /^(\/|https?:|#|mailto:|tel:|data:)/.test(u) ? u : '/' + u.replace(/^(\.\.?\/)+/, ''); };
 
 function parse(lang, p) {
   const row = index.get(p.neutral ? `${ORIGIN}${p.path}` : `${ORIGIN}/${lang}${p.path}`);
@@ -79,7 +87,7 @@ function parse(lang, p) {
   // 頁面 <style>
   let legacyCss = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n')
     .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\.nav\s*>\s*li\s*>\s*a\s*\{[^}]*\}/g, '')
-    .replace(/url\((['"]?)(?:\.\.\/)*(?!\/|https?:|data:)/g, 'url($1/').replace(/\s+/g, ' ').replace(/\s*}\s*/g, '}\n').trim();
+    .replace(/url\((['"]?)(?:\.\.?\/)*(?!\/|https?:|data:)/g, 'url($1/').replace(/\s+/g, ' ').replace(/\s*}\s*/g, '}\n').trim();
   const extraCss = [...html.matchAll(/<link[^>]+href="([^"]+\.css)(?:\?[^"]*)?"/g)].map((m) => absUrl(m[1]))
     .filter((h) => !['/css/bootstrap.css', '/css/bootstrap.min.css', '/css/style.css', '/css/animation.css', '/js/wow/css/libs/animate.css', '/css/a-hover.css'].includes(h))
     .filter((h) => { const ok = index.has(ORIGIN + h); if (!ok) console.log(`note: ${lang}${p.path} links ${h} but the old site has no such file; skipped`); return ok; });
@@ -142,7 +150,7 @@ function parse(lang, p) {
     .replace(/\s(?:wow|fadeIn\w*|fadeOut\w*|zoomIn\w*|bounceIn\w*)(?=[\s"])/g, '')
     .replace(/\sdata-wow-[\w-]+="[^"]*"/g, '')
     .replace(/(src|href)="([^"]+)"/g, (_m, k, v) => `${k}="${absUrl(v)}"`)
-    .replace(/url\((['"]?)(?:\.\.\/)*(?!\/|https?:|data:)/g, 'url($1/')
+    .replace(/url\((['"]?)(?:\.\.?\/)*(?!\/|https?:|data:)/g, 'url($1/')
     .replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
   // 舊站有的頁少關一個 div（accessories）；補上，否則瀏覽器會把頁尾吃進去（HYDRO-PLUS 經典頁同樣處理，README 有列）
   const opens = (body.match(/<div\b/g) || []).length, closes = (body.match(/<\/div>/g) || []).length;
@@ -154,12 +162,13 @@ function parse(lang, p) {
   for (const c of extraCss) assets.add(c);
   // 舊站首頁與 products 頁載 bootstrap.min.css，其他內頁載客製的 bootstrap.css（.container padding 0）
   const bootstrap = /css\/bootstrap\.min\.css/.test(html) ? 'min' : 'full';
+  // 舊站 es／fr／ru／ar 的 FAQ 只有 16 題（en／zh 29 題），所以門檻分開。
   // FAQ：舊站的 FAQPage 結構化資料是 AEO Worker 從外面注入的，新站改成直接從頁面問答產生（題數＝頁面題數）
   if (p.id === 'faq') {
     const qa = [];
     const re = /<div class="news-title">[\s\S]*?<div class="col-xs-10 col-md-10">([\s\S]*?)<\/div>[\s\S]*?<div class="news-content">([\s\S]*?)<\/div>\s*<\/div>/g;
     for (const m of body.matchAll(re)) qa.push({ '@type': 'Question', name: text(m[1]), acceptedAnswer: { '@type': 'Answer', text: text(m[2]) } });
-    if (qa.length < 20) throw new Error(`${lang}${p.path}: only ${qa.length} FAQ pairs parsed`);
+    if (qa.length < (['en', 'zh'].includes(lang) ? 20 : 16)) throw new Error(`${lang}${p.path}: only ${qa.length} FAQ pairs parsed`);
     legacyJsonLd.push({ '@type': 'FAQPage', '@id': `${ORIGIN}/${lang}${p.path}#faqpage`, mainEntity: qa });
   }
   const subtitle = text(body.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] ?? '') || undefined;
@@ -184,6 +193,41 @@ const DATA_QUESTIONS = {
 };
 
 let written = 0;
+if (ADD_LANGS) {
+  const NOTE = { es: 'español', fr: 'français', ru: 'русский', ar: 'العربية' };
+  for (const p of PAGES) {
+    if (p.neutral || !p.langs.includes('zh')) { console.log(`skip ${p.path}: old site has it in English only`); continue; }
+    const pageFile = resolve(root, `src/data/pages/${p.id}.json`);
+    if (!existsSync(pageFile)) throw new Error(`${pageFile} missing — import en/zh first`);
+    const page = JSON.parse(readFileSync(pageFile, 'utf8'));
+    for (const lang of ADD_LANGS) {
+      if (!index.has(`${ORIGIN}/${lang}${p.path}`)) { console.log(`skip ${lang}${p.path}: not in archive`); continue; }
+      const d = parse(lang, p);
+      if (d.legacyCss !== page.legacyCss) console.log(`note: ${lang}${p.path} page <style> differs from en; using en`);
+      const target = resolve(root, `src/content/legacy/${p.id}/${lang}.json`);
+      if (existsSync(target) && !force) { console.log(`skip (exists): ${lang}${p.path}`); }
+      else {
+        const data = {
+          _note: `舊站 /${lang}${p.path}（${NOTE[lang]}）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。${d.hasH1 ? '' : '舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。'}`,
+          template: 'legacy', lang, status: 'approved-legacy',
+          seo: { title: d.title, description: d.description },
+          h1: d.h1 || d.title, hasVisibleH1: d.hasH1,
+          ...(d.subtitle ? { subtitle: d.subtitle } : {}),
+          legacyJsonLd: d.legacyJsonLd, bodyHtml: d.body,
+        };
+        writeFileSync(target, JSON.stringify(data, null, 2) + '\n', 'utf8'); written++;
+      }
+      if (!page.langs.includes(lang)) page.langs.push(lang);
+      for (const a of d.assets) if (!page.assets.includes(a)) page.assets.push(a);
+    }
+    const order = ['en', 'zh', 'es', 'fr', 'ru', 'ar'];
+    page.langs.sort((a, b) => order.indexOf(a) - order.indexOf(b));
+    writeFileSync(pageFile, JSON.stringify(page, null, 2) + '\n', 'utf8');
+    console.log(`${p.id}: langs ${page.langs.join(',')}`);
+  }
+  console.log(`wrote ${written} files`);
+  process.exit(0);
+}
 for (const p of PAGES) {
   const en = parse('en', p);
   const zh = p.langs.includes('zh') ? parse('zh', p) : en;

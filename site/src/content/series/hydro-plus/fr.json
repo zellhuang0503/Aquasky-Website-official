@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /fr/HYDRO-PLUS（français）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/hydro-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "fr",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "Hydro-Plus Vase d'Expansion Hydronique | Chauffage Circuit Fermé | AQUASKY",
+    "description": "Les vases d'expansion hydroniques AQUASKY Hydro-Plus sont conçus pour les systèmes de chauffage et de climatisation en circuit fermé pour absorber la dilatation thermique."
+  },
+  "h1": "Hydro-Plus Vase d'Expansion Hydronique | Chauffage Circuit Fermé | AQUASKY",
+  "about": {
+    "heading": "Hydro-Plus Réservoirs de chauffage hydronique",
+    "body": "Les réservoirs d'expansion hydroniques Hydro-Plus sont conçus pour absorber le fluide dilaté dans la boucle fermée de systèmes de chauffage et de refroidissement hydroniques résidentiels ou commerciaux pour contrôler l'accumulation de pression. Les réservoirs d'expansion Hydro-Plus sont composés d'un réservoir en acier, conforme aux normes IAPMO et EN et soudé selon les procédures ASME & EN par un soudeur certifié. Le diaphragme est fabriqué avec du caoutchouc EPDM résistant à haute température. Tous les modèles sont soumis à un test hydraulique avec une pression 1,5 fois supérieure à la pression de conception. Le réservoir d'expansion Hydro-Plus est le meilleur choix de sécurité pour votre système de chauffage hydronique."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/HYDRO/20231102_AQUASKY_HydroPlus-DM-Fr_231025-1.jpg",
+      "alt": "HYDRO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/HYDRO/20231102_AQUASKY_HydroPlus-DM-Fr_231025-2.jpg",
+      "alt": "HYDRO-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20231102_AQUASKY_HydroPlus-DM-Fr_231025-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p>&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/HYDRO/20231102_AQUASKY_HydroPlus-DM-Fr_231025-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

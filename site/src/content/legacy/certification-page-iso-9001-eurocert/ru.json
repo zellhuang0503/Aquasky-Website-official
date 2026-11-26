@@ -1,0 +1,14 @@
+{
+  "_note": "舊站 /ru/certification-page/iso-9001-eurocert（русский）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。 title／description：舊站這頁只有全站通用的英文 title（「Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank」），改用 Tiffany 2026-11-20 給的英文 title／description，2026-11-26 AI 譯成本語系，未經審稿。",
+  "template": "legacy",
+  "lang": "ru",
+  "status": "draft-ai",
+  "seo": {
+    "title": "Сертификат системы менеджмента качества ISO 9001:2015 | AQUASKY",
+    "description": "AQUASKY имеет сертификат Eurocert ISO 9001:2015 на производство и продажу напорных баков, что обеспечивает стабильное управление качеством."
+  },
+  "h1": "СЕРТИФИКАЦИЯ | СЕРТИФИКАТ ISO 9001",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">СЕРТИФИКАЦИЯ | СЕРТИФИКАТ ISO 9001</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t<img src=\"/upfile/Images/CERTIFICATION/eurocert_b.png\" border=\"0\" class=\"img-responsive\">        </div>\n        <div class=\"col-md-6\">\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\r\n<div class=\"col-md-6 padding_bottom_20\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20241209_EUROCERT-IOS9001.png\" style=\"width: 848px; height: 1199px;\" /></div>\r\n</div>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}

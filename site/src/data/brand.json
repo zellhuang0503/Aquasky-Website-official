@@ -54,28 +54,28 @@
       "label": "Español",
       "htmlLang": "es",
       "dir": "ltr",
-      "live": false
+      "live": true
     },
     {
       "code": "fr",
       "label": "Français",
       "htmlLang": "fr",
       "dir": "ltr",
-      "live": false
+      "live": true
     },
     {
       "code": "ru",
       "label": "русский язык",
       "htmlLang": "ru",
       "dir": "ltr",
-      "live": false
+      "live": true
     },
     {
       "code": "ar",
       "label": "اَلْعَرَبِيَّةُ",
       "htmlLang": "ar",
       "dir": "rtl",
-      "live": false
+      "live": true
     }
   ]
 }

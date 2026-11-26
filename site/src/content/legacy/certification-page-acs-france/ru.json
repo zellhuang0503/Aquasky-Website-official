@@ -1,0 +1,14 @@
+{
+  "_note": "舊站 /ru/certification-page/acs-france（русский）已上線的頁面主體，整段照抄（2026-10-22 封存）。改文字直接改 bodyHtml。舊站這頁沒有 h1，頁面會補一個看不見的 h1＝title。 title／description：舊站這頁只有全站通用的英文 title（「Aquasky Enterprise Corp., Pressure Tank, Pumplus, Pump Tank, Water Tank」），改用 Tiffany 2026-11-20 給的英文 title／description，2026-11-26 AI 譯成本語系，未經審稿。",
+  "template": "legacy",
+  "lang": "ru",
+  "status": "draft-ai",
+  "seo": {
+    "title": "Французский сертификат ACS для питьевой воды | AQUASKY",
+    "description": "Напорные баки AQUASKY PUMPLUS и MEGA-PLUS имеют французский сертификат ACS, подтверждённый миграционными испытаниями для безопасного контакта с питьевой водой."
+  },
+  "h1": "СЕРТИФИКАЦИЯ | ACS АТТЕСТАЦИЯ ДЕ CONFORMITE САНИТАРНЫЙ",
+  "hasVisibleH1": false,
+  "legacyJsonLd": [],
+  "bodyHtml": "<div id=\"cerfitication-container\" class=\"container-fluid\">\n<div id=\"about-top-title\">СЕРТИФИКАЦИЯ | ACS АТТЕСТАЦИЯ ДЕ CONFORMITE САНИТАРНЫЙ</div>\n<div class=\"container cerfitication_title\">\n\t<div class=\"row\">\n    \t<div class=\"col-md-6\">\n        \t<img src=\"/upfile/Images/CERTIFICATION/acs_b.png\" border=\"0\" class=\"img-responsive\">        </div>\n        <div class=\"col-md-6\">\n                    <div class=\"pd-btn-info-link\">\n                 <a href=\"/upfile/Files/ACS%20AQUASKY%2025%20ACC%20NY%20563.pdf\" download=\"\" class=\"btn btn-link\">DOWDLOAD PDF</a>\n            </div>\n                </div>\n    </div>\n</div>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\r\n<div class=\"col-md-6 padding_bottom_20\" style=\"text-align: center;\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20251216_Aquasky%20ACS%20p1.jpg\" style=\"width: 500px; height: 707px;\" /></div>\r\n\r\n<div class=\"col-md-6 padding_bottom_20\" style=\"text-align: center;\"><img alt=\"\" src=\"/upfile/Images/CERTIFICATION/20251216_Aquasky%20ACS%20p2.jpg\" style=\"width: 500px; height: 707px;\" /></div>\r\n</div>    </div>\n\n<div class=\"cerfitication_spacing\"></div>\n</div>"
+}

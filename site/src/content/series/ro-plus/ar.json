@@ -1,0 +1,28 @@
+{
+  "_note": "舊站 /ar/RO-PLUS（العربية）已上線的文字，照抄（2026-10-22 封存）。型號清單用 data/products/ro-plus.json（與英文同一份）。客戶後來在 en／zh 改的字（client-text-edits.json）還沒套到這個語系。",
+  "template": "classic",
+  "lang": "ar",
+  "status": "approved-legacy",
+  "seo": {
+    "title": "RO-Plus خزان تخزين مياه التناضح العكسي | خزان RO للمواد الغذائية | AQUASKY",
+    "description": "خزان تخزين المياه AQUASKY RO-Plus ذو جودة غذائية ممتازة ومخصص لأنظمة تنقية المياه بالتناضح العكسي. معتمد من NSF، ويحتوي على موصل فولاذي مقاوم للصدأ."
+  },
+  "h1": "RO-Plus خزان تخزين مياه التناضح العكسي | خزان RO للمواد الغذائية | AQUASKY",
+  "about": {
+    "heading": "ROT خزان التناضح العكسي",
+    "body": "لقد اخترعت AQUASKY التكنولوجيا الآمنة من التسرب وتطبيقها على الموصل الفولاذي المقاوم للصدأ لخزان تخزين المياه المضغوطة قبل 18 عامًا، وأصبحوا المعيار في صناعة خزانات مياه الشرب. يتم صنع بطانة البولي بروبلين والحجاب الحاجز البيوتيل بمواد FDA وتمنع الماء من الاتصال بخزان المعدن للحصول على ماء أنقى وأطيب طعمًا. يتم صنع البيوتيل المطاطي من مكون ومركب فريد يتمتع بأفضل مقاومة للهواء مقارنة بأي خزان آخر في السوق. يضمن الغطاء النحاسي مع الحلقة الداخلية O-ring عدم وجود فقدان للهواء من فتحة التهوية. لا يلزم القيام بأي صيانة خلال فترة الخدمة. يتم تصنيع جميع خزانات RO-PLUS في منشآتنا المسجلة وفقًا لـ ISO 9001:2008. تم إدراج NSF كأعلى معيار لخزان RO. معتمد من IAPMO و CE كأكثر الأوعية ضغط أمانًا في السوق."
+  },
+  "showModels": false,
+  "groupHeadings": [],
+  "edmImages": [
+    {
+      "src": "/upfile/Images/ROT/20240105_AQUASKY_ROT-PLUS-DM-Ar_231220-1.jpg",
+      "alt": "RO-PLUS DM 1"
+    },
+    {
+      "src": "/upfile/Images/ROT/20240105_AQUASKY_ROT-PLUS-DM-Ar_231220-2.jpg",
+      "alt": "RO-PLUS DM 2"
+    }
+  ],
+  "edmHtml": "<p style=\"text-align: center;\"><img src=\"/upfile/Images/ROT/20240105_AQUASKY_ROT-PLUS-DM-Ar_231220-1.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p> <p style=\"text-align: center;\">&nbsp;</p> <p style=\"text-align: center;\"><img src=\"/upfile/Images/ROT/20240105_AQUASKY_ROT-PLUS-DM-Ar_231220-2.jpg\" alt=\"\" class=\"img-responsive center-block\" loading=\"lazy\"></p>"
+}

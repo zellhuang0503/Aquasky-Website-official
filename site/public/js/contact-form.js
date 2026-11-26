@@ -21,7 +21,7 @@
   var hp = document.createElement('input');
   hp.type = 'text'; hp.name = 'website'; hp.tabIndex = -1; hp.autocomplete = 'off';
   hp.setAttribute('aria-hidden', 'true');
-  hp.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0';
+  hp.style.cssText = 'position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);opacity:0';   // 不用 left:-9999px：阿拉伯文 RTL 頁往左超出會變成能橫向捲動
   form.appendChild(hp);
 
   var token = '';

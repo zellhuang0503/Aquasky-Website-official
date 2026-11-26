@@ -31,7 +31,9 @@ function archivedPage(code, path) {
 }
 
 import { readdirSync } from 'node:fs';
-const LANGS = [['en', 'en'], ['zh', 'zh-Hant']];
+// 上線語系照 brand.json（live: true）
+const LANGS = JSON.parse(readFileSync(join(root, 'src/data/brand.json'), 'utf8')).languages.filter((l) => l.live).map((l) => [l.code, l.htmlLang]);
+const ALL_HREFLANG = [...LANGS.map(([, h]) => h), 'x-default'];
 const products = readdirSync(join(root, 'src/data/products')).filter((f) => f.endsWith('.json'))
   .map((f) => JSON.parse(readFileSync(join(root, 'src/data/products', f), 'utf8')));
 const legacyPages = existsSync(join(root, 'src/data/pages'))
@@ -58,15 +60,15 @@ const NEWS_PAGES = [
 const PAGES = [
   { url: '/', file: 'index.html', lang: 'en' },
   { url: '/en', file: 'en.html', lang: 'en' },
-  { url: '/zh', file: 'zh.html', lang: 'zh-Hant' },
+  ...LANGS.filter(([code]) => code !== 'en').map(([code, htmlLang]) => ({ url: `/${code}`, file: `${code}.html`, lang: htmlLang })),
   ...products.flatMap((p) => LANGS.map(([code, htmlLang]) => ({
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code,
     series: p.template === 'lqcol', classic: p.template === 'classic' ? p : null,
   }))),
   ...legacyPages.filter((p) => !p.neutral).flatMap((p) => LANGS.filter(([code]) => (p.langs ?? ['en', 'zh']).includes(code)).map(([code, htmlLang]) => ({
     url: `/${code}${p.path}`, file: `${code}${p.path}.html`, lang: htmlLang, code, legacy: p,
-    // 只有英文的頁（產品明細、配件明細）hreflang 只列 en
-    ...((p.langs ?? ['en', 'zh']).length === 1 ? { hreflang: [htmlLang, 'x-default'] } : {}),
+    // hreflang 只列這頁真的有的語系（產品明細、配件明細只有 en；認證單頁只有 en／zh）
+    hreflang: [...LANGS.filter(([c]) => (p.langs ?? ['en', 'zh']).includes(c)).map(([, h]) => h), 'x-default'],
   }))),
   // 沒有語系前綴的照抄頁（/download/<language>）：英文介面、不輸出 hreflang、內容檔是 en.json
   ...legacyPages.filter((p) => p.neutral).map((p) => ({
@@ -97,7 +99,7 @@ for (const page of PAGES) {
   const expectCanon = 'https://aquaskyplus.com' + (page.url === '/' ? '/en' : page.url);
   if (canonical !== expectCanon) fail(`${where}: canonical ${canonical} expected ${expectCanon}`);
   const hreflangs = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)"/g)].map((m) => m[1]);
-  const expectHreflang = page.hreflang ?? ['en', 'zh-Hant', 'x-default'];   // 空陣列＝這頁不該有 hreflang
+  const expectHreflang = page.hreflang ?? ALL_HREFLANG;   // 空陣列＝這頁不該有 hreflang
   if ([...hreflangs].sort().join() !== [...expectHreflang].sort().join()) fail(`${where}: hreflang [${hreflangs}] expected [${expectHreflang}]`);
   const noindex = /<meta name="robots" content="noindex/.test(html);
   if (stage === 'preview' && !noindex) fail(`${where}: preview build without noindex`);
