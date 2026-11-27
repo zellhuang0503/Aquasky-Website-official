@@ -51,7 +51,8 @@
     "foundedIn": "Основан в {year} году",
     "skipToContent": "Перейти к содержанию",
     "languageNotLive": "Эта страница пока недоступна на этом языке.",
-    "breadcrumbHome": "Главная"
+    "breadcrumbHome": "Главная",
+    "draftNote": "Черновой текст, ожидает проверки."
   },
   "contact": {
     "sending": "Отправка…",

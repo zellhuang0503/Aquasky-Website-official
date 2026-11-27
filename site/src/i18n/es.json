@@ -51,7 +51,8 @@
     "foundedIn": "Fundado en {year}",
     "skipToContent": "Saltar al contenido",
     "languageNotLive": "Esta página aún no está disponible en este idioma.",
-    "breadcrumbHome": "Inicio"
+    "breadcrumbHome": "Inicio",
+    "draftNote": "Texto en borrador, pendiente de revisión."
   },
   "contact": {
     "sending": "Enviando…",

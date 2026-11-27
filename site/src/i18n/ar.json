@@ -48,7 +48,8 @@
     "foundedIn": "تأسست في {year}",
     "skipToContent": "انتقل إلى المحتوى",
     "languageNotLive": "هذه الصفحة غير متوفرة بهذه اللغة بعد.",
-    "breadcrumbHome": "الرئيسية"
+    "breadcrumbHome": "الرئيسية",
+    "draftNote": "نص مبدئي قيد المراجعة."
   },
   "contact": {
     "sending": "جارٍ الإرسال…",

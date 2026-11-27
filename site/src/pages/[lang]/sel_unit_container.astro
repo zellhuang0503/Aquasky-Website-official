@@ -51,6 +51,7 @@ const pageCss = `${selTools.legacyCss}
 .cc-container dl { margin: 0 0 10px; display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; font-size: 14px; }
 .cc-container dt { font-weight: normal; color: #555; }
 .cc-container dd { margin: 0; text-align: end; font-variant-numeric: tabular-nums; }
+.cc-total strong, .cc-total small, .cc-container dd, .cc-pct, .cc-row-cuf, .cc-row-kg { unicode-bidi: plaintext; }
 .cc-pct { font-size: 32px; font-weight: bold; color: #00334c; font-variant-numeric: tabular-nums; }
 .cc-bar { position: relative; height: 14px; background: #e2dddb; border-radius: 7px; overflow: hidden; margin: 6px 0 8px; }
 .cc-bar-fill { position: absolute; inset-block: 0; inset-inline-start: 0; width: 0; background: #2789c0; transition: width .2s; }
@@ -80,6 +81,7 @@ const pageCss = `${selTools.legacyCss}
 <Base lang={lang} title={tx.seoTitle} description={tx.seoDescription} path={path} jsonLd={jsonLd} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={selTools.extraCss} headStyle={pageCss}>
   <div id="service-container" class="container-fluid">
     <h1 id="about-top-title" class="h1-1">{tx.h1}</h1>
+    {tx.status === 'draft-ai' && <div style="text-align:center"><div class="draft-note" role="note">{d.common.draftNote}</div></div>}
     <div id="select_tools" class="container">
       <div class="service_spacing-2"></div>
       <div class="st_txt_style1 cc-intro"><p class="lang_rtl" style="text-align:justify;">{tx.intro}</p></div>
