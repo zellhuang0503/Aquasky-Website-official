@@ -1,0 +1,153 @@
+---
+// 貨櫃裝載計算工具：/<lang>/sel_unit_container（新站新增的頁，舊站沒有；命名照 sel_unit_ps／vsd／thermal）。
+// 依溢康 2026-11-23 Excel「AQUASKY PRESSURE TANK Container Capacity calculator」做成網頁：數字與文字在 src/data/container-calculator.json，
+// 計算在 public/js/container-calculator.js。外觀沿用選型工具頁（sel_tools 的 legacyCss：藍色標題帶、STEP 方塊）。
+import Base from '../../layouts/Base.astro';
+import { brand } from '../../lib/data';
+import { type Lang, liveLangs, t } from '../../lib/i18n';
+import calc from '../../data/container-calculator.json';
+import selTools from '../../data/pages/sel_tools.json';
+
+export function getStaticPaths() {
+  return liveLangs.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tx = (calc.text as unknown as Record<string, Record<string, string>>)[lang];
+if (!tx) throw new Error(`container-calculator.json: no text for ${lang}`);
+const d = t(lang);
+const path = '/sel_unit_container';
+const pageUrl = `${brand.url}/${lang}${path}`;
+const fmt = (n: number, digits: number) => n.toLocaleString('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits });
+const jsonLd = [
+  { '@type': 'WebPage', '@id': `${pageUrl}#webpage`, url: pageUrl, name: tx.seoTitle, description: tx.seoDescription, publisher: { '@id': `${brand.url}/#organization` } },
+  { '@type': 'WebApplication', '@id': `${pageUrl}#app`, name: tx.h1, url: pageUrl, applicationCategory: 'BusinessApplication', operatingSystem: 'All', browserRequirements: 'Requires JavaScript. Requires HTML5.', publisher: { '@id': `${brand.url}/#organization` } },
+];
+const breadcrumbs = [{ name: d.common.breadcrumbHome, path: '' }, { name: d.nav.selectionTools, path: '/sel_tools' }, { name: tx.h1, path }];
+const pageCss = `${selTools.legacyCss}
+.cc-intro { max-width: 960px; margin: 0 auto; }
+.cc-step-head { display: flex; gap: 0; margin-bottom: 0; }
+.cc-step-head .step_style-1 { width: auto; min-width: 140px; display: flex; align-items: center; justify-content: center; padding: 10px 15px; }
+.cc-step-head .step_style-1 p, .cc-step-head .step_style-1 { margin: 0; top: auto; transform: none; }
+.cc-step-head .cc-step-title { flex: 1; border: 1px solid #2789c0; color: #2789c0; font-size: 24px; font-weight: bold; display: flex; align-items: center; padding: 10px 20px; background: #fff; }
+.cc-box { background: #fff; border: 1px solid #2789c0; border-top: 0; padding: 15px; margin-bottom: 30px; }
+.cc-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.cc-table caption { caption-side: top; color: #00334c; font-weight: bold; font-size: 18px; padding: 15px 0 8px; text-align: start; }
+.cc-table th, .cc-table td { padding: 6px 8px; border-bottom: 1px solid #e2dddb; text-align: center; vertical-align: middle; }
+.cc-table thead th { background: #2789c0; color: #fff; font-weight: bold; font-size: 14px; }
+.cc-table th[scope="row"] { text-align: start; font-weight: bold; color: #00334c; white-space: nowrap; }
+.cc-table th[scope="row"] small { color: #777; font-weight: normal; margin-inline-start: 6px; }
+.cc-table tr.cc-has-qty { background: #eaf6fd; }
+.cc-qty { width: 90px; max-width: 100%; text-align: center; font-size: 16px; padding: 4px 6px; border: 0; border-bottom: 2px solid #2789c0; background: transparent; }
+.cc-qty:focus { outline: 2px solid #15c0f3; outline-offset: 2px; }
+.cc-row-cuf, .cc-row-kg { font-variant-numeric: tabular-nums; min-width: 70px; }
+.cc-totals { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+.cc-total { flex: 1 1 180px; border: 1px solid #2789c0; padding: 12px 15px; background: #f7fbfe; }
+.cc-total span { display: block; color: #555; font-size: 14px; }
+.cc-total strong { display: block; color: #00334c; font-size: 24px; font-variant-numeric: tabular-nums; }
+.cc-total small { color: #777; }
+.cc-containers { display: flex; flex-wrap: wrap; gap: 15px; }
+.cc-container { flex: 1 1 240px; border: 2px solid #c9c4c1; padding: 15px; background: #fff; }
+.cc-container h3 { margin: 0 0 10px; font-size: 24px; font-weight: bold; color: #00334c; }
+.cc-container dl { margin: 0 0 10px; display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; font-size: 14px; }
+.cc-container dt { font-weight: normal; color: #555; }
+.cc-container dd { margin: 0; text-align: end; font-variant-numeric: tabular-nums; }
+.cc-pct { font-size: 32px; font-weight: bold; color: #00334c; font-variant-numeric: tabular-nums; }
+.cc-bar { position: relative; height: 14px; background: #e2dddb; border-radius: 7px; overflow: hidden; margin: 6px 0 8px; }
+.cc-bar-fill { position: absolute; inset-block: 0; inset-inline-start: 0; width: 0; background: #2789c0; transition: width .2s; }
+.cc-bar-target { position: absolute; inset-block: 0; inset-inline-start: ${calc.targetPercent}%; width: 2px; background: #00334c; }
+.cc-status { font-size: 14px; font-weight: bold; min-height: 20px; }
+.cc-container[data-state="ok"] { border-color: #2e9e4f; } .cc-container[data-state="ok"] .cc-bar-fill { background: #2e9e4f; } .cc-container[data-state="ok"] .cc-status { color: #1f7a3a; }
+.cc-container[data-state="high"] { border-color: #e0a100; } .cc-container[data-state="high"] .cc-bar-fill { background: #e0a100; } .cc-container[data-state="high"] .cc-status { color: #8a6200; }
+.cc-container[data-state="over"] { border-color: #c62828; } .cc-container[data-state="over"] .cc-bar-fill { background: #c62828; } .cc-container[data-state="over"] .cc-status { color: #c62828; }
+.cc-container[data-state="empty"] .cc-status { color: #777; font-weight: normal; }
+.cc-recommend { font-size: 18px; font-weight: bold; color: #00334c; margin: 20px 0 10px; min-height: 26px; }
+.cc-note { color: #555; font-size: 14px; }
+.cc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.cc-actions button, .cc-actions a { border: 0; border-radius: 6px; padding: 10px 18px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; }
+.cc-btn-primary { background: #15c0f3; color: #fff !important; }
+.cc-btn-secondary { background: #fff; color: #2789c0; border: 2px solid #2789c0 !important; }
+.cc-btn-primary:hover, .cc-btn-primary:focus { background: #008ecf; }
+@media (max-width: 767px) {
+  .cc-step-head .cc-step-title { font-size: 18px; padding: 8px 12px; }
+  .cc-step-head .step_style-1 { min-width: 90px; font-size: 20px; }
+  .cc-table .cc-unit { display: none; }
+  .cc-table th, .cc-table td { padding: 6px 4px; }
+  .cc-table th[scope="row"] small { display: block; margin: 0; }
+  .cc-qty { width: 70px; }
+}
+@media print { .cc-actions, header, footer { display: none !important; } }`;
+---
+<Base lang={lang} title={tx.seoTitle} description={tx.seoDescription} path={path} jsonLd={jsonLd} breadcrumbs={breadcrumbs} bootstrap="full" extraCss={selTools.extraCss} headStyle={pageCss}>
+  <div id="service-container" class="container-fluid">
+    <h1 id="about-top-title" class="h1-1">{tx.h1}</h1>
+    <div id="select_tools" class="container">
+      <div class="service_spacing-2"></div>
+      <div class="st_txt_style1 cc-intro"><p class="lang_rtl" style="text-align:justify;">{tx.intro}</p></div>
+      <div class="service_spacing-2" style="padding-bottom:0"></div>
+
+      <div class="cc-step-head"><div class="step_style-1">{tx.step1}</div><div class="cc-step-title">{tx.step1Title}</div></div>
+      <div class="cc-box">
+        {calc.groups.map((g) => (
+          <table class="cc-table">
+            <caption>{tx[g.key]}</caption>
+            <thead>
+              <tr>
+                <th scope="col">{tx.colSize}</th>
+                <th scope="col" class="cc-unit">{tx.colUnitCuf}</th>
+                <th scope="col" class="cc-unit">{tx.colUnitKg}</th>
+                <th scope="col">{tx.colQty}</th>
+                <th scope="col">{tx.colCuf}</th>
+                <th scope="col">{tx.colKg}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {g.models.map((m) => (
+                <tr>
+                  <th scope="row">{m.litre}<small>{m.gallon}</small></th>
+                  <td class="cc-unit">{fmt(m.unitCuf, 2)}</td>
+                  <td class="cc-unit">{fmt(m.unitKg, 1)}</td>
+                  <td><input class="cc-qty" type="number" inputmode="numeric" min="0" step="1" placeholder="0" data-key={`${g.key}:${m.litre}`} aria-label={tx.qtyLabel.replace('{c}', `${tx[g.key]} ${m.litre}`)} /></td>
+                  <td class="cc-row-cuf"></td>
+                  <td class="cc-row-kg"></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ))}
+      </div>
+
+      <div class="cc-step-head"><div class="step_style-1">{tx.step2}</div><div class="cc-step-title">{tx.step2Title}</div></div>
+      <div class="cc-box" aria-live="polite">
+        <div class="cc-totals">
+          <div class="cc-total"><span>{tx.totalQty}</span><strong id="cc-total-qty">0</strong></div>
+          <div class="cc-total"><span>{tx.totalCuf}</span><strong id="cc-total-cuf">0.00 CUF</strong><small id="cc-total-m3">≈ 0.00 m³</small></div>
+          <div class="cc-total"><span>{tx.totalKg}</span><strong id="cc-total-kg">0.0 kg</strong><small id="cc-total-lb">≈ 0 lb</small></div>
+        </div>
+        <div class="cc-containers">
+          {calc.containers.map((c) => (
+            <div class="cc-container" data-key={c.key} data-state="empty">
+              <h3>{c.key}</h3>
+              <dl>
+                <dt>{tx.containerVolume}</dt><dd>{fmt(c.totalCuf, 0)} CUF</dd>
+                <dt>{tx.avgLoad}</dt><dd>{fmt(c.avgLoadCuf, 0)} CUF</dd>
+              </dl>
+              <div><span class="visually-hidden">{tx.loading} </span><span class="cc-pct">0%</span></div>
+              <div class="cc-bar" role="progressbar" aria-label={`${c.key} ${tx.loading}`} aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="cc-bar-fill"></div><div class="cc-bar-target" title={`${calc.targetPercent}%`}></div></div>
+              <div class="cc-status">{tx.statusEmpty}</div>
+            </div>
+          ))}
+        </div>
+        <p id="cc-recommend" class="cc-recommend"></p>
+        <p class="cc-note">{tx.note}</p>
+        <div class="cc-actions">
+          <button type="button" id="cc-copy" class="cc-btn-primary">{tx.copy}</button>
+          <a href={`/${lang}/contact`} class="cc-btn-secondary">{tx.contact}</a>
+          <button type="button" id="cc-reset" class="cc-btn-secondary">{tx.reset}</button>
+        </div>
+      </div>
+      <div class="service_spacing-2"></div>
+    </div>
+  </div>
+  <script type="application/json" id="container-calc-data" set:html={JSON.stringify({ lang, data: { cufToM3: calc.cufToM3, kgToLb: calc.kgToLb, targetPercent: calc.targetPercent, containers: calc.containers, groups: calc.groups }, text: tx })} />
+  <script is:inline src="/js/container-calculator.js"></script>
+</Base>

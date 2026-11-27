@@ -1,0 +1,429 @@
+{
+  "_note": "貨櫃裝載計算工具（/<lang>/sel_unit_container）的數字與文字。數字來源：溢康 Tiffany 2026-11-27 LINE 傳「AQUASKY PRESSURE TANK Container Capacity calculator 2026.11.23.xlsx」工作表2（單位材積 CUF、單位重量 kg、三種貨櫃的總材積與平均可裝材積、建議裝到 85%）；算式照 Excel：每列材積＝單位材積×數量、重量＝單位重量×數量、裝載率＝目前材積÷貨櫃總材積。容量與加侖字樣照 Excel 原字。改數字只改這裡，程式在 public/js/container-calculator.js；npm run test:tools 會驗算。工作表3 是客戶訂單草稿（含價格），不放網站。",
+  "source": "AQUASKY PRESSURE TANK Container Capacity calculator 2026.11.23.xlsx（Tiffany 2026-11-27）",
+  "cufToM3": 0.0283168,
+  "kgToLb": 2.20462,
+  "targetPercent": 85,
+  "containers": [
+    {
+      "key": "20GP",
+      "totalCuf": 1184,
+      "avgLoadCuf": 1050
+    },
+    {
+      "key": "40GP",
+      "totalCuf": 2375,
+      "avgLoadCuf": 2200
+    },
+    {
+      "key": "40HQ",
+      "totalCuf": 2664,
+      "avgLoadCuf": 2626
+    }
+  ],
+  "groups": [
+    {
+      "key": "vertical",
+      "models": [
+        {
+          "litre": "1.3L",
+          "gallon": "0.35G",
+          "unitCuf": 0.84,
+          "unitKg": 3
+        },
+        {
+          "litre": "2L",
+          "gallon": "0.5G",
+          "unitCuf": 0.63,
+          "unitKg": 4.1
+        },
+        {
+          "litre": "3L",
+          "gallon": "0.8G",
+          "unitCuf": 0.84,
+          "unitKg": 4.7
+        },
+        {
+          "litre": "8L",
+          "gallon": "2G",
+          "unitCuf": 0.52,
+          "unitKg": 2.3
+        },
+        {
+          "litre": "12L",
+          "gallon": "3.2G",
+          "unitCuf": 0.77,
+          "unitKg": 3
+        },
+        {
+          "litre": "18L",
+          "gallon": "4G",
+          "unitCuf": 1.1,
+          "unitKg": 3.8
+        },
+        {
+          "litre": "24L",
+          "gallon": "6G",
+          "unitCuf": 1.51,
+          "unitKg": 4.5
+        },
+        {
+          "litre": "40L",
+          "gallon": "10G",
+          "unitCuf": 2.15,
+          "unitKg": 6.8
+        },
+        {
+          "litre": "60L",
+          "gallon": "14G",
+          "unitCuf": 3.6,
+          "unitKg": 10.7
+        },
+        {
+          "litre": "80L",
+          "gallon": "20G",
+          "unitCuf": 5,
+          "unitKg": 14.6
+        },
+        {
+          "litre": "100L",
+          "gallon": "28G",
+          "unitCuf": 6,
+          "unitKg": 15.6
+        },
+        {
+          "litre": "120L",
+          "gallon": "32G",
+          "unitCuf": 6.55,
+          "unitKg": 22.3
+        },
+        {
+          "litre": "130L",
+          "gallon": "33G",
+          "unitCuf": 8.6,
+          "unitKg": 24.5
+        },
+        {
+          "litre": "160L",
+          "gallon": "44G",
+          "unitCuf": 10.05,
+          "unitKg": 27.2
+        },
+        {
+          "litre": "200L",
+          "gallon": "53G",
+          "unitCuf": 11.55,
+          "unitKg": 33.1
+        },
+        {
+          "litre": "240L",
+          "gallon": "62G",
+          "unitCuf": 12.85,
+          "unitKg": 37.7
+        },
+        {
+          "litre": "300L",
+          "gallon": "81G",
+          "unitCuf": 16.2,
+          "unitKg": 45.9
+        },
+        {
+          "litre": "325L",
+          "gallon": "86G",
+          "unitCuf": 17.5,
+          "unitKg": 46.5
+        },
+        {
+          "litre": "450L",
+          "gallon": "119G",
+          "unitCuf": 21.7,
+          "unitKg": 61.9
+        },
+        {
+          "litre": "500L",
+          "gallon": "132G",
+          "unitCuf": 22.8,
+          "unitKg": 66
+        }
+      ]
+    },
+    {
+      "key": "horizontal",
+      "models": [
+        {
+          "litre": "18L",
+          "gallon": "4G",
+          "unitCuf": 1.45,
+          "unitKg": 4.3
+        },
+        {
+          "litre": "24L",
+          "gallon": "6G",
+          "unitCuf": 1.57,
+          "unitKg": 5.1
+        },
+        {
+          "litre": "40L",
+          "gallon": "10G",
+          "unitCuf": 2.45,
+          "unitKg": 7.7
+        },
+        {
+          "litre": "60L",
+          "gallon": "14G",
+          "unitCuf": 3.53,
+          "unitKg": 11.2
+        },
+        {
+          "litre": "80L",
+          "gallon": "20G",
+          "unitCuf": 5,
+          "unitKg": 31.5
+        },
+        {
+          "litre": "100L",
+          "gallon": "28G",
+          "unitCuf": 5.5,
+          "unitKg": 34.7
+        }
+      ]
+    }
+  ],
+  "text": {
+    "_": "各語系文字。en／zh 梵亞依 Excel 欄位撰寫，es／fr／ru／ar 梵亞翻譯，都待溢康審（draft-ai）。{c}、{n}、{p} 是程式帶入的值。",
+    "en": {
+      "status": "draft-ai",
+      "seoTitle": "Container Loading Calculator for Pressure Tanks | AQUASKY",
+      "seoDescription": "Plan your AQUASKY pressure tank order: enter quantities per tank size and estimate the loading volume (CUF), weight and fill rate for 20GP, 40GP and 40HQ containers.",
+      "h1": "CONTAINER LOADING CALCULATOR",
+      "toolButton": "Container<br>Loading",
+      "intro": "Planning a full-container order? Enter the quantity of each AQUASKY pressure tank size below. The calculator adds up the shipping volume (CUF) and weight of your mix and shows how full a 20GP, 40GP or 40HQ container would be. For an efficient load, adjust the quantities to about 85% of the container volume.",
+      "step1": "STEP 1",
+      "step1Title": "ENTER QUANTITIES",
+      "step2": "STEP 2",
+      "step2Title": "CONTAINER LOADING",
+      "vertical": "Vertical models",
+      "horizontal": "Horizontal models",
+      "colSize": "Tank size",
+      "colUnitCuf": "Unit volume (CUF)",
+      "colUnitKg": "Unit weight (kg)",
+      "colQty": "Qty",
+      "colCuf": "Volume (CUF)",
+      "colKg": "Weight (kg)",
+      "qtyLabel": "Quantity of {c}",
+      "totalQty": "Total quantity",
+      "totalCuf": "Total volume",
+      "totalKg": "Total weight",
+      "containerVolume": "Container volume",
+      "avgLoad": "Average loading volume",
+      "loading": "Loading",
+      "statusEmpty": "Enter quantities to see the loading.",
+      "statusOk": "Within {p}%: good loading",
+      "statusHigh": "Above {p}%: please adjust the quantities",
+      "statusOver": "Exceeds the container volume",
+      "recommend": "Suggested container: {c} (about {p}% full).",
+      "recommendNone": "Your order is larger than one 40HQ at {p}%: about {n} × 40HQ containers.",
+      "note": "Please adjust the quantities to about 85% of the container volume. Figures are estimates based on AQUASKY's standard export packaging; the final loading plan is confirmed by our sales team.",
+      "reset": "Clear all",
+      "copy": "Copy order list",
+      "copied": "Copied",
+      "contact": "Send your list to our sales team",
+      "listTitle": "AQUASKY container loading estimate"
+    },
+    "zh": {
+      "status": "draft-ai",
+      "seoTitle": "壓力桶貨櫃裝載計算工具：20 呎／40 呎貨櫃材積試算 | AQUASKY",
+      "seoDescription": "規劃 AQUASKY 溢康壓力桶整櫃訂單：輸入各容量的數量，即可試算總材積（CUF）、總重量，以及 20GP、40GP、40HQ 貨櫃的裝載率。",
+      "h1": "貨櫃裝載計算工具",
+      "toolButton": "貨櫃裝載<br>計算工具",
+      "intro": "準備下整櫃訂單嗎？在下方輸入各容量 AQUASKY 壓力桶的數量，工具會加總這批貨的材積（CUF）與重量，並顯示裝進 20GP、40GP 或 40HQ 貨櫃各會裝到幾成。建議把數量調整到貨櫃材積的 85% 左右，裝載最有效率。",
+      "step1": "STEP 1",
+      "step1Title": "輸入數量",
+      "step2": "STEP 2",
+      "step2Title": "貨櫃裝載率",
+      "vertical": "立式",
+      "horizontal": "臥式",
+      "colSize": "容量",
+      "colUnitCuf": "單位材積（CUF）",
+      "colUnitKg": "單位重量（kg）",
+      "colQty": "數量",
+      "colCuf": "材積（CUF）",
+      "colKg": "重量（kg）",
+      "qtyLabel": "{c} 的數量",
+      "totalQty": "總數量",
+      "totalCuf": "總材積",
+      "totalKg": "總重量",
+      "containerVolume": "貨櫃材積",
+      "avgLoad": "平均可裝材積",
+      "loading": "裝載率",
+      "statusEmpty": "輸入數量後即可看到裝載率。",
+      "statusOk": "在 {p}% 以內：裝載適當",
+      "statusHigh": "超過 {p}%：請調整數量",
+      "statusOver": "超過貨櫃材積",
+      "recommend": "建議貨櫃：{c}（約裝到 {p}%）。",
+      "recommendNone": "這批貨超過一個 40HQ 的 {p}%：約需 {n} 個 40HQ 貨櫃。",
+      "note": "請將數量調整到貨櫃材積的 85% 左右。數字依 AQUASKY 標準外銷包裝估算，實際裝櫃方式以業務確認為準。",
+      "reset": "全部清除",
+      "copy": "複製訂單清單",
+      "copied": "已複製",
+      "contact": "把清單寄給業務",
+      "listTitle": "AQUASKY 貨櫃裝載試算"
+    },
+    "es": {
+      "status": "draft-ai",
+      "seoTitle": "Calculadora de carga de contenedores para tanques de presión | AQUASKY",
+      "seoDescription": "Planifique su pedido de tanques de presión AQUASKY: indique las cantidades por tamaño y calcule el volumen (CUF), el peso y el llenado de contenedores 20GP, 40GP y 40HQ.",
+      "h1": "CALCULADORA DE CARGA DE CONTENEDORES",
+      "toolButton": "Carga de<br>contenedores",
+      "intro": "¿Prepara un pedido de contenedor completo? Introduzca a continuación la cantidad de cada tamaño de tanque de presión AQUASKY. La calculadora suma el volumen de envío (CUF) y el peso de su combinación y muestra qué porcentaje ocuparía en un contenedor 20GP, 40GP o 40HQ. Para una carga eficiente, ajuste las cantidades a aproximadamente el 85% del volumen del contenedor.",
+      "step1": "PASO 1",
+      "step1Title": "INTRODUZCA LAS CANTIDADES",
+      "step2": "PASO 2",
+      "step2Title": "CARGA DEL CONTENEDOR",
+      "vertical": "Modelos verticales",
+      "horizontal": "Modelos horizontales",
+      "colSize": "Capacidad",
+      "colUnitCuf": "Volumen unitario (CUF)",
+      "colUnitKg": "Peso unitario (kg)",
+      "colQty": "Cant.",
+      "colCuf": "Volumen (CUF)",
+      "colKg": "Peso (kg)",
+      "qtyLabel": "Cantidad de {c}",
+      "totalQty": "Cantidad total",
+      "totalCuf": "Volumen total",
+      "totalKg": "Peso total",
+      "containerVolume": "Volumen del contenedor",
+      "avgLoad": "Volumen medio de carga",
+      "loading": "Carga",
+      "statusEmpty": "Introduzca las cantidades para ver la carga.",
+      "statusOk": "Dentro del {p}%: carga adecuada",
+      "statusHigh": "Por encima del {p}%: ajuste las cantidades",
+      "statusOver": "Supera el volumen del contenedor",
+      "recommend": "Contenedor sugerido: {c} (lleno aprox. al {p}%).",
+      "recommendNone": "Su pedido supera un 40HQ al {p}%: se necesitan aprox. {n} contenedores 40HQ.",
+      "note": "Ajuste las cantidades a aproximadamente el 85% del volumen del contenedor. Las cifras son estimaciones basadas en el embalaje estándar de exportación de AQUASKY; nuestro equipo comercial confirma el plan de carga definitivo.",
+      "reset": "Borrar todo",
+      "copy": "Copiar lista del pedido",
+      "copied": "Copiado",
+      "contact": "Enviar la lista a nuestro equipo comercial",
+      "listTitle": "Estimación de carga de contenedor AQUASKY"
+    },
+    "fr": {
+      "status": "draft-ai",
+      "seoTitle": "Calculateur de chargement de conteneur pour réservoirs | AQUASKY",
+      "seoDescription": "Préparez votre commande de réservoirs sous pression AQUASKY : saisissez les quantités par taille et estimez le volume (CUF), le poids et le remplissage des conteneurs 20GP, 40GP et 40HQ.",
+      "h1": "CALCULATEUR DE CHARGEMENT DE CONTENEUR",
+      "toolButton": "Chargement<br>de conteneur",
+      "intro": "Vous préparez une commande en conteneur complet ? Saisissez ci-dessous la quantité de chaque taille de réservoir sous pression AQUASKY. Le calculateur additionne le volume d’expédition (CUF) et le poids de votre assortiment, et indique le taux de remplissage d’un conteneur 20GP, 40GP ou 40HQ. Pour un chargement efficace, ajustez les quantités à environ 85 % du volume du conteneur.",
+      "step1": "ÉTAPE 1",
+      "step1Title": "SAISIR LES QUANTITÉS",
+      "step2": "ÉTAPE 2",
+      "step2Title": "CHARGEMENT DU CONTENEUR",
+      "vertical": "Modèles verticaux",
+      "horizontal": "Modèles horizontaux",
+      "colSize": "Capacité",
+      "colUnitCuf": "Volume unitaire (CUF)",
+      "colUnitKg": "Poids unitaire (kg)",
+      "colQty": "Qté",
+      "colCuf": "Volume (CUF)",
+      "colKg": "Poids (kg)",
+      "qtyLabel": "Quantité de {c}",
+      "totalQty": "Quantité totale",
+      "totalCuf": "Volume total",
+      "totalKg": "Poids total",
+      "containerVolume": "Volume du conteneur",
+      "avgLoad": "Volume de chargement moyen",
+      "loading": "Remplissage",
+      "statusEmpty": "Saisissez les quantités pour voir le remplissage.",
+      "statusOk": "Jusqu’à {p} % : chargement correct",
+      "statusHigh": "Au-delà de {p} % : veuillez ajuster les quantités",
+      "statusOver": "Dépasse le volume du conteneur",
+      "recommend": "Conteneur suggéré : {c} (rempli à environ {p} %).",
+      "recommendNone": "Votre commande dépasse un 40HQ à {p} % : environ {n} conteneurs 40HQ.",
+      "note": "Veuillez ajuster les quantités à environ 85 % du volume du conteneur. Les chiffres sont des estimations basées sur l’emballage export standard d’AQUASKY ; le plan de chargement définitif est confirmé par notre équipe commerciale.",
+      "reset": "Tout effacer",
+      "copy": "Copier la liste de commande",
+      "copied": "Copié",
+      "contact": "Envoyer la liste à notre équipe commerciale",
+      "listTitle": "Estimation de chargement de conteneur AQUASKY"
+    },
+    "ru": {
+      "status": "draft-ai",
+      "seoTitle": "Калькулятор загрузки контейнера для мембранных баков | AQUASKY",
+      "seoDescription": "Спланируйте заказ баков AQUASKY: укажите количество по объёмам и рассчитайте объём (CUF), вес и степень загрузки контейнеров 20GP, 40GP и 40HQ.",
+      "h1": "КАЛЬКУЛЯТОР ЗАГРУЗКИ КОНТЕЙНЕРА",
+      "toolButton": "Загрузка<br>контейнера",
+      "intro": "Планируете заказ полным контейнером? Укажите ниже количество баков AQUASKY каждого объёма. Калькулятор суммирует транспортный объём (CUF) и вес вашего набора и покажет, насколько будет заполнен контейнер 20GP, 40GP или 40HQ. Для эффективной загрузки подберите количество примерно на 85% объёма контейнера.",
+      "step1": "ШАГ 1",
+      "step1Title": "УКАЖИТЕ КОЛИЧЕСТВО",
+      "step2": "ШАГ 2",
+      "step2Title": "ЗАГРУЗКА КОНТЕЙНЕРА",
+      "vertical": "Вертикальные модели",
+      "horizontal": "Горизонтальные модели",
+      "colSize": "Объём бака",
+      "colUnitCuf": "Объём единицы (CUF)",
+      "colUnitKg": "Вес единицы (kg)",
+      "colQty": "Кол-во",
+      "colCuf": "Объём (CUF)",
+      "colKg": "Вес (kg)",
+      "qtyLabel": "Количество {c}",
+      "totalQty": "Общее количество",
+      "totalCuf": "Общий объём",
+      "totalKg": "Общий вес",
+      "containerVolume": "Объём контейнера",
+      "avgLoad": "Средний объём загрузки",
+      "loading": "Загрузка",
+      "statusEmpty": "Укажите количество, чтобы увидеть загрузку.",
+      "statusOk": "До {p}%: оптимальная загрузка",
+      "statusHigh": "Выше {p}%: скорректируйте количество",
+      "statusOver": "Превышает объём контейнера",
+      "recommend": "Рекомендуемый контейнер: {c} (заполнение около {p}%).",
+      "recommendNone": "Ваш заказ больше одного 40HQ при {p}%: потребуется около {n} контейнеров 40HQ.",
+      "note": "Подберите количество примерно на 85% объёма контейнера. Значения являются оценкой на основе стандартной экспортной упаковки AQUASKY; окончательную схему загрузки подтверждает наш отдел продаж.",
+      "reset": "Очистить всё",
+      "copy": "Скопировать список заказа",
+      "copied": "Скопировано",
+      "contact": "Отправить список в отдел продаж",
+      "listTitle": "Расчёт загрузки контейнера AQUASKY"
+    },
+    "ar": {
+      "status": "draft-ai",
+      "seoTitle": "حاسبة تحميل الحاويات لخزانات الضغط | AQUASKY",
+      "seoDescription": "خطّطوا طلب خزانات الضغط AQUASKY: أدخلوا الكميات لكل سعة واحسبوا الحجم (CUF) والوزن ونسبة تحميل حاويات 20GP و40GP و40HQ.",
+      "h1": "حاسبة تحميل الحاويات",
+      "toolButton": "تحميل<br>الحاويات",
+      "intro": "هل تخططون لطلب حاوية كاملة؟ أدخلوا أدناه كمية كل سعة من خزانات الضغط AQUASKY. تجمع الحاسبة حجم الشحن (CUF) ووزن تشكيلتكم، وتوضح نسبة امتلاء حاوية 20GP أو 40GP أو 40HQ. ولتحميل فعّال، اضبطوا الكميات لتشغل نحو 85% من حجم الحاوية.",
+      "step1": "الخطوة 1",
+      "step1Title": "أدخلوا الكميات",
+      "step2": "الخطوة 2",
+      "step2Title": "تحميل الحاوية",
+      "vertical": "الطرازات الرأسية",
+      "horizontal": "الطرازات الأفقية",
+      "colSize": "السعة",
+      "colUnitCuf": "حجم الوحدة (CUF)",
+      "colUnitKg": "وزن الوحدة (kg)",
+      "colQty": "الكمية",
+      "colCuf": "الحجم (CUF)",
+      "colKg": "الوزن (kg)",
+      "qtyLabel": "كمية {c}",
+      "totalQty": "إجمالي الكمية",
+      "totalCuf": "إجمالي الحجم",
+      "totalKg": "إجمالي الوزن",
+      "containerVolume": "حجم الحاوية",
+      "avgLoad": "متوسط حجم التحميل",
+      "loading": "نسبة التحميل",
+      "statusEmpty": "أدخلوا الكميات لعرض نسبة التحميل.",
+      "statusOk": "ضمن {p}%: تحميل مناسب",
+      "statusHigh": "أعلى من {p}%: يُرجى تعديل الكميات",
+      "statusOver": "يتجاوز حجم الحاوية",
+      "recommend": "الحاوية المقترحة: {c} (ممتلئة بنحو {p}%).",
+      "recommendNone": "طلبكم أكبر من حاوية 40HQ واحدة عند {p}%: تحتاجون نحو {n} حاويات 40HQ.",
+      "note": "يُرجى ضبط الكميات لتشغل نحو 85% من حجم الحاوية. الأرقام تقديرية وفق تغليف التصدير القياسي لدى AQUASKY، ويؤكد فريق المبيعات لدينا خطة التحميل النهائية.",
+      "reset": "مسح الكل",
+      "copy": "نسخ قائمة الطلب",
+      "copied": "تم النسخ",
+      "contact": "إرسال القائمة إلى فريق المبيعات",
+      "listTitle": "تقدير تحميل حاوية AQUASKY"
+    }
+  }
+}

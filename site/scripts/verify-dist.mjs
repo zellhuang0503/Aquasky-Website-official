@@ -78,6 +78,8 @@ const PAGES = [
   ...legacyPages.filter((p) => p.neutral).map((p) => ({
     url: p.path, file: `${p.path.slice(1)}.html`, lang: 'en', code: '', contentLang: 'en', legacy: p, hreflang: [],
   })),
+  // 貨櫃裝載計算工具（新站新增，src/pages/[lang]/sel_unit_container.astro）
+  ...LANGS.map(([code, htmlLang]) => ({ url: `/${code}/sel_unit_container`, file: `${code}/sel_unit_container.html`, lang: htmlLang, code, containerTool: true })),
   ...NEWS_PAGES,
 ];
 const built = new Set(PAGES.map((p) => p.url));
@@ -226,6 +228,17 @@ for (const page of PAGES) {
     if (!na || (page.newsArticle.kind === 'news' && !na.datePublished) || na.publisher?.['@id'] !== 'https://aquaskyplus.com/#organization') fail(`${where}: NewsArticle/Article missing or incomplete`);
     if (!html.includes(`id="${page.newsArticle.kind}BackBtn"`)) fail(`${where}: back button missing`);
     if (page.newsArticle.kind === 'videos' && !graph.some((n) => n['@type'] === 'VideoObject')) fail(`${where}: VideoObject missing`);
+  }
+  if (page.containerTool) {
+    // 每個型號一格數量輸入、三種貨櫃、資料與程式都有帶到
+    const calc = JSON.parse(readFileSync(join(root, 'src/data/container-calculator.json'), 'utf8'));
+    const expectInputs = calc.groups.reduce((a, g) => a + g.models.length, 0);
+    const inputs = (html.match(/class="cc-qty"/g) || []).length;
+    if (inputs !== expectInputs) fail(`${where}: ${inputs} quantity inputs, expected ${expectInputs}`);
+    for (const c of calc.containers) if (!html.includes(`data-key="${c.key}"`)) fail(`${where}: container ${c.key} missing`);
+    if (!html.includes('id="container-calc-data"') || !html.includes('/js/container-calculator.js')) fail(`${where}: calculator data/script missing`);
+    if (!existsSync(join(dist, 'js/container-calculator.js'))) fail(`${where}: dist/js/container-calculator.js missing`);
+    if (!graph.some((n) => n['@type'] === 'WebApplication')) fail(`${where}: WebApplication JSON-LD missing`);
   }
   if (page.legacy?.textSource) {
     // 內文換成客戶新版的照抄頁（目前只有 FAQ 2026-11-26 版）：不跟封存比，改跟翻譯檔比——分類標題、每題題目與答案依序都要在頁面上（比對時去掉所有空白）

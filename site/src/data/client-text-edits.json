@@ -317,6 +317,78 @@
           "to": "範圍內使用。 認證連結 PSB新加坡認證 新加坡 PSB 認證（Singapore PSB certification） 新加坡依《消費品安全保護條例》（Consumer Protection (Safety Requirements) Regulations）管理在當地銷售的受管制產品。PSB 認證是新加坡的強制性安全認證，只有完成註冊、帶有 SAFETY 標誌的產品才能在新加坡販售；向新加坡消費者銷售受管制商品的單位，必須將每個型號向主管機關登記。 認證連結 NSF/ANSI 372飲用水系統認證 - 鉛含量"
         }
       ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /en/sel_unit_container",
+      "pages": [
+        "/en/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Container Loading"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /zh/sel_unit_container",
+      "pages": [
+        "/zh/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank 貨櫃裝載 計算工具"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /es/sel_unit_container",
+      "pages": [
+        "/es/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Carga de contenedores"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /fr/sel_unit_container",
+      "pages": [
+        "/fr/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Chargement de conteneur"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /ru/sel_unit_container",
+      "pages": [
+        "/ru/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Загрузка контейнера"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /ar/sel_unit_container",
+      "pages": [
+        "/ar/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank تحميل الحاويات"
+        }
+      ]
     }
   ]
 }
