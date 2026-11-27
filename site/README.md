@@ -19,12 +19,12 @@
 | `/en/certification-page/<slug>`、`/zh/…` 6 張認證（iso-9001-eurocert、kc-korea、acs-france、wras-uk、watermark-australia、psb-singapore） | `src/pages/[lang]/certification-page/[slug].astro` → `LegacyPage.astro`（照抄模板） | 舊站是 `certification_page.php?sid=N`（查詢字串，靜態站做不了），封存也沒抓到；10/25 從線上抓（`migration-2026-10-22/live-2026-10-25/`，索引用新網址當 key）。wras-uk（sid=8）舊站有頁但總覽沒連，Tiffany 2026-11-20 要求補上，11/26 抓到 `live-2026-11-26/`。title／description 是 Tiffany 11/20 給的英文，zh 由梵亞照意思翻。認證頁的「CERTIFICATION LINK」匯入時改連新網址；切換時舊網址要 Worker 轉址 |
 | `/download/english` … 14 個語系子頁（網址沒有語系前綴） | `src/pages/download/[language].astro` → `LegacyPage.astro`（照抄模板，`neutral: true`） | 舊站這些頁一律英文介面、沒有 canonical、hreflang 7 個全指各語系首頁（錯的）；新站英文介面、canonical 指自己、不輸出 hreflang、語言選單回各語系首頁。83 個 EDM PDF（66 MB）與封面圖由 copy 腳本複製 |
 | `/en/news/EXHIBITIONS`、`/en/news/INDUSTRY`、`/en/news/<CAT>/pageN`（zh 同） | `src/pages/[lang]/news/[category].astro`、`[category]/[page].astro` → `NewsList.astro` | 舊站列表照抄：每頁 5 篇、右欄固定幾篇「熱門文章」、分頁列全頁碼；en 6＋33 頁、zh 1＋10 頁 |
-| `/en/news-detail/<CAT>/<slug>`（237 篇：en 187、zh 50） | `src/pages/[lang]/news-detail/[category]/[slug].astro` → `NewsDetail.astro` | 正文整段照抄（`src/content/news/<lang>/<CAT>/<slug>.json`），verify 逐字比。每篇只有一個語系，沒有對應翻譯 |
+| `/en/news-detail/<CAT>/<slug>`（241 篇：en 189、zh 52；四語另各 64 篇） | `src/pages/[lang]/news-detail/[category]/[slug].astro` → `NewsDetail.astro` | 正文整段照抄（`src/content/news/<lang>/<CAT>/<slug>.json`），verify 逐字比。每篇只有一個語系，沒有對應翻譯 |
 | `/en/videos`、`/en/videos/page2`、`page3`（zh 同）；`/en/videos-detail/<slug>` 11 篇（zh 11 篇，slug 不同） | `src/pages/[lang]/videos.astro`、`videos/[page].astro`、`videos-detail/[slug].astro` → 同新聞的 `NewsList`／`NewsDetail`（`kind: videos`） | 版型與新聞完全相同（CSS 同一份）；明細 JSON-LD 是舊站的 Article＋VideoObject；返回鈕用 `videos_back` |
 
-**西／法／俄／阿（es／fr／ru／ar，2026-11-26 起，本機建置、還沒部署）**：上表凡是有 `/zh/…` 的頁，四語也都有（首頁、LQCOL、7 個經典系列頁、照抄模板 13 頁＋3 個計算器、6 張認證單頁、新聞與影片列表）；網址規則相同（`/es/PUMPLUS`…）。新聞明細每語 62 篇、影片 11 篇（slug 跟 en 不同，各自只有一個語系）。產品明細 90 頁、配件明細 6 頁、`/download/<language>` 14 頁舊站只有英文，四語不做。來源與刻意差異見下面「跟舊站不一樣的地方」四語那段。
+**西／法／俄／阿（es／fr／ru／ar，2026-11-26 起，本機建置、還沒部署）**：上表凡是有 `/zh/…` 的頁，四語也都有（首頁、LQCOL、7 個經典系列頁、照抄模板 13 頁＋3 個計算器、6 張認證單頁、新聞與影片列表）；網址規則相同（`/es/PUMPLUS`…）。新聞明細每語 64 篇、影片 11 篇（slug 跟 en 不同，各自只有一個語系）。產品明細 90 頁、配件明細 6 頁、`/download/<language>` 14 頁舊站只有英文，四語不做。來源與刻意差異見下面「跟舊站不一樣的地方」四語那段。
 
-舊站的頁全部搬完：en／zh 486 頁，加四語共 972 頁（`npm run verify` 的頁數）；「尚未搬遷」是 0。
+舊站的頁全部搬完：en／zh 490 頁，加四語共 985 頁（`npm run verify` 的頁數）；「尚未搬遷」是 0。2026-11-27 補抓了 10/22 封存之後舊站新發的 2 篇 INDUSTRY 新聞（立式與臥式壓力桶、UNEP 升溫峰值，六語都有），列表頁也重抓線上最新版（`migration-2026-10-22/live-2026-11-27/`）。以後舊站再發新文章：先把線上列表頁與新文章抓進封存（success.jsonl 後面加一列取代舊列），再跑 `node scripts/import-news.mjs --update-list INDUSTRY`——六語都只寫還沒有的文章，已有的文章與列表的 seo 不動。「立式與臥式壓力桶」那篇舊站六語都把圖片用 base64 直接嵌在正文，照舊站保留（`content.config.ts` 為 `data:image/` 開例外）。
 
 ## 三種系列頁模板
 
@@ -145,7 +145,7 @@ cd "E:\CascadeProjects\Aquasky Websit official\site"; npm run build; npx wrangle
   - 首頁 h1＝title 去掉「AQUASKY - 」（同 en／zh）；首頁 slidesAlt、選擇工具圖 alt、隱藏的認證標題，以及介面文字裡舊站沒有的字（`src/i18n/<lang>.json` 的 `_note` 列了哪些）是 AI 譯。
   - 樣式：舊站 es／fr／ru 每頁 `<style>` 有「選單 padding 5px、標題線換 pd-title-line-02.png」，ar 有「.lang_rtl、#footer-content、.about-top-title、.pd-btn-info-link 改 direction:rtl」，新站放進 `site.css`（用 `html[lang=…]`）。**阿拉伯文改成整頁由右到左**（黃老闆 2026-11-26 指示；舊站 `<html lang="ar">` 沒有 dir、只有那幾塊文字改方向）：`brand.json` 的 ar 是 `dir: rtl`，`site.css` 最後一段把 Bootstrap 3 的欄位浮動、選單、下拉、左右對齊對調；舊站那一行照留。
   - 頁尾的公司中文名那行只有 zh 有（舊站四語頁尾沒有這行）；四語頁尾地址用英文、TEL／FAX 用英文（同舊站）。
-  - 舊站四語 FAQ 只有 16 題（en／zh 29 題），表格也是舊版；先照搬，等 Tiffany 的客製化說法到了再用目前 en 整頁重翻。四語 meta description 約 310 段超過 160 字，還沒縮。
+  - 舊站四語 FAQ 只有 16 題（en／zh 29 題）。2026-11-27 黃老闆要先做，不等 Tiffany：少的 13 題照目前 en 由 AI 翻成四語，插在 en 題序的對應位置（`../translation/faq-missing-13.json`、`scripts/add-faq-missing.mjs`，插入處記在 `client-text-edits.json`），現在四語都是 29 題。原本 16 題（含舊版的壓力／溫度表）還是舊站原文。客製化說法 Tiffany 給了以後，en／zh 與四語要一起改。四語 meta description 超過 160 字的 310 段已縮到 ≤155（只用原句事實、數字型號照抄；英文影片的描述直接用 en 已縮好的那句）。
 - AI 譯字怎麼標：整頁都是 AI 初稿的頁（LQCOL 四語）`status: draft-ai`，頁頂顯示黃色提示。照抄頁的主體是舊站已上線的原文，只有 title／description 或一兩句是 AI 譯的（四語 FAQ、四語認證單頁）也標 `draft-ai`，但**不顯示**頁頂提示——頁面上看到的幾乎全是舊站原文，掛「AI 初稿」會誤導；改了哪幾句寫在 `_note`，正文改字另記在 `client-text-edits.json`。只補了 alt、隱藏標題這類看不到的字的頁（四語首頁）維持 `approved-legacy`，`_note` 記哪些是 AI 譯。
 - 選單會把目前所在的頁反白（`li.active`），舊站沒有；en／zh 一開始就這樣做，四語沿用。
 - 加語系的匯入指令（只寫新語系的檔，en／zh 不動）：`import-legacy-page.mjs --langs es,fr,ru,ar`、`import-classic-series.mjs --langs …`、`import-news.mjs --langs …`、`import-home-langs.mjs`、`import-lqcol-langs.mjs`。在 Git Bash 跑記得先 `export MSYS_NO_PATHCONV=1`，不然 `/FAQ` 這種參數會被改成 Windows 路徑。**`import-news.mjs` 不加 `--langs` 會重寫 en／zh 全部新聞**（後來縮短的 meta 會被蓋回去）。

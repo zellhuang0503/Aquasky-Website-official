@@ -18,7 +18,12 @@ const force = process.argv.includes('--force');
 const langsArg = process.argv.find((a) => a.startsWith('--langs'));
 const ADD_LANGS = langsArg ? (langsArg.includes('=') ? langsArg.split('=')[1] : process.argv[process.argv.indexOf(langsArg) + 1]).split(',') : null;
 if (ADD_LANGS && ADD_LANGS.some((l) => !['es', 'fr', 'ru', 'ar'].includes(l))) throw new Error(`--langs only takes es,fr,ru,ar: ${ADD_LANGS}`);
-const LANGS = ADD_LANGS ?? ['en', 'zh'];
+// 舊站之後又發新文章：node scripts/import-news.mjs --update-list INDUSTRY
+//   六個語系都重建該分類的列表（文章順序、分頁、右欄），只寫「還沒有的文章」；已有的文章檔、列表的 seo（11/26 縮短過）都不動。
+//   先把線上最新的列表頁與新文章抓進封存（success.jsonl 後面加一列＝取代舊的同網址）。
+const updArg = process.argv.indexOf('--update-list');
+const UPDATE_CAT = updArg > 0 ? process.argv[updArg + 1] : null;
+const LANGS = UPDATE_CAT ? ['en', 'zh', 'es', 'fr', 'ru', 'ar'] : (ADD_LANGS ?? ['en', 'zh']);
 // 舊站每頁 <style> 第一行是選單 padding，es／fr／ru 另加標題線、ar 另加 direction:rtl（全站一樣，新站放 site.css）；比對 <style> 時拿掉這一段
 const normStyle = (s) => s.replace(/^\.nav > li > a \{[^}]*\}\s*(\.pd_title_line \{[^}]*\}|\.lang_rtl,#footer-content,\.about-top-title,\.pd-btn-info-link \{direction:rtl;\})?\s*/, '');
 // 種類：列表網址與明細網址的規則
@@ -108,10 +113,10 @@ const innerOfDiv = (html, openTag, where) => {
 
 const assetsOf = (html) => [...new Set([...html.matchAll(/<img[^>]+src="(\/[^"]+)"/g)].map((m) => m[1]))];
 
-const common = ADD_LANGS ? JSON.parse(readFileSync(join(root, 'src', 'data', 'news', 'common.json'), 'utf8')) : { listCss: null, detailCss: null };
+const common = ADD_LANGS || UPDATE_CAT ? JSON.parse(readFileSync(join(root, 'src', 'data', 'news', 'common.json'), 'utf8')) : { listCss: null, detailCss: null };
 let articles = 0, lists = 0;
 for (const lang of LANGS) {
-  for (const K of KINDS) for (const cat of K.cats) {
+  for (const K of KINDS) for (const cat of K.cats.filter((c) => !UPDATE_CAT || c === UPDATE_CAT)) {
     const base = K.listPath(cat);
     const detailPrefix = K.detailPrefix(cat);
     // ---- 列表頁（第 1 頁＝base，之後 base/pageN）----
@@ -162,7 +167,7 @@ for (const lang of LANGS) {
 
     // ---- 明細頁 ----
     const dir = join(root, 'src', 'content', 'news', lang, cat);
-    if (force && existsSync(dir)) rmSync(dir, { recursive: true });
+    if (force && !UPDATE_CAT && existsSync(dir)) rmSync(dir, { recursive: true });
     mkdirSync(dir, { recursive: true });
     const outDir = join(root, 'src', 'data', 'news');
     mkdirSync(outDir, { recursive: true });
@@ -206,18 +211,20 @@ for (const lang of LANGS) {
         seo: { title: dm.title, description: dm.description },
         legacyJsonLd: dm.jsonLd, bodyHtml, assets,
       };
+      if (UPDATE_CAT && existsSync(join(dir, `${slug}.json`))) continue;   // 已有的文章不動
+      if (UPDATE_CAT) console.log(`  new article: /${lang}${path}`);
       writeFileSync(join(dir, `${slug}.json`), JSON.stringify(entry, null, 2) + '\n');
       articles++;
     }
     const list = {
       id: `${lang}-${cat}`, kind: K.kind, lang, category: cat, path: base, perPage: PER_PAGE, pageCount,
       titleBand, h4Recent: h4s[0], h4Side: h4s[1], h4Detail, moreLabel, backLabel, sidebar, order,
-      seo: { title: meta.title, description: meta.description },
+      seo: UPDATE_CAT && existsSync(join(outDir, `${lang}-${cat}.json`)) ? JSON.parse(readFileSync(join(outDir, `${lang}-${cat}.json`), 'utf8')).seo : { title: meta.title, description: meta.description },
     };
     writeFileSync(join(outDir, `${lang}-${cat}.json`), JSON.stringify(list, null, 2) + '\n');
     lists++;
     console.log(`${lang} ${K.kind} ${cat}: ${pageCount} list page(s), ${order.length} articles`);
   }
 }
-if (!ADD_LANGS) writeFileSync(join(root, 'src', 'data', 'news', 'common.json'), JSON.stringify(common, null, 2) + '\n');
+if (!ADD_LANGS && !UPDATE_CAT) writeFileSync(join(root, 'src', 'data', 'news', 'common.json'), JSON.stringify(common, null, 2) + '\n');
 console.log(`wrote ${lists} lists, ${articles} articles, common.json`);
