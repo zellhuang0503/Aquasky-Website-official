@@ -1,0 +1,4098 @@
+{
+ "_note": "系列頁「產品規格」段落的資料（2026-11-27）。文字與數字由梵亞從溢康 2026-07-17 版六語 DM PDF（public/download/EDM/<語言>/）轉錄：規格表六語數字逐格一致，只存一份（取英文版）；特色欄位與注意事項各語言照各自 DM。改規格改這裡；頁面由 src/components/EdmSpecs.astro 輸出。待溢康確認的項目見 translation/edm-text/README.md。",
+ "labels": {
+  "en": {
+   "heading": "{series} Specifications",
+   "features": "Construction and Ratings",
+   "marks": "Certifications and marks",
+   "updated": "Data updated",
+   "download": "Download the {series} brochure (PDF)",
+   "source": "Text transcribed from the AQUASKY {series} brochure.",
+   "cols": {
+    "model": "Model Number",
+    "volume": "Total Tank Volume",
+    "diameter": "Diameter",
+    "height": "Height (Base Including)",
+    "heightH": "Height",
+    "length": "Length",
+    "boxLength": "Box Length",
+    "boxWidth": "Box Width",
+    "boxHeight": "Box Height",
+    "nw": "N.W.",
+    "gw": "G.W.",
+    "ship": "Shipping Volume",
+    "conn": "Connection"
+   },
+   "units": {
+    "liter": "Liter",
+    "gal": "Gal",
+    "cm": "Cm",
+    "inch": "Inch",
+    "kg": "Kg",
+    "lbs": "Lbs.",
+    "cuf": "CUF"
+   }
+  },
+  "zh": {
+   "heading": "{series} 產品規格",
+   "features": "材質與性能",
+   "marks": "認證與標章",
+   "updated": "資料更新日期",
+   "download": "下載 {series} 型錄（PDF）",
+   "source": "本段文字依 AQUASKY {series} 型錄（DM）轉錄。",
+   "cols": {
+    "model": "型號",
+    "volume": "容積",
+    "diameter": "直徑",
+    "height": "高度（含底座）",
+    "heightH": "高度",
+    "length": "長度",
+    "boxLength": "箱長",
+    "boxWidth": "箱寬",
+    "boxHeight": "箱高",
+    "nw": "淨重",
+    "gw": "毛重",
+    "ship": "材積",
+    "conn": "接頭尺寸"
+   },
+   "units": {
+    "liter": "公升",
+    "gal": "加侖",
+    "cm": "公分",
+    "inch": "英吋",
+    "kg": "公斤",
+    "lbs": "磅",
+    "cuf": "CUF"
+   }
+  },
+  "es": {
+   "heading": "Especificaciones de {series}",
+   "features": "Materiales y prestaciones",
+   "marks": "Certificaciones y sellos",
+   "updated": "Datos actualizados",
+   "download": "Descargar el folleto de {series} (PDF)",
+   "source": "Texto transcrito del folleto de AQUASKY {series}.",
+   "cols": {
+    "model": "Número de modelo",
+    "volume": "Volumen del depósito",
+    "diameter": "Diámetro",
+    "height": "Altura (Base incluida)",
+    "heightH": "Altura",
+    "length": "Longitud",
+    "boxLength": "Longitud de la caja",
+    "boxWidth": "Anchura de la caja",
+    "boxHeight": "Altura de la caja",
+    "nw": "Peso neto",
+    "gw": "Peso bruto",
+    "ship": "Volumen de envío",
+    "conn": "Conexión"
+   },
+   "units": {
+    "liter": "Litro",
+    "gal": "Gal",
+    "cm": "Cm",
+    "inch": "Inch",
+    "kg": "Kg",
+    "lbs": "Lbs.",
+    "cuf": "CUF"
+   }
+  },
+  "fr": {
+   "heading": "Caractéristiques techniques {series}",
+   "features": "Matériaux et performances",
+   "marks": "Certifications et labels",
+   "updated": "Données mises à jour",
+   "download": "Télécharger la brochure {series} (PDF)",
+   "source": "Texte transcrit de la brochure AQUASKY {series}.",
+   "cols": {
+    "model": "Numéro de modèle",
+    "volume": "Volume du réservoir",
+    "diameter": "Diamètre",
+    "height": "Hauteur (Base incluse)",
+    "heightH": "Hauteur",
+    "length": "Longueur",
+    "boxLength": "Longueur du carton",
+    "boxWidth": "Largeur du carton",
+    "boxHeight": "Hauteur du carton",
+    "nw": "Poids net",
+    "gw": "Poids brut",
+    "ship": "Volume d'expédition",
+    "conn": "Raccordement"
+   },
+   "units": {
+    "liter": "Litres",
+    "gal": "Gal",
+    "cm": "Cm",
+    "inch": "Inch",
+    "kg": "Kg",
+    "lbs": "Lbs.",
+    "cuf": "CUF"
+   }
+  },
+  "ru": {
+   "heading": "Технические характеристики {series}",
+   "features": "Материалы и рабочие параметры",
+   "marks": "Сертификаты и маркировка",
+   "updated": "Данные обновлены",
+   "download": "Скачать буклет {series} (PDF)",
+   "source": "Текст перенесён из буклета AQUASKY {series}.",
+   "cols": {
+    "model": "Номер модели",
+    "volume": "Общий объём бака",
+    "diameter": "Диаметр",
+    "height": "Высота (включая постамент)",
+    "heightH": "Высота",
+    "length": "Длина",
+    "boxLength": "Длина коробки",
+    "boxWidth": "Ширина коробки",
+    "boxHeight": "Высота коробки",
+    "nw": "Вес нетто",
+    "gw": "Вес брутто",
+    "ship": "Объём коробки",
+    "conn": "Соединение"
+   },
+   "units": {
+    "liter": "Литр",
+    "gal": "Галлон",
+    "cm": "см",
+    "inch": "дюйм",
+    "kg": "кг",
+    "lbs": "фунт",
+    "cuf": "куб. фут"
+   }
+  },
+  "ar": {
+   "heading": "مواصفات {series}",
+   "features": "المواد والأداء",
+   "marks": "الشهادات والعلامات",
+   "updated": "تاريخ تحديث البيانات",
+   "download": "تحميل كتيب {series} (PDF)",
+   "source": "النص منقول من كتيب AQUASKY {series}.",
+   "cols": {
+    "model": "رقم الطراز",
+    "volume": "سعة الخزان",
+    "diameter": "القطر",
+    "height": "الارتفاع (بما في ذلك القاعدة)",
+    "heightH": "الارتفاع",
+    "length": "الطول",
+    "boxLength": "طول الصندوق",
+    "boxWidth": "عرض الصندوق",
+    "boxHeight": "ارتفاع الصندوق",
+    "nw": "الوزن الصافي",
+    "gw": "الوزن الكلي",
+    "ship": "سعة الشحن",
+    "conn": "الوصلة"
+   },
+   "units": {
+    "liter": "لتر",
+    "gal": "جالون",
+    "cm": "سم",
+    "inch": "بوصة",
+    "kg": "كجم",
+    "lbs": "رطل",
+    "cuf": "قدم مكعب"
+   }
+  }
+ },
+ "series": {
+  "ro-plus": {
+   "name": "RO-PLUS",
+   "updated": "2025/10/07",
+   "marks": [
+    "CE",
+    "NSF",
+    "Lead-Free",
+    "N2 Filling"
+   ],
+   "brochure": {
+    "en": "/download/EDM/English/AQUASKY_HYDRO-PLUS_DM_en_20260717_efc945_web.pdf",
+    "zh": "/download/EDM/Chinese/AQUASKY_HYDRO-PLUS_DM_zh_20260717_a18299_web.pdf",
+    "es": "/download/EDM/Spanish/AQUASKY_HYDRO-PLUS_DM_es_20260717_811a73_web.pdf",
+    "fr": "/download/EDM/French/AQUASKY_ROT-PLUS_DM_fr_20260717_9045e1_web.pdf",
+    "ru": "/download/EDM/Russian/AQUASKY_ROT-PLUS_DM_ru_20260717_11ea4e_web.pdf",
+    "ar": "/download/EDM/Arabic/AQUASKY_HYDRO-PLUS_DM_ar_20260717_63b2f8_web.pdf"
+   },
+   "features": {
+    "en": [
+     [
+      "Shell",
+      "Cold Rolled Carbon Steel"
+     ],
+     [
+      "System Connection",
+      "304 Stainless Steel Connector"
+     ],
+     [
+      "Coating",
+      "Triple Coated Liquid Paint"
+     ],
+     [
+      "Diaphragm",
+      "Heavy-Duty Butyl Rubber"
+     ],
+     [
+      "Liner Material",
+      "FDA Grade Polypropylene"
+     ],
+     [
+      "Factory Pre-charge",
+      "7~10 PSI / 0.5~0.7 Bar"
+     ],
+     [
+      "Max Working Temperature",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Max Working Pressure",
+      "100 PSI / 7 Bar"
+     ]
+    ],
+    "zh": [
+     [
+      "外殼",
+      "冷軋鋼鐵"
+     ],
+     [
+      "接頭",
+      "304不鏽鋼"
+     ],
+     [
+      "外部防鏽",
+      "三層環氧樹脂"
+     ],
+     [
+      "橡膠",
+      "丁基橡膠"
+     ],
+     [
+      "防水內襯",
+      "食品級隔水層"
+     ],
+     [
+      "出廠預存氣壓",
+      "7~10 PSI / 0.5~0.7 Bar"
+     ],
+     [
+      "最高運作溫度",
+      "90 °C / 194 °F"
+     ],
+     [
+      "最高工作壓力",
+      "100 PSI / 7 Bar"
+     ]
+    ],
+    "es": [
+     [
+      "Armazón",
+      "Acero al carbono laminado en frío"
+     ],
+     [
+      "Conexión del sistema",
+      "Conector de acero inoxidable 304"
+     ],
+     [
+      "Recubrimiento",
+      "Pintura líquida de triple capa"
+     ],
+     [
+      "Diafragma",
+      "Caucho butílico de alto rendimiento"
+     ],
+     [
+      "Material del revestimiento",
+      "Polipropileno de grado FDA"
+     ],
+     [
+      "Precarga de fábrica",
+      "7~10 PSI / 0.5~0.7 Bar"
+     ],
+     [
+      "Temperatura máxima de trabajo",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Presión máxima de trabajo",
+      "100 PSI / 7 Bar"
+     ]
+    ],
+    "fr": [
+     [
+      "Enveloppe",
+      "Acier au carbone laminé à froid"
+     ],
+     [
+      "Raccordement du système",
+      "Acier inoxydable 304"
+     ],
+     [
+      "Revêtement",
+      "Peinture liquide triple couche"
+     ],
+     [
+      "Diaphragme",
+      "Caoutchouc butyle très résistant"
+     ],
+     [
+      "Matériau de la cuve",
+      "Polypropylène agréé FDA"
+     ],
+     [
+      "Pré-charge en usine",
+      "7~10 PSI / 0.5~0.7 Bar"
+     ],
+     [
+      "Température de fonctionnement max",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Pression de fonctionnement max",
+      "100 PSI / 7 Bar"
+     ]
+    ],
+    "ru": [
+     [
+      "Корпус бака",
+      "Холоднокатаная углеродистая сталь"
+     ],
+     [
+      "Соединение к системе",
+      "Нержавеющая сталь 304"
+     ],
+     [
+      "Покрытие бака",
+      "Жидкая краска в трех слоях"
+     ],
+     [
+      "Диафрагма",
+      "Бутиловая резина в условиях тяжелой эксплуатации"
+     ],
+     [
+      "Материал вставки бака",
+      "Полипропилен FDA"
+     ],
+     [
+      "Заводское давление заправленного газа",
+      "7~10 PSI / 0.5~0.7 бара"
+     ],
+     [
+      "Максимальная рабочая температура",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Максимальное рабочее давление",
+      "100 PSI / 7 бара"
+     ]
+    ],
+    "ar": [
+     [
+      "الهيكل الخارجي",
+      "فولاذ كربوني مدلفن على البارد"
+     ],
+     [
+      "توصيل النظام",
+      "وصلة 304 من الفولاذ المقاوم للصدأ"
+     ],
+     [
+      "الطلاء الخارجي",
+      "طلاء سائل ذو ثلاث طبقات"
+     ],
+     [
+      "الغشاء الواقي",
+      "مطاط بيوتيل للمهام الشاقة"
+     ],
+     [
+      "مادة البطانة",
+      "بولي بروبيلين معتمد من إدارة الغذاء والدواء"
+     ],
+     [
+      "الشحن المسبق في المصنع",
+      "7~10 PSI / 0.5~0.7 بار"
+     ],
+     [
+      "درجة حرارة التشغيل القصوى",
+      "90°م / 194°ف"
+     ],
+     [
+      "ضغط التشغيل الأقصى",
+      "100 PSI / 7 بار"
+     ]
+    ]
+   },
+   "tables": [
+    {
+     "title": {
+      "en": "RO-PLUS Storage Tank",
+      "zh": "RO-PLUS 逆滲透儲水桶",
+      "es": "Tanque de almacenamiento RO-PLUS",
+      "fr": "Cuve de stockage RO-PLUS",
+      "ru": "RO-PLUS бак для хранения",
+      "ar": "خزان التخزين RO-PLUS"
+     },
+     "layout": "vertical",
+     "rows": [
+      [
+       "ROT-1",
+       "3",
+       "0.8",
+       "14.0",
+       "5.5",
+       "19.6",
+       "7.7",
+       "30.5",
+       "12.0",
+       "30.5",
+       "12.0",
+       "24.0",
+       "9.4",
+       "3.9",
+       "8.6",
+       "4.5",
+       "9.9",
+       "0.79",
+       "1/4\" NPT"
+      ],
+      [
+       "ROT-2",
+       "8",
+       "2.0",
+       "20.3",
+       "8.0",
+       "28.7",
+       "11.3",
+       "21.0",
+       "8.3",
+       "21.0",
+       "8.3",
+       "32.0",
+       "12.6",
+       "2.0",
+       "4.4",
+       "2.2",
+       "4.9",
+       "0.50",
+       "1/4\" NPT"
+      ],
+      [
+       "ROT-3",
+       "12",
+       "3.2",
+       "22.9",
+       "9.0",
+       "34.3",
+       "13.5",
+       "24.0",
+       "9.4",
+       "24.0",
+       "9.4",
+       "39.0",
+       "15.4",
+       "2.8",
+       "6.2",
+       "3.1",
+       "6.8",
+       "0.79",
+       "1/4\" NPT"
+      ],
+      [
+       "ROT-4",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "34.6",
+       "13.6",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "3.4",
+       "7.5",
+       "3.8",
+       "8.4",
+       "1.08",
+       "1/4\" NPT"
+      ],
+      [
+       "ROT-6",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "39.3",
+       "15.5",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "4.0",
+       "8.8",
+       "4.5",
+       "9.9",
+       "1.42",
+       "1/4\" NPT"
+      ],
+      [
+       "ROT-10",
+       "40",
+       "10",
+       "35.5",
+       "14.0",
+       "44.2",
+       "17.4",
+       "36.0",
+       "14.2",
+       "36.3",
+       "14.3",
+       "46.0",
+       "18.1",
+       "5.9",
+       "13.0",
+       "6.8",
+       "15.0",
+       "2.12",
+       "1/4\" NPT"
+      ],
+      [
+       "ROT-14",
+       "60",
+       "14",
+       "39.0",
+       "15.4",
+       "60.4",
+       "23.8",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "64.0",
+       "25.2",
+       "8.9",
+       "19.6",
+       "10.7",
+       "23.6",
+       "3.61",
+       "3/4\" NPT"
+      ],
+      [
+       "ROT-20",
+       "80",
+       "20",
+       "39.0",
+       "15.4",
+       "78.5",
+       "30.9",
+       "41.0",
+       "16.1",
+       "41.0",
+       "16.1",
+       "82.0",
+       "32.3",
+       "11.3",
+       "24.9",
+       "13.6",
+       "30.0",
+       "4.87",
+       "3/4\" NPT"
+      ],
+      [
+       "ROT-28",
+       "100",
+       "28",
+       "43.0",
+       "16.9",
+       "76.3",
+       "30.0",
+       "44.0",
+       "17.3",
+       "44.0",
+       "17.3",
+       "79.0",
+       "31.1",
+       "13.7",
+       "30.2",
+       "15.6",
+       "34.4",
+       "5.40",
+       "1\" NPT"
+      ],
+      [
+       "ROT-34",
+       "130",
+       "34",
+       "55.0",
+       "21.7",
+       "79.2",
+       "31.2",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "80.0",
+       "31.5",
+       "20.8",
+       "45.9",
+       "24.5",
+       "54.0",
+       "8.54",
+       "1-1/4\" NPT"
+      ],
+      [
+       "ROT-44",
+       "160",
+       "44",
+       "55.0",
+       "21.7",
+       "93.3",
+       "36.7",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "94.0",
+       "37.0",
+       "23.8",
+       "52.5",
+       "27.5",
+       "60.6",
+       "10.04",
+       "1-1/4\" NPT"
+      ]
+     ]
+    }
+   ],
+   "notes": {
+    "en": [
+     "ROT-1: 4 pcs per box",
+     "Stand models with plastic base: ROT-3, ROT-4, ROT-6, ROT-10, ROT-14, ROT-20, ROT-28, ROT-34, ROT-44",
+     "ROT-4SS and ROT-6SS stainless steel tanks are available."
+    ],
+    "zh": [
+     "ROT-1：4 個一箱",
+     "含塑膠底座型號：ROT-3、ROT-4、ROT-6、ROT-10、ROT-14、ROT-20、ROT-28、ROT-34、ROT-44",
+     "另提供 ROT-4SS 和 ROT-6SS 不鏽鋼壓力桶"
+    ],
+    "es": [
+     "ROT-1: 4 unidades por paquete",
+     "Modelos de soporte con base de plástico: ROT-3, ROT-4, ROT-6, ROT-10, ROT-14, ROT-20, ROT-28, ROT-34, ROT-44",
+     "Tanques de acero inoxidable ROT-4SS y ROT-6SS disponibles."
+    ],
+    "fr": [
+     "ROT-1 : 4 pièces par carton",
+     "Modèles sur pied avec base en plastique : ROT-3, ROT-4, ROT-6, ROT-10, ROT-14, ROT-20, ROT-28, ROT-34, ROT-44",
+     "Les réservoirs en acier inoxydable ROT-4SS et ROT-6SS sont disponibles."
+    ],
+    "ru": [
+     "ROT-1: 4 штуки в коробке",
+     "Модели на подставке с пластиковой базой: ROT-3, ROT-4, ROT-6, ROT-10, ROT-14, ROT-20, ROT-28, ROT-34, ROT-44",
+     "Баки ROT-4SS и ROT-6SS из нержавеющей стали доступны."
+    ],
+    "ar": [
+     "ROT-1: 4 قطع في الحزمة",
+     "نموذج قائم مع قاعدة بلاستيكية: ROT-3, ROT-4, ROT-6, ROT-10, ROT-14, ROT-20, ROT-28, ROT-34, ROT-44",
+     "خزانات ROT-4SS و ROT-6SS من الفولاذ المقاوم للصدأ متوفرة."
+    ]
+   }
+  },
+  "hydro-plus": {
+   "name": "HYDRO-PLUS",
+   "updated": "2025/12/23",
+   "marks": [
+    "CE",
+    "EuroCert EN ISO 9001"
+   ],
+   "brochure": {
+    "en": "/download/EDM/English/AQUASKY_HYDRO-PLUS_DM_en_20260717_efc945_web.pdf",
+    "zh": "/download/EDM/Chinese/AQUASKY_HYDRO-PLUS_DM_zh_20260717_a18299_web.pdf",
+    "es": "/download/EDM/Spanish/AQUASKY_HYDRO-PLUS_DM_es_20260717_811a73_web.pdf",
+    "fr": "/download/EDM/French/AQUASKY_Hydro-Plus_DM_fr_20260717_b033e1_web.pdf",
+    "ru": "/download/EDM/Russian/AQUASKY_HYDRO-PLUS_DM_ru_20260717_79367a_web.pdf",
+    "ar": "/download/EDM/Arabic/AQUASKY_HYDRO-PLUS_DM_ar_20260717_63b2f8_web.pdf"
+   },
+   "features": {
+    "en": [
+     [
+      "Shell",
+      "Cold Rolled Carbon Steel"
+     ],
+     [
+      "System Connection",
+      "Carbon Steel / Stainless Steel"
+     ],
+     [
+      "Coating",
+      "Gray Paint (Pantone 877C)"
+     ],
+     [
+      "Diaphragm",
+      "EPDM Rubber"
+     ],
+     [
+      "Air Nozzle Protection",
+      "Brass Cap with Internal O-ring"
+     ],
+     [
+      "Factory Pre-charge",
+      "15 PSI / 1 Bar"
+     ],
+     [
+      "Max Working Temperature",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Max Working Pressure",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "zh": [
+     [
+      "外殼",
+      "冷軋鋼鐵"
+     ],
+     [
+      "接頭",
+      "鐵接頭／不鏽鋼接頭"
+     ],
+     [
+      "外部防鏽",
+      "三層環氧樹脂"
+     ],
+     [
+      "橡膠",
+      "耐高溫橡膠"
+     ],
+     [
+      "氣嘴防護",
+      "黃銅帽內含 O 型環"
+     ],
+     [
+      "出廠預存氣壓",
+      "15 PSI / 1 Bar"
+     ],
+     [
+      "最高運作溫度",
+      "130 °C / 266 °F"
+     ],
+     [
+      "最高工作壓力",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "es": [
+     [
+      "Armazón",
+      "Acero al carbono laminado en frío"
+     ],
+     [
+      "Conexión del sistema",
+      "Acero al carbono / Acero inoxidable"
+     ],
+     [
+      "Recubrimiento",
+      "Pintura gris (Pantone 877C)"
+     ],
+     [
+      "Diafragma",
+      "Caucho EPDM"
+     ],
+     [
+      "Protección de la válvula de aire",
+      "Tapa de latón con junta tórica interna"
+     ],
+     [
+      "Precarga de fábrica",
+      "15 PSI / 1 Bar"
+     ],
+     [
+      "Temperatura máxima de trabajo",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Presión máxima de trabajo",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "fr": [
+     [
+      "Enveloppe",
+      "Acier au carbone laminé à froid"
+     ],
+     [
+      "Raccordement du système",
+      "Acier carbone / Acier inoxydable"
+     ],
+     [
+      "Revêtement",
+      "Peinture grise (Pantone 877C)"
+     ],
+     [
+      "Diaphragme",
+      "Caoutchouc EPDM"
+     ],
+     [
+      "Protection du raccordement d'air",
+      "Capuchon en laiton avec joint torique interne"
+     ],
+     [
+      "Pré-charge en usine",
+      "15 PSI / 1 Bar"
+     ],
+     [
+      "Température de fonctionnement max",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Pression de fonctionnement max",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "ru": [
+     [
+      "Корпус бака",
+      "Холоднокатаная углеродистая сталь"
+     ],
+     [
+      "Соединение к системе",
+      "Углеродистая сталь / Нержавеющая сталь"
+     ],
+     [
+      "Покрытие бака",
+      "Серое лакокрасочное покрытие (Pantone 877C)"
+     ],
+     [
+      "Диафрагма",
+      "Резина EPDM"
+     ],
+     [
+      "Защита воздушного клапана",
+      "Латунный колпачок с внутренним уплотнительным кольцом (O-Ring)"
+     ],
+     [
+      "Заводское давление заправленного газа",
+      "15 PSI / 1 бар"
+     ],
+     [
+      "Максимальная рабочая температура",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Максимальное рабочее давление",
+      "150 PSI / 10 бара"
+     ]
+    ],
+    "ar": [
+     [
+      "الهيكل الخارجي",
+      "فولاذ كربوني مدلفن على البارد"
+     ],
+     [
+      "توصيل النظام",
+      "الفولاذ الكربوني / الفولاذ المقاوم للصدأ"
+     ],
+     [
+      "الطلاء الخارجي",
+      "طلاء رمادي (Pantone 877C)"
+     ],
+     [
+      "الغشاء الواقي",
+      "مطاط EPDM"
+     ],
+     [
+      "حماية فوهة الهواء",
+      "غطاء نحاسي مع حلقة إحكام داخلية (O-Ring)"
+     ],
+     [
+      "الشحن المسبق في المصنع",
+      "15 PSI / 1 بار"
+     ],
+     [
+      "درجة حرارة التشغيل القصوى",
+      "130°م / 266°ف"
+     ],
+     [
+      "ضغط التشغيل الأقصى",
+      "150 PSI / 10 بار"
+     ]
+    ]
+   },
+   "tables": [
+    {
+     "title": {
+      "en": "HYDRO-PLUS Hydronic Heating Tank",
+      "zh": "HYDRO-PLUS 導熱液體膨脹罐",
+      "es": "Tanque de calefacción hidrónica HYDRO-PLUS",
+      "fr": "Réservoir de chauffage hydronique HYDRO-PLUS",
+      "ru": "Бак для гидронного отопления HYDRO-PLUS",
+      "ar": "خزانات التدفئة الهيدرونية HYDRO-PLUS"
+     },
+     "layout": "vertical",
+     "rows": [
+      [
+       "HP-3",
+       "3",
+       "0.8",
+       "14.0",
+       "5.5",
+       "20.65",
+       "8.1",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "24.0",
+       "9.4",
+       "4.1",
+       "9.0",
+       "4.7",
+       "10.4",
+       "0.81",
+       "1/2\""
+      ],
+      [
+       "HP-8",
+       "8",
+       "2.0",
+       "20.3",
+       "8.0",
+       "29.75",
+       "11.7",
+       "21.0",
+       "8.3",
+       "21.0",
+       "8.3",
+       "32.0",
+       "12.6",
+       "1.9",
+       "4.2",
+       "2.3",
+       "5.1",
+       "0.50",
+       "1/2\""
+      ],
+      [
+       "HP-12",
+       "12",
+       "3.2",
+       "22.9",
+       "9.0",
+       "36.95",
+       "14.5",
+       "23.5",
+       "9.3",
+       "23.5",
+       "9.3",
+       "39.0",
+       "15.4",
+       "2.7",
+       "6.0",
+       "3.0",
+       "6.6",
+       "0.76",
+       "1/2\""
+      ],
+      [
+       "HP-18",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "37.75",
+       "14.9",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "3.4",
+       "7.5",
+       "3.8",
+       "8.4",
+       "1.08",
+       "1/2\""
+      ],
+      [
+       "HP-24",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "41.95",
+       "16.5",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "3.6",
+       "7.9",
+       "4.5",
+       "9.9",
+       "1.42",
+       "1/2\""
+      ],
+      [
+       "HP-40",
+       "40",
+       "10",
+       "35.5",
+       "14.0",
+       "42.85",
+       "16.9",
+       "36.0",
+       "14.2",
+       "36.3",
+       "14.3",
+       "46.0",
+       "18.1",
+       "5.9",
+       "13.0",
+       "6.8",
+       "15.0",
+       "2.12",
+       "1/2\""
+      ],
+      [
+       "HP-60",
+       "60",
+       "14",
+       "39.0",
+       "15.4",
+       "59.0",
+       "23.2",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "62.0",
+       "24.4",
+       "9.4",
+       "20.7",
+       "10.7",
+       "23.6",
+       "3.50",
+       "1\""
+      ],
+      [
+       "HP-80",
+       "80",
+       "20",
+       "43.2",
+       "17.0",
+       "70.0",
+       "27.6",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "70.0",
+       "27.6",
+       "12.7",
+       "28.0",
+       "14.6",
+       "32.2",
+       "5.00",
+       "1\""
+      ],
+      [
+       "HP-100",
+       "100",
+       "28",
+       "43.2",
+       "17.0",
+       "76.3",
+       "30.0",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "80.0",
+       "31.5",
+       "13.7",
+       "30.2",
+       "15.6",
+       "34.4",
+       "5.72",
+       "1\""
+      ],
+      [
+       "HP-120",
+       "120",
+       "32",
+       "39.0",
+       "15.4",
+       "113.9",
+       "44.8",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "116.0",
+       "45.7",
+       "19.7",
+       "43.4",
+       "22.3",
+       "49.2",
+       "6.55",
+       "1\""
+      ],
+      [
+       "HP-130",
+       "130",
+       "34",
+       "55.0",
+       "21.7",
+       "79.2",
+       "31.2",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "80.0",
+       "31.5",
+       "21.5",
+       "47.4",
+       "24.5",
+       "54.0",
+       "8.54",
+       "1-1/4\""
+      ],
+      [
+       "HP-160",
+       "160",
+       "44",
+       "55.0",
+       "21.7",
+       "93.3",
+       "36.7",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "94.0",
+       "37.0",
+       "23.9",
+       "52.7",
+       "27.2",
+       "60.0",
+       "10.04",
+       "1-1/4\""
+      ],
+      [
+       "HP-200",
+       "200",
+       "53",
+       "55.0",
+       "21.7",
+       "104.9",
+       "41.3",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "108.0",
+       "42.5",
+       "26.9",
+       "59.3",
+       "30.4",
+       "67.0",
+       "11.53",
+       "1-1/4\""
+      ]
+     ],
+     "subhead": {
+      "before": "HP-60",
+      "text": {
+       "en": "Stand Models With Base",
+       "zh": "含底座型號",
+       "es": "Modelos de pie con base",
+       "fr": "Modèles à support avec base",
+       "ru": "Напольная модель с постаментом",
+       "ar": "الطرز القائمة المزودة بقاعدة"
+      }
+     }
+    }
+   ],
+   "notes": {
+    "en": [
+     "Installation: non-potable water systems only. Propylene glycol can be used in mixture concentrations up to 50%.",
+     "The shield coating is available for all models."
+    ],
+    "zh": [
+     "安裝注意事項：僅限非飲用水系統使用，丙二醇可用於混合濃度高達 50%。"
+    ],
+    "es": [
+     "Instalación: solo en sistemas de agua no potable. Se puede utilizar propilenglicol en concentraciones de mezcla de hasta el 50%.",
+     "El recubrimiento de protección está disponible para todos los modelos."
+    ],
+    "fr": [
+     "Installation : système d'eau non potable uniquement. Le propylène glycol peut être utilisé dans des concentrations de mélange jusqu'à 50 %.",
+     "Le revêtement de protection est disponible pour tous les modèles."
+    ],
+    "ru": [
+     "Установка: только для систем с непитьевой водой. Пропиленгликоль можно использовать в концентрациях смеси до 50%.",
+     "Защитное покрытие доступно для всех моделей."
+    ],
+    "ar": [
+     "التركيب: فقط في نظم المياه غير الصالحة للشرب. يمكن استخدام البروبيلين جلايكول في تركيزات المزيج حتى 50%.",
+     "الطلاء الواقي متوفر لجميع النماذج."
+    ]
+   }
+  },
+  "mega-plus": {
+   "name": "MEGA-PLUS",
+   "updated": "2025/12/29",
+   "marks": [
+    "EuroCert EN ISO 9001",
+    "Lead-Free",
+    "ACS",
+    "CE 0035",
+    "NSF/ANSI 61 (UPC)",
+    "WaterMark Lead Free",
+    "Shield Coating",
+    "N2 Filling"
+   ],
+   "brochure": {
+    "en": "/download/EDM/English/AQUASKY_MEGA-PLUS_DM_en_20260717_0546c4_web.pdf",
+    "zh": "/download/EDM/Chinese/AQUASKY_MEGA-PLUS_DM_zh_20260717_f3a75a_web.pdf",
+    "es": "/download/EDM/Spanish/AQUASKY_MEGA-PLUS_DM_es_20260717_0d8f03_web.pdf",
+    "fr": "/download/EDM/French/AQUASKY_MEGA-Plus_DM_fr_20260717_3ea943_web.pdf",
+    "ru": "/download/EDM/Russian/AQUASKY_MEGA-PLUS_DM_ru_20260717_d4ee6d_web.pdf",
+    "ar": "/download/EDM/Arabic/AQUASKY_MEGA-PLUS_DM_ar_20260717_c9694f_web.pdf"
+   },
+   "features": {
+    "en": [
+     [
+      "Shell",
+      "Cold Rolled Carbon Steel"
+     ],
+     [
+      "System Connection",
+      "304 Stainless Steel Connector"
+     ],
+     [
+      "Coating",
+      "Triple Grade Blue Paint"
+     ],
+     [
+      "Diaphragm",
+      "Heavy-Duty Butyl Rubber"
+     ],
+     [
+      "Liner Material",
+      "FDA Grade Polypropylene"
+     ],
+     [
+      "Factory Pre-charge",
+      "4 Bar / 58 PSI"
+     ],
+     [
+      "Max Working Temperature",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Max Working Pressure",
+      "16 Bar / 232 PSI"
+     ]
+    ],
+    "zh": [
+     [
+      "外殼",
+      "冷軋鋼鐵"
+     ],
+     [
+      "接頭",
+      "304不鏽鋼"
+     ],
+     [
+      "外部防鏽",
+      "三層環氧樹脂"
+     ],
+     [
+      "橡膠",
+      "丁基橡膠"
+     ],
+     [
+      "防水內襯",
+      "食品級隔水層"
+     ],
+     [
+      "出廠預存氣壓",
+      "4 Bar / 58 PSI"
+     ],
+     [
+      "最高運作溫度",
+      "90 °C / 194 °F"
+     ],
+     [
+      "最高工作壓力",
+      "16 Bar / 232 PSI"
+     ]
+    ],
+    "es": [
+     [
+      "Armazón",
+      "Acero al carbono laminado en frío"
+     ],
+     [
+      "Conexión del sistema",
+      "Conector de acero inoxidable 304"
+     ],
+     [
+      "Recubrimiento",
+      "Pintura azul de triple grado"
+     ],
+     [
+      "Diafragma",
+      "Caucho butílico de alto rendimiento"
+     ],
+     [
+      "Material del revestimiento",
+      "Polipropileno de grado FDA"
+     ],
+     [
+      "Precarga de fábrica",
+      "4 Bar / 58 PSI"
+     ],
+     [
+      "Temperatura máxima de trabajo",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Presión máxima de trabajo",
+      "16 Bar / 232 PSI"
+     ]
+    ],
+    "fr": [
+     [
+      "Enveloppe",
+      "Acier au carbone laminé à froid"
+     ],
+     [
+      "Raccordement du système",
+      "Acier inoxydable 304"
+     ],
+     [
+      "Revêtement",
+      "Peinture bleue triple qualité"
+     ],
+     [
+      "Diaphragme",
+      "Caoutchouc butyle très résistant"
+     ],
+     [
+      "Matériau de la cuve",
+      "Polypropylène agréé FDA"
+     ],
+     [
+      "Pré-charge en usine",
+      "4 Bar / 58 PSI"
+     ],
+     [
+      "Température de fonctionnement max",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Pression de fonctionnement max",
+      "16 Bar / 232 PSI"
+     ]
+    ],
+    "ru": [
+     [
+      "Корпус бака",
+      "Холоднокатаная углеродистая сталь"
+     ],
+     [
+      "Соединение к системе",
+      "Нержавеющая сталь 304"
+     ],
+     [
+      "Покрытие бака",
+      "Трехслойная синяя краска"
+     ],
+     [
+      "Диафрагма",
+      "Бутиловая резина в условиях тяжелой эксплуатации"
+     ],
+     [
+      "Материал вставки бака",
+      "Полипропилен FDA"
+     ],
+     [
+      "Заводское давление заправленного газа",
+      "4 бара / 58 PSI"
+     ],
+     [
+      "Максимальная рабочая температура",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Максимальное рабочее давление",
+      "16 бар / 232 PSI"
+     ]
+    ],
+    "ar": [
+     [
+      "الهيكل الخارجي",
+      "فولاذ كربوني مدلفن على البارد"
+     ],
+     [
+      "توصيل النظام",
+      "وصلة 304 من الفولاذ المقاوم للصدأ"
+     ],
+     [
+      "الطلاء الخارجي",
+      "طلاء أزرق ذو درجة ثلاثية"
+     ],
+     [
+      "الغشاء الواقي",
+      "مطاط بيوتيل للمهام الشاقة"
+     ],
+     [
+      "مادة البطانة",
+      "بولي بروبيلين معتمد من إدارة الغذاء والدواء"
+     ],
+     [
+      "الشحن المسبق في المصنع",
+      "4 بار / 58 PSI"
+     ],
+     [
+      "درجة حرارة التشغيل القصوى",
+      "90°م / 194°ف"
+     ],
+     [
+      "ضغط التشغيل الأقصى",
+      "16 بار / 232 PSI"
+     ]
+    ]
+   },
+   "tables": [
+    {
+     "title": {
+      "en": "MEGA-PLUS Pressure Tank",
+      "zh": "MEGA-PLUS 立式壓力桶",
+      "es": "Tanque de presión MEGA-PLUS",
+      "fr": "Réservoir sous pression MEGA-PLUS",
+      "ru": "Напорный бак MEGA-PLUS",
+      "ar": "خزان الضغط MEGA-PLUS"
+     },
+     "layout": "vertical",
+     "rows": [
+      [
+       "MEGA-2",
+       "2",
+       "0.5",
+       "12.3",
+       "4.8",
+       "21.4",
+       "8.4",
+       "27.4",
+       "10.8",
+       "27.0",
+       "10.6",
+       "24.0",
+       "9.4",
+       "3.2",
+       "7.0",
+       "3.62",
+       "7.9",
+       "0.63",
+       "1\""
+      ],
+      [
+       "MEGA-3",
+       "3",
+       "0.8",
+       "14.0",
+       "5.5",
+       "21.0",
+       "8.3",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "24.0",
+       "9.4",
+       "4.5",
+       "9.9",
+       "5.1",
+       "11.2",
+       "0.81",
+       "1\""
+      ],
+      [
+       "MEGA-8",
+       "8",
+       "2.0",
+       "20.3",
+       "8.0",
+       "30.1",
+       "11.9",
+       "21.0",
+       "8.3",
+       "21.0",
+       "8.3",
+       "32.0",
+       "12.6",
+       "2.3",
+       "5.1",
+       "2.7",
+       "6.0",
+       "0.50",
+       "1\""
+      ],
+      [
+       "MEGA-18",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "36.5",
+       "14.4",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "4.7",
+       "10.4",
+       "5.1",
+       "11.2",
+       "1.08",
+       "1\""
+      ],
+      [
+       "MEGA-24",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "40.7",
+       "16.0",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "4.9",
+       "10.8",
+       "5.8",
+       "12.8",
+       "1.42",
+       "1\""
+      ],
+      [
+       "MEGA-40",
+       "40",
+       "10.0",
+       "29.0",
+       "11.4",
+       "56.4",
+       "22.2",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "58.0",
+       "22.8",
+       "6.1",
+       "13.4",
+       "7.0",
+       "15.4",
+       "1.97",
+       "1\""
+      ],
+      [
+       "MEGA-60",
+       "60",
+       "14",
+       "39.0",
+       "15.4",
+       "60.7",
+       "23.9",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "62.0",
+       "24.4",
+       "13.1",
+       "28.9",
+       "14.4",
+       "31.7",
+       "3.50",
+       "1\""
+      ],
+      [
+       "MEGA-80",
+       "80",
+       "20",
+       "39.0",
+       "15.4",
+       "79.2",
+       "31.2",
+       "41.0",
+       "16.1",
+       "41.0",
+       "16.1",
+       "80.0",
+       "31.5",
+       "18.6",
+       "41.0",
+       "20.1",
+       "44.3",
+       "4.75",
+       "1\""
+      ],
+      [
+       "MEGA-100",
+       "100",
+       "28",
+       "39.0",
+       "15.4",
+       "95.6",
+       "37.6",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "98.0",
+       "38.6",
+       "22.2",
+       "48.9",
+       "24.0",
+       "52.9",
+       "5.54",
+       "1\""
+      ],
+      [
+       "MEGA-120",
+       "120",
+       "32",
+       "39.0",
+       "15.4",
+       "113.9",
+       "44.8",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "116.8",
+       "46.0",
+       "24.1",
+       "53.1",
+       "26.7",
+       "58.9",
+       "6.60",
+       "1\""
+      ],
+      [
+       "MEGA-130",
+       "130",
+       "34",
+       "55.0",
+       "21.7",
+       "77.9",
+       "30.7",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "79.0",
+       "31.1",
+       "24.0",
+       "52.9",
+       "27.0",
+       "59.5",
+       "8.44",
+       "1-1/4\""
+      ],
+      [
+       "MEGA-160",
+       "160",
+       "44",
+       "55.0",
+       "21.7",
+       "92.7",
+       "36.5",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "94.0",
+       "37.0",
+       "30.7",
+       "67.7",
+       "34.0",
+       "75.0",
+       "10.04",
+       "1-1/4\""
+      ],
+      [
+       "MEGA-200",
+       "200",
+       "53",
+       "55.0",
+       "21.7",
+       "104.3",
+       "41.1",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "108.0",
+       "42.5",
+       "34.7",
+       "76.5",
+       "38.0",
+       "83.8",
+       "11.53",
+       "1-1/4\""
+      ],
+      [
+       "MEGA-240",
+       "240",
+       "62",
+       "55.0",
+       "21.7",
+       "118.7",
+       "46.7",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "120.0",
+       "47.2",
+       "43.7",
+       "96.3",
+       "46.5",
+       "102.5",
+       "12.81",
+       "1-1/4\""
+      ],
+      [
+       "MEGA-300",
+       "300",
+       "81",
+       "55.0",
+       "21.7",
+       "145.5",
+       "57.3",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "149.0",
+       "58.7",
+       "55.0",
+       "121.3",
+       "61.0",
+       "134.5",
+       "15.91",
+       "1-1/4\""
+      ],
+      [
+       "MEGA-450",
+       "450",
+       "120",
+       "65.0",
+       "25.6",
+       "140.6",
+       "55.4",
+       "65.0",
+       "25.6",
+       "65.0",
+       "25.6",
+       "144.0",
+       "56.7",
+       "65.7",
+       "144.8",
+       "70.7",
+       "155.9",
+       "21.48",
+       "1-1/4\""
+      ]
+     ],
+     "subhead": {
+      "before": "MEGA-60",
+      "text": {
+       "en": "Stand Models With Base",
+       "zh": "含底座型號",
+       "es": "Modelos de pie con base",
+       "fr": "Modèles à support avec base",
+       "ru": "Напольная модель с постаментом",
+       "ar": "الطرز القائمة المزودة بقاعدة"
+      }
+     }
+    }
+   ],
+   "notes": {
+    "en": [],
+    "zh": [],
+    "es": [],
+    "fr": [],
+    "ru": [],
+    "ar": []
+   }
+  },
+  "premium-plus": {
+   "name": "PREMIUM-PLUS",
+   "updated": "2026/01/15",
+   "marks": [
+    "EuroCert EN ISO 9001",
+    "Lead-Free",
+    "NSF/ANSI 61 (UPC)",
+    "N2 Filling"
+   ],
+   "brochure": {
+    "en": "/download/EDM/English/AQUASKY_PERMIUM-PLUS_DM_en_20260717_4d2c7d_web.pdf",
+    "zh": "/download/EDM/Chinese/AQUASKY_PERMIUM-PLUS_DM_zh_20260717_59add8_web.pdf",
+    "es": "/download/EDM/Spanish/AQUASKY_PERMIUM-PLUS_DM_es_20260717_709bfa_web.pdf",
+    "fr": "/download/EDM/French/AQUASKY_Premium-Plus_DM_fr_20260717_d344fb_web.pdf",
+    "ru": "/download/EDM/Russian/AQUASKY_PERMIUM-PLUS_DM_ru_20260717_828ace_web.pdf",
+    "ar": "/download/EDM/Arabic/AQUASKY_PERMIUM-PLUS_DM_ar_20260717_301099_web.pdf"
+   },
+   "features": {
+    "en": [
+     [
+      "Shell",
+      "Stainless Steel"
+     ],
+     [
+      "System Connection",
+      "304 Stainless Steel Connector"
+     ],
+     [
+      "Diaphragm",
+      "Heavy-Duty Butyl Rubber"
+     ],
+     [
+      "Factory Pre-charge",
+      "ROT: 7~10 PSI / 0.5~0.7 Bar; APT: 30 PSI / 2 Bar"
+     ],
+     [
+      "Max Working Temperature",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Max Working Pressure",
+      "ROT: 100 PSI / 7 Bar; APT: 150 PSI / 10 Bar"
+     ]
+    ],
+    "zh": [
+     [
+      "外殼",
+      "304不鏽鋼"
+     ],
+     [
+      "接頭",
+      "304不鏽鋼"
+     ],
+     [
+      "橡膠",
+      "丁基橡膠"
+     ],
+     [
+      "出廠預存氣壓",
+      "ROT：7~10 PSI / 0.5~0.7 Bar；APT：30 PSI / 2 Bar"
+     ],
+     [
+      "最高運作溫度",
+      "90 °C / 194 °F"
+     ],
+     [
+      "最高工作壓力",
+      "ROT：100 PSI / 7 Bar；APT：150 PSI / 10 Bar"
+     ]
+    ],
+    "es": [
+     [
+      "Armazón",
+      "Acero inoxidable"
+     ],
+     [
+      "Conexión del sistema",
+      "Conector de acero inoxidable 304"
+     ],
+     [
+      "Diafragma",
+      "Caucho butílico de alto rendimiento"
+     ],
+     [
+      "Material del revestimiento",
+      "Polipropileno de grado FDA"
+     ],
+     [
+      "Precarga de fábrica",
+      "ROT: 7~10 PSI / 0.5~0.7 Bar; APT: 30 PSI / 2 Bar"
+     ],
+     [
+      "Temperatura máxima de trabajo",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Presión máxima de trabajo",
+      "ROT: 100 PSI / 7 Bar; APT: 150 PSI / 10 Bar"
+     ]
+    ],
+    "fr": [
+     [
+      "Enveloppe",
+      "Acier inoxydable"
+     ],
+     [
+      "Raccordement du système",
+      "Acier inoxydable 304"
+     ],
+     [
+      "Diaphragme",
+      "Caoutchouc butyle très résistant"
+     ],
+     [
+      "Matériau de la cuve",
+      "Polypropylène agréé FDA"
+     ],
+     [
+      "Pré-charge en usine",
+      "ROT : 7~10 PSI / 0.5~0.7 Bar ; APT : 30 PSI / 2 Bar"
+     ],
+     [
+      "Température de fonctionnement max",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Pression de fonctionnement max",
+      "ROT : 100 PSI / 7 Bar ; APT : 150 PSI / 10 Bar"
+     ]
+    ],
+    "ru": [
+     [
+      "Корпус бака",
+      "Нержавеющая сталь"
+     ],
+     [
+      "Соединение к системе",
+      "Нержавеющая сталь 304"
+     ],
+     [
+      "Диафрагма",
+      "Бутиловая резина в условиях тяжелой эксплуатации"
+     ],
+     [
+      "Материал вставки бака",
+      "Полипропилен FDA"
+     ],
+     [
+      "Заводское давление заправленного газа",
+      "ROT: 7~10 PSI / 0.5~0.7 бара; APT: 30 PSI / 2 бара"
+     ],
+     [
+      "Максимальная рабочая температура",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Максимальное рабочее давление",
+      "ROT: 100 PSI / 7 бара; APT: 150 PSI / 10 бара"
+     ]
+    ],
+    "ar": [
+     [
+      "الهيكل الخارجي",
+      "فولاذ مقاوم للصدأ"
+     ],
+     [
+      "توصيل النظام",
+      "وصلة 304 من الفولاذ المقاوم للصدأ"
+     ],
+     [
+      "الغشاء الواقي",
+      "مطاط بيوتيل للمهام الشاقة"
+     ],
+     [
+      "مادة البطانة",
+      "بولي بروبيلين معتمد من إدارة الغذاء والدواء"
+     ],
+     [
+      "الشحن المسبق في المصنع",
+      "ROT: 7~10 PSI / 0.5~0.7 بار؛ APT: 30 PSI / 2 بار"
+     ],
+     [
+      "درجة حرارة التشغيل القصوى",
+      "90°م / 194°ف"
+     ],
+     [
+      "ضغط التشغيل الأقصى",
+      "ROT: 100 PSI / 7 بار؛ APT: 150 PSI / 10 بار"
+     ]
+    ]
+   },
+   "tables": [
+    {
+     "title": {
+      "en": "PREMIUM-PLUS Storage Tank",
+      "zh": "PREMIUM-PLUS 不鏽鋼泵浦壓力桶",
+      "es": "Tanque de almacenamiento PREMIUM-PLUS",
+      "fr": "Cuve de stockage PREMIUM-PLUS",
+      "ru": "PREMIUM-PLUS бак для хранения",
+      "ar": "خزان التخزين PREMIUM-PLUS"
+     },
+     "layout": "vertical",
+     "rows": [
+      [
+       "ROT-4SS",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "34.7",
+       "13.7",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "2.91",
+       "6.42",
+       "3.28",
+       "7.23",
+       "1.08",
+       "1/4\" NPT"
+      ],
+      [
+       "ROT-6SS",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "38.7",
+       "15.2",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "3.07",
+       "6.77",
+       "3.59",
+       "7.91",
+       "1.42",
+       "1/4\" NPT"
+      ],
+      [
+       "APT-8SS",
+       "8",
+       "2.0",
+       "20.3",
+       "8.0",
+       "28.2",
+       "11.1",
+       "21.0",
+       "8.3",
+       "21.0",
+       "8.3",
+       "32.0",
+       "12.6",
+       "1.70",
+       "3.75",
+       "1.98",
+       "4.37",
+       "0.50",
+       "1\" NPT/BSP"
+      ],
+      [
+       "APT-18SS",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "36.0",
+       "14.2",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "2.91",
+       "6.42",
+       "3.28",
+       "7.23",
+       "1.08",
+       "1\" NPT/BSP"
+      ],
+      [
+       "APT-24SS",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "40.0",
+       "15.7",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "3.07",
+       "6.77",
+       "3.59",
+       "7.91",
+       "1.42",
+       "1\" NPT/BSP"
+      ],
+      [
+       "APT-60SS",
+       "60",
+       "14",
+       "38.96",
+       "15.4",
+       "59.0",
+       "23.2",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "62.0",
+       "24.4",
+       "7.45",
+       "16.42",
+       "8.45",
+       "18.63",
+       "3.50",
+       "1\" NPT/BSP"
+      ],
+      [
+       "APT-18HSS",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "30.9",
+       "12.2",
+       "40.0",
+       "15.7",
+       "30.0",
+       "11.8",
+       "33.0",
+       "13.0",
+       "3.42",
+       "7.54",
+       "3.79",
+       "8.36",
+       "1.40",
+       "1\" NPT/BSP"
+      ],
+      [
+       "APT-24HSS",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "32.0",
+       "12.6",
+       "43.0",
+       "16.9",
+       "30.0",
+       "11.8",
+       "34.0",
+       "13.4",
+       "3.58",
+       "7.89",
+       "4.10",
+       "9.04",
+       "1.55",
+       "1\" NPT/BSP"
+      ],
+      [
+       "APT-60HSS",
+       "60",
+       "14",
+       "38.96",
+       "15.4",
+       "43.8",
+       "17.2",
+       "54.0",
+       "21.3",
+       "40.6",
+       "16.0",
+       "45.6",
+       "18.0",
+       "8.29",
+       "18.28",
+       "9.29",
+       "20.48",
+       "3.53",
+       "1\" NPT/BSP"
+      ]
+     ]
+    }
+   ],
+   "notes": {
+    "en": [],
+    "zh": [],
+    "es": [],
+    "fr": [],
+    "ru": [],
+    "ar": []
+   }
+  },
+  "pumplus": {
+   "name": "PUMPLUS",
+   "updated": "2025/11/20",
+   "marks": [
+    "EuroCert EN ISO 9001",
+    "Lead-Free",
+    "NSF (NSF/ANSI 372)",
+    "ACS",
+    "CE 0035",
+    "NSF/ANSI 61 (UPC)",
+    "WaterMark Lead Free",
+    "KC",
+    "N2 Filling",
+    "Shield Coating"
+   ],
+   "brochure": {
+    "en": "/download/EDM/English/AQUASKY_PUMPLUS-Blue_DM_en_20260717_1871f8_web.pdf",
+    "zh": "/download/EDM/Chinese/AQUASKY_PUMPLUS-Blue_DM_zh_20260717_eb2045_web.pdf",
+    "es": "/download/EDM/Spanish/AQUASKY_PUMPLUS-Blue_DM_es_20260717_82b204_web.pdf",
+    "fr": "/download/EDM/French/AQUASKY_PUMPLUS-Blue_DM_fr_20260717_23e1ef_web.pdf",
+    "ru": "/download/EDM/Russian/AQUASKY_PUMPLUS-Blue_DM_ru_20260717_f1cba0_web.pdf",
+    "ar": "/download/EDM/Arabic/AQUASKY_PUMPLUS-Blue_DM_ar_20260717_a07d42_web.pdf"
+   },
+   "features": {
+    "en": [
+     [
+      "Shell",
+      "Cold Rolled Carbon Steel"
+     ],
+     [
+      "System Connection",
+      "304 Stainless Steel Connector"
+     ],
+     [
+      "Coating",
+      "Triple Grade Blue Paint"
+     ],
+     [
+      "Diaphragm",
+      "Heavy-Duty Butyl Rubber"
+     ],
+     [
+      "Liner Material",
+      "FDA Grade Polypropylene"
+     ],
+     [
+      "Factory Pre-charge",
+      "APT-100 and below: 30 PSI / 2 Bar; APT-120 and above: 45 PSI / 3 Bar"
+     ],
+     [
+      "Max Working Temperature",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Max Working Pressure",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "zh": [
+     [
+      "外殼",
+      "冷軋鋼鐵"
+     ],
+     [
+      "接頭",
+      "304不鏽鋼"
+     ],
+     [
+      "外部防鏽",
+      "三層環氧樹脂"
+     ],
+     [
+      "橡膠",
+      "丁基橡膠"
+     ],
+     [
+      "防水內襯",
+      "食品級隔水層"
+     ],
+     [
+      "出廠預存氣壓",
+      "APT-100 以下：30 PSI / 2 Bar；APT-120 以上：45 PSI / 3 Bar"
+     ],
+     [
+      "最高運作溫度",
+      "90 °C / 194 °F"
+     ],
+     [
+      "最高工作壓力",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "es": [
+     [
+      "Armazón",
+      "Acero al carbono laminado en frío"
+     ],
+     [
+      "Conexión del sistema",
+      "Conector de acero inoxidable 304"
+     ],
+     [
+      "Recubrimiento",
+      "Pintura azul de triple grado"
+     ],
+     [
+      "Diafragma",
+      "Caucho butílico de alto rendimiento"
+     ],
+     [
+      "Material del revestimiento",
+      "Polipropileno de grado FDA"
+     ],
+     [
+      "Precarga de fábrica",
+      "APT-100 o menor: 30 PSI / 2 Bar; APT-120 o mayor: 45 PSI / 3 Bar"
+     ],
+     [
+      "Temperatura máxima de trabajo",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Presión máxima de trabajo",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "fr": [
+     [
+      "Enveloppe",
+      "Acier au carbone laminé à froid"
+     ],
+     [
+      "Raccordement du système",
+      "Acier inoxydable 304"
+     ],
+     [
+      "Revêtement",
+      "Peinture bleue triple qualité"
+     ],
+     [
+      "Diaphragme",
+      "Caoutchouc butyle très résistant"
+     ],
+     [
+      "Matériau de la cuve",
+      "Polypropylène agréé FDA"
+     ],
+     [
+      "Pré-charge en usine",
+      "APT-100 et moins : 30 PSI / 2 Bar ; APT-120 et plus : 45 PSI / 3 Bar"
+     ],
+     [
+      "Température de fonctionnement max",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Pression de fonctionnement max",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "ru": [
+     [
+      "Корпус бака",
+      "Холоднокатаная углеродистая сталь"
+     ],
+     [
+      "Соединение к системе",
+      "Нержавеющая сталь 304"
+     ],
+     [
+      "Покрытие бака",
+      "Тройная голубая краска"
+     ],
+     [
+      "Диафрагма",
+      "Бутиловая резина в условиях тяжелой эксплуатации"
+     ],
+     [
+      "Материал вставки бака",
+      "Полипропилен FDA"
+     ],
+     [
+      "Заводское давление заправленного газа",
+      "APT-100 и меньше: 30 PSI / 2 бара; APT-120 и больше: 45 PSI / 3 бара"
+     ],
+     [
+      "Максимальная рабочая температура",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Максимальное рабочее давление",
+      "150 PSI / 10 бара"
+     ]
+    ],
+    "ar": [
+     [
+      "الهيكل الخارجي",
+      "فولاذ كربوني مدلفن على البارد"
+     ],
+     [
+      "توصيل النظام",
+      "وصلة 304 من الفولاذ المقاوم للصدأ"
+     ],
+     [
+      "الطلاء الخارجي",
+      "طلاء أزرق ذو درجة ثلاثية"
+     ],
+     [
+      "الغشاء الواقي",
+      "مطاط بيوتيل للمهام الشاقة"
+     ],
+     [
+      "مادة البطانة",
+      "بولي بروبيلين معتمد من إدارة الغذاء والدواء"
+     ],
+     [
+      "الشحن المسبق في المصنع",
+      "APT-100 وما دونه: 30 PSI / 2 بار؛ APT-120 وما فوقه: 45 PSI / 3 بار"
+     ],
+     [
+      "درجة حرارة التشغيل القصوى",
+      "90°م / 194°ف"
+     ],
+     [
+      "ضغط التشغيل الأقصى",
+      "150 PSI / 10 بار"
+     ]
+    ]
+   },
+   "tables": [
+    {
+     "title": {
+      "en": "PUMPLUS Vertical Pressure Tank",
+      "zh": "PUMPLUS 立式壓力桶",
+      "es": "Tanque de presión vertical PUMPLUS",
+      "fr": "Réservoir sous pression vertical PUMPLUS",
+      "ru": "Вертикальный напорный бак PUMPLUS",
+      "ar": "خزان الضغط الرأسي PUMPLUS"
+     },
+     "layout": "vertical",
+     "rows": [
+      [
+       "APT-2",
+       "2",
+       "0.5",
+       "12.3",
+       "4.8",
+       "21.4",
+       "8.4",
+       "27.4",
+       "10.8",
+       "27.0",
+       "10.6",
+       "24.0",
+       "9.4",
+       "3.2",
+       "7.0",
+       "3.62",
+       "7.9",
+       "0.63",
+       "1\""
+      ],
+      [
+       "APT-3",
+       "3",
+       "0.8",
+       "14.0",
+       "5.5",
+       "21.0",
+       "8.3",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "24.0",
+       "9.4",
+       "4.1",
+       "9.0",
+       "4.7",
+       "10.4",
+       "0.81",
+       "1\""
+      ],
+      [
+       "APT-8",
+       "8",
+       "2.0",
+       "20.3",
+       "8.0",
+       "30.1",
+       "11.9",
+       "21.0",
+       "8.3",
+       "21.0",
+       "8.3",
+       "32.0",
+       "12.6",
+       "1.9",
+       "4.2",
+       "2.3",
+       "5.1",
+       "0.50",
+       "1\""
+      ],
+      [
+       "APT-12",
+       "12",
+       "3.2",
+       "22.9",
+       "9.0",
+       "37.3",
+       "14.7",
+       "23.5",
+       "9.3",
+       "23.5",
+       "9.3",
+       "39.0",
+       "15.4",
+       "2.7",
+       "6.0",
+       "3.0",
+       "6.6",
+       "0.76",
+       "1\""
+      ],
+      [
+       "APT-18",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "36.5",
+       "14.4",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "3.4",
+       "7.5",
+       "3.8",
+       "8.4",
+       "1.08",
+       "1\""
+      ],
+      [
+       "APT-24",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "40.7",
+       "16.0",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "3.6",
+       "7.9",
+       "4.5",
+       "9.9",
+       "1.42",
+       "1\""
+      ],
+      [
+       "APT-40",
+       "40",
+       "10",
+       "35.5",
+       "14.0",
+       "43.2",
+       "17.0",
+       "36.0",
+       "14.2",
+       "36.3",
+       "14.3",
+       "46.0",
+       "18.1",
+       "5.9",
+       "13.0",
+       "6.8",
+       "15.0",
+       "2.12",
+       "1\""
+      ],
+      [
+       "APT-60",
+       "60",
+       "14",
+       "39.0",
+       "15.4",
+       "59.0",
+       "23.2",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "62.0",
+       "24.4",
+       "9.4",
+       "20.7",
+       "10.7",
+       "23.6",
+       "3.50",
+       "1\""
+      ],
+      [
+       "APT-80",
+       "80",
+       "20",
+       "43.2",
+       "17.0",
+       "70.0",
+       "27.6",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "70.0",
+       "27.6",
+       "12.7",
+       "28.0",
+       "14.6",
+       "32.2",
+       "5.00",
+       "1\""
+      ],
+      [
+       "APT-100",
+       "100",
+       "28",
+       "43.2",
+       "17.0",
+       "76.3",
+       "30.0",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "80.0",
+       "31.5",
+       "13.7",
+       "30.2",
+       "15.6",
+       "34.4",
+       "5.72",
+       "1\""
+      ],
+      [
+       "APT-120",
+       "120",
+       "32",
+       "39.0",
+       "15.4",
+       "113.9",
+       "44.8",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "116.0",
+       "45.7",
+       "19.7",
+       "43.4",
+       "22.3",
+       "49.2",
+       "6.55",
+       "1\""
+      ],
+      [
+       "APT-130",
+       "130",
+       "34",
+       "55.0",
+       "21.7",
+       "79.2",
+       "31.2",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "80.0",
+       "31.5",
+       "21.5",
+       "47.4",
+       "24.5",
+       "54.0",
+       "8.54",
+       "1-1/4\""
+      ],
+      [
+       "APT-160",
+       "160",
+       "44",
+       "55.0",
+       "21.7",
+       "93.3",
+       "36.7",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "94.0",
+       "37.0",
+       "23.9",
+       "52.7",
+       "27.2",
+       "60.0",
+       "10.04",
+       "1-1/4\""
+      ],
+      [
+       "APT-200",
+       "200",
+       "53",
+       "55.0",
+       "21.7",
+       "104.9",
+       "41.3",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "108.0",
+       "42.5",
+       "26.9",
+       "59.3",
+       "30.4",
+       "67.0",
+       "11.53",
+       "1-1/4\""
+      ],
+      [
+       "APT-240",
+       "240",
+       "62",
+       "55.0",
+       "21.7",
+       "119.3",
+       "47.0",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "120.0",
+       "47.2",
+       "34.9",
+       "76.9",
+       "37.7",
+       "83.1",
+       "12.81",
+       "1-1/4\""
+      ],
+      [
+       "APT-300",
+       "300",
+       "81",
+       "55.0",
+       "21.7",
+       "146.1",
+       "57.5",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "149.0",
+       "58.7",
+       "39.9",
+       "88.0",
+       "45.9",
+       "101.2",
+       "15.91",
+       "1-1/4\""
+      ],
+      [
+       "APT-325",
+       "325",
+       "86",
+       "65.0",
+       "25.6",
+       "112.3",
+       "44.2",
+       "65.0",
+       "25.6",
+       "65.0",
+       "25.6",
+       "116.0",
+       "45.7",
+       "40.5",
+       "89.3",
+       "46.5",
+       "102.5",
+       "17.30",
+       "1-1/4\""
+      ],
+      [
+       "APT-450",
+       "450",
+       "120",
+       "65.0",
+       "25.6",
+       "141.2",
+       "55.6",
+       "65.0",
+       "25.6",
+       "65.0",
+       "25.6",
+       "145.0",
+       "57.1",
+       "56.9",
+       "125.4",
+       "61.9",
+       "136.5",
+       "21.63",
+       "1-1/4\""
+      ],
+      [
+       "APT-500",
+       "500",
+       "132",
+       "65.0",
+       "25.6",
+       "155.6",
+       "61.3",
+       "65.0",
+       "25.6",
+       "65.0",
+       "25.6",
+       "158.0",
+       "62.2",
+       "58.0",
+       "127.9",
+       "66.0",
+       "145.5",
+       "22.79",
+       "1-1/4\""
+      ]
+     ],
+     "subhead": {
+      "before": "APT-60",
+      "text": {
+       "en": "Stand Models With Base",
+       "zh": "含底座型號",
+       "es": "Modelos de pie con base",
+       "fr": "Modèles à support avec base",
+       "ru": "Напольная модель с постаментом",
+       "ar": "الطرز القائمة المزودة بقاعدة"
+      }
+     }
+    },
+    {
+     "title": {
+      "en": "PUMPLUS Horizontal Pump Stand Pressure Tank",
+      "zh": "PUMPLUS 臥式壓力桶",
+      "es": "Tanque de presión horizontal con soporte para bomba PUMPLUS",
+      "fr": "Réservoir sous pression horizontal à support de pompe PUMPLUS",
+      "ru": "Напорный бак PUMPLUS для горизонтальной установки насоса",
+      "ar": "خزان الضغط الأفقي المزوّد بحامل مضخة PUMPLUS"
+     },
+     "layout": "horizontal",
+     "rows": [
+      [
+       "APT-18H",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "30.9",
+       "12.2",
+       "36.5",
+       "14.4",
+       "40.0",
+       "15.7",
+       "30.0",
+       "11.8",
+       "33.0",
+       "13.0",
+       "3.8",
+       "8.4",
+       "4.3",
+       "9.5",
+       "1.4",
+       "1\""
+      ],
+      [
+       "APT-24H",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "32.0",
+       "12.6",
+       "40.7",
+       "16.0",
+       "43.0",
+       "16.9",
+       "30.0",
+       "11.8",
+       "34.0",
+       "13.4",
+       "4.5",
+       "9.9",
+       "5.1",
+       "11.2",
+       "1.55",
+       "1\""
+      ],
+      [
+       "APT-40H",
+       "40",
+       "10",
+       "35.5",
+       "14.0",
+       "38.93",
+       "15.3",
+       "43.2",
+       "17.0",
+       "44.5",
+       "17.5",
+       "37.0",
+       "14.6",
+       "41.5",
+       "16.3",
+       "6.6",
+       "14.5",
+       "7.7",
+       "16.9",
+       "2.41",
+       "1\""
+      ],
+      [
+       "APT-60H",
+       "60",
+       "14",
+       "39.0",
+       "15.4",
+       "42.8",
+       "16.9",
+       "52.3",
+       "20.6",
+       "54.0",
+       "21.3",
+       "40.6",
+       "16.0",
+       "45.6",
+       "18.0",
+       "9.9",
+       "21.8",
+       "11.2",
+       "24.7",
+       "3.53",
+       "1\""
+      ],
+      [
+       "APT-80H",
+       "80",
+       "20",
+       "43.2",
+       "17.0",
+       "46.63",
+       "18.4",
+       "61.6",
+       "24.3",
+       "64.0",
+       "25.2",
+       "45.0",
+       "17.7",
+       "49.0",
+       "19.3",
+       "12.8",
+       "28.2",
+       "14.3",
+       "31.5",
+       "4.98",
+       "1\""
+      ],
+      [
+       "APT-100H",
+       "100",
+       "28",
+       "43.2",
+       "17.0",
+       "47.4",
+       "18.7",
+       "70.0",
+       "27.6",
+       "71.0",
+       "28.0",
+       "44.0",
+       "17.3",
+       "49.0",
+       "19.3",
+       "14.4",
+       "31.6",
+       "15.8",
+       "34.7",
+       "5.40",
+       "1\""
+      ]
+     ]
+    }
+   ],
+   "notes": {
+    "en": [],
+    "zh": [],
+    "es": [],
+    "fr": [],
+    "ru": [],
+    "ar": []
+   }
+  },
+  "solar-plus": {
+   "name": "SOLAR-PLUS",
+   "updated": "2025/12/23",
+   "marks": [
+    "CE"
+   ],
+   "brochure": {
+    "en": "/download/EDM/English/AQUASKY_SOLAR-PLUS_DM_en_20260717_1f4d8d_web.pdf",
+    "zh": "/download/EDM/Chinese/AQUASKY_SOLAR-PLUS_DM_zh_20260717_cdd2df_web.pdf",
+    "es": "/download/EDM/Spanish/AQUASKY_SOLAR-PLUS_DM_es_20260717_316290_web.pdf",
+    "fr": "/download/EDM/French/AQUASKY_Solar-Plus_DM_fr_20260717_fe7891_web.pdf",
+    "ru": "/download/EDM/Russian/AQUASKY_SOLAR-PLUS_DM_ru_20260717_343135_web.pdf",
+    "ar": "/download/EDM/Arabic/AQUASKY_SOLAR-PLUS_DM_ar_20260717_63943b_web.pdf"
+   },
+   "features": {
+    "en": [
+     [
+      "Shell",
+      "Cold Rolled Carbon Steel"
+     ],
+     [
+      "System Connection",
+      "304 Stainless Steel Connector"
+     ],
+     [
+      "Coating",
+      "Red (RAL 3011)"
+     ],
+     [
+      "Factory Pre-charge",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "Max Working Temperature",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Max Working Pressure",
+      "150 PSI / 10 Bar"
+     ],
+     [
+      "Diaphragm",
+      "EPDM Rubber"
+     ],
+     [
+      "Liner Material",
+      "High Temperature Heat Resistance Liner"
+     ]
+    ],
+    "zh": [
+     [
+      "外殼",
+      "冷軋鋼鐵"
+     ],
+     [
+      "接頭",
+      "304不鏽鋼"
+     ],
+     [
+      "外部防鏽",
+      "三層環氧樹脂"
+     ],
+     [
+      "出廠預存氣壓",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "最高運作溫度",
+      "130 °C / 266 °F"
+     ],
+     [
+      "最高工作壓力",
+      "150 PSI / 10 Bar"
+     ],
+     [
+      "橡膠",
+      "耐高溫橡膠"
+     ],
+     [
+      "防水內層",
+      "耐高溫塑膠隔層"
+     ]
+    ],
+    "es": [
+     [
+      "Armazón",
+      "Acero al carbono laminado en frío"
+     ],
+     [
+      "Conexión del sistema",
+      "Conector de acero inoxidable 304"
+     ],
+     [
+      "Recubrimiento",
+      "Rojo (RAL 3011)"
+     ],
+     [
+      "Precarga de fábrica",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "Temperatura máxima de trabajo",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Presión máxima de trabajo",
+      "150 PSI / 10 Bar"
+     ],
+     [
+      "Diafragma",
+      "Caucho EPDM"
+     ],
+     [
+      "Material del revestimiento",
+      "Revestimiento resistente a altas temperaturas"
+     ]
+    ],
+    "fr": [
+     [
+      "Enveloppe",
+      "Acier au carbone laminé à froid"
+     ],
+     [
+      "Raccordement du système",
+      "Acier inoxydable 304"
+     ],
+     [
+      "Revêtement",
+      "Rouge (RAL 3011)"
+     ],
+     [
+      "Pré-charge en usine",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "Température de fonctionnement max",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Pression de fonctionnement max",
+      "150 PSI / 10 Bar"
+     ],
+     [
+      "Diaphragme",
+      "Caoutchouc EPDM"
+     ],
+     [
+      "Matériau de la doublure",
+      "Doublure résistante aux hautes températures"
+     ]
+    ],
+    "ru": [
+     [
+      "Корпус бака",
+      "Холоднокатаная углеродистая сталь"
+     ],
+     [
+      "Соединение к системе",
+      "Нержавеющая сталь 304"
+     ],
+     [
+      "Покрытие бака",
+      "Красный (RAL 3011)"
+     ],
+     [
+      "Заводское давление заправленного газа",
+      "50 PSI / 3.5 бара"
+     ],
+     [
+      "Максимальная рабочая температура",
+      "130 °C / 266 °F"
+     ],
+     [
+      "Максимальное рабочее давление",
+      "150 PSI / 10 бара"
+     ],
+     [
+      "Диафрагма",
+      "Резина EPDM"
+     ],
+     [
+      "Материал вкладыша",
+      "Вкладыш, устойчивый к высоким температурам"
+     ]
+    ],
+    "ar": [
+     [
+      "الهيكل الخارجي",
+      "فولاذ كربوني مدلفن على البارد"
+     ],
+     [
+      "توصيل النظام",
+      "وصلة 304 من الفولاذ المقاوم للصدأ"
+     ],
+     [
+      "الطلاء الخارجي",
+      "أحمر (RAL 3011)"
+     ],
+     [
+      "الشحن المسبق في المصنع",
+      "50 PSI / 3.5 بار"
+     ],
+     [
+      "درجة حرارة التشغيل القصوى",
+      "130°م / 266°ف"
+     ],
+     [
+      "ضغط التشغيل الأقصى",
+      "150 PSI / 10 بار"
+     ],
+     [
+      "الغشاء الواقي",
+      "مطاط EPDM"
+     ],
+     [
+      "مادة البطانة",
+      "بطانة مقاومة لدرجات الحرارة العالية"
+     ]
+    ]
+   },
+   "tables": [
+    {
+     "title": {
+      "en": "SOLAR-PLUS Pressure Tank",
+      "zh": "SOLAR-PLUS 太陽能液體膨脹罐",
+      "es": "Tanque de presión SOLAR-PLUS",
+      "fr": "Réservoir sous pression SOLAR-PLUS",
+      "ru": "Напорный бак SOLAR-PLUS",
+      "ar": "خزان الضغط SOLAR-PLUS"
+     },
+     "layout": "vertical",
+     "rows": [
+      [
+       "SP-3",
+       "3",
+       "0.8",
+       "14.0",
+       "5.5",
+       "21.0",
+       "8.3",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "24.0",
+       "9.4",
+       "4.1",
+       "9.0",
+       "4.7",
+       "10.4",
+       "0.81",
+       "1\""
+      ],
+      [
+       "SP-8",
+       "8",
+       "2.0",
+       "20.3",
+       "8.0",
+       "30.1",
+       "11.9",
+       "21.0",
+       "8.3",
+       "21.0",
+       "8.3",
+       "32.0",
+       "12.6",
+       "1.9",
+       "4.2",
+       "2.3",
+       "5.1",
+       "0.50",
+       "1\""
+      ],
+      [
+       "SP-18",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "36.5",
+       "14.4",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "3.4",
+       "7.5",
+       "3.8",
+       "8.4",
+       "1.08",
+       "1\""
+      ],
+      [
+       "SP-24",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "40.7",
+       "16.0",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "3.6",
+       "7.9",
+       "4.5",
+       "9.9",
+       "1.42",
+       "1\""
+      ],
+      [
+       "SP-40",
+       "40",
+       "10",
+       "35.5",
+       "14.0",
+       "43.2",
+       "17.0",
+       "36.0",
+       "14.2",
+       "36.3",
+       "14.3",
+       "46.0",
+       "18.1",
+       "5.9",
+       "13.0",
+       "6.8",
+       "15.0",
+       "2.12",
+       "1\""
+      ],
+      [
+       "SP-60",
+       "60",
+       "14",
+       "39.0",
+       "15.4",
+       "59.0",
+       "23.2",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "62.0",
+       "24.4",
+       "9.4",
+       "20.7",
+       "10.7",
+       "23.6",
+       "3.50",
+       "1\""
+      ],
+      [
+       "SP-80",
+       "80",
+       "20",
+       "43.2",
+       "17.0",
+       "70.0",
+       "27.6",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "70.0",
+       "27.6",
+       "12.7",
+       "28.0",
+       "14.6",
+       "32.2",
+       "5.00",
+       "1\""
+      ],
+      [
+       "SP-100",
+       "100",
+       "28",
+       "43.2",
+       "17.0",
+       "76.3",
+       "30.0",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "80.0",
+       "31.5",
+       "13.7",
+       "30.2",
+       "15.6",
+       "34.4",
+       "5.72",
+       "1\""
+      ]
+     ],
+     "subhead": {
+      "before": "SP-60",
+      "text": {
+       "en": "Stand Models With Base",
+       "zh": "含底座型號",
+       "es": "Modelos de pie con base",
+       "fr": "Modèles à support avec base",
+       "ru": "Напольная модель с постаментом",
+       "ar": "الطرز القائمة المزودة بقاعدة"
+      }
+     }
+    }
+   ],
+   "notes": {
+    "en": [
+     "Installation: 100 cm away from the water heater, on the cold water side.",
+     "The shield coating is available for all models."
+    ],
+    "zh": [
+     "安裝注意事項：置於冷水側，並距離加熱器 100 公分。"
+    ],
+    "es": [
+     "Instalación: a 100 cm de distancia del sistema solar, en el lado del fluido frío.",
+     "El recubrimiento de protección está disponible para todos los modelos."
+    ],
+    "fr": [
+     "Installation : à 100 cm du système solaire, du côté du fluide froid.",
+     "Le revêtement de protection est disponible pour tous les modèles."
+    ],
+    "ru": [
+     "Установка: на расстоянии 100 см от солнечного оборудования, со стороны холодной жидкости.",
+     "Защитное покрытие доступно для всех моделей."
+    ],
+    "ar": [
+     "التركيب: على بُعد 100 سم من نظام الطاقة الشمسية، عند جانب السائل البارد.",
+     "الطلاء الواقي متوفر لجميع النماذج."
+    ]
+   }
+  },
+  "thermal-plus": {
+   "name": "THERMAL-PLUS",
+   "updated": "2025/12/29",
+   "marks": [
+    "CE 0035",
+    "EuroCert EN ISO 9001",
+    "Lead-Free",
+    "UPC"
+   ],
+   "brochure": {
+    "en": "/download/EDM/English/AQUASKY_THERMAL-PLUS_DM_en_20260717_91a222_web.pdf",
+    "zh": "/download/EDM/Chinese/AQUASKY_THERMAL-PLUS_DM_zh_20260717_5c7342_web.pdf",
+    "es": "/download/EDM/Spanish/AQUASKY_THERMAL-PLUS_DM_es_20260717_43d27a_web.pdf",
+    "fr": "/download/EDM/French/AQUASKY_Thermal-Plus_DM_fr_20260717_7ae4a5_web.pdf",
+    "ru": "/download/EDM/Russian/AQUASKY_THERMAL-PLUS_DM_ru_20260717_4c0ef4_web.pdf",
+    "ar": "/download/EDM/Arabic/AQUASKY_THERMAL-PLUS_DM_ar_20260717_ee7eec_web.pdf"
+   },
+   "features": {
+    "en": [
+     [
+      "Shell",
+      "Cold Rolled Carbon Steel"
+     ],
+     [
+      "System Connection",
+      "Stainless Steel Connector"
+     ],
+     [
+      "Liner Material",
+      "FDA Grade Polypropylene"
+     ],
+     [
+      "Coating",
+      "Triple Grade Almond (RAL 1015) Paint"
+     ],
+     [
+      "Diaphragm",
+      "Heavy-Duty Butyl Rubber"
+     ],
+     [
+      "Factory Pre-charge",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "Max Working Temperature",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Max Working Pressure",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "zh": [
+     [
+      "外殼",
+      "冷軋鋼鐵"
+     ],
+     [
+      "接頭",
+      "304不鏽鋼"
+     ],
+     [
+      "防水內襯",
+      "食品級隔水層"
+     ],
+     [
+      "外部防鏽",
+      "三層環氧樹脂"
+     ],
+     [
+      "橡膠",
+      "丁基橡膠"
+     ],
+     [
+      "出廠預存氣壓",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "最高運作溫度",
+      "90 °C / 194 °F"
+     ],
+     [
+      "最高工作壓力",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "es": [
+     [
+      "Armazón",
+      "Acero al carbono laminado en frío"
+     ],
+     [
+      "Conexión del sistema",
+      "Conector de acero inoxidable 304"
+     ],
+     [
+      "Material del revestimiento",
+      "Polipropileno de grado FDA"
+     ],
+     [
+      "Recubrimiento",
+      "Pintura almendra (RAL 1015) de triple grado"
+     ],
+     [
+      "Diafragma",
+      "Caucho butílico de alto rendimiento"
+     ],
+     [
+      "Precarga de fábrica",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "Temperatura máxima de trabajo",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Presión máxima de trabajo",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "fr": [
+     [
+      "Enveloppe",
+      "Acier au carbone laminé à froid"
+     ],
+     [
+      "Raccordement du système",
+      "Acier inoxydable 304"
+     ],
+     [
+      "Matériau de la cuve",
+      "Polypropylène agréé FDA"
+     ],
+     [
+      "Revêtement",
+      "Peinture amande (RAL 1015) triple qualité"
+     ],
+     [
+      "Diaphragme",
+      "Caoutchouc butyle très résistant"
+     ],
+     [
+      "Pré-charge en usine",
+      "50 PSI / 3.5 Bar"
+     ],
+     [
+      "Température de fonctionnement max",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Pression de fonctionnement max",
+      "150 PSI / 10 Bar"
+     ]
+    ],
+    "ru": [
+     [
+      "Корпус бака",
+      "Холоднокатаная углеродистая сталь"
+     ],
+     [
+      "Соединение к системе",
+      "Нержавеющая сталь 304"
+     ],
+     [
+      "Материал вставки бака",
+      "Полипропилен FDA"
+     ],
+     [
+      "Покрытие бака",
+      "Трехслойная миндальная (RAL 1015) краска"
+     ],
+     [
+      "Диафрагма",
+      "Бутиловая резина в условиях тяжелой эксплуатации"
+     ],
+     [
+      "Заводское давление заправленного газа",
+      "50 PSI / 3.5 бара"
+     ],
+     [
+      "Максимальная рабочая температура",
+      "90 °C / 194 °F"
+     ],
+     [
+      "Максимальное рабочее давление",
+      "150 PSI / 10 бара"
+     ]
+    ],
+    "ar": [
+     [
+      "الهيكل الخارجي",
+      "فولاذ كربوني مدلفن على البارد"
+     ],
+     [
+      "توصيل النظام",
+      "وصلة 304 من الفولاذ المقاوم للصدأ"
+     ],
+     [
+      "مادة البطانة",
+      "بولي بروبيلين معتمد من إدارة الغذاء والدواء"
+     ],
+     [
+      "الطلاء الخارجي",
+      "طلاء لوزي ذو درجة ثلاثية (RAL 1015)"
+     ],
+     [
+      "الغشاء الواقي",
+      "مطاط بيوتيل للمهام الشاقة"
+     ],
+     [
+      "الشحن المسبق في المصنع",
+      "50 PSI / 3.5 بار"
+     ],
+     [
+      "درجة حرارة التشغيل القصوى",
+      "90°م / 194°ف"
+     ],
+     [
+      "ضغط التشغيل الأقصى",
+      "150 PSI / 10 بار"
+     ]
+    ]
+   },
+   "tables": [
+    {
+     "title": {
+      "en": "THERMAL-PLUS Expansion Tank",
+      "zh": "THERMAL-PLUS 密閉式膨脹水箱",
+      "es": "Tanque de expansión THERMAL-PLUS",
+      "fr": "Réservoir d'expansion THERMAL-PLUS",
+      "ru": "Расширительный бак THERMAL-PLUS",
+      "ar": "خزان التمدد THERMAL-PLUS"
+     },
+     "layout": "vertical",
+     "rows": [
+      [
+       "TP-3",
+       "3",
+       "0.8",
+       "14.0",
+       "5.5",
+       "20.8",
+       "8.2",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "24.0",
+       "9.4",
+       "4.1",
+       "9.0",
+       "4.7",
+       "10.4",
+       "0.81",
+       "3/4\""
+      ],
+      [
+       "TP-8",
+       "8",
+       "2.0",
+       "20.3",
+       "8.0",
+       "29.9",
+       "11.8",
+       "21.0",
+       "8.3",
+       "21.0",
+       "8.3",
+       "32.0",
+       "12.6",
+       "1.9",
+       "4.2",
+       "2.3",
+       "5.1",
+       "0.50",
+       "3/4\""
+      ],
+      [
+       "TP-18",
+       "18",
+       "4.5",
+       "28.0",
+       "11.0",
+       "37.9",
+       "14.9",
+       "28.0",
+       "11.0",
+       "28.0",
+       "11.0",
+       "39.0",
+       "15.4",
+       "3.4",
+       "7.5",
+       "3.8",
+       "8.4",
+       "1.08",
+       "3/4\""
+      ],
+      [
+       "TP-24",
+       "24",
+       "6.0",
+       "29.0",
+       "11.4",
+       "40.5",
+       "15.9",
+       "31.0",
+       "12.2",
+       "31.0",
+       "12.2",
+       "42.0",
+       "16.5",
+       "3.6",
+       "7.9",
+       "4.5",
+       "9.9",
+       "1.42",
+       "3/4\""
+      ],
+      [
+       "TP-40",
+       "40",
+       "10.0",
+       "35.5",
+       "14.0",
+       "43.0",
+       "16.9",
+       "36.0",
+       "14.2",
+       "36.3",
+       "14.3",
+       "46.0",
+       "18.1",
+       "5.9",
+       "13.0",
+       "6.8",
+       "15.0",
+       "2.12",
+       "3/4\""
+      ],
+      [
+       "TP-60",
+       "60",
+       "14",
+       "39.0",
+       "15.4",
+       "59.0",
+       "23.2",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "62.0",
+       "24.4",
+       "9.4",
+       "20.7",
+       "10.7",
+       "23.6",
+       "3.50",
+       "1\""
+      ],
+      [
+       "TP-80",
+       "80",
+       "20",
+       "43.2",
+       "17.0",
+       "70.0",
+       "27.6",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "70.0",
+       "27.6",
+       "12.7",
+       "28.0",
+       "14.6",
+       "32.2",
+       "5.00",
+       "1\""
+      ],
+      [
+       "TP-100",
+       "100",
+       "28",
+       "43.2",
+       "17.0",
+       "76.3",
+       "30.0",
+       "45.0",
+       "17.7",
+       "45.0",
+       "17.7",
+       "80.0",
+       "31.5",
+       "13.7",
+       "30.2",
+       "15.6",
+       "34.4",
+       "5.72",
+       "1\""
+      ],
+      [
+       "TP-120",
+       "120",
+       "32",
+       "39.0",
+       "15.4",
+       "113.9",
+       "44.8",
+       "40.0",
+       "15.7",
+       "40.0",
+       "15.7",
+       "116.0",
+       "45.7",
+       "19.7",
+       "43.4",
+       "22.3",
+       "49.2",
+       "6.55",
+       "1\""
+      ],
+      [
+       "TP-130",
+       "130",
+       "34",
+       "55.0",
+       "21.7",
+       "79.2",
+       "31.2",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "80.0",
+       "31.5",
+       "21.5",
+       "47.4",
+       "24.5",
+       "54.0",
+       "8.54",
+       "1-1/4\""
+      ],
+      [
+       "TP-160",
+       "160",
+       "44",
+       "55.0",
+       "21.7",
+       "93.3",
+       "36.7",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "94.0",
+       "37.0",
+       "23.9",
+       "52.7",
+       "27.2",
+       "60.0",
+       "10.04",
+       "1-1/4\""
+      ],
+      [
+       "TP-200",
+       "200",
+       "53",
+       "55.0",
+       "21.7",
+       "104.9",
+       "41.3",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "108.0",
+       "42.5",
+       "26.9",
+       "59.3",
+       "30.4",
+       "67.0",
+       "11.53",
+       "1-1/4\""
+      ],
+      [
+       "TP-240",
+       "240",
+       "62",
+       "55.0",
+       "21.7",
+       "119.3",
+       "47.0",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "120.0",
+       "47.2",
+       "34.9",
+       "76.9",
+       "37.7",
+       "83.1",
+       "12.81",
+       "1-1/4\""
+      ],
+      [
+       "TP-300",
+       "300",
+       "81",
+       "55.0",
+       "21.7",
+       "146.1",
+       "57.5",
+       "55.0",
+       "21.7",
+       "55.0",
+       "21.7",
+       "149.0",
+       "58.7",
+       "39.9",
+       "88.0",
+       "45.9",
+       "101.2",
+       "15.91",
+       "1-1/4\""
+      ],
+      [
+       "TP-450",
+       "450",
+       "120",
+       "65.0",
+       "25.6",
+       "141.2",
+       "55.6",
+       "65.0",
+       "25.6",
+       "65.0",
+       "25.6",
+       "145.0",
+       "57.1",
+       "56.9",
+       "125.4",
+       "61.9",
+       "136.5",
+       "21.63",
+       "1-1/4\""
+      ]
+     ],
+     "subhead": {
+      "before": "TP-60",
+      "text": {
+       "en": "Stand Models With Base",
+       "zh": "含底座型號",
+       "es": "Modelos de pie con base",
+       "fr": "Modèles à support avec base",
+       "ru": "Напольная модель с постаментом",
+       "ar": "الطرز القائمة المزودة بقاعدة"
+      }
+     }
+    }
+   ],
+   "notes": {
+    "en": [
+     "TP-3: 4 pcs per package",
+     "Installation: 60 cm away from the water heater, on the cold water side.",
+     "The shield coating is available for all models."
+    ],
+    "zh": [
+     "TP-3：4 入 1 箱",
+     "安裝注意事項：置於冷水側，並距離熱水器 60 公分處。"
+    ],
+    "es": [
+     "TP-3: 4 unidades por paquete",
+     "Instalación: a 60 cm de distancia del calentador de agua, en el lado del agua fría.",
+     "El recubrimiento de protección está disponible para todos los modelos."
+    ],
+    "fr": [
+     "TP-3 : 4 pièces par carton",
+     "Installation : à 60 cm du chauffe-eau, du côté de l'eau froide.",
+     "Le revêtement de protection est disponible pour tous les modèles."
+    ],
+    "ru": [
+     "TP-3: 4 штуки в коробке",
+     "Установка: на расстоянии 60 см от водонагревателя, со стороны холодной воды.",
+     "Защитное покрытие доступно для всех моделей."
+    ],
+    "ar": [
+     "TP-3: 4 قطع في الحزمة",
+     "التركيب: على بُعد 60 سم من سخان الماء، على جانب الماء البارد."
+    ]
+   }
+  }
+ }
+}

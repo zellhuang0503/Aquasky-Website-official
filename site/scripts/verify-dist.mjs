@@ -14,6 +14,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = join(root, 'dist');
 const product = JSON.parse(readFileSync(join(root, 'src/data/products/lqcol-plus.json'), 'utf8'));
 const clientTextEdits = JSON.parse(readFileSync(join(root, 'src/data/client-text-edits.json'), 'utf8')).edits;
+const edmSpecs = JSON.parse(readFileSync(join(root, 'src/data/edm-specs.json'), 'utf8'));
+const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const stage = process.env.SITE_STAGE === 'production' ? 'production' : 'preview';
 // 封存的舊站頁（只讀）：拿來比 DM 張數等「新站自己的資料檔比不出來」的東西
 const archiveDir = join(root, '..', 'migration-2026-10-22');
@@ -178,6 +180,13 @@ for (const page of PAGES) {
       if ((group.hasVariant || []).length !== expectVariants) fail(`${where}: JSON-LD variants ${(group.hasVariant || []).length} != ${expectVariants}`);
     }
     for (const e of content.edmImages || []) if (!html.includes(`src="${e.src}"`)) fail(`${where}: DM image ${e.src} not on page`);
+    // 產品規格段落（DM 圖文字轉成網頁文字，src/data/edm-specs.json）：每個型號列與每項材質性能都要在頁面上
+    const edm = edmSpecs.series[page.classic.id];
+    if (edm) {
+      if (!html.includes('id="specifications"')) fail(`${where}: specifications section missing`);
+      for (const t of edm.tables) for (const r of t.rows) if (!html.includes(`<th scope="row">${r[0]}</th>`)) fail(`${where}: spec row ${r[0]} missing`);
+      for (const [k, v] of edm.features[page.code] || []) if (!html.includes(esc(v))) fail(`${where}: spec value "${v}" (${k}) missing`);
+    }
     // DM 張數要等於封存裡同一頁 #ImgAutoResponsive 的 <img> 數（不能只比內容檔自己）
     const archived = archivedPage(page.code, page.classic.path);
     if (archived) {

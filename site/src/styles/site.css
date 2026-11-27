@@ -112,3 +112,24 @@ html[dir="rtl"] .skip-link:focus { left: auto; right: 8px; }
   html[lang="ar"] .news-content table { width: 100% !important; }
   html[lang="ar"] .news-content td { width: auto !important; }
 }
+
+/* 系列頁「產品規格」（EdmSpecs.astro，2026-11-27）：DM 圖文字改成網頁文字。白底卡片，放在彩色底圖區塊裡也看得清楚 */
+.edm-specs { background: #fff; color: #222; padding: 24px 20px; margin: 30px 0; border-radius: 4px; font-size: 15px; line-height: 1.6; }
+.edm-specs h2 { font-size: 22px; margin: 0 0 16px; color: #0a4f8a; }
+.edm-specs h3 { font-size: 18px; margin: 22px 0 10px; color: #0a4f8a; }
+.edm-specs table { border-collapse: collapse; width: 100%; }
+.edm-specs th, .edm-specs td { border: 1px solid #d5dbe1; padding: 5px 8px; vertical-align: middle; }
+.edm-feat th { background: #eef3f8; width: 38%; text-align: start; font-weight: 600; }
+.edm-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.edm-table { font-size: 12.5px; white-space: nowrap; text-align: center; }
+.edm-table th, .edm-table td { padding: 4px 6px; }
+.edm-table thead th { white-space: normal; }
+.edm-table td { direction: ltr; unicode-bidi: isolate; }
+.edm-table thead th { background: #0a4f8a; color: #fff; font-weight: 600; }
+.edm-table tbody th { background: #eef3f8; font-weight: 600; }
+.edm-table tbody tr:nth-child(even) td { background: #f7f9fb; }
+.edm-table .edm-subhead th { background: #dfe8f1; text-align: start; padding-inline-start: 12px; }
+.edm-marks { margin: 14px 0 0; }
+.edm-notes { margin: 16px 0 0; padding-inline-start: 20px; }
+.edm-meta { margin: 16px 0 0; font-size: 13px; color: #555; }
+.edm-meta a { color: #0a4f8a; text-decoration: underline; }
