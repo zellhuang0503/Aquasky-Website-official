@@ -43,7 +43,11 @@ const d = t(props.lang);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#006da7" />
-    <link rel="icon" href={brand.logo} type="image/png" />
+    {/* 瀏覽器分頁小圖：只用鯨魚（Tiffany 2026-11-27），完整 LOGO 仍用在頁首與 JSON-LD */}
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link href={props.bootstrap === 'full' ? '/css/bootstrap.css' : '/css/bootstrap.min.css'} rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
     {props.seriesCss && <link href="/css/series_content.css" rel="stylesheet" />}
