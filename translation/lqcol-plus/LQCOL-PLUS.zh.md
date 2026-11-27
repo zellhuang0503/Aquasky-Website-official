@@ -109,7 +109,7 @@ ZH: • 直接晶片冷卻與浸沒式冷卻：需要零微洩漏與純淨冷卻
 
 ### B26 · p
 EN: • Tailored for both In-Rack and In-Row CDUs, offering compact designs (3L+) for space-constrained server racks and high-volume tanks (24L / 60L) for rack-level and row-level cooling.
-ZH: • 同時適用於機櫃內（In-Rack）與列間（In-Row）CDU：提供精巧機型（3L 以上）給空間受限的伺服器機櫃，也提供大容量機型（24L / 60L）供機櫃級與機列級冷卻使用。
+ZH: • 同時適用於機櫃內（In-Rack）與列間（In-Row）CDU：針對空間受限的伺服器機櫃提供精巧型壓力桶（3L 以上），亦為機櫃級與機列級冷卻配置大容量壓力桶（24L / 60L）。
 
 ### B27 · p
 EN: • Hyperscaler Infrastructure: Built for zero single point of failure (ZSPOF) standards.
