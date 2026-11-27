@@ -181,6 +181,8 @@ const pages = defineCollection({
     langs: z.array(lang).min(1).default(['en', 'zh']),
     /** 選型工具計算器：頁面會載 public/js/selection-tools.js 與 src/data/selection-tools.json */
     calculator: z.enum(['ps', 'vsd', 'thermal']).optional(),
+    /** 內文已換成客戶給的新版（不是舊站照抄）：verify 改跟這個資料夾的翻譯檔比，不跟封存比。目前只有 FAQ（2026-11-26 版） */
+    textSource: z.string().optional(),
     assets: z.array(z.string()),
     dataQuestions: z.array(z.string()),
   }),

@@ -1,0 +1,111 @@
+{
+ "headings": ["CERTIFICACIÓN Y CUMPLIMIENTO", "PRODUCTO Y ESPECIFICACIONES", "DIMENSIONAMIENTO Y ASESORÍA TÉCNICA", "AJUSTES DE PRESIÓN Y CONTROL DE CALIDAD", "INSTALACIÓN E INTEGRACIÓN", "CALIDAD Y TECNOLOGÍA", "SOLUCIÓN DE PROBLEMAS Y ALIANZAS"],
+ "items": [
+  {"q": "¿Los tanques de presión AQUASKY llevan el marcado «CE»?", "a": [
+   {"p": "Sí. Los tanques de presión AQUASKY cumplen la Directiva europea de Equipos a Presión (PED) 2014/68/UE y se fabrican conforme a la norma EN 13831."}]},
+  {"q": "¿Qué es NSF 61?", "a": [
+   {"p": "NSF/ANSI 61 es una norma norteamericana sobre efectos en la salud para materiales y componentes en contacto con agua potable. Garantiza que los productos no liberen contaminantes nocivos en los sistemas de agua potable. Determinadas series de tanques de presión AQUASKY para agua potable cuentan con certificación completa NSF/ANSI 61 y NSF/ANSI 58."}]},
+  {"q": "¿Pueden suministrarse los productos con trazabilidad completa de materiales y documentos de certificación (p. ej., NSF, CE, WRAS)?", "a": [
+   {"p": "Sí. La trazabilidad completa de materiales y la documentación de cumplimiento de los tanques de presión AQUASKY están disponibles bajo solicitud:"},
+   {"ul": [
+    "**Certificaciones internacionales:** determinados modelos cumplen NSF/ANSI 58, 61, 372, CE, WRAS, ACS, KC, WaterMark y UPC.",
+    "**Seguridad de materiales:** todas las piezas en contacto con el agua cumplen las normas RoHS y REACH de la UE, PFAS y TSCA.",
+    "**Trazabilidad total:** fabricación bajo ISO 9001, con trazabilidad completa por lote de materias primas y procesos de producción."]}]},
+  {"q": "¿Cuáles son las prácticas de AQUASKY en materia de ESG?", "a": [
+   {"p": "AQUASKY está comprometida con una fabricación responsable y prácticas empresariales sostenibles:"},
+   {"ul": [
+    "**Medio ambiente:** inventario de gases de efecto invernadero según ISO 14064-1:2018, verificado de forma independiente por un tercero.",
+    "**Social:** seguridad de los empleados y prácticas laborales responsables, sin trabajo infantil ni trabajo forzoso.",
+    "**Gobernanza:** operaciones transparentes y gestión de la calidad ISO 9001."]}]},
+  {"q": "¿AQUASKY es un fabricante o una empresa comercializadora?", "a": [
+   {"p": "AQUASKY es un **fabricante directo al 100%** con sede en Taichung, Taiwán. Todos los procesos de producción críticos —soldadura, recubrimiento, pruebas de presión, montaje y embalaje— se realizan internamente en nuestras instalaciones certificadas ISO 9001."}]},
+  {"q": "¿Son adecuados los tanques de presión de diafragma AQUASKY para agua potable?", "a": [
+   {"p": "Sí. Los tanques de presión de diafragma AQUASKY para agua potable están diseñados específicamente para un contacto seguro con el agua de consumo. Con diafragmas de grado alimentario y revestimientos resistentes a la corrosión, determinadas series cumplen normas internacionales de agua potable como **NSF/ANSI 61, WRAS y ACS.**"}]},
+  {"q": "¿Cuáles son las presiones de trabajo, temperaturas y aplicaciones de las series de tanques de presión AQUASKY?", "a": [
+   {"p": "AQUASKY fabrica tanques de presión de diafragma y vasos de expansión especializados en varias series, adaptados a cada presión de sistema y aplicación de fluido:"},
+   {"ul": [
+    "**Pumplus (10 Bar / 150 PSI | 90°C / 194°F):** sistemas de presurización de agua potable, suministro de agua residencial y comercial.",
+    "**Mega-Plus (16 Bar / 232 PSI | 90°C / 194°F) y Giga-Plus (25 Bar / 362 PSI | 90°C / 194°F):** edificios comerciales de alta presión, suministro de agua industrial y sistemas de presurización contra incendios.",
+    "**RO-Plus (7 Bar / 100 PSI | 90°C / 194°F):** ósmosis inversa (RO) y sistemas domésticos de filtración de agua potable.",
+    "**Thermal-Plus (10 Bar / 150 PSI | 90°C / 194°F):** sistemas de expansión cerrados de calefacción y agua fría en climatización (HVAC).",
+    "**LQCOL-Plus (10 Bar / 150 PSI | 120°C / 248°F):** refrigeración líquida de centros de datos de IA (CDU) y sistemas de refrigerante industrial.",
+    "**Solar-Plus y Hydro-Plus (10 Bar / 150 PSI | 130°C / 266°F):** sistemas solares térmicos y de calefacción hidrónica de alta temperatura."]}]},
+  {"q": "¿Cuál es la garantía y la política de reposición posventa de los tanques de presión AQUASKY?", "a": [
+   {"p": "**AQUASKY ofrece una garantía limitada estándar de 5 años** en todas sus series de tanques de presión, que cubre defectos de materiales y de fabricación en condiciones normales de uso. Las reclamaciones aprobadas se resuelven con la reposición gratuita del producto, incluida en el siguiente envío programado del cliente. Para conocer las condiciones completas de la garantía o recibir ayuda con una reclamación, contacte con su distribuidor autorizado local o directamente con AQUASKY."}]},
+  {"q": "Describa sus capacidades de I+D y diseño para proyectos OEM/ODM.", "a": [
+   {"p": "AQUASKY ofrece soporte de ingeniería OEM/ODM integral, desde el concepto hasta la producción en serie:"},
+   {"ul": [
+    "**CAD 3D y simulación:** modelado 3D completo y simulaciones de presión para validar la seguridad estructural antes del utillaje.",
+    "**Prototipado rápido:** prototipos funcionales a medida entregados en pocas semanas para acelerar la llegada al mercado.",
+    "**Personalización total:** tamaños, componentes internos, conexiones, colores de recubrimiento y marca propia a medida."]}]},
+  {"q": "¿Qué tecnologías de fabricación clave, patentes exclusivas y soluciones para fluidos posee AQUASKY?", "a": [
+   {"p": "AQUASKY combina una amplia experiencia en la fabricación de tanques de presión con innovaciones de ingeniería prácticas para responder a diversas necesidades industriales y comerciales:"},
+   {"ul": [
+    "**Soldadura de precisión:** nuestros procesos de fabricación siguen estrictamente las normas ASME Section VIII, Division 1 y EN 13831.",
+    "**Precarga de nitrógeno térmicamente estable:** precarga de fábrica con nitrógeno puro (N₂), que mantiene una presión muy estable ante fuertes variaciones de temperatura y garantiza un rendimiento constante del vaso de expansión en distintos entornos térmicos.",
+    "**Conector Leak-Safe patentado:** diseño exclusivo y patentado de la conexión de agua que reduce de forma significativa el riesgo de fugas en el sistema.",
+    "**Recubrimiento protector multicapa:** recubrimiento epoxi multicapa duradero que ofrece una resistencia superior a la corrosión.",
+    "**Prueba de presión al 100% en fábrica:** cada tanque de presión AQUASKY se somete a una rigurosa prueba de presión al 100% antes del envío para garantizar la seguridad de funcionamiento y una calidad sin concesiones.",
+    "**Compatibilidad de fluidos por aplicación y soluciones para CDU de IA:** diseñados según los requisitos exactos del fluido, incluidas certificaciones internacionales de agua potable (NSF/ANSI 58, NSF/ANSI 61, ACS y otras), modelos para fluidos caloportadores de alta y baja temperatura, y vasos de expansión para refrigeración líquida altamente personalizados, diseñados específicamente para las unidades de distribución de refrigerante (CDU) de centros de datos de IA."]}]},
+  {"q": "¿Cuál es su política de cantidad mínima de pedido (MOQ)? ¿Aceptan pedidos con modelos mixtos?", "a": [
+   {"p": "AQUASKY ofrece políticas flexibles de MOQ y personalización para sus tanques de presión, adaptadas a sus necesidades de inventario y de marca:"},
+   {"ul": [
+    "**Colores estándar:** no hay MOQ para los colores estándar azul y almendra (Almond).",
+    "**Colores de marca personalizados:** los colores personalizados requieren un pedido mínimo de 200 unidades por envío. Ofrecemos opciones de personalización muy flexibles para que pueda pedir tanques de presión en los colores de su marca.",
+    "**Pedidos con modelos mixtos:** se aceptan modelos mixtos dentro del mismo contenedor."]},
+   {"p": "Contacte con nuestro equipo comercial para hablar de soluciones de color personalizadas y de condiciones de pedido adaptadas a su negocio."}]},
+  {"q": "¿Fabrica AQUASKY vasos de expansión a medida para sistemas de refrigeración líquida (CDU) de centros de datos de IA?", "a": [
+   {"p": "Sí. AQUASKY diseña y fabrica vasos de expansión especializados para refrigeración líquida (incluida nuestra serie LQCOL-Plus y modelos OEM/ODM a medida), desarrollados específicamente para **unidades de distribución de refrigerante (CDU) de servidores de IA** y circuitos de gestión térmica. Nuestros tanques para CDU admiten agua desionizada (DI) y mezclas de propilenglicol/etilenglicol (como PG25), temperaturas de trabajo de hasta 120°C (248°F), conexiones de acero inoxidable resistentes a la corrosión, dimensiones compactas para su integración en rack/colector y pruebas de estanqueidad y presión al 100% en fábrica."}]},
+  {"q": "¿Qué capacidades, orientaciones y materiales de conexión ofrece AQUASKY?", "a": [
+   {"p": "AQUASKY fabrica tanques de presión de diafragma y vasos de expansión en una amplia gama de capacidades, **desde tanques compactos de 1L hasta grandes depósitos comerciales de 500L**. Las configuraciones disponibles incluyen diseños en línea, verticales (con soporte) y horizontales (con soporte para bomba), con conexiones de agua duraderas de acero inoxidable o aleación especial, compatibles con roscas NPT, BSP o bridas."}]},
+  {"q": "¿Cuál es su plazo de producción estándar y su capacidad de envío?", "a": [
+   {"p": "Los pedidos estándar de tanques de presión AQUASKY suelen enviarse en un plazo de 3 semanas tras la confirmación del pedido, mientras que los pedidos OEM/ODM a medida o con colores de marca propia suelen requerir 4 semanas. Enviamos desde los principales puertos de Taiwán (Taichung, Keelung y Kaohsiung) y trabajamos con condiciones comerciales internacionales flexibles (FOB, CIF, EXW), tanto en grupaje (LCL) como en contenedor completo (FCL)."}]},
+  {"q": "¿Se puede modificar la presión de precarga de los tanques de presión AQUASKY?", "a": [
+   {"p": "**Sí, la presión de precarga de los tanques de presión AQUASKY puede ajustarse** entre 0.5 bar (7 psi) y 3.5 bar (50 psi) con el tanque completamente vacío de agua. Para garantizar la seguridad del sistema y una calibración correcta, el ajuste debe realizarlo un técnico cualificado."}]},
+  {"q": "¿Qué información se necesita y cómo se dimensionan los tanques de presión AQUASKY?", "a": [
+   {"p": "El dimensionamiento depende de parámetros clave del sistema, como el caudal de la bomba, los ajustes de presión de arranque y parada, la presión máxima de trabajo y el tipo de aplicación (p. ej., presurización de agua potable, HVAC o expansión térmica). Puede calcular la capacidad exacta del tanque con nuestra [**herramienta de selección AQUASKY**]({selTools}) en línea o contactar con nuestro equipo técnico para un dimensionamiento a medida."}]},
+  {"q": "¿Cómo controla el presostato la bomba y el tanque?", "a": [
+   {"p": "**El presostato regula la presión del sistema de agua controlando la presión en el interior del tanque y arrancando y parando la bomba automáticamente.** Cuando la presión del sistema baja hasta el umbral de arranque, el presostato activa la bomba para rellenar el tanque; cuando la presión alcanza el límite de parada, la detiene."}]},
+  {"q": "¿Cuáles son las presiones de arranque y parada habituales?", "a": [
+   {"p": "**Los ajustes de presostato más comunes en viviendas son 30/50 psi y 40/60 psi, con un diferencial estándar de 20 psi.** Por ejemplo, en un sistema de 30/50 psi la bomba arranca cuando la presión baja a 30 psi y se detiene a 50 psi; el tanque de presión suele precargarse 2 psi por debajo de la presión de arranque."}]},
+  {"q": "¿Cuál es la precarga habitual de un tanque de presión?", "a": [
+   {"p": "**En sistemas de presurización de agua potable, la precarga del tanque debe ajustarse 2 psi (0.14 bar) por debajo de la presión de arranque de la bomba**: normalmente 28 psi para un presostato de 30/50 psi. En sistemas cerrados de expansión de calefacción, la precarga coincide con la presión estática de llenado en frío del sistema. Todos los tanques de presión AQUASKY salen de fábrica precargados con nitrógeno (N₂) y probados antes del envío."}]},
+  {"q": "En su proceso de control de calidad, ¿cuáles son los estándares para las pruebas de ciclos de presión?", "a": [
+   {"p": "**AQUASKY realiza las pruebas de ciclos de presión conforme a las normas NSF/ANSI 61 y PED de la UE (EN 13831).** Los tanques se someten a 100,000 ciclos de presión continuos entre la precarga y la presión máxima de trabajo para verificar la durabilidad del diafragma y la integridad de las soldaduras."}]},
+  {"q": "¿Cómo puedo instalar, mantener y dar servicio a los tanques de presión fabricados por AQUASKY?", "a": [
+   {"p": "**Para una instalación segura y una vida útil óptima, los tanques de presión AQUASKY deben ser instalados por un técnico cualificado**, revisados una vez al año para comprobar la presión de precarga (nitrógeno o aire) y mantenidos en un lugar seco y bien ventilado. Para conocer los procedimientos paso a paso y las indicaciones de seguridad, descargue los [**manuales oficiales de instalación y mantenimiento de AQUASKY.**]({download})"}]},
+  {"q": "¿Cómo gestionan las solicitudes de personalización y la integración técnica con los sistemas existentes del cliente?", "a": [
+   {"p": "AQUASKY colabora directamente con su equipo de ingeniería para garantizar una integración fluida en los sistemas existentes:"},
+   {"ul": [
+    "**Ingeniería colaborativa:** capacidades, conexiones, materiales y presiones nominales adaptados a sus especificaciones exactas.",
+    "**Documentación técnica:** planos CAD 2D/3D y datos de simulación de presión para verificar la compatibilidad sin complicaciones.",
+    "**Pruebas con muestras:** muestras a medida o de varias especificaciones para validación del sistema y pruebas de campo antes de la producción en serie."]}]},
+  {"q": "¿Por qué elegir un tanque de presión de diafragma?", "a": [
+   {"p": "**Un tanque de diafragma separa de forma permanente el colchón de nitrógeno (N₂) presurizado del agua, lo que evita el anegamiento, la corrosión interna y la pérdida de presión.** Frente a los tanques convencionales de aire sobre agua, los tanques de presión de diafragma AQUASKY mantienen una presión de sistema constante, reducen los arranques cortos y frecuentes de la bomba e incorporan diafragmas de grado alimentario, con series de agua potable certificadas **NSF/ANSI 61** disponibles."}]},
+  {"q": "¿Por qué usar nitrógeno (N₂) para la precarga?", "a": [
+   {"p": "**El nitrógeno (N₂) atraviesa la goma del diafragma mucho más despacio que el oxígeno y se mantiene muy estable ante las variaciones de temperatura.** En comparación con el aire comprimido, la precarga de fábrica con nitrógeno puro y seco evita la oxidación interna, mantiene una presión de precarga constante y reduce notablemente el mantenimiento rutinario durante toda la vida útil del tanque AQUASKY."}]},
+  {"q": "¿Cómo se puede comprobar si el diafragma interno de un tanque de presión está roto?", "a": [
+   {"p": "Puede comprobar rápidamente si el diafragma interno de un tanque de presión AQUASKY está intacto presionando el obús de la válvula de gas situada en la parte superior del tanque:"},
+   {"ul": [
+    "**Si sale nitrógeno o aire:** el diafragma interno de butilo está intacto. Basta con vaciar el agua del sistema y restablecer la precarga del tanque a **2 psi por debajo** del ajuste de arranque de la bomba.",
+    "**Si sale o gotea agua:** el diafragma se ha roto y el agua ha entrado en la cámara de gas. El tanque de presión debe sustituirse de inmediato para evitar arranques cortos y frecuentes de la bomba y daños en el sistema."]}]},
+  {"q": "¿Cómo puedo prevenir averías en el tanque de presión y prolongar al máximo la vida útil del producto?", "a": [
+   {"p": "Siga la etiqueta técnica y el manual oficial de instalación de AQUASKY, y aplique estas prácticas de mantenimiento esenciales:"},
+   {"ul": [
+    "**Dimensionamiento y precarga correctos:** elija el volumen de tanque adecuado y revise/restablezca la presión de precarga cada año.",
+    "**Protección contra sobrepresión y golpes de ariete:** evite la sobrepresión excesiva y los golpes de ariete en el sistema.",
+    "**Puesta a tierra eléctrica:** asegure una correcta puesta a tierra del sistema para evitar la corrosión galvánica.",
+    "**Protección ambiental:** instale el tanque en un lugar seco y bien ventilado para evitar condensación, congelación y óxido exterior.",
+    "**Compatibilidad de fluidos:** controle el pH de las soluciones de glicol y nunca mezcle anticongelantes distintos."]}]},
+  {"q": "¿Por qué elegir a AQUASKY como socio estratégico a largo plazo?", "a": [
+   {"p": "**AQUASKY es un fabricante directo de confianza que trabaja con socios en más de 50 países.** Combinamos producción propia certificada ISO 9001, certificaciones internacionales (NSF, CE, WRAS), ingeniería OEM/ODM flexible y precios competitivos y estables para impulsar el crecimiento de su mercado a largo plazo."}]},
+  {"q": "¿Cuál es la visión de AQUASKY y su hoja de ruta de desarrollo a cinco años?", "a": [
+   {"ul": [
+    "**Visión:** convertirnos en el fabricante de tanques de presión y soluciones para sistemas de agua más fiable del mundo.",
+    "**Hoja de ruta a 5 años:** automatización de la fabricación inteligente, expansión a mercados emergentes de África y Asia Central, desarrollo de productos ecológicos y avance de nuestras iniciativas ESG."]}]},
+  {"q": "¿Cómo garantiza AQUASKY la estabilidad y la resiliencia de su cadena de suministro global?", "a": [
+   {"p": "AQUASKY garantiza la resiliencia de su cadena de suministro mediante envíos desde varios puertos de Taiwán (Keelung, Taichung y Kaohsiung), un abastecimiento diversificado de materias primas y el stock de seguridad regional que mantienen nuestros socios de distribución en todo el mundo."}]},
+  {"q": "¿Cómo puedo convertirme en distribuidor de AQUASKY y qué apoyo OEM/de marca ofrecen?", "a": [
+   {"p": "**AQUASKY da la bienvenida a distribuidores y socios comerciales de todo el mundo.** Ofrecemos soluciones de marca propia y personalizadas para colores, embalajes, etiquetas y diseños de cajas de los tanques de presión, así como opciones de envío rentables adaptadas a las necesidades de su negocio. Contacte con nuestro equipo comercial para hablar de sus requisitos."}]}
+ ]
+}

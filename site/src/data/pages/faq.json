@@ -1,5 +1,5 @@
 {
-  "_note": "照抄型頁面（舊站結構獨特，不做資料化）。主體 HTML 在 src/content/legacy/faq/<lang>.json 的 bodyHtml；本檔是語系無關的部分。來源：2026-10-22 封存 /en/FAQ 與 /zh/FAQ。",
+  "_note": "照抄型頁面的外框。FAQ 內文 2026-11-27 換成溢康 2026-11-26 新版 30 題（Tiffany LINE 傳 AQUASKY_FAQ_AI_Optimized_2026.11.26_Final.docx）：資料在 textSource 資料夾，node scripts/build-faq.mjs 產生 src/content/legacy/faq/<lang>.json。外框與樣式仍是 2026-10-22 封存的舊站 /en/FAQ。",
   "id": "faq",
   "path": "/FAQ",
   "template": "legacy",
@@ -20,6 +20,7 @@
     "ru",
     "ar"
   ],
+  "textSource": "../translation/faq-2026-11-26",
   "assets": [
     "/images/FAQ/FAQ-01.png",
     "/images/FAQ/FAQ-08.png",

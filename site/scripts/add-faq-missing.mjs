@@ -1,3 +1,4 @@
+// 【已被 build-faq.mjs 取代】2026-11-27 FAQ 換成溢康 2026-11-26 新版 30 題，這支一次性腳本不要再跑。
 // 四語 FAQ 補題：舊站 es／fr／ru／ar 的 FAQ 只有 16 題（en／zh 29 題）。
 // 把 ../translation/faq-missing-13.json 的 13 題 AI 譯稿，照 en 的題序插進 src/content/legacy/faq/<lang>.json：
 //   - 正文 HTML：每題沿用 en 那一題的版型（題目圖示、news-title／news-content 結構），插在 en 順序的前一題後面
