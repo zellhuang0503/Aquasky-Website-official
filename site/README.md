@@ -69,6 +69,7 @@ npm run check           # 型別與模板檢查
 | 下載子頁的文字與 PDF 清單 | `src/content/legacy/download-<language>/en.json` 的 bodyHtml（PDF 放 `public/download/EDM/<Language>/`，封面在 `cover/`） |
 | 新聞列表：順序、右欄「熱門文章」、標題帶、按鈕字樣、SEO | `src/data/news/<lang>-<CAT>.json`（`pageCount` 要＝ceil(篇數/5)，schema 會檢查） |
 | 新聞列表／明細的頁面樣式 | `src/data/news/common.json` |
+| 7 個經典系列頁的「產品規格」段落（DM 圖文字轉成網頁文字：材質性能、認證標章、規格表、注意事項，六語） | `src/data/edm-specs.json`（2026-11-27 從溢康 2026-07-17 版六語 DM PDF 轉錄；頁面由 `src/components/EdmSpecs.astro` 輸出，DM 圖照留、文字放圖下方，en 放在型號清單前；verify 會檢查每個型號列與材質性能值都在頁面上。待溢康確認 3 點：Google 文件「AQUASKY 新官網｜圖片文字轉網頁文字 待確認（2026-11-27）」） |
 
 內容檔有 schema（`src/content.config.ts`），欄位少了或型別錯，`npm run build` 會直接失敗。schema 只驗格式，不驗事實。
 

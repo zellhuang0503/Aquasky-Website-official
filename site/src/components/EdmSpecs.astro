@@ -1,0 +1,70 @@
+---
+// 系列頁「產品規格」：把舊站 DM 圖裡的文字（材質性能、認證標章、規格表、注意事項）改成網頁文字，給搜尋引擎與 AI 讀。
+// 資料：src/data/edm-specs.json（梵亞 2026-11-27 從溢康六語 DM PDF 轉錄）。DM 圖照舊保留，這段放在圖下方（en 放在型號清單前）。
+import specs from '../data/edm-specs.json';
+import type { Lang } from '../lib/i18n';
+
+interface Props { lang: Lang; id: string }
+const { lang, id } = Astro.props;
+const s = (specs.series as Record<string, any>)[id];
+const lb = (specs.labels as Record<string, any>)[lang];
+const fill = (x: string) => x.replaceAll('{series}', s?.name ?? '');
+const u = lb?.units;
+const colon = lang === 'zh' ? '：' : ': ';
+const gap = lang === 'zh' ? '　' : ' · ';
+---
+{s && lb && (
+  <section class="edm-specs lang_rtl" id="specifications">
+    <h2>{fill(lb.heading)}</h2>
+    <h3>{lb.features}</h3>
+    <table class="edm-feat">
+      <tbody>
+        {s.features[lang].map(([k, v]: [string, string]) => (<tr><th scope="row">{k}</th><td>{v}</td></tr>))}
+      </tbody>
+    </table>
+    <p class="edm-marks"><strong>{lb.marks}{colon}</strong>{s.marks.join(' · ')}</p>
+    {s.tables.map((t: any) => {
+      const horiz = t.layout === 'horizontal';
+      const groups: [string, string[]][] = [
+        [lb.cols.volume, [u.liter, u.gal]],
+        [lb.cols.diameter, [u.cm, u.inch]],
+        [horiz ? lb.cols.heightH : lb.cols.height, [u.cm, u.inch]],
+        ...(horiz ? [[lb.cols.length, [u.cm, u.inch]] as [string, string[]]] : []),
+        [lb.cols.boxLength, [u.cm, u.inch]],
+        [lb.cols.boxWidth, [u.cm, u.inch]],
+        [lb.cols.boxHeight, [u.cm, u.inch]],
+        [lb.cols.nw, [u.kg, u.lbs]],
+        [lb.cols.gw, [u.kg, u.lbs]],
+        [lb.cols.ship, [u.cuf]],
+      ];
+      const ncol = 2 + groups.reduce((n, g) => n + g[1].length, 0);
+      return (
+        <Fragment>
+          <h3>{t.title[lang]}</h3>
+          <div class="edm-table-wrap">
+            <table class="edm-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" scope="col">{lb.cols.model}</th>
+                  {groups.map(([h, us]) => <th colspan={us.length} scope="colgroup">{h}</th>)}
+                  <th rowspan="2" scope="col">{lb.cols.conn}</th>
+                </tr>
+                <tr>{groups.flatMap(([, us]) => us).map((x) => <th scope="col">{x}</th>)}</tr>
+              </thead>
+              <tbody>
+                {t.rows.map((r: string[]) => (
+                  <Fragment>
+                    {t.subhead && t.subhead.before === r[0] && <tr class="edm-subhead"><th colspan={ncol} scope="rowgroup">{t.subhead.text[lang]}</th></tr>}
+                    <tr><th scope="row">{r[0]}</th>{r.slice(1).map((x) => <td>{x}</td>)}</tr>
+                  </Fragment>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Fragment>
+      );
+    })}
+    {s.notes[lang].length > 0 && <ul class="edm-notes">{s.notes[lang].map((n: string) => <li>{n}</li>)}</ul>}
+    <p class="edm-meta">{lb.updated}{colon}{s.updated}{gap}<a href={s.brochure[lang]}>{fill(lb.download)}</a></p>
+  </section>
+)}
