@@ -5,8 +5,8 @@
     "ps": {
       "_": "Pressure Switch：AF=(cut_out−cut_in)/(cut_out+1)；Total=運轉分鐘×每分鐘公升；Size=Total/AF；PSI 先 ÷14.5 換 bar",
       "prechargeBarOffset": 0.2,
-      "prechargePsiOffset": 2.8,
-      "_prechargePsiOffset": "客戶 2022 文件寫 Cut-in − 2；舊站程式寫 − 2.8。2026-11-08 黃老闆拍板照現在網站（− 2.8），不問客戶；客戶日後給新算式再改。",
+      "prechargePsiOffset": 2,
+      "_prechargePsiOffset": "Cut-in − 2 psi。舊站程式原寫 − 2.8；Tiffany 2026-11-27 在「圖片文字轉網頁文字 待確認」文件 FAQ 第 4 點確認選型工具改成跟新版 FAQ 第 18、19、25 題一致（低 2 psi），黃老闆 2026-11-28 同意。",
       "megaFromCutInBar": 9,
       "megaFromCutInPsi": 130
     },

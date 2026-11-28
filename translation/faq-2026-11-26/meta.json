@@ -1,0 +1,15 @@
+{
+  "_note": "FAQ 2026-11-26 版的分類結構（六語共用）。en.json 由 AQUASKY_FAQ_AI_Optimized_2026.11.26_Final.docx 轉出、文字照原文；zh／es／fr／ru／ar 是梵亞 2026-11-27 依英文翻譯（待溢康審）。分類圖與題目圖示照舊站 FAQ 7 類的配置。",
+  "source": "Tiffany 2026-11-27 LINE 傳來的 AQUASKY_FAQ_AI_Optimized_2026.11.26_Final.docx",
+  "langs": ["en", "zh", "es", "fr", "ru", "ar"],
+  "downloadPage": { "en": "english", "zh": "chinese", "es": "spanish", "fr": "french", "ru": "russian", "ar": "arabic" },
+  "sections": [
+    { "key": "certification", "count": 5, "line": "news-line", "image": "/images/FAQ/FAQ-01.png", "questionIcon": "/images/FAQ/FAQ-08.png" },
+    { "key": "product", "count": 9, "line": "news-line", "image": "/images/FAQ/FAQ-02.png", "questionIcon": "/images/FAQ/FAQ-09.png" },
+    { "key": "sizing", "count": 2, "line": "news-line2", "image": "/images/FAQ/FAQ-03.png", "questionIcon": "/images/FAQ/FAQ-10.png" },
+    { "key": "pressure", "count": 4, "line": "news-line2", "image": "/images/FAQ/FAQ-04.png", "questionIcon": "/images/FAQ/FAQ-11.png" },
+    { "key": "install", "count": 2, "line": "news-line2", "image": "/images/FAQ/FAQ-05.png", "questionIcon": "/images/FAQ/FAQ-12.png" },
+    { "key": "quality", "count": 2, "line": "news-line2", "image": "/images/FAQ/FAQ-06.png", "questionIcon": "/images/FAQ/FAQ-13.png" },
+    { "key": "solution", "count": 6, "line": "news-line", "image": "/images/FAQ/FAQ-07.png", "questionIcon": "/images/FAQ/FAQ-14.png" }
+  ]
+}

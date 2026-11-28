@@ -44,6 +44,8 @@ const image = page.assets.find((a) => /\.(png|jpe?g|webp)$/i.test(a));
 ---
 <Base lang={lang} title={c.seo.title} description={c.seo.description} path={page.path} image={image} jsonLd={c.legacyJsonLd} breadcrumbs={breadcrumbs} bootstrap={page.bootstrap} extraCss={page.extraCss} headStyle={page.legacyCss} noLangPrefix={page.neutral} alternates={page.neutral ? [] : page.langs}>
   {!c.hasVisibleH1 && <h1 class="visually-hidden">{c.h1}</h1>}
+  {/* 內文換成新版譯稿的頁（textSource，目前只有 FAQ）：draft-ai 時顯示「初稿待審」提示，同 LQCOL-PLUS */}
+  {page.textSource && c.status === 'draft-ai' && <div style="text-align:center"><div class="draft-note" role="note">{d.common.draftNote}</div></div>}
   <Fragment set:html={c.bodyHtml} />
   {page.calculator && (
     <Fragment>

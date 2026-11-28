@@ -23,9 +23,9 @@ eq('PS excel AF', r.afPercent, '11.76'); eq('PS excel total', r.total, '132.00')
 eq('PS excel >450 → null', sel.pickModel(d.models[r.series], r.size), null);
 // 防呆：cut-out ≤ cut-in → cut-in + 1
 r = sel.calc.ps(d, 'bar', 3, 3, 1, 10); eq('PS cutout fix', r.cutOutFixed, 4);
-// PSI：14.5／29 psi＝1／2 bar → 同 AF；預充壓＝14.5 − 2.8＝11.7（照舊站；客戶 2022 文件的 − 2 會是 12.5，2026-11-08 決定照舊站）
+// PSI：14.5／29 psi＝1／2 bar → 同 AF；預充壓＝14.5 − 2＝12.5（2026-11-27 Tiffany 確認改成低 2 psi）
 r = sel.calc.ps(d, 'psi', 14.5, 29, 1, 1);
-eq('PS psi AF', r.afPercent, '33.33'); eq('PS psi size', r.sizeText, '3'); eq('PS psi precharge (舊站 −2.8)', r.precharge, '11.7');
+eq('PS psi AF', r.afPercent, '33.33'); eq('PS psi size', r.sizeText, '3'); eq('PS psi precharge (−2)', r.precharge, '12.5');
 eq('PS psi cut-in 130 → MEGA', sel.calc.ps(d, 'psi', 130, 150, 1, 1).series, 'mega');
 eq('PS bar cut-in 8.9 → APT', sel.calc.ps(d, 'bar', 8.9, 10, 1, 1).series, 'apt');
 
@@ -61,6 +61,30 @@ eq('VSD bar set 8.5 → MEGA', sel.calc.vsd(d, 'bar', 180, 8.5).series, 'mega');
 eq('VSD bar set 8.4 → APT', sel.calc.vsd(d, 'bar', 180, 8.4).series, 'apt');
 eq('PS psi cut-in 129 → APT', sel.calc.ps(d, 'psi', 129, 150, 1, 1).series, 'apt');
 eq('TH 99.97 → TP-100', sel.pickModel(d.models.thermal, 99.97).model, 'TP-100');
+
+// ④ 貨櫃裝載計算（public/js/container-calculator.js，數字照溢康 2026-11-23 Excel）
+const ccModule = { exports: {} };
+new Function('module', 'exports', readFileSync(join(root, 'public/js/container-calculator.js'), 'utf8'))(ccModule, ccModule.exports);
+const cc = ccModule.exports;
+const cd = JSON.parse(readFileSync(join(root, 'src/data/container-calculator.json'), 'utf8'));
+// Excel：24L 立式 1.51 CUF、4.5 kg；100 顆＝151 CUF、450 kg；20GP 1184 → 12.75%
+let c = cc.compute(cd, { 'vertical:24L': 100 });
+eq('CC 24L×100 CUF', c.totalCuf, 151); eq('CC 24L×100 kg', c.totalKg, 450); eq('CC 20GP %', c.containers[0].percent.toFixed(2), '12.75');
+eq('CC 24L×100 → 20GP', c.fit.key, '20GP');
+// 混裝：60L×150 + 100L×20 + 18L 臥式×20 → 540+120+29＝689 CUF；重量 1605+312+86＝2003 kg
+c = cc.compute(cd, { 'vertical:60L': 150, 'vertical:100L': 20, 'horizontal:18L': 20 });
+eq('CC mix CUF', c.totalCuf, 689); eq('CC mix kg', c.totalKg, 2003); eq('CC mix qty', c.totalQty, 190);
+// 85% 門檻：1000 CUF（20GP 84.46%）→ 20GP；1100 CUF（20GP 92.9%）→ 40GP；20GP 狀態 high
+c = cc.compute(cd, { 'vertical:80L': 200 }); eq('CC 1000 CUF → 20GP', c.fit.key, '20GP');
+c = cc.compute(cd, { 'vertical:80L': 220 }); eq('CC 1100 CUF → 40GP', c.fit.key, '40GP'); eq('CC 1100 20GP state', c.containers[0].state, 'high');
+// 超過 40HQ 的 85%：3000 CUF → 不放進任何一櫃，估 ceil(3000 / 2264.4)＝2 櫃；40HQ 狀態 over
+c = cc.compute(cd, { 'vertical:80L': 600 }); eq('CC 3000 CUF no fit', c.fit, null); eq('CC 3000 CUF needs 2×40HQ', c.needed, 2); eq('CC 3000 40HQ state', c.containers[2].state, 'over');
+// 空白、負數、小數 → 0／取整數
+c = cc.compute(cd, { 'vertical:2L': -5, 'vertical:3L': '2.7', 'vertical:8L': 'abc' });
+eq('CC sanitize qty', c.totalQty, 2); eq('CC empty state', cc.compute(cd, {}).containers[0].state, 'empty');
+// 型號數照 Excel：立式 20、臥式 6；貨櫃材積
+eq('CC vertical rows', cd.groups[0].models.length, 20); eq('CC horizontal rows', cd.groups[1].models.length, 6);
+eq('CC containers', cd.containers.map((x) => `${x.key}:${x.totalCuf}/${x.avgLoadCuf}`).join(), '20GP:1184/1050,40GP:2375/2200,40HQ:2664/2626');
 
 console.log(fails ? `\n${fails} failing` : '\nOK: selection-tools formulas');
 process.exit(fails ? 1 : 0);

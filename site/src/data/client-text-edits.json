@@ -93,62 +93,6 @@
     {
       "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
       "pages": [
-        "/en/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "RO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years.",
-          "to": "All tanks (RO, Well, Thermal and Hydronic): 5-years."
-        }
-      ]
-    },
-    {
-      "source": "黃老闆／溢康 2026-11-19 月會：刪「標準色無 MOQ」與「經銷最少一個 20 呎貨櫃」，客製化說法等 Tiffany 初稿",
-      "pages": [
-        "/en/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "No required MOQ for standard colors (Blue and Almond). The MOQ for customized colors",
-          "to": "The MOQ for customized colors"
-        },
-        {
-          "from": "MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms.",
-          "to": "Pricing is based on FOB Taichung terms."
-        }
-      ]
-    },
-    {
-      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
-      "pages": [
-        "/zh/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "RO 罐 3 年保固；其餘多數罐體 5 年保固。",
-          "to": "所有罐體（含 RO 罐）皆為 5 年保固。"
-        }
-      ]
-    },
-    {
-      "source": "黃老闆／溢康 2026-11-19 月會：刪「標準色無 MOQ」與「經銷最少一個 20 呎貨櫃」，客製化說法等 Tiffany 初稿",
-      "pages": [
-        "/zh/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "標準顏色（藍色、米色）無 MOQ 要求。客製化顏色",
-          "to": "客製化顏色"
-        },
-        {
-          "from": "最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。",
-          "to": "價格以 FOB 台中計價。"
-        }
-      ]
-    },
-    {
-      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）",
-      "pages": [
         "/en/news-detail/INDUSTRY/introduction-to-liquid-cold-system-expansion-tank-lqcol-plus-aquasky-173"
       ],
       "replace": [
@@ -167,30 +111,6 @@
         {
           "from": "產品提供三年保固",
           "to": "產品提供五年保固"
-        }
-      ]
-    },
-    {
-      "source": "依黃老闆／溢康 2026-11-19 月會「全部改 5 年」；黃老闆會後決定 FAQ 第 9 題「保固因市場而異」也照改",
-      "pages": [
-        "/en/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "AQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.",
-          "to": "All AQUASKY tanks (RO, Well, Thermal and Hydronic) come with a 5-year warranty."
-        }
-      ]
-    },
-    {
-      "source": "依黃老闆／溢康 2026-11-19 月會「全部改 5 年」；黃老闆會後決定 FAQ 第 9 題「保固因市場而異」也照改",
-      "pages": [
-        "/zh/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "溢康保固期因市場而異。 請聯繫您當地的經銷商以獲得適用於您所在地區的保固。",
-          "to": "溢康所有罐體（含 RO 罐）皆提供 5 年保固。"
         }
       ]
     },
@@ -267,54 +187,6 @@
       ]
     },
     {
-      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，es 新句是 2026-11-26 AI 譯",
-      "pages": [
-        "/es/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "La garant&iacute;a de AQUASKY puede variar seg&uacute;n el mercado. Por favor, contacta a tu distribuidor local para conocer la garant&iacute;a aplicable en tu &aacute;rea.",
-          "to": "Todos los tanques AQUASKY (RO, pozo, térmicos e hidrónicos) tienen una garantía de 5 años."
-        }
-      ]
-    },
-    {
-      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，fr 新句是 2026-11-26 AI 譯",
-      "pages": [
-        "/fr/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "La garantie AQUASKY varie selon les march&eacute;s. Veuillez contacter votre distributeur local pour conna&icirc;tre la garantie applicable dans votre r&eacute;gion.",
-          "to": "Tous les réservoirs AQUASKY (RO, puits, thermiques et hydroniques) bénéficient d’une garantie de 5 ans."
-        }
-      ]
-    },
-    {
-      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，ru 新句是 2026-11-26 AI 譯",
-      "pages": [
-        "/ru/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "Гарантия AQUASKY варьируется в зависимости от рынка. Обратитесь к вашему местному дистрибьютору для получения информации о гарантии, действующей в вашем регионе.",
-          "to": "На все баки AQUASKY (RO, скважинные, термические и гидронные) предоставляется гарантия 5 лет."
-        }
-      ]
-    },
-    {
-      "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；保固題比照 en 第 9 題改寫，ar 新句是 2026-11-26 AI 譯",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "يختلف ضمان AQUASKY في السوق. يرجى الاتصال بالموزع المحلي للحصول على الضمان المناسب في منطقتك.",
-          "to": "تأتي جميع خزانات AQUASKY (RO، والآبار، والحرارية، والهيدرونية) بضمان لمدة 5 سنوات."
-        }
-      ]
-    },
-    {
       "source": "黃老闆／溢康 2026-11-19 月會＋黃老闆會後確認：AQUASKY 所有商品保固都是 5 年（含 RO 桶）；同 en 173／zh 175 的 LQCOL 新聞改法",
       "pages": [
         "/es/news-detail/INDUSTRY/introduccin-al-tanque-de-expansin-para-sistemas-de-enfriamiento-lquido-lqcol-plus-aquasky-45"
@@ -359,78 +231,6 @@
         {
           "from": "بضمان لمدة 3 سنوات",
           "to": "بضمان لمدة 5 سنوات"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：「vessel」被翻成「船」，改成「خزان（桶）」",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "تركيب السفينة فيها",
-          "to": "تركيب الخزان فيها"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "لسفينة AQUASKY الفارغة",
-          "to": "لخزان AQUASKY الفارغ"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：cut-in／cut-out 被直譯成「切斷點／出口點」，改成「啟動點／停止點」",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "ما هي النقاط المعتادة للقطع والخروج؟",
-          "to": "ما هي نقاط التشغيل والإيقاف المعتادة؟"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "تبدأ (نقطة القطع)",
-          "to": "تبدأ (نقطة التشغيل)"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "تتوقف (نقطة الخروج)",
-          "to": "تتوقف (نقطة الإيقاف)"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-26 阿拉伯文檢查（黃老闆：溢康不懂阿拉伯文，請特別注意舊站阿拉伯文對不對）：同上",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "بين نقطة القطع والخروج",
-          "to": "بين نقطة التشغيل ونقطة الإيقاف"
         }
       ]
     },
@@ -507,246 +307,6 @@
       ]
     },
     {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 es 只有 16 題）。en 第 3、4、5 題的 AI 譯稿，插在 en 第 2 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/es/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "requisitos de salud del agua. PRODUCTOS ¿Son adecuados los t",
-          "to": "requisitos de salud del agua. ¿Pueden suministrarse los productos con trazabilidad completa de materiales y documentos de certificación (p. ej., NSF, CE, WRAS)? Los productos cumplen las principales certificaciones, entre ellas NSF/ANSI 58, 61, 372, CE, ACS, KC, WaterMark y UPC. Todos los materiales en contacto con el agua cumplen RoHS y REACH de la UE, así como los requisitos de PFAS y TSCA. Cada producto se fabrica bajo un estricto sistema de gestión de la calidad ISO 9001, lo que permite la trazabilidad completa de materiales y procesos. ¿Cuáles son las prácticas de AQUASKY en materia de ESG? Medio ambiente: verificación de carbono e inventario de GEI certificados según ISO 14064-1:2018; uso de recubrimientos ecológicos de triple capa. Social: seguimiento diario de la tasa de incidentes; la seguridad de los empleados es nuestra máxima prioridad. Sin trabajo infantil ni trabajo forzoso. Gobernanza: operaciones transparentes y gestión financiera estable; sistema de gestión de la calidad certificado ISO 9001. ¿AQUASKY es un fabricante o una empresa comercializadora? AQUASKY es un fabricante al 100 % con sede en Taichung, Taiwán. Todos los procesos críticos se realizan internamente, incluidos la soldadura, el recubrimiento, las pruebas de presión, el montaje y el embalaje. Nuestras instalaciones funcionan bajo un sistema de gestión de la calidad ISO 9001. PRODUCTOS ¿Son adecuados los t"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 es 只有 16 題）。en 第 10、11、12 題的 AI 譯稿，插在 en 第 9 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/es/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "tienen una garantía de 5 años. RECOMENDACIONES ¿Se puede modi",
-          "to": "tienen una garantía de 5 años. Describa sus capacidades de I+D y diseño para proyectos OEM/ODM. Modelado CAD 3D avanzado y simulación de presión: nuestro equipo de ingeniería diseña íntegramente en CAD 3D y simula el comportamiento a presión interna. Prototipado rápido: convertimos los conceptos de diseño en prototipos funcionales en pocas semanas, lo que agiliza las pruebas y acorta el tiempo de llegada al mercado. Personalización flexible: opciones de diseño, tamaño, color del recubrimiento y conexiones. ¿Qué tecnologías de fabricación clave o patentes exclusivas posee AQUASKY? Excelencia en soldadura: fabricados con tecnologías de soldadura certificadas PED, conforme a las normas ASME VIII Div.1 y EN 13831. Precarga 100 % de nitrógeno: precargados en fábrica con nitrógeno puro para minimizar la pérdida de presión. Conector Leak-Safe patentado: ofrece una conexión al sistema segura, resistente a la corrosión y sin fugas. Recubrimientos protectores: el recubrimiento epoxi multicapa proporciona resistencia duradera al óxido y a la corrosión. ¿Cuál es su política de cantidad mínima de pedido (MOQ)? ¿Aceptan pedidos con modelos mixtos? La MOQ para colores personalizados es de 400 unidades por envío. Se permiten modelos mixtos en un mismo contenedor. RECOMENDACIONES ¿Se puede modi"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 es 只有 16 題）。en 第 18 題的 AI 譯稿，插在 en 第 17 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/es/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "conexi&oacute;n de la bomba. INSTALACIÓN ¿Cómo puedo instal",
-          "to": "conexi&oacute;n de la bomba. En su proceso de control de calidad, ¿cuáles son los estándares para las pruebas de ciclos de presión? Todos los tanques se prueban conforme a las normas NSF/ANSI 61 y PED de la UE. Cada unidad se somete a 100,000 ciclos de presión continuos entre la presión de precarga y la presión máxima de trabajo para garantizar un rendimiento duradero. INSTALACIÓN ¿Cómo puedo instal"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 es 只有 16 題）。en 第 20 題的 AI 譯稿，插在 en 第 19 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/es/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "los manuales de instrucciones. CALIDAD ¿Por qué un tanque de",
-          "to": "los manuales de instrucciones. ¿Cómo gestionan las solicitudes de personalización y la integración técnica con los sistemas existentes del cliente? Suministramos muestras de modelos mixtos para pruebas. Nuestro equipo de ingeniería trabaja junto con el cliente para adaptar la capacidad, las conexiones y los rangos de presión. Facilitamos planos técnicos y datos de simulación para una integración fluida en el sistema. CALIDAD ¿Por qué un tanque de"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 es 只有 16 題）。en 第 25、26、27、28、29 題的 AI 譯稿，插在 en 第 24 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/es/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "productos anticongelantes. &nbsp;",
-          "to": "productos anticongelantes. &nbsp; ¿Por qué elegir a AQUASKY como socio estratégico a largo plazo? AQUASKY es un fabricante líder con ventas en más de 50 países. Combinamos una alta fiabilidad de producción, capacidades OEM/ODM flexibles y precios estables para apoyar el crecimiento de su negocio. ¿Cuál es la visión de AQUASKY y su hoja de ruta de desarrollo a cinco años? Visión: convertirnos en el fabricante global de mayor confianza. Hoja de ruta: inversión en fabricación inteligente, expansión a regiones como África y Asia Central, desarrollo de productos ecológicos y avance en los objetivos ESG. ¿Cómo garantiza AQUASKY la estabilidad y la resiliencia de su cadena de suministro global? Envíos desde varios puertos (Keelung/Taichung/Kaohsiung), abastecimiento diversificado de materias primas y puntos de stock regionales a través de distribuidores para amortiguar imprevistos. ¿Cuáles son las condiciones para ser distribuidor, la estructura de precios y las condiciones de pago? Los precios se basan en condiciones FOB Taichung. Pago: 100 % T/T en el primer pedido; 50 % de anticipo y 50 % antes del envío en los pedidos siguientes. ¿Cuáles son las condiciones concretas de la garantía y del servicio posventa? Todos los tanques (RO, pozo, térmicos e hidrónicos): 5 años. La garantía cubre únicamente defectos de fabricación. Las reclamaciones aprobadas se resuelven mediante la reposición del producto en el siguiente pedido del cliente."
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 fr 只有 16 題）。en 第 3、4、5 題的 AI 譯稿，插在 en 第 2 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/fr/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "exigences sanitaires de l'eau. PRODUITS Les réservoirs à pres",
-          "to": "exigences sanitaires de l'eau. Les produits peuvent-ils être fournis avec une traçabilité complète des matériaux et des documents de certification (par ex. NSF, CE, WRAS) ? Les produits sont conformes aux principales certifications, dont NSF/ANSI 58, 61, 372, CE, ACS, KC, WaterMark et UPC. Tous les matériaux en contact avec l’eau sont conformes aux directives européennes RoHS et REACH, ainsi qu’aux exigences PFAS et TSCA. Chaque produit est fabriqué selon un système de management de la qualité ISO 9001 rigoureux, qui assure une traçabilité complète des matériaux et des procédés. Quelles sont les pratiques d’AQUASKY en matière d’ESG ? Environnement : vérification carbone et inventaire des GES certifiés ISO 14064-1:2018 ; utilisation de revêtements écologiques à trois couches. Social : suivi quotidien du taux d’incidents ; la sécurité des employés est notre priorité absolue. Aucun travail des enfants ni travail forcé. Gouvernance : fonctionnement transparent et gestion financière stable ; système de management de la qualité certifié ISO 9001. AQUASKY est-il un fabricant ou une société de négoce ? AQUASKY est un fabricant à 100 % basé à Taichung, à Taïwan. Tous les procédés critiques sont réalisés en interne : soudage, revêtement, essais de pression, assemblage et emballage. Nos installations fonctionnent selon un système de management de la qualité ISO 9001. PRODUITS Les réservoirs à pres"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 fr 只有 16 題）。en 第 10、11、12 題的 AI 譯稿，插在 en 第 9 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/fr/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "bénéficient d’une garantie de 5 ans. CONSEIL Peut-on modifier la pr",
-          "to": "bénéficient d’une garantie de 5 ans. Décrivez vos capacités de R&D et de conception pour les projets OEM/ODM. Modélisation CAO 3D avancée et simulation de pression : notre équipe d’ingénierie conçoit entièrement en CAO 3D et simule le comportement sous pression interne. Prototypage rapide : nous transformons les concepts en prototypes fonctionnels en quelques semaines, pour des essais plus rapides et une mise sur le marché plus courte. Personnalisation flexible : options de conception, de taille, de couleur de revêtement et de raccords. Quelles technologies de fabrication clés ou quels brevets exclusifs AQUASKY possède-t-il ? Excellence du soudage : fabriqués avec des technologies de soudage certifiées PED, conformes aux normes ASME VIII Div.1 et EN 13831. Précharge 100 % azote : préchargés en usine à l’azote pur pour limiter les pertes de pression. Raccord Leak-Safe breveté : une connexion au système sûre, résistante à la corrosion et étanche. Revêtements de protection : le revêtement époxy multicouche assure une résistance durable à la rouille et à la corrosion. Quelle est votre politique de quantité minimale de commande (MOQ) ? Acceptez-vous les commandes de modèles mixtes ? La MOQ pour les couleurs personnalisées est de 400 pièces par expédition. Les modèles mixtes sont acceptés dans un même conteneur. CONSEIL Peut-on modifier la pr"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 fr 只有 16 題）。en 第 18 題的 AI 譯稿，插在 en 第 17 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/fr/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "de mise en marche de la pompe. INSTALLATION Comment puis-je i",
-          "to": "de mise en marche de la pompe. Dans votre contrôle qualité, quelles sont les normes des essais de cycles de pression ? Tous les réservoirs sont testés selon les normes NSF/ANSI 61 et PED de l’UE. Chaque unité subit 100,000 cycles de pression continus entre la précharge et la pression maximale de service, pour garantir des performances durables. INSTALLATION Comment puis-je i"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 fr 只有 16 題）。en 第 20 題的 AI 譯稿，插在 en 第 19 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/fr/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "r&eacute;f&eacute;rer aux manuels d'instructions. QUALITÉ Pourquoi un réservoir",
-          "to": "r&eacute;f&eacute;rer aux manuels d'instructions. Comment gérez-vous les demandes de personnalisation et l’intégration technique avec les systèmes existants du client ? Nous fournissons des échantillons de modèles mixtes pour les essais. Notre équipe d’ingénierie travaille avec le client pour adapter la capacité, les raccords et les plages de pression. Des plans techniques et des données de simulation sont fournis pour une intégration sans difficulté. QUALITÉ Pourquoi un réservoir"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 fr 只有 16 題）。en 第 25、26、27、28、29 題的 AI 譯稿，插在 en 第 24 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/fr/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "diff&eacute;rents produits antigel &nbsp;",
-          "to": "diff&eacute;rents produits antigel &nbsp; Pourquoi choisir AQUASKY comme partenaire stratégique à long terme ? AQUASKY est un fabricant de premier plan présent dans plus de 50 pays. Nous associons une grande fiabilité de production, des capacités OEM/ODM flexibles et des prix stables pour accompagner la croissance de votre activité. Quelle est la vision d’AQUASKY et sa feuille de route de développement sur cinq ans ? Vision : devenir le fabricant mondial le plus digne de confiance. Feuille de route : investir dans la fabrication intelligente, s’étendre vers des régions comme l’Afrique et l’Asie centrale, développer des produits écologiques et progresser sur les objectifs ESG. Comment AQUASKY garantit-il la stabilité et la résilience de sa chaîne d’approvisionnement mondiale ? Expéditions depuis plusieurs ports (Keelung/Taichung/Kaohsiung), approvisionnement diversifié en matières premières et stocks régionaux chez nos distributeurs pour absorber les aléas. Quelles sont les conditions pour devenir distributeur, la structure tarifaire et les conditions de paiement ? Les prix sont établis aux conditions FOB Taichung. Paiement : 100 % T/T pour la première commande ; 50 % d’acompte et 50 % avant expédition pour les commandes suivantes. Quelles sont les conditions précises de la garantie et du service après-vente ? Tous les réservoirs (RO, puits, thermiques et hydroniques) : 5 ans. La garantie couvre uniquement les défauts de fabrication. Les réclamations acceptées sont réglées par le remplacement du produit dans la commande suivante du client."
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ru 只有 16 題）。en 第 3、4、5 題的 AI 譯稿，插在 en 第 2 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ru/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "воды с точки зрения здоровья. ПРОДУКТ Подходят ли диафрагмен",
-          "to": "воды с точки зрения здоровья. Можно ли получить продукцию с полной прослеживаемостью материалов и сертификационными документами (например, NSF, CE, WRAS)? Продукция соответствует основным сертификатам, включая NSF/ANSI 58, 61, 372, CE, ACS, KC, WaterMark и UPC. Все материалы, контактирующие с водой, соответствуют требованиям ЕС RoHS и REACH, а также требованиям PFAS и TSCA. Каждое изделие производится в рамках строгой системы менеджмента качества ISO 9001, что обеспечивает полную прослеживаемость материалов и процессов. Каковы практики AQUASKY в области ESG? Экология: углеродная верификация и инвентаризация парниковых газов, сертифицированные по ISO 14064-1:2018; применение экологичных трёхслойных покрытий. Социальная сфера: ежедневный учёт производственных происшествий; безопасность сотрудников — наш главный приоритет. Никакого детского или принудительного труда. Управление: прозрачная деятельность и стабильное финансовое управление; система менеджмента качества, сертифицированная по ISO 9001. AQUASKY — производитель или торговая компания? AQUASKY — на 100 % производитель с заводом в Тайчжуне (Тайвань). Все ключевые процессы выполняются собственными силами, включая сварку, нанесение покрытий, испытания давлением, сборку и упаковку. Производство работает по системе менеджмента качества ISO 9001. ПРОДУКТ Подходят ли диафрагмен"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ru 只有 16 題）。en 第 10、11、12 題的 AI 譯稿，插在 en 第 9 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ru/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "предоставляется гарантия 5 лет. СОВЕТЫ Можно ли изменить предв",
-          "to": "предоставляется гарантия 5 лет. Расскажите о ваших возможностях в области НИОКР и проектирования для проектов OEM/ODM. Современное 3D-моделирование в САПР и расчёт давления: наши инженеры выполняют полное 3D-проектирование и моделируют работу бака под внутренним давлением. Быстрое прототипирование: превращаем концепцию в рабочий прототип за несколько недель, что ускоряет испытания и вывод продукта на рынок. Гибкая кастомизация: варианты конструкции, размеров, цвета покрытия и присоединительной арматуры. Какими ключевыми производственными технологиями и эксклюзивными патентами обладает AQUASKY? Высокое качество сварки: производство по сертифицированным PED сварочным технологиям в соответствии со стандартами ASME VIII Div.1 и EN 13831. 100 % азотная предзакачка: заводская предварительная закачка чистым азотом для минимальной потери давления. Запатентованный штуцер Leak-Safe: надёжное, коррозионностойкое и герметичное подключение к системе. Защитные покрытия: многослойное эпоксидное покрытие обеспечивает долговременную защиту от ржавчины и коррозии. Какова ваша политика минимального заказа (MOQ)? Принимаете ли вы заказы с разными моделями? Минимальный заказ для нестандартных цветов — 400 шт. на одну отгрузку. В одном контейнере допускаются разные модели. СОВЕТЫ Можно ли изменить предв"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ru 只有 16 題）。en 第 18 題的 AI 譯稿，插在 en 第 17 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ru/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "меньше давления включения насоса. УСТАНОВКА Как устанавливать, о",
-          "to": "меньше давления включения насоса. Какие стандарты применяются в контроле качества для испытаний циклами давления? Все баки испытываются в соответствии со стандартами NSF/ANSI 61 и PED ЕС. Каждое изделие проходит 100,000 непрерывных циклов давления между давлением предзакачки и максимальным рабочим давлением, что гарантирует долговременную работу. УСТАНОВКА Как устанавливать, о"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ru 只有 16 題）。en 第 20 題的 AI 譯稿，插在 en 第 19 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ru/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "к инструкциям по установке. КАЧЕСТВО Почему диафрагменный б",
-          "to": "к инструкциям по установке. Как вы работаете с запросами на кастомизацию и техническую интеграцию с существующими системами клиента? Предоставляем образцы разных моделей для испытаний. Инженеры работают совместно с клиентом, адаптируя объём, присоединительную арматуру и диапазоны давления. Предоставляем технические чертежи и данные моделирования для беспроблемной интеграции в систему. КАЧЕСТВО Почему диафрагменный б"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ru 只有 16 題）。en 第 25、26、27、28、29 題的 AI 譯稿，插在 en 第 24 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ru/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "антифризовых продуктов. &nbsp;",
-          "to": "антифризовых продуктов. &nbsp; Почему стоит выбрать AQUASKY долгосрочным стратегическим партнёром? AQUASKY — ведущий производитель с продажами более чем в 50 странах. Мы сочетаем высокую надёжность производства, гибкие возможности OEM/ODM и стабильные цены, поддерживая рост вашего бизнеса. Каковы видение AQUASKY и пятилетняя дорожная карта развития? Видение: стать самым надёжным производителем в мире. Дорожная карта: инвестиции в умное производство, выход на рынки Африки и Центральной Азии, разработка экологичной продукции и достижение целей ESG. Как AQUASKY обеспечивает стабильность и устойчивость глобальной цепочки поставок? Отгрузка из нескольких портов (Keelung/Taichung/Kaohsiung), диверсифицированные закупки сырья и региональные складские запасы у дистрибьюторов для смягчения сбоев. Каковы условия для дистрибьюторов, структура цен и условия оплаты? Цены указываются на условиях FOB Taichung. Оплата: 100 % T/T за первый заказ; для последующих заказов — 50 % предоплата и 50 % до отгрузки. Каковы конкретные условия гарантии и послепродажного обслуживания? Все баки (RO, скважинные, термические и гидронные): 5 лет. Гарантия распространяется только на производственные дефекты. Одобренные претензии решаются заменой продукции в следующем заказе клиента."
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ar 只有 16 題）。en 第 3、4、5 題的 AI 譯稿，插在 en 第 2 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "الشرب، وأنشأ متطلبات الصحة للماء . المنتجات هل خزانات الضغط بالدي",
-          "to": "الشرب، وأنشأ متطلبات الصحة للماء . هل يمكن توفير المنتجات مع إمكانية تتبّع كاملة للمواد ووثائق الشهادات (مثل NSF وCE وWRAS)؟ تتوافق المنتجات مع الشهادات الرئيسية، ومنها NSF/ANSI 58 و61 و372 وCE وACS وKC وWaterMark وUPC. جميع المواد الملامسة للمياه متوافقة مع لائحتي RoHS وREACH الأوروبيتين، كما تستوفي متطلبات PFAS وTSCA. يُصنَّع كل منتج وفق نظام صارم لإدارة الجودة ISO 9001، بما يتيح تتبّعًا كاملًا للمواد وعمليات التصنيع. ما هي ممارسات AQUASKY في مجال الحوكمة البيئية والاجتماعية والمؤسسية (ESG)؟ البيئة: تحقق كربوني وجرد لانبعاثات غازات الاحتباس الحراري معتمدان وفق ISO 14064-1:2018؛ واستخدام طلاءات صديقة للبيئة ثلاثية الطبقات. المجتمع: متابعة يومية لمعدل الحوادث؛ سلامة الموظفين أولويتنا القصوى. لا لعمالة الأطفال ولا للعمل القسري. الحوكمة: عمليات شفافة وإدارة مالية مستقرة؛ ونظام لإدارة الجودة معتمد وفق ISO 9001. هل AQUASKY شركة مصنّعة أم شركة تجارية؟ AQUASKY شركة مصنّعة بنسبة 100% مقرها تايتشونغ، تايوان. تُنفَّذ جميع العمليات الحرجة داخل المصنع، ومنها اللحام والطلاء واختبارات الضغط والتجميع والتعبئة. وتعمل منشآتنا وفق نظام إدارة الجودة ISO 9001. المنتجات هل خزانات الضغط بالدي"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ar 只有 16 題）。en 第 10、11、12 題的 AI 譯稿，插在 en 第 9 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "بضمان لمدة 5 سنوات. &nbsp; &nbsp; النصائح هل يمكن تعديل الضغط ال",
-          "to": "بضمان لمدة 5 سنوات. &nbsp; &nbsp; يُرجى توضيح قدراتكم في البحث والتطوير والتصميم لمشروعات OEM/ODM. نمذجة متقدمة بالتصميم ثلاثي الأبعاد CAD ومحاكاة الضغط: يعتمد فريقنا الهندسي على التصميم الكامل ثلاثي الأبعاد CAD ومحاكاة أداء الضغط الداخلي. نماذج أولية سريعة: نحوّل أفكار التصميم إلى نماذج أولية عاملة خلال أسابيع، ما يسرّع الاختبار ويختصر زمن الوصول إلى السوق. تخصيص مرن: خيارات في التصميم والحجم وألوان الطلاء ووصلات التوصيل. ما هي تقنيات التصنيع الرئيسية أو براءات الاختراع الحصرية التي تمتلكها AQUASKY؟ تميّز في اللحام: تُصنَّع بتقنيات لحام معتمدة من PED، وفق معياري ASME VIII Div.1 وEN 13831. شحن مسبق بالنيتروجين بنسبة 100%: تُشحن مسبقًا في المصنع بالنيتروجين النقي لتقليل فقدان الضغط إلى الحد الأدنى. وصلة Leak-Safe الحاصلة على براءة اختراع: توفر توصيلًا آمنًا بالنظام، مقاومًا للتآكل ومانعًا للتسرب. طلاءات واقية: يوفر طلاء الإيبوكسي متعدد الطبقات مقاومة طويلة الأمد للصدأ والتآكل. ما هي سياستكم بشأن الحد الأدنى للطلب (MOQ)؟ وهل تقبلون طلبات تضم طرازات مختلفة؟ الحد الأدنى للطلب للألوان المخصّصة هو 400 قطعة لكل شحنة. ويُسمح بخلط الطرازات داخل الحاوية نفسها. النصائح هل يمكن تعديل الضغط ال"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ar 只有 16 題）。en 第 18 題的 AI 譯稿，插在 en 第 17 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "من ضغط قطع المضخة بمقدار 2psi. تثبيت كيف يمكنني تثبيت وخدمة و",
-          "to": "من ضغط قطع المضخة بمقدار 2psi. ما هي معايير اختبار دورات الضغط ضمن عملية مراقبة الجودة لديكم؟ تُختبر جميع الخزانات وفق معياري NSF/ANSI 61 وPED الأوروبي. ويخضع كل خزان لـ 100,000 دورة ضغط متواصلة بين ضغط الشحن المسبق وأقصى ضغط تشغيل لضمان أداء طويل الأمد. تثبيت كيف يمكنني تثبيت وخدمة و"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ar 只有 16 題）。en 第 20 題的 AI 譯稿，插在 en 第 19 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "يرجى الرجوع إلى دلائل التعليمات. الجودة لماذا خزان الحجاب الحاج",
-          "to": "يرجى الرجوع إلى دلائل التعليمات. كيف تتعاملون مع طلبات التخصيص والتكامل التقني مع الأنظمة القائمة لدى العميل؟ نوفّر عيّنات من طرازات مختلفة للاختبار. يعمل فريقنا الهندسي مع العميل لتكييف السعة ووصلات التوصيل ونطاقات الضغط. نقدّم الرسومات الفنية وبيانات المحاكاة لتكامل سلس مع النظام. الجودة لماذا خزان الحجاب الحاج"
-        }
-      ]
-    },
-    {
-      "source": "梵亞 2026-11-27：四語 FAQ 補題（舊站 ar 只有 16 題）。en 第 25、26、27、28、29 題的 AI 譯稿，插在 en 第 24 題後面（translation/faq-missing-13.json）",
-      "pages": [
-        "/ar/FAQ"
-      ],
-      "replace": [
-        {
-          "from": "خلط منتجات مضادة للتجمد المختلفة",
-          "to": "خلط منتجات مضادة للتجمد المختلفة لماذا تختارون AQUASKY شريكًا استراتيجيًا على المدى الطويل؟ AQUASKY شركة مصنّعة رائدة تبيع منتجاتها في أكثر من 50 دولة. نجمع بين موثوقية إنتاج عالية وقدرات OEM/ODM مرنة وأسعار مستقرة لدعم نمو أعمالكم. ما هي رؤية AQUASKY وخارطة طريق التطوير للسنوات الخمس المقبلة؟ الرؤية: أن نصبح الشركة المصنّعة الأكثر ثقة على مستوى العالم. خارطة الطريق: الاستثمار في التصنيع الذكي، والتوسع في مناطق مثل أفريقيا وآسيا الوسطى، وتطوير منتجات صديقة للبيئة، والتقدم في تحقيق أهداف ESG. كيف تضمن AQUASKY استقرار سلسلة الإمداد العالمية ومرونتها؟ الشحن من عدة موانئ (Keelung/Taichung/Kaohsiung)، وتنويع مصادر المواد الخام، ونقاط مخزون إقليمية لدى شركاء التوزيع لامتصاص الصدمات. ما هي شروط أن تصبح موزّعًا، وهيكل الأسعار، وشروط الدفع؟ تُحتسب الأسعار وفق شروط FOB Taichung. الدفع: 100% تحويل بنكي (T/T) للطلب الأول؛ و50% دفعة مقدمة و50% قبل الشحن للطلبات اللاحقة. ما هي الشروط المحددة للضمان وخدمة ما بعد البيع؟ جميع الخزانات (RO، والآبار، والحرارية، والهيدرونية): 5 سنوات. يغطي الضمان عيوب التصنيع فقط. وتُعالَج المطالبات المعتمدة باستبدال المنتج ضمن الطلب التالي للعميل."
-        }
-      ]
-    },
-    {
       "source": "Tiffany 2026-11-27（AQUASKY 新官網｜待提供資料 文件 11/27 第 3 點）：中文認證頁補 PSB 新加坡認證（舊站中文頁漏了這段，其他五語本來就有）；中文說明由梵亞依英文頁翻",
       "pages": [
         "/zh/certification"
@@ -755,6 +315,95 @@
         {
           "from": "範圍內使用。 認證連結 NSF/ANSI 372飲用水系統認證 - 鉛含量",
           "to": "範圍內使用。 認證連結 PSB新加坡認證 新加坡 PSB 認證（Singapore PSB certification） 新加坡依《消費品安全保護條例》（Consumer Protection (Safety Requirements) Regulations）管理在當地銷售的受管制產品。PSB 認證是新加坡的強制性安全認證，只有完成註冊、帶有 SAFETY 標誌的產品才能在新加坡販售；向新加坡消費者銷售受管制商品的單位，必須將每個型號向主管機關登記。 認證連結 NSF/ANSI 372飲用水系統認證 - 鉛含量"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /en/sel_unit_container",
+      "pages": [
+        "/en/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Container Loading"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /zh/sel_unit_container",
+      "pages": [
+        "/zh/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank 貨櫃裝載 計算工具"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /es/sel_unit_container",
+      "pages": [
+        "/es/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Carga de contenedores"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /fr/sel_unit_container",
+      "pages": [
+        "/fr/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Chargement de conteneur"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /ru/sel_unit_container",
+      "pages": [
+        "/ru/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank Загрузка контейнера"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 LINE 傳櫃量計算 Excel，要做成新站工具；梵亞在選型工具入口加第 4 個按鈕連到 /ar/sel_unit_container",
+      "pages": [
+        "/ar/sel_tools"
+      ],
+      "replace": [
+        {
+          "from": "Thermal Expansion Tank",
+          "to": "Thermal Expansion Tank تحميل الحاويات"
+        }
+      ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 在 Google 文件「圖片文字轉網頁文字 待確認」FAQ 第 4 點確認：Pressure Switch PSI 預充壓改成 Cut-in − 2（與新版 FAQ 第 18、19、25 題一致），黃老闆 2026-11-28 同意。預設值 14.5 PSI 的預充壓由 11.7 改 12.5",
+      "pages": [
+        "/en/sel_unit_ps",
+        "/zh/sel_unit_ps",
+        "/es/sel_unit_ps",
+        "/fr/sel_unit_ps",
+        "/ru/sel_unit_ps",
+        "/ar/sel_unit_ps"
+      ],
+      "replace": [
+        {
+          "from": "*The suggested pre-charge is 11.7 PSI.",
+          "to": "*The suggested pre-charge is 12.5 PSI."
         }
       ]
     }

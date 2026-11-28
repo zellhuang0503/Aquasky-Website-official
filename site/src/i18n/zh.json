@@ -52,7 +52,8 @@
     "foundedIn": "創立於 {year} 年",
     "skipToContent": "跳到主要內容",
     "languageNotLive": "此頁面尚未提供此語系版本。",
-    "breadcrumbHome": "首頁"
+    "breadcrumbHome": "首頁",
+    "draftNote": "本頁文字為初稿，尚待溢康審稿。"
   },
   "contact": {
     "sending": "傳送中…",

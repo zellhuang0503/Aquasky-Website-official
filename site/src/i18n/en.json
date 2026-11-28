@@ -47,7 +47,8 @@
     "foundedIn": "Founded in {year}",
     "skipToContent": "Skip to content",
     "languageNotLive": "This page is not available in this language yet.",
-    "breadcrumbHome": "Home"
+    "breadcrumbHome": "Home",
+    "draftNote": "Draft text, pending review by AQUASKY."
   },
   "contact": {
     "sending": "Sending…",
