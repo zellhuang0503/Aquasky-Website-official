@@ -389,6 +389,23 @@
           "to": "Thermal Expansion Tank تحميل الحاويات"
         }
       ]
+    },
+    {
+      "source": "Tiffany 2026-11-27 在 Google 文件「圖片文字轉網頁文字 待確認」FAQ 第 4 點確認：Pressure Switch PSI 預充壓改成 Cut-in − 2（與新版 FAQ 第 18、19、25 題一致），黃老闆 2026-11-28 同意。預設值 14.5 PSI 的預充壓由 11.7 改 12.5",
+      "pages": [
+        "/en/sel_unit_ps",
+        "/zh/sel_unit_ps",
+        "/es/sel_unit_ps",
+        "/fr/sel_unit_ps",
+        "/ru/sel_unit_ps",
+        "/ar/sel_unit_ps"
+      ],
+      "replace": [
+        {
+          "from": "*The suggested pre-charge is 11.7 PSI.",
+          "to": "*The suggested pre-charge is 12.5 PSI."
+        }
+      ]
     }
   ]
 }
